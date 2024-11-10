@@ -1,0 +1,20 @@
+import platform
+import re
+import numpy as np
+from numpy.testing import assert_array_equal
+import pytest
+from matplotlib import patches
+from matplotlib.path import Path
+from matplotlib.patches import Polygon
+from matplotlib.testing.decorators import image_comparison
+import matplotlib.pyplot as plt
+from matplotlib import transforms
+from matplotlib.backend_bases import MouseEvent
+_test_paths = [Path([[0, 0], [1, 0], [1, 1], [0, 1]], [Path.MOVETO, Path.CURVE4, Path.CURVE4, Path.CURVE4]), Path([[0, 0], [0, 1], [1, 0]], [Path.MOVETO, Path.CURVE3, Path.CURVE3]), Path([[0, 1], [1, 1]], [Path.MOVETO, Path.LINETO]), Path([[1, 2]], [Path.MOVETO])]
+_test_path_extents = [(0.0, 0.0, 0.75, 1.0), (0.0, 0.0, 1.0, 0.5), (0.0, 1.0, 1.0, 1.0), (1.0, 2.0, 1.0, 2.0)]
+
+def test_marker_paths_pdf_0_mutated():
+    N = 7
+    plt.errorbar(np.arange(N), np.ones(N) + 4, np.ones(N))
+    plt.xlim(-1, N)
+    plt.ylim(-1, 7)
