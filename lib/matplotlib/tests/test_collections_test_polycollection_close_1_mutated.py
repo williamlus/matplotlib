@@ -64,7 +64,7 @@ def test_polycollection_close_1_mutated():
     from mpl_toolkits.mplot3d import Axes3D
     plt.rcParams['axes3d.automargin'] = True
     vertsQuad = [[[0.0, 0.0], [0.0, 1.0], [1.0, 1.0], [1.0, 0.0]], [[0.0, 1.0], [2.0, 3.0], [2.0, 2.0], [1.0, 1.0]], [[2.0, 2.0], [2.0, 3.0], [4.0, 1.0], [3.0, 1.0]], [[3.0, 0.0], [3.0, 1.0], [4.0, 1.0], [4.0, 0.0]]]
-    fig = plt.figure()
+    fig = plt.figure(layout='none')
     ax = fig.add_axes(Axes3D(fig))
     colors = ['r', 'g', 'b', 'y', 'k']
     zpos = list(range(5))

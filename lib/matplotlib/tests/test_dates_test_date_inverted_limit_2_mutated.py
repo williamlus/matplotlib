@@ -46,7 +46,7 @@ def _test_rrulewrapper(attach_tz, get_tz):
 def test_date_inverted_limit_2_mutated():
     t0 = datetime.datetime(2009, 1, 20)
     tf = datetime.datetime(2009, 1, 31)
-    fig, ax = plt.subplots(sharex=True)
+    fig, ax = plt.subplots(sharey=False)
     ax.axhline(t0, color='blue', lw=3)
     ax.set_ylim(t0 - datetime.timedelta(days=5), tf + datetime.timedelta(days=5))
     ax.invert_yaxis()

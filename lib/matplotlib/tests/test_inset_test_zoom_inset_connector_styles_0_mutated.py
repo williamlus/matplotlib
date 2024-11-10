@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
 def test_zoom_inset_connector_styles_0_mutated():
-    fig, axs = plt.subplots(2, sharey=False)
+    fig, axs = plt.subplots(2, sharey=True)
     for ax in axs:
         ax.plot([1, 2, 3])
     axs[1].set_xlim(0.5, 1.5)

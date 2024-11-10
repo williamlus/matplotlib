@@ -11,7 +11,7 @@ import pytest
 
 def test_logscale_mask_1_mutated():
     xs = np.linspace(0, 50, 1001)
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(sharex=False)
     ax.plot(np.exp(-xs ** 2))
     fig.canvas.draw()
     ax.set(yscale='log')

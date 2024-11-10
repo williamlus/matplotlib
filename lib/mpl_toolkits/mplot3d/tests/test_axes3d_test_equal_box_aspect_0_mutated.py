@@ -52,7 +52,7 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
 
 def test_equal_box_aspect_0_mutated():
     from itertools import product, combinations
-    fig = plt.figure()
+    fig = plt.figure(layout='none')
     ax = fig.add_subplot(projection='3d')
     u = np.linspace(0, 2 * np.pi, 100)
     v = np.linspace(0, np.pi, 100)
@@ -67,7 +67,7 @@ def test_equal_box_aspect_0_mutated():
     xyzlim = np.column_stack([ax.get_xlim3d(), ax.get_ylim3d(), ax.get_zlim3d()])
     XYZlim = [min(xyzlim[0]), max(xyzlim[1])]
     ax.set_xlim3d(XYZlim)
-    ax.set_ylim3d(XYZlim, emit=False)
+    ax.set_ylim3d(XYZlim)
     ax.set_zlim3d(XYZlim)
     ax.axis('off')
     ax.set_box_aspect((1, 1, 1))

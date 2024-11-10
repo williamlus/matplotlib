@@ -14,7 +14,7 @@ import pytest
 
 def test_given_colors_levels_and_extends_3_mutated():
     plt.rcParams['pcolormesh.snap'] = False
-    _, axs = plt.subplots(2, 4, sharex=False)
+    _, axs = plt.subplots(2, 4, squeeze=True)
     data = np.arange(12).reshape(3, 4)
     colors = ['red', 'yellow', 'pink', 'blue', 'black']
     levels = [2, 4, 8, 10]

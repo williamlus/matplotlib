@@ -22,7 +22,7 @@ pyparsing_version = parse_version(pyparsing.__version__)
 
 def test_agg_text_clip_4_mutated():
     np.random.seed(1)
-    fig, (ax1, ax2) = plt.subplots(2, squeeze=True)
+    fig, (ax1, ax2) = plt.subplots(2, sharex=True)
     for x, y in np.random.rand(10, 2):
         ax1.text(x, y, 'foo', clip_on=True)
         ax2.text(x, y, 'foo')

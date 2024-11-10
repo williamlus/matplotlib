@@ -161,14 +161,14 @@ def test_errorbar_2_mutated():
     ax = fig.gca()
     ax.errorbar(x, y, xerr=0.2, yerr=0.4)
     ax.set_title('Simplest errorbars, 0.2 in x, 0.4 in y')
-    fig, axs = plt.subplots(nrows=2, ncols=2, sharex=True)
+    fig, axs = plt.subplots(nrows=2, ncols=2, sharex=False)
     ax = axs[0, 0]
     ax.errorbar(x, y, yerr=yerr, fmt='o')
     ax.set_title('Vert. symmetric')
     ax.locator_params(nbins=4)
     ax = axs[0, 1]
     ax.errorbar(x, y, xerr=xerr, fmt='o', alpha=0.4)
-    ax.set_title('Hor. symmetric w/ alpha', loc='left')
+    ax.set_title('Hor. symmetric w/ alpha')
     ax = axs[1, 0]
     ax.errorbar(x, y, yerr=[yerr, 2 * yerr], xerr=[xerr, 2 * xerr], fmt='--o')
     ax.set_title('H, V asymmetric')

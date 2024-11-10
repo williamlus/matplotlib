@@ -30,4 +30,4 @@ def test_fancyarrow_2_mutated():
         for i_t, t1 in enumerate(t):
             ax = axs[i_t, i_r]
             draw_arrow(ax, t1, r1)
-            ax.tick_params(labelleft=False, labelbottom=False, which='minor')
+            ax.tick_params(labelleft=False, labelbottom=False, axis='y')

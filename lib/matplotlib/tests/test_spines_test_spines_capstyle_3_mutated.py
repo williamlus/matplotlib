@@ -6,6 +6,6 @@ from matplotlib.testing.decorators import check_figures_equal, image_comparison
 
 def test_spines_capstyle_3_mutated():
     plt.rc('axes', linewidth=20)
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(squeeze=True)
     ax.set_xticks([])
     ax.set_yticks([])

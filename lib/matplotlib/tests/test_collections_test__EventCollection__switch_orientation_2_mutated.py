@@ -69,5 +69,5 @@ def test__EventCollection__switch_orientation_2_mutated():
     new_positions = coll.get_positions()
     check_segments(coll, new_positions, props['linelength'], props['lineoffset'], new_orientation)
     splt.set_title('EventCollection: switch_orientation')
-    splt.set_ylim(-1, 22, auto=False)
-    splt.set_xlim(0, 2)
+    splt.set_ylim(-1, 22)
+    splt.set_xlim(0, 2, auto=False)

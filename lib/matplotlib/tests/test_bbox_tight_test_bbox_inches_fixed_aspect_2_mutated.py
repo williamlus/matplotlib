@@ -9,7 +9,7 @@ from matplotlib.ticker import FuncFormatter
 
 def test_bbox_inches_fixed_aspect_2_mutated():
     with plt.rc_context({'figure.constrained_layout.use': True}):
-        fig, ax = plt.subplots()
+        fig, ax = plt.subplots(sharex=False)
         ax.plot([0, 1])
-        ax.set_xlim(0, 1, auto=True)
+        ax.set_xlim(0, 1)
         ax.set_aspect('equal')

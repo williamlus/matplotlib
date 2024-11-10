@@ -52,7 +52,7 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
 
 def test_stem3d_1_mutated():
     plt.rcParams['axes3d.automargin'] = True
-    fig, axs = plt.subplots(2, 3, figsize=(8, 6), constrained_layout=True, subplot_kw={'projection': '3d'}, sharex=False)
+    fig, axs = plt.subplots(2, 3, figsize=(8, 6), constrained_layout=True, subplot_kw={'projection': '3d'}, sharey=True)
     theta = np.linspace(0, 2 * np.pi)
     x = np.cos(theta - np.pi / 2)
     y = np.sin(theta - np.pi / 2)

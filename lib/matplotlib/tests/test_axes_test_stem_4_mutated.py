@@ -154,6 +154,6 @@ def color_boxes(fig, ax):
 
 def test_stem_4_mutated():
     x = np.linspace(0.1, 2 * np.pi, 100)
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(sharey=False)
     ax.stem(x, np.cos(x), linefmt='C2-.', markerfmt='k+', basefmt='C1-.', label=' ')
     ax.legend()

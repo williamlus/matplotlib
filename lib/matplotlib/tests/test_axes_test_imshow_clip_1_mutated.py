@@ -159,7 +159,7 @@ def test_imshow_clip_1_mutated():
     x -= N // 2
     y -= N // 2
     r = np.sqrt(x ** 2 + y ** 2 - x * y)
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(squeeze=True)
     c = ax.contour(r, [N / 4])
     clip_path = mtransforms.TransformedPath(c.get_paths()[0], c.get_transform())
     ax.imshow(r, clip_path=clip_path)

@@ -74,7 +74,7 @@ def test_regularpolycollection_scale_0_mutated():
             scale_x = pts2pixels * ax.bbox.width / ax.viewLim.width
             scale_y = pts2pixels * ax.bbox.height / ax.viewLim.height
             return mtransforms.Affine2D().scale(scale_x, scale_y)
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharex=True)
     xy = [(0, 0)]
     circle_areas = [np.pi / 2]
     squares = SquareCollection(sizes=circle_areas, offsets=xy, offset_transform=ax.transData)

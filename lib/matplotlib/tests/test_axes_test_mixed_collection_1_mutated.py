@@ -153,7 +153,7 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_mixed_collection_1_mutated():
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharex=True)
     c = mpatches.Circle((8, 8), radius=4, facecolor='none', edgecolor='green')
     p1 = mpl.collections.PatchCollection([c], match_original=True)
     p1.set_offsets([[0, 0], [24, 24]])
@@ -165,5 +165,5 @@ def test_mixed_collection_1_mutated():
     ax.patch.set_color('0.5')
     ax.add_collection(p1)
     ax.add_collection(p2)
-    ax.set_xlim(0, 16, emit=True)
+    ax.set_xlim(0, 16)
     ax.set_ylim(0, 16)

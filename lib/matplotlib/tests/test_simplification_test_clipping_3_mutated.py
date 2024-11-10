@@ -12,6 +12,6 @@ from matplotlib.path import Path
 def test_clipping_3_mutated():
     t = np.arange(0.0, 2.0, 0.01)
     s = np.sin(2 * np.pi * t)
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(squeeze=True)
     ax.plot(t, s, linewidth=1.0)
-    ax.set_ylim((-0.2, -0.28), auto=True)
+    ax.set_ylim((-0.2, -0.28))

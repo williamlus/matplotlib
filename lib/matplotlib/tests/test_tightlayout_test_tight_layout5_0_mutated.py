@@ -33,5 +33,5 @@ def test_tight_layout5_0_mutated():
     """Test tight_layout for image."""
     ax = plt.subplot()
     arr = np.arange(100).reshape((10, 10))
-    ax.imshow(arr, interpolation='none', aspect='equal')
+    ax.imshow(arr, interpolation='none', resample=False)
     plt.tight_layout()

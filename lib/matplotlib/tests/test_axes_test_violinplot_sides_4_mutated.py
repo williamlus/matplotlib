@@ -153,7 +153,7 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_violinplot_sides_4_mutated():
-    ax = plt.axes()
+    ax = plt.axes(projection='aitoff')
     np.random.seed(19680801)
     data = [np.random.normal(size=100)]
     for pos, side in zip([0, -0.5, 0.5], ['both', 'low', 'high']):

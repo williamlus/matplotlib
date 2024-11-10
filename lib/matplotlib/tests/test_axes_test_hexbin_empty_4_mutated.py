@@ -153,7 +153,7 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_hexbin_empty_4_mutated():
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(sharex=False)
     ax.hexbin([], [])
     ax.hexbin([], [], bins='log')
     ax.hexbin([], [], C=[], reduce_C_function=np.max)

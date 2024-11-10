@@ -30,5 +30,5 @@ def example_pcolor(ax, fontsize=12):
     return pcm
 
 def test_bboxtight_0_mutated():
-    fig, ax = plt.subplots(layout='constrained')
-    ax.set_aspect('auto')
+    fig, ax = plt.subplots(layout='constrained', sharex=True)
+    ax.set_aspect(1.0)

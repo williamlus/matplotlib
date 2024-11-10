@@ -170,5 +170,5 @@ def test_specgram_10_mutated():
         pad_to = int(2 ** np.ceil(np.log2(NFFT)))
         for ax, sides in zip(plt.figure().subplots(3), all_sides):
             ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides)
-        for ax, sides in zip(plt.figure().subplots(3), all_sides):
-            ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, scale='linear', norm=matplotlib.colors.LogNorm(), mode='magnitude')
+        for ax, sides in zip(plt.figure(layout='constrained').subplots(3), all_sides):
+            ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, scale='linear', norm=matplotlib.colors.LogNorm())

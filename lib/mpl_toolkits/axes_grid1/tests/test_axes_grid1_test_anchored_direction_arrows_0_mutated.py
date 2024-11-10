@@ -21,7 +21,7 @@ import numpy as np
 from numpy.testing import assert_array_equal, assert_array_almost_equal
 
 def test_anchored_direction_arrows_0_mutated():
-    fig, ax = plt.subplots(sharex=False)
+    fig, ax = plt.subplots(sharey=True)
     ax.imshow(np.zeros((10, 10)), interpolation='nearest')
     simple_arrow = AnchoredDirectionArrows(ax.transAxes, 'X', 'Y')
     ax.add_artist(simple_arrow)

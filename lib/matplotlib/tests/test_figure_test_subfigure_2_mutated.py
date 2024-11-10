@@ -22,9 +22,9 @@ import matplotlib.dates as mdates
 
 def test_subfigure_2_mutated():
     np.random.seed(19680801)
-    fig = plt.figure(layout='constrained', clear=False)
+    fig = plt.figure(layout='constrained')
     sub = fig.subfigures(1, 2)
-    axs = sub[0].subplots(2, 2)
+    axs = sub[0].subplots(2, 2, sharey=True)
     for ax in axs.flat:
         pc = ax.pcolormesh(np.random.randn(30, 30), vmin=-2, vmax=2)
     sub[0].colorbar(pc, ax=axs)

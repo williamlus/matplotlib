@@ -168,7 +168,7 @@ def test_errorbar_0_mutated():
     ax.locator_params(nbins=4)
     ax = axs[0, 1]
     ax.errorbar(x, y, xerr=xerr, fmt='o', alpha=0.4)
-    ax.set_title('Hor. symmetric w/ alpha', loc='center')
+    ax.set_title('Hor. symmetric w/ alpha')
     ax = axs[1, 0]
     ax.errorbar(x, y, yerr=[yerr, 2 * yerr], xerr=[xerr, 2 * xerr], fmt='--o')
     ax.set_title('H, V asymmetric')

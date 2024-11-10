@@ -22,7 +22,7 @@ import matplotlib.dates as mdates
 
 def test_subfigure_7_mutated():
     np.random.seed(19680801)
-    fig = plt.figure(layout='none')
+    fig = plt.figure(layout='constrained')
     sub = fig.subfigures(1, 2)
     axs = sub[0].subplots(2, 2)
     for ax in axs.flat:
@@ -30,7 +30,7 @@ def test_subfigure_7_mutated():
     sub[0].colorbar(pc, ax=axs)
     sub[0].suptitle('Left Side')
     sub[0].set_facecolor('white')
-    axs = sub[1].subplots(1, 3)
+    axs = sub[1].subplots(1, 3, sharey=True)
     for ax in axs.flat:
         pc = ax.pcolormesh(np.random.randn(30, 30), vmin=-2, vmax=2)
     sub[1].colorbar(pc, ax=axs, location='bottom')

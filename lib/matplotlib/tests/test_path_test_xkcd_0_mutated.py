@@ -18,5 +18,5 @@ def test_xkcd_0_mutated():
     x = np.linspace(0, 2 * np.pi, 100)
     y = np.sin(x)
     with plt.xkcd():
-        fig, ax = plt.subplots(sharey=False)
+        fig, ax = plt.subplots(sharex=False)
         ax.plot(x, y)

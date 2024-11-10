@@ -76,12 +76,12 @@ class QuantityND(np.ndarray):
         return self.view(np.ndarray)
 
 def test_nonuniform_and_pcolor_0_mutated():
-    axs = plt.figure(figsize=(3, 3)).subplots(3, sharex=True, sharey=True)
+    axs = plt.figure(figsize=(3, 3), frameon=True).subplots(3, sharex=True, sharey=True)
     for ax, interpolation in zip(axs, ['nearest', 'bilinear']):
         im = NonUniformImage(ax, interpolation=interpolation)
         im.set_data(np.arange(3) ** 2, np.arange(3) ** 2, np.arange(9).reshape((3, 3)))
         ax.add_image(im)
-    axs[2].pcolorfast(np.arange(4) ** 2, np.arange(4) ** 2, np.arange(9).reshape((3, 3)), snap=True)
+    axs[2].pcolorfast(np.arange(4) ** 2, np.arange(4) ** 2, np.arange(9).reshape((3, 3)))
     for ax in axs:
         ax.set_axis_off()
         ax.set(xlim=(0, 10))

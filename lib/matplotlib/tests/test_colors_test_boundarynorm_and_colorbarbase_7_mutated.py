@@ -57,8 +57,8 @@ def _azimuth2math(azimuth, elevation):
 
 def test_boundarynorm_and_colorbarbase_7_mutated():
     plt.rcParams['pcolormesh.snap'] = False
-    fig = plt.figure()
-    ax1 = fig.add_axes([0.05, 0.8, 0.9, 0.15], projection='hammer')
+    fig = plt.figure(layout=None)
+    ax1 = fig.add_axes([0.05, 0.8, 0.9, 0.15])
     ax2 = fig.add_axes([0.05, 0.475, 0.9, 0.15])
     ax3 = fig.add_axes([0.05, 0.15, 0.9, 0.15])
     bounds = [-1, 2, 5, 7, 12, 15]

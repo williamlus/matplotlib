@@ -165,7 +165,7 @@ def test_extent_units_6_mutated():
     im = axs[1, 0].imshow(arr, origin='lower', extent=[date_first, date_last, date_first, date_last], cmap=mpl.colormaps['plasma'])
     axs[1, 0].xaxis.set_major_formatter(mdates.DateFormatter('%d'))
     axs[1, 0].set(xlabel='Day of Jan 2020')
-    im = axs[1, 1].imshow(arr, origin='lower', cmap=mpl.colormaps['plasma'], resample=False)
+    im = axs[1, 1].imshow(arr, origin='lower', cmap=mpl.colormaps['plasma'])
     im.set_extent([date_last, date_first, date_last, date_first])
     axs[1, 1].xaxis.set_major_formatter(mdates.DateFormatter('%d'))
     axs[1, 1].set(xlabel='Day of Jan 2020')

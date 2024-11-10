@@ -67,4 +67,4 @@ def test__EventCollection__set_linelength_0_mutated():
     assert new_linelength == coll.get_linelength()
     check_segments(coll, props['positions'], new_linelength, props['lineoffset'], props['orientation'])
     splt.set_title('EventCollection: set_linelength')
-    splt.set_ylim(-20, 20, emit=True)
+    splt.set_ylim(-20, 20, auto=False)

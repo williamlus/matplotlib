@@ -16,7 +16,7 @@ _test_path_extents = [(0.0, 0.0, 0.75, 1.0), (0.0, 0.0, 1.0, 0.5), (0.0, 1.0, 1.
 def test_log_transform_with_zero_1_mutated():
     x = np.arange(-10, 10)
     y = (1.0 - 1.0 / (x ** 2 + 1)) ** 20
-    fig, ax = plt.subplots()
-    ax.semilogy(x, y, '-o', lw=15, markeredgecolor='k', nonpositive='mask')
+    fig, ax = plt.subplots(sharex=False)
+    ax.semilogy(x, y, '-o', lw=15, markeredgecolor='k')
     ax.set_ylim(1e-07, 1)
     ax.grid(True)

@@ -162,8 +162,8 @@ def test_markevery_log_scales_0_mutated():
     for i, case in enumerate(cases):
         row = i // cols
         col = i % cols
-        plt.subplot(gs[row, col])
+        plt.subplot(gs[row, col], projection='mollweide')
         plt.title('markevery=%s' % str(case))
-        plt.xscale('linear')
+        plt.xscale('log')
         plt.yscale('log')
         plt.plot(x, y, 'o', ls='-', ms=4, markevery=case)

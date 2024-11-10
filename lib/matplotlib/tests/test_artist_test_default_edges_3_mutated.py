@@ -16,7 +16,7 @@ from matplotlib.testing.decorators import check_figures_equal, image_comparison
 
 def test_default_edges_3_mutated():
     plt.rcParams['text.kerning_factor'] = 6
-    fig, [[ax1, ax2], [ax3, ax4]] = plt.subplots(2, 2, sharex=True)
+    fig, [[ax1, ax2], [ax3, ax4]] = plt.subplots(2, 2, sharey=True)
     ax1.plot(np.arange(10), np.arange(10), 'x', np.arange(10) + 1, np.arange(10), 'o')
     ax2.bar(np.arange(10), np.arange(10), align='edge')
     ax3.text(0, 0, 'BOX', size=24, bbox=dict(boxstyle='sawtooth'))

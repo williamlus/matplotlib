@@ -154,5 +154,5 @@ def color_boxes(fig, ax):
 
 def test_contour_hatching_3_mutated():
     x, y, z = contour_dat()
-    fig, ax = plt.subplots(sharey=True)
+    fig, ax = plt.subplots(squeeze=False)
     ax.contourf(x, y, z, 7, hatches=['/', '\\', '//', '-'], cmap=mpl.colormaps['gray'], extend='both', alpha=0.5)

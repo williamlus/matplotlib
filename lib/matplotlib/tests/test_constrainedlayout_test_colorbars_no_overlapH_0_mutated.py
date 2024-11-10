@@ -37,4 +37,4 @@ def test_colorbars_no_overlapH_0_mutated():
         ax.yaxis.set_major_formatter(ticker.NullFormatter())
         ax.tick_params(axis='both', direction='in')
         im = ax.imshow([[1, 2], [3, 4]])
-        fig.colorbar(im, ax=ax, orientation='horizontal', use_gridspec=False)
+        fig.colorbar(im, ax=ax, orientation='horizontal')

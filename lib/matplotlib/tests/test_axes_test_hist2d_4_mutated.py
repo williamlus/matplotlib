@@ -157,8 +157,8 @@ def test_hist2d_4_mutated():
     np.random.seed(0)
     x = np.random.randn(100) * 2 + 5
     y = np.random.randn(100) - 2
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(squeeze=False)
     ax.hist2d(x, y, bins=10, rasterized=True)
     data = {'x': x, 'y': y}
-    fig, ax = plt.subplots(squeeze=True)
+    fig, ax = plt.subplots()
     ax.hist2d('x', 'y', bins=10, data=data, rasterized=True)

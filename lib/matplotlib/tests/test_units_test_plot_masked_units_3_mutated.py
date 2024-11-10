@@ -85,5 +85,5 @@ def test_plot_masked_units_3_mutated():
     data = np.linspace(-5, 5)
     data_masked = np.ma.array(data, mask=(data > -2) & (data < 2))
     data_masked_units = Quantity(data_masked, 'meters')
-    fig, ax = plt.subplots(sharey=True)
+    fig, ax = plt.subplots(squeeze=False)
     ax.plot(data_masked_units)

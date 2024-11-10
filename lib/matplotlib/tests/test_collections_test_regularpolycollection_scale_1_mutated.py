@@ -70,11 +70,11 @@ def test_regularpolycollection_scale_1_mutated():
         def get_transform(self):
             """Return transform scaling circle areas to data space."""
             ax = self.axes
-            pts2pixels = 72.0 / ax.get_figure(root=False).dpi
+            pts2pixels = 72.0 / ax.get_figure(root=True).dpi
             scale_x = pts2pixels * ax.bbox.width / ax.viewLim.width
             scale_y = pts2pixels * ax.bbox.height / ax.viewLim.height
             return mtransforms.Affine2D().scale(scale_x, scale_y)
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharey=True)
     xy = [(0, 0)]
     circle_areas = [np.pi / 2]
     squares = SquareCollection(sizes=circle_areas, offsets=xy, offset_transform=ax.transData)

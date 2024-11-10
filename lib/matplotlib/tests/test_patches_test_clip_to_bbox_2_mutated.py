@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 from matplotlib import collections as mcollections, colors as mcolors, patches as mpatches, path as mpath, transforms as mtransforms, rcParams
 
 def test_clip_to_bbox_2_mutated():
-    fig, ax = plt.subplots(sharex=True)
+    fig, ax = plt.subplots(sharey=True)
     ax.set_xlim([-18, 20])
     ax.set_ylim([-150, 100])
     path = mpath.Path.unit_regular_star(8).deepcopy()

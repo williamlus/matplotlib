@@ -13,6 +13,6 @@ def draw_quiver(ax, **kwargs):
     return Q
 
 def test_quiver_single_3_mutated():
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharey=False)
     ax.margins(0.1)
-    ax.quiver([1], [1], [2], [2], scale_units='x')
+    ax.quiver([1], [1], [2], [2])

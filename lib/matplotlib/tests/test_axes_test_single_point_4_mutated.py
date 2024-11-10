@@ -155,7 +155,7 @@ def color_boxes(fig, ax):
 def test_single_point_4_mutated():
     matplotlib.rcParams['lines.marker'] = 'o'
     matplotlib.rcParams['axes.grid'] = True
-    fig, (ax1, ax2) = plt.subplots(2, squeeze=False)
+    fig, (ax1, ax2) = plt.subplots(2, sharey=True)
     ax1.plot([0], [0], 'o')
     ax2.plot([1], [1], 'o')
     data = {'a': [0], 'b': [1]}

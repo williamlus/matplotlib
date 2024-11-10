@@ -6,7 +6,7 @@ from matplotlib import pyplot as plt
 from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
 def test_polar_log_0_mutated():
-    fig = plt.figure(layout='constrained')
+    fig = plt.figure(clear=False)
     ax = fig.add_subplot(polar=True)
     ax.set_rscale('log')
     ax.set_rlim(1, 1000)

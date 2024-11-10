@@ -9,13 +9,13 @@ from matplotlib.backend_bases import RendererBase
 from matplotlib.patheffects import PathEffectRenderer
 
 def test_tickedstroke_0_mutated():
-    fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(12, 4))
+    fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(12, 4), sharex=False)
     path = Path.unit_circle()
     patch = patches.PathPatch(path, facecolor='none', lw=2, path_effects=[path_effects.withTickedStroke(angle=-90, spacing=10, length=1)])
     ax1.add_patch(patch)
     ax1.axis('equal')
     ax1.set_xlim(-2, 2)
-    ax1.set_ylim(-2, 2, auto=True)
+    ax1.set_ylim(-2, 2)
     ax2.plot([0, 1], [0, 1], label=' ', path_effects=[path_effects.withTickedStroke(spacing=7, angle=135)])
     nx = 101
     x = np.linspace(0.0, 1.0, nx)

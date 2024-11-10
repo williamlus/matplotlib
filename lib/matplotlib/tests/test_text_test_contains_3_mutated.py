@@ -21,7 +21,7 @@ from matplotlib.text import Text, Annotation, OffsetFrom
 pyparsing_version = parse_version(pyparsing.__version__)
 
 def test_contains_3_mutated():
-    fig = plt.figure(frameon=False)
+    fig = plt.figure(layout='constrained')
     ax = plt.axes()
     mevent = MouseEvent('button_press_event', fig.canvas, 0.5, 0.5, 1, None)
     xs = np.linspace(0.25, 0.75, 30)

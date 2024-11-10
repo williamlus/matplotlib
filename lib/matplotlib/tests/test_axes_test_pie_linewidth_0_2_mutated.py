@@ -160,10 +160,10 @@ def test_pie_linewidth_0_2_mutated():
     plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0})
     plt.axis('equal')
     data = {'l': labels, 's': sizes, 'c': colors, 'ex': explode}
-    fig = plt.figure()
+    fig = plt.figure(layout='none')
     ax = fig.gca()
     ax.pie('s', explode='ex', labels='l', colors='c', autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, data=data)
     ax.axis('equal')
     plt.figure()
     plt.pie('s', explode='ex', labels='l', colors='c', autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, data=data)
-    plt.axis('equal', option=False)
+    plt.axis('equal')

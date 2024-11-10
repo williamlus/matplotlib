@@ -13,14 +13,14 @@ from matplotlib.testing.decorators import check_figures_equal, image_comparison
 import pytest
 
 def test_contour_datetime_axis_1_mutated():
-    fig = plt.figure()
+    fig = plt.figure(layout='constrained')
     fig.subplots_adjust(hspace=0.4, top=0.98, bottom=0.15)
     base = datetime.datetime(2013, 1, 1)
     x = np.array([base + datetime.timedelta(days=d) for d in range(20)])
     y = np.arange(20)
     z1, z2 = np.meshgrid(np.arange(20), np.arange(20))
     z = z1 * z2
-    plt.subplot(221, projection='rectilinear')
+    plt.subplot(221)
     plt.contour(x, y, z)
     plt.subplot(222)
     plt.contourf(x, y, z)

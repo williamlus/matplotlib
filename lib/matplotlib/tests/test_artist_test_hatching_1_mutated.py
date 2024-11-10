@@ -15,7 +15,7 @@ import matplotlib as mpl
 from matplotlib.testing.decorators import check_figures_equal, image_comparison
 
 def test_hatching_1_mutated():
-    fig, ax = plt.subplots(1, 1)
+    fig, ax = plt.subplots(1, 1, sharex=False)
     rect1 = mpatches.Rectangle((0, 0), 3, 4, hatch='/')
     ax.add_patch(rect1)
     rect2 = mcollections.RegularPolyCollection(4, sizes=[16000], offsets=[(1.5, 6.5)], offset_transform=ax.transData, hatch='/')
@@ -25,4 +25,4 @@ def test_hatching_1_mutated():
     rect4 = mcollections.RegularPolyCollection(4, sizes=[16000], offsets=[(5.5, 6.5)], offset_transform=ax.transData, hatch='/', edgecolor='C1')
     ax.add_collection(rect4)
     ax.set_xlim(0, 7)
-    ax.set_ylim(0, 9, emit=False)
+    ax.set_ylim(0, 9)

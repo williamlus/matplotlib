@@ -31,4 +31,4 @@ def test_clipping_3_mutated():
     patch.set_clip_path(clip_path, ax2.transData)
     ax2.add_patch(patch)
     ax1.set_xlim([-3, 3])
-    ax1.set_ylim([-3, 3], auto=False)
+    ax1.set_ylim([-3, 3])

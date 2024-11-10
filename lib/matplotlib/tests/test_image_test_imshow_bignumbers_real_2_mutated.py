@@ -77,7 +77,7 @@ class QuantityND(np.ndarray):
 
 def test_imshow_bignumbers_real_2_mutated():
     rcParams['image.interpolation'] = 'nearest'
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharey=False)
     img = np.array([[2.0, 1.0, 1e+22], [4.0, 1.0, 3.0]])
-    pc = ax.imshow(img, aspect='auto')
+    pc = ax.imshow(img)
     pc.set_clim(0, 5)

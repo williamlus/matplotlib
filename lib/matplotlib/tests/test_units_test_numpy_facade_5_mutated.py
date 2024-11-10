@@ -86,7 +86,7 @@ def test_numpy_facade_5_mutated(quantity_converter):
     munits.registry[Quantity] = quantity_converter
     y = Quantity(np.linspace(0, 30), 'miles')
     x = Quantity(np.linspace(0, 5), 'hours')
-    fig, ax = plt.subplots(sharex=False)
+    fig, ax = plt.subplots(squeeze=True)
     fig.subplots_adjust(left=0.15)
     ax.plot(x, y, 'tab:blue')
     ax.axhline(Quantity(26400, 'feet'), color='tab:red')

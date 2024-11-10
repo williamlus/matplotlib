@@ -22,12 +22,12 @@ import matplotlib.dates as mdates
 
 def test_align_titles_2_mutated():
     for layout in ['tight', 'constrained']:
-        fig, axs = plt.subplots(1, 2, layout=layout, width_ratios=[2, 1])
+        fig, axs = plt.subplots(1, 2, layout=layout, width_ratios=[2, 1], sharey=False)
         ax = axs[0]
         ax.plot(np.arange(0, 1000000.0, 1000))
         ax.set_title('Title0 left', loc='left')
         ax.set_title('Title0 center', loc='center')
-        ax.set_title('Title0 right', loc='left')
+        ax.set_title('Title0 right', loc='right')
         ax = axs[1]
         ax.plot(np.arange(0, 10000.0, 100))
         ax.set_title('Title1')

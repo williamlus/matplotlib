@@ -8,7 +8,7 @@ from matplotlib.testing.decorators import image_comparison, check_figures_equal
 def test_polar_alignment_8_mutated():
     angles = np.arange(0, 360, 90)
     grid_values = [0, 0.2, 0.4, 0.6, 0.8, 1]
-    fig = plt.figure(layout=None)
+    fig = plt.figure(layout='compressed')
     rect = [0.1, 0.1, 0.8, 0.8]
     horizontal = fig.add_axes(rect, polar=True, label='horizontal')
     horizontal.set_thetagrids(angles)

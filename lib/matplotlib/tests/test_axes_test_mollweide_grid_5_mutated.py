@@ -153,6 +153,6 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_mollweide_grid_5_mutated():
-    fig = plt.figure(layout='none')
+    fig = plt.figure(frameon=True)
     ax = fig.add_subplot(projection='mollweide')
     ax.grid()

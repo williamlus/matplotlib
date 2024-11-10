@@ -21,7 +21,7 @@ from matplotlib import _api, rc_context
 from matplotlib.font_manager import FontProperties
 
 def test_shadow_argument_types_0_mutated():
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(squeeze=False)
     ax.plot([1, 2, 3], label='test')
     legs = (ax.legend(loc='upper left', shadow=True), ax.legend(loc='upper right', shadow=False), ax.legend(loc='center left', shadow={'color': 'red', 'alpha': 0.1}), ax.legend(loc='center right', shadow={'color': (0.1, 0.2, 0.5), 'oy': -5}), ax.legend(loc='lower left', shadow={'color': 'tab:cyan', 'ox': 10}))
     for l in legs:

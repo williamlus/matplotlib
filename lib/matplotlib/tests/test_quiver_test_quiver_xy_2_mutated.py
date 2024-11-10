@@ -15,6 +15,6 @@ def draw_quiver(ax, **kwargs):
 def test_quiver_xy_2_mutated():
     fig, ax = plt.subplots(subplot_kw=dict(aspect='equal'))
     ax.quiver(0, 0, 1, 1, angles='xy', scale_units='xy', scale=1)
-    ax.set_xlim(0, 1.1, auto=False)
+    ax.set_xlim(0, 1.1, auto=True)
     ax.set_ylim(0, 1.1)
     ax.grid()

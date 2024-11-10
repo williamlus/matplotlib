@@ -16,7 +16,7 @@ def test_ParasiteAxesAuxTrans_8_mutated():
     y = np.arange(6)
     xx, yy = np.meshgrid(x, y)
     funcnames = ['pcolor', 'pcolormesh', 'contourf']
-    fig = plt.figure(layout=None)
+    fig = plt.figure(layout='none')
     for i, name in enumerate(funcnames):
         ax1 = SubplotHost(fig, 1, 3, i + 1)
         fig.add_subplot(ax1)

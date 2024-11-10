@@ -21,11 +21,11 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
 def test_figure_5_mutated():
-    fig = plt.figure('today')
+    fig = plt.figure('today', layout='tight')
     ax = fig.add_subplot()
     ax.set_title(fig.get_label())
     ax.plot(np.arange(5))
-    plt.figure('tomorrow', layout='tight')
+    plt.figure('tomorrow')
     plt.plot([0, 1], [1, 0], 'r')
     plt.figure('today')
     plt.close('tomorrow')

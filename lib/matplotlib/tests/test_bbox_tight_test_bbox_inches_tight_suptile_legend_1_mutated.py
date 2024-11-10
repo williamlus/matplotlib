@@ -10,7 +10,7 @@ from matplotlib.ticker import FuncFormatter
 def test_bbox_inches_tight_suptile_legend_1_mutated():
     plt.plot(np.arange(10), label='a straight line')
     plt.legend(bbox_to_anchor=(0.9, 1), loc='upper left')
-    plt.title('Axis title')
+    plt.title('Axis title', loc='right')
     plt.suptitle('Figure title')
 
     def y_formatter(y, pos):
@@ -19,4 +19,4 @@ def test_bbox_inches_tight_suptile_legend_1_mutated():
         else:
             return str(y)
     plt.gca().yaxis.set_major_formatter(FuncFormatter(y_formatter))
-    plt.xlabel('X axis', loc='center')
+    plt.xlabel('X axis')

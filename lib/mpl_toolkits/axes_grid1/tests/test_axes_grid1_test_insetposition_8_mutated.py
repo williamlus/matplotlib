@@ -22,7 +22,7 @@ from numpy.testing import assert_array_equal, assert_array_almost_equal
 
 def test_insetposition_8_mutated():
     fig, ax = plt.subplots(figsize=(2, 2))
-    ax_ins = plt.axes([0, 0, 1, 1], projection='polar')
+    ax_ins = plt.axes([0, 0, 1, 1], projection='rectilinear')
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         ip = InsetPosition(ax, [0.2, 0.25, 0.5, 0.4])
     ax_ins.set_axes_locator(ip)

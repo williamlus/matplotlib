@@ -153,10 +153,10 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_set_get_ticklabels_2_mutated():
-    fig, ax = plt.subplots(2)
+    fig, ax = plt.subplots(2, sharey=False)
     ha = ['normal', 'set_x/yticklabels']
     ax[0].plot(np.arange(10))
-    ax[0].set_title(ha[0], loc='left')
+    ax[0].set_title(ha[0])
     ax[1].plot(np.arange(10))
     ax[1].set_title(ha[1])
     ax[0].set_xticks(range(10))

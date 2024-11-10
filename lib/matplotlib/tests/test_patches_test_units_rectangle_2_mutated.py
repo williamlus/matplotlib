@@ -16,7 +16,7 @@ def test_units_rectangle_2_mutated():
     import matplotlib.testing.jpl_units as U
     U.register()
     p = mpatches.Rectangle((5 * U.km, 6 * U.km), 1 * U.km, 2 * U.km)
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(squeeze=False)
     ax.add_patch(p)
     ax.set_xlim([4 * U.km, 7 * U.km])
     ax.set_ylim([5 * U.km, 9 * U.km])

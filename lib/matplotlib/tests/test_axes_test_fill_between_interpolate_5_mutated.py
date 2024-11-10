@@ -156,7 +156,7 @@ def test_fill_between_interpolate_5_mutated():
     x = np.arange(0.0, 2, 0.02)
     y1 = np.sin(2 * np.pi * x)
     y2 = 1.2 * np.sin(4 * np.pi * x)
-    fig, (ax1, ax2) = plt.subplots(2, 1, sharex=True)
+    fig, (ax1, ax2) = plt.subplots(2, 1, sharex=True, squeeze=True)
     ax1.plot(x, y1, x, y2, color='black')
     ax1.fill_between(x, y1, y2, where=y2 >= y1, facecolor='white', hatch='/', interpolate=True)
     ax1.fill_between(x, y1, y2, where=y2 <= y1, facecolor='red', interpolate=True)

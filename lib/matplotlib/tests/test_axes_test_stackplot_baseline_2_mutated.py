@@ -166,7 +166,7 @@ def test_stackplot_baseline_2_mutated():
         return a
     d = layers(3, 100)
     d[50, :] = 0
-    fig, axs = plt.subplots(2, 2, squeeze=False)
+    fig, axs = plt.subplots(2, 2, squeeze=True)
     axs[0, 0].stackplot(range(100), d.T, baseline='zero')
     axs[0, 1].stackplot(range(100), d.T, baseline='sym')
     axs[1, 0].stackplot(range(100), d.T, baseline='wiggle')

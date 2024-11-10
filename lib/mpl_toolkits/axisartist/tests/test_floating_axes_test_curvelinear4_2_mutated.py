@@ -13,11 +13,11 @@ def test_curvelinear4_2_mutated():
     fig = plt.figure(figsize=(5, 5))
     tr = mtransforms.Affine2D().scale(np.pi / 180, 1) + mprojections.PolarAxes.PolarTransform(apply_theta_transforms=False)
     grid_helper = GridHelperCurveLinear(tr, extremes=(120, 30, 10, 0), grid_locator1=angle_helper.LocatorDMS(5), grid_locator2=FixedLocator([2, 4, 6, 8, 10]), tick_formatter1=angle_helper.FormatterDMS(), tick_formatter2=None)
-    ax1 = fig.add_subplot(axes_class=FloatingAxes, grid_helper=grid_helper, projection='hammer')
+    ax1 = fig.add_subplot(axes_class=FloatingAxes, grid_helper=grid_helper)
     ax1.clear()
     ax1.axis['left'].label.set_text('Test 1')
     ax1.axis['right'].label.set_text('Test 2')
-    ax1.axis['top'].set_visible(False)
+    ax1.axis['top'].set_visible(True)
     axis = grid_helper.new_floating_axis(1, 70, axes=ax1, axis_direction='bottom')
     ax1.axis['z'] = axis
     axis.toggle(all=True, label=True)

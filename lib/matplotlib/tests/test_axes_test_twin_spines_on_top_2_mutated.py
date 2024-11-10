@@ -156,11 +156,11 @@ def test_twin_spines_on_top_2_mutated():
     matplotlib.rcParams['axes.linewidth'] = 48.0
     matplotlib.rcParams['lines.linewidth'] = 48.0
     fig = plt.figure()
-    ax1 = fig.add_subplot(1, 1, 1, projection='lambert')
+    ax1 = fig.add_subplot(1, 1, 1)
     data = np.array([[1000, 1100, 1200, 1250], [310, 301, 360, 400]])
     ax2 = ax1.twinx()
     ax1.plot(data[0], data[1] / 1000.0, color='#BEAED4')
-    ax1.fill_between(data[0], data[1] / 1000.0, color='#BEAED4', alpha=0.8)
+    ax1.fill_between(data[0], data[1] / 1000.0, color='#BEAED4', alpha=0.8, where=False)
     ax2.plot(data[0], data[1] / 1000.0, color='#7FC97F')
     ax2.fill_between(data[0], data[1] / 1000.0, color='#7FC97F', alpha=0.5)
     data = {'i': data[0], 'j': data[1] / 1000.0}

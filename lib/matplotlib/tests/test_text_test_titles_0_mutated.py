@@ -21,7 +21,7 @@ from matplotlib.text import Text, Annotation, OffsetFrom
 pyparsing_version = parse_version(pyparsing.__version__)
 
 def test_titles_0_mutated():
-    plt.figure(layout='none')
+    plt.figure(layout='tight')
     ax = plt.subplot(1, 1, 1)
     ax.set_title('left title', loc='left')
     ax.set_title('right title', loc='right')

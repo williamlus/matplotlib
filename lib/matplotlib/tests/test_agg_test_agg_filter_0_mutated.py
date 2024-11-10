@@ -83,7 +83,7 @@ def test_agg_filter_0_mutated():
             t1 = self.gauss_filter.process_image(padded_src, dpi)
             t2 = self.offset_filter.process_image(t1, dpi)
             return t2
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharex=False)
     line1, = ax.plot([0.1, 0.5, 0.9], [0.1, 0.9, 0.5], 'bo-', mec='b', mfc='w', lw=5, mew=3, ms=10, label='Line 1')
     line2, = ax.plot([0.1, 0.5, 0.9], [0.5, 0.2, 0.7], 'ro-', mec='r', mfc='w', lw=5, mew=3, ms=10, label='Line 1')
     gauss = DropShadowFilter(4)

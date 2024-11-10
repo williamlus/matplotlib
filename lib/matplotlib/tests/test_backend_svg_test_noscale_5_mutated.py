@@ -18,5 +18,5 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 def test_noscale_5_mutated():
     X, Y = np.meshgrid(np.arange(-5, 5, 1), np.arange(-5, 5, 1))
     Z = np.sin(Y ** 2)
-    fig, ax = plt.subplots(squeeze=True)
+    fig, ax = plt.subplots(squeeze=False)
     ax.imshow(Z, cmap='gray', interpolation='none')

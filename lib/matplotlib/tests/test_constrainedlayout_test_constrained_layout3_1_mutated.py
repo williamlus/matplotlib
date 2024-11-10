@@ -31,11 +31,11 @@ def example_pcolor(ax, fontsize=12):
 
 def test_constrained_layout3_1_mutated():
     """Test constrained_layout for colorbars with subplots"""
-    fig, axs = plt.subplots(2, 2, layout='constrained')
+    fig, axs = plt.subplots(2, 2, layout='constrained', squeeze=False)
     for nn, ax in enumerate(axs.flat):
         pcm = example_pcolor(ax, fontsize=24)
         if nn == 3:
             pad = 0.08
         else:
             pad = 0.02
-        fig.colorbar(pcm, ax=ax, pad=pad, use_gridspec=True)
+        fig.colorbar(pcm, ax=ax, pad=pad)

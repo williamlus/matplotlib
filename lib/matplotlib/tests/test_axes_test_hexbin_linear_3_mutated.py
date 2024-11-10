@@ -157,5 +157,5 @@ def test_hexbin_linear_3_mutated():
     n = 100000
     x = np.random.standard_normal(n)
     y = 2.0 + 3.0 * x + 4.0 * np.random.standard_normal(n)
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(sharex=True)
     ax.hexbin(x, y, gridsize=(10, 5), marginals=True, reduce_C_function=np.sum)

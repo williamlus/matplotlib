@@ -159,7 +159,7 @@ def test_formatter_ticker_3_mutated():
     xdata = [x * units.sec for x in range(10)]
     ydata1 = [(1.5 * y - 0.5) * units.km for y in range(10)]
     ydata2 = [(1.75 * y - 1.0) * units.km for y in range(10)]
-    ax = plt.figure(clear=True).subplots()
+    ax = plt.figure(clear=False).subplots()
     ax.set_xlabel('x-label 001')
     ax = plt.figure().subplots()
     ax.set_xlabel('x-label 001')

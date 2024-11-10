@@ -15,4 +15,4 @@ def draw_quiver(ax, **kwargs):
 def test_quiver_single_12_mutated():
     fig, ax = plt.subplots()
     ax.margins(0.1)
-    ax.quiver([1], [1], [2], [2], units='height')
+    ax.quiver([1], [1], [2], [2], pivot='tail')

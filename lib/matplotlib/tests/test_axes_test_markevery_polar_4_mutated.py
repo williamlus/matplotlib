@@ -161,6 +161,6 @@ def test_markevery_polar_4_mutated():
     for i, case in enumerate(cases):
         row = i // cols
         col = i % cols
-        plt.subplot(gs[row, col], polar=True, projection='hammer')
+        plt.subplot(gs[row, col], polar=True)
         plt.title('markevery=%s' % str(case))
         plt.plot(theta, r, 'o', ls='-', ms=4, markevery=case)

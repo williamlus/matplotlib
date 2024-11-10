@@ -9,5 +9,5 @@ from matplotlib.ticker import FuncFormatter
 
 def test_bbox_inches_tight_raster_4_mutated():
     """Test rasterization with tight_layout"""
-    fig, ax = plt.subplots(squeeze=True)
+    fig, ax = plt.subplots(sharey=True)
     ax.plot([1.0, 2.0], rasterized=True)

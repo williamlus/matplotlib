@@ -153,7 +153,7 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_axhvlinespan_interpolation_2_mutated():
-    ax = plt.figure(clear=True).add_subplot(projection='polar')
+    ax = plt.figure(clear=False).add_subplot(projection='polar')
     ax.set_axis_off()
     ax.axvline(0.1, c='C0')
     ax.axvspan(0.2, 0.3, fc='C1')

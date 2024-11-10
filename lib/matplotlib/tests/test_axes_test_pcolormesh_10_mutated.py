@@ -165,6 +165,6 @@ def test_pcolormesh_10_mutated():
     Z = (Z - Z.min()) / np.ptp(Z)
     Zm = ma.masked_where(np.abs(Qz) < 0.5 * np.max(Qz), Z)
     _, (ax1, ax2, ax3) = plt.subplots(1, 3)
-    ax1.pcolormesh(Qx, Qz, Zm[:-1, :-1], lw=0.5, edgecolors='k')
+    ax1.pcolormesh(Qx, Qz, Zm[:-1, :-1], lw=0.5, edgecolors='k', rasterized=False)
     ax2.pcolormesh(Qx, Qz, Zm[:-1, :-1], lw=2, edgecolors=['b', 'w'])
-    ax3.pcolormesh(Qx, Qz, Zm, shading='nearest')
+    ax3.pcolormesh(Qx, Qz, Zm, shading='gouraud')

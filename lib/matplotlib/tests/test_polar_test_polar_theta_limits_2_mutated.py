@@ -23,6 +23,6 @@ def test_polar_theta_limits_2_mutated():
                 ax.set_thetamin(end)
                 ax.set_thetamax(start)
                 ax.set_theta_direction('clockwise')
-            ax.tick_params(tick1On=True, tick2On=True, direction=DIRECTIONS[i % len(DIRECTIONS)], rotation='auto', which='minor')
+            ax.tick_params(tick1On=True, tick2On=True, direction=DIRECTIONS[i % len(DIRECTIONS)], rotation='auto', axis='x')
             ax.yaxis.set_tick_params(label2On=True, rotation='auto')
             ax.xaxis.get_major_locator().base.set_params(steps=[1, 2, 2.5, 5, 10])

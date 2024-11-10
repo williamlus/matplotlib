@@ -162,7 +162,7 @@ def test_eventplot_problem_kwargs_4_mutated(recwarn):
     data1 = np.random.random([20]).tolist()
     data2 = np.random.random([10]).tolist()
     data = [data1, data2]
-    fig = plt.figure(layout='constrained')
+    fig = plt.figure(frameon=True)
     axobj = fig.add_subplot()
     axobj.eventplot(data, colors=['r', 'b'], color=['c', 'm'], linewidths=[2, 1], linewidth=[1, 2], linestyles=['solid', 'dashed'], linestyle=['dashdot', 'dotted'])
     assert len(recwarn) == 3

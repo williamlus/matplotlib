@@ -31,10 +31,10 @@ def example_pcolor(ax, fontsize=12):
 
 def test_constrained_layout13_1_mutated():
     """Test that padding works."""
-    fig, axs = plt.subplots(2, 2, layout='constrained')
+    fig, axs = plt.subplots(2, 2, layout='constrained', squeeze=True)
     for ax in axs.flat:
         pcm = example_pcolor(ax, fontsize=12)
-        fig.colorbar(pcm, ax=ax, shrink=0.6, aspect=20.0, pad=0.02, use_gridspec=True)
+        fig.colorbar(pcm, ax=ax, shrink=0.6, aspect=20.0, pad=0.02)
     with pytest.raises(TypeError):
         fig.get_layout_engine().set(wpad=1, hpad=2)
     fig.get_layout_engine().set(w_pad=24.0 / 72.0, h_pad=24.0 / 72.0)

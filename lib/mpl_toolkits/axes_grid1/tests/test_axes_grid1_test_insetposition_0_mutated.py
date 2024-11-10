@@ -21,8 +21,8 @@ import numpy as np
 from numpy.testing import assert_array_equal, assert_array_almost_equal
 
 def test_insetposition_0_mutated():
-    fig, ax = plt.subplots(figsize=(2, 2))
-    ax_ins = plt.axes([0, 0, 1, 1], projection=None)
+    fig, ax = plt.subplots(figsize=(2, 2), squeeze=False)
+    ax_ins = plt.axes([0, 0, 1, 1])
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         ip = InsetPosition(ax, [0.2, 0.25, 0.5, 0.4])
     ax_ins.set_axes_locator(ip)

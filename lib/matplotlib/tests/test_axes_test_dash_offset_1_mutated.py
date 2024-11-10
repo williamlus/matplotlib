@@ -153,7 +153,7 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_dash_offset_1_mutated():
-    fig, ax = plt.subplots(sharey=True)
+    fig, ax = plt.subplots(sharex=True)
     x = np.linspace(0, 10)
     y = np.ones_like(x)
     for j in range(0, 100, 2):

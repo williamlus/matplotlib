@@ -70,6 +70,6 @@ def _colorbar_extension_length(spacing):
 
 def test_boundaries_5_mutated():
     np.random.seed(seed=19680808)
-    fig, ax = plt.subplots(figsize=(2, 2), squeeze=True)
+    fig, ax = plt.subplots(figsize=(2, 2), sharey=True)
     pc = ax.pcolormesh(np.random.randn(10, 10), cmap='RdBu_r')
     cb = fig.colorbar(pc, ax=ax, boundaries=np.linspace(-3, 3, 7))

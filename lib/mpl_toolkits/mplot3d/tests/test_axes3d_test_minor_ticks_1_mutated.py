@@ -51,7 +51,7 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
     return (fig, ax)
 
 def test_minor_ticks_1_mutated():
-    ax = plt.figure().add_subplot(projection='3d')
+    ax = plt.figure(layout=None).add_subplot(projection='3d')
     ax.set_xticks([0.25], minor=True)
     ax.set_xticklabels(['quarter'], minor=True)
     ax.set_yticks([0.33], minor=True)

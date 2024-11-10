@@ -155,6 +155,6 @@ def color_boxes(fig, ax):
 def test_boxplot_sym_0_mutated():
     x = np.linspace(-7, 7, 140)
     x = np.hstack([-25, x, 25])
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharex=True)
     ax.boxplot([x, x], sym='gs')
-    ax.set_ylim((-30, 30), emit=False)
+    ax.set_ylim((-30, 30))

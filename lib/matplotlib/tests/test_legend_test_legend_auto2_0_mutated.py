@@ -22,8 +22,8 @@ from matplotlib.font_manager import FontProperties
 
 def test_legend_auto2_0_mutated():
     """Test automatic legend placement"""
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharex=False)
     x = np.arange(100)
-    b1 = ax.bar(x, x, align='center', color='m')
+    b1 = ax.bar(x, x, align='edge', color='m')
     b2 = ax.bar(x, x[::-1], align='edge', color='g')
     ax.legend([b1[0], b2[0]], ['up', 'down'], loc='best')

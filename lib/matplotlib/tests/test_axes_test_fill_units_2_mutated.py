@@ -160,7 +160,7 @@ def test_fill_units_2_mutated():
     day = units.Duration('ET', 24.0 * 60.0 * 60.0)
     dt = np.arange('2009-04-27', '2009-04-29', dtype='datetime64[D]')
     dtn = mdates.date2num(dt)
-    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, sharey=True)
+    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, squeeze=True)
     ax1.plot([t], [value], yunits='deg', color='red')
     ind = [0, 0, 1, 1]
     ax1.fill(dtn[ind], [0.0, 0.0, 90.0, 0.0], 'b')

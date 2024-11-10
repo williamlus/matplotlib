@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
 def test_figure_legend_2_mutated():
-    fig, axs = plt.subplots(2, sharex=False)
+    fig, axs = plt.subplots(2, sharey=True)
     axs[0].plot([0, 1], [1, 0], label='x', color='g')
     axs[0].plot([0, 1], [0, 1], label='y', color='r')
     axs[0].plot([0, 1], [0.5, 0.5], label='y', color='k')

@@ -21,7 +21,7 @@ from matplotlib.text import Text, Annotation, OffsetFrom
 pyparsing_version = parse_version(pyparsing.__version__)
 
 def test_multiline_1_mutated():
-    plt.figure()
+    plt.figure(layout='compressed')
     ax = plt.subplot(1, 1, 1)
     ax.set_title('multiline\ntext alignment')
     plt.text(0.2, 0.5, 'TpTpTp\n$M$\nTpTpTp', size=20, ha='center', va='top')
@@ -30,4 +30,4 @@ def test_multiline_1_mutated():
     plt.xlim(0, 1)
     plt.ylim(0, 0.8)
     ax.set_xticks([])
-    ax.set_yticks([], minor=False)
+    ax.set_yticks([])

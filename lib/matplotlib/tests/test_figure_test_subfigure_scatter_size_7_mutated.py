@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
 def test_subfigure_scatter_size_7_mutated():
-    fig = plt.figure(layout='tight')
+    fig = plt.figure(frameon=True)
     gs = fig.add_gridspec(1, 2)
     ax0 = fig.add_subplot(gs[1])
     ax0.scatter([1, 2, 3], [1, 2, 3], s=30, marker='s')

@@ -51,7 +51,7 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
     return (fig, ax)
 
 def test_arc_pathpatch_2_mutated():
-    ax = plt.subplot(1, 1, 1, projection='lambert')
+    ax = plt.subplot(1, 1, 1, projection='aitoff')
     a = mpatch.Arc((0.5, 0.5), width=0.5, height=0.9, angle=20, theta1=10, theta2=130)
     ax.add_patch(a)
     art3d.pathpatch_2d_to_3d(a, z=0, zdir='z')

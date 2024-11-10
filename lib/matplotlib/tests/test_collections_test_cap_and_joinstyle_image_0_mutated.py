@@ -61,7 +61,7 @@ def check_segments(coll, positions, linelength, lineoffset, orientation):
         assert segment[1, pos2] == positions[i]
 
 def test_cap_and_joinstyle_image_0_mutated():
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharex=True)
     ax.set_xlim([-0.5, 1.5])
     ax.set_ylim([-0.5, 2.5])
     x = np.array([0.0, 1.0, 0.5])
@@ -69,7 +69,7 @@ def test_cap_and_joinstyle_image_0_mutated():
     segs = np.zeros((3, 3, 2))
     segs[:, :, 0] = x
     segs[:, :, 1] = ys
-    line_segments = LineCollection(segs, linewidth=[10, 15, 20], antialiaseds=False)
+    line_segments = LineCollection(segs, linewidth=[10, 15, 20])
     line_segments.set_capstyle('round')
     line_segments.set_joinstyle('miter')
     ax.add_collection(line_segments)

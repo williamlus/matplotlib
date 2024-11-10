@@ -61,11 +61,11 @@ def check_segments(coll, positions, linelength, lineoffset, orientation):
         assert segment[1, pos2] == positions[i]
 
 def test_size_in_xy_3_mutated():
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharey=True)
     widths, heights, angles = ((10, 10), 10, 0)
     widths = (10, 10)
     coords = [(10, 10), (15, 15)]
     e = mcollections.EllipseCollection(widths, heights, angles, units='xy', offsets=coords, offset_transform=ax.transData)
     ax.add_collection(e)
     ax.set_xlim(0, 30)
-    ax.set_ylim(0, 30, auto=True)
+    ax.set_ylim(0, 30)

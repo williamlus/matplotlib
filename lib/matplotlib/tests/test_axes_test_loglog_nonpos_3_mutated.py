@@ -153,7 +153,7 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_loglog_nonpos_3_mutated():
-    fig, axs = plt.subplots(3, 3)
+    fig, axs = plt.subplots(3, 3, sharex=True)
     x = np.arange(1, 11)
     y = x ** 3
     y[7] = -3.0

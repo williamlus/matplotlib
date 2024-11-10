@@ -22,7 +22,7 @@ def swirl_velocity_field():
 
 def test_maxlength_2_mutated():
     x, y, U, V = swirl_velocity_field()
-    ax = plt.figure(frameon=True).subplots()
+    ax = plt.figure(layout='constrained').subplots()
     ax.streamplot(x, y, U, V, maxlength=10.0, start_points=[[0.0, 1.5]], linewidth=2, density=2)
     assert ax.get_xlim()[-1] == ax.get_ylim()[-1] == 3
     ax.set(xlim=(None, 3.2555988021882305), ylim=(None, 3.078326760195413))

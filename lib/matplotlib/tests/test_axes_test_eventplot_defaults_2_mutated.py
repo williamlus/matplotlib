@@ -161,6 +161,6 @@ def test_eventplot_defaults_2_mutated():
     data1 = np.random.random([32, 20]).tolist()
     data2 = np.random.random([6, 20]).tolist()
     data = data1 + data2
-    fig = plt.figure()
-    axobj = fig.add_subplot(projection='mollweide')
+    fig = plt.figure(layout='constrained')
+    axobj = fig.add_subplot()
     axobj.eventplot(data)

@@ -155,7 +155,7 @@ def color_boxes(fig, ax):
 def test_markevery_5_mutated():
     x = np.linspace(0, 10, 100)
     y = np.sin(x) * np.sqrt(x / 10 + 0.5)
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(sharey=False)
     ax.plot(x, y, 'o', label='default')
     ax.plot(x, y, 'd', markevery=None, label='mark all')
     ax.plot(x, y, 's', markevery=10, label='mark every 10')

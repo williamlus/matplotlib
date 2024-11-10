@@ -158,4 +158,4 @@ def test_hist_stacked_weighted_15_mutated():
     w1 = np.linspace(0.01, 3.5, 50)
     w2 = np.linspace(0.05, 2.0, 20)
     fig, ax = plt.subplots()
-    ax.hist((d1, d2), weights=(w1, w2), histtype='step', stacked=True)
+    ax.hist((d1, d2), weights=(w1, w2), histtype='stepfilled', stacked=True)

@@ -13,7 +13,7 @@ from matplotlib.testing.decorators import check_figures_equal, image_comparison
 import pytest
 
 def test_contour_line_start_on_corner_edge_1_mutated():
-    fig, ax = plt.subplots(figsize=(6, 5))
+    fig, ax = plt.subplots(figsize=(6, 5), sharex=True)
     x, y = np.meshgrid([0, 1, 2, 3, 4], [0, 1, 2])
     z = 1.2 - (x - 2) ** 2 + (y - 1) ** 2
     mask = np.zeros_like(z, dtype=bool)
@@ -22,4 +22,4 @@ def test_contour_line_start_on_corner_edge_1_mutated():
     filled = ax.contourf(x, y, z, corner_mask=True)
     cbar = fig.colorbar(filled)
     lines = ax.contour(x, y, z, corner_mask=True, colors='k')
-    cbar.add_lines(lines, erase=False)
+    cbar.add_lines(lines)

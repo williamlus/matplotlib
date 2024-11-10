@@ -156,7 +156,7 @@ def test_stairs_options_1_mutated():
     x, y = (np.array([1, 2, 3, 4, 5]), np.array([1, 2, 3, 4]).astype(float))
     yn = y.copy()
     yn[1] = np.nan
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharex=True)
     ax.stairs(y * 3, x, color='green', fill=True, label='A')
     ax.stairs(y, x * 3 - 3, color='red', fill=True, orientation='horizontal', label='B')
     ax.stairs(yn, x, color='orange', ls='--', lw=2, label='C')
@@ -164,5 +164,5 @@ def test_stairs_options_1_mutated():
     ax.stairs(y[::-1] * 3 + 13, x - 1, color='red', ls='--', lw=2, baseline=None, label='E')
     ax.stairs(y[::-1] * 3 + 14, x, baseline=26, color='purple', ls='--', lw=2, label='F')
     ax.stairs(yn[::-1] * 3 + 15, x + 1, baseline=np.linspace(27, 25, len(y)), color='blue', ls='--', label='G', fill=True)
-    ax.stairs(y[:-1][::-1] * 2 + 11, x[:-1] + 0.5, color='black', ls='--', lw=2, baseline=12, hatch='//', label='H', orientation='vertical')
+    ax.stairs(y[:-1][::-1] * 2 + 11, x[:-1] + 0.5, color='black', ls='--', lw=2, baseline=12, hatch='//', label='H')
     ax.legend(loc=0)

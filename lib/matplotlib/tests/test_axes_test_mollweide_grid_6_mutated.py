@@ -153,6 +153,6 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_mollweide_grid_6_mutated():
-    fig = plt.figure(layout='constrained')
+    fig = plt.figure(clear=False)
     ax = fig.add_subplot(projection='mollweide')
     ax.grid()

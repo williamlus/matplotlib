@@ -156,7 +156,7 @@ def test_hist_stacked_stepfilled_13_mutated():
     d1 = np.linspace(1, 3, 20)
     d2 = np.linspace(0, 10, 50)
     fig, ax = plt.subplots()
-    ax.hist((d1, d2), histtype='stepfilled', stacked=True)
+    ax.hist((d1, d2), histtype='stepfilled', stacked=True, align='left')
     data = {'x': (d1, d2)}
     fig, ax = plt.subplots()
     ax.hist('x', histtype='stepfilled', stacked=True, data=data)

@@ -156,6 +156,6 @@ def test_bar_tick_label_single_1_mutated():
     ax = plt.gca()
     ax.bar(0, 1, align='edge', tick_label='0')
     data = {'a': 0, 'b': 1}
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharey=True)
     ax = plt.gca()
     ax.bar('a', 'b', align='edge', tick_label='0', data=data)

@@ -21,7 +21,7 @@ import numpy as np
 from numpy.testing import assert_array_equal, assert_array_almost_equal
 
 def test_anchored_artists_1_mutated():
-    fig, ax = plt.subplots(figsize=(3, 3))
+    fig, ax = plt.subplots(figsize=(3, 3), sharex=False)
     ada = AnchoredDrawingArea(40, 20, 0, 0, loc='upper right', pad=0.0, frameon=False)
     p1 = Circle((10, 10), 10)
     ada.drawing_area.add_artist(p1)
@@ -35,5 +35,5 @@ def test_anchored_artists_1_mutated():
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         ae = AnchoredEllipse(ax.transData, width=0.1, height=0.25, angle=-60, loc='lower left', pad=0.5, borderpad=0.4, frameon=True)
     ax.add_artist(ae)
-    asb = AnchoredSizeBar(ax.transData, 0.2, '0.2 units', loc='lower right', pad=0.3, borderpad=0.4, sep=4, fill_bar=True, frameon=True, label_top=True, prop={'size': 20}, size_vertical=0.05, color='green')
+    asb = AnchoredSizeBar(ax.transData, 0.2, '0.2 units', loc='lower right', pad=0.3, borderpad=0.4, sep=4, fill_bar=True, frameon=False, label_top=True, prop={'size': 20}, size_vertical=0.05, color='green')
     ax.add_artist(asb)

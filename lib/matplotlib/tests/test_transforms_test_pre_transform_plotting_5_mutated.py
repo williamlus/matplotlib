@@ -35,7 +35,7 @@ def assert_bbox_eq(bbox1, bbox2):
     assert_array_equal(bbox1.bounds, bbox2.bounds)
 
 def test_pre_transform_plotting_5_mutated():
-    ax = plt.axes()
+    ax = plt.axes(projection='mollweide')
     times10 = mtransforms.Affine2D().scale(10)
     ax.contourf(np.arange(48).reshape(6, 8), transform=times10 + ax.transData)
     ax.pcolormesh(np.linspace(0, 4, 7), np.linspace(5.5, 8, 9), np.arange(48).reshape(8, 6), transform=times10 + ax.transData)
@@ -47,5 +47,5 @@ def test_pre_transform_plotting_5_mutated():
     ax.streamplot(x, y, u, v, transform=times10 + ax.transData, linewidth=np.hypot(u, v))
     x, y = (x[::3], y[::3])
     u, v = (u[::3, ::3], v[::3, ::3])
-    ax.quiver(x, y + 5, u, v, transform=times10 + ax.transData, scale_units='inches')
+    ax.quiver(x, y + 5, u, v, transform=times10 + ax.transData)
     ax.barbs(x - 3, y + 5, u ** 2, v ** 2, transform=times10 + ax.transData)

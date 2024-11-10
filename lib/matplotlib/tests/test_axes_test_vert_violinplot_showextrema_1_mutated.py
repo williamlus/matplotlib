@@ -153,7 +153,7 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_vert_violinplot_showextrema_1_mutated():
-    ax = plt.axes(projection='aitoff')
+    ax = plt.axes(projection='rectilinear')
     np.random.seed(236067977)
     data = [np.random.normal(size=100) for _ in range(4)]
     ax.violinplot(data, positions=range(4), showmeans=False, showextrema=True, showmedians=False)

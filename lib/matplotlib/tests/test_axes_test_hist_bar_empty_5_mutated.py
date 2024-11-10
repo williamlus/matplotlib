@@ -154,4 +154,4 @@ def color_boxes(fig, ax):
 
 def test_hist_bar_empty_5_mutated():
     ax = plt.gca()
-    ax.hist([], histtype='stepfilled')
+    ax.hist([], histtype='bar', log=False)

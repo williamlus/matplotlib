@@ -12,7 +12,7 @@ import base64
 def test_bivariate_cmap_shapes_1_mutated():
     x_0 = np.repeat(np.linspace(-0.1, 1.1, 10, dtype='float32')[None, :], 10, axis=0)
     x_1 = x_0.T
-    fig, axes = plt.subplots(1, 4, figsize=(10, 2))
+    fig, axes = plt.subplots(1, 4, figsize=(10, 2), sharey=False)
     cmap = mpl.bivar_colormaps['BiPeak']
     axes[0].imshow(cmap((x_0, x_1)), interpolation='nearest')
     cmap = mpl.bivar_colormaps['BiCone']
@@ -22,5 +22,5 @@ def test_bivariate_cmap_shapes_1_mutated():
     axes[2].imshow(cmap((x_0, x_1)), interpolation='nearest')
     cmap = mpl.bivar_colormaps['BiCone']
     cmap = cmap.with_extremes(shape='circleignore')
-    axes[3].imshow(cmap((x_0, x_1), bytes=False), interpolation='nearest')
+    axes[3].imshow(cmap((x_0, x_1)), interpolation='nearest')
     remove_ticks_and_titles(fig)

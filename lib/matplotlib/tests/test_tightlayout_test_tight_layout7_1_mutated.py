@@ -31,9 +31,9 @@ def add_offsetboxes(ax, size=10, margin=0.1, color='black'):
 
 def test_tight_layout7_1_mutated():
     fontsize = 24
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharex=True)
     ax.plot([1, 2])
-    ax.locator_params(nbins=3, axis='both')
+    ax.locator_params(nbins=3)
     ax.set_xlabel('x-label', fontsize=fontsize)
     ax.set_ylabel('y-label', fontsize=fontsize)
     ax.set_title('Left Title', loc='left', fontsize=fontsize)

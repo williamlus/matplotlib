@@ -10,7 +10,7 @@ from matplotlib import patches, transforms
 from matplotlib.path import Path
 
 def test_fft_peaks_5_mutated():
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(sharey=True)
     t = np.arange(65536)
     p1 = ax.plot(abs(np.fft.fft(np.sin(2 * np.pi * 0.01 * t) * np.blackman(len(t)))))
     fig.canvas.draw()

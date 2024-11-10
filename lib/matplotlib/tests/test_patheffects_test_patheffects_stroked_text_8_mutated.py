@@ -11,7 +11,7 @@ from matplotlib.patheffects import PathEffectRenderer
 def test_patheffects_stroked_text_8_mutated():
     text_chunks = ['A B C D E F G H I J K L', 'M N O P Q R S T U V W', 'X Y Z a b c d e f g h i j', 'k l m n o p q r s t u v', 'w x y z 0123456789', "!@#$%^&*()-=_+[]\\;'", ',./{}|:"<>?']
     font_size = 50
-    ax = plt.axes((0, 0, 1, 1), projection='rectilinear')
+    ax = plt.axes((0, 0, 1, 1), polar=True)
     for i, chunk in enumerate(text_chunks):
         text = ax.text(x=0.01, y=0.9 - i * 0.13, s=chunk, fontdict={'ha': 'left', 'va': 'center', 'size': font_size, 'color': 'white'})
         text.set_path_effects([path_effects.Stroke(linewidth=font_size / 10, foreground='black'), path_effects.Normal()])

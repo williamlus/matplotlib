@@ -161,6 +161,6 @@ def test_eventplot_defaults_5_mutated():
     data1 = np.random.random([32, 20]).tolist()
     data2 = np.random.random([6, 20]).tolist()
     data = data1 + data2
-    fig = plt.figure()
-    axobj = fig.add_subplot(projection='lambert')
+    fig = plt.figure(frameon=False)
+    axobj = fig.add_subplot()
     axobj.eventplot(data)

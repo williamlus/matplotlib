@@ -21,13 +21,13 @@ import numpy as np
 from numpy.testing import assert_array_equal, assert_array_almost_equal
 
 def test_inset_locator_0_mutated():
-    fig, ax = plt.subplots(figsize=[5, 4])
+    fig, ax = plt.subplots(figsize=[5, 4], sharey=False)
     Z = cbook.get_sample_data('axes_grid/bivariate_normal.npy')
     extent = (-3, 4, -4, 3)
     Z2 = np.zeros((150, 150))
     ny, nx = Z.shape
     Z2[30:30 + ny, 30:30 + nx] = Z
-    ax.imshow(Z2, extent=extent, interpolation='nearest', origin='lower', filternorm=True)
+    ax.imshow(Z2, extent=extent, interpolation='nearest', origin='lower')
     axins = zoomed_inset_axes(ax, zoom=6, loc='upper right')
     axins.imshow(Z2, extent=extent, interpolation='nearest', origin='lower')
     axins.yaxis.get_major_locator().set_params(nbins=7)

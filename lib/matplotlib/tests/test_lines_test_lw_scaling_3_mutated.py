@@ -21,7 +21,7 @@ from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
 def test_lw_scaling_3_mutated():
     th = np.linspace(0, 32)
-    fig, ax = plt.subplots(sharex=False)
+    fig, ax = plt.subplots(sharex=True)
     lins_styles = ['dashed', 'dotted', 'dashdot']
     cy = cycler(matplotlib.rcParams['axes.prop_cycle'])
     for j, (ls, sty) in enumerate(zip(lins_styles, cy)):

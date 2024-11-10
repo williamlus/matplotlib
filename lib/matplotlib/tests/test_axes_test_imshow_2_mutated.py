@@ -159,7 +159,7 @@ def test_imshow_2_mutated():
     x -= N // 2
     y -= N // 2
     r = np.sqrt(x ** 2 + y ** 2 - x * y)
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(squeeze=True)
     ax.imshow(r)
     data = {'r': r}
     fig, ax = plt.subplots()

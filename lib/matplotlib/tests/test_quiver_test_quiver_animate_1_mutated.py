@@ -13,6 +13,6 @@ def draw_quiver(ax, **kwargs):
     return Q
 
 def test_quiver_animate_1_mutated():
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(sharex=True)
     Q = draw_quiver(ax, animated=True)
     ax.quiverkey(Q, 0.5, 0.92, 2, '$2 \\frac{m}{s}$', labelpos='W', fontproperties={'weight': 'bold'})

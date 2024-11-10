@@ -40,7 +40,7 @@ def test_constrained_layout8_0_mutated():
         else:
             ilist = [0, 4]
         for i in ilist:
-            ax = fig.add_subplot(gs[j, i], projection='rectilinear')
+            ax = fig.add_subplot(gs[j, i])
             axs += [ax]
             example_pcolor(ax, fontsize=9)
             if i > 0:

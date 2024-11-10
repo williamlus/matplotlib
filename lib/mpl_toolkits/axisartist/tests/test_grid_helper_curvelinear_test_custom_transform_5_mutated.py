@@ -50,7 +50,7 @@ def test_custom_transform_5_mutated():
 
         def inverted(self):
             return MyTransform(self._resolution)
-    fig = plt.figure(layout='none')
+    fig = plt.figure()
     SubplotHost = host_axes_class_factory(Axes)
     tr = MyTransform(1)
     grid_helper = GridHelperCurveLinear(tr)
@@ -60,5 +60,5 @@ def test_custom_transform_5_mutated():
     ax2.plot([3, 6], [5.0, 10.0])
     ax1.set_aspect(1.0)
     ax1.set_xlim(0, 10)
-    ax1.set_ylim(0, 10)
+    ax1.set_ylim(0, 10, auto=False)
     ax1.grid(True)

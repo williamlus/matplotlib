@@ -21,7 +21,7 @@ from matplotlib.text import Text, Annotation, OffsetFrom
 pyparsing_version = parse_version(pyparsing.__version__)
 
 def test_axes_titles_0_mutated():
-    plt.figure()
+    plt.figure(layout='constrained')
     ax = plt.subplot(1, 1, 1)
     ax.set_title('center', loc='center', fontsize=20, fontweight=700)
     ax.set_title('left', loc='left', fontsize=12, fontweight=400)

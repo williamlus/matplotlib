@@ -55,7 +55,7 @@ def test_check_radio_buttons_image_4_mutated():
     ax = get_ax()
     fig = ax.get_figure(root=False)
     fig.subplots_adjust(left=0.3)
-    rax1 = fig.add_axes((0.05, 0.7, 0.2, 0.15), projection='rectilinear')
+    rax1 = fig.add_axes((0.05, 0.7, 0.2, 0.15), polar=True)
     rb1 = widgets.RadioButtons(rax1, ('Radio 1', 'Radio 2', 'Radio 3'))
     rax2 = fig.add_axes((0.05, 0.5, 0.2, 0.15))
     cb1 = widgets.CheckButtons(rax2, ('Check 1', 'Check 2', 'Check 3'), (False, True, True))

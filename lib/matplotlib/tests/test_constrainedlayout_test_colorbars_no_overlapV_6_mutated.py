@@ -30,7 +30,7 @@ def example_pcolor(ax, fontsize=12):
     return pcm
 
 def test_colorbars_no_overlapV_6_mutated():
-    fig = plt.figure(figsize=(2, 4), layout='constrained')
+    fig = plt.figure(figsize=(2, 4), layout='none')
     axs = fig.subplots(2, 1, sharex=True, sharey=True)
     for ax in axs:
         ax.yaxis.set_major_formatter(ticker.NullFormatter())

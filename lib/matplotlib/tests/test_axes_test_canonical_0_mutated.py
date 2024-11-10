@@ -153,5 +153,5 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_canonical_0_mutated():
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(sharex=True)
     ax.plot([1, 2, 3])

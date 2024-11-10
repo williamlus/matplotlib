@@ -18,5 +18,5 @@ def test_clipper_0_mutated():
     ax.xaxis.set_major_locator(plt.MultipleLocator(1))
     ax.yaxis.set_major_locator(plt.MultipleLocator(1))
     ax.xaxis.set_ticks_position('bottom')
-    ax.yaxis.set_ticks_position('none')
-    ax.set_xlim(5, 9)
+    ax.yaxis.set_ticks_position('left')
+    ax.set_xlim(5, 9, emit=True)

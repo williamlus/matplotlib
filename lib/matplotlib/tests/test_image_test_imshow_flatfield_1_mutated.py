@@ -76,6 +76,6 @@ class QuantityND(np.ndarray):
         return self.view(np.ndarray)
 
 def test_imshow_flatfield_1_mutated():
-    fig, ax = plt.subplots(sharey=True)
+    fig, ax = plt.subplots(sharex=True)
     im = ax.imshow(np.ones((5, 5)), interpolation='nearest')
     im.set_clim(0.5, 1.5)

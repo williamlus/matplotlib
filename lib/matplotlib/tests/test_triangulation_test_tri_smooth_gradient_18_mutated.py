@@ -53,4 +53,4 @@ def test_tri_smooth_gradient_18_mutated():
     levels = np.arange(0.0, 1.0, 0.01)
     cmap = mpl.colormaps['hot']
     plt.tricontour(tri_refi, z_test_refi, levels=levels, cmap=cmap, linewidths=[2.0, 1.0, 1.0, 1.0])
-    plt.quiver(triang.x, triang.y, Ex / E_norm, Ey / E_norm, units='xy', scale=10.0, zorder=3, color='blue', width=0.007, headwidth=3.0, headlength=4.0, scale_units='x')
+    plt.quiver(triang.x, triang.y, Ex / E_norm, Ey / E_norm, units='xy', scale=10.0, zorder=3, color='blue', width=0.007, headwidth=3.0, headlength=4.0, scale_units='height')

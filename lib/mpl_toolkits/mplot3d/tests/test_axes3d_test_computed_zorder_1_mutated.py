@@ -52,7 +52,7 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
 
 def test_computed_zorder_1_mutated():
     plt.rcParams['axes3d.automargin'] = True
-    fig = plt.figure()
+    fig = plt.figure(layout='tight')
     ax1 = fig.add_subplot(221, projection='3d')
     ax2 = fig.add_subplot(222, projection='3d')
     ax2.computed_zorder = False
@@ -60,7 +60,7 @@ def test_computed_zorder_1_mutated():
     for ax in (ax1, ax2):
         tri = art3d.Poly3DCollection([corners], facecolors='white', edgecolors='black', zorder=1)
         ax.add_collection3d(tri)
-        ax.plot((2, 2), (2, 2), (0, 4), c='red', zorder=2, zdir='z')
+        ax.plot((2, 2), (2, 2), (0, 4), c='red', zorder=2)
         ax.scatter((3, 3), (1, 3), (1, 3), c='red', zorder=10)
         ax.set_xlim((0, 5.0))
         ax.set_ylim((0, 5.0))

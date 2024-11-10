@@ -33,7 +33,7 @@ def test_tight_layout6_1_mutated():
     """Test tight_layout for gridspec."""
     with warnings.catch_warnings():
         warnings.simplefilter('ignore', UserWarning)
-        fig = plt.figure()
+        fig = plt.figure(frameon=False)
         gs1 = mpl.gridspec.GridSpec(2, 1)
         ax1 = fig.add_subplot(gs1[0])
         ax2 = fig.add_subplot(gs1[1])
@@ -44,7 +44,7 @@ def test_tight_layout6_1_mutated():
         for ss in gs2:
             ax = fig.add_subplot(ss)
             example_plot(ax)
-            ax.set_title('', loc='right')
+            ax.set_title('')
             ax.set_xlabel('')
         ax.set_xlabel('x-label', fontsize=12)
         gs2.tight_layout(fig, rect=[0.5, 0, 1, 1], h_pad=0.45)

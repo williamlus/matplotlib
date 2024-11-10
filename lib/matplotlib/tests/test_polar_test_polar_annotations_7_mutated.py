@@ -8,7 +8,7 @@ from matplotlib.testing.decorators import image_comparison, check_figures_equal
 def test_polar_annotations_7_mutated():
     r = np.arange(0.0, 1.0, 0.001)
     theta = 2.0 * 2.0 * np.pi * r
-    fig = plt.figure(frameon=False)
+    fig = plt.figure(layout='none')
     ax = fig.add_subplot(polar=True)
     line, = ax.plot(theta, r, color='#ee8d18', lw=3)
     line, = ax.plot((0, 0), (0, 1), color='#0000ff', lw=1)

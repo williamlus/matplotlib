@@ -78,11 +78,11 @@ class QuantityND(np.ndarray):
 def test_upsampling_0_mutated():
     np.random.seed(19680801 + 9)
     a = np.random.rand(4, 4)
-    fig, axs = plt.subplots(1, 3, figsize=(6.5, 3), layout='compressed')
+    fig, axs = plt.subplots(1, 3, figsize=(6.5, 3), layout='compressed', sharex=True)
     im = axs[0].imshow(a, cmap='viridis')
     axs[0].set_title("interpolation='auto'\nstage='antialaised'\n(default for upsampling)")
     axs[1].imshow(a, cmap='viridis', interpolation='sinc')
     axs[1].set_title("interpolation='sinc'\nstage='auto'\n(default for upsampling)")
     axs[2].imshow(a, cmap='viridis', interpolation='sinc', interpolation_stage='rgba')
     axs[2].set_title("interpolation='sinc'\nstage='rgba'")
-    fig.colorbar(im, ax=axs, shrink=0.7, extend='both', use_gridspec=False)
+    fig.colorbar(im, ax=axs, shrink=0.7, extend='both')

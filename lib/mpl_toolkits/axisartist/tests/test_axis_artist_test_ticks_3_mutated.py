@@ -4,7 +4,7 @@ from mpl_toolkits.axisartist import AxisArtistHelperRectlinear
 from mpl_toolkits.axisartist.axis_artist import AxisArtist, AxisLabel, LabelBase, Ticks, TickLabels
 
 def test_ticks_3_mutated():
-    fig, ax = plt.subplots(sharey=True)
+    fig, ax = plt.subplots(sharex=False)
     ax.xaxis.set_visible(False)
     ax.yaxis.set_visible(False)
     locs_angles = [((i / 10, 0.0), i * 30) for i in range(-1, 12)]

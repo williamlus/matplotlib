@@ -5,8 +5,8 @@ from mpl_toolkits.axisartist.axis_artist import AxisArtist, AxisLabel, LabelBase
 
 def test_ticklabels_0_mutated():
     plt.rcParams['text.kerning_factor'] = 6
-    fig, ax = plt.subplots()
-    ax.xaxis.set_visible(True)
+    fig, ax = plt.subplots(sharex=True)
+    ax.xaxis.set_visible(False)
     ax.yaxis.set_visible(False)
     ax.plot([0.2, 0.4], [0.5, 0.5], 'o')
     ticks = Ticks(ticksize=10, axis=ax.xaxis)

@@ -153,7 +153,7 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_markers_fillstyle_rcparams_1_mutated():
-    fig, ax = plt.subplots(squeeze=True)
+    fig, ax = plt.subplots(squeeze=False)
     x = np.arange(7)
     for idx, (style, marker) in enumerate([('top', 's'), ('bottom', 'o'), ('none', '^')]):
         matplotlib.rcParams['markers.fillstyle'] = style

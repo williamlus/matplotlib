@@ -88,6 +88,6 @@ def test_jpl_barh_units_4_mutated():
     x = [0 * units.km, 1 * units.km, 2 * units.km]
     w = [1 * day, 2 * day, 3 * day]
     b = units.Epoch('ET', dt=datetime(2009, 4, 26))
-    fig, ax = plt.subplots(sharex=False)
+    fig, ax = plt.subplots(sharey=True)
     ax.barh(x, w, left=b)
     ax.set_xlim([b - 1 * day, b + w[-1] + 1.001 * day])

@@ -69,9 +69,9 @@ def _colorbar_extension_length(spacing):
     return fig
 
 def test_colorbar_single_scatter_1_mutated():
-    plt.figure()
+    plt.figure(frameon=False)
     x = y = [0]
     z = [50]
     cmap = mpl.colormaps['jet'].resampled(16)
-    cs = plt.scatter(x, y, z, c=z, cmap=cmap, edgecolors='none')
+    cs = plt.scatter(x, y, z, c=z, cmap=cmap)
     plt.colorbar(cs)

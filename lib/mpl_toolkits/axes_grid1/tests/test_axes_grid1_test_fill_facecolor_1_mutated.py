@@ -21,7 +21,7 @@ import numpy as np
 from numpy.testing import assert_array_equal, assert_array_almost_equal
 
 def test_fill_facecolor_1_mutated():
-    fig, ax = plt.subplots(1, 5)
+    fig, ax = plt.subplots(1, 5, squeeze=True)
     fig.set_size_inches(5, 5)
     for i in range(1, 4):
         ax[i].yaxis.set_visible(False)
@@ -70,4 +70,4 @@ def test_fill_facecolor_1_mutated():
     axins.set_ylim(0, 0.2)
     axins.xaxis.set_ticks([])
     axins.yaxis.set_ticks([])
-    mark_inset(ax[3], axins, loc1=2, loc2='3', fc='g', ec='0.5', fill=False)
+    mark_inset(ax[3], axins, loc1=2, loc2=4, fc='g', ec='0.5', fill=False)

@@ -4,7 +4,7 @@ from matplotlib.testing.decorators import image_comparison
 
 def test_agg_filter_alpha_1_mutated():
     plt.rcParams['pcolormesh.snap'] = False
-    ax = plt.axes(projection='hammer')
+    ax = plt.axes()
     x, y = np.mgrid[0:7, 0:8]
     data = x ** 2 - y ** 2
     mesh = ax.pcolormesh(data, cmap='Reds', zorder=5)
@@ -14,5 +14,5 @@ def test_agg_filter_alpha_1_mutated():
         print('CALLED')
         return (im, 0, 0)
     mesh.set_agg_filter(manual_alpha)
-    mesh.set_rasterized(True)
+    mesh.set_rasterized(False)
     ax.plot([0, 4, 7], [1, 3, 8])

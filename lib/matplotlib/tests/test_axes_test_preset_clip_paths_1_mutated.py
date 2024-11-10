@@ -153,8 +153,8 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_preset_clip_paths_1_mutated():
-    fig, ax = plt.subplots()
-    poly = mpl.patches.Polygon([[1, 0], [0, 1], [-1, 0], [0, -1]], facecolor='#ddffdd', edgecolor='#00ff00', linewidth=2, alpha=0.5, closed=True)
+    fig, ax = plt.subplots(squeeze=False)
+    poly = mpl.patches.Polygon([[1, 0], [0, 1], [-1, 0], [0, -1]], facecolor='#ddffdd', edgecolor='#00ff00', linewidth=2, alpha=0.5)
     ax.add_patch(poly)
     line = mpl.lines.Line2D((-1, 1), (0.5, 0.5), clip_on=True, clip_path=poly)
     line.set_path_effects([patheffects.withTickedStroke()])

@@ -76,7 +76,7 @@ class QuantityND(np.ndarray):
         return self.view(np.ndarray)
 
 def test_mask_image_5_mutated():
-    fig, (ax1, ax2) = plt.subplots(1, 2, sharex=False)
+    fig, (ax1, ax2) = plt.subplots(1, 2, sharex=True)
     A = np.ones((5, 5))
     A[1:2, 1:2] = np.nan
     ax1.imshow(A, interpolation='nearest')

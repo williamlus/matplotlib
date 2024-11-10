@@ -36,7 +36,7 @@ def test_constrained_layout17_2_mutated():
     ax1 = fig.add_subplot(gs[0, 0])
     ax2 = fig.add_subplot(gs[0, 1:])
     ax3 = fig.add_subplot(gs[1:, 0:2])
-    ax4 = fig.add_subplot(gs[1:, -1], projection='rectilinear')
+    ax4 = fig.add_subplot(gs[1:, -1])
     example_plot(ax1)
     example_plot(ax2)
     example_plot(ax3)

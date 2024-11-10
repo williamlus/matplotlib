@@ -34,7 +34,7 @@ def test_constrained_layout12_7_mutated():
     fig = plt.figure(layout='constrained', figsize=(6, 8))
     gs0 = gridspec.GridSpec(6, 2, figure=fig)
     ax1 = fig.add_subplot(gs0[:3, 1])
-    ax2 = fig.add_subplot(gs0[3:, 1], projection='rectilinear')
+    ax2 = fig.add_subplot(gs0[3:, 1])
     example_plot(ax1, fontsize=18)
     example_plot(ax2, fontsize=18)
     ax = fig.add_subplot(gs0[0:2, 0])

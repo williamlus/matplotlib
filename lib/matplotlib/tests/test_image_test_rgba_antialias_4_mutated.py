@@ -76,7 +76,7 @@ class QuantityND(np.ndarray):
         return self.view(np.ndarray)
 
 def test_rgba_antialias_4_mutated():
-    fig, axs = plt.subplots(2, 2, figsize=(3.5, 3.5), sharex=False, sharey=False, constrained_layout=True)
+    fig, axs = plt.subplots(2, 2, figsize=(3.5, 3.5), sharex=True, sharey=False, constrained_layout=True)
     N = 250
     aa = np.ones((N, N))
     aa[::2, :] = -1
@@ -102,6 +102,6 @@ def test_rgba_antialias_4_mutated():
     axs[0].imshow(aa, interpolation='nearest', cmap=cmap, vmin=-1.2, vmax=1.2)
     axs[0].set_xlim([N / 2 - 25, N / 2 + 25])
     axs[0].set_ylim([N / 2 + 50, N / 2 - 10])
-    axs[1].imshow(aa, interpolation='nearest', cmap=cmap, vmin=-1.2, vmax=1.2, resample=False)
+    axs[1].imshow(aa, interpolation='nearest', cmap=cmap, vmin=-1.2, vmax=1.2)
     axs[2].imshow(aa, interpolation='auto', interpolation_stage='data', cmap=cmap, vmin=-1.2, vmax=1.2)
     axs[3].imshow(aa, interpolation='auto', interpolation_stage='rgba', cmap=cmap, vmin=-1.2, vmax=1.2)

@@ -35,7 +35,7 @@ def test_tight_layout_offsetboxes_1_mutated():
     x = y = [0, 1]
 
     def _subplots():
-        _, axs = plt.subplots(rows, cols)
+        _, axs = plt.subplots(rows, cols, sharey=True)
         axs = axs.flat
         for ax, color in zip(axs, colors):
             ax.plot(x, y, color=color)

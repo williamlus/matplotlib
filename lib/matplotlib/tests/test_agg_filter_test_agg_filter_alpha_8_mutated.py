@@ -4,7 +4,7 @@ from matplotlib.testing.decorators import image_comparison
 
 def test_agg_filter_alpha_8_mutated():
     plt.rcParams['pcolormesh.snap'] = False
-    ax = plt.axes(polar=True)
+    ax = plt.axes(projection='mollweide')
     x, y = np.mgrid[0:7, 0:8]
     data = x ** 2 - y ** 2
     mesh = ax.pcolormesh(data, cmap='Reds', zorder=5)

@@ -47,5 +47,5 @@ def test_pre_transform_plotting_9_mutated():
     ax.streamplot(x, y, u, v, transform=times10 + ax.transData, linewidth=np.hypot(u, v))
     x, y = (x[::3], y[::3])
     u, v = (u[::3, ::3], v[::3, ::3])
-    ax.quiver(x, y + 5, u, v, transform=times10 + ax.transData, units='height')
-    ax.barbs(x - 3, y + 5, u ** 2, v ** 2, transform=times10 + ax.transData)
+    ax.quiver(x, y + 5, u, v, transform=times10 + ax.transData)
+    ax.barbs(x - 3, y + 5, u ** 2, v ** 2, transform=times10 + ax.transData, pivot='middle')

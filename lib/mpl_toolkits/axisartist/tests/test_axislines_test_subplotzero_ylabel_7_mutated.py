@@ -6,8 +6,8 @@ from mpl_toolkits.axisartist.axislines import AxesZero, SubplotZero, Subplot
 from mpl_toolkits.axisartist import Axes, SubplotHost
 
 def test_subplotzero_ylabel_7_mutated():
-    fig = plt.figure()
-    ax = fig.add_subplot(111, axes_class=SubplotZero, projection='mollweide')
+    fig = plt.figure(clear=False)
+    ax = fig.add_subplot(111, axes_class=SubplotZero)
     ax.set(xlim=(-3, 7), ylim=(-3, 7), xlabel='x', ylabel='y')
     zero_axis = ax.axis['xzero', 'yzero']
     zero_axis.set_visible(True)

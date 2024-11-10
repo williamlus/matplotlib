@@ -61,6 +61,6 @@ def check_segments(coll, positions, linelength, lineoffset, orientation):
         assert segment[1, pos2] == positions[i]
 
 def test_scatter_post_alpha_4_mutated():
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(squeeze=False)
     sc = ax.scatter(range(5), range(5), c=range(5))
     sc.set_alpha(0.1)

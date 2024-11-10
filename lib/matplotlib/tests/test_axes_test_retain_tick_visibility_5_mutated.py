@@ -153,7 +153,7 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_retain_tick_visibility_5_mutated():
-    fig, ax = plt.subplots(squeeze=True)
+    fig, ax = plt.subplots(squeeze=False)
     plt.plot([0, 1, 2], [0, -1, 4])
     plt.setp(ax.get_yticklabels(), visible=False)
     ax.tick_params(axis='y', which='both', length=0)

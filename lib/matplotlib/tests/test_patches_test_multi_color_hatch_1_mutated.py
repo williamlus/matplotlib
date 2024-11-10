@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 from matplotlib import collections as mcollections, colors as mcolors, patches as mpatches, path as mpath, transforms as mtransforms, rcParams
 
 def test_multi_color_hatch_1_mutated():
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharex=True)
     rects = ax.bar(range(5), range(1, 6))
     for i, rect in enumerate(rects):
         rect.set_facecolor('none')
@@ -22,6 +22,6 @@ def test_multi_color_hatch_1_mutated():
     ax.autoscale_view()
     ax.autoscale(False)
     for i in range(5):
-        with mpl.style.context({'hatch.color': f'C{i}'}, after_reset=False):
+        with mpl.style.context({'hatch.color': f'C{i}'}):
             r = Rectangle((i - 0.8 / 2, 5), 0.8, 1, hatch='//', fc='none')
         ax.add_patch(r)

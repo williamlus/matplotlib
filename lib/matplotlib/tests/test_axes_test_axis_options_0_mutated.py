@@ -153,11 +153,11 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_axis_options_0_mutated():
-    fig, axes = plt.subplots(2, 3)
+    fig, axes = plt.subplots(2, 3, sharey=True)
     for i, option in enumerate(('scaled', 'tight', 'image')):
         axes[0, i].plot((1, 2), (1, 3.2))
         axes[0, i].axis(option)
         axes[0, i].add_artist(mpatches.Circle((1.5, 1.5), radius=0.5, facecolor='none', edgecolor='k'))
         axes[1, i].plot((1, 2.25), (1, 1.75))
-        axes[1, i].axis(option, emit=False)
+        axes[1, i].axis(option)
         axes[1, i].add_artist(mpatches.Circle((1.5, 1.25), radius=0.25, facecolor='none', edgecolor='k'))

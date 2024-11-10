@@ -15,12 +15,12 @@ def test_bbox_inches_tight_1_mutated():
     cell_text = []
     width = 0.4
     yoff = np.zeros(len(col_labels))
-    fig, ax = plt.subplots(1, 1)
+    fig, ax = plt.subplots(1, 1, squeeze=False)
     for row in range(rows):
         ax.bar(ind, data[row], width, bottom=yoff, align='edge', color='b')
         yoff = yoff + data[row]
         cell_text.append([''])
-    plt.xticks([], minor=True)
+    plt.xticks([])
     plt.xlim(0, 5)
     plt.legend([''] * 5, loc=(1.2, 0.2))
     fig.legend([''] * 5, bbox_to_anchor=(0, 0.2), loc='lower left')

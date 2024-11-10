@@ -24,5 +24,5 @@ def test_linewidth_8_mutated():
     X, Y, U, V = velocity_field()
     speed = np.hypot(U, V)
     lw = 5 * speed / speed.max()
-    ax = plt.figure(layout=None).subplots()
+    ax = plt.figure(clear=False).subplots()
     ax.streamplot(X, Y, U, V, density=[0.5, 1], color='k', linewidth=lw)

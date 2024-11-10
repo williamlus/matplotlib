@@ -76,7 +76,7 @@ class QuantityND(np.ndarray):
         return self.view(np.ndarray)
 
 def test_nonuniform_logscale_3_mutated():
-    _, axs = plt.subplots(ncols=3, nrows=1)
+    _, axs = plt.subplots(ncols=3, nrows=1, sharey=False)
     for i in range(3):
         ax = axs[i]
         im = NonUniformImage(ax)
@@ -86,7 +86,7 @@ def test_nonuniform_logscale_3_mutated():
         ax.set_box_aspect(1)
         if i == 1:
             ax.set_xscale('log', base=2)
-            ax.set_yscale('linear', base=2)
+            ax.set_yscale('log', base=2)
         if i == 2:
             ax.set_xscale('log', base=4)
             ax.set_yscale('log', base=4)

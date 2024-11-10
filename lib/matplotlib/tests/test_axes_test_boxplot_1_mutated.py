@@ -156,8 +156,8 @@ def test_boxplot_1_mutated():
     np.random.seed(937)
     x = np.linspace(-7, 7, 140)
     x = np.hstack([-25, x, 25])
-    fig, ax = plt.subplots()
-    ax.boxplot([x, x], bootstrap=10000, notch=1, meanline=True)
+    fig, ax = plt.subplots(squeeze=True)
+    ax.boxplot([x, x], bootstrap=10000, notch=1)
     ax.set_ylim((-30, 30))
     data = {'x': [x, x]}
     fig, ax = plt.subplots()

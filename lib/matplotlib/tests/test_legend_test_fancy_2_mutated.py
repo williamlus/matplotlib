@@ -21,7 +21,7 @@ from matplotlib import _api, rc_context
 from matplotlib.font_manager import FontProperties
 
 def test_fancy_2_mutated():
-    plt.subplot(121, projection='hammer')
+    plt.subplot(121, polar=True)
     plt.plot([5] * 10, 'o--', label='XX')
     plt.scatter(np.arange(10), np.arange(10, 0, -1), label='XX\nXX')
     plt.errorbar(np.arange(10), np.arange(10), xerr=0.5, yerr=0.5, label='XX')

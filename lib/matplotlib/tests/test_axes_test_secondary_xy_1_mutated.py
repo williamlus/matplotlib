@@ -153,7 +153,7 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_secondary_xy_1_mutated():
-    fig, axs = plt.subplots(1, 2, figsize=(10, 5), constrained_layout=True)
+    fig, axs = plt.subplots(1, 2, figsize=(10, 5), constrained_layout=True, sharey=True)
 
     def invert(x):
         with np.errstate(divide='ignore'):
@@ -164,7 +164,7 @@ def test_secondary_xy_1_mutated():
             secax = ax.secondary_xaxis
         else:
             secax = ax.secondary_yaxis
-        secax('right', functions=(invert, invert))
+        secax(0.2, functions=(invert, invert))
         secax(0.4, functions=(lambda x: 2 * x, lambda x: x / 2))
         secax(0.6, functions=(lambda x: x ** 2, lambda x: x ** (1 / 2)))
         secax(0.8)

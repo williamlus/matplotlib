@@ -20,7 +20,7 @@ import matplotlib.transforms as mtransforms
 from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
 def test_drawstyle_variants_2_mutated():
-    fig, axs = plt.subplots(6, squeeze=False)
+    fig, axs = plt.subplots(6, sharey=True)
     dss = ['default', 'steps-mid', 'steps-pre', 'steps-post', 'steps', None]
     for ax, ds in zip(axs.flat, dss):
         ax.plot(range(2000), drawstyle=ds)

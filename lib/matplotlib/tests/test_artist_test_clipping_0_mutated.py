@@ -23,7 +23,7 @@ def test_clipping_0_mutated():
     clip_path = mpath.Path.make_compound_path(exterior, interior)
     star = mpath.Path.unit_regular_star(6).deepcopy()
     star.vertices *= 2.6
-    fig, (ax1, ax2) = plt.subplots(1, 2, sharex=True, sharey=True)
+    fig, (ax1, ax2) = plt.subplots(1, 2, sharex=True, sharey=True, squeeze=True)
     col = mcollections.PathCollection([star], lw=5, edgecolor='blue', facecolor='red', alpha=0.7, hatch='*')
     col.set_clip_path(clip_path, ax1.transData)
     ax1.add_collection(col)
@@ -31,4 +31,4 @@ def test_clipping_0_mutated():
     patch.set_clip_path(clip_path, ax2.transData)
     ax2.add_patch(patch)
     ax1.set_xlim([-3, 3])
-    ax1.set_ylim([-3, 3], emit=False)
+    ax1.set_ylim([-3, 3])

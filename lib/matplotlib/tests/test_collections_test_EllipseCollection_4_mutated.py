@@ -61,7 +61,7 @@ def check_segments(coll, positions, linelength, lineoffset, orientation):
         assert segment[1, pos2] == positions[i]
 
 def test_EllipseCollection_4_mutated():
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharex=False)
     x = np.arange(4)
     y = np.arange(3)
     X, Y = np.meshgrid(x, y)
@@ -71,4 +71,4 @@ def test_EllipseCollection_4_mutated():
     aa = np.ones_like(ww) * 20
     ec = mcollections.EllipseCollection(ww, hh, aa, units='x', offsets=XY, offset_transform=ax.transData, facecolors='none')
     ax.add_collection(ec)
-    ax.autoscale_view(scalex=True)
+    ax.autoscale_view()

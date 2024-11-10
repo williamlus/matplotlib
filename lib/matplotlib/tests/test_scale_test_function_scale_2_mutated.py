@@ -16,8 +16,8 @@ def test_function_scale_2_mutated():
 
     def forward(x):
         return x ** (1 / 2)
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharey=False)
     x = np.arange(1, 1000)
     ax.plot(x, x)
-    ax.set_xscale('symlog', functions=(forward, inverse))
+    ax.set_xscale('function', functions=(forward, inverse))
     ax.set_xlim(1, 1000)

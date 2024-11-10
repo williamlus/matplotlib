@@ -31,7 +31,7 @@ def example_pcolor(ax, fontsize=12):
 
 def test_constrained_layout4_4_mutated():
     """Test constrained_layout for a single colorbar with subplots"""
-    fig, axs = plt.subplots(2, 2, layout='constrained', sharey=True)
+    fig, axs = plt.subplots(2, 2, layout='constrained', sharey=False)
     for ax in axs.flat:
         pcm = example_pcolor(ax, fontsize=24)
     fig.colorbar(pcm, ax=axs, pad=0.01, shrink=0.6)

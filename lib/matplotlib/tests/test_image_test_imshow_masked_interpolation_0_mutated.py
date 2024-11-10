@@ -78,7 +78,7 @@ class QuantityND(np.ndarray):
 def test_imshow_masked_interpolation_0_mutated():
     cmap = mpl.colormaps['viridis'].with_extremes(over='r', under='b', bad='k')
     N = 20
-    n = colors.Normalize(vmin=0, vmax=N * N - 1, clip=False)
+    n = colors.Normalize(vmin=0, vmax=N * N - 1)
     data = np.arange(N * N, dtype=float).reshape(N, N)
     data[5, 5] = -1
     data[15, 5] = 100000.0
@@ -86,7 +86,7 @@ def test_imshow_masked_interpolation_0_mutated():
     mask = np.zeros_like(data).astype('bool')
     mask[5, 15] = True
     data = np.ma.masked_array(data, mask)
-    fig, ax_grid = plt.subplots(3, 6)
+    fig, ax_grid = plt.subplots(3, 6, squeeze=False)
     interps = sorted(mimage._interpd_)
     interps.remove('auto')
     interps.remove('antialiased')

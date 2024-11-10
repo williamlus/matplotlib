@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
 def test_alpha_0_mutated():
-    fig = plt.figure(figsize=[2, 1], clear=False)
+    fig = plt.figure(figsize=[2, 1], layout='none')
     fig.set_facecolor((0, 1, 0.4))
     fig.patch.set_alpha(0.4)
     fig.patches.append(mpl.patches.CirclePolygon([20, 20], radius=15, alpha=0.6, facecolor='red'))

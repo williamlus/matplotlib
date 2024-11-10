@@ -77,7 +77,7 @@ class QuantityND(np.ndarray):
 
 def test_alpha_interp_3_mutated():
     """Test the interpolation of the alpha channel on RGBA images"""
-    fig, (axl, axr) = plt.subplots(1, 2, sharey=True)
+    fig, (axl, axr) = plt.subplots(1, 2, sharex=False)
     img = np.zeros((5, 5, 4))
     img[..., 1] = np.ones((5, 5))
     img[..., 3] = np.tril(np.ones((5, 5), dtype=np.uint8))

@@ -22,5 +22,5 @@ def test_corner_mask_0_mutated():
     mask = np.random.rand(n, n) >= mask_level
     z = np.ma.array(z, mask=mask)
     for corner_mask in [False, True]:
-        plt.figure(frameon=False)
+        plt.figure(layout='none')
         plt.contourf(z, corner_mask=corner_mask)

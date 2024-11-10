@@ -153,7 +153,7 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_axisbelow_6_mutated():
-    axs = plt.figure(frameon=False).subplots(ncols=3, sharex=True, sharey=True)
+    axs = plt.figure(layout='none').subplots(ncols=3, sharex=True, sharey=True)
     settings = (False, 'line', True)
     for ax, setting in zip(axs, settings):
         ax.plot((0, 10), (0, 10), lw=10, color='m')

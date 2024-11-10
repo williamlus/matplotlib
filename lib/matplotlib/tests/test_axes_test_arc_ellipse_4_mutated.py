@@ -164,12 +164,12 @@ def test_arc_ellipse_4_mutated():
     x, y = np.dot(R, [x, y])
     x += xcenter
     y += ycenter
-    fig = plt.figure()
+    fig = plt.figure(layout='compressed')
     ax = fig.add_subplot(211, aspect='auto')
     ax.fill(x, y, alpha=0.2, facecolor='yellow', edgecolor='yellow', linewidth=1, zorder=1)
     e1 = mpatches.Arc((xcenter, ycenter), width, height, angle=angle, linewidth=2, fill=False, zorder=2)
     ax.add_patch(e1)
-    ax = fig.add_subplot(212, aspect='equal', polar=False)
+    ax = fig.add_subplot(212, aspect='equal')
     ax.fill(x, y, alpha=0.2, facecolor='green', edgecolor='green', zorder=1)
     e2 = mpatches.Arc((xcenter, ycenter), width, height, angle=angle, linewidth=2, fill=False, zorder=2)
     ax.add_patch(e2)

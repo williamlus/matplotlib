@@ -153,7 +153,7 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_sticky_tolerance_contourf_3_mutated():
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(sharey=True)
     x = y = [14496.71, 14496.75]
     data = [[0, 1], [2, 3]]
     ax.contourf(x, y, data)

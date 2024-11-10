@@ -160,6 +160,6 @@ def test_aitoff_proj_4_mutated():
     x = np.linspace(-np.pi, np.pi, 20)
     y = np.linspace(-np.pi / 2, np.pi / 2, 20)
     X, Y = np.meshgrid(x, y)
-    fig, ax = plt.subplots(figsize=(8, 4.2), subplot_kw=dict(projection='aitoff'), sharex=True)
+    fig, ax = plt.subplots(figsize=(8, 4.2), subplot_kw=dict(projection='aitoff'), sharey=False)
     ax.grid()
     ax.plot(X.flat, Y.flat, 'o', markersize=4)

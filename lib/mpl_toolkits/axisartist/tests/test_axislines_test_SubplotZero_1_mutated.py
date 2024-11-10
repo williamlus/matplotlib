@@ -7,10 +7,10 @@ from mpl_toolkits.axisartist import Axes, SubplotHost
 
 def test_SubplotZero_1_mutated():
     plt.rcParams['text.kerning_factor'] = 6
-    fig = plt.figure(layout='constrained')
+    fig = plt.figure()
     ax = SubplotZero(fig, 1, 1, 1)
     fig.add_subplot(ax)
-    ax.axis['xzero'].set_visible(True)
+    ax.axis['xzero'].set_visible(False)
     ax.axis['xzero'].label.set_text('Axis Zero')
     for n in ['top', 'right']:
         ax.axis[n].set_visible(False)

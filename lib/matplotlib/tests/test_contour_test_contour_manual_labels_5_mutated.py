@@ -15,7 +15,7 @@ import pytest
 def test_contour_manual_labels_5_mutated():
     x, y = np.meshgrid(np.arange(0, 10), np.arange(0, 10))
     z = np.max(np.dstack([abs(x), abs(y)]), 2)
-    plt.figure(figsize=(6, 2), dpi=200, layout='constrained')
+    plt.figure(figsize=(6, 2), dpi=200, frameon=False)
     cs = plt.contour(x, y, z)
     pts = np.array([(1.0, 3.0), (1.0, 4.4), (1.0, 6.0)])
     plt.clabel(cs, manual=pts)

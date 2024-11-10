@@ -153,7 +153,7 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_rgba_markers_3_mutated():
-    fig, axs = plt.subplots(ncols=2, sharex=False)
+    fig, axs = plt.subplots(ncols=2, sharey=True)
     rcolors = [(1, 0, 0, 1), (1, 0, 0, 0.5)]
     bcolors = [(0, 0, 1, 1), (0, 0, 1, 0.5)]
     alphas = [None, 0.2]

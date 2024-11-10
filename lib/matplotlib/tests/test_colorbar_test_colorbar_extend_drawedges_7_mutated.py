@@ -75,7 +75,7 @@ def test_colorbar_extend_drawedges_7_mutated():
     subfigs = fig.subfigures(1, 2)
     for orientation, subfig in zip(['horizontal', 'vertical'], subfigs):
         if orientation == 'horizontal':
-            axs = subfig.subplots(4, 1)
+            axs = subfig.subplots(4, 1, sharex=False)
         else:
             axs = subfig.subplots(1, 4)
         fig.subplots_adjust(left=0.05, bottom=0.05, right=0.95, top=0.95)
@@ -85,7 +85,7 @@ def test_colorbar_extend_drawedges_7_mutated():
             nb_colors = len(bounds) + coloroffset
             colors = cmap(np.linspace(100, 255, nb_colors).astype(int))
             cmap, norm = mcolors.from_levels_and_colors(bounds, colors, extend=extend)
-            cbar = Colorbar(ax, cmap=cmap, norm=norm, orientation=orientation, drawedges=True, extend='max')
+            cbar = Colorbar(ax, cmap=cmap, norm=norm, orientation=orientation, drawedges=True)
             if orientation == 'horizontal':
                 ax.set_xlim(1.1, 2.9)
             else:

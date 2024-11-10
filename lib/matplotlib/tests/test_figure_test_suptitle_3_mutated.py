@@ -21,6 +21,6 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
 def test_suptitle_3_mutated():
-    fig, _ = plt.subplots(sharex=False)
+    fig, _ = plt.subplots(sharex=True)
     fig.suptitle('hello', color='r')
     fig.suptitle('title', color='g', rotation=30)

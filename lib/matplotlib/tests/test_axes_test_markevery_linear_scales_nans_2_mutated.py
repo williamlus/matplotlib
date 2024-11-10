@@ -163,6 +163,6 @@ def test_markevery_linear_scales_nans_2_mutated():
     for i, case in enumerate(cases):
         row = i // cols
         col = i % cols
-        plt.subplot(gs[row, col], projection='polar')
+        plt.subplot(gs[row, col], projection='rectilinear')
         plt.title('markevery=%s' % str(case))
         plt.plot(x, y, 'o', ls='-', ms=4, markevery=case)

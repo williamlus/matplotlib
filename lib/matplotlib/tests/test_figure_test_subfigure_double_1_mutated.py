@@ -32,7 +32,7 @@ def test_subfigure_double_1_mutated():
     subfigsnest = subfigs[0].subfigures(2, 1, height_ratios=[1, 1.4])
     subfigsnest[0].suptitle('subfigsnest[0]')
     subfigsnest[0].set_facecolor('r')
-    axsnest0 = subfigsnest[0].subplots(1, 2, sharey=True)
+    axsnest0 = subfigsnest[0].subplots(1, 2, sharey=True, squeeze=True)
     for ax in axsnest0:
         fontsize = 12
         pc = ax.pcolormesh(np.random.randn(30, 30), vmin=-2.5, vmax=2.5)
@@ -46,5 +46,5 @@ def test_subfigure_double_1_mutated():
     for nn, ax in enumerate(axsnest1):
         ax.set_ylabel(f'ylabel{nn}')
     subfigsnest[1].supxlabel('supxlabel')
-    subfigsnest[1].supylabel('supylabel', horizontalalignment='left')
+    subfigsnest[1].supylabel('supylabel')
     axsRight = subfigs[1].subplots(2, 2)

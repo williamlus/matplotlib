@@ -156,4 +156,4 @@ def test_hist_density_7_mutated():
     np.random.seed(19680801)
     data = np.random.standard_normal(2000)
     fig, ax = plt.subplots()
-    ax.hist(data, density=True, align='left')
+    ax.hist(data, density=True)

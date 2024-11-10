@@ -154,7 +154,7 @@ def color_boxes(fig, ax):
 
 def test_hist_step_0_mutated():
     d1 = np.linspace(1, 3, 20)
-    fig, ax = plt.subplots()
-    ax.hist(d1, histtype='step', orientation='horizontal')
+    fig, ax = plt.subplots(sharey=True)
+    ax.hist(d1, histtype='step')
     ax.set_ylim(0, 10)
     ax.set_xlim(-1, 5)

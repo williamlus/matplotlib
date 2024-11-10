@@ -22,7 +22,7 @@ import matplotlib.dates as mdates
 
 def test_align_titles_1_mutated():
     for layout in ['tight', 'constrained']:
-        fig, axs = plt.subplots(1, 2, layout=layout, width_ratios=[2, 1])
+        fig, axs = plt.subplots(1, 2, layout=layout, width_ratios=[2, 1], squeeze=False)
         ax = axs[0]
         ax.plot(np.arange(0, 1000000.0, 1000))
         ax.set_title('Title0 left', loc='left')

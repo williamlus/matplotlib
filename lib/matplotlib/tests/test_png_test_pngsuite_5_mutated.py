@@ -12,6 +12,6 @@ def test_pngsuite_5_mutated():
         cmap = None
         if data.ndim == 2:
             cmap = cm.gray
-        plt.imshow(data, extent=(i, i + 1, 0, 1), cmap=cmap, interpolation_stage='data')
+        plt.imshow(data, extent=(i, i + 1, 0, 1), cmap=cmap, interpolation_stage='data', resample=True)
     plt.gca().patch.set_facecolor('#ddffff')
     plt.gca().set_xlim(0, len(files))

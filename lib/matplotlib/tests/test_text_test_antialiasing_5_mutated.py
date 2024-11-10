@@ -22,7 +22,7 @@ pyparsing_version = parse_version(pyparsing.__version__)
 
 def test_antialiasing_5_mutated():
     mpl.rcParams['text.antialiased'] = False
-    fig = plt.figure(figsize=(5.25, 0.75), layout='none')
+    fig = plt.figure(figsize=(5.25, 0.75), layout='constrained')
     fig.text(0.3, 0.75, 'antialiased', horizontalalignment='center', verticalalignment='center', antialiased=True)
     fig.text(0.3, 0.25, '$\\sqrt{x}$', horizontalalignment='center', verticalalignment='center', antialiased=True)
     mpl.rcParams['text.antialiased'] = True

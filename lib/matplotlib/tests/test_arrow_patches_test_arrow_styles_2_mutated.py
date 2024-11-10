@@ -25,9 +25,9 @@ def __prepare_fancyarrow_dpi_cor_test():
 def test_arrow_styles_2_mutated():
     styles = mpatches.ArrowStyle.get_styles()
     n = len(styles)
-    fig, ax = plt.subplots(figsize=(8, 8))
+    fig, ax = plt.subplots(figsize=(8, 8), sharey=True)
     ax.set_xlim(0, 1)
-    ax.set_ylim(-1, n, auto=True)
+    ax.set_ylim(-1, n)
     fig.subplots_adjust(left=0, right=1, bottom=0, top=1)
     for i, stylename in enumerate(sorted(styles)):
         patch = mpatches.FancyArrowPatch((0.1 + i % 2 * 0.05, i), (0.45 + i % 2 * 0.05, i), arrowstyle=stylename, mutation_scale=25)

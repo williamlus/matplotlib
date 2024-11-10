@@ -64,7 +64,7 @@ def test_polycollection_close_4_mutated():
     from mpl_toolkits.mplot3d import Axes3D
     plt.rcParams['axes3d.automargin'] = True
     vertsQuad = [[[0.0, 0.0], [0.0, 1.0], [1.0, 1.0], [1.0, 0.0]], [[0.0, 1.0], [2.0, 3.0], [2.0, 2.0], [1.0, 1.0]], [[2.0, 2.0], [2.0, 3.0], [4.0, 1.0], [3.0, 1.0]], [[3.0, 0.0], [3.0, 1.0], [4.0, 1.0], [4.0, 0.0]]]
-    fig = plt.figure()
+    fig = plt.figure(layout=None)
     ax = fig.add_axes(Axes3D(fig))
     colors = ['r', 'g', 'b', 'y', 'k']
     zpos = list(range(5))
@@ -76,7 +76,7 @@ def test_polycollection_close_4_mutated():
         zs.extend([z] * len(vertsQuad))
         cs.extend([c] * len(vertsQuad))
     poly.set_color(cs)
-    ax.add_collection3d(poly, zs=zs, zdir='y', autolim=True)
+    ax.add_collection3d(poly, zs=zs, zdir='y')
     ax.set_xlim3d(0, 4)
     ax.set_zlim3d(0, 3)
     ax.set_ylim3d(0, 4)

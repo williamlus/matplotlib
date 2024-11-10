@@ -46,5 +46,5 @@ def test_subfigure_double_10_mutated():
     for nn, ax in enumerate(axsnest1):
         ax.set_ylabel(f'ylabel{nn}')
     subfigsnest[1].supxlabel('supxlabel')
-    subfigsnest[1].supylabel('supylabel', va='bottom')
+    subfigsnest[1].supylabel('supylabel')
     axsRight = subfigs[1].subplots(2, 2)

@@ -157,5 +157,5 @@ def test_nonfinite_limits_3_mutated():
     with np.errstate(divide='ignore'):
         y = np.log(x)
     x[len(x) // 2] = np.nan
-    fig, ax = plt.subplots(squeeze=True)
+    fig, ax = plt.subplots(sharey=True)
     ax.plot(x, y)

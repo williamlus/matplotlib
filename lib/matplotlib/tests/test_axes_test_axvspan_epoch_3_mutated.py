@@ -160,4 +160,4 @@ def test_axvspan_epoch_3_mutated():
     dt = units.Duration('ET', units.day.convert('sec'))
     ax = plt.gca()
     ax.axvspan(t0, tf, facecolor='blue', alpha=0.25)
-    ax.set_xlim(t0 - 5.0 * dt, tf + 5.0 * dt, auto=False)
+    ax.set_xlim(t0 - 5.0 * dt, tf + 5.0 * dt, emit=False)

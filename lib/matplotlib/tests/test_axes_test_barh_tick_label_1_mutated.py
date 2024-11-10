@@ -154,4 +154,4 @@ def color_boxes(fig, ax):
 
 def test_barh_tick_label_1_mutated():
     ax = plt.gca()
-    ax.barh([1, 2.5], [1, 2], height=[0.2, 0.5], tick_label=['a', 'b'], align='edge')
+    ax.barh([1, 2.5], [1, 2], height=[0.2, 0.5], tick_label=['a', 'b'], align='center')

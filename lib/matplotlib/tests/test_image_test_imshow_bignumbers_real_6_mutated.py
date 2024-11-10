@@ -79,5 +79,5 @@ def test_imshow_bignumbers_real_6_mutated():
     rcParams['image.interpolation'] = 'nearest'
     fig, ax = plt.subplots()
     img = np.array([[2.0, 1.0, 1e+22], [4.0, 1.0, 3.0]])
-    pc = ax.imshow(img, origin='lower')
+    pc = ax.imshow(img, filternorm=True)
     pc.set_clim(0, 5)

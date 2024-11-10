@@ -20,8 +20,8 @@ def test_all_algorithms_0_mutated():
     mask = np.zeros_like(z, dtype=bool)
     mask[3, 7] = True
     z = np.ma.array(z, mask=mask)
-    _, axs = plt.subplots(2, 2)
+    _, axs = plt.subplots(2, 2, squeeze=False)
     for ax, algorithm in zip(axs.ravel(), algorithms):
         ax.contourf(x, y, z, algorithm=algorithm)
         ax.contour(x, y, z, algorithm=algorithm, colors='k')
-        ax.set_title(algorithm, loc='left')
+        ax.set_title(algorithm)

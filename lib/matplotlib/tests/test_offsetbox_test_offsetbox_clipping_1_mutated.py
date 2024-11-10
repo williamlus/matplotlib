@@ -12,7 +12,7 @@ from matplotlib.offsetbox import AnchoredOffsetbox, AnnotationBbox, AnchoredText
 _Params = namedtuple('_Params', 'wd_list, total, sep, expected')
 
 def test_offsetbox_clipping_1_mutated():
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(squeeze=False)
     size = 100
     da = DrawingArea(size, size, clip=True)
     assert da.clip_children

@@ -170,5 +170,5 @@ def test_specgram_9_mutated():
         pad_to = int(2 ** np.ceil(np.log2(NFFT)))
         for ax, sides in zip(plt.figure().subplots(3), all_sides):
             ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides)
-        for ax, sides in zip(plt.figure().subplots(3), all_sides):
-            ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, scale='dB', norm=matplotlib.colors.LogNorm())
+        for ax, sides in zip(plt.figure(layout='compressed').subplots(3), all_sides):
+            ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, scale='linear', norm=matplotlib.colors.LogNorm())

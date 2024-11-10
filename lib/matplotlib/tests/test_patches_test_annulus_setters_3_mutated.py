@@ -13,12 +13,12 @@ import matplotlib.pyplot as plt
 from matplotlib import collections as mcollections, colors as mcolors, patches as mpatches, path as mpath, transforms as mtransforms, rcParams
 
 def test_annulus_setters_3_mutated():
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharey=True)
     cir = Annulus((0.0, 0.0), 0.2, 0.01, fc='g')
     ell = Annulus((0.0, 0.0), (1, 2), 0.1, 0, fc='m', ec='b', alpha=0.5, hatch='xxx')
     ax.add_patch(cir)
     ax.add_patch(ell)
-    ax.set_aspect('equal', share=True)
+    ax.set_aspect('equal')
     cir.center = (0.5, 0.5)
     cir.radii = 0.2
     cir.width = 0.05

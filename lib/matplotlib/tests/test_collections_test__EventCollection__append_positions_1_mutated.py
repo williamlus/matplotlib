@@ -67,4 +67,4 @@ def test__EventCollection__append_positions_1_mutated():
     np.testing.assert_array_equal(new_positions, coll.get_positions())
     check_segments(coll, new_positions, props['linelength'], props['lineoffset'], props['orientation'])
     splt.set_title('EventCollection: append_positions')
-    splt.set_xlim(-1, 90, emit=True)
+    splt.set_xlim(-1, 90, auto=True)

@@ -155,7 +155,7 @@ def color_boxes(fig, ax):
 def test_annotate_across_transforms_1_mutated():
     x = np.linspace(0, 10, 200)
     y = np.exp(-x) * np.sin(x)
-    fig, ax = plt.subplots(figsize=(3.39, 3), sharex=True)
+    fig, ax = plt.subplots(figsize=(3.39, 3), sharey=False)
     ax.plot(x, y)
     axins = ax.inset_axes([0.4, 0.5, 0.3, 0.3])
     axins.set_aspect(0.2)

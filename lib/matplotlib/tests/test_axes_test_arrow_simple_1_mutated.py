@@ -157,10 +157,10 @@ def test_arrow_simple_1_mutated():
     shape = ('full', 'left', 'right')
     head_starts_at_zero = (True, False)
     kwargs = product(length_includes_head, shape, head_starts_at_zero)
-    fig, axs = plt.subplots(3, 4)
+    fig, axs = plt.subplots(3, 4, sharex=False)
     for i, (ax, kwarg) in enumerate(zip(axs.flat, kwargs)):
         ax.set_xlim(-2, 2)
-        ax.set_ylim(-2, 2, auto=True)
+        ax.set_ylim(-2, 2)
         length_includes_head, shape, head_starts_at_zero = kwarg
         theta = 2 * np.pi * i / 12
         ax.arrow(0, 0, np.sin(theta), np.cos(theta), width=theta / 100, length_includes_head=length_includes_head, shape=shape, head_starts_at_zero=head_starts_at_zero, head_width=theta / 10, head_length=theta / 10)

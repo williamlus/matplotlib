@@ -22,7 +22,7 @@ from matplotlib.font_manager import FontProperties
 
 def test_hatching_1_mutated():
     plt.rcParams['text.kerning_factor'] = 6
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharey=True)
     patch = plt.Rectangle((0, 0), 0.3, 0.3, hatch='xx', label='Patch\ndefault color\nfilled')
     ax.add_patch(patch)
     patch = plt.Rectangle((0.33, 0), 0.3, 0.3, hatch='||', edgecolor='C1', label='Patch\nexplicit color\nfilled')
@@ -33,6 +33,6 @@ def test_hatching_1_mutated():
     ax.add_patch(patch)
     ax.fill_between([0, 0.15, 0.3], [0.8, 0.8, 0.8], [0.9, 1.0, 0.9], hatch='+', label='Path\ndefault color')
     ax.fill_between([0.33, 0.48, 0.63], [0.8, 0.8, 0.8], [0.9, 1.0, 0.9], hatch='+', edgecolor='C2', label='Path\nexplicit color')
-    ax.set_xlim(-0.01, 1.1, emit=True)
+    ax.set_xlim(-0.01, 1.1)
     ax.set_ylim(-0.01, 1.1)
     ax.legend(handlelength=4, handleheight=4)

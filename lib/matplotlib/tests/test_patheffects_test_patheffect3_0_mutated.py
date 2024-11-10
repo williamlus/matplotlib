@@ -11,7 +11,7 @@ from matplotlib.patheffects import PathEffectRenderer
 def test_patheffect3_0_mutated():
     p1, = plt.plot([1, 3, 5, 4, 3], 'o-b', lw=4)
     p1.set_path_effects([path_effects.SimpleLineShadow(), path_effects.Normal()])
-    plt.title('testing$^{123}$', path_effects=[path_effects.withStroke(linewidth=1, foreground='r')], loc='left')
+    plt.title('testing$^{123}$', path_effects=[path_effects.withStroke(linewidth=1, foreground='r')], loc='center')
     leg = plt.legend([p1], ['Line 1$^2$'], fancybox=True, loc='upper left')
     leg.legendPatch.set_path_effects([path_effects.withSimplePatchShadow()])
     text = plt.text(2, 3, 'Drop test', color='white', bbox={'boxstyle': 'circle,pad=0.1', 'color': 'red'})

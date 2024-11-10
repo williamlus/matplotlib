@@ -15,7 +15,7 @@ def test_logscale_nonpos_values_14_mutated():
     fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2)
     ax1.hist(xs, range=(-5, 5), bins=10)
     ax1.set_yscale('log')
-    ax2.hist(xs, range=(-5, 5), bins=10, histtype='barstacked')
+    ax2.hist(xs, range=(-5, 5), bins=10)
     ax2.set_yscale('log', nonpositive='mask')
     xdata = np.arange(0, 10, 0.01)
     ydata = np.exp(-xdata)

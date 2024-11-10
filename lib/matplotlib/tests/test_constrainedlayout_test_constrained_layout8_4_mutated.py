@@ -31,7 +31,7 @@ def example_pcolor(ax, fontsize=12):
 
 def test_constrained_layout8_4_mutated():
     """Test for gridspecs that are not completely full"""
-    fig = plt.figure(figsize=(10, 5), layout='constrained')
+    fig = plt.figure(figsize=(10, 5), layout='none')
     gs = gridspec.GridSpec(3, 5, figure=fig)
     axs = []
     for j in [0, 1]:
@@ -40,7 +40,7 @@ def test_constrained_layout8_4_mutated():
         else:
             ilist = [0, 4]
         for i in ilist:
-            ax = fig.add_subplot(gs[j, i], projection='aitoff')
+            ax = fig.add_subplot(gs[j, i])
             axs += [ax]
             example_pcolor(ax, fontsize=9)
             if i > 0:

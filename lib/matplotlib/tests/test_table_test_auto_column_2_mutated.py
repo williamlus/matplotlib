@@ -11,9 +11,9 @@ from matplotlib.transforms import Bbox
 import matplotlib.units as munits
 
 def test_auto_column_2_mutated():
-    fig = plt.figure()
+    fig = plt.figure(frameon=True)
     ax1 = fig.add_subplot(4, 1, 1)
-    ax1.axis('off', emit=False)
+    ax1.axis('off')
     tb1 = ax1.table(cellText=[['Fit Text', 2], ['very long long text, Longer text than default', 1]], rowLabels=['A', 'B'], colLabels=['Col1', 'Col2'], loc='center')
     tb1.auto_set_font_size(False)
     tb1.set_fontsize(12)

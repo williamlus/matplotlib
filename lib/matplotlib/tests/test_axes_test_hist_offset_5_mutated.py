@@ -155,6 +155,6 @@ def color_boxes(fig, ax):
 def test_hist_offset_5_mutated():
     d1 = np.linspace(0, 10, 50)
     d2 = np.linspace(1, 3, 20)
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(squeeze=False)
     ax.hist(d1, bottom=5)
-    ax.hist(d2, bottom=15, orientation='vertical')
+    ax.hist(d2, bottom=15)

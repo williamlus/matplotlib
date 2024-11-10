@@ -157,5 +157,5 @@ def test_hist2d_transpose_4_mutated():
     np.random.seed(0)
     x = np.array([5] * 100)
     y = np.random.randn(100) - 2
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(squeeze=True)
     ax.hist2d(x, y, bins=10, rasterized=True)

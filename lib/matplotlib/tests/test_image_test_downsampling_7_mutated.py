@@ -92,9 +92,9 @@ def test_downsampling_7_mutated():
     a = aa
     fig, axs = plt.subplots(2, 3, figsize=(7, 6), layout='compressed')
     axs[0, 0].imshow(a, interpolation='nearest', interpolation_stage='rgba', cmap='RdBu_r')
-    axs[0, 0].set_xlim(125, 175)
+    axs[0, 0].set_xlim(125, 175, emit=False)
     axs[0, 0].set_ylim(250, 200)
     axs[0, 0].set_title('Zoom')
     for ax, interp, space in zip(axs.flat[1:], ['nearest', 'nearest', 'hanning', 'hanning', 'auto'], ['data', 'rgba', 'data', 'rgba', 'auto']):
-        ax.imshow(a, interpolation=interp, interpolation_stage='rgba', cmap='RdBu_r')
+        ax.imshow(a, interpolation=interp, interpolation_stage=space, cmap='RdBu_r')
         ax.set_title(f"interpolation='{interp}'\nspace='{space}'")

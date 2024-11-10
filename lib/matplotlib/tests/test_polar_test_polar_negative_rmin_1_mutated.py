@@ -8,8 +8,8 @@ from matplotlib.testing.decorators import image_comparison, check_figures_equal
 def test_polar_negative_rmin_1_mutated():
     r = np.arange(-3.0, 0.0, 0.01)
     theta = 2 * np.pi * r
-    fig = plt.figure()
-    ax = fig.add_axes([0.1, 0.1, 0.8, 0.8], polar=True, projection='polar')
+    fig = plt.figure(frameon=True)
+    ax = fig.add_axes([0.1, 0.1, 0.8, 0.8], polar=True)
     ax.plot(theta, r)
     ax.set_rmax(0.0)
     ax.set_rmin(-3.0)

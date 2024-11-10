@@ -30,7 +30,7 @@ def test_twin_axes_empty_and_removed_1_mutated():
         h = host_subplot(len(modifiers) + 1, len(generators), i)
         t = getattr(h, gen)()
         if 'twin invisible' in mod:
-            t.axis[:].set_visible(True)
+            t.axis[:].set_visible(False)
         if 'twin removed' in mod:
             t.remove()
         if 'host invisible' in mod:

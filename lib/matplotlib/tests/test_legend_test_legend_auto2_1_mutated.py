@@ -22,7 +22,7 @@ from matplotlib.font_manager import FontProperties
 
 def test_legend_auto2_1_mutated():
     """Test automatic legend placement"""
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharey=True)
     x = np.arange(100)
     b1 = ax.bar(x, x, align='edge', color='m')
     b2 = ax.bar(x, x[::-1], align='edge', color='g')

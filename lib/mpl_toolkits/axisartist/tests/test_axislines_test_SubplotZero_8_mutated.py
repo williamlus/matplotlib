@@ -7,7 +7,7 @@ from mpl_toolkits.axisartist import Axes, SubplotHost
 
 def test_SubplotZero_8_mutated():
     plt.rcParams['text.kerning_factor'] = 6
-    fig = plt.figure(frameon=True)
+    fig = plt.figure(layout='compressed')
     ax = SubplotZero(fig, 1, 1, 1)
     fig.add_subplot(ax)
     ax.axis['xzero'].set_visible(True)

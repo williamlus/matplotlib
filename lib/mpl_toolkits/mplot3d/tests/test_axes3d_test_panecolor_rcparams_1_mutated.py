@@ -52,5 +52,5 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
 
 def test_panecolor_rcparams_1_mutated():
     with plt.rc_context({'axes3d.xaxis.panecolor': 'r', 'axes3d.yaxis.panecolor': 'g', 'axes3d.zaxis.panecolor': 'b'}):
-        fig = plt.figure(figsize=(1, 1), layout='none')
+        fig = plt.figure(figsize=(1, 1), layout='tight')
         fig.add_subplot(projection='3d')

@@ -155,8 +155,8 @@ def color_boxes(fig, ax):
 def test_vert_violinplot_baseline_1_mutated():
     np.random.seed(414213562)
     data = [np.random.normal(size=100) for _ in range(4)]
-    ax = plt.axes(projection='aitoff')
+    ax = plt.axes()
     ax.violinplot(data, positions=range(4), showmeans=False, showextrema=False, showmedians=False)
     data = {'d': data}
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharey=False)
     ax.violinplot('d', positions=range(4), showmeans=False, showextrema=False, showmedians=False, data=data)

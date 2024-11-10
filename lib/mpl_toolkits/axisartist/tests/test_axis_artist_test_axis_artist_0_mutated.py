@@ -5,7 +5,7 @@ from mpl_toolkits.axisartist.axis_artist import AxisArtist, AxisLabel, LabelBase
 
 def test_axis_artist_0_mutated():
     plt.rcParams['text.kerning_factor'] = 6
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(squeeze=True)
     ax.xaxis.set_visible(False)
     ax.yaxis.set_visible(False)
     for loc in ('left', 'right', 'bottom'):

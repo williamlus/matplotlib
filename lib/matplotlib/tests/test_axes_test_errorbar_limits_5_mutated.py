@@ -158,7 +158,7 @@ def test_errorbar_limits_5_mutated():
     xerr = 0.1
     yerr = 0.2
     ls = 'dotted'
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(squeeze=False)
     ax.errorbar(x, y, xerr=xerr, yerr=yerr, ls=ls, color='blue')
     uplims = np.zeros_like(x)
     uplims[[1, 5, 9]] = True
@@ -166,7 +166,7 @@ def test_errorbar_limits_5_mutated():
     lolims = np.zeros_like(x)
     lolims[[2, 4, 8]] = True
     ax.errorbar(x, y + 1.0, xerr=xerr, yerr=yerr, lolims=lolims, ls=ls, color='red')
-    ax.errorbar(x, y + 1.5, marker='o', ms=8, xerr=xerr, yerr=yerr, lolims=lolims, uplims=uplims, ls=ls, color='magenta', xuplims=True)
+    ax.errorbar(x, y + 1.5, marker='o', ms=8, xerr=xerr, yerr=yerr, lolims=lolims, uplims=uplims, ls=ls, color='magenta')
     xerr = 0.2
     yerr = np.full_like(x, 0.2)
     yerr[[3, 6]] = 0.3

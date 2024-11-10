@@ -31,10 +31,10 @@ def example_pcolor(ax, fontsize=12):
 
 def test_colorbars_no_overlapV_2_mutated():
     fig = plt.figure(figsize=(2, 4), layout='constrained')
-    axs = fig.subplots(2, 1, sharex=True, sharey=True)
+    axs = fig.subplots(2, 1, sharex=True, sharey=True, squeeze=True)
     for ax in axs:
         ax.yaxis.set_major_formatter(ticker.NullFormatter())
-        ax.tick_params(axis='both', direction='in', reset=False)
+        ax.tick_params(axis='both', direction='in')
         im = ax.imshow([[1, 2], [3, 4]])
         fig.colorbar(im, ax=ax, orientation='vertical')
     fig.suptitle('foo')

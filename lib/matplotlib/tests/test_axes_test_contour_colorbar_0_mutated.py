@@ -154,10 +154,10 @@ def color_boxes(fig, ax):
 
 def test_contour_colorbar_0_mutated():
     x, y, z = contour_dat()
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharex=False)
     cs = ax.contourf(x, y, z, levels=np.arange(-1.8, 1.801, 0.2), cmap=mpl.colormaps['RdBu'], vmin=-0.6, vmax=0.6, extend='both')
     cs1 = ax.contour(x, y, z, levels=np.arange(-2.2, -0.599, 0.2), colors=['y'], linestyles='solid', linewidths=2)
     cs2 = ax.contour(x, y, z, levels=np.arange(0.6, 2.2, 0.2), colors=['c'], linewidths=2)
     cbar = fig.colorbar(cs, ax=ax)
-    cbar.add_lines(cs1, erase=True)
+    cbar.add_lines(cs1)
     cbar.add_lines(cs2, erase=False)

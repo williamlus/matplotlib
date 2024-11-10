@@ -155,7 +155,7 @@ def color_boxes(fig, ax):
 def test_vlines_hlines_blended_transform_4_mutated():
     t = np.arange(5.0, 10.0, 0.1)
     s = np.exp(-t) + np.sin(2 * np.pi * t) + 10
-    fig, (hax, vax) = plt.subplots(2, 1, figsize=(6, 6), squeeze=True)
+    fig, (hax, vax) = plt.subplots(2, 1, figsize=(6, 6), squeeze=False)
     hax.plot(t, s, '^')
     hax.hlines([10, 9], xmin=0, xmax=0.5, transform=hax.get_yaxis_transform(), colors='r')
     vax.plot(t, s, '^')

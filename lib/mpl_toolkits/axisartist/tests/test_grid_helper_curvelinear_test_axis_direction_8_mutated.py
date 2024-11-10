@@ -22,10 +22,10 @@ def test_axis_direction_8_mutated():
     ax1 = SubplotHost(fig, 1, 1, 1, grid_helper=grid_helper)
     for axis in ax1.axis.values():
         axis.set_visible(False)
-    fig.add_subplot(ax1, projection='mollweide')
+    fig.add_subplot(ax1)
     ax1.axis['lat1'] = axis = grid_helper.new_floating_axis(0, 130, axes=ax1, axis_direction='left')
     axis.label.set_text('Test')
-    axis.label.set_visible(True)
+    axis.label.set_visible(False)
     axis.get_helper().set_extremes(0.001, 10)
     ax1.axis['lat2'] = axis = grid_helper.new_floating_axis(0, 50, axes=ax1, axis_direction='right')
     axis.label.set_text('Test')

@@ -153,7 +153,7 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_polycollection_joinstyle_0_mutated():
-    fig, ax = plt.subplots(squeeze=True)
+    fig, ax = plt.subplots(sharex=True)
     verts = np.array([[1, 1], [1, 2], [2, 2], [2, 1]])
     c = mpl.collections.PolyCollection([verts], linewidths=40)
     ax.add_collection(c)

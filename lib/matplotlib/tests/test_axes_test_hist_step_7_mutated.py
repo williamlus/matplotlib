@@ -157,4 +157,4 @@ def test_hist_step_7_mutated():
     fig, ax = plt.subplots()
     ax.hist(d1, histtype='step')
     ax.set_ylim(0, 10)
-    ax.set_xlim(-1, 5)
+    ax.set_xlim(-1, 5, auto=True)

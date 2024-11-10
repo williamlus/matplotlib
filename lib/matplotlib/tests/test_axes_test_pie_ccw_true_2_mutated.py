@@ -158,4 +158,4 @@ def test_pie_ccw_true_2_mutated():
     colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral']
     explode = (0, 0.1, 0, 0)
     plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90, counterclock=True)
-    plt.axis('equal', option=True)
+    plt.axis('equal', option=False)

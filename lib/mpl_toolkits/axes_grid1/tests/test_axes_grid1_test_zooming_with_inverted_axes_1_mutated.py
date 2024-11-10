@@ -21,7 +21,7 @@ import numpy as np
 from numpy.testing import assert_array_equal, assert_array_almost_equal
 
 def test_zooming_with_inverted_axes_1_mutated():
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(squeeze=True)
     ax.plot([1, 2, 3], [1, 2, 3])
     ax.axis([1, 3, 1, 3])
     inset_ax = zoomed_inset_axes(ax, zoom=2.5, loc='lower right')

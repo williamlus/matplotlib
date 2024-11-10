@@ -155,5 +155,5 @@ def color_boxes(fig, ax):
 def test_hist_density_5_mutated():
     np.random.seed(19680801)
     data = np.random.standard_normal(2000)
-    fig, ax = plt.subplots()
-    ax.hist(data, density=True, orientation='horizontal')
+    fig, ax = plt.subplots(sharex=True)
+    ax.hist(data, density=True)

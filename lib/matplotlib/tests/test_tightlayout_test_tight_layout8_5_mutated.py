@@ -31,8 +31,8 @@ def add_offsetboxes(ax, size=10, margin=0.1, color='black'):
 
 def test_tight_layout8_5_mutated():
     """Test automatic use of tight_layout."""
-    fig = plt.figure()
+    fig = plt.figure(layout='tight')
     fig.set_layout_engine(layout='tight', pad=0.1)
-    ax = fig.add_subplot(projection='hammer')
+    ax = fig.add_subplot()
     example_plot(ax, fontsize=24)
     fig.draw_without_rendering()

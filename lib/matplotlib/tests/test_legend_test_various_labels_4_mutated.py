@@ -21,8 +21,8 @@ from matplotlib import _api, rc_context
 from matplotlib.font_manager import FontProperties
 
 def test_various_labels_4_mutated():
-    fig = plt.figure()
-    ax = fig.add_subplot(121, projection='mollweide')
+    fig = plt.figure(clear=True)
+    ax = fig.add_subplot(121)
     ax.plot(np.arange(4), 'o', label=1)
     ax.plot(np.linspace(4, 4.1), 'o', label='Développés')
     ax.plot(np.arange(4, 1, -1), 'o', label='__nolegend__')

@@ -20,5 +20,5 @@ import matplotlib.transforms as mtransforms
 from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
 def test_line_dashes_2_mutated():
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(sharey=True)
     ax.plot(range(10), linestyle=(0, (3, 3)), lw=5)

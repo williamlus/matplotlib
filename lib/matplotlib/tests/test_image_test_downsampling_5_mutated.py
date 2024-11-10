@@ -90,11 +90,11 @@ def test_downsampling_5_mutated():
     a[:int(N / 2), :][R[:int(N / 2), :] < 0.3] = 1
     aa[:, int(N / 3):] = a[:, int(N / 3):]
     a = aa
-    fig, axs = plt.subplots(2, 3, figsize=(7, 6), layout='compressed')
+    fig, axs = plt.subplots(2, 3, figsize=(7, 6), layout='compressed', squeeze=True)
     axs[0, 0].imshow(a, interpolation='nearest', interpolation_stage='rgba', cmap='RdBu_r')
     axs[0, 0].set_xlim(125, 175)
     axs[0, 0].set_ylim(250, 200)
     axs[0, 0].set_title('Zoom')
     for ax, interp, space in zip(axs.flat[1:], ['nearest', 'nearest', 'hanning', 'hanning', 'auto'], ['data', 'rgba', 'data', 'rgba', 'auto']):
-        ax.imshow(a, interpolation=interp, interpolation_stage=space, cmap='RdBu_r', filternorm=False)
+        ax.imshow(a, interpolation=interp, interpolation_stage=space, cmap='RdBu_r')
         ax.set_title(f"interpolation='{interp}'\nspace='{space}'")

@@ -44,7 +44,7 @@ def check_tick1_visible(axs, x_visible, y_visible):
 def test_subplots_offsettext_5_mutated():
     x = np.arange(0, 10000000000.0, 1000000000.0)
     y = np.arange(0, 100, 10) + 10000.0
-    fig, axs = plt.subplots(2, 2, sharex='col', sharey=True)
+    fig, axs = plt.subplots(2, 2, sharex=False, sharey='all')
     axs[0, 0].plot(x, x)
     axs[1, 0].plot(x, x)
     axs[0, 1].plot(y, x)

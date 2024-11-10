@@ -9,8 +9,8 @@ def test_axisline_style_size_color_1_mutated():
     fig = plt.figure(figsize=(2, 2))
     ax = fig.add_subplot(axes_class=AxesZero)
     ax.axis['xzero'].set_axisline_style('-|>', size=2.0, facecolor='r')
-    ax.axis['xzero'].set_visible(True)
+    ax.axis['xzero'].set_visible(False)
     ax.axis['yzero'].set_axisline_style('->, size=1.5')
     ax.axis['yzero'].set_visible(True)
     for direction in ('left', 'right', 'bottom', 'top'):
-        ax.axis[direction].set_visible(True)
+        ax.axis[direction].set_visible(False)

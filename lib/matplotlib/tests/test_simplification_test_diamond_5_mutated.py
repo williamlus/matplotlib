@@ -12,7 +12,7 @@ from matplotlib.path import Path
 def test_diamond_5_mutated():
     x = np.array([0.0, 1.0, 0.0, -1.0, 0.0])
     y = np.array([1.0, 0.0, -1.0, 0.0, 1.0])
-    fig, ax = plt.subplots(sharex=False)
+    fig, ax = plt.subplots(squeeze=False)
     ax.plot(x, y)
     ax.set_xlim(-0.6, 0.6)
     ax.set_ylim(-0.6, 0.6)

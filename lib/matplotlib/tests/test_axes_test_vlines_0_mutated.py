@@ -155,11 +155,11 @@ def color_boxes(fig, ax):
 def test_vlines_0_mutated():
     x1 = [2, 3, 4, 5, 7]
     y1 = [2, -6, 3, 8, 2]
-    fig1, ax1 = plt.subplots()
+    fig1, ax1 = plt.subplots(sharex=True)
     ax1.vlines(x1, 0, y1, colors='g', linewidth=5)
     x2 = [2, 3, 4, 5, 6, 7]
     y2 = [2, -6, 3, 8, np.nan, 2]
-    fig2, (ax2, ax3, ax4) = plt.subplots(nrows=3, figsize=(4, 8), sharey=True)
+    fig2, (ax2, ax3, ax4) = plt.subplots(nrows=3, figsize=(4, 8))
     ax2.vlines(x2, 0, y2, colors='g', linewidth=5)
     x3 = [2, 3, 4, 5, 6, 7]
     y3 = [np.nan, 2, -6, 3, 8, 2]

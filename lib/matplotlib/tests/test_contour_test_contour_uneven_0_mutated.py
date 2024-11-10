@@ -15,10 +15,10 @@ import pytest
 def test_contour_uneven_0_mutated():
     plt.rcParams['pcolormesh.snap'] = False
     z = np.arange(24).reshape(4, 6)
-    fig, axs = plt.subplots(1, 2)
+    fig, axs = plt.subplots(1, 2, squeeze=False)
     ax = axs[0]
     cs = ax.contourf(z, levels=[2, 4, 6, 10, 20])
-    fig.colorbar(cs, ax=ax, spacing='proportional', use_gridspec=True)
+    fig.colorbar(cs, ax=ax, spacing='proportional')
     ax = axs[1]
     cs = ax.contourf(z, levels=[2, 4, 6, 10, 20])
     fig.colorbar(cs, ax=ax, spacing='uniform')

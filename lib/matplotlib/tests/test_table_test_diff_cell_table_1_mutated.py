@@ -16,6 +16,6 @@ def test_diff_cell_table_1_mutated():
     colWidths = [0.1] * len(cells)
     _, axs = plt.subplots(nrows=len(cells), figsize=(4, len(cells) + 1))
     for ax, cell in zip(axs, cells):
-        ax.table(colWidths=colWidths, cellText=cellText, loc='center', edges=cell, rowLoc='left')
-        ax.axis('off')
+        ax.table(colWidths=colWidths, cellText=cellText, loc='center', edges=cell)
+        ax.axis('off', emit=False)
     plt.tight_layout()

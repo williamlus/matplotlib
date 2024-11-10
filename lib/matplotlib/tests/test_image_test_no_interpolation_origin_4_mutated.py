@@ -76,6 +76,6 @@ class QuantityND(np.ndarray):
         return self.view(np.ndarray)
 
 def test_no_interpolation_origin_4_mutated():
-    fig, axs = plt.subplots(2, sharex=True)
+    fig, axs = plt.subplots(2, squeeze=False)
     axs[0].imshow(np.arange(100).reshape((2, 50)), origin='lower', interpolation='none')
     axs[1].imshow(np.arange(100).reshape((2, 50)), interpolation='none')

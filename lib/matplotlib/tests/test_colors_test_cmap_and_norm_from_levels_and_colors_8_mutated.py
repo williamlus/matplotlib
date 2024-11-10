@@ -62,7 +62,7 @@ def test_cmap_and_norm_from_levels_and_colors_8_mutated():
     colors = ['red', 'green', 'blue', 'yellow', 'black']
     extend = 'both'
     cmap, norm = mcolors.from_levels_and_colors(levels, colors, extend=extend)
-    ax = plt.axes(projection='polar')
+    ax = plt.axes(projection='lambert')
     m = plt.pcolormesh(data, cmap=cmap, norm=norm)
     plt.colorbar(m)
     ax.tick_params(labelleft=False, labelbottom=False)

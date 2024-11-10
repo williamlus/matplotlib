@@ -27,13 +27,13 @@ def test_inset_locator_8_mutated():
     Z2 = np.zeros((150, 150))
     ny, nx = Z.shape
     Z2[30:30 + ny, 30:30 + nx] = Z
-    ax.imshow(Z2, extent=extent, interpolation='nearest', origin='lower', resample=True)
+    ax.imshow(Z2, extent=extent, interpolation='nearest', origin='lower')
     axins = zoomed_inset_axes(ax, zoom=6, loc='upper right')
     axins.imshow(Z2, extent=extent, interpolation='nearest', origin='lower')
     axins.yaxis.get_major_locator().set_params(nbins=7)
     axins.xaxis.get_major_locator().set_params(nbins=7)
     x1, x2, y1, y2 = (-1.5, -0.9, -2.5, -1.9)
-    axins.set_xlim(x1, x2)
+    axins.set_xlim(x1, x2, auto=False)
     axins.set_ylim(y1, y2)
     plt.xticks(visible=False)
     plt.yticks(visible=False)

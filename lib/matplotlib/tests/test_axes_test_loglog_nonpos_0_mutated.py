@@ -153,7 +153,7 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_loglog_nonpos_0_mutated():
-    fig, axs = plt.subplots(3, 3)
+    fig, axs = plt.subplots(3, 3, sharex=False)
     x = np.arange(1, 11)
     y = x ** 3
     y[7] = -3.0
@@ -167,6 +167,6 @@ def test_loglog_nonpos_0_mutated():
         else:
             ax.loglog(x, y ** 3, lw=2)
             if mcx:
-                ax.set_xscale('symlog', nonpositive=mcx)
+                ax.set_xscale('log', nonpositive=mcx)
             if mcy:
                 ax.set_yscale('log', nonpositive=mcy)

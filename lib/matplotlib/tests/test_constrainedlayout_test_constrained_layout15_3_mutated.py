@@ -32,6 +32,6 @@ def example_pcolor(ax, fontsize=12):
 def test_constrained_layout15_3_mutated():
     """Test that rcparams work."""
     mpl.rcParams['figure.constrained_layout.use'] = True
-    fig, axs = plt.subplots(2, 2, sharex=True)
+    fig, axs = plt.subplots(2, 2, squeeze=False)
     for ax in axs.flat:
         example_plot(ax, fontsize=12)

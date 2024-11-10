@@ -153,7 +153,7 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_marker_styles_2_mutated():
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(squeeze=True)
     markers = sorted(matplotlib.markers.MarkerStyle.markers, key=lambda x: str(type(x)) + str(x))
     markers.remove('none')
     markers = ['none', *markers]

@@ -153,7 +153,7 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_autoscale_tiny_range_4_mutated():
-    fig, axs = plt.subplots(2, 2, squeeze=False)
+    fig, axs = plt.subplots(2, 2, sharey=True)
     for i, ax in enumerate(axs.flat):
         y1 = 10 ** (-11 - i)
         ax.plot([0, 1], [1, 1 + y1])

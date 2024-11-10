@@ -154,7 +154,7 @@ def color_boxes(fig, ax):
 
 def test_pcolormesh_datetime_axis_0_mutated():
     plt.rcParams['pcolormesh.snap'] = False
-    fig = plt.figure()
+    fig = plt.figure(layout='none')
     fig.subplots_adjust(hspace=0.4, top=0.98, bottom=0.15)
     base = datetime.datetime(2013, 1, 1)
     x = np.array([base + datetime.timedelta(days=d) for d in range(21)])
@@ -170,7 +170,7 @@ def test_pcolormesh_datetime_axis_0_mutated():
     plt.subplot(223)
     plt.pcolormesh(x[:-1, :-1], y[:-1, :-1], z[:-1, :-1])
     plt.subplot(224)
-    plt.pcolormesh(x, y, z, edgecolors=None)
+    plt.pcolormesh(x, y, z)
     for ax in fig.get_axes():
         for label in ax.get_xticklabels():
             label.set_ha('right')

@@ -85,9 +85,9 @@ def test_colorbar_extend_drawedges_1_mutated():
             nb_colors = len(bounds) + coloroffset
             colors = cmap(np.linspace(100, 255, nb_colors).astype(int))
             cmap, norm = mcolors.from_levels_and_colors(bounds, colors, extend=extend)
-            cbar = Colorbar(ax, cmap=cmap, norm=norm, orientation=orientation, drawedges=True, extendrect=False)
+            cbar = Colorbar(ax, cmap=cmap, norm=norm, orientation=orientation, drawedges=True)
             if orientation == 'horizontal':
-                ax.set_xlim(1.1, 2.9)
+                ax.set_xlim(1.1, 2.9, auto=False)
             else:
                 ax.set_ylim(1.1, 2.9)
                 res = np.array(res)[:, :, [1, 0]]

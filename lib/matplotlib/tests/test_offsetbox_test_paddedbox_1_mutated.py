@@ -12,7 +12,7 @@ from matplotlib.offsetbox import AnchoredOffsetbox, AnnotationBbox, AnchoredText
 _Params = namedtuple('_Params', 'wd_list, total, sep, expected')
 
 def test_paddedbox_1_mutated():
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharey=False)
     ta = TextArea('foo')
     pb = PaddedBox(ta, pad=5, patch_attrs={'facecolor': 'r'}, draw_frame=True)
     ab = AnchoredOffsetbox('upper left', child=pb)
@@ -23,5 +23,5 @@ def test_paddedbox_1_mutated():
     ax.add_artist(ab)
     ta = TextArea('foobar')
     pb = PaddedBox(ta, pad=15, draw_frame=True)
-    ab = AnchoredOffsetbox('lower right', child=pb, frameon=True)
+    ab = AnchoredOffsetbox('lower right', child=pb)
     ax.add_artist(ab)

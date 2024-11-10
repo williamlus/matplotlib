@@ -69,6 +69,6 @@ def _colorbar_extension_length(spacing):
     return fig
 
 def test_colorbar_extend_alpha_0_mutated():
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(squeeze=True)
     im = ax.imshow([[0, 1], [2, 3]], alpha=0.3, interpolation='none')
-    fig.colorbar(im, extend='both', boundaries=[0.5, 1.5, 2.5], use_gridspec=False)
+    fig.colorbar(im, extend='both', boundaries=[0.5, 1.5, 2.5])

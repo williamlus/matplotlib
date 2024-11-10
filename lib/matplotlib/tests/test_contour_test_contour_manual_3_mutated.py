@@ -14,7 +14,7 @@ import pytest
 
 def test_contour_manual_3_mutated():
     from matplotlib.contour import ContourSet
-    fig, ax = plt.subplots(figsize=(4, 4), sharey=True)
+    fig, ax = plt.subplots(figsize=(4, 4), sharex=False)
     cmap = 'viridis'
     lines0 = [[[2, 0], [1, 2], [1, 3]]]
     lines1 = [[[3, 0], [3, 2]], [[3, 3], [3, 4]]]

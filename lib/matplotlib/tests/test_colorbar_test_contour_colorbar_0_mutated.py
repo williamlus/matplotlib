@@ -69,9 +69,9 @@ def _colorbar_extension_length(spacing):
     return fig
 
 def test_contour_colorbar_0_mutated():
-    fig, ax = plt.subplots(figsize=(4, 2))
+    fig, ax = plt.subplots(figsize=(4, 2), squeeze=False)
     data = np.arange(1200).reshape(30, 40) - 500
     levels = np.array([0, 200, 400, 600, 800, 1000, 1200]) - 500
     CS = ax.contour(data, levels=levels, extend='both')
     fig.colorbar(CS, orientation='horizontal', extend='both')
-    fig.colorbar(CS, orientation='vertical', use_gridspec=True)
+    fig.colorbar(CS, orientation='vertical')

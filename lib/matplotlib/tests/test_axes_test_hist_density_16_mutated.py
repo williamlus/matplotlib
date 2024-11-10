@@ -156,4 +156,4 @@ def test_hist_density_16_mutated():
     np.random.seed(19680801)
     data = np.random.standard_normal(2000)
     fig, ax = plt.subplots()
-    ax.hist(data, density=True)
+    ax.hist(data, density=True, histtype='barstacked')

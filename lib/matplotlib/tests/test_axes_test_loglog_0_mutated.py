@@ -153,7 +153,7 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_loglog_0_mutated():
-    fig, ax = plt.subplots(sharex=False)
+    fig, ax = plt.subplots(sharey=True)
     x = np.arange(1, 11)
     ax.loglog(x, x ** 3, lw=5)
     ax.tick_params(length=25, width=2)

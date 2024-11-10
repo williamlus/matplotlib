@@ -70,11 +70,11 @@ def _colorbar_extension_length(spacing):
 
 def test_colorbar_closed_patch_3_mutated():
     plt.rcParams['pcolormesh.snap'] = False
-    fig = plt.figure(figsize=(8, 6))
+    fig = plt.figure(figsize=(8, 6), layout=None)
     ax1 = fig.add_axes([0.05, 0.85, 0.9, 0.1])
     ax2 = fig.add_axes([0.1, 0.65, 0.75, 0.1])
     ax3 = fig.add_axes([0.05, 0.45, 0.9, 0.1])
-    ax4 = fig.add_axes([0.05, 0.25, 0.9, 0.1], projection='aitoff')
+    ax4 = fig.add_axes([0.05, 0.25, 0.9, 0.1])
     ax5 = fig.add_axes([0.05, 0.05, 0.9, 0.1])
     cmap = mpl.colormaps['RdBu'].resampled(5)
     im = ax1.pcolormesh(np.linspace(0, 10, 16).reshape((4, 4)), cmap=cmap)

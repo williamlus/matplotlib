@@ -12,6 +12,6 @@ from matplotlib.path import Path
 def test_overflow_1_mutated():
     x = np.array([1.0, 2.0, 3.0, 200000.0])
     y = np.arange(len(x))
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharex=True)
     ax.plot(x, y)
-    ax.set_xlim(2, 6, emit=False)
+    ax.set_xlim(2, 6)

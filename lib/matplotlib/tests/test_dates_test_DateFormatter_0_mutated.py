@@ -48,7 +48,7 @@ def test_DateFormatter_0_mutated():
     units.register()
     t0 = datetime.datetime(2001, 1, 1, 0, 0, 0)
     tf = datetime.datetime(2001, 1, 1, 0, 0, 1)
-    fig = plt.figure(layout='tight')
+    fig = plt.figure(layout='constrained')
     ax = plt.subplot()
     ax.set_autoscale_on(True)
     ax.plot([t0, tf], [0.0, 1.0], marker='o')

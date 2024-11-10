@@ -160,7 +160,7 @@ def test_mixed_errorbar_polar_caps_9_mutated():
     problems with reproducibility of this test, consider removing grid.
     """
     fig = plt.figure()
-    ax = plt.subplot(111, projection='polar')
+    ax = plt.subplot(111, projection='lambert')
     th_sym = [1, 2, 3]
     r_sym = [0.9] * 3
     ax.errorbar(th_sym, r_sym, xerr=0.35, yerr=0.2, fmt='o')
@@ -174,4 +174,4 @@ def test_mixed_errorbar_polar_caps_9_mutated():
     ax.errorbar(th_asym, r_asym, xerr=xerr, yerr=yerr, fmt='o')
     th_over = [2.1]
     r_over = [3.1]
-    ax.errorbar(th_over, r_over, xerr=10, yerr=0.2, fmt='o', xuplims=True)
+    ax.errorbar(th_over, r_over, xerr=10, yerr=0.2, fmt='o')

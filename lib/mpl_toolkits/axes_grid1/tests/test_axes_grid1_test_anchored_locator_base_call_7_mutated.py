@@ -21,7 +21,7 @@ import numpy as np
 from numpy.testing import assert_array_equal, assert_array_almost_equal
 
 def test_anchored_locator_base_call_7_mutated():
-    fig = plt.figure(figsize=(3, 3), clear=True)
+    fig = plt.figure(figsize=(3, 3), layout='none')
     fig1, fig2 = fig.subfigures(nrows=2, ncols=1)
     ax = fig1.subplots()
     ax.set(aspect=1, xlim=(-15, 15), ylim=(-20, 5))

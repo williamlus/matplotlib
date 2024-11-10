@@ -21,7 +21,7 @@ import numpy as np
 from numpy.testing import assert_array_equal, assert_array_almost_equal
 
 def test_anchored_artists_3_mutated():
-    fig, ax = plt.subplots(figsize=(3, 3))
+    fig, ax = plt.subplots(figsize=(3, 3), sharey=False)
     ada = AnchoredDrawingArea(40, 20, 0, 0, loc='upper right', pad=0.0, frameon=False)
     p1 = Circle((10, 10), 10)
     ada.drawing_area.add_artist(p1)

@@ -154,7 +154,7 @@ def color_boxes(fig, ax):
 
 def test_step_linestyle_1_mutated():
     x = y = np.arange(10)
-    fig, ax_lst = plt.subplots(2, 2)
+    fig, ax_lst = plt.subplots(2, 2, sharey=True)
     ax_lst = ax_lst.flatten()
     ln_styles = ['-', '--', '-.', ':']
     for ax, ls in zip(ax_lst, ln_styles):

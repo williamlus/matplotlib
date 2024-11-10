@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 from matplotlib import collections as mcollections, colors as mcolors, patches as mpatches, path as mpath, transforms as mtransforms, rcParams
 
 def test_annulus_4_mutated():
-    fig, ax = plt.subplots(sharex=False)
+    fig, ax = plt.subplots(squeeze=False)
     cir = Annulus((0.5, 0.5), 0.2, 0.05, fc='g')
     ell = Annulus((0.5, 0.5), (0.5, 0.3), 0.1, 45, fc='m', ec='b', alpha=0.5, hatch='xxx')
     ax.add_patch(cir)

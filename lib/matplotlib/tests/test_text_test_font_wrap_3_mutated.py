@@ -21,8 +21,8 @@ from matplotlib.text import Text, Annotation, OffsetFrom
 pyparsing_version = parse_version(pyparsing.__version__)
 
 def test_font_wrap_3_mutated():
-    fig = plt.figure()
-    plt.axis([0, 10, 0, 10], option=False)
+    fig = plt.figure(layout='constrained')
+    plt.axis([0, 10, 0, 10])
     t = "This is a really long string that I'd rather have wrapped so that it doesn't go outside of the figure, but if it's long enough it will go off the top or bottom!"
     plt.text(4, -1, t, fontsize=18, family='serif', ha='left', rotation=15, wrap=True)
     plt.text(6, 5, t, family='sans serif', ha='left', rotation=15, wrap=True)

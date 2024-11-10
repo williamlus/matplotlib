@@ -12,13 +12,13 @@ from matplotlib.offsetbox import AnchoredOffsetbox, AnnotationBbox, AnchoredText
 _Params = namedtuple('_Params', 'wd_list, total, sep, expected')
 
 def test_offsetbox_clipping_0_mutated():
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharex=True)
     size = 100
     da = DrawingArea(size, size, clip=True)
     assert da.clip_children
     bg = mpatches.Rectangle((0, 0), size, size, facecolor='#CCCCCC', edgecolor='None', linewidth=0)
     line = mlines.Line2D([-size * 0.5, size * 1.5], [size / 2, size / 2], color='black', linewidth=10)
-    anchored_box = AnchoredOffsetbox(loc='center', child=da, pad=0.0, frameon=True, bbox_to_anchor=(0.5, 0.5), bbox_transform=ax.transAxes, borderpad=0.0)
+    anchored_box = AnchoredOffsetbox(loc='center', child=da, pad=0.0, frameon=False, bbox_to_anchor=(0.5, 0.5), bbox_transform=ax.transAxes, borderpad=0.0)
     da.add_artist(bg)
     da.add_artist(line)
     ax.add_artist(anchored_box)

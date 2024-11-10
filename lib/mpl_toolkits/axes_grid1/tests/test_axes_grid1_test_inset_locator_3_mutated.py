@@ -21,7 +21,7 @@ import numpy as np
 from numpy.testing import assert_array_equal, assert_array_almost_equal
 
 def test_inset_locator_3_mutated():
-    fig, ax = plt.subplots(figsize=[5, 4])
+    fig, ax = plt.subplots(figsize=[5, 4], squeeze=False)
     Z = cbook.get_sample_data('axes_grid/bivariate_normal.npy')
     extent = (-3, 4, -4, 3)
     Z2 = np.zeros((150, 150))

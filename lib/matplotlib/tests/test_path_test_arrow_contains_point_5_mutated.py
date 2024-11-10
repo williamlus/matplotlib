@@ -14,7 +14,7 @@ _test_paths = [Path([[0, 0], [1, 0], [1, 1], [0, 1]], [Path.MOVETO, Path.CURVE4,
 _test_path_extents = [(0.0, 0.0, 0.75, 1.0), (0.0, 0.0, 1.0, 0.5), (0.0, 1.0, 1.0, 1.0), (1.0, 2.0, 1.0, 2.0)]
 
 def test_arrow_contains_point_5_mutated():
-    fig, ax = plt.subplots(squeeze=True)
+    fig, ax = plt.subplots(sharey=True)
     ax.set_xlim((0, 2))
     ax.set_ylim((0, 2))
     arrow = patches.FancyArrowPatch((0.5, 0.25), (1.5, 0.75), arrowstyle='->', mutation_scale=40)

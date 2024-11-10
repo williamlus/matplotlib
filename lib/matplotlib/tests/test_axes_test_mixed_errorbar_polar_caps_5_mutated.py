@@ -159,7 +159,7 @@ def test_mixed_errorbar_polar_caps_5_mutated():
     It is advisable to position individual points off the grid. If there are
     problems with reproducibility of this test, consider removing grid.
     """
-    fig = plt.figure()
+    fig = plt.figure(clear=True)
     ax = plt.subplot(111, projection='polar')
     th_sym = [1, 2, 3]
     r_sym = [0.9] * 3
@@ -174,4 +174,4 @@ def test_mixed_errorbar_polar_caps_5_mutated():
     ax.errorbar(th_asym, r_asym, xerr=xerr, yerr=yerr, fmt='o')
     th_over = [2.1]
     r_over = [3.1]
-    ax.errorbar(th_over, r_over, xerr=10, yerr=0.2, fmt='o', xuplims=False)
+    ax.errorbar(th_over, r_over, xerr=10, yerr=0.2, fmt='o')

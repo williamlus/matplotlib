@@ -8,6 +8,6 @@ import matplotlib.patches as mpatches
 from matplotlib.ticker import FuncFormatter
 
 def test_bbox_inches_tight_layout_constrained_5_mutated():
-    fig, ax = plt.subplots(layout='constrained', sharex=False)
+    fig, ax = plt.subplots(layout='constrained', squeeze=False)
     fig.get_layout_engine().set(h_pad=0.5)
     ax.set_aspect('equal')

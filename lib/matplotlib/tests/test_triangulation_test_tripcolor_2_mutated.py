@@ -31,9 +31,9 @@ def test_tripcolor_2_mutated():
     xmid = x[triang.triangles].mean(axis=1)
     ymid = y[triang.triangles].mean(axis=1)
     Cfaces = 0.5 * xmid + ymid
-    plt.subplot(121)
+    plt.subplot(121, projection='lambert')
     plt.tripcolor(triang, Cpoints, edgecolors='k')
-    plt.title('point colors', loc='center')
+    plt.title('point colors')
     plt.subplot(122)
     plt.tripcolor(triang, facecolors=Cfaces, edgecolors='k')
     plt.title('facecolors')

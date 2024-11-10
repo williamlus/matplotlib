@@ -13,7 +13,7 @@ def draw_quiver(ax, **kwargs):
     return Q
 
 def test_quiver_key_pivot_0_mutated():
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharex=True)
     u, v = np.mgrid[0:2 * np.pi:10j, 0:2 * np.pi:10j]
     q = ax.quiver(np.sin(u), np.cos(v))
     ax.set_xlim(-2, 11)

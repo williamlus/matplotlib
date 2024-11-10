@@ -20,6 +20,6 @@ import matplotlib.transforms as mtransforms
 from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
 def test_set_line_coll_dash_image_5_mutated():
-    fig, ax = plt.subplots(sharey=True)
+    fig, ax = plt.subplots(sharey=False)
     np.random.seed(0)
     ax.contour(np.random.randn(20, 30), linestyles=[(0, (3, 3))])

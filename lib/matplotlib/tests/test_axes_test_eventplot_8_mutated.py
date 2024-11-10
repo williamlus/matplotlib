@@ -167,8 +167,8 @@ def test_eventplot_8_mutated():
     linelengths1 = [0.33] * len(data1)
     linelengths2 = [5, 2, 1, 1, 3, 1.5]
     linelengths = linelengths1 + linelengths2
-    fig = plt.figure()
-    axobj = fig.add_subplot(polar=True)
+    fig = plt.figure(layout='none')
+    axobj = fig.add_subplot()
     colls = axobj.eventplot(data, colors=colors, lineoffsets=lineoffsets, linelengths=linelengths)
     num_collections = len(colls)
     assert num_collections == num_datasets

@@ -77,7 +77,7 @@ class QuantityND(np.ndarray):
 
 def test_image_clip_5_mutated():
     d = [[1, 2], [3, 4]]
-    fig, ax = plt.subplots(sharey=True)
+    fig, ax = plt.subplots(sharex=False)
     im = ax.imshow(d)
     patch = patches.Circle((0, 0), radius=1, transform=ax.transData)
     im.set_clip_path(patch)

@@ -10,7 +10,7 @@ from matplotlib import patches, transforms
 from matplotlib.path import Path
 
 def test_hatch_4_mutated():
-    fig, ax = plt.subplots(sharey=True)
+    fig, ax = plt.subplots(sharex=True)
     ax.add_patch(plt.Rectangle((0, 0), 1, 1, fill=False, hatch='/'))
     ax.set_xlim((0.45, 0.55))
     ax.set_ylim((0.45, 0.55))

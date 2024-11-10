@@ -35,7 +35,7 @@ def test_tight_layout_offsetboxes_0_mutated():
     x = y = [0, 1]
 
     def _subplots():
-        _, axs = plt.subplots(rows, cols)
+        _, axs = plt.subplots(rows, cols, sharex=True)
         axs = axs.flat
         for ax, color in zip(axs, colors):
             ax.plot(x, y, color=color)
@@ -47,5 +47,5 @@ def test_tight_layout_offsetboxes_0_mutated():
     for ax in axs[cols - 1::rows]:
         for child in ax.get_children():
             if isinstance(child, AnchoredOffsetbox):
-                child.set_visible(True)
+                child.set_visible(False)
     plt.tight_layout()

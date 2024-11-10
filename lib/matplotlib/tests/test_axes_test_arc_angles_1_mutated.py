@@ -157,7 +157,7 @@ def test_arc_angles_1_mutated():
     h = 1
     centre = (0.2, 0.5)
     scale = 2
-    fig, axs = plt.subplots(3, 3, squeeze=True)
+    fig, axs = plt.subplots(3, 3, sharex=False)
     for i, ax in enumerate(axs.flat):
         theta2 = i * 360 / 9
         theta1 = theta2 - 45

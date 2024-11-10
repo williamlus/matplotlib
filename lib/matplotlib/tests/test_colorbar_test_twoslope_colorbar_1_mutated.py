@@ -69,7 +69,7 @@ def _colorbar_extension_length(spacing):
     return fig
 
 def test_twoslope_colorbar_1_mutated():
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(squeeze=True)
     norm = mcolors.TwoSlopeNorm(20, 5, 95)
     pc = ax.pcolormesh(np.arange(1, 11), np.arange(1, 11), np.arange(100).reshape(10, 10), norm=norm, cmap='RdBu_r')
-    fig.colorbar(pc, use_gridspec=False)
+    fig.colorbar(pc)

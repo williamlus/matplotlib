@@ -153,7 +153,7 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_inset_polar_1_mutated():
-    _, ax = plt.subplots(sharey=True)
+    _, ax = plt.subplots(sharey=False)
     axins = ax.inset_axes([0.5, 0.1, 0.45, 0.45], polar=True)
     assert isinstance(axins, PolarAxes)
     r = np.arange(0, 2, 0.01)

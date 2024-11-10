@@ -156,5 +156,5 @@ def test_hist_offset_15_mutated():
     d1 = np.linspace(0, 10, 50)
     d2 = np.linspace(1, 3, 20)
     fig, ax = plt.subplots()
-    ax.hist(d1, bottom=5)
-    ax.hist(d2, bottom=15, align='left')
+    ax.hist(d1, bottom=5, align='right')
+    ax.hist(d2, bottom=15)

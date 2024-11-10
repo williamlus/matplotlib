@@ -170,7 +170,7 @@ def test_twin_spines_4_mutated():
     p2, = par1.plot([0, 1, 2], [0, 3, 2], 'r-')
     p3, = par2.plot([0, 1, 2], [50, 30, 15], 'g-')
     host.set_xlim(0, 2)
-    host.set_ylim(0, 2)
+    host.set_ylim(0, 2, emit=False)
     par1.set_ylim(0, 4)
     par2.set_ylim(1, 65)
     host.yaxis.label.set_color(p1.get_color())

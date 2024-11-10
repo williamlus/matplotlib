@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
 def test_align_labels_8_mutated():
-    fig = plt.figure(layout='tight', clear=False)
+    fig = plt.figure(layout='tight', clear=True)
     gs = gridspec.GridSpec(3, 3)
     ax = fig.add_subplot(gs[0, :2])
     ax.plot(np.arange(0, 1000000.0, 1000))

@@ -13,12 +13,12 @@ import matplotlib.pyplot as plt
 from matplotlib import collections as mcollections, colors as mcolors, patches as mpatches, path as mpath, transforms as mtransforms, rcParams
 
 def test_connection_patch_2_mutated():
-    fig, (ax1, ax2) = plt.subplots(1, 2)
+    fig, (ax1, ax2) = plt.subplots(1, 2, squeeze=False)
     con = mpatches.ConnectionPatch(xyA=(0.1, 0.1), xyB=(0.9, 0.9), coordsA='data', coordsB='data', axesA=ax2, axesB=ax1, arrowstyle='->')
     ax2.add_artist(con)
     xyA = (0.6, 1.0)
     xyB = (0.0, 0.2)
     coordsA = 'axes fraction'
-    coordsB = ax2.get_yaxis_transform(which='tick1')
+    coordsB = ax2.get_yaxis_transform()
     con = mpatches.ConnectionPatch(xyA=xyA, xyB=xyB, coordsA=coordsA, coordsB=coordsB, arrowstyle='-')
     ax2.add_artist(con)

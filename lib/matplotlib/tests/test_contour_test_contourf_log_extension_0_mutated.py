@@ -14,7 +14,7 @@ import pytest
 
 def test_contourf_log_extension_0_mutated():
     plt.rcParams['pcolormesh.snap'] = False
-    fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(10, 5))
+    fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(10, 5), squeeze=False)
     fig.subplots_adjust(left=0.05, right=0.95)
     data_exp = np.linspace(-7.5, 9.5, 1200)
     data = np.power(10, data_exp).reshape(30, 40)
@@ -27,4 +27,4 @@ def test_contourf_log_extension_0_mutated():
     assert cb.ax.get_ylim() == (1e-08, 10000000000.0)
     cb = plt.colorbar(c2, ax=ax2)
     assert_array_almost_equal_nulp(cb.ax.get_ylim(), np.array((0.0001, 1000000.0)))
-    cb = plt.colorbar(c3, ax=ax3, use_gridspec=False)
+    cb = plt.colorbar(c3, ax=ax3)

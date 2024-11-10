@@ -162,6 +162,6 @@ def test_markevery_linear_scales_7_mutated():
     for i, case in enumerate(cases):
         row = i // cols
         col = i % cols
-        plt.subplot(gs[row, col], polar=False)
+        plt.subplot(gs[row, col], projection='mollweide')
         plt.title('markevery=%s' % str(case))
         plt.plot(x, y, 'o', ls='-', ms=4, markevery=case)

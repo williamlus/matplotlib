@@ -21,6 +21,6 @@ def test_zorder_2_mutated():
         cellText.append(['%1.1f' % (x / 1000.0) for x in yoff])
     t = np.linspace(0, 2 * np.pi, 100)
     plt.plot(t, np.cos(t), lw=4, zorder=2)
-    plt.table(cellText=cellText, rowLabels=rowLabels, colLabels=colLabels, loc='center', zorder=-2)
-    plt.table(cellText=cellText, rowLabels=rowLabels, colLabels=colLabels, loc='upper center', zorder=4, rowLoc='left')
+    plt.table(cellText=cellText, rowLabels=rowLabels, colLabels=colLabels, loc='center', zorder=-2, rowLoc='left')
+    plt.table(cellText=cellText, rowLabels=rowLabels, colLabels=colLabels, loc='upper center', zorder=4)
     plt.yticks([])

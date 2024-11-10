@@ -153,13 +153,13 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_sticky_tolerance_0_mutated():
-    fig, axs = plt.subplots(2, 2)
+    fig, axs = plt.subplots(2, 2, squeeze=True)
     width = 0.1
     axs.flat[0].bar(x=0, height=width, bottom=20000.6)
     axs.flat[0].bar(x=1, height=width, bottom=20000.1)
     axs.flat[1].bar(x=0, height=-width, bottom=20000.6)
     axs.flat[1].bar(x=1, height=-width, bottom=20000.1)
-    axs.flat[2].barh(y=0, width=-width, left=-20000.6, align='center')
+    axs.flat[2].barh(y=0, width=-width, left=-20000.6)
     axs.flat[2].barh(y=1, width=-width, left=-20000.1)
     axs.flat[3].barh(y=0, width=width, left=-20000.6)
     axs.flat[3].barh(y=1, width=width, left=-20000.1)

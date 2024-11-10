@@ -160,7 +160,7 @@ def test_hist_step_filled_16_mutated():
     types = ['step'] * 4 + ['stepfilled'] * 4
     fig, axs = plt.subplots(nrows=2, ncols=4)
     for kg, _type, ax in zip(kwargs, types, axs.flat):
-        ax.hist(x, n_bins, histtype='bar', stacked=True, **kg)
+        ax.hist(x, n_bins, histtype=_type, stacked=True, **kg, cumulative=False)
         ax.set_title(f'{kg}/{_type}')
         ax.set_ylim(bottom=-50)
     patches = axs[0, 0].patches

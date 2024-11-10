@@ -80,7 +80,7 @@ def test_image_composite_alpha_3_mutated():
     Tests that the alpha value is recognized and correctly applied in the
     process of compositing images together.
     """
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(sharex=True)
     arr = np.zeros((11, 21, 4))
     arr[:, :, 0] = 1
     arr[:, :, 3] = np.concatenate((np.arange(0, 1.1, 0.1), np.arange(0, 1, 0.1)[::-1]))

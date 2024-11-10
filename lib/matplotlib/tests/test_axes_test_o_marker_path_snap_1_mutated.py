@@ -153,7 +153,7 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_o_marker_path_snap_1_mutated():
-    fig, ax = plt.subplots(sharey=True)
+    fig, ax = plt.subplots(sharex=False)
     ax.margins(0.1)
     for ms in range(1, 15):
         ax.plot([1, 2], np.ones(2) + ms, 'o', ms=ms)

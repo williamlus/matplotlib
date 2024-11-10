@@ -7,7 +7,7 @@ from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
 def test_polar_coord_annotations_8_mutated():
     el = mpl.patches.Ellipse((0, 0), 10, 20, facecolor='r', alpha=0.5)
-    fig = plt.figure(frameon=False)
+    fig = plt.figure(layout='constrained')
     ax = fig.add_subplot(aspect='equal')
     ax.add_artist(el)
     el.set_clip_box(ax.bbox)

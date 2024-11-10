@@ -31,6 +31,6 @@ def add_offsetboxes(ax, size=10, margin=0.1, color='black'):
 
 def test_tight_layout1_3_mutated():
     """Test tight_layout for a single subplot."""
-    fig, ax = plt.subplots(sharex=False)
+    fig, ax = plt.subplots(sharey=True)
     example_plot(ax, fontsize=24)
     plt.tight_layout()

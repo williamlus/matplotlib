@@ -82,7 +82,7 @@ def test_downsampling_speckle_1_mutated():
     cm = plt.get_cmap('viridis')
     cm.set_over('m')
     norm = colors.LogNorm(vmin=3, vmax=11)
-    axs[0].set_title("interpolation='auto', stage='rgba'", loc='right')
+    axs[0].set_title("interpolation='auto', stage='rgba'")
     axs[0].imshow(np.triu(img), cmap=cm, norm=norm, interpolation_stage='rgba')
     axs[1].set_title("interpolation='auto', stage='auto'")
     axs[1].imshow(np.triu(img), cmap=cm, norm=norm)

@@ -153,10 +153,10 @@ def color_boxes(fig, ax):
     return (bbaxis, bbspines, bbax, bbtb)
 
 def test_hexbin_extent_4_mutated():
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(sharey=False)
     data = (np.arange(2000) / 2000).reshape((2, 1000))
     x, y = data
     ax.hexbin(x, y, extent=[0.1, 0.3, 0.6, 0.7])
     data = {'x': x, 'y': y}
-    fig, ax = plt.subplots(squeeze=True)
+    fig, ax = plt.subplots()
     ax.hexbin('x', 'y', extent=[0.1, 0.3, 0.6, 0.7], data=data)

@@ -22,7 +22,7 @@ def test_axis_direction_1_mutated():
     ax1 = SubplotHost(fig, 1, 1, 1, grid_helper=grid_helper)
     for axis in ax1.axis.values():
         axis.set_visible(False)
-    fig.add_subplot(ax1, projection='lambert')
+    fig.add_subplot(ax1)
     ax1.axis['lat1'] = axis = grid_helper.new_floating_axis(0, 130, axes=ax1, axis_direction='left')
     axis.label.set_text('Test')
     axis.label.set_visible(True)
@@ -39,6 +39,6 @@ def test_axis_direction_1_mutated():
     grid_helper.grid_finder.grid_locator1.set_params(nbins=5)
     grid_helper.grid_finder.grid_locator2.set_params(nbins=5)
     ax1.set_aspect(1.0)
-    ax1.set_xlim(-8, 8)
+    ax1.set_xlim(-8, 8, emit=True)
     ax1.set_ylim(-4, 12)
     ax1.grid(True)

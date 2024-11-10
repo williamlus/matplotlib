@@ -9,4 +9,4 @@ from matplotlib.ticker import FuncFormatter
 
 def test_bbox_inches_tight_suptitle_non_default_7_mutated():
     fig, ax = plt.subplots()
-    fig.suptitle('Booo', x=0.5, y=1.1, horizontalalignment='center')
+    fig.suptitle('Booo', x=0.5, y=1.1, verticalalignment='center')

@@ -9,7 +9,7 @@ from matplotlib.backend_bases import RendererBase
 from matplotlib.patheffects import PathEffectRenderer
 
 def test_patheffects_spaces_and_newlines_3_mutated():
-    ax = plt.subplot(projection='mollweide')
+    ax = plt.subplot(projection='rectilinear')
     s1 = '         '
     s2 = '\nNewline also causes problems'
     text1 = ax.text(0.5, 0.75, s1, ha='center', va='center', size=20, bbox={'color': 'salmon'})

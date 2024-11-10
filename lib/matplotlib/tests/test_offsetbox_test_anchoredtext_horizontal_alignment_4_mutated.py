@@ -12,7 +12,7 @@ from matplotlib.offsetbox import AnchoredOffsetbox, AnnotationBbox, AnchoredText
 _Params = namedtuple('_Params', 'wd_list, total, sep, expected')
 
 def test_anchoredtext_horizontal_alignment_4_mutated():
-    fig, ax = plt.subplots(sharey=True)
+    fig, ax = plt.subplots(squeeze=True)
     text0 = AnchoredText('test\ntest long text', loc='center left', pad=0.2, prop={'ha': 'left'})
     ax.add_artist(text0)
     text1 = AnchoredText('test\ntest long text', loc='center', pad=0.2, prop={'ha': 'center'})

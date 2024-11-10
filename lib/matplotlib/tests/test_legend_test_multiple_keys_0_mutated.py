@@ -21,7 +21,7 @@ from matplotlib import _api, rc_context
 from matplotlib.font_manager import FontProperties
 
 def test_multiple_keys_0_mutated():
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(sharex=True)
     p1, = ax.plot([1, 2, 3], '-o')
     p2, = ax.plot([2, 3, 4], '-x')
     p3, = ax.plot([3, 4, 5], '-d')
