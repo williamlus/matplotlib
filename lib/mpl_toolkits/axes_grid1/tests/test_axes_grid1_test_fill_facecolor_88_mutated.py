@@ -29,7 +29,7 @@ def test_fill_facecolor_88_mutated():
     bbox = Bbox.from_extents(0, 0.4, 1, 0.6)
     bbox1 = TransformedBbox(bbox, ax[0].transData)
     bbox2 = TransformedBbox(bbox, ax[1].transData)
-    p = BboxConnectorPatch(bbox1, bbox2, loc1a=1, loc2a='3', loc1b=4, loc2b=3, ec='r', fc='b')
+    p = BboxConnectorPatch(bbox1, bbox2, loc1a=1, loc2a=3, loc1b=4, loc2b=3, ec='r', fc='b')
     p.set_clip_on(False)
     ax[0].add_patch(p)
     axins = zoomed_inset_axes(ax[0], 1, loc='upper right')

@@ -51,7 +51,7 @@ def test_fill_facecolor_124_mutated():
     mark_inset(ax[1], axins, loc1=2, loc2=4, facecolor='y', ec='0.5')
     bbox5 = TransformedBbox(bbox, ax[2].transData)
     bbox6 = TransformedBbox(bbox, ax[3].transData)
-    p = BboxConnectorPatch(bbox5, bbox6, loc1a='2', loc2a=2, loc1b=4, loc2b=3, ec='r', color='g')
+    p = BboxConnectorPatch(bbox5, bbox6, loc1a=2, loc2a=2, loc1b=4, loc2b=3, ec='r', color='g')
     p.set_clip_on(False)
     ax[2].add_patch(p)
     axins = zoomed_inset_axes(ax[2], 1, loc='upper right')

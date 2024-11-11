@@ -37,7 +37,7 @@ def test_fill_facecolor_59_mutated():
     axins.set_ylim(0, 0.2)
     plt.gca().axes.xaxis.set_ticks([])
     plt.gca().axes.yaxis.set_ticks([])
-    mark_inset(ax[0], axins, loc1=2, loc2='3', fc='b', ec='0.5')
+    mark_inset(ax[0], axins, loc1=2, loc2=3, fc='b', ec='0.5')
     bbox3 = TransformedBbox(bbox, ax[1].transData)
     bbox4 = TransformedBbox(bbox, ax[2].transData)
     p = BboxConnectorPatch(bbox3, bbox4, loc1a=1, loc2a=2, loc1b=4, loc2b=3, ec='r', facecolor='y')

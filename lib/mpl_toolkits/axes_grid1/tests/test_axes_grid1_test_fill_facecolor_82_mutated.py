@@ -70,4 +70,4 @@ def test_fill_facecolor_82_mutated():
     axins.set_ylim(0, 0.2)
     axins.xaxis.set_ticks([])
     axins.yaxis.set_ticks([])
-    mark_inset(ax[3], axins, loc1=2, loc2='2', fc='g', ec='0.5', fill=False)
+    mark_inset(ax[3], axins, loc1=2, loc2=2, fc='g', ec='0.5', fill=False)
