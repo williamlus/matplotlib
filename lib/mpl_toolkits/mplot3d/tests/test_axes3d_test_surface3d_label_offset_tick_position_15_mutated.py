@@ -59,3 +59,4 @@ def test_surface3d_label_offset_tick_position_15_mutated():
     ax.set_xlabel('X label')
     ax.set_ylabel('Y label')
     ax.set_zlabel('Z label')
+# Mutation info: Added shade = False (Call ax.plot_surface)

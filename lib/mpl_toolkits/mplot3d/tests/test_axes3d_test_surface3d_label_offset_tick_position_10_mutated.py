@@ -59,3 +59,4 @@ def test_surface3d_label_offset_tick_position_10_mutated():
     ax.set_xlabel('X label', loc='center')
     ax.set_ylabel('Y label')
     ax.set_zlabel('Z label')
+# Mutation info: Added loc = center (Call ax.set_xlabel)
