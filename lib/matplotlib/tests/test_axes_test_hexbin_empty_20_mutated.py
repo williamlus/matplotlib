@@ -158,3 +158,4 @@ def test_hexbin_empty_20_mutated():
     ax.hexbin([], [], bins='log')
     ax.hexbin([], [], C=[], reduce_C_function=np.max, xscale='linear')
     ax.hexbin([], [], bins=np.arange(10))
+# Mutation info: Added xscale = linear (Call ax.hexbin)

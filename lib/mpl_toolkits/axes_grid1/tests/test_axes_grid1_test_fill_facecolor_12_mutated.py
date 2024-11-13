@@ -71,3 +71,4 @@ def test_fill_facecolor_12_mutated():
     axins.xaxis.set_ticks([])
     axins.yaxis.set_ticks([])
     mark_inset(ax[3], axins, loc1=2, loc2=4, fc='g', ec='0.5', fill=False)
+# Mutation info: Added auto = True (Call axins.set_xlim)

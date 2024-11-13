@@ -28,3 +28,4 @@ def test_ParasiteAxesAuxTrans_7_mutated():
         ax1.set_xlim((0, 5))
         ax1.set_ylim((0, 5), auto=True)
     ax2.contour(xx, yy, data, colors='k')
+# Mutation info: Added auto = True (Call ax1.set_ylim)

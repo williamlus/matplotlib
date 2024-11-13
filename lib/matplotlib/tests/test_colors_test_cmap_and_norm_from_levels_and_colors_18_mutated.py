@@ -66,3 +66,4 @@ def test_cmap_and_norm_from_levels_and_colors_18_mutated():
     m = plt.pcolormesh(data, cmap=cmap, norm=norm)
     plt.colorbar(m, use_gridspec=False)
     ax.tick_params(labelleft=False, labelbottom=False)
+# Mutation info: Added use_gridspec = False (Call plt.colorbar)

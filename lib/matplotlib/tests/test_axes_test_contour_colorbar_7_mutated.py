@@ -161,3 +161,4 @@ def test_contour_colorbar_7_mutated():
     cbar = fig.colorbar(cs, ax=ax, use_gridspec=False)
     cbar.add_lines(cs1)
     cbar.add_lines(cs2, erase=False)
+# Mutation info: Added use_gridspec = False (Call fig.colorbar)

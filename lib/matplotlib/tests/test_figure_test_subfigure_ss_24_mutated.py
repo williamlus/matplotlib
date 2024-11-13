@@ -34,3 +34,4 @@ def test_subfigure_ss_24_mutated():
     ax.plot(np.arange(20))
     ax.set_title('Axes')
     fig.suptitle('Figure suptitle', fontsize='xx-large', va='bottom')
+# Mutation info: Added va = bottom (Call fig.suptitle)

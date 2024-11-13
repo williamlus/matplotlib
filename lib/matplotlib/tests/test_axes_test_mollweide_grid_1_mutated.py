@@ -156,3 +156,4 @@ def test_mollweide_grid_1_mutated():
     fig = plt.figure(layout='compressed')
     ax = fig.add_subplot(projection='mollweide')
     ax.grid()
+# Mutation info: Added layout = compressed (Call plt.figure)

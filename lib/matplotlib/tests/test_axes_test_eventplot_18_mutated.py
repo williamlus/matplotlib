@@ -178,3 +178,4 @@ def test_eventplot_18_mutated():
     colls = axobj.eventplot('pos', colors='c', lineoffsets='lo', linelengths='ll', data=data)
     num_collections = len(colls)
     assert num_collections == num_datasets
+# Mutation info: Added projection = mollweide (Call fig.add_subplot)

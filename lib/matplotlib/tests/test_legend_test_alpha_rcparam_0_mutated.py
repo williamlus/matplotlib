@@ -26,3 +26,4 @@ def test_alpha_rcparam_0_mutated():
     with mpl.rc_context(rc={'legend.framealpha': 0.75}):
         leg = plt.legend(['Longlabel that will go away'], loc='center')
         leg.legendPatch.set_facecolor([1, 0, 0, 0.5])
+# Mutation info: Added sharex = False (Call plt.subplots)

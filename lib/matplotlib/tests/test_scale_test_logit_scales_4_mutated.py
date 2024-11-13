@@ -19,3 +19,4 @@ def test_logit_scales_4_mutated():
     bbox = ax.get_tightbbox(fig.canvas.get_renderer())
     assert np.isfinite(bbox.x0)
     assert np.isfinite(bbox.y0)
+# Mutation info: Added sharex = False (Call plt.subplots)

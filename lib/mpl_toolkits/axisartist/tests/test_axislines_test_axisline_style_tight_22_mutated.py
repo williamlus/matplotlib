@@ -15,3 +15,4 @@ def test_axisline_style_tight_22_mutated():
     for direction in ('left', 'right', 'bottom', 'top'):
         ax.axis[direction].set_visible(False)
     fig.tight_layout()
+# Mutation info: Added projection = mollweide (Call fig.add_subplot)

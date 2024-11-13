@@ -82,3 +82,4 @@ def test_zoom_and_clip_upper_origin_15_mutated():
     ax.imshow(image, origin='upper')
     ax.set_ylim(2.0, -0.5)
     ax.set_xlim(-0.5, 2.0)
+# Mutation info: Added origin = upper (Call ax.imshow)

@@ -12,3 +12,4 @@ def test_spines_data_positions_10_mutated():
     ax.spines.bottom.set_position('zero')
     ax.set_xlim([-2, 2])
     ax.set_ylim([-2, 2], emit=False)
+# Mutation info: Added emit = False (Call ax.set_ylim)

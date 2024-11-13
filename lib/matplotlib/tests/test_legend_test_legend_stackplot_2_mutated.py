@@ -31,3 +31,4 @@ def test_legend_stackplot_2_mutated():
     ax.set_xlim((0, 10))
     ax.set_ylim((0, 70))
     ax.legend(loc='best')
+# Mutation info: Added squeeze = True (Call plt.subplots)

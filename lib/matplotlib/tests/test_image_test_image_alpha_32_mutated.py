@@ -82,3 +82,4 @@ def test_image_alpha_32_mutated():
     ax1.imshow(Z, alpha=1.0, interpolation='none')
     ax2.imshow(Z, alpha=0.5, interpolation='none')
     ax3.imshow(Z, alpha=0.5, interpolation='nearest', aspect='auto')
+# Mutation info: Added aspect = auto (Call ax3.imshow)

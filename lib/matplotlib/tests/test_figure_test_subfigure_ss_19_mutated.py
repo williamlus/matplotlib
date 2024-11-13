@@ -34,3 +34,4 @@ def test_subfigure_ss_19_mutated():
     ax.plot(np.arange(20))
     ax.set_title('Axes')
     fig.suptitle('Figure suptitle', fontsize='xx-large')
+# Mutation info: Added projection = polar (Call fig.add_subplot)

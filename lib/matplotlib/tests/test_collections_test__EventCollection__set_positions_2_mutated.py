@@ -68,3 +68,4 @@ def test__EventCollection__set_positions_2_mutated():
     check_segments(coll, new_positions, props['linelength'], props['lineoffset'], props['orientation'])
     splt.set_title('EventCollection: set_positions')
     splt.set_xlim(-1, 90, auto=True)
+# Mutation info: Added auto = True (Call splt.set_xlim)

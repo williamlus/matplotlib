@@ -17,3 +17,4 @@ def test_bbox_inches_tight_clipping_9_mutated():
     path.vertices *= 0.25
     patch.set_clip_path(path, transform=ax.transAxes)
     plt.gcf().artists.append(patch)
+# Mutation info: Added rotation_point = xy (Call mpatches.Rectangle)

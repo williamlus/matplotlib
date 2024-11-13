@@ -83,3 +83,4 @@ def test_imshow_endianess_1_mutated():
     kwargs = dict(origin='lower', interpolation='nearest', cmap='viridis')
     ax1.imshow(Z.astype('<f8'), **kwargs)
     ax2.imshow(Z.astype('>f8'), **kwargs)
+# Mutation info: Added sharey = True (Call plt.subplots)

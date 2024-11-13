@@ -164,3 +164,4 @@ def test_eventplot_defaults_3_mutated():
     fig = plt.figure(layout='compressed')
     axobj = fig.add_subplot()
     axobj.eventplot(data)
+# Mutation info: Added layout = compressed (Call plt.figure)

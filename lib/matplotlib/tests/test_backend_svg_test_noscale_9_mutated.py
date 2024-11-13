@@ -20,3 +20,4 @@ def test_noscale_9_mutated():
     Z = np.sin(Y ** 2)
     fig, ax = plt.subplots()
     ax.imshow(Z, cmap='gray', interpolation='none', filternorm=False)
+# Mutation info: Added filternorm = False (Call ax.imshow)

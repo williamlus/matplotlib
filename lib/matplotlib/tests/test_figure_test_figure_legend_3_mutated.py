@@ -28,3 +28,4 @@ def test_figure_legend_3_mutated():
     axs[1].plot([0, 1], [1, 0], label='_y', color='r')
     axs[1].plot([0, 1], [0, 1], label='z', color='b')
     fig.legend()
+# Mutation info: Added squeeze = False (Call plt.subplots)

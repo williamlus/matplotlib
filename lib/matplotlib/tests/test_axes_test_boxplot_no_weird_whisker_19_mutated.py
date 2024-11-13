@@ -159,3 +159,4 @@ def test_boxplot_no_weird_whisker_19_mutated():
     ax1.set_yscale('log')
     ax1.yaxis.grid(False, which='minor')
     ax1.xaxis.grid(False)
+# Mutation info: Added autorange = False (Call ax1.boxplot)

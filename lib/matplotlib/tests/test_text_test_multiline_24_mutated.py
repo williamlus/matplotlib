@@ -31,3 +31,4 @@ def test_multiline_24_mutated():
     plt.ylim(0, 0.8)
     ax.set_xticks([])
     ax.set_yticks([], minor=False)
+# Mutation info: Added minor = False (Call ax.set_yticks)

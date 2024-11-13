@@ -170,3 +170,4 @@ def test_twin_axis_locators_formatters_16_mutated():
     ax1.xaxis.set_minor_formatter(plt.FixedFormatter(['c', '3', 'p', 'o']))
     ax1.twiny()
     ax1.twinx()
+# Mutation info: Added projection = hammer (Call fig.add_subplot)

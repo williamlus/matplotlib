@@ -25,3 +25,4 @@ def test_drawstyle_variants_0_mutated():
     for ax, ds in zip(axs.flat, dss):
         ax.plot(range(2000), drawstyle=ds)
         ax.set(xlim=(0, 2), ylim=(0, 2))
+# Mutation info: Added squeeze = True (Call plt.subplots)

@@ -175,3 +175,4 @@ def test_pcolormesh_datetime_axis_89_mutated():
         for label in ax.get_xticklabels(minor=True):
             label.set_ha('right')
             label.set_rotation(30)
+# Mutation info: Added minor = True (Call ax.get_xticklabels)

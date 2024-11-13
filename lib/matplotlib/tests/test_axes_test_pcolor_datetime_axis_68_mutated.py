@@ -174,3 +174,4 @@ def test_pcolor_datetime_axis_68_mutated():
         for label in ax.get_xticklabels():
             label.set_ha('right')
             label.set_rotation(30)
+# Mutation info: Added shading = nearest (Call plt.pcolor)

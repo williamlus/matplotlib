@@ -26,3 +26,4 @@ def test_axes_titles_11_mutated():
     ax.set_title('center', loc='left', fontsize=20, fontweight=700)
     ax.set_title('left', loc='left', fontsize=12, fontweight=400)
     ax.set_title('right', loc='right', fontsize=12, fontweight=400)
+# Mutation info: loc = <ast.Constant object at 0x7fc0549a6b10> -> loc = left (Call ax.set_title)

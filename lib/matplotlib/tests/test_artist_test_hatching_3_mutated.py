@@ -26,3 +26,4 @@ def test_hatching_3_mutated():
     ax.add_collection(rect4)
     ax.set_xlim(0, 7)
     ax.set_ylim(0, 9)
+# Mutation info: Added squeeze = True (Call plt.subplots)

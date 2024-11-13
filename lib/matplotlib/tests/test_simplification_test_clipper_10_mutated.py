@@ -20,3 +20,4 @@ def test_clipper_10_mutated():
     ax.xaxis.set_ticks_position('bottom')
     ax.yaxis.set_ticks_position('left')
     ax.set_xlim(5, 9)
+# Mutation info: Added layout = compressed (Call plt.figure)

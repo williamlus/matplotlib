@@ -20,3 +20,4 @@ def test_multivar_alpha_mixing_15_mutated():
     fig, ax = plt.subplots()
     ax.imshow(im, interpolation='nearest', aspect='equal')
     remove_ticks_and_titles(fig)
+# Mutation info: Added aspect = equal (Call ax.imshow)

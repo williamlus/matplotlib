@@ -75,3 +75,4 @@ def test_keeping_xlabel_20_mutated():
     cbar = plt.colorbar(im, use_gridspec=False)
     cbar.ax.set_xlabel('Visible Xlabel')
     cbar.set_label('YLabel')
+# Mutation info: Added use_gridspec = False (Call plt.colorbar)

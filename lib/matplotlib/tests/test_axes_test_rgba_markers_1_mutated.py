@@ -165,3 +165,4 @@ def test_rgba_markers_1_mutated():
                 axs[i].plot(j + 1, k + 3, 'x', mec=rcolor, alpha=alpha, **kw)
     for ax in axs:
         ax.axis([-1, 4, 0, 5])
+# Mutation info: Added squeeze = False (Call plt.subplots)

@@ -158,3 +158,4 @@ def test_loglog_18_mutated():
     ax.loglog(x, x ** 3, lw=5)
     ax.tick_params(length=25, width=2)
     ax.tick_params(length=15, width=2, which='minor', axis='y')
+# Mutation info: Added axis = y (Call ax.tick_params)

@@ -15,3 +15,4 @@ def test_overflow_3_mutated():
     fig, ax = plt.subplots(squeeze=False)
     ax.plot(x, y)
     ax.set_xlim(2, 6)
+# Mutation info: Added squeeze = False (Call plt.subplots)

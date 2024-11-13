@@ -94,3 +94,4 @@ def test_imshow_masked_interpolation_10_mutated():
         ax.set_title(interp)
         ax.imshow(data, norm=n, cmap=cmap, interpolation=interp, aspect='auto')
         ax.axis('off')
+# Mutation info: Added aspect = auto (Call ax.imshow)

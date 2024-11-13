@@ -24,3 +24,4 @@ def test_default_edges_14_mutated():
     ax3.set_ylim((-1, 1), emit=False)
     pp1 = mpatches.PathPatch(mpath.Path([(0, 0), (1, 0), (1, 1), (0, 0)], [mpath.Path.MOVETO, mpath.Path.CURVE3, mpath.Path.CURVE3, mpath.Path.CLOSEPOLY]), fc='none', transform=ax4.transData)
     ax4.add_patch(pp1)
+# Mutation info: Added emit = False (Call ax3.set_ylim)

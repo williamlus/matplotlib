@@ -168,3 +168,4 @@ def test_preset_clip_paths_2_mutated():
     fig.add_artist(poly3, clip=True)
     ax.set_xlim(-1, 1)
     ax.set_ylim(-1, 1)
+# Mutation info: Added sharex = False (Call plt.subplots)

@@ -90,3 +90,4 @@ def test_set_line_coll_dash_image_31_mutated():
     ax.set_ylim(50, -50)
     ax.grid(True, axis='x')
     ax.axvline(0, color='b')
+# Mutation info: Added axis = x (Call ax.grid)

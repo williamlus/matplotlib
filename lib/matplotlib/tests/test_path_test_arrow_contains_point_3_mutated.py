@@ -32,3 +32,4 @@ def test_arrow_contains_point_3_mutated():
             inside, res = patch.contains(event)
             if inside:
                 ax.scatter(x, y, s=5, c='r')
+# Mutation info: Added sharex = False (Call plt.subplots)

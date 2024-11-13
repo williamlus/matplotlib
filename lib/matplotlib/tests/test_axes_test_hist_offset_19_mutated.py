@@ -158,3 +158,4 @@ def test_hist_offset_19_mutated():
     fig, ax = plt.subplots()
     ax.hist(d1, bottom=5, cumulative=True)
     ax.hist(d2, bottom=15)
+# Mutation info: Added cumulative = True (Call ax.hist)

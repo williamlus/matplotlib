@@ -159,3 +159,4 @@ def test_boxplot_no_weird_whisker_36_mutated():
     ax1.set_yscale('log')
     ax1.yaxis.grid(False, which='minor')
     ax1.xaxis.grid(False, which='both')
+# Mutation info: Added which = both (Call ax1.xaxis.grid)

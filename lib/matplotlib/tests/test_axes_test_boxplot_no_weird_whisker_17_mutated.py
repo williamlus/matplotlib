@@ -159,3 +159,4 @@ def test_boxplot_no_weird_whisker_17_mutated():
     ax1.set_yscale('log')
     ax1.yaxis.grid(False, which='minor')
     ax1.xaxis.grid(False)
+# Mutation info: Added meanline = False (Call ax1.boxplot)

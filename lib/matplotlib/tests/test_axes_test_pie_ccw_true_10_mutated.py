@@ -159,3 +159,4 @@ def test_pie_ccw_true_10_mutated():
     explode = (0, 0.1, 0, 0)
     plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90, counterclock=True, frame=True)
     plt.axis('equal')
+# Mutation info: Added frame = True (Call plt.pie)

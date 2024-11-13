@@ -158,3 +158,4 @@ def test_hist_offset_10_mutated():
     fig, ax = plt.subplots()
     ax.hist(d1, bottom=5, orientation='vertical')
     ax.hist(d2, bottom=15)
+# Mutation info: Added orientation = vertical (Call ax.hist)

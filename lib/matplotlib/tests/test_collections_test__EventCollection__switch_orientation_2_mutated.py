@@ -71,3 +71,4 @@ def test__EventCollection__switch_orientation_2_mutated():
     splt.set_title('EventCollection: switch_orientation')
     splt.set_ylim(-1, 22)
     splt.set_xlim(0, 2, auto=False)
+# Mutation info: Added auto = False (Call splt.set_xlim)

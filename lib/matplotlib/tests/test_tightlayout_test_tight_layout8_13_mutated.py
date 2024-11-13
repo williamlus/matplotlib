@@ -36,3 +36,4 @@ def test_tight_layout8_13_mutated():
     ax = fig.add_subplot(projection='rectilinear')
     example_plot(ax, fontsize=24)
     fig.draw_without_rendering()
+# Mutation info: Added projection = rectilinear (Call fig.add_subplot)

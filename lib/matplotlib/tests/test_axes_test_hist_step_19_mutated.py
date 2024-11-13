@@ -158,3 +158,4 @@ def test_hist_step_19_mutated():
     ax.hist(d1, histtype='step', orientation='vertical')
     ax.set_ylim(0, 10)
     ax.set_xlim(-1, 5)
+# Mutation info: Added orientation = vertical (Call ax.hist)

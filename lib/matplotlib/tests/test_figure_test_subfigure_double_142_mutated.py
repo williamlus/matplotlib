@@ -48,3 +48,4 @@ def test_subfigure_double_142_mutated():
     subfigsnest[1].supxlabel('supxlabel')
     subfigsnest[1].supylabel('supylabel', ha='right')
     axsRight = subfigs[1].subplots(2, 2)
+# Mutation info: Added ha = right (Call subfigsnest[1].supylabel)

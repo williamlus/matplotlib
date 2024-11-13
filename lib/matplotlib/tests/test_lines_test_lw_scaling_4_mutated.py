@@ -27,3 +27,4 @@ def test_lw_scaling_4_mutated():
     for j, (ls, sty) in enumerate(zip(lins_styles, cy)):
         for lw in np.linspace(0.5, 10, 10):
             ax.plot(th, j * np.ones(50) + 0.1 * lw, linestyle=ls, lw=lw, **sty)
+# Mutation info: Added squeeze = True (Call plt.subplots)

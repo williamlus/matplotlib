@@ -29,3 +29,4 @@ def test_clip_to_bbox_13_mutated():
     result_path = combined.clip_to_bbox(bbox)
     result_patch = mpatches.PathPatch(result_path, alpha=0.5, facecolor='green', lw=4, edgecolor='black')
     ax.add_patch(result_patch)
+# Mutation info: Added auto = True (Call ax.set_ylim)

@@ -26,3 +26,4 @@ def test_labels_first_0_mutated():
     ax.plot(np.ones(10) * 5, ':x', label='x')
     ax.plot(np.arange(20, 10, -1), 'd', label='diamond')
     ax.legend(loc='best', markerfirst=False)
+# Mutation info: Added squeeze = False (Call plt.subplots)

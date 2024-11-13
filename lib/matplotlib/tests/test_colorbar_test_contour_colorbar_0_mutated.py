@@ -75,3 +75,4 @@ def test_contour_colorbar_0_mutated():
     CS = ax.contour(data, levels=levels, extend='both')
     fig.colorbar(CS, orientation='horizontal', extend='both')
     fig.colorbar(CS, orientation='vertical')
+# Mutation info: Added squeeze = False (Call plt.subplots)

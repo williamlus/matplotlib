@@ -16,3 +16,4 @@ def test_diamond_1_mutated():
     ax.plot(x, y)
     ax.set_xlim(-0.6, 0.6)
     ax.set_ylim(-0.6, 0.6)
+# Mutation info: Added sharex = False (Call plt.subplots)

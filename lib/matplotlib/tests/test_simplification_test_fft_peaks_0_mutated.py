@@ -19,3 +19,4 @@ def test_fft_peaks_0_mutated():
     path = transform.transform_path(path)
     simplified = path.cleaned(simplify=True)
     assert simplified.vertices.size == 36
+# Mutation info: Added sharex = True (Call plt.subplots)

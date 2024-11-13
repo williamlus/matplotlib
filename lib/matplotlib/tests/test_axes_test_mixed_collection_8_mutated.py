@@ -167,3 +167,4 @@ def test_mixed_collection_8_mutated():
     ax.add_collection(p2)
     ax.set_xlim(0, 16, auto=False)
     ax.set_ylim(0, 16)
+# Mutation info: Added auto = False (Call ax.set_xlim)

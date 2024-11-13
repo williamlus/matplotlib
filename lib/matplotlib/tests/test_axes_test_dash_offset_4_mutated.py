@@ -158,3 +158,4 @@ def test_dash_offset_4_mutated():
     y = np.ones_like(x)
     for j in range(0, 100, 2):
         ax.plot(x, j * y, ls=(j, (10, 10)), lw=5, color='k')
+# Mutation info: Added squeeze = True (Call plt.subplots)

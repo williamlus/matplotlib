@@ -29,3 +29,4 @@ def test_masks_and_nans_6_mutated():
     ax = plt.figure(layout='tight').subplots()
     with np.errstate(invalid='ignore'):
         ax.streamplot(X, Y, U, V, color=U, cmap=plt.cm.Blues)
+# Mutation info: Added layout = tight (Call plt.figure)

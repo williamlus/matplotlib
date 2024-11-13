@@ -10,3 +10,4 @@ from matplotlib.ticker import FuncFormatter
 def test_bbox_inches_tight_suptitle_non_default_12_mutated():
     fig, ax = plt.subplots()
     fig.suptitle('Booo', x=0.5, y=1.1, horizontalalignment='right')
+# Mutation info: Added horizontalalignment = right (Call fig.suptitle)

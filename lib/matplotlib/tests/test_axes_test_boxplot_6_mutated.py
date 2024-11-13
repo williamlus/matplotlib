@@ -163,3 +163,4 @@ def test_boxplot_6_mutated():
     fig, ax = plt.subplots(squeeze=True)
     ax.boxplot('x', bootstrap=10000, notch=1, data=data)
     ax.set_ylim((-30, 30))
+# Mutation info: Added squeeze = True (Call plt.subplots)

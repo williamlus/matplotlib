@@ -30,3 +30,4 @@ def test_patch_alpha_coloring_11_mutated():
     ax.add_patch(patch)
     ax.set_xlim(-1, 2, auto=False)
     ax.set_ylim(-1, 2)
+# Mutation info: Added auto = False (Call ax.set_xlim)

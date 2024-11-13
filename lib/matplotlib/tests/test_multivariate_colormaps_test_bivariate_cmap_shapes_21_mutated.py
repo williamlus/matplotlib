@@ -24,3 +24,4 @@ def test_bivariate_cmap_shapes_21_mutated():
     cmap = cmap.with_extremes(shape='circleignore')
     axes[3].imshow(cmap((x_0, x_1), bytes=False), interpolation='nearest')
     remove_ticks_and_titles(fig)
+# Mutation info: Added bytes = False (Call cmap)

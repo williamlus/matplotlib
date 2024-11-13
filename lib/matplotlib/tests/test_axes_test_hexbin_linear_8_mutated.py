@@ -159,3 +159,4 @@ def test_hexbin_linear_8_mutated():
     y = 2.0 + 3.0 * x + 4.0 * np.random.standard_normal(n)
     fig, ax = plt.subplots()
     ax.hexbin(x, y, gridsize=(10, 5), marginals=True, reduce_C_function=np.sum)
+# Mutation info: marginals = <ast.Constant object at 0x7fc05e7cd950> -> marginals = True (Call ax.hexbin)

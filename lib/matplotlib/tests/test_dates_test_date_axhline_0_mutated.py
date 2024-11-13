@@ -50,3 +50,4 @@ def test_date_axhline_0_mutated():
     ax.axhline(t0, color='blue', lw=3)
     ax.set_ylim(t0 - datetime.timedelta(days=5), tf + datetime.timedelta(days=5))
     fig.subplots_adjust(left=0.25)
+# Mutation info: Added squeeze = True (Call plt.subplots)

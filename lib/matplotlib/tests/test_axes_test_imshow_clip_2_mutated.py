@@ -163,3 +163,4 @@ def test_imshow_clip_2_mutated():
     c = ax.contour(r, [N / 4])
     clip_path = mtransforms.TransformedPath(c.get_paths()[0], c.get_transform())
     ax.imshow(r, clip_path=clip_path)
+# Mutation info: Added sharey = False (Call plt.subplots)

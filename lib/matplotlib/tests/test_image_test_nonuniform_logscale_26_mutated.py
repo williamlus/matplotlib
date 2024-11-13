@@ -91,3 +91,4 @@ def test_nonuniform_logscale_26_mutated():
             ax.set_xscale('symlog', base=4)
             ax.set_yscale('log', base=4)
         ax.add_image(im)
+# Mutation info: (0-th Positional) value = 'log' -> value = symlog (Call ax.set_xscale)

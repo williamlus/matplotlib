@@ -58,3 +58,4 @@ def test_RRuleLocator_32_mutated():
     ax.xaxis.set_major_formatter(mdates.AutoDateFormatter(locator, usetex=True))
     ax.autoscale_view()
     fig.autofmt_xdate()
+# Mutation info: Added usetex = True (Call mdates.AutoDateFormatter)

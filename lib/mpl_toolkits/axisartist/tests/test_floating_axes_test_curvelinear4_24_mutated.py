@@ -30,3 +30,4 @@ def test_curvelinear4_24_mutated():
     ax2.scatter(xx, yy, edgecolors='none')
     l, = ax2.plot(xx, yy, 'k-')
     l.set_clip_path(ax1.patch)
+# Mutation info: Added edgecolors = none (Call ax2.scatter)

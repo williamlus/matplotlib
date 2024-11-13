@@ -36,3 +36,4 @@ def test_tight_layout8_15_mutated():
     ax = fig.add_subplot(projection='lambert')
     example_plot(ax, fontsize=24)
     fig.draw_without_rendering()
+# Mutation info: Added projection = lambert (Call fig.add_subplot)

@@ -20,3 +20,4 @@ def test_bbox_inches_tight_suptile_legend_15_mutated():
             return str(y)
     plt.gca().yaxis.set_major_formatter(FuncFormatter(y_formatter))
     plt.xlabel('X axis')
+# Mutation info: Added verticalalignment = center (Call plt.suptitle)

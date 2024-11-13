@@ -28,3 +28,4 @@ def test_logscale_nonpos_values_54_mutated():
     ax4.errorbar(x, y, yerr=yerr)
     ax4.set_yscale('log')
     ax4.set_xscale('log')
+# Mutation info: Added cumulative = True (Call ax1.hist)

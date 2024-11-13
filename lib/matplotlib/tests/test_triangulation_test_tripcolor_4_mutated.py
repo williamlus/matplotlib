@@ -37,3 +37,4 @@ def test_tripcolor_4_mutated():
     plt.subplot(122)
     plt.tripcolor(triang, facecolors=Cfaces, edgecolors='k')
     plt.title('facecolors')
+# Mutation info: Added projection = mollweide (Call plt.subplot)

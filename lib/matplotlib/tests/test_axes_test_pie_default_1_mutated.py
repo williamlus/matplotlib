@@ -159,3 +159,4 @@ def test_pie_default_1_mutated():
     explode = (0, 0.1, 0, 0)
     fig1, ax1 = plt.subplots(figsize=(8, 6), squeeze=False)
     ax1.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90)
+# Mutation info: Added squeeze = False (Call plt.subplots)

@@ -167,3 +167,4 @@ def test_pie_linewidth_0_59_mutated():
     plt.figure()
     plt.pie('s', explode='ex', labels='l', colors='c', autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, data=data)
     plt.axis('equal')
+# Mutation info: shadow = <ast.Constant object at 0x7fc056f87890> -> shadow = True (Call plt.pie)

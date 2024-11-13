@@ -19,3 +19,4 @@ def test_logit_scales_3_mutated():
     bbox = ax.get_tightbbox(fig.canvas.get_renderer())
     assert np.isfinite(bbox.x0)
     assert np.isfinite(bbox.y0)
+# Mutation info: Added squeeze = False (Call plt.subplots)

@@ -36,3 +36,4 @@ def test_contains_15_mutated():
         vl = ax.viewLim.frozen()
         ax.plot(x, y, 'o', color=color)
         ax.viewLim.set(vl)
+# Mutation info: Added projection = mollweide (Call plt.axes)

@@ -15,3 +15,4 @@ def test_simplify_curve_12_mutated():
     ax.add_patch(pp1)
     ax.set_xlim((0, 2), emit=True)
     ax.set_ylim((0, 2))
+# Mutation info: Added emit = True (Call ax.set_xlim)

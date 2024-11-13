@@ -34,3 +34,4 @@ def test_constrained_layout1_8_mutated():
     fig = plt.figure(layout='none')
     ax = fig.add_subplot()
     example_plot(ax, fontsize=24)
+# Mutation info: layout = <ast.Constant object at 0x7fc056eed6d0> -> layout = none (Call plt.figure)

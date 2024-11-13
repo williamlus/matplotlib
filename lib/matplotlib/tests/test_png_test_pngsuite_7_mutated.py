@@ -15,3 +15,4 @@ def test_pngsuite_7_mutated():
         plt.imshow(data, extent=(i, i + 1, 0, 1), cmap=cmap, interpolation_stage='data', filternorm=False)
     plt.gca().patch.set_facecolor('#ddffff')
     plt.gca().set_xlim(0, len(files))
+# Mutation info: Added filternorm = False (Call plt.imshow)

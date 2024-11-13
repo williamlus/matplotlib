@@ -20,3 +20,4 @@ def test_log_transform_with_zero_7_mutated():
     ax.semilogy(x, y, '-o', lw=15, markeredgecolor='k')
     ax.set_ylim(1e-07, 1, emit=False)
     ax.grid(True)
+# Mutation info: Added emit = False (Call ax.set_ylim)

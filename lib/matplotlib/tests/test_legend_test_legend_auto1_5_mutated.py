@@ -27,3 +27,4 @@ def test_legend_auto1_5_mutated():
     ax.plot(x, 50 - x, 'o', label='y=1')
     ax.plot(x, x - 50, 'o', label='y=-1')
     ax.legend(loc='best')
+# Mutation info: Added sharey = True (Call plt.subplots)

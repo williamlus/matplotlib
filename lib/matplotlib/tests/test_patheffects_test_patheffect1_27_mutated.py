@@ -15,3 +15,4 @@ def test_patheffect1_27_mutated():
     txt.arrow_patch.set_path_effects([path_effects.Stroke(linewidth=5, foreground='w'), path_effects.Normal()])
     pe = [path_effects.withStroke(linewidth=3, foreground='w')]
     ax1.grid(True, linestyle='-', path_effects=pe, axis='x')
+# Mutation info: Added axis = x (Call ax1.grid)

@@ -43,3 +43,4 @@ def test_math_fontfamily_3_mutated():
     fig = plt.figure(figsize=(10, 3), layout='compressed')
     fig.text(0.2, 0.7, '$This\\ text\\ should\\ have\\ one\\ font$', size=24, math_fontfamily='dejavusans')
     fig.text(0.2, 0.3, '$This\\ text\\ should\\ have\\ another$', size=24, math_fontfamily='stix')
+# Mutation info: Added layout = compressed (Call plt.figure)

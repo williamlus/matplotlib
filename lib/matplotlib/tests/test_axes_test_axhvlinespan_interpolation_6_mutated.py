@@ -161,3 +161,4 @@ def test_axhvlinespan_interpolation_6_mutated():
     ax.axhline(1, c='C0', alpha=0.5)
     ax.axhspan(0.8, 0.9, fc='C1', alpha=0.5)
     ax.axhspan(0.6, 0.7, 0.8, 0.9, fc='C2', alpha=0.5)
+# Mutation info: Added frameon = False (Call plt.figure)

@@ -19,3 +19,4 @@ def test_contour_label_with_disconnected_segments_11_mutated():
     plt.figure()
     cs = plt.contour(x, y, z, levels=[7])
     cs.clabel(manual=False)
+# Mutation info: manual = <ast.Constant object at 0x7fc056f9c8d0> -> manual = False (Call cs.clabel)

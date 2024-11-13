@@ -159,3 +159,4 @@ def test_bar_tick_label_single_2_mutated():
     fig, ax = plt.subplots(sharex=True)
     ax = plt.gca()
     ax.bar('a', 'b', align='edge', tick_label='0', data=data)
+# Mutation info: Added sharex = True (Call plt.subplots)

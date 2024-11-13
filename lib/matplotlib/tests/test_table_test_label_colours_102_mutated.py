@@ -28,3 +28,4 @@ def test_label_colours_102_mutated():
     ax4 = fig.add_subplot(4, 1, 4)
     ax4.axis('off')
     ax4.table(cellText=cellText, colColours=colours, colLabels=['Header'] * dim, loc='best', cellLoc='center')
+# Mutation info: Added cellLoc = center (Call ax4.table)

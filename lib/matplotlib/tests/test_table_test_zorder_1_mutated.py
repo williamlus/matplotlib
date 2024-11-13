@@ -24,3 +24,4 @@ def test_zorder_1_mutated():
     plt.table(cellText=cellText, rowLabels=rowLabels, colLabels=colLabels, loc='center', zorder=-2, edges='horizontal')
     plt.table(cellText=cellText, rowLabels=rowLabels, colLabels=colLabels, loc='upper center', zorder=4)
     plt.yticks([])
+# Mutation info: Added edges = horizontal (Call plt.table)

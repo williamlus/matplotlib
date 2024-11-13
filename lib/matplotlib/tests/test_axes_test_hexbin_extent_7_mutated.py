@@ -160,3 +160,4 @@ def test_hexbin_extent_7_mutated():
     data = {'x': x, 'y': y}
     fig, ax = plt.subplots(sharex=True)
     ax.hexbin('x', 'y', extent=[0.1, 0.3, 0.6, 0.7], data=data)
+# Mutation info: Added sharex = True (Call plt.subplots)

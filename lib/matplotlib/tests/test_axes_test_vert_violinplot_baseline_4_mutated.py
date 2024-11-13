@@ -160,3 +160,4 @@ def test_vert_violinplot_baseline_4_mutated():
     data = {'d': data}
     fig, ax = plt.subplots(sharey=True)
     ax.violinplot('d', positions=range(4), showmeans=False, showextrema=False, showmedians=False, data=data)
+# Mutation info: Added sharey = True (Call plt.subplots)

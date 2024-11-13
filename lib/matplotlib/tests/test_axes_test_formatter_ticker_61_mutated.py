@@ -177,3 +177,4 @@ def test_formatter_ticker_61_mutated():
     ax.plot(xdata, ydata2, color='green', xunits='hour')
     ax.set_xlabel('x-label 005', loc='right')
     ax.autoscale_view()
+# Mutation info: Added loc = right (Call ax.set_xlabel)

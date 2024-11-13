@@ -73,3 +73,4 @@ def test_twoslope_colorbar_2_mutated():
     norm = mcolors.TwoSlopeNorm(20, 5, 95)
     pc = ax.pcolormesh(np.arange(1, 11), np.arange(1, 11), np.arange(100).reshape(10, 10), norm=norm, cmap='RdBu_r')
     fig.colorbar(pc)
+# Mutation info: Added sharey = True (Call plt.subplots)

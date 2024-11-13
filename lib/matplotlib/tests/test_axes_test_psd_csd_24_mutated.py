@@ -174,3 +174,4 @@ def test_psd_csd_24_mutated():
             ret = ax.csd(*ys, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, **kwargs, scale_by_freq=False)
             assert len(ret) == 2 + kwargs.get('return_line', False)
             ax.set(xlabel='', ylabel='')
+# Mutation info: Added scale_by_freq = False (Call ax.csd)

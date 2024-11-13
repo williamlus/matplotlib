@@ -16,3 +16,4 @@ def test_axis_artist_12_mutated():
     axisline.major_ticks.set_tick_out(False)
     axisline.label.set_pad(5)
     ax.set_ylabel('Test', loc='bottom')
+# Mutation info: Added loc = bottom (Call ax.set_ylabel)

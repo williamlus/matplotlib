@@ -177,3 +177,4 @@ def test_spectrum_53_mutated():
         for ax, sides in zip(plt.figure().subplots(3), all_sides):
             spec, freqs, line = ax.phase_spectrum(y, sides='twosided', **kwargs)
             ax.set(xlabel='', ylabel='')
+# Mutation info: sides = <ast.Constant object at 0x7fc0570774d0> -> sides = twosided (Call ax.phase_spectrum)

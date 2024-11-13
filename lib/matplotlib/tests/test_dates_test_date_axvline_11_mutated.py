@@ -50,3 +50,4 @@ def test_date_axvline_11_mutated():
     ax.axvline(t0, color='red', lw=3)
     ax.set_xlim(t0 - datetime.timedelta(days=5), tf + datetime.timedelta(days=5))
     fig.autofmt_xdate(ha='center')
+# Mutation info: Added ha = center (Call fig.autofmt_xdate)

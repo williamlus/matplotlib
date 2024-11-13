@@ -21,3 +21,4 @@ def test_function_scale_2_mutated():
     ax.plot(x, x)
     ax.set_xscale('function', functions=(forward, inverse))
     ax.set_xlim(1, 1000)
+# Mutation info: Added sharey = False (Call plt.subplots)

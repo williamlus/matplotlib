@@ -85,3 +85,4 @@ def test_colorbar_closed_patch_4_mutated():
         plt.colorbar(im, cax=ax3, extend='both', **cbar_kw)
         plt.colorbar(im, cax=ax4, extend='both', extendrect=True, **cbar_kw)
         plt.colorbar(im, cax=ax5, extend='neither', **cbar_kw)
+# Mutation info: Added layout = constrained (Call plt.figure)

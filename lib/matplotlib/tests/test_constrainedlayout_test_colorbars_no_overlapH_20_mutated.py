@@ -38,3 +38,4 @@ def test_colorbars_no_overlapH_20_mutated():
         ax.tick_params(axis='both', direction='in', which='both')
         im = ax.imshow([[1, 2], [3, 4]])
         fig.colorbar(im, ax=ax, orientation='horizontal')
+# Mutation info: Added which = both (Call ax.tick_params)

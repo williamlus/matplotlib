@@ -157,3 +157,4 @@ def test_hist_density_22_mutated():
     data = np.random.standard_normal(2000)
     fig, ax = plt.subplots()
     ax.hist(data, density=True, cumulative=True)
+# Mutation info: Added cumulative = True (Call ax.hist)

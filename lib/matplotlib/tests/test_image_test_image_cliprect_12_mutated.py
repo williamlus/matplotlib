@@ -81,3 +81,4 @@ def test_image_cliprect_12_mutated():
     im = ax.imshow(d, extent=(0, 5, 0, 5), interpolation_stage='auto')
     rect = patches.Rectangle(xy=(1, 1), width=2, height=2, transform=im.axes.transData)
     im.set_clip_path(rect)
+# Mutation info: Added interpolation_stage = auto (Call ax.imshow)

@@ -86,3 +86,4 @@ def test_proportional_colorbars_13_mutated():
         for j in range(2):
             CS3 = axs[i, j].contourf(X, Y, Z, levels, cmap=cmap, norm=norm, extend=extends[i])
             fig.colorbar(CS3, spacing=spacings[j], ax=axs[i, j], use_gridspec=False)
+# Mutation info: Added use_gridspec = False (Call fig.colorbar)

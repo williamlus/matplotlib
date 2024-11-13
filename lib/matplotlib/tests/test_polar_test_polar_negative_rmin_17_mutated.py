@@ -13,3 +13,4 @@ def test_polar_negative_rmin_17_mutated():
     ax.plot(theta, r)
     ax.set_rmax(0.0)
     ax.set_rmin(-3.0)
+# Mutation info: Added projection = None (Call fig.add_axes)

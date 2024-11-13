@@ -81,3 +81,4 @@ def test_image_clip_14_mutated():
     im = ax.imshow(d, interpolation_stage='data')
     patch = patches.Circle((0, 0), radius=1, transform=ax.transData)
     im.set_clip_path(patch)
+# Mutation info: Added interpolation_stage = data (Call ax.imshow)

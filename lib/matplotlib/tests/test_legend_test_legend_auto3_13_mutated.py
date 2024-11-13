@@ -29,3 +29,4 @@ def test_legend_auto3_13_mutated():
     ax.set_xlim(0.0, 1.0)
     ax.set_ylim(0.0, 1.0, emit=False)
     ax.legend(loc='best')
+# Mutation info: Added emit = False (Call ax.set_ylim)

@@ -156,3 +156,4 @@ def test_stem_orientation_2_mutated():
     x = np.linspace(0.1, 2 * np.pi, 50)
     fig, ax = plt.subplots(sharex=True)
     ax.stem(x, np.cos(x), linefmt='C2-.', markerfmt='kx', basefmt='C1-.', orientation='horizontal')
+# Mutation info: Added sharex = True (Call plt.subplots)

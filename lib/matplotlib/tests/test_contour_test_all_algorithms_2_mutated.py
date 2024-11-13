@@ -25,3 +25,4 @@ def test_all_algorithms_2_mutated():
         ax.contourf(x, y, z, algorithm=algorithm)
         ax.contour(x, y, z, algorithm=algorithm, colors='k')
         ax.set_title(algorithm)
+# Mutation info: Added sharey = True (Call plt.subplots)

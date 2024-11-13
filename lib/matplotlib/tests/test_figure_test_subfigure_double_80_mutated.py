@@ -48,3 +48,4 @@ def test_subfigure_double_80_mutated():
     subfigsnest[1].supxlabel('supxlabel')
     subfigsnest[1].supylabel('supylabel')
     axsRight = subfigs[1].subplots(2, 2)
+# Mutation info: Added verticalalignment = baseline (Call subfigsnest[0].suptitle)

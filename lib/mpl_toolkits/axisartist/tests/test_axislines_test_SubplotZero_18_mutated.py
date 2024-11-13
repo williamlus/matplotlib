@@ -17,3 +17,4 @@ def test_SubplotZero_18_mutated():
     xx = np.arange(0, 2 * np.pi, 0.01)
     ax.plot(xx, np.sin(xx))
     ax.set_ylabel('Test')
+# Mutation info: Added polar = False (Call fig.add_subplot)

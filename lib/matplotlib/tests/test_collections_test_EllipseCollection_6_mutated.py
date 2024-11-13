@@ -72,3 +72,4 @@ def test_EllipseCollection_6_mutated():
     ec = mcollections.EllipseCollection(ww, hh, aa, units='x', offsets=XY, offset_transform=ax.transData, facecolors='none')
     ax.add_collection(ec)
     ax.autoscale_view(tight=True)
+# Mutation info: Added tight = True (Call ax.autoscale_view)

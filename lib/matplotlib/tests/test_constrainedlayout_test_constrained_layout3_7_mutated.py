@@ -39,3 +39,4 @@ def test_constrained_layout3_7_mutated():
         else:
             pad = 0.02
         fig.colorbar(pcm, ax=ax, pad=pad, use_gridspec=False)
+# Mutation info: Added use_gridspec = False (Call fig.colorbar)

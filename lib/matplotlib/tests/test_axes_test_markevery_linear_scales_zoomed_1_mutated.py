@@ -167,3 +167,4 @@ def test_markevery_linear_scales_zoomed_1_mutated():
         plt.plot(x, y, 'o', ls='-', ms=4, markevery=case)
         plt.xlim((6, 6.7))
         plt.ylim((1.1, 1.7))
+# Mutation info: Added polar = False (Call plt.subplot)

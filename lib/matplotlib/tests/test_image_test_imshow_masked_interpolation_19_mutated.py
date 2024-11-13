@@ -94,3 +94,4 @@ def test_imshow_masked_interpolation_19_mutated():
         ax.set_title(interp, loc='left')
         ax.imshow(data, norm=n, cmap=cmap, interpolation=interp)
         ax.axis('off')
+# Mutation info: Added loc = left (Call ax.set_title)

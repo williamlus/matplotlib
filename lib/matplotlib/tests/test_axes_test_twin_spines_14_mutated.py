@@ -181,3 +181,4 @@ def test_twin_spines_14_mutated():
     par1.tick_params(axis='y', colors=p2.get_color(), **tkw)
     par2.tick_params(axis='y', colors=p3.get_color(), **tkw)
     host.tick_params(axis='x', **tkw)
+# Mutation info: Added auto = False (Call par2.set_ylim)

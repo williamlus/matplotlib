@@ -158,3 +158,4 @@ def test_hist_step_24_mutated():
     ax.hist(d1, histtype='step', align='mid')
     ax.set_ylim(0, 10)
     ax.set_xlim(-1, 5)
+# Mutation info: Added align = mid (Call ax.hist)

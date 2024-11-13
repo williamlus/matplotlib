@@ -34,3 +34,4 @@ def test_contour_datetime_axis_48_mutated():
         for label in ax.get_xticklabels():
             label.set_ha('left')
             label.set_rotation(30)
+# Mutation info: (0-th Positional) align = 'right' -> align = left (Call label.set_ha)

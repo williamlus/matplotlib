@@ -163,3 +163,4 @@ def test_aitoff_proj_1_mutated():
     fig, ax = plt.subplots(figsize=(8, 4.2), subplot_kw=dict(projection='aitoff'), sharey=True)
     ax.grid()
     ax.plot(X.flat, Y.flat, 'o', markersize=4)
+# Mutation info: Added sharey = True (Call plt.subplots)

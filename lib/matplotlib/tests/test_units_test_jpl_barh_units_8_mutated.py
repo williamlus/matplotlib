@@ -91,3 +91,4 @@ def test_jpl_barh_units_8_mutated():
     fig, ax = plt.subplots()
     ax.barh(x, w, left=b)
     ax.set_xlim([b - 1 * day, b + w[-1] + 1.001 * day], emit=True)
+# Mutation info: Added emit = True (Call ax.set_xlim)

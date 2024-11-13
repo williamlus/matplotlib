@@ -158,3 +158,4 @@ def test_hist_offset_13_mutated():
     fig, ax = plt.subplots()
     ax.hist(d1, bottom=5, histtype='barstacked')
     ax.hist(d2, bottom=15)
+# Mutation info: Added histtype = barstacked (Call ax.hist)

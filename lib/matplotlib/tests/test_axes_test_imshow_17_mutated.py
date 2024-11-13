@@ -164,3 +164,4 @@ def test_imshow_17_mutated():
     data = {'r': r}
     fig, ax = plt.subplots()
     ax.imshow('r', data=data)
+# Mutation info: Added interpolation_stage = auto (Call ax.imshow)

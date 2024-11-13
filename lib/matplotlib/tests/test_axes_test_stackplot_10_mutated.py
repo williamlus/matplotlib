@@ -167,3 +167,4 @@ def test_stackplot_10_mutated():
     ax.stackplot('x', 'y1', 'y2', 'y3', data=data, colors=['C0', 'C1', 'C2'])
     ax.set_xlim((0, 10), emit=False)
     ax.set_ylim((0, 70))
+# Mutation info: Added emit = False (Call ax.set_xlim)

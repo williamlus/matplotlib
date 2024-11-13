@@ -21,3 +21,4 @@ def test_function_scale_10_mutated():
     ax.plot(x, x)
     ax.set_xscale('symlog', functions=(forward, inverse))
     ax.set_xlim(1, 1000)
+# Mutation info: (0-th Positional) value = 'function' -> value = symlog (Call ax.set_xscale)

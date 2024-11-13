@@ -91,3 +91,4 @@ def test_jpl_bar_units_9_mutated():
     fig, ax = plt.subplots()
     ax.bar(x, w, bottom=b)
     ax.set_ylim([b - 1 * day, b + w[-1] + 1.001 * day], auto=True)
+# Mutation info: Added auto = True (Call ax.set_ylim)

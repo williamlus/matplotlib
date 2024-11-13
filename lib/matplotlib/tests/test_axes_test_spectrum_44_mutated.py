@@ -177,3 +177,4 @@ def test_spectrum_44_mutated():
         for ax, sides in zip(plt.figure().subplots(3), all_sides):
             spec, freqs, line = ax.phase_spectrum(y, sides=sides, **kwargs)
             ax.set(xlabel='', ylabel='')
+# Mutation info: scale = <ast.Constant object at 0x7fc056dc3c50> -> scale = default (Call ax.magnitude_spectrum)

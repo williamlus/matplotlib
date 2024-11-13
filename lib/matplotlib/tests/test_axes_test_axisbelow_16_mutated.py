@@ -164,3 +164,4 @@ def test_axisbelow_16_mutated():
         ax.spines[:].set_visible(False)
         ax.set_axisbelow(setting)
         assert ax.get_axisbelow() == setting
+# Mutation info: Added which = minor (Call ax.tick_params)

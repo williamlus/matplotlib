@@ -27,3 +27,4 @@ def test_titles_25_mutated():
     ax.set_title('right title', loc='right')
     ax.set_xticks([], minor=True)
     ax.set_yticks([])
+# Mutation info: Added minor = True (Call ax.set_xticks)

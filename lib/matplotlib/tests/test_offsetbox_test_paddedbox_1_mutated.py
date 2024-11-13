@@ -25,3 +25,4 @@ def test_paddedbox_1_mutated():
     pb = PaddedBox(ta, pad=15, draw_frame=True)
     ab = AnchoredOffsetbox('lower right', child=pb)
     ax.add_artist(ab)
+# Mutation info: Added sharey = False (Call plt.subplots)

@@ -34,3 +34,4 @@ def test_tight_layout1_3_mutated():
     fig, ax = plt.subplots(sharey=True)
     example_plot(ax, fontsize=24)
     plt.tight_layout()
+# Mutation info: Added sharey = True (Call plt.subplots)

@@ -15,3 +15,4 @@ def test_para_equal_perp_4_mutated():
     fig, ax = plt.subplots(sharey=False)
     ax.plot(x + 1, y + 1)
     ax.plot(x + 1, y + 1, 'ro')
+# Mutation info: Added sharey = False (Call plt.subplots)

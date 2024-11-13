@@ -161,3 +161,4 @@ def test_contour_colorbar_9_mutated():
     cbar = fig.colorbar(cs, ax=ax)
     cbar.add_lines(cs1, erase=True)
     cbar.add_lines(cs2, erase=False)
+# Mutation info: Added erase = True (Call cbar.add_lines)

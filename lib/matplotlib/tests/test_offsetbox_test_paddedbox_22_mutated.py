@@ -25,3 +25,4 @@ def test_paddedbox_22_mutated():
     pb = PaddedBox(ta, pad=15, draw_frame=False)
     ab = AnchoredOffsetbox('lower right', child=pb)
     ax.add_artist(ab)
+# Mutation info: draw_frame = <ast.Constant object at 0x7fc056f70450> -> draw_frame = False (Call PaddedBox)

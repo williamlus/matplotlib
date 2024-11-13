@@ -94,3 +94,4 @@ def test_imshow_masked_interpolation_0_mutated():
         ax.set_title(interp)
         ax.imshow(data, norm=n, cmap=cmap, interpolation=interp)
         ax.axis('off')
+# Mutation info: Added squeeze = False (Call plt.subplots)

@@ -158,3 +158,4 @@ def test_hist_offset_29_mutated():
     fig, ax = plt.subplots()
     ax.hist(d1, bottom=5)
     ax.hist(d2, bottom=15, histtype='bar')
+# Mutation info: Added histtype = bar (Call ax.hist)

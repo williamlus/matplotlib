@@ -20,3 +20,4 @@ def test_noscale_8_mutated():
     Z = np.sin(Y ** 2)
     fig, ax = plt.subplots()
     ax.imshow(Z, cmap='gray', interpolation='none', resample=True)
+# Mutation info: Added resample = True (Call ax.imshow)

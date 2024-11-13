@@ -80,3 +80,4 @@ def test_polycollection_close_2_mutated():
     ax.set_xlim3d(0, 4)
     ax.set_zlim3d(0, 3)
     ax.set_ylim3d(0, 4)
+# Mutation info: Added frameon = False (Call plt.figure)

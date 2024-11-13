@@ -21,3 +21,4 @@ def test_function_scale_8_mutated():
     ax.plot(x, x)
     ax.set_xscale('function', functions=(forward, inverse))
     ax.set_xlim(1, 1000, emit=True)
+# Mutation info: Added emit = True (Call ax.set_xlim)

@@ -30,3 +30,4 @@ def test_image_grid_each_left_label_mode_all_9_mutated():
     for ax, cax in zip(grid, grid.cbar_axes):
         im = ax.imshow(imdata, interpolation='none', origin='lower')
         cax.colorbar(im)
+# Mutation info: Added origin = lower (Call ax.imshow)

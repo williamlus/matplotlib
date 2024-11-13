@@ -37,3 +37,4 @@ def test_tripcolor_29_mutated():
     plt.subplot(122)
     plt.tripcolor(triang, facecolors=Cfaces, edgecolors='k', shading='flat')
     plt.title('facecolors')
+# Mutation info: Added shading = flat (Call plt.tripcolor)

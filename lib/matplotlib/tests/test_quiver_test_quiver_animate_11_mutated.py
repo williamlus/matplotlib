@@ -16,3 +16,4 @@ def test_quiver_animate_11_mutated():
     fig, ax = plt.subplots()
     Q = draw_quiver(ax, animated=True)
     ax.quiverkey(Q, 0.5, 0.92, 2, '$2 \\frac{m}{s}$', labelpos='S', fontproperties={'weight': 'bold'})
+# Mutation info: labelpos = <ast.Constant object at 0x7fc056ed9810> -> labelpos = S (Call ax.quiverkey)

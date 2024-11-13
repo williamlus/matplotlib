@@ -21,3 +21,4 @@ def test_function_scale_0_mutated():
     ax.plot(x, x)
     ax.set_xscale('function', functions=(forward, inverse))
     ax.set_xlim(1, 1000)
+# Mutation info: Added squeeze = False (Call plt.subplots)

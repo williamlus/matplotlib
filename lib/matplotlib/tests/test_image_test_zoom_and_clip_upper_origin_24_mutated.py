@@ -82,3 +82,4 @@ def test_zoom_and_clip_upper_origin_24_mutated():
     ax.imshow(image, resample=True)
     ax.set_ylim(2.0, -0.5)
     ax.set_xlim(-0.5, 2.0)
+# Mutation info: Added resample = True (Call ax.imshow)

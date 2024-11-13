@@ -36,3 +36,4 @@ def test_contains_8_mutated():
         vl = ax.viewLim.frozen()
         ax.plot(x, y, 'o', color=color)
         ax.viewLim.set(vl)
+# Mutation info: Added layout = compressed (Call plt.figure)

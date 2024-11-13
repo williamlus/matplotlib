@@ -28,3 +28,4 @@ def test_given_colors_levels_and_extends_4_mutated():
         else:
             c = ax.contour(data, colors=colors[:-1], levels=levels, extend=extend)
         plt.colorbar(c, ax=ax)
+# Mutation info: Added squeeze = False (Call plt.subplots)

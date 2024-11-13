@@ -16,3 +16,4 @@ def test_quiver_single_7_mutated():
     fig, ax = plt.subplots()
     ax.margins(0.1, tight=True)
     ax.quiver([1], [1], [2], [2])
+# Mutation info: Added tight = True (Call ax.margins)

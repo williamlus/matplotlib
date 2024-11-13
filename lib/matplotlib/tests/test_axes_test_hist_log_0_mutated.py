@@ -157,3 +157,4 @@ def test_hist_log_0_mutated():
     data = np.concatenate([1 - data0, 1 + data0])
     fig, ax = plt.subplots(squeeze=True)
     ax.hist(data, fill=False, log=True)
+# Mutation info: Added squeeze = True (Call plt.subplots)

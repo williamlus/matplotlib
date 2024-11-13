@@ -171,3 +171,4 @@ def test_extent_units_39_mutated():
     axs[1, 1].set(xlabel='Day of Jan 2020')
     with pytest.raises(TypeError, match='set_extent\\(\\) got an unexpected'):
         im.set_extent([2, 12, date_first, date_last], clip=False)
+# Mutation info: origin = <ast.Constant object at 0x7fc056dbfb10> -> origin = lower (Call axs[1, 1].imshow)

@@ -13,3 +13,4 @@ def test_bbox_inches_fixed_aspect_3_mutated():
         ax.plot([0, 1])
         ax.set_xlim(0, 1)
         ax.set_aspect('equal')
+# Mutation info: Added sharex = True (Call plt.subplots)

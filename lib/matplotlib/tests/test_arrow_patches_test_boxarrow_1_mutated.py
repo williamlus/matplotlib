@@ -31,3 +31,4 @@ def test_boxarrow_1_mutated():
     fontsize = 0.3 * 72
     for i, stylename in enumerate(sorted(styles)):
         fig.text(0.5, ((n - i) * spacing - 0.5) / figheight, stylename, ha='center', size=fontsize, transform=fig.transFigure, bbox=dict(boxstyle=stylename, fc='w', ec='k'))
+# Mutation info: Added frameon = True (Call plt.figure)

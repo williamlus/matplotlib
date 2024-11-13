@@ -156,3 +156,4 @@ def test_mollweide_grid_17_mutated():
     fig = plt.figure()
     ax = fig.add_subplot(projection=None)
     ax.grid()
+# Mutation info: projection = <ast.Constant object at 0x7fc05706f9d0> -> projection = None (Call fig.add_subplot)

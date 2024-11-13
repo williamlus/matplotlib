@@ -20,3 +20,4 @@ def test_noscale_13_mutated():
     Z = np.sin(Y ** 2)
     fig, ax = plt.subplots()
     ax.imshow(Z, cmap='gray', interpolation='none', aspect='auto')
+# Mutation info: Added aspect = auto (Call ax.imshow)

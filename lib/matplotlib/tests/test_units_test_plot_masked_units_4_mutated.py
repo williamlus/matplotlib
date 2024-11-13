@@ -87,3 +87,4 @@ def test_plot_masked_units_4_mutated():
     data_masked_units = Quantity(data_masked, 'meters')
     fig, ax = plt.subplots(squeeze=True)
     ax.plot(data_masked_units)
+# Mutation info: Added squeeze = True (Call plt.subplots)

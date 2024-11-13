@@ -34,3 +34,4 @@ def test_contour_datetime_axis_5_mutated():
         for label in ax.get_xticklabels():
             label.set_ha('right')
             label.set_rotation(30)
+# Mutation info: Added layout = none (Call plt.figure)

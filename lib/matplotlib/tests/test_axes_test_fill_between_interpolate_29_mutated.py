@@ -165,3 +165,4 @@ def test_fill_between_interpolate_29_mutated():
     ax2.plot(x, y1, x, y2, color='black')
     ax2.fill_between(x, y1, y2, where=y2 >= y1, facecolor='green', interpolate=True)
     ax2.fill_between(x, y1, y2, where=y2 <= y1, facecolor='red', interpolate=True, step='mid')
+# Mutation info: Added step = mid (Call ax2.fill_between)

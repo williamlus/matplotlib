@@ -159,3 +159,4 @@ def test_hist_stacked_weighted_19_mutated():
     w2 = np.linspace(0.05, 2.0, 20)
     fig, ax = plt.subplots()
     ax.hist((d1, d2), weights=(w1, w2), histtype='stepfilled', stacked=True, log=True)
+# Mutation info: Added log = True (Call ax.hist)

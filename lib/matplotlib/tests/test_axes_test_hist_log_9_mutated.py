@@ -157,3 +157,4 @@ def test_hist_log_9_mutated():
     data = np.concatenate([1 - data0, 1 + data0])
     fig, ax = plt.subplots()
     ax.hist(data, fill=False, log=True, density=False)
+# Mutation info: Added density = False (Call ax.hist)

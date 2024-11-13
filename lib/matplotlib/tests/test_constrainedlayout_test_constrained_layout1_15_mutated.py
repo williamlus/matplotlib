@@ -34,3 +34,4 @@ def test_constrained_layout1_15_mutated():
     fig = plt.figure(layout='constrained')
     ax = fig.add_subplot(projection='rectilinear')
     example_plot(ax, fontsize=24)
+# Mutation info: Added projection = rectilinear (Call fig.add_subplot)

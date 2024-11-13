@@ -26,3 +26,4 @@ def test_bbox_inches_tight_21_mutated():
     fig.legend([''] * 5, bbox_to_anchor=(0, 0.2), loc='lower left')
     cell_text.reverse()
     plt.table(cellText=cell_text, rowLabels=row_labels, colLabels=col_labels, loc='bottom', edges='horizontal')
+# Mutation info: Added edges = horizontal (Call plt.table)

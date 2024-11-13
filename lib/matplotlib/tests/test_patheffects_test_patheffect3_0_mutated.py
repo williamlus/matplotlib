@@ -21,3 +21,4 @@ def test_patheffect3_0_mutated():
     pe = [path_effects.PathPatchEffect(offset=(4, -4), hatch='xxxx', facecolor='gray'), path_effects.PathPatchEffect(edgecolor='white', facecolor='black', lw=1.1)]
     t = plt.gcf().text(0.02, 0.1, 'Hatch shadow', fontsize=75, weight=1000, va='center')
     t.set_path_effects(pe)
+# Mutation info: Added loc = center (Call plt.title)

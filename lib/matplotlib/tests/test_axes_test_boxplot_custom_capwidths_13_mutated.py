@@ -157,3 +157,4 @@ def test_boxplot_custom_capwidths_13_mutated():
     x = np.hstack([-25, x, 25])
     fig, ax = plt.subplots()
     ax.boxplot([x, x], notch=1, capwidths=[0.01, 0.2], autorange=False)
+# Mutation info: Added autorange = False (Call ax.boxplot)

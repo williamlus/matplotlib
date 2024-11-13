@@ -36,3 +36,4 @@ def test_imagegrid_cbar_mode_edge_5_mutated():
         for ax in grid:
             ax.cax.cla()
             cb = ax.cax.colorbar(ax.images[0])
+# Mutation info: Added layout = constrained (Call plt.figure)

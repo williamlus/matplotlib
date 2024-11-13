@@ -54,3 +54,4 @@ def test_DateFormatter_12_mutated():
     ax.plot([t0, tf], [0.0, 1.0], marker='o')
     ax.autoscale_view(scalex=False)
     fig.autofmt_xdate()
+# Mutation info: Added scalex = False (Call ax.autoscale_view)

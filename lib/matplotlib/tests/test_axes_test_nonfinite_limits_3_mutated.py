@@ -159,3 +159,4 @@ def test_nonfinite_limits_3_mutated():
     x[len(x) // 2] = np.nan
     fig, ax = plt.subplots(sharey=True)
     ax.plot(x, y)
+# Mutation info: Added sharey = True (Call plt.subplots)

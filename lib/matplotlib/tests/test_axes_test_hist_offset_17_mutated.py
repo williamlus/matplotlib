@@ -158,3 +158,4 @@ def test_hist_offset_17_mutated():
     fig, ax = plt.subplots()
     ax.hist(d1, bottom=5, stacked=False)
     ax.hist(d2, bottom=15)
+# Mutation info: Added stacked = False (Call ax.hist)

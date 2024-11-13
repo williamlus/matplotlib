@@ -160,3 +160,4 @@ def test_vert_violinplot_baseline_0_mutated():
     data = {'d': data}
     fig, ax = plt.subplots(squeeze=True)
     ax.violinplot('d', positions=range(4), showmeans=False, showextrema=False, showmedians=False, data=data)
+# Mutation info: Added squeeze = True (Call plt.subplots)

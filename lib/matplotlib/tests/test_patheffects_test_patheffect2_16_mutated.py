@@ -16,3 +16,4 @@ def test_patheffect2_16_mutated():
     cntr.set(path_effects=[path_effects.withStroke(linewidth=3, foreground='w')])
     clbls = ax2.clabel(cntr, fmt='%2.0f', use_clabeltext=True)
     plt.setp(clbls, path_effects=[path_effects.withStroke(linewidth=3, foreground='w')])
+# Mutation info: Added projection = None (Call plt.subplot)

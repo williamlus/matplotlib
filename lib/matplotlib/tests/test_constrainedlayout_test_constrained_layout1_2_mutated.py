@@ -34,3 +34,4 @@ def test_constrained_layout1_2_mutated():
     fig = plt.figure(layout='constrained', clear=False)
     ax = fig.add_subplot()
     example_plot(ax, fontsize=24)
+# Mutation info: Added clear = False (Call plt.figure)

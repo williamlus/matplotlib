@@ -74,3 +74,4 @@ def test_cap_and_joinstyle_image_3_mutated():
     line_segments.set_joinstyle('miter')
     ax.add_collection(line_segments)
     ax.set_title('Line collection with customized caps and joinstyle')
+# Mutation info: Added sharex = False (Call plt.subplots)

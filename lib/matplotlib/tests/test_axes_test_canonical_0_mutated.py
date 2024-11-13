@@ -155,3 +155,4 @@ def color_boxes(fig, ax):
 def test_canonical_0_mutated():
     fig, ax = plt.subplots(sharex=True)
     ax.plot([1, 2, 3])
+# Mutation info: Added sharex = True (Call plt.subplots)

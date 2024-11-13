@@ -161,3 +161,4 @@ def test_fill_between_interpolate_nan_4_mutated():
     ax.plot(x, y2, c='b')
     ax.fill_between(x, y1, y2, where=y2 >= y1, facecolor='green', interpolate=True, alpha=0.5)
     ax.fill_between(x, y1, y2, where=y1 >= y2, facecolor='red', interpolate=True, alpha=0.5)
+# Mutation info: Added sharey = True (Call plt.subplots)

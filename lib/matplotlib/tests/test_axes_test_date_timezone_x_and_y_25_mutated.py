@@ -162,3 +162,4 @@ def test_date_timezone_x_and_y_25_mutated():
     plt.subplot(2, 1, 2, projection='hammer')
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         plt.plot_date(time_index, time_index, tz='US/Eastern', ydate=True)
+# Mutation info: Added projection = hammer (Call plt.subplot)

@@ -159,3 +159,4 @@ def test_hist2d_transpose_4_mutated():
     y = np.random.randn(100) - 2
     fig, ax = plt.subplots(squeeze=True)
     ax.hist2d(x, y, bins=10, rasterized=True)
+# Mutation info: Added squeeze = True (Call plt.subplots)

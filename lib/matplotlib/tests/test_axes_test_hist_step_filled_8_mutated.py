@@ -165,3 +165,4 @@ def test_hist_step_filled_8_mutated():
         ax.set_ylim(bottom=-50, auto=True)
     patches = axs[0, 0].patches
     assert all((p.get_facecolor() == p.get_edgecolor() for p in patches))
+# Mutation info: Added auto = True (Call ax.set_ylim)

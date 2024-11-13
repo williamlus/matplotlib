@@ -168,3 +168,4 @@ def test_preset_clip_paths_15_mutated():
     fig.add_artist(poly3, clip=False)
     ax.set_xlim(-1, 1)
     ax.set_ylim(-1, 1)
+# Mutation info: clip = <ast.Constant object at 0x7fc057a37f50> -> clip = False (Call fig.add_artist)

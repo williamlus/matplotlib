@@ -62,3 +62,4 @@ def test_custom_transform_7_mutated():
     ax1.set_xlim(0, 10)
     ax1.set_ylim(0, 10, emit=True)
     ax1.grid(True)
+# Mutation info: Added emit = True (Call ax1.set_ylim)

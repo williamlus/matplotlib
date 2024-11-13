@@ -57,3 +57,4 @@ def test_scatter_spiral_2_mutated():
     th = np.linspace(0, 2 * np.pi * 6, 256)
     sc = ax.scatter(np.sin(th), np.cos(th), th, s=1 + th * 5, c=th ** 2)
     fig.canvas.draw()
+# Mutation info: Added frameon = True (Call plt.figure)

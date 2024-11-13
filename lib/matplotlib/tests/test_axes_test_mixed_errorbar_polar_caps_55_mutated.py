@@ -175,3 +175,4 @@ def test_mixed_errorbar_polar_caps_55_mutated():
     th_over = [2.1]
     r_over = [3.1]
     ax.errorbar(th_over, r_over, xerr=10, yerr=0.2, fmt='o', uplims=True)
+# Mutation info: Added uplims = True (Call ax.errorbar)

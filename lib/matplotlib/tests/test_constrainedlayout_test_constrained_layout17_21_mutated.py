@@ -41,3 +41,4 @@ def test_constrained_layout17_21_mutated():
     example_plot(ax2)
     example_plot(ax3)
     example_plot(ax4)
+# Mutation info: Added projection = mollweide (Call fig.add_subplot)

@@ -29,3 +29,4 @@ def test_masks_and_nans_0_mutated():
     ax = plt.figure(layout='compressed').subplots()
     with np.errstate(invalid='ignore'):
         ax.streamplot(X, Y, U, V, color=U, cmap=plt.cm.Blues)
+# Mutation info: Added layout = compressed (Call plt.figure)

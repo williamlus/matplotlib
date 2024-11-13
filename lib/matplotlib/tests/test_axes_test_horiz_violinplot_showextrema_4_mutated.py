@@ -157,3 +157,4 @@ def test_horiz_violinplot_showextrema_4_mutated():
     np.random.seed(567764362)
     data = [np.random.normal(size=100) for _ in range(4)]
     ax.violinplot(data, positions=range(4), orientation='horizontal', showmeans=False, showextrema=True, showmedians=False)
+# Mutation info: Added projection = polar (Call plt.axes)

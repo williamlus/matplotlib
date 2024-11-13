@@ -14,3 +14,4 @@ def test_axisline_style_size_color_12_mutated():
     ax.axis['yzero'].set_visible(True)
     for direction in ('left', 'right', 'bottom', 'top'):
         ax.axis[direction].set_visible(False)
+# Mutation info: Added clear = False (Call plt.figure)

@@ -39,3 +39,4 @@ def test_tight_layout7_7_mutated():
     ax.set_title('Left Title', loc='left', fontsize=fontsize)
     ax.set_title('Right Title', loc='right', fontsize=fontsize)
     plt.tight_layout()
+# Mutation info: Added loc = right (Call ax.set_xlabel)

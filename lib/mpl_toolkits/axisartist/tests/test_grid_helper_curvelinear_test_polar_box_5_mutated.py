@@ -36,3 +36,4 @@ def test_polar_box_5_mutated():
     ax1.set_xlim(-5, 12)
     ax1.set_ylim(-5, 10, emit=False)
     ax1.grid(True)
+# Mutation info: Added emit = False (Call ax1.set_ylim)

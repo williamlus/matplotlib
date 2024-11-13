@@ -32,3 +32,4 @@ def example_pcolor(ax, fontsize=12):
 def test_bbox_3_mutated():
     fig, ax = plt.subplots(layout='constrained', sharey=False)
     ax.set_aspect(1.0)
+# Mutation info: Added sharey = False (Call plt.subplots)

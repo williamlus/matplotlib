@@ -16,3 +16,4 @@ def test_Subplot_18_mutated():
     ax.axis['top'].major_ticks.set_tick_out(True)
     ax.axis['bottom'].major_ticks.set_tick_out(True)
     ax.axis['bottom'].set_label('Tk0')
+# Mutation info: Added loc = bottom (Call ax.set_ylabel)

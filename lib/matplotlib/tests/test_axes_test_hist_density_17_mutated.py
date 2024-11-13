@@ -157,3 +157,4 @@ def test_hist_density_17_mutated():
     data = np.random.standard_normal(2000)
     fig, ax = plt.subplots()
     ax.hist(data, density=True, log=True)
+# Mutation info: Added log = True (Call ax.hist)

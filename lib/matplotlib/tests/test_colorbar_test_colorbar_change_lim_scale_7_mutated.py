@@ -76,3 +76,4 @@ def test_colorbar_change_lim_scale_7_mutated():
     pc = ax[1].pcolormesh(np.arange(100).reshape(10, 10) + 1)
     cb = fig.colorbar(pc, ax=ax[1], extend='both')
     cb.ax.set_ylim([20, 90], emit=True)
+# Mutation info: Added emit = True (Call cb.ax.set_ylim)

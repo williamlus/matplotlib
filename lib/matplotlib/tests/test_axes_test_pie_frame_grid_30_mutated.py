@@ -161,3 +161,4 @@ def test_pie_frame_grid_30_mutated():
     plt.pie(sizes[::-1], explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, frame=True, center=(5, 2))
     plt.pie(sizes, explode=explode[::-1], labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, frame=True, center=(3, 5), normalize=True)
     plt.axis('equal')
+# Mutation info: Added normalize = True (Call plt.pie)

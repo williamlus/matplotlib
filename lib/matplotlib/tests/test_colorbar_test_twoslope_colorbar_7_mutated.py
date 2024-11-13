@@ -73,3 +73,4 @@ def test_twoslope_colorbar_7_mutated():
     norm = mcolors.TwoSlopeNorm(20, 5, 95)
     pc = ax.pcolormesh(np.arange(1, 11), np.arange(1, 11), np.arange(100).reshape(10, 10), norm=norm, cmap='RdBu_r')
     fig.colorbar(pc, use_gridspec=False)
+# Mutation info: Added use_gridspec = False (Call fig.colorbar)

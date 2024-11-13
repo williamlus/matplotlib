@@ -157,3 +157,4 @@ def test_horiz_violinplot_custompoints_200_2_mutated():
     np.random.seed(557438524)
     data = [np.random.normal(size=100) for _ in range(4)]
     ax.violinplot(data, positions=range(4), orientation='horizontal', showmeans=False, showextrema=False, showmedians=False, points=200)
+# Mutation info: Added polar = False (Call plt.axes)

@@ -48,3 +48,4 @@ def test_subfigure_double_140_mutated():
     subfigsnest[1].supxlabel('supxlabel')
     subfigsnest[1].supylabel('supylabel', verticalalignment='center')
     axsRight = subfigs[1].subplots(2, 2)
+# Mutation info: Added verticalalignment = center (Call subfigsnest[1].supylabel)

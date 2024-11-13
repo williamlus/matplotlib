@@ -19,3 +19,4 @@ def test_autoscale_arc_11_mutated():
         for arc in arcs:
             ax.add_patch(arc)
         ax.autoscale(tight=False)
+# Mutation info: Added tight = False (Call ax.autoscale)

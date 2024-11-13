@@ -69,3 +69,4 @@ def test_boundarynorm_and_colorbarbase_75_mutated():
     cb2 = mcolorbar.ColorbarBase(ax2, cmap=cmap, norm=norm, orientation='horizontal', ticklocation='bottom')
     norm = mcolors.BoundaryNorm(bounds, cmap.N, extend='both')
     cb3 = mcolorbar.ColorbarBase(ax3, cmap=cmap, norm=norm, extend='neither', orientation='horizontal')
+# Mutation info: Added ticklocation = bottom (Call mcolorbar.ColorbarBase)

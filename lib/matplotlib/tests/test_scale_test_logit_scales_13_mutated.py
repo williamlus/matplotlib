@@ -19,3 +19,4 @@ def test_logit_scales_13_mutated():
     bbox = ax.get_tightbbox(fig.canvas.get_renderer())
     assert np.isfinite(bbox.x0)
     assert np.isfinite(bbox.y0)
+# Mutation info: (0-th Positional) visible = True -> visible = True (Call ax.grid)

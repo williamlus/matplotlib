@@ -33,3 +33,4 @@ def test_tight_layout9_4_mutated():
     f, axarr = plt.subplots(2, 2, sharey=True)
     axarr[1][1].set_visible(False)
     plt.tight_layout()
+# Mutation info: Added sharey = True (Call plt.subplots)

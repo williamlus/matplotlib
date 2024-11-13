@@ -161,3 +161,4 @@ def test_date_timezone_x_25_mutated():
     plt.subplot(2, 1, 2, projection='lambert')
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         plt.plot_date(time_index, [3] * 3, tz='UTC')
+# Mutation info: Added projection = lambert (Call plt.subplot)

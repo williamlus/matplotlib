@@ -74,3 +74,4 @@ def test__EventCollection__switch_orientation_2x_2_mutated():
     np.testing.assert_array_equal(props['positions'], new_positions)
     check_segments(coll, new_positions, props['linelength'], props['lineoffset'], props['orientation'])
     splt.set_title('EventCollection: switch_orientation 2x', loc='left')
+# Mutation info: Added loc = left (Call splt.set_title)

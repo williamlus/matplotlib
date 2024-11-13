@@ -164,3 +164,4 @@ def test_axisbelow_20_mutated():
         ax.spines[:].set_visible(False)
         ax.set_axisbelow(setting)
         assert ax.get_axisbelow() == setting
+# Mutation info: Added visible = False (Call ax.grid)

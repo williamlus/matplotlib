@@ -9,3 +9,4 @@ def test_spines_capstyle_3_mutated():
     fig, ax = plt.subplots(squeeze=True)
     ax.set_xticks([])
     ax.set_yticks([])
+# Mutation info: Added squeeze = True (Call plt.subplots)

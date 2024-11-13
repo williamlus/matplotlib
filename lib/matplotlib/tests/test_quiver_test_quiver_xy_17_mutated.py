@@ -18,3 +18,4 @@ def test_quiver_xy_17_mutated():
     ax.set_xlim(0, 1.1)
     ax.set_ylim(0, 1.1)
     ax.grid()
+# Mutation info: angles = <ast.Constant object at 0x7fc056e929d0> -> angles = xy (Call ax.quiver)

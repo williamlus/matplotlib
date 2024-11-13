@@ -160,3 +160,4 @@ def test_vert_violinplot_baseline_13_mutated():
     data = {'d': data}
     fig, ax = plt.subplots()
     ax.violinplot('d', positions=range(4), showmeans=False, showextrema=False, showmedians=False, data=data)
+# Mutation info: Added projection = aitoff (Call plt.axes)

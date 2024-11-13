@@ -15,3 +15,4 @@ def test_overflow_9_mutated():
     fig, ax = plt.subplots()
     ax.plot(x, y)
     ax.set_xlim(2, 6, auto=True)
+# Mutation info: Added auto = True (Call ax.set_xlim)

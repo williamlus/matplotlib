@@ -49,3 +49,4 @@ def test_tight_layout_offsetboxes_6_mutated():
             if isinstance(child, AnchoredOffsetbox):
                 child.set_visible(True)
     plt.tight_layout()
+# Mutation info: (0-th Positional) b = False -> b = True (Call child.set_visible)

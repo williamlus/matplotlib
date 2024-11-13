@@ -157,3 +157,4 @@ def test_retain_tick_visibility_13_mutated():
     plt.plot([0, 1, 2], [0, -1, 4])
     plt.setp(ax.get_yticklabels(), visible=False)
     ax.tick_params(axis='both', which='both', length=0)
+# Mutation info: axis = <ast.Constant object at 0x7fc056e26fd0> -> axis = both (Call ax.tick_params)

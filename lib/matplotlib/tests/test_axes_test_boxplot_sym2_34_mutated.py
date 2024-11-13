@@ -161,3 +161,4 @@ def test_boxplot_sym2_34_mutated():
     ax1.set_ylim((-30, 30))
     ax2.boxplot([x, x], bootstrap=10000, sym='g', vert=False)
     ax2.set_ylim((-30, 30))
+# Mutation info: Added vert = False (Call ax2.boxplot)

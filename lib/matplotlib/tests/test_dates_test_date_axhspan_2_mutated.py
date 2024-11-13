@@ -50,3 +50,4 @@ def test_date_axhspan_2_mutated():
     ax.axhspan(t0, tf, facecolor='blue', alpha=0.25)
     ax.set_ylim(t0 - datetime.timedelta(days=5), tf + datetime.timedelta(days=5))
     fig.subplots_adjust(left=0.25)
+# Mutation info: Added sharey = True (Call plt.subplots)

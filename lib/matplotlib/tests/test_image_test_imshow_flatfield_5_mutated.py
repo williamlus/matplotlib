@@ -79,3 +79,4 @@ def test_imshow_flatfield_5_mutated():
     fig, ax = plt.subplots(sharey=False)
     im = ax.imshow(np.ones((5, 5)), interpolation='nearest')
     im.set_clim(0.5, 1.5)
+# Mutation info: Added sharey = False (Call plt.subplots)

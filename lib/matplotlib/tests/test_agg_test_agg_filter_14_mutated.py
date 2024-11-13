@@ -101,3 +101,4 @@ def test_agg_filter_14_mutated():
     ax.set_ylim(0.0, 1.0)
     ax.xaxis.set_visible(False)
     ax.yaxis.set_visible(False)
+# Mutation info: (0-th Positional) rasterized = True -> rasterized = False (Call shadow.set_rasterized)

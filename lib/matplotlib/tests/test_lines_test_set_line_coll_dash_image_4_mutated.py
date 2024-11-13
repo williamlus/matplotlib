@@ -23,3 +23,4 @@ def test_set_line_coll_dash_image_4_mutated():
     fig, ax = plt.subplots(squeeze=False)
     np.random.seed(0)
     ax.contour(np.random.randn(20, 30), linestyles=[(0, (3, 3))])
+# Mutation info: Added squeeze = False (Call plt.subplots)

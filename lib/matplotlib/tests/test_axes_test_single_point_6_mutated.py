@@ -162,3 +162,4 @@ def test_single_point_6_mutated():
     fig, (ax1, ax2) = plt.subplots(2, squeeze=False)
     ax1.plot('a', 'a', 'o', data=data)
     ax2.plot('b', 'b', 'o', data=data)
+# Mutation info: Added squeeze = False (Call plt.subplots)

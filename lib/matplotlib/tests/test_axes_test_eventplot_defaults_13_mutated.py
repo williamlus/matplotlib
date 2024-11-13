@@ -164,3 +164,4 @@ def test_eventplot_defaults_13_mutated():
     fig = plt.figure()
     axobj = fig.add_subplot(projection='rectilinear')
     axobj.eventplot(data)
+# Mutation info: Added projection = rectilinear (Call fig.add_subplot)

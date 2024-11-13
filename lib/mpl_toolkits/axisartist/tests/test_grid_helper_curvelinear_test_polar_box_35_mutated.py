@@ -36,3 +36,4 @@ def test_polar_box_35_mutated():
     ax1.set_xlim(-5, 12)
     ax1.set_ylim(-5, 10)
     ax1.grid(True)
+# Mutation info: (0-th Positional) aspect = 1.0 -> aspect = auto (Call ax1.set_aspect)

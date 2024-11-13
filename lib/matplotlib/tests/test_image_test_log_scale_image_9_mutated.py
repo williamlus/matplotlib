@@ -81,3 +81,4 @@ def test_log_scale_image_9_mutated():
     fig, ax = plt.subplots()
     ax.imshow(Z, extent=[1, 100, 1, 100], cmap='viridis', vmax=1, vmin=-1, aspect='auto', filternorm=False)
     ax.set(yscale='log')
+# Mutation info: Added filternorm = False (Call ax.imshow)

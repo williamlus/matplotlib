@@ -36,3 +36,4 @@ def test_tight_layout8_16_mutated():
     ax = fig.add_subplot(projection=None)
     example_plot(ax, fontsize=24)
     fig.draw_without_rendering()
+# Mutation info: Added projection = None (Call fig.add_subplot)

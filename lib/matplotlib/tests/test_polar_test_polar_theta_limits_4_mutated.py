@@ -26,3 +26,4 @@ def test_polar_theta_limits_4_mutated():
             ax.tick_params(tick1On=True, tick2On=True, direction=DIRECTIONS[i % len(DIRECTIONS)], rotation='auto', which='minor')
             ax.yaxis.set_tick_params(label2On=True, rotation='auto')
             ax.xaxis.get_major_locator().base.set_params(steps=[1, 2, 2.5, 5, 10])
+# Mutation info: Added which = minor (Call ax.tick_params)

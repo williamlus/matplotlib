@@ -91,3 +91,4 @@ def test_jpl_bar_units_10_mutated():
     fig, ax = plt.subplots()
     ax.bar(x, w, bottom=b, align='center')
     ax.set_ylim([b - 1 * day, b + w[-1] + 1.001 * day])
+# Mutation info: Added align = center (Call ax.bar)

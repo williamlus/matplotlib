@@ -167,3 +167,4 @@ def test_pie_linewidth_0_14_mutated():
     plt.figure(layout='constrained')
     plt.pie('s', explode='ex', labels='l', colors='c', autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, data=data)
     plt.axis('equal')
+# Mutation info: Added layout = constrained (Call plt.figure)

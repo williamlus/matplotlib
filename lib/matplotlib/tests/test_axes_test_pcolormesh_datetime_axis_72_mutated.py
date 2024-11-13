@@ -175,3 +175,4 @@ def test_pcolormesh_datetime_axis_72_mutated():
         for label in ax.get_xticklabels():
             label.set_ha('right')
             label.set_rotation(30)
+# Mutation info: Added rasterized = False (Call plt.pcolormesh)

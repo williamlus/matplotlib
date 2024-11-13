@@ -170,3 +170,4 @@ def test_secondary_xy_23_mutated():
         secax(0.8)
         secax('top' if nn == 0 else 'right', functions=_Translation(2))
         secax('top', transform=ax.transData)
+# Mutation info: (0-th Positional) location = 6.25 -> location = top (Call secax)

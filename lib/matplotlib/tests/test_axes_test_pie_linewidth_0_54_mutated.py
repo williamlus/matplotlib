@@ -167,3 +167,4 @@ def test_pie_linewidth_0_54_mutated():
     plt.figure()
     plt.pie('s', explode='ex', labels='l', colors='c', autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, data=data, counterclock=True)
     plt.axis('equal')
+# Mutation info: Added counterclock = True (Call plt.pie)

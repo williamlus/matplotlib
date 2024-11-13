@@ -28,3 +28,4 @@ def test_label_colours_59_mutated():
     ax4 = fig.add_subplot(4, 1, 4)
     ax4.axis('off', option=True)
     ax4.table(cellText=cellText, colColours=colours, colLabels=['Header'] * dim, loc='best')
+# Mutation info: Added option = True (Call ax4.axis)

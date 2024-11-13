@@ -158,3 +158,4 @@ def test_boxplot_sym_14_mutated():
     fig, ax = plt.subplots()
     ax.boxplot([x, x], sym='gs', autorange=True)
     ax.set_ylim((-30, 30))
+# Mutation info: Added autorange = True (Call ax.boxplot)

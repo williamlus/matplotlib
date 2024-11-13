@@ -22,3 +22,4 @@ def test_connection_patch_7_mutated():
     coordsB = ax2.get_yaxis_transform(which='grid')
     con = mpatches.ConnectionPatch(xyA=xyA, xyB=xyB, coordsA=coordsA, coordsB=coordsB, arrowstyle='-')
     ax2.add_artist(con)
+# Mutation info: Added which = grid (Call ax2.get_yaxis_transform)

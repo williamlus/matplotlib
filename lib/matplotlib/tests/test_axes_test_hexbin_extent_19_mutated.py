@@ -160,3 +160,4 @@ def test_hexbin_extent_19_mutated():
     data = {'x': x, 'y': y}
     fig, ax = plt.subplots()
     ax.hexbin('x', 'y', extent=[0.1, 0.3, 0.6, 0.7], data=data, xscale='linear')
+# Mutation info: Added xscale = linear (Call ax.hexbin)

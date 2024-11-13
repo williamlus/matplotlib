@@ -158,3 +158,4 @@ def test_boxplot_sym_10_mutated():
     fig, ax = plt.subplots()
     ax.boxplot([x, x], sym='gs', manage_ticks=False)
     ax.set_ylim((-30, 30))
+# Mutation info: Added manage_ticks = False (Call ax.boxplot)

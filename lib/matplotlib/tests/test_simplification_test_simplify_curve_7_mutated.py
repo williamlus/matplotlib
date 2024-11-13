@@ -15,3 +15,4 @@ def test_simplify_curve_7_mutated():
     ax.add_patch(pp1)
     ax.set_xlim((0, 2))
     ax.set_ylim((0, 2))
+# Mutation info: Added closed = False (Call Path)

@@ -155,3 +155,4 @@ def color_boxes(fig, ax):
 def test_hist_bar_empty_12_mutated():
     ax = plt.gca()
     ax.hist([], histtype='bar', align='mid')
+# Mutation info: Added align = mid (Call ax.hist)

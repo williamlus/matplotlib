@@ -52,3 +52,4 @@ def test_align_labels_11_mutated():
             for tick in ax.get_xticklabels():
                 tick.set_rotation(90)
     fig.align_labels()
+# Mutation info: Added projection = hammer (Call fig.add_subplot)

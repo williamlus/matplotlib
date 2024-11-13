@@ -16,3 +16,4 @@ def test_axis_artist_0_mutated():
     axisline.major_ticks.set_tick_out(False)
     axisline.label.set_pad(5)
     ax.set_ylabel('Test')
+# Mutation info: Added squeeze = True (Call plt.subplots)

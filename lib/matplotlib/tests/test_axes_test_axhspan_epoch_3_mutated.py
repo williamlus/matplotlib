@@ -161,3 +161,4 @@ def test_axhspan_epoch_3_mutated():
     ax = plt.gca()
     ax.axhspan(t0, tf, facecolor='blue', alpha=0.25)
     ax.set_ylim(t0 - 5.0 * dt, tf + 5.0 * dt, emit=True)
+# Mutation info: Added emit = True (Call ax.set_ylim)

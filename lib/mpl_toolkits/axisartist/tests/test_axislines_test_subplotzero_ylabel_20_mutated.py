@@ -13,3 +13,4 @@ def test_subplotzero_ylabel_20_mutated():
     zero_axis.set_visible(True)
     ax.axis['left', 'right', 'bottom', 'top'].set_visible(True)
     zero_axis.set_axisline_style('->')
+# Mutation info: (0-th Positional) b = False -> b = True (Call ax.axis['left', 'right', 'bottom', 'top'].set_visible)

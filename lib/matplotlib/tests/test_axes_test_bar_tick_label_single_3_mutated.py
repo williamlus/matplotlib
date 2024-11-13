@@ -159,3 +159,4 @@ def test_bar_tick_label_single_3_mutated():
     fig, ax = plt.subplots(squeeze=True)
     ax = plt.gca()
     ax.bar('a', 'b', align='edge', tick_label='0', data=data)
+# Mutation info: Added squeeze = True (Call plt.subplots)

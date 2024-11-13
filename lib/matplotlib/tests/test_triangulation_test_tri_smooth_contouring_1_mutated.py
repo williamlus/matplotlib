@@ -48,3 +48,4 @@ def test_tri_smooth_contouring_1_mutated():
     levels = np.arange(0.0, 1.0, 0.025)
     plt.triplot(triang0, lw=0.5, color='0.5')
     plt.tricontour(tri_refi, z_test_refi, levels=levels, colors='black')
+# Mutation info: Added mask = True (Call mtri.Triangulation)

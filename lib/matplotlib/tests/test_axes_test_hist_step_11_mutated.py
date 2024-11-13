@@ -158,3 +158,4 @@ def test_hist_step_11_mutated():
     ax.hist(d1, histtype='step')
     ax.set_ylim(0, 10, auto=False)
     ax.set_xlim(-1, 5)
+# Mutation info: Added auto = False (Call ax.set_ylim)

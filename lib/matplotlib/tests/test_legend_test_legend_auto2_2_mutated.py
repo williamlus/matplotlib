@@ -27,3 +27,4 @@ def test_legend_auto2_2_mutated():
     b1 = ax.bar(x, x, align='edge', color='m')
     b2 = ax.bar(x, x[::-1], align='edge', color='g')
     ax.legend([b1[0], b2[0]], ['up', 'down'], loc='best')
+# Mutation info: Added squeeze = False (Call plt.subplots)

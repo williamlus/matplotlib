@@ -51,3 +51,4 @@ def test_date_inverted_limit_5_mutated():
     ax.set_ylim(t0 - datetime.timedelta(days=5), tf + datetime.timedelta(days=5))
     ax.invert_yaxis()
     fig.subplots_adjust(left=0.25)
+# Mutation info: Added sharex = False (Call plt.subplots)

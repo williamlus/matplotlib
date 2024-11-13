@@ -158,3 +158,4 @@ def test_hist_step_2_mutated():
     ax.hist(d1, histtype='step')
     ax.set_ylim(0, 10)
     ax.set_xlim(-1, 5)
+# Mutation info: Added sharex = True (Call plt.subplots)

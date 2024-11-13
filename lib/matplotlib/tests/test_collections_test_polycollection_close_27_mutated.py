@@ -80,3 +80,4 @@ def test_polycollection_close_27_mutated():
     ax.set_xlim3d(0, 4)
     ax.set_zlim3d(0, 3, emit=True)
     ax.set_ylim3d(0, 4)
+# Mutation info: Added emit = True (Call ax.set_zlim3d)

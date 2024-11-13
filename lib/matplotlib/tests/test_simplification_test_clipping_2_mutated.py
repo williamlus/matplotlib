@@ -15,3 +15,4 @@ def test_clipping_2_mutated():
     fig, ax = plt.subplots(squeeze=False)
     ax.plot(t, s, linewidth=1.0)
     ax.set_ylim((-0.2, -0.28))
+# Mutation info: Added squeeze = False (Call plt.subplots)

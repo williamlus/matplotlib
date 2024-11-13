@@ -18,3 +18,4 @@ def test_patheffects_stroked_text_12_mutated():
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.axis('off')
+# Mutation info: Added projection = polar (Call plt.axes)

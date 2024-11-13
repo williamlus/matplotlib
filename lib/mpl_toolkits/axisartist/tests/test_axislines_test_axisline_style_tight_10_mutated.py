@@ -15,3 +15,4 @@ def test_axisline_style_tight_10_mutated():
     for direction in ('left', 'right', 'bottom', 'top'):
         ax.axis[direction].set_visible(False)
     fig.tight_layout()
+# Mutation info: Added frameon = False (Call plt.figure)

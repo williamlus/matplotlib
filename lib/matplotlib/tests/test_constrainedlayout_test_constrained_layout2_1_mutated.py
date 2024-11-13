@@ -34,3 +34,4 @@ def test_constrained_layout2_1_mutated():
     fig, axs = plt.subplots(2, 2, layout='constrained', squeeze=False)
     for ax in axs.flat:
         example_plot(ax, fontsize=24)
+# Mutation info: Added squeeze = False (Call plt.subplots)

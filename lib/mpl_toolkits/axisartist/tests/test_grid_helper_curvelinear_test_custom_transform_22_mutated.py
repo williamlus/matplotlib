@@ -62,3 +62,4 @@ def test_custom_transform_22_mutated():
     ax1.set_xlim(0, 10)
     ax1.set_ylim(0, 10)
     ax1.grid(True)
+# Mutation info: Added projection = lambert (Call fig.add_subplot)

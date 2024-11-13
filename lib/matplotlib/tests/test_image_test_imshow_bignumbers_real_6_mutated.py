@@ -81,3 +81,4 @@ def test_imshow_bignumbers_real_6_mutated():
     img = np.array([[2.0, 1.0, 1e+22], [4.0, 1.0, 3.0]])
     pc = ax.imshow(img, filternorm=True)
     pc.set_clim(0, 5)
+# Mutation info: Added filternorm = True (Call ax.imshow)

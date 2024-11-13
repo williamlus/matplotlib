@@ -171,3 +171,4 @@ def test_pcolormesh_alpha_38_mutated():
     ax2.pcolormesh(Qx, Qy, Z, cmap=vir, alpha=0.4, shading='gouraud', zorder=1)
     ax3.pcolormesh(Qx, Qy, Z[:-1, :-1], cmap=cmap, shading='auto', zorder=1)
     ax4.pcolormesh(Qx, Qy, Z, cmap=cmap, shading='gouraud', zorder=1)
+# Mutation info: shading = <ast.Constant object at 0x7fc056dbb8d0> -> shading = auto (Call ax3.pcolormesh)

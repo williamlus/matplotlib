@@ -31,3 +31,4 @@ def test_anchored_locator_base_call_21_mutated():
     axins = zoomed_inset_axes(ax, zoom=2, loc='upper left')
     axins.set(xticks=[], yticks=[])
     axins.imshow(Z, extent=extent, origin='lower', filternorm=False)
+# Mutation info: Added filternorm = False (Call axins.imshow)

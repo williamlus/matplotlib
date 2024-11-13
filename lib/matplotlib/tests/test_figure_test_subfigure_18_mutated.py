@@ -40,3 +40,4 @@ def test_subfigure_18_mutated():
     leg = fig.legend(handles=[plt.Line2D([0], [0], label='Line{}'.format(i)) for i in range(5)], loc='center')
     sub[0].set_zorder(leg.get_zorder() - 1)
     sub[1].set_zorder(leg.get_zorder() + 1)
+# Mutation info: layout = <ast.Constant object at 0x7fc056d8f2d0> -> layout = tight (Call plt.figure)

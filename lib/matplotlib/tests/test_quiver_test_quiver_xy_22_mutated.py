@@ -18,3 +18,4 @@ def test_quiver_xy_22_mutated():
     ax.set_xlim(0, 1.1)
     ax.set_ylim(0, 1.1)
     ax.grid()
+# Mutation info: Added pivot = mid (Call ax.quiver)

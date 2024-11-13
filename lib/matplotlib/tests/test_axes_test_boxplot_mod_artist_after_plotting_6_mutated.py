@@ -159,3 +159,4 @@ def test_boxplot_mod_artist_after_plotting_6_mutated():
     for key in bp:
         for obj in bp[key]:
             obj.set_color('green')
+# Mutation info: Added orientation = vertical (Call ax.boxplot)

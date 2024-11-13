@@ -42,3 +42,4 @@ def test_arrow_styles_4_mutated():
             arrowstyle = style.replace('ANGLE', str(angle))
             patch = mpatches.FancyArrowPatch((0.55, 2 * i + j), (0.9, 2 * i + j), arrowstyle=arrowstyle, mutation_scale=25)
             ax.add_patch(patch)
+# Mutation info: Added squeeze = False (Call plt.subplots)

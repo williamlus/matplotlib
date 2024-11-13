@@ -171,3 +171,4 @@ def test_twin_spines_on_top_23_mutated():
     ax1.fill_between('i', 'j', color='#BEAED4', alpha=0.8, data=data)
     ax2.plot('i', 'j', color='#7FC97F', data=data)
     ax2.fill_between('i', 'j', color='#7FC97F', alpha=0.5, data=data, interpolate=True)
+# Mutation info: Added interpolate = True (Call ax2.fill_between)

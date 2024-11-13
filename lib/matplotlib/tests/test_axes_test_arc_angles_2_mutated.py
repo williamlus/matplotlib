@@ -170,3 +170,4 @@ def test_arc_angles_2_mutated():
         h *= 10
         centre = (centre[0] * 10, centre[1] * 10)
         scale *= 10
+# Mutation info: Added squeeze = False (Call plt.subplots)

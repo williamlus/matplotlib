@@ -28,3 +28,4 @@ def test_given_colors_levels_and_extends_7_mutated():
         else:
             c = ax.contour(data, colors=colors[:-1], levels=levels, extend=extend)
         plt.colorbar(c, ax=ax, use_gridspec=False)
+# Mutation info: Added use_gridspec = False (Call plt.colorbar)

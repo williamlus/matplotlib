@@ -155,3 +155,4 @@ def color_boxes(fig, ax):
 def test_hist_step_empty_6_mutated():
     ax = plt.gca()
     ax.hist([], histtype='step', log=False)
+# Mutation info: Added log = False (Call ax.hist)

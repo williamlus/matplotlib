@@ -165,3 +165,4 @@ def test_markevery_linear_scales_4_mutated():
         plt.subplot(gs[row, col], projection=None)
         plt.title('markevery=%s' % str(case))
         plt.plot(x, y, 'o', ls='-', ms=4, markevery=case)
+# Mutation info: Added projection = None (Call plt.subplot)

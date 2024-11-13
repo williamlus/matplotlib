@@ -35,3 +35,4 @@ def test_tight_layout5_19_mutated():
     arr = np.arange(100).reshape((10, 10))
     ax.imshow(arr, interpolation='none')
     plt.tight_layout()
+# Mutation info: Added projection = rectilinear (Call plt.subplot)

@@ -35,3 +35,4 @@ def test_constrained_layout4_7_mutated():
     for ax in axs.flat:
         pcm = example_pcolor(ax, fontsize=24)
     fig.colorbar(pcm, ax=axs, pad=0.01, shrink=0.6, use_gridspec=True)
+# Mutation info: Added use_gridspec = True (Call fig.colorbar)

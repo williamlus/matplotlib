@@ -167,3 +167,4 @@ def test_mixed_collection_1_mutated():
     ax.add_collection(p2)
     ax.set_xlim(0, 16)
     ax.set_ylim(0, 16)
+# Mutation info: Added sharex = True (Call plt.subplots)

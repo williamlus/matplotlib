@@ -178,3 +178,4 @@ def test_eventplot_1_mutated():
     colls = axobj.eventplot('pos', colors='c', lineoffsets='lo', linelengths='ll', data=data)
     num_collections = len(colls)
     assert num_collections == num_datasets
+# Mutation info: Added frameon = False (Call plt.figure)

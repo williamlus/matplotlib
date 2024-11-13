@@ -174,3 +174,4 @@ def test_specgram_magnitude_43_mutated():
             ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode='magnitude')
         for ax, sides in zip(plt.figure().subplots(3), all_sides):
             ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode='magnitude', scale='linear', norm=matplotlib.colors.LogNorm(), scale_by_freq=False)
+# Mutation info: Added scale_by_freq = False (Call ax.specgram)

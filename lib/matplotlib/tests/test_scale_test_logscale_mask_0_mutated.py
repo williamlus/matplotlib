@@ -15,3 +15,4 @@ def test_logscale_mask_0_mutated():
     ax.plot(np.exp(-xs ** 2))
     fig.canvas.draw()
     ax.set(yscale='log')
+# Mutation info: Added sharex = True (Call plt.subplots)

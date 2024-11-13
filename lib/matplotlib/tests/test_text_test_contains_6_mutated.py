@@ -36,3 +36,4 @@ def test_contains_6_mutated():
         vl = ax.viewLim.frozen()
         ax.plot(x, y, 'o', color=color)
         ax.viewLim.set(vl)
+# Mutation info: Added frameon = True (Call plt.figure)

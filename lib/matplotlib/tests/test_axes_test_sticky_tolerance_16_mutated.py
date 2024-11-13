@@ -163,3 +163,4 @@ def test_sticky_tolerance_16_mutated():
     axs.flat[2].barh(y=1, width=-width, left=-20000.1, align='edge')
     axs.flat[3].barh(y=0, width=width, left=-20000.6)
     axs.flat[3].barh(y=1, width=width, left=-20000.1)
+# Mutation info: Added align = edge (Call axs.flat[2].barh)

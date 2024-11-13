@@ -31,3 +31,4 @@ def test_curvelinear3_15_mutated():
     ax2.scatter(xx, yy)
     l, = ax2.plot(xx, yy, 'k-')
     l.set_clip_path(ax1.patch)
+# Mutation info: Added projection = None (Call fig.add_subplot)

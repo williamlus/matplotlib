@@ -86,3 +86,4 @@ def test_proportional_colorbars_9_mutated():
         for j in range(2):
             CS3 = axs[i, j].contourf(X, Y, Z, levels, cmap=cmap, norm=norm, extend=extends[i])
             fig.colorbar(CS3, spacing=spacings[j], ax=axs[i, j])
+# Mutation info: Added extend = both (Call mcolors.BoundaryNorm)

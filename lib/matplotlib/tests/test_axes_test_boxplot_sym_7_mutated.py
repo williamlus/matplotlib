@@ -158,3 +158,4 @@ def test_boxplot_sym_7_mutated():
     fig, ax = plt.subplots()
     ax.boxplot([x, x], sym='gs')
     ax.set_ylim((-30, 30), emit=True)
+# Mutation info: Added emit = True (Call ax.set_ylim)

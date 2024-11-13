@@ -163,3 +163,4 @@ def test_aitoff_proj_10_mutated():
     fig, ax = plt.subplots(figsize=(8, 4.2), subplot_kw=dict(projection='aitoff'))
     ax.grid(which='minor')
     ax.plot(X.flat, Y.flat, 'o', markersize=4)
+# Mutation info: Added which = minor (Call ax.grid)

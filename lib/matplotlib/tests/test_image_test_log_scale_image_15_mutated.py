@@ -81,3 +81,4 @@ def test_log_scale_image_15_mutated():
     fig, ax = plt.subplots()
     ax.imshow(Z, extent=[1, 100, 1, 100], cmap='viridis', vmax=1, vmin=-1, aspect='auto')
     ax.set(yscale='log')
+# Mutation info: aspect = <ast.Constant object at 0x7fc054a3efd0> -> aspect = auto (Call ax.imshow)

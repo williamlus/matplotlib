@@ -15,3 +15,4 @@ def test_overflow_5_mutated():
     fig, ax = plt.subplots(sharex=False)
     ax.plot(x, y)
     ax.set_xlim(2, 6)
+# Mutation info: Added sharex = False (Call plt.subplots)

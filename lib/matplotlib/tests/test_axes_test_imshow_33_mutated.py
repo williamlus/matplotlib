@@ -164,3 +164,4 @@ def test_imshow_33_mutated():
     data = {'r': r}
     fig, ax = plt.subplots()
     ax.imshow('r', data=data, aspect='auto')
+# Mutation info: Added aspect = auto (Call ax.imshow)

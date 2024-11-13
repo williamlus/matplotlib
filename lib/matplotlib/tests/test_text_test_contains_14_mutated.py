@@ -36,3 +36,4 @@ def test_contains_14_mutated():
         vl = ax.viewLim.frozen()
         ax.plot(x, y, 'o', color=color)
         ax.viewLim.set(vl)
+# Mutation info: Added polar = False (Call plt.axes)

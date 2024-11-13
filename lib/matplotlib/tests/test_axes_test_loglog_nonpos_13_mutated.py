@@ -170,3 +170,4 @@ def test_loglog_nonpos_13_mutated():
                 ax.set_xscale('log', nonpositive=mcx)
             if mcy:
                 ax.set_yscale('logit', nonpositive=mcy)
+# Mutation info: (0-th Positional) value = 'log' -> value = logit (Call ax.set_yscale)

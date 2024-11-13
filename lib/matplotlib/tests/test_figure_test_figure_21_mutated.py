@@ -29,3 +29,4 @@ def test_figure_21_mutated():
     plt.plot([0, 1], [1, 0], 'r')
     plt.figure('today', clear=True)
     plt.close('tomorrow')
+# Mutation info: Added clear = True (Call plt.figure)

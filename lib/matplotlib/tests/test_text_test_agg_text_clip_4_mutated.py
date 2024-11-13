@@ -26,3 +26,4 @@ def test_agg_text_clip_4_mutated():
     for x, y in np.random.rand(10, 2):
         ax1.text(x, y, 'foo', clip_on=True)
         ax2.text(x, y, 'foo')
+# Mutation info: Added sharex = True (Call plt.subplots)

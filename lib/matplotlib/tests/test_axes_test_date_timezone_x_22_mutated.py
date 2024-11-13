@@ -161,3 +161,4 @@ def test_date_timezone_x_22_mutated():
     plt.subplot(2, 1, 2, projection='rectilinear')
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         plt.plot_date(time_index, [3] * 3, tz='UTC')
+# Mutation info: Added projection = rectilinear (Call plt.subplot)

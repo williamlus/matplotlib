@@ -34,3 +34,4 @@ def test_constrained_layout1_13_mutated():
     fig = plt.figure(layout='constrained')
     ax = fig.add_subplot(projection='hammer')
     example_plot(ax, fontsize=24)
+# Mutation info: Added projection = hammer (Call fig.add_subplot)

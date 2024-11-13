@@ -73,3 +73,4 @@ def test_boundaries_5_mutated():
     fig, ax = plt.subplots(figsize=(2, 2), sharey=True)
     pc = ax.pcolormesh(np.random.randn(10, 10), cmap='RdBu_r')
     cb = fig.colorbar(pc, ax=ax, boundaries=np.linspace(-3, 3, 7))
+# Mutation info: Added sharey = True (Call plt.subplots)

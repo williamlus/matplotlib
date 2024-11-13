@@ -73,3 +73,4 @@ def test_boundaries_4_mutated():
     fig, ax = plt.subplots(figsize=(2, 2), squeeze=False)
     pc = ax.pcolormesh(np.random.randn(10, 10), cmap='RdBu_r')
     cb = fig.colorbar(pc, ax=ax, boundaries=np.linspace(-3, 3, 7))
+# Mutation info: Added squeeze = False (Call plt.subplots)

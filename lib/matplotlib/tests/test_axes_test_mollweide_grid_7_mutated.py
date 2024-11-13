@@ -156,3 +156,4 @@ def test_mollweide_grid_7_mutated():
     fig = plt.figure(layout='constrained')
     ax = fig.add_subplot(projection='mollweide')
     ax.grid()
+# Mutation info: Added layout = constrained (Call plt.figure)

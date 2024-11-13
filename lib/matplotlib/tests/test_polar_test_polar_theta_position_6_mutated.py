@@ -13,3 +13,4 @@ def test_polar_theta_position_6_mutated():
     ax.plot(theta, r)
     ax.set_theta_zero_location('NW', 30)
     ax.set_theta_direction('clockwise')
+# Mutation info: Added frameon = False (Call plt.figure)

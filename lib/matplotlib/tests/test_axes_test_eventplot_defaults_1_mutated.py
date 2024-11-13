@@ -164,3 +164,4 @@ def test_eventplot_defaults_1_mutated():
     fig = plt.figure(clear=True)
     axobj = fig.add_subplot()
     axobj.eventplot(data)
+# Mutation info: Added clear = True (Call plt.figure)

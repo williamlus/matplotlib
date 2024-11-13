@@ -35,3 +35,4 @@ def test_tight_layout5_3_mutated():
     arr = np.arange(100).reshape((10, 10))
     ax.imshow(arr, interpolation='none', filternorm=False)
     plt.tight_layout()
+# Mutation info: Added filternorm = False (Call ax.imshow)

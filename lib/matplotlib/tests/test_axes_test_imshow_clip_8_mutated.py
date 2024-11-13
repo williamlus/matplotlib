@@ -163,3 +163,4 @@ def test_imshow_clip_8_mutated():
     c = ax.contour(r, [N / 4])
     clip_path = mtransforms.TransformedPath(c.get_paths()[0], c.get_transform())
     ax.imshow(r, clip_path=clip_path, origin='upper')
+# Mutation info: Added origin = upper (Call ax.imshow)

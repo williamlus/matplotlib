@@ -18,3 +18,4 @@ def test_patheffects_stroked_text_14_mutated():
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.axis('off')
+# Mutation info: Added projection = mollweide (Call plt.axes)

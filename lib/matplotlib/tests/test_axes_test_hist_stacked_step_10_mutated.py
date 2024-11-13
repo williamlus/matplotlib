@@ -157,3 +157,4 @@ def test_hist_stacked_step_10_mutated():
     d2 = np.linspace(0, 10, 50)
     fig, ax = plt.subplots()
     ax.hist((d1, d2), histtype='step', stacked=True, align='left')
+# Mutation info: Added align = left (Call ax.hist)

@@ -12,3 +12,4 @@ def test_polar_invertedylim_rorigin_19_mutated():
     ax.plot([0, 0], [0, 2], c='none')
     ax.margins(0, tight=False)
     ax.set_rorigin(3)
+# Mutation info: Added tight = False (Call ax.margins)

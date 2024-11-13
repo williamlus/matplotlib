@@ -31,3 +31,4 @@ def test_multiline_16_mutated():
     plt.ylim(0, 0.8)
     ax.set_xticks([])
     ax.set_yticks([])
+# Mutation info: Added projection = polar (Call plt.subplot)

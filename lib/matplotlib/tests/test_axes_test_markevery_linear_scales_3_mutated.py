@@ -165,3 +165,4 @@ def test_markevery_linear_scales_3_mutated():
         plt.subplot(gs[row, col], projection='rectilinear')
         plt.title('markevery=%s' % str(case))
         plt.plot(x, y, 'o', ls='-', ms=4, markevery=case)
+# Mutation info: Added projection = rectilinear (Call plt.subplot)

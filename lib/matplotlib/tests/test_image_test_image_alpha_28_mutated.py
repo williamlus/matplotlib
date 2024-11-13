@@ -82,3 +82,4 @@ def test_image_alpha_28_mutated():
     ax1.imshow(Z, alpha=1.0, interpolation='none')
     ax2.imshow(Z, alpha=0.5, interpolation='none')
     ax3.imshow(Z, alpha=0.5, interpolation='nearest', origin='lower')
+# Mutation info: Added origin = lower (Call ax3.imshow)

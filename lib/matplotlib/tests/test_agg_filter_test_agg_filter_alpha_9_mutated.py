@@ -16,3 +16,4 @@ def test_agg_filter_alpha_9_mutated():
     mesh.set_agg_filter(manual_alpha)
     mesh.set_rasterized(True)
     ax.plot([0, 4, 7], [1, 3, 8])
+# Mutation info: Added polar = False (Call plt.axes)

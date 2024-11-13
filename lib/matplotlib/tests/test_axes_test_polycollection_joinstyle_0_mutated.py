@@ -159,3 +159,4 @@ def test_polycollection_joinstyle_0_mutated():
     ax.add_collection(c)
     ax.set_xbound(0, 3)
     ax.set_ybound(0, 3)
+# Mutation info: Added sharex = True (Call plt.subplots)

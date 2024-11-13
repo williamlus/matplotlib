@@ -25,3 +25,4 @@ def test_alpha_rgba_2_mutated():
     ax.plot(range(10), lw=5)
     leg = plt.legend(['Longlabel that will go away'], loc='center')
     leg.legendPatch.set_facecolor([1, 0, 0, 0.5])
+# Mutation info: Added sharex = False (Call plt.subplots)

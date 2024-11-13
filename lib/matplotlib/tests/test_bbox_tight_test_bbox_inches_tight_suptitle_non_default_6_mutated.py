@@ -10,3 +10,4 @@ from matplotlib.ticker import FuncFormatter
 def test_bbox_inches_tight_suptitle_non_default_6_mutated():
     fig, ax = plt.subplots()
     fig.suptitle('Booo', x=0.5, y=1.1, verticalalignment='baseline')
+# Mutation info: Added verticalalignment = baseline (Call fig.suptitle)

@@ -87,3 +87,4 @@ def test_plot_masked_units_0_mutated():
     data_masked_units = Quantity(data_masked, 'meters')
     fig, ax = plt.subplots(sharex=True)
     ax.plot(data_masked_units)
+# Mutation info: Added sharex = True (Call plt.subplots)

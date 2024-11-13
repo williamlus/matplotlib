@@ -157,3 +157,4 @@ def test_boxplot_custom_capwidths_0_mutated():
     x = np.hstack([-25, x, 25])
     fig, ax = plt.subplots(sharey=False)
     ax.boxplot([x, x], notch=1, capwidths=[0.01, 0.2])
+# Mutation info: Added sharey = False (Call plt.subplots)

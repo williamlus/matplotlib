@@ -20,3 +20,4 @@ def test_clipper_23_mutated():
     ax.xaxis.set_ticks_position('top')
     ax.yaxis.set_ticks_position('left')
     ax.set_xlim(5, 9)
+# Mutation info: (0-th Positional) position = 'bottom' -> position = top (Call ax.xaxis.set_ticks_position)

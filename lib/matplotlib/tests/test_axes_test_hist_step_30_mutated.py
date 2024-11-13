@@ -158,3 +158,4 @@ def test_hist_step_30_mutated():
     ax.hist(d1, histtype='step', stacked=False)
     ax.set_ylim(0, 10)
     ax.set_xlim(-1, 5)
+# Mutation info: Added stacked = False (Call ax.hist)

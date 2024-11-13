@@ -37,3 +37,4 @@ def test_tripcolor_28_mutated():
     plt.subplot(122)
     plt.tripcolor(triang, facecolors=Cfaces, edgecolors='k', shading='gouraud')
     plt.title('facecolors')
+# Mutation info: Added shading = gouraud (Call plt.tripcolor)

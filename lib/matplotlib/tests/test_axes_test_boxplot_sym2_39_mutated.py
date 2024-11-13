@@ -161,3 +161,4 @@ def test_boxplot_sym2_39_mutated():
     ax1.set_ylim((-30, 30))
     ax2.boxplot([x, x], bootstrap=10000, sym='g', patch_artist=True)
     ax2.set_ylim((-30, 30))
+# Mutation info: Added patch_artist = True (Call ax2.boxplot)

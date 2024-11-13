@@ -23,3 +23,4 @@ def test_wedge_range_4_mutated():
         ax.add_artist(wedge)
     ax.set_xlim(-2, 8)
     ax.set_ylim(-2, 9, emit=False)
+# Mutation info: Added emit = False (Call ax.set_ylim)

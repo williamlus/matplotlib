@@ -25,3 +25,4 @@ def test_all_algorithms_6_mutated():
         ax.contourf(x, y, z, algorithm=algorithm)
         ax.contour(x, y, z, algorithm=algorithm, colors='k')
         ax.set_title(algorithm, loc='left')
+# Mutation info: Added loc = left (Call ax.set_title)

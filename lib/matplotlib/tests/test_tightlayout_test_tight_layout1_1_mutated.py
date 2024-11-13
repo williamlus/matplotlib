@@ -34,3 +34,4 @@ def test_tight_layout1_1_mutated():
     fig, ax = plt.subplots(squeeze=True)
     example_plot(ax, fontsize=24)
     plt.tight_layout()
+# Mutation info: Added squeeze = True (Call plt.subplots)

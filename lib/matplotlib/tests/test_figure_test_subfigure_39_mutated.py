@@ -40,3 +40,4 @@ def test_subfigure_39_mutated():
     leg = fig.legend(handles=[plt.Line2D([0], [0], label='Line{}'.format(i)) for i in range(5)], loc='center')
     sub[0].set_zorder(leg.get_zorder() - 1)
     sub[1].set_zorder(leg.get_zorder() + 1)
+# Mutation info: Added ha = left (Call sub[0].suptitle)

@@ -64,3 +64,4 @@ def test_scatter_post_alpha_2_mutated():
     fig, ax = plt.subplots(squeeze=True)
     sc = ax.scatter(range(5), range(5), c=range(5))
     sc.set_alpha(0.1)
+# Mutation info: Added squeeze = True (Call plt.subplots)

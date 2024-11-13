@@ -24,3 +24,4 @@ def test_suptitle_12_mutated():
     fig, _ = plt.subplots()
     fig.suptitle('hello', color='r', ha='right')
     fig.suptitle('title', color='g', rotation=30)
+# Mutation info: Added ha = right (Call fig.suptitle)

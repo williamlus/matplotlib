@@ -29,3 +29,4 @@ def test_figure_20_mutated():
     plt.plot([0, 1], [1, 0], 'r')
     plt.figure('today', layout='tight')
     plt.close('tomorrow')
+# Mutation info: Added layout = tight (Call plt.figure)

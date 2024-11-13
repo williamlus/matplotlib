@@ -24,3 +24,4 @@ def test_corner_mask_8_mutated():
     for corner_mask in [False, True]:
         plt.figure(layout='constrained')
         plt.contourf(z, corner_mask=corner_mask)
+# Mutation info: Added layout = constrained (Call plt.figure)

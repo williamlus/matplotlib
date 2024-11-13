@@ -19,3 +19,4 @@ def test_nan_isolated_points_2_mutated():
     fig, ax = plt.subplots(squeeze=True)
     ax.plot(y0, '-o')
     ax.plot(y1, '-o')
+# Mutation info: Added squeeze = True (Call plt.subplots)

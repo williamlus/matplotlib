@@ -161,3 +161,4 @@ def test_pie_nolabel_but_legend_1_mutated():
     plt.axis('equal', emit=True)
     plt.ylim(-1.2, 1.2)
     plt.legend()
+# Mutation info: Added emit = True (Call plt.axis)

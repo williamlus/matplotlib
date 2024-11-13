@@ -63,3 +63,4 @@ def test_check_radio_buttons_image_43_mutated():
     rb3 = widgets.RadioButtons(rax3, ('Radio 1', 'Radio 2', 'Radio 3'), label_props={'fontsize': [8, 12, 16], 'color': ['red', 'green', 'blue']}, radio_props={'edgecolor': ['red', 'green', 'blue'], 'facecolor': ['mistyrose', 'palegreen', 'lightblue']})
     rax4 = fig.add_axes((0.05, 0.1, 0.2, 0.15))
     cb4 = widgets.CheckButtons(rax4, ('Check 1', 'Check 2', 'Check 3'), (False, True, True), label_props={'fontsize': [8, 12, 16], 'color': ['red', 'green', 'blue']}, frame_props={'edgecolor': ['red', 'green', 'blue'], 'facecolor': ['mistyrose', 'palegreen', 'lightblue']}, check_props={'color': ['red', 'green', 'blue']})
+# Mutation info: (2-th Positional) actives = (False, True, True) -> actives = True (Call widgets.CheckButtons)

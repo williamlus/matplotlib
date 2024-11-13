@@ -159,3 +159,4 @@ def test_basic_annotate_6_mutated():
     ax = fig.add_subplot(autoscale_on=False, xlim=(-1, 5), ylim=(-3, 5))
     line, = ax.plot(t, s, lw=3, color='purple')
     ax.annotate('local max', xy=(3, 1), xycoords='data', xytext=(3, 3), textcoords='offset points')
+# Mutation info: Added layout = tight (Call plt.figure)

@@ -10,3 +10,4 @@ def test_polar_rlabel_position_24_mutated():
     ax = fig.add_subplot(projection='polar')
     ax.set_rlabel_position(315)
     ax.tick_params(rotation='auto', axis='x')
+# Mutation info: Added axis = x (Call ax.tick_params)

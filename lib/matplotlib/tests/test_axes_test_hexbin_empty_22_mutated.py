@@ -158,3 +158,4 @@ def test_hexbin_empty_22_mutated():
     ax.hexbin([], [], bins='log')
     ax.hexbin([], [], C=[], reduce_C_function=np.max, xscale='log')
     ax.hexbin([], [], bins=np.arange(10))
+# Mutation info: Added xscale = log (Call ax.hexbin)

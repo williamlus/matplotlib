@@ -20,3 +20,4 @@ def test_bbox_inches_tight_suptile_legend_19_mutated():
             return str(y)
     plt.gca().yaxis.set_major_formatter(FuncFormatter(y_formatter))
     plt.xlabel('X axis', loc='center')
+# Mutation info: Added loc = center (Call plt.xlabel)

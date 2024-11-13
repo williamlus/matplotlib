@@ -158,3 +158,4 @@ def test_hexbin_empty_23_mutated():
     ax.hexbin([], [], bins='log')
     ax.hexbin([], [], C=[], reduce_C_function=np.max, marginals=True)
     ax.hexbin([], [], bins=np.arange(10))
+# Mutation info: Added marginals = True (Call ax.hexbin)

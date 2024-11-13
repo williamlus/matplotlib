@@ -157,3 +157,4 @@ def test_hist_density_16_mutated():
     data = np.random.standard_normal(2000)
     fig, ax = plt.subplots()
     ax.hist(data, density=True, histtype='barstacked')
+# Mutation info: Added histtype = barstacked (Call ax.hist)

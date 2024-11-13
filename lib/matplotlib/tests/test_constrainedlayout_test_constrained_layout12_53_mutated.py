@@ -44,3 +44,4 @@ def test_constrained_layout12_53_mutated():
     ax = fig.add_subplot(gs0[4:, 0], projection='aitoff')
     example_plot(ax, nodec=True)
     ax.set_xlabel('x-label')
+# Mutation info: Added projection = aitoff (Call fig.add_subplot)

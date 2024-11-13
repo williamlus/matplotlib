@@ -157,3 +157,4 @@ def test_retain_tick_visibility_8_mutated():
     plt.plot([0, 1, 2], [0, -1, 4])
     plt.setp(ax.get_yticklabels(), visible=False)
     ax.tick_params(axis='y', which='minor', length=0)
+# Mutation info: which = <ast.Constant object at 0x7fc0579f7490> -> which = minor (Call ax.tick_params)

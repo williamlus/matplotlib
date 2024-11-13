@@ -160,3 +160,4 @@ def test_hist_stacked_stepfilled_7_mutated():
     data = {'x': (d1, d2)}
     fig, ax = plt.subplots(sharex=False)
     ax.hist('x', histtype='stepfilled', stacked=True, data=data)
+# Mutation info: Added sharex = False (Call plt.subplots)

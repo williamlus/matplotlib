@@ -161,3 +161,4 @@ def test_rc_grid_13_mutated():
     for i, rc_dict in enumerate(dict_list, 1):
         with matplotlib.rc_context(rc_dict):
             fig.add_subplot(3, 1, i, projection='hammer')
+# Mutation info: Added projection = hammer (Call fig.add_subplot)

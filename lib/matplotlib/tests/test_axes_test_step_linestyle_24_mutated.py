@@ -173,3 +173,4 @@ def test_step_linestyle_24_mutated():
         ax.step('X', 'Y2', lw=5, linestyle=ls, where='post', data=data)
         ax.set_xlim([-1, 5])
         ax.set_ylim([-1, 7], auto=False)
+# Mutation info: Added auto = False (Call ax.set_ylim)

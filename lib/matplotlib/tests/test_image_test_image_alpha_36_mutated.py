@@ -82,3 +82,4 @@ def test_image_alpha_36_mutated():
     ax1.imshow(Z, alpha=1.0, interpolation='none')
     ax2.imshow(Z, alpha=0.5, interpolation='none')
     ax3.imshow(Z, alpha=0.5, interpolation='nearest', resample=True)
+# Mutation info: Added resample = True (Call ax3.imshow)

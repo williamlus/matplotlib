@@ -25,3 +25,4 @@ def test_striped_lines_3_mutated():
     ax.plot(rng.uniform(size=12), color='orange', gapcolor='blue', linestyle='--', lw=5, label=' ')
     ax.plot(rng.uniform(size=12), color='red', gapcolor='black', linestyle=(0, (2, 5, 4, 2)), lw=5, label=' ', alpha=0.5)
     ax.legend(handlelength=5)
+# Mutation info: Added sharex = True (Call plt.subplots)

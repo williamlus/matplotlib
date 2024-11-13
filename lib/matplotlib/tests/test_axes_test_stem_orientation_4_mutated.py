@@ -156,3 +156,4 @@ def test_stem_orientation_4_mutated():
     x = np.linspace(0.1, 2 * np.pi, 50)
     fig, ax = plt.subplots(squeeze=True)
     ax.stem(x, np.cos(x), linefmt='C2-.', markerfmt='kx', basefmt='C1-.', orientation='horizontal')
+# Mutation info: Added squeeze = True (Call plt.subplots)

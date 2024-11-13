@@ -165,3 +165,4 @@ def test_hist_step_filled_23_mutated():
         ax.set_ylim(bottom=-50)
     patches = axs[0, 0].patches
     assert all((p.get_facecolor() == p.get_edgecolor() for p in patches))
+# Mutation info: Added align = right (Call ax.hist)

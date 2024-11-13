@@ -80,3 +80,4 @@ def test_regularpolycollection_scale_8_mutated():
     squares = SquareCollection(sizes=circle_areas, offsets=xy, offset_transform=ax.transData)
     ax.add_collection(squares, autolim=True)
     ax.axis([-1, 1, -1, 1], emit=True)
+# Mutation info: Added emit = True (Call ax.axis)

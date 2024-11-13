@@ -160,3 +160,4 @@ def test_hist_stacked_stepfilled_10_mutated():
     data = {'x': (d1, d2)}
     fig, ax = plt.subplots(squeeze=True)
     ax.hist('x', histtype='stepfilled', stacked=True, data=data)
+# Mutation info: Added squeeze = True (Call plt.subplots)

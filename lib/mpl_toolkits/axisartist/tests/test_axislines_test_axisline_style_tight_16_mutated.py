@@ -15,3 +15,4 @@ def test_axisline_style_tight_16_mutated():
     for direction in ('left', 'right', 'bottom', 'top'):
         ax.axis[direction].set_visible(False)
     fig.tight_layout()
+# Mutation info: Added projection = rectilinear (Call fig.add_subplot)

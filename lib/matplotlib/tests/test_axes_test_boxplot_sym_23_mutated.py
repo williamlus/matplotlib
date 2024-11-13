@@ -158,3 +158,4 @@ def test_boxplot_sym_23_mutated():
     fig, ax = plt.subplots()
     ax.boxplot([x, x], sym='gs', notch=True)
     ax.set_ylim((-30, 30))
+# Mutation info: Added notch = True (Call ax.boxplot)

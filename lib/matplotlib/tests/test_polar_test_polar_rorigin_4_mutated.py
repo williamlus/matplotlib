@@ -14,3 +14,4 @@ def test_polar_rorigin_4_mutated():
     ax.set_rmax(2.0)
     ax.set_rmin(0.5)
     ax.set_rorigin(0.0)
+# Mutation info: Added layout = none (Call plt.figure)

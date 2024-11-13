@@ -70,3 +70,4 @@ def test_light_source_topo_surface_17_mutated():
             rgb = ls.shade(elev, cmap, vert_exag=ve, dx=dx, dy=dy, blend_mode='hsv')
             ax.imshow(rgb)
             ax.set(xticks=[], yticks=[])
+# Mutation info: blend_mode = <ast.Constant object at 0x7fc056ec0bd0> -> blend_mode = hsv (Call ls.shade)

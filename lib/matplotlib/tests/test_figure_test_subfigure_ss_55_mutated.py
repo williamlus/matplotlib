@@ -34,3 +34,4 @@ def test_subfigure_ss_55_mutated():
     ax.plot(np.arange(20))
     ax.set_title('Axes')
     fig.suptitle('Figure suptitle', fontsize='xx-large')
+# Mutation info: Added use_gridspec = False (Call sub.colorbar)

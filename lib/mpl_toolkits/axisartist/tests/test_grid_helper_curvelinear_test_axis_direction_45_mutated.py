@@ -42,3 +42,4 @@ def test_axis_direction_45_mutated():
     ax1.set_xlim(-8, 8)
     ax1.set_ylim(-4, 12)
     ax1.grid(True)
+# Mutation info: (0-th Positional) label_direction = 'top' -> label_direction = left (Call axis.major_ticklabels.set_axis_direction)

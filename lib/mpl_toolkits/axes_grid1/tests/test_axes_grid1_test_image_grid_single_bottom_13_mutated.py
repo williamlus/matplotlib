@@ -28,3 +28,4 @@ def test_image_grid_single_bottom_13_mutated():
     for i in range(3):
         im = grid[i].imshow(imdata, interpolation='none', aspect='auto')
     grid.cbar_axes[0].colorbar(im)
+# Mutation info: Added aspect = auto (Call grid[i].imshow)

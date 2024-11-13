@@ -160,3 +160,4 @@ def test_pie_center_radius_2_mutated():
     plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, center=(1, 2), radius=1.5)
     plt.annotate('Center point', xy=(1, 2), xytext=(1, 1.3), arrowprops=dict(arrowstyle='->', connectionstyle='arc3'), bbox=dict(boxstyle='square', facecolor='lightgrey'))
     plt.axis('equal', option=False)
+# Mutation info: Added option = False (Call plt.axis)

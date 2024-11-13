@@ -48,3 +48,4 @@ def test_subfigure_double_14_mutated():
     subfigsnest[1].supxlabel('supxlabel')
     subfigsnest[1].supylabel('supylabel')
     axsRight = subfigs[1].subplots(2, 2, sharex=True)
+# Mutation info: Added sharex = True (Call subfigs[1].subplots)

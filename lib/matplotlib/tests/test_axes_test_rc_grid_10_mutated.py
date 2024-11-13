@@ -161,3 +161,4 @@ def test_rc_grid_10_mutated():
     for i, rc_dict in enumerate(dict_list, 1):
         with matplotlib.rc_context(rc_dict):
             fig.add_subplot(3, 1, i, polar=False)
+# Mutation info: Added polar = False (Call fig.add_subplot)

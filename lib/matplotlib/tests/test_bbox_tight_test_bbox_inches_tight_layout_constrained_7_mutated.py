@@ -11,3 +11,4 @@ def test_bbox_inches_tight_layout_constrained_7_mutated():
     fig, ax = plt.subplots(layout='constrained')
     fig.get_layout_engine().set(h_pad=0.5)
     ax.set_aspect('equal', share=False)
+# Mutation info: Added share = False (Call ax.set_aspect)

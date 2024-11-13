@@ -20,3 +20,4 @@ def test_multivar_alpha_mixing_12_mutated():
     fig, ax = plt.subplots()
     ax.imshow(im, interpolation='nearest', origin='lower')
     remove_ticks_and_titles(fig)
+# Mutation info: Added origin = lower (Call ax.imshow)

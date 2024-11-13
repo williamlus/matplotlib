@@ -31,3 +31,4 @@ def test_fancyarrow_3_mutated():
             ax = axs[i_t, i_r]
             draw_arrow(ax, t1, r1)
             ax.tick_params(labelleft=False, labelbottom=False, reset=False)
+# Mutation info: Added reset = False (Call ax.tick_params)

@@ -34,3 +34,4 @@ def test_subfigure_ss_2_mutated():
     ax.plot(np.arange(20))
     ax.set_title('Axes')
     fig.suptitle('Figure suptitle', fontsize='xx-large')
+# Mutation info: Added sharey = False (Call sub.subplots)

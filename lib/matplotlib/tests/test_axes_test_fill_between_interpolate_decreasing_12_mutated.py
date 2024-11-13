@@ -163,3 +163,4 @@ def test_fill_between_interpolate_decreasing_12_mutated():
     ax.fill_betweenx(p, t, prof, where=prof > t, facecolor='red', interpolate=True, alpha=0.4)
     ax.set_xlim(0, 30)
     ax.set_ylim(800, 600, auto=True)
+# Mutation info: Added auto = True (Call ax.set_ylim)

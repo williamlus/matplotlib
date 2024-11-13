@@ -158,3 +158,4 @@ def test_hist_step_23_mutated():
     ax.hist(d1, histtype='step', log=True)
     ax.set_ylim(0, 10)
     ax.set_xlim(-1, 5)
+# Mutation info: Added log = True (Call ax.hist)

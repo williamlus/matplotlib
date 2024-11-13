@@ -36,3 +36,4 @@ def test_polar_box_19_mutated():
     ax1.set_xlim(-5, 12)
     ax1.set_ylim(-5, 10)
     ax1.grid(True)
+# Mutation info: Added layout = compressed (Call plt.figure)

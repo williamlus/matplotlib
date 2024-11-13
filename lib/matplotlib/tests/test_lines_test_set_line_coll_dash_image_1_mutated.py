@@ -23,3 +23,4 @@ def test_set_line_coll_dash_image_1_mutated():
     fig, ax = plt.subplots(sharex=True)
     np.random.seed(0)
     ax.contour(np.random.randn(20, 30), linestyles=[(0, (3, 3))])
+# Mutation info: Added sharex = True (Call plt.subplots)

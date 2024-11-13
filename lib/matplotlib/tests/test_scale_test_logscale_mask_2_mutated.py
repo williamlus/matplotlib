@@ -15,3 +15,4 @@ def test_logscale_mask_2_mutated():
     ax.plot(np.exp(-xs ** 2))
     fig.canvas.draw()
     ax.set(yscale='log')
+# Mutation info: Added squeeze = True (Call plt.subplots)

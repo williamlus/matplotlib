@@ -32,3 +32,4 @@ def example_pcolor(ax, fontsize=12):
 def test_bboxtight_4_mutated():
     fig, ax = plt.subplots(layout='constrained', squeeze=False)
     ax.set_aspect(1.0)
+# Mutation info: Added squeeze = False (Call plt.subplots)

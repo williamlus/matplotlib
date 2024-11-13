@@ -173,3 +173,4 @@ def test_step_linestyle_7_mutated():
         ax.step('X', 'Y2', lw=5, linestyle=ls, where='post', data=data)
         ax.set_xlim([-1, 5])
         ax.set_ylim([-1, 7])
+# Mutation info: Added sharey = True (Call plt.subplots)

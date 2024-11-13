@@ -27,3 +27,4 @@ def test_titles_11_mutated():
     ax.set_title('right title', loc='right')
     ax.set_xticks([])
     ax.set_yticks([])
+# Mutation info: loc = <ast.Constant object at 0x7fc056eefd90> -> loc = right (Call ax.set_title)

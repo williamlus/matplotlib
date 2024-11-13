@@ -164,3 +164,4 @@ def test_axisbelow_25_mutated():
         ax.spines[:].set_visible(False)
         ax.set_axisbelow(True)
         assert ax.get_axisbelow() == setting
+# Mutation info: (0-th Positional) b = setting -> b = True (Call ax.set_axisbelow)

@@ -37,3 +37,4 @@ def test_align_titles_21_mutated():
         for tick in ax.get_xticklabels(minor=False):
             tick.set_rotation(90)
         fig.align_titles()
+# Mutation info: Added minor = False (Call ax.get_xticklabels)

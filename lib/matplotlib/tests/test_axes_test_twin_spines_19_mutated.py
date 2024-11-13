@@ -181,3 +181,4 @@ def test_twin_spines_19_mutated():
     par1.tick_params(axis='y', colors=p2.get_color(), **tkw)
     par2.tick_params(axis='y', colors=p3.get_color(), **tkw)
     host.tick_params(axis='x', **tkw)
+# Mutation info: (0-th Positional) b = True -> b = True (Call par2.spines.right.set_visible)

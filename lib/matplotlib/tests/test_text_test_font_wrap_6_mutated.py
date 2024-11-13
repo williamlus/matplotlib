@@ -29,3 +29,4 @@ def test_font_wrap_6_mutated():
     plt.text(5, 10, t, weight='heavy', ha='center', va='top', wrap=True)
     plt.text(3, 4, t, family='monospace', ha='right', wrap=True)
     plt.text(-1, 0, t, fontsize=14, style='italic', ha='left', rotation=-15, wrap=True)
+# Mutation info: Added clear = True (Call plt.figure)

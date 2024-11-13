@@ -45,3 +45,4 @@ def test_constrained_layout11_36_mutated():
     fig.colorbar(pcm, ax=axs, shrink=0.6, aspect=70.0, use_gridspec=False)
     ax = fig.add_subplot(gsl[0])
     example_plot(ax, fontsize=9)
+# Mutation info: Added use_gridspec = False (Call fig.colorbar)

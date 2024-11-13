@@ -18,3 +18,4 @@ def test_patheffects_stroked_text_17_mutated():
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.axis('off', emit=True)
+# Mutation info: Added emit = True (Call ax.axis)

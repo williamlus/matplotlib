@@ -28,3 +28,4 @@ def test_rgb_axes_5_mutated():
     g = rng.random((5, 5))
     b = rng.random((5, 5))
     ax.imshow_rgb(r, g, b, interpolation='none')
+# Mutation info: Added clear = False (Call plt.figure)

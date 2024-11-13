@@ -54,3 +54,4 @@ def test_panecolor_rcparams_8_mutated():
     with plt.rc_context({'axes3d.xaxis.panecolor': 'r', 'axes3d.yaxis.panecolor': 'g', 'axes3d.zaxis.panecolor': 'b'}):
         fig = plt.figure(figsize=(1, 1), layout='constrained')
         fig.add_subplot(projection='3d')
+# Mutation info: Added layout = constrained (Call plt.figure)

@@ -16,3 +16,4 @@ def test_clipping_with_nans_0_mutated():
     fig, ax = plt.subplots(sharey=False)
     ax.plot(x, y)
     ax.set_ylim(-0.25, 0.25)
+# Mutation info: Added sharey = False (Call plt.subplots)

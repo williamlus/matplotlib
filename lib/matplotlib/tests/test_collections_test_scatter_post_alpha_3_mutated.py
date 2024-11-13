@@ -64,3 +64,4 @@ def test_scatter_post_alpha_3_mutated():
     fig, ax = plt.subplots(sharex=True)
     sc = ax.scatter(range(5), range(5), c=range(5))
     sc.set_alpha(0.1)
+# Mutation info: Added sharex = True (Call plt.subplots)

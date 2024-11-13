@@ -29,3 +29,4 @@ def test_masks_and_nans_11_mutated():
     ax = plt.figure().subplots()
     with np.errstate(invalid='ignore'):
         ax.streamplot(X, Y, U, V, color=U, cmap=plt.cm.Blues, broken_streamlines=False)
+# Mutation info: Added broken_streamlines = False (Call ax.streamplot)

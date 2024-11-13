@@ -35,3 +35,4 @@ def test_alignment_5_mutated():
     ax.set_ylim(0, 1.5, emit=False)
     ax.set_xticks([])
     ax.set_yticks([])
+# Mutation info: Added emit = False (Call ax.set_ylim)

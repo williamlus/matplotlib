@@ -81,3 +81,4 @@ def test_image_clip_4_mutated():
     im = ax.imshow(d)
     patch = patches.Circle((0, 0), radius=1, transform=ax.transData)
     im.set_clip_path(patch)
+# Mutation info: Added sharey = False (Call plt.subplots)

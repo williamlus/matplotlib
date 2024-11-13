@@ -24,3 +24,4 @@ def test_suptitle_2_mutated():
     fig, _ = plt.subplots(squeeze=True)
     fig.suptitle('hello', color='r')
     fig.suptitle('title', color='g', rotation=30)
+# Mutation info: Added squeeze = True (Call plt.subplots)

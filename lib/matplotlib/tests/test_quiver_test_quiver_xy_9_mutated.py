@@ -18,3 +18,4 @@ def test_quiver_xy_9_mutated():
     ax.set_xlim(0, 1.1)
     ax.set_ylim(0, 1.1)
     ax.grid(axis='y')
+# Mutation info: Added axis = y (Call ax.grid)

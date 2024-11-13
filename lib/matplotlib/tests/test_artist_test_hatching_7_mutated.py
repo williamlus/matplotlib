@@ -26,3 +26,4 @@ def test_hatching_7_mutated():
     ax.add_collection(rect4)
     ax.set_xlim(0, 7, emit=False)
     ax.set_ylim(0, 9)
+# Mutation info: Added emit = False (Call ax.set_xlim)

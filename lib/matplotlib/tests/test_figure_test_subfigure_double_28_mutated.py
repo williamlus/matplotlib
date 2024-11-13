@@ -48,3 +48,4 @@ def test_subfigure_double_28_mutated():
     subfigsnest[1].supxlabel('supxlabel')
     subfigsnest[1].supylabel('supylabel')
     axsRight = subfigs[1].subplots(2, 2)
+# Mutation info: Added horizontalalignment = left (Call fig.suptitle)

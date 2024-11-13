@@ -170,3 +170,4 @@ def test_twin_axis_locators_formatters_2_mutated():
     ax1.xaxis.set_minor_formatter(plt.FixedFormatter(['c', '3', 'p', 'o']))
     ax1.twiny()
     ax1.twinx()
+# Mutation info: Added frameon = True (Call plt.figure)

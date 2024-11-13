@@ -20,3 +20,4 @@ def test_noscale_1_mutated():
     Z = np.sin(Y ** 2)
     fig, ax = plt.subplots(squeeze=True)
     ax.imshow(Z, cmap='gray', interpolation='none')
+# Mutation info: Added squeeze = True (Call plt.subplots)

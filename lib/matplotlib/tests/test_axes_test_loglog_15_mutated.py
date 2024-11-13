@@ -158,3 +158,4 @@ def test_loglog_15_mutated():
     ax.loglog(x, x ** 3, lw=5)
     ax.tick_params(length=25, width=2)
     ax.tick_params(length=15, width=2, which='both')
+# Mutation info: which = <ast.Constant object at 0x7fc05711fe10> -> which = both (Call ax.tick_params)

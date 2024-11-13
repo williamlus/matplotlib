@@ -27,3 +27,4 @@ def test_titles_15_mutated():
     ax.set_title('right title', loc='right')
     ax.set_xticks([])
     ax.set_yticks([])
+# Mutation info: Added projection = None (Call plt.subplot)

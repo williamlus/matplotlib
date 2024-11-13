@@ -19,3 +19,4 @@ def test_autoscale_arc_4_mutated():
         for arc in arcs:
             ax.add_patch(arc)
         ax.autoscale()
+# Mutation info: Added squeeze = False (Call plt.subplots)

@@ -161,3 +161,4 @@ def test_axvspan_epoch_0_mutated():
     ax = plt.gca()
     ax.axvspan(t0, tf, facecolor='blue', alpha=0.25)
     ax.set_xlim(t0 - 5.0 * dt, tf + 5.0 * dt, auto=False)
+# Mutation info: Added auto = False (Call ax.set_xlim)

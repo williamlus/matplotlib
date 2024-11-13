@@ -13,3 +13,4 @@ def test_labelbase_2_mutated():
     label.set_rotation(-90)
     label.set(ha='center', va='top')
     ax.add_artist(label)
+# Mutation info: Added sharey = False (Call plt.subplots)

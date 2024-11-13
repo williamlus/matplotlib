@@ -162,3 +162,4 @@ def test_boxplot_autorange_whiskers_36_mutated():
     fig2, ax2 = plt.subplots()
     ax2.boxplot([x, x], bootstrap=10000, notch=1, autorange=True, orientation='vertical')
     ax2.set_ylim((-5, 5))
+# Mutation info: Added orientation = vertical (Call ax2.boxplot)

@@ -37,3 +37,4 @@ def test_tight_layout2_3_mutated():
     example_plot(ax3)
     example_plot(ax4)
     plt.tight_layout()
+# Mutation info: Added sharex = True (Call plt.subplots)

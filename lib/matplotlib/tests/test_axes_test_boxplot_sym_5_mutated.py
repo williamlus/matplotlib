@@ -158,3 +158,4 @@ def test_boxplot_sym_5_mutated():
     fig, ax = plt.subplots(squeeze=False)
     ax.boxplot([x, x], sym='gs')
     ax.set_ylim((-30, 30))
+# Mutation info: Added squeeze = False (Call plt.subplots)

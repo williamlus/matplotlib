@@ -164,3 +164,4 @@ def test_eventplot_defaults_14_mutated():
     fig = plt.figure()
     axobj = fig.add_subplot(projection='aitoff')
     axobj.eventplot(data)
+# Mutation info: Added projection = aitoff (Call fig.add_subplot)

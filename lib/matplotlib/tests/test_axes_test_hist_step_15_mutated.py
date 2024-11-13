@@ -158,3 +158,4 @@ def test_hist_step_15_mutated():
     ax.hist(d1, histtype='stepfilled')
     ax.set_ylim(0, 10)
     ax.set_xlim(-1, 5)
+# Mutation info: histtype = <ast.Constant object at 0x7fc054942b50> -> histtype = stepfilled (Call ax.hist)

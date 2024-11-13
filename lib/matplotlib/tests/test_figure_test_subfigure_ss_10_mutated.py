@@ -34,3 +34,4 @@ def test_subfigure_ss_10_mutated():
     ax.plot(np.arange(20))
     ax.set_title('Axes')
     fig.suptitle('Figure suptitle', fontsize='xx-large')
+# Mutation info: layout = <ast.Constant object at 0x7fc054a16c10> -> layout = tight (Call plt.figure)

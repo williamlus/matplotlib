@@ -75,3 +75,4 @@ def test_contour_colorbar_2_mutated():
     CS = ax.contour(data, levels=levels, extend='both')
     fig.colorbar(CS, orientation='horizontal', extend='both')
     fig.colorbar(CS, orientation='vertical')
+# Mutation info: Added sharey = False (Call plt.subplots)

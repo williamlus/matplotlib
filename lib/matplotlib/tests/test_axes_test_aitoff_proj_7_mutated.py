@@ -163,3 +163,4 @@ def test_aitoff_proj_7_mutated():
     fig, ax = plt.subplots(figsize=(8, 4.2), subplot_kw=dict(projection='aitoff'))
     ax.grid(visible=False)
     ax.plot(X.flat, Y.flat, 'o', markersize=4)
+# Mutation info: Added visible = False (Call ax.grid)

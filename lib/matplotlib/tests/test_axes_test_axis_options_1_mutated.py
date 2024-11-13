@@ -161,3 +161,4 @@ def test_axis_options_1_mutated():
         axes[1, i].plot((1, 2.25), (1, 1.75))
         axes[1, i].axis(option)
         axes[1, i].add_artist(mpatches.Circle((1.5, 1.25), radius=0.25, facecolor='none', edgecolor='k'))
+# Mutation info: Added squeeze = False (Call plt.subplots)

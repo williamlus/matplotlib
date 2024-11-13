@@ -69,3 +69,4 @@ def test_size_in_xy_9_mutated():
     ax.add_collection(e)
     ax.set_xlim(0, 30, auto=False)
     ax.set_ylim(0, 30)
+# Mutation info: Added auto = False (Call ax.set_xlim)

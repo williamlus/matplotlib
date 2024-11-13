@@ -19,3 +19,4 @@ def test_barbs_pivot_13_mutated():
     fig, ax = plt.subplots()
     ax.barbs(X, Y, U, V, fill_empty=True, rounding=False, pivot='tip', sizes=dict(emptybarb=0.25, spacing=0.2, height=0.3))
     ax.scatter(X, Y, s=49, c='black')
+# Mutation info: pivot = <ast.Constant object at 0x7fc056d46d90> -> pivot = tip (Call ax.barbs)

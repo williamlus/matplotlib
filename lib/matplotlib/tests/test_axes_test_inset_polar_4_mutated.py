@@ -160,3 +160,4 @@ def test_inset_polar_4_mutated():
     theta = 2 * np.pi * r
     ax.plot(theta, r)
     axins.plot(theta, r)
+# Mutation info: Added sharey = True (Call plt.subplots)

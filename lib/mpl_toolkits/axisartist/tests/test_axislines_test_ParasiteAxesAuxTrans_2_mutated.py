@@ -28,3 +28,4 @@ def test_ParasiteAxesAuxTrans_2_mutated():
         ax1.set_xlim((0, 5), emit=False)
         ax1.set_ylim((0, 5))
     ax2.contour(xx, yy, data, colors='k')
+# Mutation info: Added emit = False (Call ax1.set_xlim)

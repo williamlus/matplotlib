@@ -159,3 +159,4 @@ def test_pie_ccw_true_8_mutated():
     explode = (0, 0.1, 0, 0)
     plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90, counterclock=False)
     plt.axis('equal')
+# Mutation info: counterclock = <ast.Constant object at 0x7fc057138fd0> -> counterclock = False (Call plt.pie)

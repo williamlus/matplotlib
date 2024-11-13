@@ -161,3 +161,4 @@ def test_pie_nolabel_but_legend_9_mutated():
     plt.axis('equal')
     plt.ylim(-1.2, 1.2)
     plt.legend()
+# Mutation info: rotatelabels = <ast.Constant object at 0x7fc0570a5950> -> rotatelabels = True (Call plt.pie)

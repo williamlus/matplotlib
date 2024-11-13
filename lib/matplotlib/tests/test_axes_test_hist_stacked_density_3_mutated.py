@@ -157,3 +157,4 @@ def test_hist_stacked_density_3_mutated():
     d2 = np.linspace(0, 10, 50)
     fig, ax = plt.subplots(squeeze=True)
     ax.hist((d1, d2), stacked=True, density=True)
+# Mutation info: Added squeeze = True (Call plt.subplots)

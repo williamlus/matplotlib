@@ -19,3 +19,4 @@ def test_autoscale_arc_3_mutated():
         for arc in arcs:
             ax.add_patch(arc)
         ax.autoscale()
+# Mutation info: Added sharey = True (Call plt.subplots)

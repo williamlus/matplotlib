@@ -174,3 +174,4 @@ def test_psd_csd_22_mutated():
             ret = ax.csd(*ys, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, **kwargs, sides='onesided')
             assert len(ret) == 2 + kwargs.get('return_line', False)
             ax.set(xlabel='', ylabel='')
+# Mutation info: Added sides = onesided (Call ax.csd)

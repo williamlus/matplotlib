@@ -32,3 +32,4 @@ def example_pcolor(ax, fontsize=12):
 def test_bbox_8_mutated():
     fig, ax = plt.subplots(layout='constrained')
     ax.set_aspect('auto')
+# Mutation info: (0-th Positional) aspect = 1.0 -> aspect = auto (Call ax.set_aspect)

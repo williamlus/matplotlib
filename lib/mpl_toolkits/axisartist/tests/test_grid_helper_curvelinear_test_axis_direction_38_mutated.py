@@ -42,3 +42,4 @@ def test_axis_direction_38_mutated():
     ax1.set_xlim(-8, 8)
     ax1.set_ylim(-4, 12)
     ax1.grid(True)
+# Mutation info: (0-th Positional) d = 'top' -> d = bottom (Call axis.label.set_axis_direction)

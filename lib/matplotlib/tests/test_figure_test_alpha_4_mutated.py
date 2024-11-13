@@ -25,3 +25,4 @@ def test_alpha_4_mutated():
     fig.set_facecolor((0, 1, 0.4))
     fig.patch.set_alpha(0.4)
     fig.patches.append(mpl.patches.CirclePolygon([20, 20], radius=15, alpha=0.6, facecolor='red'))
+# Mutation info: Added clear = True (Call plt.figure)

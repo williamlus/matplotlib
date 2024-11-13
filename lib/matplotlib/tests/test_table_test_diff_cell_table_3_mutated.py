@@ -19,3 +19,4 @@ def test_diff_cell_table_3_mutated():
         ax.table(colWidths=colWidths, cellText=cellText, loc='center', edges=cell)
         ax.axis('off', option=True)
     plt.tight_layout()
+# Mutation info: Added option = True (Call ax.axis)

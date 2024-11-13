@@ -70,3 +70,4 @@ def test_light_source_topo_surface_7_mutated():
             rgb = ls.shade(elev, cmap, vert_exag=ve, dx=dx, dy=dy, blend_mode=mode)
             ax.imshow(rgb, interpolation_stage='data')
             ax.set(xticks=[], yticks=[])
+# Mutation info: Added interpolation_stage = data (Call ax.imshow)

@@ -18,3 +18,4 @@ def test_patheffects_stroked_text_13_mutated():
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.axis('off')
+# Mutation info: Added projection = hammer (Call plt.axes)

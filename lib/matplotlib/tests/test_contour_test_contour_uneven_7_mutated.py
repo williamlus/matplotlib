@@ -22,3 +22,4 @@ def test_contour_uneven_7_mutated():
     ax = axs[1]
     cs = ax.contourf(z, levels=[2, 4, 6, 10, 20])
     fig.colorbar(cs, ax=ax, spacing='uniform')
+# Mutation info: Added use_gridspec = False (Call fig.colorbar)

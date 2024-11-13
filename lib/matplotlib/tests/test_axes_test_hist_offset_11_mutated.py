@@ -158,3 +158,4 @@ def test_hist_offset_11_mutated():
     fig, ax = plt.subplots()
     ax.hist(d1, bottom=5, histtype='stepfilled')
     ax.hist(d2, bottom=15)
+# Mutation info: Added histtype = stepfilled (Call ax.hist)

@@ -52,3 +52,4 @@ def test_align_labels_68_mutated():
             for tick in ax.get_xticklabels():
                 tick.set_rotation(90)
     fig.align_labels()
+# Mutation info: (0-th Positional) position = 'top' -> position = bottom (Call ax.xaxis.set_label_position)

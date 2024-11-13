@@ -157,3 +157,4 @@ def test_hist_stacked_density_9_mutated():
     d2 = np.linspace(0, 10, 50)
     fig, ax = plt.subplots()
     ax.hist((d1, d2), stacked=True, density=True, histtype='step')
+# Mutation info: Added histtype = step (Call ax.hist)

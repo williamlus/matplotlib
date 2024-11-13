@@ -83,3 +83,4 @@ def test_alpha_interp_11_mutated():
     img[..., 3] = np.tril(np.ones((5, 5), dtype=np.uint8))
     axl.imshow(img, interpolation='none', aspect='equal')
     axr.imshow(img, interpolation='bilinear')
+# Mutation info: Added aspect = equal (Call axl.imshow)

@@ -29,3 +29,4 @@ def test_masks_and_nans_13_mutated():
     ax = plt.figure().subplots()
     with np.errstate(invalid='ignore'):
         ax.streamplot(X, Y, U, V, color=U, cmap=plt.cm.Blues, integration_direction='backward')
+# Mutation info: Added integration_direction = backward (Call ax.streamplot)

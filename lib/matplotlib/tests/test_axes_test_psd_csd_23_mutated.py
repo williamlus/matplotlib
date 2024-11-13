@@ -174,3 +174,4 @@ def test_psd_csd_23_mutated():
             ret = ax.csd(*ys, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, **kwargs, sides='default')
             assert len(ret) == 2 + kwargs.get('return_line', False)
             ax.set(xlabel='', ylabel='')
+# Mutation info: Added sides = default (Call ax.csd)

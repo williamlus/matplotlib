@@ -34,3 +34,4 @@ def test_subfigure_ss_25_mutated():
     ax.plot(np.arange(20))
     ax.set_title('Axes')
     fig.suptitle('Figure suptitle', fontsize='xx-large', horizontalalignment='center')
+# Mutation info: Added horizontalalignment = center (Call fig.suptitle)

@@ -12,3 +12,4 @@ def test_polar_invertedylim_rorigin_12_mutated():
     ax.plot([0, 0], [0, 2], c='none')
     ax.margins(0)
     ax.set_rorigin(3)
+# Mutation info: Added projection = mollweide (Call fig.add_axes)

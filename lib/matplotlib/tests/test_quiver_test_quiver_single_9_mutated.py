@@ -16,3 +16,4 @@ def test_quiver_single_9_mutated():
     fig, ax = plt.subplots()
     ax.margins(0.1)
     ax.quiver([1], [1], [2], [2], units='height')
+# Mutation info: Added units = height (Call ax.quiver)

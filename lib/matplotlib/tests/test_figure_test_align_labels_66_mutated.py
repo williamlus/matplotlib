@@ -52,3 +52,4 @@ def test_align_labels_66_mutated():
             for tick in ax.get_xticklabels():
                 tick.set_rotation(90)
     fig.align_labels()
+# Mutation info: (0-th Positional) position = 'right' -> position = right (Call ax.yaxis.set_label_position)

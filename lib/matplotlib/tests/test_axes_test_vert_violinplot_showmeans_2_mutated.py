@@ -157,3 +157,4 @@ def test_vert_violinplot_showmeans_2_mutated():
     np.random.seed(732050807)
     data = [np.random.normal(size=100) for _ in range(4)]
     ax.violinplot(data, positions=range(4), showmeans=True, showextrema=False, showmedians=False)
+# Mutation info: Added projection = None (Call plt.axes)

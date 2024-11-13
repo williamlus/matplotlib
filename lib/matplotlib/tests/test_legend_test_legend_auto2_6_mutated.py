@@ -27,3 +27,4 @@ def test_legend_auto2_6_mutated():
     b1 = ax.bar(x, x, align='edge', color='m')
     b2 = ax.bar(x, x[::-1], align='edge', color='g')
     ax.legend([b1[0], b2[0]], ['up', 'down'], loc='best')
+# Mutation info: align = <ast.Constant object at 0x7fc05706c9d0> -> align = edge (Call ax.bar)

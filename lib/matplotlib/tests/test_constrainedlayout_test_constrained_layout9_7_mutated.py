@@ -39,3 +39,4 @@ def test_constrained_layout9_7_mutated():
     ax.set_aspect(2.0)
     fig.colorbar(pcm, ax=axs, pad=0.01, shrink=0.6)
     fig.suptitle('Test Suptitle', fontsize=28, horizontalalignment='right')
+# Mutation info: Added horizontalalignment = right (Call fig.suptitle)

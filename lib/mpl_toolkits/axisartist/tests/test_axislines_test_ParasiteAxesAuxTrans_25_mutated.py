@@ -28,3 +28,4 @@ def test_ParasiteAxesAuxTrans_25_mutated():
         ax1.set_xlim((0, 5))
         ax1.set_ylim((0, 5))
     ax2.contour(xx, yy, data, colors='k')
+# Mutation info: Added projection = None (Call fig.add_subplot)

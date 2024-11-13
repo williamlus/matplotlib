@@ -68,3 +68,4 @@ def test__EventCollection__set_lineoffset_5_mutated():
     check_segments(coll, props['positions'], props['linelength'], new_lineoffset, props['orientation'])
     splt.set_title('EventCollection: set_lineoffset', loc='center')
     splt.set_ylim(-6, -4)
+# Mutation info: Added loc = center (Call splt.set_title)

@@ -163,3 +163,4 @@ def test_boxplot_7_mutated():
     fig, ax = plt.subplots(sharex=False)
     ax.boxplot('x', bootstrap=10000, notch=1, data=data)
     ax.set_ylim((-30, 30))
+# Mutation info: Added sharex = False (Call plt.subplots)

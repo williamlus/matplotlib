@@ -26,3 +26,4 @@ def test_annulus_setters_5_mutated():
     ell.radii = (0.5, 0.3)
     ell.width = 0.1
     ell.angle = 45
+# Mutation info: Added sharex = True (Call plt.subplots)

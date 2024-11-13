@@ -170,3 +170,4 @@ def test_arc_angles_6_mutated():
         h *= 10
         centre = (centre[0] * 10, centre[1] * 10)
         scale *= 10
+# Mutation info: Added auto = False (Call ax.set_xlim)

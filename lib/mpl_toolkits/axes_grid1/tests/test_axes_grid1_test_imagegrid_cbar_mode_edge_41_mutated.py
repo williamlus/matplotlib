@@ -36,3 +36,4 @@ def test_imagegrid_cbar_mode_edge_41_mutated():
         for ax in grid:
             ax.cax.cla()
             cb = ax.cax.colorbar(ax.images[0])
+# Mutation info: Added label_mode = 1 (Call ImageGrid)

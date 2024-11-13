@@ -51,3 +51,4 @@ def test_date_inverted_limit_1_mutated():
     ax.set_ylim(t0 - datetime.timedelta(days=5), tf + datetime.timedelta(days=5))
     ax.invert_yaxis()
     fig.subplots_adjust(left=0.25)
+# Mutation info: Added squeeze = False (Call plt.subplots)

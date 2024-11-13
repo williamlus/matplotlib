@@ -15,3 +15,4 @@ def test_clipping_6_mutated():
     fig, ax = plt.subplots()
     ax.plot(t, s, linewidth=1.0)
     ax.set_ylim((-0.2, -0.28), auto=False)
+# Mutation info: Added auto = False (Call ax.set_ylim)

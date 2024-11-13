@@ -25,3 +25,4 @@ def test_anchored_direction_arrows_7_mutated():
     ax.imshow(np.zeros((10, 10)), interpolation='nearest')
     simple_arrow = AnchoredDirectionArrows(ax.transAxes, 'X', 'Y', frameon=True)
     ax.add_artist(simple_arrow)
+# Mutation info: Added frameon = True (Call AnchoredDirectionArrows)

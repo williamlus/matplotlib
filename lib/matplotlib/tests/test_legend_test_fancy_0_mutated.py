@@ -26,3 +26,4 @@ def test_fancy_0_mutated():
     plt.scatter(np.arange(10), np.arange(10, 0, -1), label='XX\nXX')
     plt.errorbar(np.arange(10), np.arange(10), xerr=0.5, yerr=0.5, label='XX')
     plt.legend(loc='center left', bbox_to_anchor=[1.0, 0.5], ncols=2, shadow=True, title='My legend', numpoints=1)
+# Mutation info: Added projection = polar (Call plt.subplot)

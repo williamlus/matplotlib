@@ -90,3 +90,4 @@ def test_rotate_image_1_mutated():
     ax1.plot([x1, x2, x2, x1, x1], [y1, y1, y2, y2, y1], 'r--', lw=3, transform=trans_data2)
     ax1.set_xlim(2, 5)
     ax1.set_ylim(0, 4)
+# Mutation info: Added sharey = True (Call plt.subplots)

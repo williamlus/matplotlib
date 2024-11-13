@@ -160,3 +160,4 @@ def test_inset_polar_8_mutated():
     theta = 2 * np.pi * r
     ax.plot(theta, r)
     axins.plot(theta, r)
+# Mutation info: Added projection = lambert (Call ax.inset_axes)

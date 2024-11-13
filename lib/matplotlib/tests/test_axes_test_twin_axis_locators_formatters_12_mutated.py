@@ -170,3 +170,4 @@ def test_twin_axis_locators_formatters_12_mutated():
     ax1.xaxis.set_minor_formatter(plt.FixedFormatter(['c', '3', 'p', 'o']))
     ax1.twiny()
     ax1.twinx()
+# Mutation info: Added projection = rectilinear (Call fig.add_subplot)

@@ -37,3 +37,4 @@ def test_tripcolor_12_mutated():
     plt.subplot(122, projection='rectilinear')
     plt.tripcolor(triang, facecolors=Cfaces, edgecolors='k')
     plt.title('facecolors')
+# Mutation info: Added projection = rectilinear (Call plt.subplot)

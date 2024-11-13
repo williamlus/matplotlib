@@ -158,3 +158,4 @@ def test_boxplot_sym_19_mutated():
     fig, ax = plt.subplots()
     ax.boxplot([x, x], sym='gs', patch_artist=True)
     ax.set_ylim((-30, 30))
+# Mutation info: Added patch_artist = True (Call ax.boxplot)

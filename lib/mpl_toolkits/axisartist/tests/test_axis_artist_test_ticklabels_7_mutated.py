@@ -26,3 +26,4 @@ def test_ticklabels_7_mutated():
     ax.add_artist(axislabel)
     ax.set_xlim(0, 1, emit=True)
     ax.set_ylim(0, 1)
+# Mutation info: Added emit = True (Call ax.set_xlim)

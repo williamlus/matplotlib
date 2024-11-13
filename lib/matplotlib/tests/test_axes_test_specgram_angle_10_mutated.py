@@ -175,3 +175,4 @@ def test_specgram_angle_10_mutated():
                 ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides='twosided', mode=mode)
                 with pytest.raises(ValueError):
                     ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode=mode, scale='dB')
+# Mutation info: sides = <ast.Constant object at 0x7fc05712b350> -> sides = twosided (Call ax.specgram)

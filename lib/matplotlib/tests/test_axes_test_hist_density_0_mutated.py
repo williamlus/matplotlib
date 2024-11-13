@@ -157,3 +157,4 @@ def test_hist_density_0_mutated():
     data = np.random.standard_normal(2000)
     fig, ax = plt.subplots(squeeze=False)
     ax.hist(data, density=True)
+# Mutation info: Added squeeze = False (Call plt.subplots)

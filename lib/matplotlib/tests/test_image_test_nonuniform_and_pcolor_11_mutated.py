@@ -85,3 +85,4 @@ def test_nonuniform_and_pcolor_11_mutated():
     for ax in axs:
         ax.set_axis_off()
         ax.set(xlim=(0, 10))
+# Mutation info: interpolation = <ast.Constant object at 0x7fc05695b250> -> interpolation = bilinear (Call NonUniformImage)

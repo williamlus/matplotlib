@@ -39,3 +39,4 @@ def test_constrained_layout9_20_mutated():
     ax.set_aspect(2.0)
     fig.colorbar(pcm, ax=axs, pad=0.01, shrink=0.6)
     fig.suptitle('Test Suptitle', fontsize=28)
+# Mutation info: Added loc = right (Call ax.set_xlabel)

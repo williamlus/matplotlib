@@ -164,3 +164,4 @@ def test_arrow_simple_2_mutated():
         length_includes_head, shape, head_starts_at_zero = kwarg
         theta = 2 * np.pi * i / 12
         ax.arrow(0, 0, np.sin(theta), np.cos(theta), width=theta / 100, length_includes_head=length_includes_head, shape=shape, head_starts_at_zero=head_starts_at_zero, head_width=theta / 10, head_length=theta / 10)
+# Mutation info: Added sharex = True (Call plt.subplots)

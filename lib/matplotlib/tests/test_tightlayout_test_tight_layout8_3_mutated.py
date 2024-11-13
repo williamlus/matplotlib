@@ -36,3 +36,4 @@ def test_tight_layout8_3_mutated():
     ax = fig.add_subplot()
     example_plot(ax, fontsize=24)
     fig.draw_without_rendering()
+# Mutation info: Added layout = constrained (Call plt.figure)

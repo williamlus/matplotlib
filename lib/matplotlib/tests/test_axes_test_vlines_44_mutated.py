@@ -178,3 +178,4 @@ def test_vlines_44_mutated():
     ymax5 = np.ma.masked_equal([13, 14, 15, 16, 17, 18], 18)
     ax5.vlines(x5, ymin5, ymax5, colors='k', linewidth=2, linestyles='dotted')
     ax5.set_xlim(0, 15)
+# Mutation info: Added linestyles = dotted (Call ax5.vlines)

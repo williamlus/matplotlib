@@ -159,3 +159,4 @@ def test_hist_stacked_bar_2_mutated():
     fig, ax = plt.subplots(sharey=True)
     ax.hist(d, bins=10, histtype='barstacked', align='mid', color=colors, label=labels)
     ax.legend(loc='upper right', bbox_to_anchor=(1.0, 1.0), ncols=1)
+# Mutation info: Added sharey = True (Call plt.subplots)

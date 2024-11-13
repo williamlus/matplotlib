@@ -164,3 +164,4 @@ def test_eventplot_defaults_5_mutated():
     fig = plt.figure(frameon=False)
     axobj = fig.add_subplot()
     axobj.eventplot(data)
+# Mutation info: Added frameon = False (Call plt.figure)

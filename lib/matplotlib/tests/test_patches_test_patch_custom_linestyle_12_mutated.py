@@ -26,3 +26,4 @@ def test_patch_custom_linestyle_12_mutated():
     ax.add_patch(patch)
     ax.set_xlim(-1, 2)
     ax.set_ylim(-1, 2, auto=True)
+# Mutation info: Added auto = True (Call ax.set_ylim)

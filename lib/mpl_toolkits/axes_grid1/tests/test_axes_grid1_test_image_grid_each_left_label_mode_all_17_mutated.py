@@ -30,3 +30,4 @@ def test_image_grid_each_left_label_mode_all_17_mutated():
     for ax, cax in zip(grid, grid.cbar_axes):
         im = ax.imshow(imdata, interpolation='none', aspect='auto')
         cax.colorbar(im)
+# Mutation info: Added aspect = auto (Call ax.imshow)

@@ -85,3 +85,4 @@ def test_nonuniform_and_pcolor_8_mutated():
     for ax in axs:
         ax.set_axis_off()
         ax.set(xlim=(0, 10))
+# Mutation info: Added layout = tight (Call plt.figure)

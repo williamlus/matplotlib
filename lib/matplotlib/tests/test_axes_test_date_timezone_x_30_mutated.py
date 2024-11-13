@@ -161,3 +161,4 @@ def test_date_timezone_x_30_mutated():
     plt.subplot(2, 1, 2)
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         plt.plot_date(time_index, [3] * 3, tz='UTC')
+# Mutation info: Added xdate = True (Call plt.plot_date)

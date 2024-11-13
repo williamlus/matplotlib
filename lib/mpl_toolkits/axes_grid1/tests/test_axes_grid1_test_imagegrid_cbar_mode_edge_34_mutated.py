@@ -36,3 +36,4 @@ def test_imagegrid_cbar_mode_edge_34_mutated():
         for ax in grid:
             ax.cax.cla()
             cb = ax.cax.colorbar(ax.images[0])
+# Mutation info: cbar_location = <ast.Constant object at 0x7fc05e7cf810> -> cbar_location = right (Call ImageGrid)

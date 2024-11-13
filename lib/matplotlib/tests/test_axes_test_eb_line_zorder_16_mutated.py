@@ -172,3 +172,4 @@ def test_eb_line_zorder_16_mutated():
         ax.axhline(j, lw=5, color='k', zorder=j)
         ax.axhline(-j, lw=5, color='k', zorder=j)
     ax.set_title('errorbar zorder test')
+# Mutation info: Added layout = none (Call plt.figure)

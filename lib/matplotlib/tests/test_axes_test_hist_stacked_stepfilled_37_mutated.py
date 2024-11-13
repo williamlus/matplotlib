@@ -160,3 +160,4 @@ def test_hist_stacked_stepfilled_37_mutated():
     data = {'x': (d1, d2)}
     fig, ax = plt.subplots()
     ax.hist('x', histtype='stepfilled', stacked=True, data=data, cumulative=False)
+# Mutation info: Added cumulative = False (Call ax.hist)

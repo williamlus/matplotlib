@@ -16,3 +16,4 @@ def test_clipping_with_nans_2_mutated():
     fig, ax = plt.subplots(squeeze=False)
     ax.plot(x, y)
     ax.set_ylim(-0.25, 0.25)
+# Mutation info: Added squeeze = False (Call plt.subplots)

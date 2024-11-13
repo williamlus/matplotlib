@@ -41,3 +41,4 @@ def test_constrained_layout17_30_mutated():
     example_plot(ax2)
     example_plot(ax3)
     example_plot(ax4)
+# Mutation info: Added projection = aitoff (Call fig.add_subplot)

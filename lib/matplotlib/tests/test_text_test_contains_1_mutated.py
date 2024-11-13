@@ -36,3 +36,4 @@ def test_contains_1_mutated():
         vl = ax.viewLim.frozen()
         ax.plot(x, y, 'o', color=color)
         ax.viewLim.set(vl)
+# Mutation info: Added layout = tight (Call plt.figure)

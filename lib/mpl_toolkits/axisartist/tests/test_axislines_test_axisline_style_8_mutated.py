@@ -14,3 +14,4 @@ def test_axisline_style_8_mutated():
     ax.axis['yzero'].set_visible(True)
     for direction in ('left', 'right', 'bottom', 'top'):
         ax.axis[direction].set_visible(False)
+# Mutation info: Added frameon = False (Call plt.figure)

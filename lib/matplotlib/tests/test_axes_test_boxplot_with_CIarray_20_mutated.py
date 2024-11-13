@@ -160,3 +160,4 @@ def test_boxplot_with_CIarray_20_mutated():
     CIs = np.array([[-1.5, 3.0], [-1.0, 3.5]])
     ax.boxplot([x, x], bootstrap=10000, usermedians=[None, 1.0], conf_intervals=CIs, notch=1, orientation='horizontal')
     ax.set_ylim((-30, 30))
+# Mutation info: Added orientation = horizontal (Call ax.boxplot)

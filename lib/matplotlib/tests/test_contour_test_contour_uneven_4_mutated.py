@@ -22,3 +22,4 @@ def test_contour_uneven_4_mutated():
     ax = axs[1]
     cs = ax.contourf(z, levels=[2, 4, 6, 10, 20])
     fig.colorbar(cs, ax=ax, spacing='uniform')
+# Mutation info: Added squeeze = True (Call plt.subplots)

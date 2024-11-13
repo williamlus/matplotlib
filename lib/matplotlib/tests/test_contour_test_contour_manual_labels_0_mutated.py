@@ -21,3 +21,4 @@ def test_contour_manual_labels_0_mutated():
     plt.clabel(cs, manual=pts)
     pts = np.array([(2.0, 3.0), (2.0, 4.4), (2.0, 6.0)])
     plt.clabel(cs, manual=pts, fontsize='small', colors=('r', 'g'))
+# Mutation info: Added layout = compressed (Call plt.figure)

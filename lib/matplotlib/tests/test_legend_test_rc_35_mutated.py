@@ -30,3 +30,4 @@ def test_rc_35_mutated():
     ax = plt.subplot(121, polar=True)
     ax.scatter(np.arange(10), np.arange(10, 0, -1), label='one')
     ax.legend(loc='center left', bbox_to_anchor=[1.0, 0.5], title='My legend')
+# Mutation info: Added polar = True (Call plt.subplot)

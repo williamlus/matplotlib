@@ -16,3 +16,4 @@ def test_quiver_single_0_mutated():
     fig, ax = plt.subplots(sharey=True)
     ax.margins(0.1)
     ax.quiver([1], [1], [2], [2])
+# Mutation info: Added sharey = True (Call plt.subplots)

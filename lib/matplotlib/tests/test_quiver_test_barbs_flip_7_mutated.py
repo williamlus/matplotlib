@@ -19,3 +19,4 @@ def test_barbs_flip_7_mutated():
     U, V = (12 * X, 12 * Y)
     fig, ax = plt.subplots()
     ax.barbs(X, Y, U, V, fill_empty=False, rounding=False, pivot=1.7, sizes=dict(emptybarb=0.25, spacing=0.2, height=0.3), flip_barb=Y < 0)
+# Mutation info: fill_empty = <ast.Constant object at 0x7fc056f47bd0> -> fill_empty = False (Call ax.barbs)

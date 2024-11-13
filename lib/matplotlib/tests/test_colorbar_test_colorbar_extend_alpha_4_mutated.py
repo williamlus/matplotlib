@@ -72,3 +72,4 @@ def test_colorbar_extend_alpha_4_mutated():
     fig, ax = plt.subplots(sharex=False)
     im = ax.imshow([[0, 1], [2, 3]], alpha=0.3, interpolation='none')
     fig.colorbar(im, extend='both', boundaries=[0.5, 1.5, 2.5])
+# Mutation info: Added sharex = False (Call plt.subplots)

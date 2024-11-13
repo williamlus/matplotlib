@@ -162,3 +162,4 @@ def test_date_timezone_x_and_y_34_mutated():
     plt.subplot(2, 1, 2)
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         plt.plot_date(time_index, time_index, tz='US/Eastern', ydate=True, xdate=False)
+# Mutation info: Added xdate = False (Call plt.plot_date)

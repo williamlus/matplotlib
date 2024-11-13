@@ -39,3 +39,4 @@ def test_constrained_layout9_26_mutated():
     ax.set_aspect(2.0)
     fig.colorbar(pcm, ax=axs, pad=0.01, shrink=0.6, use_gridspec=True)
     fig.suptitle('Test Suptitle', fontsize=28)
+# Mutation info: Added use_gridspec = True (Call fig.colorbar)

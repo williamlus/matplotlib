@@ -68,3 +68,4 @@ def test__EventCollection__set_linelength_5_mutated():
     check_segments(coll, props['positions'], new_linelength, props['lineoffset'], props['orientation'])
     splt.set_title('EventCollection: set_linelength', loc='right')
     splt.set_ylim(-20, 20)
+# Mutation info: Added loc = right (Call splt.set_title)

@@ -14,3 +14,4 @@ def test_polar_coord_annotations_17_mutated():
     ax.annotate('the top', xy=(np.pi / 2.0, 10.0), xytext=(np.pi / 3, 20.0), xycoords='polar', textcoords='polar', arrowprops=dict(facecolor='black', shrink=0.05), horizontalalignment='left', verticalalignment='baseline', clip_on=True)
     ax.set_xlim(-20, 20)
     ax.set_ylim(-20, 20)
+# Mutation info: Added polar = True (Call fig.add_subplot)

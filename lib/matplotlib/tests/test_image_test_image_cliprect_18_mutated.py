@@ -81,3 +81,4 @@ def test_image_cliprect_18_mutated():
     im = ax.imshow(d, extent=(0, 5, 0, 5), origin='upper')
     rect = patches.Rectangle(xy=(1, 1), width=2, height=2, transform=im.axes.transData)
     im.set_clip_path(rect)
+# Mutation info: Added origin = upper (Call ax.imshow)

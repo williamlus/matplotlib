@@ -28,3 +28,4 @@ def test_image_grid_single_bottom_19_mutated():
     for i in range(3):
         im = grid[i].imshow(imdata, interpolation='none', interpolation_stage='rgba')
     grid.cbar_axes[0].colorbar(im)
+# Mutation info: Added interpolation_stage = rgba (Call grid[i].imshow)

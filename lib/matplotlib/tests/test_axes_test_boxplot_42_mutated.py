@@ -163,3 +163,4 @@ def test_boxplot_42_mutated():
     fig, ax = plt.subplots()
     ax.boxplot('x', bootstrap=10000, notch=1, data=data, manage_ticks=True)
     ax.set_ylim((-30, 30))
+# Mutation info: Added manage_ticks = True (Call ax.boxplot)

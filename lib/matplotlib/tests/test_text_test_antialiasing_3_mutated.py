@@ -29,3 +29,4 @@ def test_antialiasing_3_mutated():
     fig.text(0.7, 0.75, 'not antialiased', horizontalalignment='center', verticalalignment='center', antialiased=False)
     fig.text(0.7, 0.25, '$\\sqrt{x}$', horizontalalignment='center', verticalalignment='center', antialiased=False)
     mpl.rcParams['text.antialiased'] = False
+# Mutation info: Added layout = compressed (Call plt.figure)

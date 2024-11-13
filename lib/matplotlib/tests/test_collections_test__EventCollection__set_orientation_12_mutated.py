@@ -70,3 +70,4 @@ def test__EventCollection__set_orientation_12_mutated():
     splt.set_title('EventCollection: set_orientation')
     splt.set_ylim(-1, 22)
     splt.set_xlim(0, 2)
+# Mutation info: (0-th Positional) orientation = new_orientation -> orientation = horizontal (Call coll.set_orientation)

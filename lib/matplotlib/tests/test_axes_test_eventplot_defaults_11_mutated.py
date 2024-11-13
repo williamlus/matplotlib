@@ -164,3 +164,4 @@ def test_eventplot_defaults_11_mutated():
     fig = plt.figure()
     axobj = fig.add_subplot(projection='mollweide')
     axobj.eventplot(data)
+# Mutation info: Added projection = mollweide (Call fig.add_subplot)

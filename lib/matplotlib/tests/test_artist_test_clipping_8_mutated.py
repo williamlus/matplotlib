@@ -32,3 +32,4 @@ def test_clipping_8_mutated():
     ax2.add_patch(patch)
     ax1.set_xlim([-3, 3], auto=False)
     ax1.set_ylim([-3, 3])
+# Mutation info: Added auto = False (Call ax1.set_xlim)

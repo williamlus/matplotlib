@@ -164,3 +164,4 @@ def test_imshow_26_mutated():
     data = {'r': r}
     fig, ax = plt.subplots()
     ax.imshow('r', data=data, resample=False)
+# Mutation info: Added resample = False (Call ax.imshow)

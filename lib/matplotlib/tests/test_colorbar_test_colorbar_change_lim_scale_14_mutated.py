@@ -76,3 +76,4 @@ def test_colorbar_change_lim_scale_14_mutated():
     pc = ax[1].pcolormesh(np.arange(100).reshape(10, 10) + 1)
     cb = fig.colorbar(pc, ax=ax[1], extend='both')
     cb.ax.set_ylim([20, 90])
+# Mutation info: (0-th Positional) value = 'log' -> value = log (Call cb.ax.set_yscale)

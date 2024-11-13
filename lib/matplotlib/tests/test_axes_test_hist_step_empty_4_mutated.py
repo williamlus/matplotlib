@@ -155,3 +155,4 @@ def color_boxes(fig, ax):
 def test_hist_step_empty_4_mutated():
     ax = plt.gca()
     ax.hist([], histtype='step', align='right')
+# Mutation info: Added align = right (Call ax.hist)

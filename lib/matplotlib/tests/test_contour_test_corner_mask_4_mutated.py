@@ -24,3 +24,4 @@ def test_corner_mask_4_mutated():
     for corner_mask in [False, True]:
         plt.figure(clear=True)
         plt.contourf(z, corner_mask=corner_mask)
+# Mutation info: Added clear = True (Call plt.figure)

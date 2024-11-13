@@ -9,3 +9,4 @@ def test_spines_capstyle_5_mutated():
     fig, ax = plt.subplots(sharey=True)
     ax.set_xticks([])
     ax.set_yticks([])
+# Mutation info: Added sharey = True (Call plt.subplots)

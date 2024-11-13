@@ -30,3 +30,4 @@ def test_image_grid_each_left_label_mode_all_12_mutated():
     for ax, cax in zip(grid, grid.cbar_axes):
         im = ax.imshow(imdata, interpolation='none', filternorm=False)
         cax.colorbar(im)
+# Mutation info: Added filternorm = False (Call ax.imshow)

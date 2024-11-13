@@ -101,3 +101,4 @@ def test_agg_filter_19_mutated():
     ax.set_ylim(0.0, 1.0)
     ax.xaxis.set_visible(True)
     ax.yaxis.set_visible(False)
+# Mutation info: (0-th Positional) b = False -> b = True (Call ax.xaxis.set_visible)

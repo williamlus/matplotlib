@@ -173,3 +173,4 @@ def test_arc_ellipse_23_mutated():
     ax.fill(x, y, alpha=0.2, facecolor='green', edgecolor='green', zorder=1)
     e2 = mpatches.Arc((xcenter, ycenter), width, height, angle=angle, linewidth=2, fill=False, zorder=2)
     ax.add_patch(e2)
+# Mutation info: Added polar = False (Call fig.add_subplot)

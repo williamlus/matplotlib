@@ -31,3 +31,4 @@ def test_fancyarrow_4_mutated():
             ax = axs[i_t, i_r]
             draw_arrow(ax, t1, r1)
             ax.tick_params(labelleft=False, labelbottom=False, which='minor')
+# Mutation info: Added which = minor (Call ax.tick_params)

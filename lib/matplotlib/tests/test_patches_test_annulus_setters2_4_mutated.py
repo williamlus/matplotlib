@@ -30,3 +30,4 @@ def test_annulus_setters2_4_mutated():
     assert ell.radii == (0.5, 0.3)
     ell.width = 0.1
     ell.angle = 45
+# Mutation info: Added sharey = True (Call plt.subplots)

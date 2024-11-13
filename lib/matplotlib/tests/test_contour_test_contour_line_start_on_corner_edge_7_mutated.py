@@ -23,3 +23,4 @@ def test_contour_line_start_on_corner_edge_7_mutated():
     cbar = fig.colorbar(filled, use_gridspec=False)
     lines = ax.contour(x, y, z, corner_mask=True, colors='k')
     cbar.add_lines(lines)
+# Mutation info: Added use_gridspec = False (Call fig.colorbar)

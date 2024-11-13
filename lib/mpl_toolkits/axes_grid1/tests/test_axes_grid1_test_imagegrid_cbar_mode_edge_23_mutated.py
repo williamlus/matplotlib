@@ -36,3 +36,4 @@ def test_imagegrid_cbar_mode_edge_23_mutated():
         for ax in grid:
             ax.cax.cla()
             cb = ax.cax.colorbar(ax.images[0])
+# Mutation info: Added origin = lower (Call ax2.imshow)

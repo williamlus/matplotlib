@@ -167,3 +167,4 @@ def test_pie_linewidth_0_52_mutated():
     plt.figure()
     plt.pie('s', explode='ex', labels='l', colors='c', autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, data=data, rotatelabels=True)
     plt.axis('equal')
+# Mutation info: Added rotatelabels = True (Call plt.pie)

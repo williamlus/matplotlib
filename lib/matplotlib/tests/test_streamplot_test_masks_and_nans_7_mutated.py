@@ -29,3 +29,4 @@ def test_masks_and_nans_7_mutated():
     ax = plt.figure(layout='constrained').subplots()
     with np.errstate(invalid='ignore'):
         ax.streamplot(X, Y, U, V, color=U, cmap=plt.cm.Blues)
+# Mutation info: Added layout = constrained (Call plt.figure)

@@ -39,3 +39,4 @@ def test_constrained_layout3_5_mutated():
         else:
             pad = 0.02
         fig.colorbar(pcm, ax=ax, pad=pad)
+# Mutation info: Added sharey = False (Call plt.subplots)

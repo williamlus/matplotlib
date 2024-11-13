@@ -58,3 +58,4 @@ def test_minor_ticks_2_mutated():
     ax.set_yticklabels(['third'], minor=True)
     ax.set_zticks([0.5], minor=True)
     ax.set_zticklabels(['half'], minor=True)
+# Mutation info: Added frameon = True (Call plt.figure)

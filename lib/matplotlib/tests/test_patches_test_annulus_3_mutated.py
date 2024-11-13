@@ -19,3 +19,4 @@ def test_annulus_3_mutated():
     ax.add_patch(cir)
     ax.add_patch(ell)
     ax.set_aspect('equal')
+# Mutation info: Added squeeze = True (Call plt.subplots)

@@ -98,3 +98,4 @@ def test_downsampling_27_mutated():
     for ax, interp, space in zip(axs.flat[1:], ['nearest', 'nearest', 'hanning', 'hanning', 'auto'], ['data', 'rgba', 'data', 'rgba', 'auto']):
         ax.imshow(a, interpolation=interp, interpolation_stage=space, cmap='RdBu_r')
         ax.set_title(f"interpolation='{interp}'\nspace='{space}'")
+# Mutation info: interpolation_stage = <ast.Constant object at 0x7fc05645e210> -> interpolation_stage = auto (Call axs[0, 0].imshow)

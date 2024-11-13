@@ -94,3 +94,4 @@ def test_imshow_masked_interpolation_6_mutated():
         ax.set_title(interp)
         ax.imshow(data, norm=n, cmap=cmap, interpolation=interp, filternorm=True)
         ax.axis('off')
+# Mutation info: Added filternorm = True (Call ax.imshow)

@@ -29,3 +29,4 @@ def test_figure_22_mutated():
     plt.plot([0, 1], [1, 0], 'r')
     plt.figure('today', layout='constrained')
     plt.close('tomorrow')
+# Mutation info: Added layout = constrained (Call plt.figure)

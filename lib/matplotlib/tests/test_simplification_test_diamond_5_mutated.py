@@ -16,3 +16,4 @@ def test_diamond_5_mutated():
     ax.plot(x, y)
     ax.set_xlim(-0.6, 0.6)
     ax.set_ylim(-0.6, 0.6)
+# Mutation info: Added squeeze = False (Call plt.subplots)

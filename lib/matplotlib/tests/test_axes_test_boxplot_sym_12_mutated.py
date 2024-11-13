@@ -158,3 +158,4 @@ def test_boxplot_sym_12_mutated():
     fig, ax = plt.subplots()
     ax.boxplot([x, x], sym='gs', orientation='horizontal')
     ax.set_ylim((-30, 30))
+# Mutation info: Added orientation = horizontal (Call ax.boxplot)

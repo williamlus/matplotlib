@@ -156,3 +156,4 @@ def test_hist_step_bottom_1_mutated():
     d1 = np.linspace(1, 3, 20)
     fig, ax = plt.subplots(squeeze=False)
     ax.hist(d1, bottom=np.arange(10), histtype='stepfilled')
+# Mutation info: Added squeeze = False (Call plt.subplots)

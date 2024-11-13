@@ -177,3 +177,4 @@ def test_spectrum_35_mutated():
         for ax, sides in zip(plt.figure(clear=True).subplots(3), all_sides):
             spec, freqs, line = ax.phase_spectrum(y, sides=sides, **kwargs)
             ax.set(xlabel='', ylabel='')
+# Mutation info: Added clear = True (Call plt.figure)

@@ -155,3 +155,4 @@ def color_boxes(fig, ax):
 def test_hist_bar_empty_15_mutated():
     ax = plt.gca()
     ax.hist([], histtype='bar', density=True)
+# Mutation info: Added density = True (Call ax.hist)

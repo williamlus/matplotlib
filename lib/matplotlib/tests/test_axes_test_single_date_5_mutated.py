@@ -161,3 +161,4 @@ def test_single_date_5_mutated():
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         ax[0].plot_date(time1 + dt, data1, 'o', color='r')
     ax[1].plot(time1, data1, 'o', color='r')
+# Mutation info: Added squeeze = False (Call plt.subplots)

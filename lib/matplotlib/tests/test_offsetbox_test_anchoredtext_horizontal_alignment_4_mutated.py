@@ -19,3 +19,4 @@ def test_anchoredtext_horizontal_alignment_4_mutated():
     ax.add_artist(text1)
     text2 = AnchoredText('test\ntest long text', loc='center right', pad=0.2, prop={'ha': 'right'})
     ax.add_artist(text2)
+# Mutation info: Added squeeze = True (Call plt.subplots)

@@ -164,3 +164,4 @@ def test_twinx_axis_scales_12_mutated():
     ax2.plot(x2, y2, 'r--', lw=5)
     ax.margins(0, 0)
     ax2.margins(0, 0)
+# Mutation info: Added projection = mollweide (Call fig.add_axes)

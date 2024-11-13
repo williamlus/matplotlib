@@ -164,3 +164,4 @@ def test_eventplot_defaults_2_mutated():
     fig = plt.figure(layout='constrained')
     axobj = fig.add_subplot()
     axobj.eventplot(data)
+# Mutation info: Added layout = constrained (Call plt.figure)

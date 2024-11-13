@@ -36,3 +36,4 @@ def test_tight_layout8_11_mutated():
     ax = fig.add_subplot(polar=False)
     example_plot(ax, fontsize=24)
     fig.draw_without_rendering()
+# Mutation info: Added polar = False (Call fig.add_subplot)

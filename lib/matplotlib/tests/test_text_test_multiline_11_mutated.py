@@ -31,3 +31,4 @@ def test_multiline_11_mutated():
     plt.ylim(0, 0.8)
     ax.set_xticks([])
     ax.set_yticks([])
+# Mutation info: Added loc = right (Call ax.set_title)

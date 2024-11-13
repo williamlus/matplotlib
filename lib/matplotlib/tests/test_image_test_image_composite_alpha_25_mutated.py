@@ -97,3 +97,4 @@ def test_image_composite_alpha_25_mutated():
     ax.set_facecolor((0, 0.5, 0, 1))
     ax.set_xlim([0, 5])
     ax.set_ylim([5, 0])
+# Mutation info: Added aspect = equal (Call ax.imshow)

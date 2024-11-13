@@ -20,3 +20,4 @@ def test_multivar_alpha_mixing_4_mutated():
     fig, ax = plt.subplots(sharey=False)
     ax.imshow(im, interpolation='nearest')
     remove_ticks_and_titles(fig)
+# Mutation info: Added sharey = False (Call plt.subplots)

@@ -167,3 +167,4 @@ def test_mixed_collection_4_mutated():
     ax.add_collection(p2)
     ax.set_xlim(0, 16)
     ax.set_ylim(0, 16)
+# Mutation info: Added squeeze = False (Call plt.subplots)

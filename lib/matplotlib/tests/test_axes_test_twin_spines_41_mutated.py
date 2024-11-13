@@ -181,3 +181,4 @@ def test_twin_spines_41_mutated():
     par1.tick_params(axis='y', colors=p2.get_color(), **tkw)
     par2.tick_params(axis='y', colors=p3.get_color(), **tkw)
     host.tick_params(axis='x', **tkw)
+# Mutation info: axis = <ast.Constant object at 0x7fc056f68a50> -> axis = x (Call host.tick_params)

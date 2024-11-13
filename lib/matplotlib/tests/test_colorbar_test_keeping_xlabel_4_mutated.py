@@ -75,3 +75,4 @@ def test_keeping_xlabel_4_mutated():
     cbar = plt.colorbar(im)
     cbar.ax.set_xlabel('Visible Xlabel')
     cbar.set_label('YLabel')
+# Mutation info: Added squeeze = False (Call plt.subplots)

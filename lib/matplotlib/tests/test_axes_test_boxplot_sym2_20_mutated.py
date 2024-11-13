@@ -161,3 +161,4 @@ def test_boxplot_sym2_20_mutated():
     ax1.set_ylim((-30, 30))
     ax2.boxplot([x, x], bootstrap=10000, sym='g')
     ax2.set_ylim((-30, 30))
+# Mutation info: Added meanline = False (Call ax1.boxplot)

@@ -161,3 +161,4 @@ def test_boxplot_sym2_18_mutated():
     ax1.set_ylim((-30, 30))
     ax2.boxplot([x, x], bootstrap=10000, sym='g')
     ax2.set_ylim((-30, 30))
+# Mutation info: Added orientation = vertical (Call ax1.boxplot)

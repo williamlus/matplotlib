@@ -160,3 +160,4 @@ def test_boxplot_with_CIarray_10_mutated():
     CIs = np.array([[-1.5, 3.0], [-1.0, 3.5]])
     ax.boxplot([x, x], bootstrap=10000, usermedians=[None, 1.0], conf_intervals=CIs, notch=True)
     ax.set_ylim((-30, 30))
+# Mutation info: notch = <ast.Constant object at 0x7fc056ca1a50> -> notch = True (Call ax.boxplot)

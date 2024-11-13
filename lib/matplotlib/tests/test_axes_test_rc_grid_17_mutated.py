@@ -161,3 +161,4 @@ def test_rc_grid_17_mutated():
     for i, rc_dict in enumerate(dict_list, 1):
         with matplotlib.rc_context(rc_dict):
             fig.add_subplot(3, 1, i, projection='aitoff')
+# Mutation info: Added projection = aitoff (Call fig.add_subplot)

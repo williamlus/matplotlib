@@ -34,3 +34,4 @@ def test_subfigure_ss_31_mutated():
     ax.plot(np.arange(20))
     ax.set_title('Axes')
     fig.suptitle('Figure suptitle', fontsize='xx-large', ha='right')
+# Mutation info: Added ha = right (Call fig.suptitle)

@@ -9,3 +9,4 @@ def test_spines_capstyle_9_mutated():
     fig, ax = plt.subplots()
     ax.set_xticks([])
     ax.set_yticks([], minor=True)
+# Mutation info: Added minor = True (Call ax.set_yticks)

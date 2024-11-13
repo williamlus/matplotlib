@@ -159,3 +159,4 @@ def test_nonfinite_limits_1_mutated():
     x[len(x) // 2] = np.nan
     fig, ax = plt.subplots(squeeze=True)
     ax.plot(x, y)
+# Mutation info: Added squeeze = True (Call plt.subplots)

@@ -155,3 +155,4 @@ def color_boxes(fig, ax):
 def test_canonical_5_mutated():
     fig, ax = plt.subplots(squeeze=True)
     ax.plot([1, 2, 3])
+# Mutation info: Added squeeze = True (Call plt.subplots)

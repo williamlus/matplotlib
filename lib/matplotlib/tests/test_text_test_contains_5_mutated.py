@@ -36,3 +36,4 @@ def test_contains_5_mutated():
         vl = ax.viewLim.frozen()
         ax.plot(x, y, 'o', color=color)
         ax.viewLim.set(vl)
+# Mutation info: Added clear = True (Call plt.figure)

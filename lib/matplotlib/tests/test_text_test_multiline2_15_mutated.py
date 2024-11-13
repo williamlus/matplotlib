@@ -53,3 +53,4 @@ def test_multiline2_15_mutated():
         tt = ax.text(0.2 * nn + 0.1, 0.1, st, horizontalalignment=horal, verticalalignment='bottom', rotation=20)
         draw_box(ax, tt)
     ax.text(1.2, 0.1, 'Bot align, rot20', color='C2')
+# Mutation info: Added rotation_point = xy (Call mpatches.Rectangle)

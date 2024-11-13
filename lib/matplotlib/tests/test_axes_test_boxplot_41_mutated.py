@@ -163,3 +163,4 @@ def test_boxplot_41_mutated():
     fig, ax = plt.subplots()
     ax.boxplot('x', bootstrap=10000, notch=1, data=data, patch_artist=False)
     ax.set_ylim((-30, 30))
+# Mutation info: Added patch_artist = False (Call ax.boxplot)

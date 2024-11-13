@@ -14,3 +14,4 @@ def test_spines_black_axes_6_mutated():
     ax.set_xticks([])
     ax.set_yticks([])
     ax.set_facecolor((0, 0, 0))
+# Mutation info: Added clear = True (Call plt.figure)

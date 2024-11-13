@@ -19,3 +19,4 @@ def test_annulus_7_mutated():
     ax.add_patch(cir)
     ax.add_patch(ell)
     ax.set_aspect('equal', share=True)
+# Mutation info: Added share = True (Call ax.set_aspect)

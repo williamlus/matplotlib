@@ -18,3 +18,4 @@ def test_quiver_xy_13_mutated():
     ax.set_xlim(0, 1.1)
     ax.set_ylim(0, 1.1)
     ax.grid(visible=False)
+# Mutation info: Added visible = False (Call ax.grid)

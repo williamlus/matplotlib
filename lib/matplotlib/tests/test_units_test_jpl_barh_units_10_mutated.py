@@ -91,3 +91,4 @@ def test_jpl_barh_units_10_mutated():
     fig, ax = plt.subplots()
     ax.barh(x, w, left=b, align='edge')
     ax.set_xlim([b - 1 * day, b + w[-1] + 1.001 * day])
+# Mutation info: Added align = edge (Call ax.barh)

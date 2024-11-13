@@ -15,3 +15,4 @@ def test_clipping_5_mutated():
     fig, ax = plt.subplots(sharex=False)
     ax.plot(t, s, linewidth=1.0)
     ax.set_ylim((-0.2, -0.28))
+# Mutation info: Added sharex = False (Call plt.subplots)

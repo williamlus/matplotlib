@@ -85,3 +85,4 @@ def test_colorbar_closed_patch_57_mutated():
         plt.colorbar(im, cax=ax3, extend='both', **cbar_kw, use_gridspec=True)
         plt.colorbar(im, cax=ax4, extend='both', extendrect=True, **cbar_kw)
         plt.colorbar(im, cax=ax5, extend='neither', **cbar_kw)
+# Mutation info: Added use_gridspec = True (Call plt.colorbar)

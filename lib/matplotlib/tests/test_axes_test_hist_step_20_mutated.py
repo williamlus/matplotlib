@@ -158,3 +158,4 @@ def test_hist_step_20_mutated():
     ax.hist(d1, histtype='barstacked')
     ax.set_ylim(0, 10)
     ax.set_xlim(-1, 5)
+# Mutation info: histtype = <ast.Constant object at 0x7fc06bf4b590> -> histtype = barstacked (Call ax.hist)

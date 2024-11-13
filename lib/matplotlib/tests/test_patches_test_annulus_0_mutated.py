@@ -19,3 +19,4 @@ def test_annulus_0_mutated():
     ax.add_patch(cir)
     ax.add_patch(ell)
     ax.set_aspect('equal')
+# Mutation info: Added sharey = False (Call plt.subplots)

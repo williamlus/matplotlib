@@ -19,3 +19,4 @@ def test_nan_isolated_points_4_mutated():
     fig, ax = plt.subplots(sharey=True)
     ax.plot(y0, '-o')
     ax.plot(y1, '-o')
+# Mutation info: Added sharey = True (Call plt.subplots)

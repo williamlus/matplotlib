@@ -26,3 +26,4 @@ def test_contour_manual_3_mutated():
     kinds = [[1, 2, 2, 2, 79, 1, 2, 2, 2, 79]]
     ContourSet(ax, [2, 3], [segs], [kinds], filled=True, cmap=cmap)
     ContourSet(ax, [2], [segs], [kinds], colors='k', linewidths=3)
+# Mutation info: Added sharex = False (Call plt.subplots)

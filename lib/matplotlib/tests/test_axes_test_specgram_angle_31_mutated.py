@@ -175,3 +175,4 @@ def test_specgram_angle_31_mutated():
                 ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode=mode)
                 with pytest.raises(ValueError):
                     ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode='phase', scale='dB')
+# Mutation info: mode = <ast.Constant object at 0x7fc056fa3350> -> mode = phase (Call ax.specgram)

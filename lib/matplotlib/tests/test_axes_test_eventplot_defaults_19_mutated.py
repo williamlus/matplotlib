@@ -164,3 +164,4 @@ def test_eventplot_defaults_19_mutated():
     fig = plt.figure()
     axobj = fig.add_subplot()
     axobj.eventplot(data, orientation='vertical')
+# Mutation info: Added orientation = vertical (Call axobj.eventplot)

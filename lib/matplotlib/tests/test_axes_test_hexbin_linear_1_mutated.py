@@ -159,3 +159,4 @@ def test_hexbin_linear_1_mutated():
     y = 2.0 + 3.0 * x + 4.0 * np.random.standard_normal(n)
     fig, ax = plt.subplots(sharey=True)
     ax.hexbin(x, y, gridsize=(10, 5), marginals=True, reduce_C_function=np.sum)
+# Mutation info: Added sharey = True (Call plt.subplots)

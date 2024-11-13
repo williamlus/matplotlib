@@ -160,3 +160,4 @@ def test_inset_polar_7_mutated():
     theta = 2 * np.pi * r
     ax.plot(theta, r)
     axins.plot(theta, r)
+# Mutation info: Added projection = hammer (Call ax.inset_axes)

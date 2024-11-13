@@ -50,3 +50,4 @@ def test_date_axvspan_9_mutated():
     ax.axvspan(t0, tf, facecolor='blue', alpha=0.25)
     ax.set_xlim(t0 - datetime.timedelta(days=720), tf + datetime.timedelta(days=720))
     fig.autofmt_xdate(ha='left')
+# Mutation info: Added ha = left (Call fig.autofmt_xdate)

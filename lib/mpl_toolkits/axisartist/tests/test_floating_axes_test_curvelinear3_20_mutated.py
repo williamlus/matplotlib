@@ -31,3 +31,4 @@ def test_curvelinear3_20_mutated():
     ax2.scatter(xx, yy, plotnonfinite=True)
     l, = ax2.plot(xx, yy, 'k-')
     l.set_clip_path(ax1.patch)
+# Mutation info: Added plotnonfinite = True (Call ax2.scatter)

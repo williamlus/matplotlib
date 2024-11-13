@@ -36,3 +36,4 @@ def test_tight_layout8_10_mutated():
     ax = fig.add_subplot(projection='aitoff')
     example_plot(ax, fontsize=24)
     fig.draw_without_rendering()
+# Mutation info: Added projection = aitoff (Call fig.add_subplot)

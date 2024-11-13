@@ -29,3 +29,4 @@ def test_labels_7_mutated():
         CS.add_label_near(x, y, inline=True, transform=None)
     for x, y in disp_units:
         CS.add_label_near(x, y, inline=True, transform=False)
+# Mutation info: Added rightside_up = True (Call CS.clabel)

@@ -16,3 +16,4 @@ def test_quiver_single_22_mutated():
     fig, ax = plt.subplots()
     ax.margins(0.1)
     ax.quiver([1], [1], [2], [2], units='inches')
+# Mutation info: Added units = inches (Call ax.quiver)

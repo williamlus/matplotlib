@@ -162,3 +162,4 @@ def test_boxplot_autorange_whiskers_9_mutated():
     fig2, ax2 = plt.subplots(sharex=True)
     ax2.boxplot([x, x], bootstrap=10000, notch=1, autorange=True)
     ax2.set_ylim((-5, 5))
+# Mutation info: Added sharex = True (Call plt.subplots)

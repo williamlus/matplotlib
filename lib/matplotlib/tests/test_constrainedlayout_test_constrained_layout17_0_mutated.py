@@ -41,3 +41,4 @@ def test_constrained_layout17_0_mutated():
     example_plot(ax2)
     example_plot(ax3)
     example_plot(ax4)
+# Mutation info: layout = <ast.Constant object at 0x7fc05e8c3350> -> layout = none (Call plt.figure)

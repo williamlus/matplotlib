@@ -157,3 +157,4 @@ def test_hist_stacked_density_5_mutated():
     d2 = np.linspace(0, 10, 50)
     fig, ax = plt.subplots(sharey=True)
     ax.hist((d1, d2), stacked=True, density=True)
+# Mutation info: Added sharey = True (Call plt.subplots)

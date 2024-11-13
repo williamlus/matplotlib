@@ -16,3 +16,4 @@ def test_quiver_single_25_mutated():
     fig, ax = plt.subplots()
     ax.margins(0.1)
     ax.quiver([1], [1], [2], [2], scale_units='width')
+# Mutation info: Added scale_units = width (Call ax.quiver)

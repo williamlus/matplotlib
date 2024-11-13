@@ -22,3 +22,4 @@ def test_contour_addlines_20_mutated():
     cb = fig.colorbar(pcm)
     cb.add_lines(cont, erase=True)
     assert_array_almost_equal(cb.ax.get_ylim(), [114.3091, 9972.30735], 3)
+# Mutation info: Added erase = True (Call cb.add_lines)

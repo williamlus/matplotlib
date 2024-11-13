@@ -94,3 +94,4 @@ def test_imshow_masked_interpolation_15_mutated():
         ax.set_title(interp)
         ax.imshow(data, norm=n, cmap=cmap, interpolation=interp, resample=False)
         ax.axis('off')
+# Mutation info: Added resample = False (Call ax.imshow)

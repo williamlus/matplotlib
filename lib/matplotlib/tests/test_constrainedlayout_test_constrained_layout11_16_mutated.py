@@ -45,3 +45,4 @@ def test_constrained_layout11_16_mutated():
     fig.colorbar(pcm, ax=axs, shrink=0.6, aspect=70.0)
     ax = fig.add_subplot(gsl[0])
     example_plot(ax, fontsize=9)
+# Mutation info: Added projection = None (Call fig.add_subplot)

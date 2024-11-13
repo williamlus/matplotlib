@@ -38,3 +38,4 @@ def test_tight_layout3_7_mutated():
     example_plot(ax2)
     example_plot(ax3)
     plt.tight_layout()
+# Mutation info: Added projection = mollweide (Call plt.subplot)

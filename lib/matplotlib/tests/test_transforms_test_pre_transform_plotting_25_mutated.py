@@ -49,3 +49,4 @@ def test_pre_transform_plotting_25_mutated():
     u, v = (u[::3, ::3], v[::3, ::3])
     ax.quiver(x, y + 5, u, v, transform=times10 + ax.transData, scale_units='height')
     ax.barbs(x - 3, y + 5, u ** 2, v ** 2, transform=times10 + ax.transData)
+# Mutation info: Added scale_units = height (Call ax.quiver)

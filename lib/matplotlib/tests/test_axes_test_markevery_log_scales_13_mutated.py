@@ -167,3 +167,4 @@ def test_markevery_log_scales_13_mutated():
         plt.xscale('log')
         plt.yscale('logit')
         plt.plot(x, y, 'o', ls='-', ms=4, markevery=case)
+# Mutation info: (0-th Positional) value = 'log' -> value = logit (Call plt.yscale)

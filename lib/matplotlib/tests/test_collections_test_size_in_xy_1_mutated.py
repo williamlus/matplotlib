@@ -69,3 +69,4 @@ def test_size_in_xy_1_mutated():
     ax.add_collection(e)
     ax.set_xlim(0, 30)
     ax.set_ylim(0, 30)
+# Mutation info: Added squeeze = True (Call plt.subplots)

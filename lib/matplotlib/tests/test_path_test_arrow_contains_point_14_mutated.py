@@ -32,3 +32,4 @@ def test_arrow_contains_point_14_mutated():
             inside, res = patch.contains(event)
             if inside:
                 ax.scatter(x, y, s=5, c='r', edgecolors='none')
+# Mutation info: Added edgecolors = none (Call ax.scatter)

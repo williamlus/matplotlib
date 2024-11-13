@@ -20,3 +20,4 @@ def test_noscale_4_mutated():
     Z = np.sin(Y ** 2)
     fig, ax = plt.subplots(sharex=True)
     ax.imshow(Z, cmap='gray', interpolation='none')
+# Mutation info: Added sharex = True (Call plt.subplots)

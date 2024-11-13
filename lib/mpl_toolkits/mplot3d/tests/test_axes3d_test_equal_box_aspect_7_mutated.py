@@ -73,3 +73,4 @@ def test_equal_box_aspect_7_mutated():
     ax.set_box_aspect((1, 1, 1))
     with pytest.raises(ValueError, match='Argument zoom ='):
         ax.set_box_aspect((1, 1, 1), zoom=-1)
+# Mutation info: Added layout = compressed (Call plt.figure)

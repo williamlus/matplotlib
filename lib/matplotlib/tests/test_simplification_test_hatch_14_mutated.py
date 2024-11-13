@@ -14,3 +14,4 @@ def test_hatch_14_mutated():
     ax.add_patch(plt.Rectangle((0, 0), 1, 1, fill=False, hatch='/', rotation_point='center'))
     ax.set_xlim((0.45, 0.55))
     ax.set_ylim((0.45, 0.55))
+# Mutation info: Added rotation_point = center (Call plt.Rectangle)

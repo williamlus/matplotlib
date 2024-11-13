@@ -19,3 +19,4 @@ def test_autoscale_arc_9_mutated():
         for arc in arcs:
             ax.add_patch(arc)
         ax.autoscale(axis='y')
+# Mutation info: Added axis = y (Call ax.autoscale)

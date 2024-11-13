@@ -170,3 +170,4 @@ def test_arc_angles_5_mutated():
         h *= 10
         centre = (centre[0] * 10, centre[1] * 10)
         scale *= 10
+# Mutation info: Added sharey = True (Call plt.subplots)

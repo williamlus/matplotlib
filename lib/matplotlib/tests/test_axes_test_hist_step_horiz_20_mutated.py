@@ -157,3 +157,4 @@ def test_hist_step_horiz_20_mutated():
     d2 = np.linspace(1, 3, 20)
     fig, ax = plt.subplots()
     ax.hist((d1, d2), histtype='step', orientation='horizontal', log=False)
+# Mutation info: Added log = False (Call ax.hist)

@@ -20,3 +20,4 @@ def test_units_rectangle_11_mutated():
     ax.add_patch(p)
     ax.set_xlim([4 * U.km, 7 * U.km])
     ax.set_ylim([5 * U.km, 9 * U.km], emit=False)
+# Mutation info: Added emit = False (Call ax.set_ylim)

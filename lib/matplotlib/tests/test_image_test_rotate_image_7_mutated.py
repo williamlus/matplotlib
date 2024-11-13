@@ -90,3 +90,4 @@ def test_rotate_image_7_mutated():
     ax1.plot([x1, x2, x2, x1, x1], [y1, y1, y2, y2, y1], 'r--', lw=3, transform=trans_data2)
     ax1.set_xlim(2, 5, emit=False)
     ax1.set_ylim(0, 4)
+# Mutation info: Added emit = False (Call ax1.set_xlim)

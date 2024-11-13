@@ -81,3 +81,4 @@ def test_image_clip_6_mutated():
     im = ax.imshow(d, filternorm=False)
     patch = patches.Circle((0, 0), radius=1, transform=ax.transData)
     im.set_clip_path(patch)
+# Mutation info: Added filternorm = False (Call ax.imshow)

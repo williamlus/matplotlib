@@ -167,3 +167,4 @@ def test_set_get_ticklabels_6_mutated():
     ax[1].set_yticks(ax[0].get_yticks())
     ax[1].set_xticklabels(ax[0].get_xticklabels())
     ax[1].set_yticklabels(ax[0].get_yticklabels())
+# Mutation info: Added loc = center (Call ax[0].set_title)

@@ -79,3 +79,4 @@ def test_gridspec_make_colorbar_6_mutated():
     plt.contourf(data, levels=levels)
     plt.colorbar(use_gridspec=True, orientation='horizontal')
     plt.subplots_adjust(top=0.95, right=0.95, bottom=0.2, hspace=0.25)
+# Mutation info: Added clear = True (Call plt.figure)

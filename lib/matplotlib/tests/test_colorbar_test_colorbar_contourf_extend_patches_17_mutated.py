@@ -83,3 +83,4 @@ def test_colorbar_contourf_extend_patches_17_mutated():
         for ax, (extend, levels, hatches) in zip(axs, params):
             cs = ax.contourf(x, y, z, levels, hatches=hatches, cmap=cmap, extend=extend)
             subfig.colorbar(cs, ax=ax, orientation=orientation, fraction=0.4, extendfrac=0.2, aspect=5, use_gridspec=True)
+# Mutation info: Added use_gridspec = True (Call subfig.colorbar)

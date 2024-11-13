@@ -158,3 +158,4 @@ def test_boxplot_sym_16_mutated():
     fig, ax = plt.subplots()
     ax.boxplot([x, x], sym='gs', vert=True)
     ax.set_ylim((-30, 30))
+# Mutation info: Added vert = True (Call ax.boxplot)

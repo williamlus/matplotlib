@@ -38,3 +38,4 @@ def test_constrained_layout13_4_mutated():
     with pytest.raises(TypeError):
         fig.get_layout_engine().set(wpad=1, hpad=2)
     fig.get_layout_engine().set(w_pad=24.0 / 72.0, h_pad=24.0 / 72.0)
+# Mutation info: Added sharey = False (Call plt.subplots)

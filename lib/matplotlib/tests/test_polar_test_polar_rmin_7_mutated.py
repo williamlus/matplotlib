@@ -13,3 +13,4 @@ def test_polar_rmin_7_mutated():
     ax.plot(theta, r)
     ax.set_rmax(2.0)
     ax.set_rmin(0.5)
+# Mutation info: Added clear = False (Call plt.figure)

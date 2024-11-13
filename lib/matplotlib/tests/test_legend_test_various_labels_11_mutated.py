@@ -27,3 +27,4 @@ def test_various_labels_11_mutated():
     ax.plot(np.linspace(4, 4.1), 'o', label='Développés')
     ax.plot(np.arange(4, 1, -1), 'o', label='__nolegend__')
     ax.legend(numpoints=1, loc='best')
+# Mutation info: Added projection = rectilinear (Call fig.add_subplot)

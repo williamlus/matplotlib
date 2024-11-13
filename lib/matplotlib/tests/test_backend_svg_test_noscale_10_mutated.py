@@ -20,3 +20,4 @@ def test_noscale_10_mutated():
     Z = np.sin(Y ** 2)
     fig, ax = plt.subplots()
     ax.imshow(Z, cmap='gray', interpolation='none', interpolation_stage='auto')
+# Mutation info: Added interpolation_stage = auto (Call ax.imshow)

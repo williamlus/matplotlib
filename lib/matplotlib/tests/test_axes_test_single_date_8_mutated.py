@@ -161,3 +161,4 @@ def test_single_date_8_mutated():
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         ax[0].plot_date(time1 + dt, data1, 'o', color='r', xdate=False)
     ax[1].plot(time1, data1, 'o', color='r')
+# Mutation info: Added xdate = False (Call ax[0].plot_date)

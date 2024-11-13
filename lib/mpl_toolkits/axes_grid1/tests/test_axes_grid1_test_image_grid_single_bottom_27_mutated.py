@@ -28,3 +28,4 @@ def test_image_grid_single_bottom_27_mutated():
     for i in range(3):
         im = grid[i].imshow(imdata, interpolation='none')
     grid.cbar_axes[0].colorbar(im)
+# Mutation info: label_mode = <ast.Constant object at 0x7fc055c1a650> -> label_mode = all (Call ImageGrid)

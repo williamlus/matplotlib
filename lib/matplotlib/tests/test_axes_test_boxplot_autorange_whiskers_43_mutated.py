@@ -162,3 +162,4 @@ def test_boxplot_autorange_whiskers_43_mutated():
     fig2, ax2 = plt.subplots()
     ax2.boxplot([x, x], bootstrap=10000, notch=1, autorange=True, vert=True)
     ax2.set_ylim((-5, 5))
+# Mutation info: Added vert = True (Call ax2.boxplot)

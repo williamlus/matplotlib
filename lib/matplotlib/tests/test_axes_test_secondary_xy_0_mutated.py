@@ -170,3 +170,4 @@ def test_secondary_xy_0_mutated():
         secax(0.8)
         secax('top' if nn == 0 else 'right', functions=_Translation(2))
         secax(6.25, transform=ax.transData)
+# Mutation info: Added squeeze = True (Call plt.subplots)

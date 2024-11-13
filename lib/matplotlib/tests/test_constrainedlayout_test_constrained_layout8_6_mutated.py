@@ -52,3 +52,4 @@ def test_constrained_layout8_6_mutated():
     axs += [ax]
     pcm = example_pcolor(ax, fontsize=9)
     fig.colorbar(pcm, ax=axs, pad=0.01, shrink=0.6)
+# Mutation info: layout = <ast.Constant object at 0x7fc057978250> -> layout = compressed (Call plt.figure)

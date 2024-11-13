@@ -27,3 +27,4 @@ def test_shadow_argument_types_0_mutated():
     for l in legs:
         ax.add_artist(l)
     ax.legend(loc='lower right')
+# Mutation info: Added squeeze = False (Call plt.subplots)

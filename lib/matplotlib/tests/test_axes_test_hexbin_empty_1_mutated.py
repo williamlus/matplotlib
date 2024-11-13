@@ -158,3 +158,4 @@ def test_hexbin_empty_1_mutated():
     ax.hexbin([], [], bins='log')
     ax.hexbin([], [], C=[], reduce_C_function=np.max)
     ax.hexbin([], [], bins=np.arange(10))
+# Mutation info: Added sharex = True (Call plt.subplots)

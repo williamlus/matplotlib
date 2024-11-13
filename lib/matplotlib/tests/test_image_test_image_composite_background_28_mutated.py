@@ -82,3 +82,4 @@ def test_image_composite_background_28_mutated():
     ax.imshow(arr, extent=[4, 6, 15, 0], interpolation_stage='auto')
     ax.set_facecolor((1, 0, 0, 0.5))
     ax.set_xlim([0, 12])
+# Mutation info: Added interpolation_stage = auto (Call ax.imshow)

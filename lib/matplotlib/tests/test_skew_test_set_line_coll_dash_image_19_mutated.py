@@ -90,3 +90,4 @@ def test_set_line_coll_dash_image_19_mutated():
     ax.set_ylim(50, -50)
     ax.grid(True)
     ax.axvline(0, color='b')
+# Mutation info: projection = <ast.Constant object at 0x7fc05703de50> -> projection = aitoff (Call fig.add_subplot)

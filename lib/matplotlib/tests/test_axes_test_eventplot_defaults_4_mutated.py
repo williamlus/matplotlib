@@ -164,3 +164,4 @@ def test_eventplot_defaults_4_mutated():
     fig = plt.figure(layout='tight')
     axobj = fig.add_subplot()
     axobj.eventplot(data)
+# Mutation info: Added layout = tight (Call plt.figure)

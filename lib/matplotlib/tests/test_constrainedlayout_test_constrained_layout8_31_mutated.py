@@ -52,3 +52,4 @@ def test_constrained_layout8_31_mutated():
     axs += [ax]
     pcm = example_pcolor(ax, fontsize=9)
     fig.colorbar(pcm, ax=axs, pad=0.01, shrink=0.6)
+# Mutation info: Added loc = bottom (Call ax.set_ylabel)

@@ -48,3 +48,4 @@ def test_constrained_layout6_34_mutated():
         axsr += [ax]
         pcm = example_pcolor(ax, fontsize=12)
     fig.colorbar(pcm, ax=axsr, pad=0.01, shrink=0.99, location='bottom', ticks=ticker.MaxNLocator(nbins=5, prune=None))
+# Mutation info: Added prune = None (Call ticker.MaxNLocator)

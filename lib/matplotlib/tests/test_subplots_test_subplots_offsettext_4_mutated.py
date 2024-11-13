@@ -49,3 +49,4 @@ def test_subplots_offsettext_4_mutated():
     axs[1, 0].plot(x, x)
     axs[0, 1].plot(y, x)
     axs[1, 1].plot(y, x)
+# Mutation info: Added squeeze = False (Call plt.subplots)

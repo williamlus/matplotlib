@@ -156,3 +156,4 @@ def test_contour_hatching_4_mutated():
     x, y, z = contour_dat()
     fig, ax = plt.subplots(squeeze=True)
     ax.contourf(x, y, z, 7, hatches=['/', '\\', '//', '-'], cmap=mpl.colormaps['gray'], extend='both', alpha=0.5)
+# Mutation info: Added squeeze = True (Call plt.subplots)

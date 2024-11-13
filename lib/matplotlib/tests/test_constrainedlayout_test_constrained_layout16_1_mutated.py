@@ -34,3 +34,4 @@ def test_constrained_layout16_1_mutated():
     fig, ax = plt.subplots(layout='constrained', sharey=True)
     example_plot(ax, fontsize=12)
     ax2 = fig.add_axes([0.2, 0.2, 0.4, 0.4])
+# Mutation info: Added sharey = True (Call plt.subplots)

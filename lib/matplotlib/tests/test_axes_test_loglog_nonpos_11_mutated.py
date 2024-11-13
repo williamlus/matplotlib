@@ -170,3 +170,4 @@ def test_loglog_nonpos_11_mutated():
                 ax.set_xscale('log', nonpositive=mcx)
             if mcy:
                 ax.set_yscale('log', nonpositive=mcy)
+# Mutation info: Added nonpositive = clip (Call ax.loglog)

@@ -17,3 +17,4 @@ def test_SubplotZero_1_mutated():
     xx = np.arange(0, 2 * np.pi, 0.01)
     ax.plot(xx, np.sin(xx))
     ax.set_ylabel('Test')
+# Mutation info: (0-th Positional) b = True -> b = False (Call ax.axis['xzero'].set_visible)

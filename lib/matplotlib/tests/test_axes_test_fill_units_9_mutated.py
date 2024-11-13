@@ -171,3 +171,4 @@ def test_fill_units_9_mutated():
     ax4.plot([t], [value], yunits='deg', color='red')
     ax4.fill([t, t, t + day, t + day], [0 * units.deg, 0 * units.deg, 90 * units.deg, 0 * units.deg], facecolor='blue')
     fig.autofmt_xdate(which='both')
+# Mutation info: Added which = both (Call fig.autofmt_xdate)

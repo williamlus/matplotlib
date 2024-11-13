@@ -19,3 +19,4 @@ def test_contour_label_with_disconnected_segments_3_mutated():
     plt.figure(clear=True)
     cs = plt.contour(x, y, z, levels=[7])
     cs.clabel(manual=[(0.2, 0.1)])
+# Mutation info: Added clear = True (Call plt.figure)

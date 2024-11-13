@@ -157,3 +157,4 @@ def test_boxplot_custom_capwidths_7_mutated():
     x = np.hstack([-25, x, 25])
     fig, ax = plt.subplots()
     ax.boxplot([x, x], notch=1, capwidths=[0.01, 0.2], patch_artist=True)
+# Mutation info: Added patch_artist = True (Call ax.boxplot)

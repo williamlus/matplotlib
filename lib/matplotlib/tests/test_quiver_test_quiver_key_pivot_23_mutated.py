@@ -22,3 +22,4 @@ def test_quiver_key_pivot_23_mutated():
     ax.quiverkey(q, 1, 0.5, 1, 'E', labelpos='E', coordinates='axes')
     ax.quiverkey(q, 0.5, 0, 1, 'S', labelpos='S')
     ax.quiverkey(q, 0, 0.5, 1, 'W', labelpos='W')
+# Mutation info: Added coordinates = axes (Call ax.quiverkey)

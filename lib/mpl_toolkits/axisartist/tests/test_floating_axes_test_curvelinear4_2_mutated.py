@@ -30,3 +30,4 @@ def test_curvelinear4_2_mutated():
     ax2.scatter(xx, yy)
     l, = ax2.plot(xx, yy, 'k-')
     l.set_clip_path(ax1.patch)
+# Mutation info: (0-th Positional) b = False -> b = True (Call ax1.axis['top'].set_visible)

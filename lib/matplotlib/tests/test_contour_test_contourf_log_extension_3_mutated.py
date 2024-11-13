@@ -28,3 +28,4 @@ def test_contourf_log_extension_3_mutated():
     cb = plt.colorbar(c2, ax=ax2)
     assert_array_almost_equal_nulp(cb.ax.get_ylim(), np.array((0.0001, 1000000.0)))
     cb = plt.colorbar(c3, ax=ax3)
+# Mutation info: Added sharex = False (Call plt.subplots)

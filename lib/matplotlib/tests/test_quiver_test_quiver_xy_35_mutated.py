@@ -18,3 +18,4 @@ def test_quiver_xy_35_mutated():
     ax.set_xlim(0, 1.1)
     ax.set_ylim(0, 1.1)
     ax.grid()
+# Mutation info: scale_units = <ast.Constant object at 0x7fc0570d9f90> -> scale_units = width (Call ax.quiver)

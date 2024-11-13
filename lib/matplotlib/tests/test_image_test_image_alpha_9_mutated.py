@@ -82,3 +82,4 @@ def test_image_alpha_9_mutated():
     ax1.imshow(Z, alpha=1.0, interpolation='none', interpolation_stage='rgba')
     ax2.imshow(Z, alpha=0.5, interpolation='none')
     ax3.imshow(Z, alpha=0.5, interpolation='nearest')
+# Mutation info: Added interpolation_stage = rgba (Call ax1.imshow)

@@ -21,3 +21,4 @@ def test_function_scale_7_mutated():
     ax.plot(x, x)
     ax.set_xscale('function', functions=(forward, inverse))
     ax.set_xlim(1, 1000, auto=False)
+# Mutation info: Added auto = False (Call ax.set_xlim)

@@ -13,3 +13,4 @@ def test_bbox_inches_fixed_aspect_12_mutated():
         ax.plot([0, 1])
         ax.set_xlim(0, 1)
         ax.set_aspect('auto')
+# Mutation info: (0-th Positional) aspect = 'equal' -> aspect = auto (Call ax.set_aspect)

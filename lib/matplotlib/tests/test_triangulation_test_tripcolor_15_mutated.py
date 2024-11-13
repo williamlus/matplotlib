@@ -37,3 +37,4 @@ def test_tripcolor_15_mutated():
     plt.subplot(122, projection='aitoff')
     plt.tripcolor(triang, facecolors=Cfaces, edgecolors='k')
     plt.title('facecolors')
+# Mutation info: Added projection = aitoff (Call plt.subplot)

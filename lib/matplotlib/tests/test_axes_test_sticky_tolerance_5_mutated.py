@@ -163,3 +163,4 @@ def test_sticky_tolerance_5_mutated():
     axs.flat[2].barh(y=1, width=-width, left=-20000.1)
     axs.flat[3].barh(y=0, width=width, left=-20000.6)
     axs.flat[3].barh(y=1, width=width, left=-20000.1)
+# Mutation info: Added squeeze = False (Call plt.subplots)

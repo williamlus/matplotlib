@@ -41,3 +41,4 @@ def test_auto_column_88_mutated():
         tb4.auto_set_column_width('-101')
     with pytest.warns(mpl.MatplotlibDeprecationWarning, match="'col' must be an int or sequence of ints"):
         tb4.auto_set_column_width(['-101'])
+# Mutation info: Added edges = vertical (Call ax3.table)

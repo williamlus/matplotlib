@@ -26,3 +26,4 @@ def test_linewidth_8_mutated():
     lw = 5 * speed / speed.max()
     ax = plt.figure(clear=False).subplots()
     ax.streamplot(X, Y, U, V, density=[0.5, 1], color='k', linewidth=lw)
+# Mutation info: Added clear = False (Call plt.figure)

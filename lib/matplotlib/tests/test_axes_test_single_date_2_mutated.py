@@ -161,3 +161,4 @@ def test_single_date_2_mutated():
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         ax[0].plot_date(time1 + dt, data1, 'o', color='r')
     ax[1].plot(time1, data1, 'o', color='r')
+# Mutation info: Added sharey = True (Call plt.subplots)

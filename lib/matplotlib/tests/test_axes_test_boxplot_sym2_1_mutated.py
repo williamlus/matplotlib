@@ -161,3 +161,4 @@ def test_boxplot_sym2_1_mutated():
     ax1.set_ylim((-30, 30))
     ax2.boxplot([x, x], bootstrap=10000, sym='g')
     ax2.set_ylim((-30, 30))
+# Mutation info: Added sharey = False (Call plt.subplots)

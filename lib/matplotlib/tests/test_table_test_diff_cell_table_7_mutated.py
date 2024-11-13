@@ -19,3 +19,4 @@ def test_diff_cell_table_7_mutated():
         ax.table(colWidths=colWidths, cellText=cellText, loc='center', edges=cell, rowLoc='right')
         ax.axis('off')
     plt.tight_layout()
+# Mutation info: Added rowLoc = right (Call ax.table)

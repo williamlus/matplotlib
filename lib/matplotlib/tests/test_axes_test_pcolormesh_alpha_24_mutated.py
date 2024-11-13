@@ -171,3 +171,4 @@ def test_pcolormesh_alpha_24_mutated():
     ax2.pcolormesh(Qx, Qy, Z, cmap=vir, alpha=0.4, shading='gouraud', zorder=1, snap=True)
     ax3.pcolormesh(Qx, Qy, Z[:-1, :-1], cmap=cmap, shading='flat', zorder=1)
     ax4.pcolormesh(Qx, Qy, Z, cmap=cmap, shading='gouraud', zorder=1)
+# Mutation info: Added snap = True (Call ax2.pcolormesh)

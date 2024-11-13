@@ -12,3 +12,4 @@ def test_zoom_inset_connector_styles_8_mutated():
     indicator = axs[0].indicate_inset_zoom(axs[1], linewidth=5)
     indicator.connectors[1].set_linestyle('dashed')
     indicator.connectors[1].set_color('blue')
+# Mutation info: Added auto = True (Call axs[1].set_xlim)

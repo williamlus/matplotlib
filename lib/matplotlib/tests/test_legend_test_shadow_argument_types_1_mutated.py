@@ -27,3 +27,4 @@ def test_shadow_argument_types_1_mutated():
     for l in legs:
         ax.add_artist(l)
     ax.legend(loc='lower right')
+# Mutation info: Added sharey = True (Call plt.subplots)

@@ -163,3 +163,4 @@ def test_imshow_clip_7_mutated():
     c = ax.contour(r, [N / 4])
     clip_path = mtransforms.TransformedPath(c.get_paths()[0], c.get_transform())
     ax.imshow(r, clip_path=clip_path, filternorm=False)
+# Mutation info: Added filternorm = False (Call ax.imshow)

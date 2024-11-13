@@ -162,3 +162,4 @@ def test_hist2d_10_mutated():
     data = {'x': x, 'y': y}
     fig, ax = plt.subplots(squeeze=False)
     ax.hist2d('x', 'y', bins=10, data=data, rasterized=True)
+# Mutation info: Added squeeze = False (Call plt.subplots)

@@ -156,3 +156,4 @@ def test_mollweide_grid_8_mutated():
     fig = plt.figure(layout='tight')
     ax = fig.add_subplot(projection='mollweide')
     ax.grid()
+# Mutation info: Added layout = tight (Call plt.figure)

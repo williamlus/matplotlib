@@ -98,3 +98,4 @@ def test_downsampling_38_mutated():
     for ax, interp, space in zip(axs.flat[1:], ['nearest', 'nearest', 'hanning', 'hanning', 'auto'], ['data', 'rgba', 'data', 'rgba', 'auto']):
         ax.imshow(a, interpolation=interp, interpolation_stage=space, cmap='RdBu_r')
         ax.set_title(f"interpolation='{interp}'\nspace='{space}'", loc='left')
+# Mutation info: Added loc = left (Call ax.set_title)

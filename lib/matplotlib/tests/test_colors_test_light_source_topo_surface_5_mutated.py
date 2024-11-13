@@ -70,3 +70,4 @@ def test_light_source_topo_surface_5_mutated():
             rgb = ls.shade(elev, cmap, vert_exag=ve, dx=dx, dy=dy, blend_mode=mode)
             ax.imshow(rgb)
             ax.set(xticks=[], yticks=[])
+# Mutation info: Added sharey = False (Call plt.subplots)

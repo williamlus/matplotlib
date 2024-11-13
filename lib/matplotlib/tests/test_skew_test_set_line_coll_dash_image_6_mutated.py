@@ -90,3 +90,4 @@ def test_set_line_coll_dash_image_6_mutated():
     ax.set_ylim(50, -50, auto=False)
     ax.grid(True)
     ax.axvline(0, color='b')
+# Mutation info: Added auto = False (Call ax.set_ylim)

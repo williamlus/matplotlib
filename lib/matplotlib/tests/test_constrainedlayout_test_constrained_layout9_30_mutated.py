@@ -39,3 +39,4 @@ def test_constrained_layout9_30_mutated():
     ax.set_aspect('equal')
     fig.colorbar(pcm, ax=axs, pad=0.01, shrink=0.6)
     fig.suptitle('Test Suptitle', fontsize=28)
+# Mutation info: (0-th Positional) aspect = 2.0 -> aspect = equal (Call ax.set_aspect)

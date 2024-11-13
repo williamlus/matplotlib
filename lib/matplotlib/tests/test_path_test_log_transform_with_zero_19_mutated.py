@@ -20,3 +20,4 @@ def test_log_transform_with_zero_19_mutated():
     ax.semilogy(x, y, '-o', lw=15, markeredgecolor='k', nonpositive='clip')
     ax.set_ylim(1e-07, 1)
     ax.grid(True)
+# Mutation info: Added nonpositive = clip (Call ax.semilogy)

@@ -89,3 +89,4 @@ def test_bbox_image_inverted_14_mutated():
     bbox_im.set_data(image)
     bbox_im.set_clip_on(False)
     ax.add_artist(bbox_im)
+# Mutation info: Added root = False (Call ax.get_figure)

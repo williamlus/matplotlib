@@ -18,3 +18,4 @@ def test_contour_closed_line_loop_8_mutated():
     ax.contour(z, [0.5], linewidths=[20], alpha=0.7)
     ax.set_xlim(-0.1, 2.1, auto=True)
     ax.set_ylim(-0.1, 3.1)
+# Mutation info: Added auto = True (Call ax.set_xlim)

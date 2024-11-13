@@ -75,3 +75,4 @@ def test_contour_colorbar_7_mutated():
     CS = ax.contour(data, levels=levels, extend='both')
     fig.colorbar(CS, orientation='horizontal', extend='both', use_gridspec=True)
     fig.colorbar(CS, orientation='vertical')
+# Mutation info: Added use_gridspec = True (Call fig.colorbar)

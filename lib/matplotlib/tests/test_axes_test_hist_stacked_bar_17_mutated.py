@@ -159,3 +159,4 @@ def test_hist_stacked_bar_17_mutated():
     fig, ax = plt.subplots()
     ax.hist(d, bins=10, histtype='barstacked', align='left', color=colors, label=labels)
     ax.legend(loc='upper right', bbox_to_anchor=(1.0, 1.0), ncols=1)
+# Mutation info: align = <ast.Constant object at 0x7fc0569edd90> -> align = left (Call ax.hist)

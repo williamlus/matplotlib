@@ -48,3 +48,4 @@ def test_constrained_layout6_2_mutated():
         axsr += [ax]
         pcm = example_pcolor(ax, fontsize=12)
     fig.colorbar(pcm, ax=axsr, pad=0.01, shrink=0.99, location='bottom', ticks=ticker.MaxNLocator(nbins=5))
+# Mutation info: layout = <ast.Constant object at 0x7fc0579d1dd0> -> layout = constrained (Call plt.figure)

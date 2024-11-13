@@ -35,3 +35,4 @@ def test_alignment_12_mutated():
     ax.set_ylim(0, 1.5)
     ax.set_xticks([])
     ax.set_yticks([])
+# Mutation info: Added layout = None (Call plt.figure)

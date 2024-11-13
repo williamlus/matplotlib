@@ -158,3 +158,4 @@ def test_loglog_14_mutated():
     ax.loglog(x, x ** 3, lw=5)
     ax.tick_params(length=25, width=2)
     ax.tick_params(length=15, width=2, which='major')
+# Mutation info: which = <ast.Constant object at 0x7fc056ca2990> -> which = major (Call ax.tick_params)

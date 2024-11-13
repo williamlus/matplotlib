@@ -164,3 +164,4 @@ def test_imshow_8_mutated():
     data = {'r': r}
     fig, ax = plt.subplots(squeeze=False)
     ax.imshow('r', data=data)
+# Mutation info: Added squeeze = False (Call plt.subplots)

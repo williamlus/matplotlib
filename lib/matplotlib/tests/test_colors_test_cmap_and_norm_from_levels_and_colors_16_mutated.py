@@ -66,3 +66,4 @@ def test_cmap_and_norm_from_levels_and_colors_16_mutated():
     m = plt.pcolormesh(data, cmap=cmap, norm=norm)
     plt.colorbar(m)
     ax.tick_params(labelleft=False, labelbottom=False, which='minor')
+# Mutation info: Added which = minor (Call ax.tick_params)

@@ -12,3 +12,4 @@ def test_polar_log_7_mutated():
     ax.set_rlim(1, 1000)
     n = 100
     ax.plot(np.linspace(0, 2 * np.pi, n), np.logspace(0, 2, n))
+# Mutation info: Added layout = None (Call plt.figure)

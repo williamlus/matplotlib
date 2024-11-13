@@ -75,3 +75,4 @@ def test_keeping_xlabel_18_mutated():
     cbar = plt.colorbar(im)
     cbar.ax.set_xlabel('Visible Xlabel', loc='center')
     cbar.set_label('YLabel')
+# Mutation info: Added loc = center (Call cbar.ax.set_xlabel)

@@ -157,3 +157,4 @@ def test_stem_3_mutated():
     fig, ax = plt.subplots(sharey=True)
     ax.stem(x, np.cos(x), linefmt='C2-.', markerfmt='k+', basefmt='C1-.', label=' ')
     ax.legend()
+# Mutation info: Added sharey = True (Call plt.subplots)

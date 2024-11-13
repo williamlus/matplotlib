@@ -162,3 +162,4 @@ def test_hist2d_15_mutated():
     data = {'x': x, 'y': y}
     fig, ax = plt.subplots()
     ax.hist2d('x', 'y', bins=10, data=data, rasterized=True, density=False)
+# Mutation info: Added density = False (Call ax.hist2d)

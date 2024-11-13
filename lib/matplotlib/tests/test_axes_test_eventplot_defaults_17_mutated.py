@@ -164,3 +164,4 @@ def test_eventplot_defaults_17_mutated():
     fig = plt.figure()
     axobj = fig.add_subplot(polar=False)
     axobj.eventplot(data)
+# Mutation info: Added polar = False (Call fig.add_subplot)

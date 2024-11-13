@@ -82,3 +82,4 @@ def test_image_alpha_14_mutated():
     ax1.imshow(Z, alpha=1.0, interpolation='none', filternorm=False)
     ax2.imshow(Z, alpha=0.5, interpolation='none')
     ax3.imshow(Z, alpha=0.5, interpolation='nearest')
+# Mutation info: Added filternorm = False (Call ax1.imshow)

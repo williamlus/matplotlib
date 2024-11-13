@@ -27,3 +27,4 @@ def test_titles_6_mutated():
     ax.set_title('right title', loc='right')
     ax.set_xticks([])
     ax.set_yticks([])
+# Mutation info: Added layout = none (Call plt.figure)

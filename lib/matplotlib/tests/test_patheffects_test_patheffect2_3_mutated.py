@@ -16,3 +16,4 @@ def test_patheffect2_3_mutated():
     cntr.set(path_effects=[path_effects.withStroke(linewidth=3, foreground='w')])
     clbls = ax2.clabel(cntr, fmt='%2.0f', use_clabeltext=True)
     plt.setp(clbls, path_effects=[path_effects.withStroke(linewidth=3, foreground='w')])
+# Mutation info: Added filternorm = True (Call ax2.imshow)

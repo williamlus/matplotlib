@@ -38,3 +38,4 @@ def test_tickedstroke_9_mutated():
     cg3.set(path_effects=[path_effects.withTickedStroke(spacing=7)])
     ax3.set_xlim(0, 4)
     ax3.set_ylim(0, 4)
+# Mutation info: Added auto = True (Call ax1.set_xlim)

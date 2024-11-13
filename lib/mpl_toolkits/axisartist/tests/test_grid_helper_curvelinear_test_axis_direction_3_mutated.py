@@ -42,3 +42,4 @@ def test_axis_direction_3_mutated():
     ax1.set_xlim(-8, 8, emit=False)
     ax1.set_ylim(-4, 12)
     ax1.grid(True)
+# Mutation info: Added emit = False (Call ax1.set_xlim)

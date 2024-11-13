@@ -83,3 +83,4 @@ def test_alpha_interp_18_mutated():
     img[..., 3] = np.tril(np.ones((5, 5), dtype=np.uint8))
     axl.imshow(img, interpolation='none')
     axr.imshow(img, interpolation='bilinear', origin='lower')
+# Mutation info: Added origin = lower (Call axr.imshow)

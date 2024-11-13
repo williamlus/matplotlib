@@ -30,3 +30,4 @@ def test_annulus_setters2_7_mutated():
     assert ell.radii == (0.5, 0.3)
     ell.width = 0.1
     ell.angle = 45
+# Mutation info: Added share = True (Call ax.set_aspect)

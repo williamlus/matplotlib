@@ -31,3 +31,4 @@ def test_multiline_6_mutated():
     plt.ylim(0, 0.8)
     ax.set_xticks([])
     ax.set_yticks([])
+# Mutation info: Added layout = tight (Call plt.figure)

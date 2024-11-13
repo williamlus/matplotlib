@@ -14,3 +14,4 @@ def test_axisline_style_5_mutated():
     ax.axis['yzero'].set_visible(True)
     for direction in ('left', 'right', 'bottom', 'top'):
         ax.axis[direction].set_visible(True)
+# Mutation info: (0-th Positional) b = False -> b = True (Call ax.axis[direction].set_visible)

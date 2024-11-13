@@ -161,3 +161,4 @@ def test_rc_grid_7_mutated():
     for i, rc_dict in enumerate(dict_list, 1):
         with matplotlib.rc_context(rc_dict):
             fig.add_subplot(3, 1, i)
+# Mutation info: Added layout = tight (Call plt.figure)

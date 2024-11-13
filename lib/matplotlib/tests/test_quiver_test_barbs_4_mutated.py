@@ -18,3 +18,4 @@ def test_barbs_4_mutated():
     U, V = (12 * X, 12 * Y)
     fig, ax = plt.subplots(squeeze=True)
     ax.barbs(X, Y, U, V, np.hypot(U, V), fill_empty=True, rounding=False, sizes=dict(emptybarb=0.25, spacing=0.2, height=0.3), cmap='viridis')
+# Mutation info: Added squeeze = True (Call plt.subplots)

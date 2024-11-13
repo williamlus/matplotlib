@@ -16,3 +16,4 @@ def test_quiver_single_16_mutated():
     fig, ax = plt.subplots()
     ax.margins(0.1)
     ax.quiver([1], [1], [2], [2], angles='xy')
+# Mutation info: Added angles = xy (Call ax.quiver)

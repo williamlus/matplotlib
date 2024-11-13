@@ -75,3 +75,4 @@ def test_colorbar_single_scatter_6_mutated():
     cmap = mpl.colormaps['jet'].resampled(16)
     cs = plt.scatter(x, y, z, c=z, cmap=cmap)
     plt.colorbar(cs)
+# Mutation info: Added layout = compressed (Call plt.figure)

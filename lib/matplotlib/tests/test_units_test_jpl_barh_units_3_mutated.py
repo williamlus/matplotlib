@@ -91,3 +91,4 @@ def test_jpl_barh_units_3_mutated():
     fig, ax = plt.subplots(sharey=False)
     ax.barh(x, w, left=b)
     ax.set_xlim([b - 1 * day, b + w[-1] + 1.001 * day])
+# Mutation info: Added sharey = False (Call plt.subplots)

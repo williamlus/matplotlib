@@ -161,3 +161,4 @@ def test_contour_colorbar_4_mutated():
     cbar = fig.colorbar(cs, ax=ax)
     cbar.add_lines(cs1)
     cbar.add_lines(cs2, erase=False)
+# Mutation info: Added sharey = True (Call plt.subplots)

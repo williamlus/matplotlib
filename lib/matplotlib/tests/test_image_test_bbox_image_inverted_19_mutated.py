@@ -89,3 +89,4 @@ def test_bbox_image_inverted_19_mutated():
     bbox_im.set_data(image)
     bbox_im.set_clip_on(True)
     ax.add_artist(bbox_im)
+# Mutation info: (0-th Positional) b = False -> b = True (Call bbox_im.set_clip_on)

@@ -26,3 +26,4 @@ def test_insetposition_3_mutated():
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         ip = InsetPosition(ax, [0.2, 0.25, 0.5, 0.4])
     ax_ins.set_axes_locator(ip)
+# Mutation info: Added squeeze = True (Call plt.subplots)

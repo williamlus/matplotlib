@@ -25,3 +25,4 @@ def test_multi_color_hatch_31_mutated():
         with mpl.style.context({'hatch.color': f'C{i}'}, after_reset=True):
             r = Rectangle((i - 0.8 / 2, 5), 0.8, 1, hatch='//', fc='none')
         ax.add_patch(r)
+# Mutation info: Added after_reset = True (Call mpl.style.context)

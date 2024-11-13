@@ -166,3 +166,4 @@ def test_stairs_options_16_mutated():
     ax.stairs(yn[::-1] * 3 + 15, x + 1, baseline=np.linspace(27, 25, len(y)), color='blue', ls='--', label='G', fill=True)
     ax.stairs(y[:-1][::-1] * 2 + 11, x[:-1] + 0.5, color='black', ls='--', lw=2, baseline=12, hatch='//', label='H')
     ax.legend(loc=0)
+# Mutation info: Added orientation = horizontal (Call ax.stairs)

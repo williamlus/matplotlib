@@ -15,3 +15,4 @@ def test_axisline_style_tight_0_mutated():
     for direction in ('left', 'right', 'bottom', 'top'):
         ax.axis[direction].set_visible(False)
     fig.tight_layout()
+# Mutation info: (0-th Positional) b = True -> b = True (Call ax.axis['xzero'].set_visible)

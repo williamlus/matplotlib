@@ -35,3 +35,4 @@ def test_constrained_layout4_0_mutated():
     for ax in axs.flat:
         pcm = example_pcolor(ax, fontsize=24)
     fig.colorbar(pcm, ax=axs, pad=0.01, shrink=0.6)
+# Mutation info: Added squeeze = True (Call plt.subplots)

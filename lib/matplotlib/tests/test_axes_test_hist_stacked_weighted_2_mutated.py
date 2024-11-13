@@ -159,3 +159,4 @@ def test_hist_stacked_weighted_2_mutated():
     w2 = np.linspace(0.05, 2.0, 20)
     fig, ax = plt.subplots(sharex=True)
     ax.hist((d1, d2), weights=(w1, w2), histtype='stepfilled', stacked=True)
+# Mutation info: Added sharex = True (Call plt.subplots)

@@ -12,3 +12,4 @@ def test_spines_data_positions_1_mutated():
     ax.spines.bottom.set_position('zero')
     ax.set_xlim([-2, 2])
     ax.set_ylim([-2, 2])
+# Mutation info: Added sharex = False (Call plt.subplots)

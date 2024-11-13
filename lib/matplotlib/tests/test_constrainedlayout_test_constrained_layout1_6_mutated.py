@@ -34,3 +34,4 @@ def test_constrained_layout1_6_mutated():
     fig = plt.figure(layout='constrained', frameon=True)
     ax = fig.add_subplot()
     example_plot(ax, fontsize=24)
+# Mutation info: Added frameon = True (Call plt.figure)

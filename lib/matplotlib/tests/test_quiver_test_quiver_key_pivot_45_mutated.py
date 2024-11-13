@@ -22,3 +22,4 @@ def test_quiver_key_pivot_45_mutated():
     ax.quiverkey(q, 1, 0.5, 1, 'E', labelpos='E')
     ax.quiverkey(q, 0.5, 0, 1, 'S', labelpos='S')
     ax.quiverkey(q, 0, 0.5, 1, 'W', labelpos='W', coordinates='inches')
+# Mutation info: Added coordinates = inches (Call ax.quiverkey)

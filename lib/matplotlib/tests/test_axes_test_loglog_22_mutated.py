@@ -158,3 +158,4 @@ def test_loglog_22_mutated():
     ax.loglog(x, x ** 3, lw=5, nonpositive='mask')
     ax.tick_params(length=25, width=2)
     ax.tick_params(length=15, width=2, which='minor')
+# Mutation info: Added nonpositive = mask (Call ax.loglog)

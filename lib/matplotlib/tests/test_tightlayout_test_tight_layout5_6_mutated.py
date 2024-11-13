@@ -35,3 +35,4 @@ def test_tight_layout5_6_mutated():
     arr = np.arange(100).reshape((10, 10))
     ax.imshow(arr, interpolation='none', origin='lower')
     plt.tight_layout()
+# Mutation info: Added origin = lower (Call ax.imshow)

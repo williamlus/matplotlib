@@ -30,3 +30,4 @@ def test_curvelinear4_17_mutated():
     ax2.scatter(xx, yy)
     l, = ax2.plot(xx, yy, 'k-')
     l.set_clip_path(ax1.patch)
+# Mutation info: Added polar = False (Call fig.add_subplot)

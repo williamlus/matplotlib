@@ -158,3 +158,4 @@ def test_boxplot_sym_13_mutated():
     fig, ax = plt.subplots()
     ax.boxplot([x, x], sym='gs', meanline=True)
     ax.set_ylim((-30, 30))
+# Mutation info: Added meanline = True (Call ax.boxplot)

@@ -20,3 +20,4 @@ def test_xkcd_0_mutated():
     with plt.xkcd():
         fig, ax = plt.subplots(sharex=False)
         ax.plot(x, y)
+# Mutation info: Added sharex = False (Call plt.subplots)

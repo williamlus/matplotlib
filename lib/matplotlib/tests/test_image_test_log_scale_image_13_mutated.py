@@ -81,3 +81,4 @@ def test_log_scale_image_13_mutated():
     fig, ax = plt.subplots()
     ax.imshow(Z, extent=[1, 100, 1, 100], cmap='viridis', vmax=1, vmin=-1, aspect='auto', origin='upper')
     ax.set(yscale='log')
+# Mutation info: Added origin = upper (Call ax.imshow)

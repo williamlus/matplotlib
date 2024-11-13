@@ -26,3 +26,4 @@ def test_hatching_5_mutated():
     ax.add_collection(rect4)
     ax.set_xlim(0, 7)
     ax.set_ylim(0, 9)
+# Mutation info: Added sharex = True (Call plt.subplots)

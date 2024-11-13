@@ -163,3 +163,4 @@ def test_imshow_clip_6_mutated():
     c = ax.contour(r, [N / 4])
     clip_path = mtransforms.TransformedPath(c.get_paths()[0], c.get_transform())
     ax.imshow(r, clip_path=clip_path, interpolation_stage='data')
+# Mutation info: Added interpolation_stage = data (Call ax.imshow)

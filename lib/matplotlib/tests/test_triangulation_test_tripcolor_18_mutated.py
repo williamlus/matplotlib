@@ -37,3 +37,4 @@ def test_tripcolor_18_mutated():
     plt.subplot(122)
     plt.tripcolor(triang, facecolors=Cfaces, edgecolors='k')
     plt.title('facecolors')
+# Mutation info: Added loc = center (Call plt.title)

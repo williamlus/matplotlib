@@ -156,3 +156,4 @@ def test_rc_spines_3_mutated():
     rc_dict = {'axes.spines.left': False, 'axes.spines.right': False, 'axes.spines.top': False, 'axes.spines.bottom': False}
     with matplotlib.rc_context(rc_dict):
         plt.subplots(sharey=False)
+# Mutation info: Added sharey = False (Call plt.subplots)

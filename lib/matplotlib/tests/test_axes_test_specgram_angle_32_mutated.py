@@ -175,3 +175,4 @@ def test_specgram_angle_32_mutated():
                 ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode=mode)
                 with pytest.raises(ValueError):
                     ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode=mode, scale='dB', detrend='mean')
+# Mutation info: Added detrend = mean (Call ax.specgram)

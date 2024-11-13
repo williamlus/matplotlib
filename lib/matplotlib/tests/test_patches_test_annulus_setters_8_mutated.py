@@ -26,3 +26,4 @@ def test_annulus_setters_8_mutated():
     ell.radii = (0.5, 0.3)
     ell.width = 0.1
     ell.angle = 45
+# Mutation info: (0-th Positional) aspect = 'equal' -> aspect = equal (Call ax.set_aspect)

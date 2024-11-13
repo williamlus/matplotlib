@@ -159,3 +159,4 @@ def test_boxplot_no_weird_whisker_11_mutated():
     ax1.set_yscale('symlog')
     ax1.yaxis.grid(False, which='minor')
     ax1.xaxis.grid(False)
+# Mutation info: (0-th Positional) value = 'log' -> value = symlog (Call ax1.set_yscale)

@@ -13,3 +13,4 @@ def test_labelbase_5_mutated():
     label.set_rotation(-90)
     label.set(ha='center', va='top')
     ax.add_artist(label)
+# Mutation info: Added squeeze = False (Call plt.subplots)

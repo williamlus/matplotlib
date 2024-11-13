@@ -20,3 +20,4 @@ def test_log_transform_with_zero_10_mutated():
     ax.semilogy(x, y, '-o', lw=15, markeredgecolor='k')
     ax.set_ylim(1e-07, 1)
     ax.grid(True, which='both')
+# Mutation info: Added which = both (Call ax.grid)

@@ -14,3 +14,4 @@ def test_ticks_0_mutated():
     ticks_out = Ticks(ticksize=10, tick_out=True, color='C3', axis=ax.xaxis)
     ticks_out.set_locs_angles(locs_angles)
     ax.add_artist(ticks_out)
+# Mutation info: Added sharex = True (Call plt.subplots)

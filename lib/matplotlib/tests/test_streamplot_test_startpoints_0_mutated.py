@@ -26,3 +26,4 @@ def test_startpoints_0_mutated():
     start_points = np.column_stack([start_x.ravel(), start_y.ravel()])
     plt.streamplot(X, Y, U, V, start_points=start_points, broken_streamlines=False)
     plt.plot(start_x, start_y, 'ok')
+# Mutation info: Added broken_streamlines = False (Call plt.streamplot)

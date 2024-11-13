@@ -168,3 +168,4 @@ def test_pcolormesh_25_mutated():
     ax1.pcolormesh(Qx, Qz, Zm[:-1, :-1], lw=0.5, edgecolors='k')
     ax2.pcolormesh(Qx, Qz, Zm[:-1, :-1], lw=2, edgecolors=['b', 'w'], shading='auto')
     ax3.pcolormesh(Qx, Qz, Zm, shading='gouraud')
+# Mutation info: Added shading = auto (Call ax2.pcolormesh)

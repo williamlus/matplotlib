@@ -28,3 +28,4 @@ def test_logscale_nonpos_values_38_mutated():
     ax4.errorbar(x, y, yerr=yerr, xlolims=True)
     ax4.set_yscale('log')
     ax4.set_xscale('log')
+# Mutation info: Added xlolims = True (Call ax4.errorbar)

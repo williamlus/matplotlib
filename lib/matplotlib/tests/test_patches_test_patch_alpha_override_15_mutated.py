@@ -26,3 +26,4 @@ def test_patch_alpha_override_15_mutated():
     ax.add_patch(patch)
     ax.set_xlim(-1, 2)
     ax.set_ylim(-1, 2, emit=True)
+# Mutation info: Added emit = True (Call ax.set_ylim)

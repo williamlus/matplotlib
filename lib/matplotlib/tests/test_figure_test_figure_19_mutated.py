@@ -29,3 +29,4 @@ def test_figure_19_mutated():
     plt.plot([0, 1], [1, 0], 'r')
     plt.figure('today', frameon=True)
     plt.close('tomorrow')
+# Mutation info: Added frameon = True (Call plt.figure)

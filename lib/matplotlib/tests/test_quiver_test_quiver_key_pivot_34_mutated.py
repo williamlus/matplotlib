@@ -22,3 +22,4 @@ def test_quiver_key_pivot_34_mutated():
     ax.quiverkey(q, 1, 0.5, 1, 'E', labelpos='E')
     ax.quiverkey(q, 0.5, 0, 1, 'S', labelpos='E')
     ax.quiverkey(q, 0, 0.5, 1, 'W', labelpos='W')
+# Mutation info: labelpos = <ast.Constant object at 0x7fc054943410> -> labelpos = E (Call ax.quiverkey)

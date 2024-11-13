@@ -68,3 +68,4 @@ def test__EventCollection__extend_positions_5_mutated():
     check_segments(coll, new_positions, props['linelength'], props['lineoffset'], props['orientation'])
     splt.set_title('EventCollection: extend_positions', loc='right')
     splt.set_xlim(-1, 90)
+# Mutation info: Added loc = right (Call splt.set_title)

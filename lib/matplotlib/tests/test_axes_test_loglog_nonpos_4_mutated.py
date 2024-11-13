@@ -170,3 +170,4 @@ def test_loglog_nonpos_4_mutated():
                 ax.set_xscale('log', nonpositive=mcx)
             if mcy:
                 ax.set_yscale('log', nonpositive=mcy)
+# Mutation info: Added squeeze = False (Call plt.subplots)

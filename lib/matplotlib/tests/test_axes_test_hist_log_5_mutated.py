@@ -157,3 +157,4 @@ def test_hist_log_5_mutated():
     data = np.concatenate([1 - data0, 1 + data0])
     fig, ax = plt.subplots(sharex=False)
     ax.hist(data, fill=False, log=True)
+# Mutation info: Added sharex = False (Call plt.subplots)

@@ -31,3 +31,4 @@ def test_connection_styles_13_mutated():
     for i, stylename in enumerate(sorted(styles)):
         patch = mpatches.FancyArrowPatch((0.1, i), (0.8, i + 0.5), arrowstyle='->', connectionstyle=stylename, mutation_scale=25)
         ax.add_patch(patch)
+# Mutation info: Added emit = False (Call ax.set_ylim)

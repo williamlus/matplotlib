@@ -171,3 +171,4 @@ def test_fill_units_8_mutated():
     ax4.plot([t], [value], yunits='deg', color='red')
     ax4.fill([t, t, t + day, t + day], [0 * units.deg, 0 * units.deg, 90 * units.deg, 0 * units.deg], facecolor='blue')
     fig.autofmt_xdate(ha='center')
+# Mutation info: Added ha = center (Call fig.autofmt_xdate)

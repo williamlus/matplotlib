@@ -44,3 +44,4 @@ def test_constrained_layout12_56_mutated():
     ax = fig.add_subplot(gs0[4:, 0])
     example_plot(ax, nodec=True)
     ax.set_xlabel('x-label', loc='right')
+# Mutation info: Added loc = right (Call ax.set_xlabel)

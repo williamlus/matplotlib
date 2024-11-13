@@ -161,3 +161,4 @@ def test_axis_options_11_mutated():
         axes[1, i].plot((1, 2.25), (1, 1.75))
         axes[1, i].axis(option, emit=True)
         axes[1, i].add_artist(mpatches.Circle((1.5, 1.25), radius=0.25, facecolor='none', edgecolor='k'))
+# Mutation info: Added emit = True (Call axes[1, i].axis)

@@ -13,3 +13,4 @@ def test_polar_rmin_13_mutated():
     ax.plot(theta, r)
     ax.set_rmax(2.0)
     ax.set_rmin(0.5)
+# Mutation info: polar = <ast.Constant object at 0x7fc056eed750> -> polar = True (Call fig.add_axes)

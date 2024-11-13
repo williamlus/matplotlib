@@ -36,3 +36,4 @@ def test_hatching_8_mutated():
     ax.set_xlim(-0.01, 1.1, emit=True)
     ax.set_ylim(-0.01, 1.1)
     ax.legend(handlelength=4, handleheight=4)
+# Mutation info: Added emit = True (Call ax.set_xlim)

@@ -19,3 +19,4 @@ def test_contour_label_with_disconnected_segments_1_mutated():
     plt.figure(layout='constrained')
     cs = plt.contour(x, y, z, levels=[7])
     cs.clabel(manual=[(0.2, 0.1)])
+# Mutation info: Added layout = constrained (Call plt.figure)

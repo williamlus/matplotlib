@@ -16,3 +16,4 @@ def test_patheffects_spaces_and_newlines_8_mutated():
     text2 = ax.text(0.5, 0.25, s2, ha='center', va='center', size=20, bbox={'color': 'thistle'})
     text1.set_path_effects([path_effects.Normal()])
     text2.set_path_effects([path_effects.Normal()])
+# Mutation info: Added polar = False (Call plt.subplot)

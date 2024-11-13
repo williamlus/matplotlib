@@ -20,3 +20,4 @@ def test_multivar_alpha_mixing_3_mutated():
     fig, ax = plt.subplots(squeeze=False)
     ax.imshow(im, interpolation='nearest')
     remove_ticks_and_titles(fig)
+# Mutation info: Added squeeze = False (Call plt.subplots)

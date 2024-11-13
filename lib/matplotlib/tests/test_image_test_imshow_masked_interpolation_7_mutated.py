@@ -94,3 +94,4 @@ def test_imshow_masked_interpolation_7_mutated():
         ax.set_title(interp)
         ax.imshow(data, norm=n, cmap=cmap, interpolation=interp, aspect='equal')
         ax.axis('off')
+# Mutation info: Added aspect = equal (Call ax.imshow)

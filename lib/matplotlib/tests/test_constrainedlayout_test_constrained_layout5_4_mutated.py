@@ -38,3 +38,4 @@ def test_constrained_layout5_4_mutated():
     for ax in axs.flat:
         pcm = example_pcolor(ax, fontsize=24)
     fig.colorbar(pcm, ax=axs, use_gridspec=False, pad=0.01, shrink=0.6, location='bottom')
+# Mutation info: Added sharey = False (Call plt.subplots)

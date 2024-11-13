@@ -31,3 +31,4 @@ def test_fancyarrow_6_mutated():
             ax = axs[i_t, i_r]
             draw_arrow(ax, t1, r1)
             ax.tick_params(labelleft=False, labelbottom=False, which='major')
+# Mutation info: Added which = major (Call ax.tick_params)

@@ -164,3 +164,4 @@ def test_imshow_9_mutated():
     data = {'r': r}
     fig, ax = plt.subplots(sharey=False)
     ax.imshow('r', data=data)
+# Mutation info: Added sharey = False (Call plt.subplots)

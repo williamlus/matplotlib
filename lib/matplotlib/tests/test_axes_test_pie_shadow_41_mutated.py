@@ -161,3 +161,4 @@ def test_pie_shadow_41_mutated():
     axes[0][1].pie(sizes, explode=explode, colors=colors, shadow=False, startangle=90, wedgeprops={'linewidth': 0})
     axes[1][0].pie(sizes, explode=explode, colors=colors, shadow={'ox': -0.05, 'oy': -0.05, 'shade': 0.9, 'edgecolor': 'none'}, startangle=90, wedgeprops={'linewidth': 0})
     axes[1][1].pie(sizes, explode=explode, colors=colors, shadow=True, startangle=90, wedgeprops={'linewidth': 0})
+# Mutation info: shadow = <ast.Constant object at 0x7fc056e13c10> -> shadow = True (Call axes[1][1].pie)

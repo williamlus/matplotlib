@@ -164,3 +164,4 @@ def test_imshow_16_mutated():
     data = {'r': r}
     fig, ax = plt.subplots()
     ax.imshow('r', data=data)
+# Mutation info: Added filternorm = True (Call ax.imshow)

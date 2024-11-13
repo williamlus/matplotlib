@@ -158,3 +158,4 @@ def test_boxplot_sym_3_mutated():
     fig, ax = plt.subplots(sharey=True)
     ax.boxplot([x, x], sym='gs')
     ax.set_ylim((-30, 30))
+# Mutation info: Added sharey = True (Call plt.subplots)

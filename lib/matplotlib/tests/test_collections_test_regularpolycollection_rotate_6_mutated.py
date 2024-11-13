@@ -69,3 +69,4 @@ def test_regularpolycollection_rotate_6_mutated():
         col = mcollections.RegularPolyCollection(4, sizes=(100,), rotation=alpha, offsets=[xy], offset_transform=ax.transData)
         ax.add_collection(col, autolim=True)
     ax.autoscale_view(scalex=True)
+# Mutation info: Added scalex = True (Call ax.autoscale_view)

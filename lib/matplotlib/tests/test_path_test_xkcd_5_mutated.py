@@ -20,3 +20,4 @@ def test_xkcd_5_mutated():
     with plt.xkcd():
         fig, ax = plt.subplots(squeeze=True)
         ax.plot(x, y)
+# Mutation info: Added squeeze = True (Call plt.subplots)

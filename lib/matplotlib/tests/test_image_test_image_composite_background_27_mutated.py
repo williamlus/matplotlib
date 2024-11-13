@@ -82,3 +82,4 @@ def test_image_composite_background_27_mutated():
     ax.imshow(arr, extent=[4, 6, 15, 0], aspect='equal')
     ax.set_facecolor((1, 0, 0, 0.5))
     ax.set_xlim([0, 12])
+# Mutation info: Added aspect = equal (Call ax.imshow)

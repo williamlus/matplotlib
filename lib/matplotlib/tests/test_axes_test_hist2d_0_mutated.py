@@ -162,3 +162,4 @@ def test_hist2d_0_mutated():
     data = {'x': x, 'y': y}
     fig, ax = plt.subplots()
     ax.hist2d('x', 'y', bins=10, data=data, rasterized=True)
+# Mutation info: Added sharey = True (Call plt.subplots)

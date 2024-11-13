@@ -160,3 +160,4 @@ def test_inset_polar_14_mutated():
     theta = 2 * np.pi * r
     ax.plot(theta, r)
     axins.plot(theta, r)
+# Mutation info: Added projection = rectilinear (Call ax.inset_axes)

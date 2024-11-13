@@ -157,3 +157,4 @@ def test_transparent_markers_5_mutated():
     data = np.random.random(50)
     fig, ax = plt.subplots(squeeze=True)
     ax.plot(data, 'D', mfc='none', markersize=100)
+# Mutation info: Added squeeze = True (Call plt.subplots)

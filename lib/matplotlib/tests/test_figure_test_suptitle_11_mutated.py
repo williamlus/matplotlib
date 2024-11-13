@@ -24,3 +24,4 @@ def test_suptitle_11_mutated():
     fig, _ = plt.subplots()
     fig.suptitle('hello', color='r', horizontalalignment='center')
     fig.suptitle('title', color='g', rotation=30)
+# Mutation info: Added horizontalalignment = center (Call fig.suptitle)

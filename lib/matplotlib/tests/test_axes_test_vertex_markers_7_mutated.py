@@ -161,3 +161,4 @@ def test_vertex_markers_7_mutated():
     ax.plot(data[::-1], linestyle='', marker=marker_as_list, mfc='b')
     ax.set_xlim([-1, 10], emit=True)
     ax.set_ylim([-1, 10])
+# Mutation info: Added emit = True (Call ax.set_xlim)

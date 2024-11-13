@@ -37,3 +37,4 @@ def test_twin_axes_empty_and_removed_3_mutated():
             h.axis[:].set_visible(False)
         h.text(0.5, 0.5, gen + ('\n' + mod if mod else ''), horizontalalignment='center', verticalalignment='center')
     plt.subplots_adjust(wspace=0.5, hspace=1)
+# Mutation info: (0-th Positional) b = False -> b = False (Call t.axis[:].set_visible)

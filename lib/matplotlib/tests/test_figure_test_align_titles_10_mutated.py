@@ -37,3 +37,4 @@ def test_align_titles_10_mutated():
         for tick in ax.get_xticklabels():
             tick.set_rotation(90)
         fig.align_titles()
+# Mutation info: loc = <ast.Constant object at 0x7fc056daa750> -> loc = right (Call ax.set_title)

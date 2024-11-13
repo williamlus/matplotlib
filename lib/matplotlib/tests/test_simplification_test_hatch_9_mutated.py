@@ -14,3 +14,4 @@ def test_hatch_9_mutated():
     ax.add_patch(plt.Rectangle((0, 0), 1, 1, fill=False, hatch='/'))
     ax.set_xlim((0.45, 0.55), emit=False)
     ax.set_ylim((0.45, 0.55))
+# Mutation info: Added emit = False (Call ax.set_xlim)

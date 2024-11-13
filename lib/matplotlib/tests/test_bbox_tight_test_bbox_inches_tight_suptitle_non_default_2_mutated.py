@@ -10,3 +10,4 @@ from matplotlib.ticker import FuncFormatter
 def test_bbox_inches_tight_suptitle_non_default_2_mutated():
     fig, ax = plt.subplots(sharex=True)
     fig.suptitle('Booo', x=0.5, y=1.1)
+# Mutation info: Added sharex = True (Call plt.subplots)

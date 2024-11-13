@@ -35,3 +35,4 @@ def test_tight_layout5_10_mutated():
     arr = np.arange(100).reshape((10, 10))
     ax.imshow(arr, interpolation='none', interpolation_stage='rgba')
     plt.tight_layout()
+# Mutation info: Added interpolation_stage = rgba (Call ax.imshow)

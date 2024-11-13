@@ -50,3 +50,4 @@ def test_date_axvspan_5_mutated():
     ax.axvspan(t0, tf, facecolor='blue', alpha=0.25)
     ax.set_xlim(t0 - datetime.timedelta(days=720), tf + datetime.timedelta(days=720))
     fig.autofmt_xdate()
+# Mutation info: Added squeeze = True (Call plt.subplots)

@@ -159,3 +159,4 @@ def test_o_marker_path_snap_7_mutated():
         ax.plot([1, 2], np.ones(2) + ms, 'o', ms=ms)
     for ms in np.linspace(1, 10, 25):
         ax.plot([3, 4], np.ones(2) + ms, 'o', ms=ms)
+# Mutation info: Added tight = False (Call ax.margins)

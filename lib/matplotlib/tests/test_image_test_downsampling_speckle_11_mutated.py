@@ -86,3 +86,4 @@ def test_downsampling_speckle_11_mutated():
     axs[0].imshow(np.triu(img), cmap=cm, norm=norm, interpolation_stage='rgba')
     axs[1].set_title("interpolation='auto', stage='auto'", loc='center')
     axs[1].imshow(np.triu(img), cmap=cm, norm=norm)
+# Mutation info: Added loc = center (Call axs[1].set_title)

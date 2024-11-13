@@ -45,3 +45,4 @@ def test_constrained_layout11rat_27_mutated():
     fig.colorbar(pcm, ax=axs, shrink=0.6, aspect=70.0)
     ax = fig.add_subplot(gsl[0], polar=True)
     example_plot(ax, fontsize=9)
+# Mutation info: Added polar = True (Call fig.add_subplot)

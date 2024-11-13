@@ -160,3 +160,4 @@ def test_vlines_hlines_blended_transform_8_mutated():
     hax.hlines([10, 9], xmin=0, xmax=0.5, transform=hax.get_yaxis_transform(), colors='r', linestyles='dotted')
     vax.plot(t, s, '^')
     vax.vlines([6, 7], ymin=0, ymax=0.15, transform=vax.get_xaxis_transform(), colors='r')
+# Mutation info: Added linestyles = dotted (Call hax.hlines)

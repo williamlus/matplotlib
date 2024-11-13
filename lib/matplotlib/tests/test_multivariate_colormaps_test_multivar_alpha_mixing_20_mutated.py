@@ -20,3 +20,4 @@ def test_multivar_alpha_mixing_20_mutated():
     fig, ax = plt.subplots()
     ax.imshow(im, interpolation='nearest')
     remove_ticks_and_titles(fig)
+# Mutation info: Added clip = True (Call cmap)

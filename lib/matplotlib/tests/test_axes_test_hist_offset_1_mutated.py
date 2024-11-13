@@ -158,3 +158,4 @@ def test_hist_offset_1_mutated():
     fig, ax = plt.subplots(squeeze=True)
     ax.hist(d1, bottom=5)
     ax.hist(d2, bottom=15)
+# Mutation info: Added squeeze = True (Call plt.subplots)

@@ -19,3 +19,4 @@ def test_barbs_pivot_5_mutated():
     fig, ax = plt.subplots(sharex=True)
     ax.barbs(X, Y, U, V, fill_empty=True, rounding=False, pivot=1.7, sizes=dict(emptybarb=0.25, spacing=0.2, height=0.3))
     ax.scatter(X, Y, s=49, c='black')
+# Mutation info: Added sharex = True (Call plt.subplots)

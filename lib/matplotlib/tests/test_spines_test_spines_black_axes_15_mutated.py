@@ -14,3 +14,4 @@ def test_spines_black_axes_15_mutated():
     ax.set_xticks([])
     ax.set_yticks([])
     ax.set_facecolor((0, 0, 0))
+# Mutation info: Added projection = aitoff (Call fig.add_axes)

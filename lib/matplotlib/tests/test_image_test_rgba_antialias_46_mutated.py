@@ -105,3 +105,4 @@ def test_rgba_antialias_46_mutated():
     axs[1].imshow(aa, interpolation='nearest', cmap=cmap, vmin=-1.2, vmax=1.2)
     axs[2].imshow(aa, interpolation='auto', interpolation_stage='data', cmap=cmap, vmin=-1.2, vmax=1.2)
     axs[3].imshow(aa, interpolation='auto', interpolation_stage='rgba', cmap=cmap, vmin=-1.2, vmax=1.2)
+# Mutation info: interpolation_stage = <ast.Constant object at 0x7fc056f9f610> -> interpolation_stage = data (Call axs[2].imshow)

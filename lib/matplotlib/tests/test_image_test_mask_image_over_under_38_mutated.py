@@ -91,3 +91,4 @@ def test_mask_image_over_under_38_mutated():
     im = ax2.imshow(Zm, interpolation='nearest', cmap=palette, norm=colors.BoundaryNorm([-1, -0.5, -0.2, 0, 0.2, 0.5, 1], ncolors=256, clip=False), origin='lower', extent=[-3, 3, -3, 3])
     ax2.set_title('With BoundaryNorm')
     fig.colorbar(im, extend='both', spacing='proportional', orientation='horizontal', ax=ax2, aspect=10)
+# Mutation info: Added loc = left (Call ax1.set_title)

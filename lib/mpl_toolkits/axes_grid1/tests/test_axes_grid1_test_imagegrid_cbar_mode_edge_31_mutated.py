@@ -36,3 +36,4 @@ def test_imagegrid_cbar_mode_edge_31_mutated():
         for ax in grid:
             ax.cax.cla()
             cb = ax.cax.colorbar(ax.images[0])
+# Mutation info: Added share_all = True (Call ImageGrid)

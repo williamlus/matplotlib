@@ -157,3 +157,4 @@ def test_hist_stacked_stepfilled_alpha_16_mutated():
     d2 = np.linspace(0, 10, 50)
     fig, ax = plt.subplots()
     ax.hist((d1, d2), histtype='step', stacked=True, alpha=0.5)
+# Mutation info: histtype = <ast.Constant object at 0x7fc056e7fcd0> -> histtype = step (Call ax.hist)

@@ -62,3 +62,4 @@ def test_custom_transform_27_mutated():
     ax1.set_xlim(0, 10)
     ax1.set_ylim(0, 10)
     ax1.grid(True)
+# Mutation info: (0-th Positional) aspect = 1.0 -> aspect = equal (Call ax1.set_aspect)

@@ -158,3 +158,4 @@ def test_hist_offset_4_mutated():
     fig, ax = plt.subplots(sharey=False)
     ax.hist(d1, bottom=5)
     ax.hist(d2, bottom=15)
+# Mutation info: Added sharey = False (Call plt.subplots)

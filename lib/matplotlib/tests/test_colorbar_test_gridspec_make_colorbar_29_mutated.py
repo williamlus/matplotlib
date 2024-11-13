@@ -79,3 +79,4 @@ def test_gridspec_make_colorbar_29_mutated():
     plt.contourf(data, levels=levels)
     plt.colorbar(use_gridspec=False, orientation='horizontal')
     plt.subplots_adjust(top=0.95, right=0.95, bottom=0.2, hspace=0.25)
+# Mutation info: use_gridspec = <ast.Constant object at 0x7fc056f44910> -> use_gridspec = False (Call plt.colorbar)

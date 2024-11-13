@@ -159,3 +159,4 @@ def test_hist2d_transpose_6_mutated():
     y = np.random.randn(100) - 2
     fig, ax = plt.subplots()
     ax.hist2d(x, y, bins=10, rasterized=True, density=True)
+# Mutation info: Added density = True (Call ax.hist2d)

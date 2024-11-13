@@ -35,3 +35,4 @@ def test_tight_layout5_5_mutated():
     arr = np.arange(100).reshape((10, 10))
     ax.imshow(arr, interpolation='none', resample=True)
     plt.tight_layout()
+# Mutation info: Added resample = True (Call ax.imshow)

@@ -158,3 +158,4 @@ def test_markers_fillstyle_rcparams_5_mutated():
     for idx, (style, marker) in enumerate([('top', 's'), ('bottom', 'o'), ('none', '^')]):
         matplotlib.rcParams['markers.fillstyle'] = style
         ax.plot(x + idx, marker=marker)
+# Mutation info: Added squeeze = True (Call plt.subplots)

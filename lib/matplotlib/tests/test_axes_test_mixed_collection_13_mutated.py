@@ -167,3 +167,4 @@ def test_mixed_collection_13_mutated():
     ax.add_collection(p2)
     ax.set_xlim(0, 16)
     ax.set_ylim(0, 16, emit=True)
+# Mutation info: Added emit = True (Call ax.set_ylim)

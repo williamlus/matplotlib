@@ -26,3 +26,4 @@ def test_ticklabels_1_mutated():
     ax.add_artist(axislabel)
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
+# Mutation info: Added sharey = True (Call plt.subplots)

@@ -20,3 +20,4 @@ def test_noscale_11_mutated():
     Z = np.sin(Y ** 2)
     fig, ax = plt.subplots()
     ax.imshow(Z, cmap='gray', interpolation='none', origin='upper')
+# Mutation info: Added origin = upper (Call ax.imshow)

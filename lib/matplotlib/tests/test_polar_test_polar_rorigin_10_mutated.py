@@ -14,3 +14,4 @@ def test_polar_rorigin_10_mutated():
     ax.set_rmax(2.0)
     ax.set_rmin(0.5)
     ax.set_rorigin(0.0)
+# Mutation info: polar = <ast.Constant object at 0x7fc06bf97090> -> polar = True (Call fig.add_axes)

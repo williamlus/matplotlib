@@ -164,3 +164,4 @@ def test_twinx_axis_scales_4_mutated():
     ax2.plot(x2, y2, 'r--', lw=5)
     ax.margins(0, 0)
     ax2.margins(0, 0)
+# Mutation info: Added layout = tight (Call plt.figure)

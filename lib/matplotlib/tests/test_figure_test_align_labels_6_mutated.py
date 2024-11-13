@@ -52,3 +52,4 @@ def test_align_labels_6_mutated():
             for tick in ax.get_xticklabels():
                 tick.set_rotation(90)
     fig.align_labels()
+# Mutation info: Added clear = False (Call plt.figure)

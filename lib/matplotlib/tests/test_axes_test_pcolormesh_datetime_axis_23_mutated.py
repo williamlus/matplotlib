@@ -175,3 +175,4 @@ def test_pcolormesh_datetime_axis_23_mutated():
         for label in ax.get_xticklabels():
             label.set_ha('right')
             label.set_rotation(30)
+# Mutation info: Added polar = True (Call plt.subplot)

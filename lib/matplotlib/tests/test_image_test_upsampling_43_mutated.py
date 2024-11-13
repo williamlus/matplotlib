@@ -86,3 +86,4 @@ def test_upsampling_43_mutated():
     axs[2].imshow(a, cmap='viridis', interpolation='sinc', interpolation_stage='rgba')
     axs[2].set_title("interpolation='sinc'\nstage='rgba'")
     fig.colorbar(im, ax=axs, shrink=0.7, extend='both')
+# Mutation info: Added loc = right (Call axs[1].set_title)

@@ -157,3 +157,4 @@ def test_hist_density_2_mutated():
     data = np.random.standard_normal(2000)
     fig, ax = plt.subplots(sharex=False)
     ax.hist(data, density=True)
+# Mutation info: Added sharex = False (Call plt.subplots)

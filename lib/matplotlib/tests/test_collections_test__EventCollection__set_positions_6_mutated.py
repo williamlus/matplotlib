@@ -68,3 +68,4 @@ def test__EventCollection__set_positions_6_mutated():
     check_segments(coll, new_positions, props['linelength'], props['lineoffset'], props['orientation'])
     splt.set_title('EventCollection: set_positions', loc='left')
     splt.set_xlim(-1, 90)
+# Mutation info: Added loc = left (Call splt.set_title)

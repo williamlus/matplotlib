@@ -157,3 +157,4 @@ def test_hist_density_10_mutated():
     data = np.random.standard_normal(2000)
     fig, ax = plt.subplots()
     ax.hist(data, density=True, orientation='vertical')
+# Mutation info: Added orientation = vertical (Call ax.hist)

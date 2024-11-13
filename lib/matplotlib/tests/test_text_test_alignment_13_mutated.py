@@ -35,3 +35,4 @@ def test_alignment_13_mutated():
     ax.set_ylim(0, 1.5)
     ax.set_xticks([])
     ax.set_yticks([])
+# Mutation info: Added frameon = True (Call plt.figure)

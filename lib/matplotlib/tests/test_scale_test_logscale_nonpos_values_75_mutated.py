@@ -28,3 +28,4 @@ def test_logscale_nonpos_values_75_mutated():
     ax4.errorbar(x, y, yerr=yerr)
     ax4.set_yscale('log')
     ax4.set_xscale('logit')
+# Mutation info: (0-th Positional) value = 'log' -> value = logit (Call ax4.set_xscale)

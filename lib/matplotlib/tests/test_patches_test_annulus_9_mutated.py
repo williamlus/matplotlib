@@ -19,3 +19,4 @@ def test_annulus_9_mutated():
     ax.add_patch(cir)
     ax.add_patch(ell)
     ax.set_aspect('equal')
+# Mutation info: (0-th Positional) aspect = 'equal' -> aspect = equal (Call ax.set_aspect)

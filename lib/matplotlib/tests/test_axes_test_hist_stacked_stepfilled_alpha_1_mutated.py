@@ -157,3 +157,4 @@ def test_hist_stacked_stepfilled_alpha_1_mutated():
     d2 = np.linspace(0, 10, 50)
     fig, ax = plt.subplots(sharex=True)
     ax.hist((d1, d2), histtype='stepfilled', stacked=True, alpha=0.5)
+# Mutation info: Added sharex = True (Call plt.subplots)

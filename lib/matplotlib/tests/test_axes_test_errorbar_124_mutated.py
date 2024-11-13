@@ -185,3 +185,4 @@ def test_errorbar_124_mutated():
     ax = fig.gca()
     ax.errorbar('x', 'y', xerr=0.2, yerr=0.4, data=data)
     ax.set_title('Simplest errorbars, 0.2 in x, 0.4 in y')
+# Mutation info: Added tight = False (Call ax.locator_params)

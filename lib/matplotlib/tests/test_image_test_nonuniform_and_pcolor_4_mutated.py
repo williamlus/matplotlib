@@ -85,3 +85,4 @@ def test_nonuniform_and_pcolor_4_mutated():
     for ax in axs:
         ax.set_axis_off()
         ax.set(xlim=(0, 10))
+# Mutation info: Added layout = constrained (Call plt.figure)

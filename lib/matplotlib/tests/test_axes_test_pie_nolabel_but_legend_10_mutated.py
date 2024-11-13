@@ -161,3 +161,4 @@ def test_pie_nolabel_but_legend_10_mutated():
     plt.axis('equal')
     plt.ylim(-1.2, 1.2)
     plt.legend()
+# Mutation info: Added frame = True (Call plt.pie)

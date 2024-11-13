@@ -68,3 +68,4 @@ def test_stem3d_4_mutated():
         ax.set_title(f'orientation={zdir}')
         markerline.set(markerfacecolor='none', markeredgewidth=2)
         baseline.set_linewidth(3)
+# Mutation info: Added squeeze = True (Call plt.subplots)

@@ -26,3 +26,4 @@ def test_hatching_16_mutated():
     ax.add_collection(rect4)
     ax.set_xlim(0, 7)
     ax.set_ylim(0, 9)
+# Mutation info: Added rotation_point = center (Call mpatches.Rectangle)

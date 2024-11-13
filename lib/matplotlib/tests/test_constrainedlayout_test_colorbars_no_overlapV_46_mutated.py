@@ -38,3 +38,4 @@ def test_colorbars_no_overlapV_46_mutated():
         im = ax.imshow([[1, 2], [3, 4]], resample=True)
         fig.colorbar(im, ax=ax, orientation='vertical')
     fig.suptitle('foo')
+# Mutation info: Added resample = True (Call ax.imshow)

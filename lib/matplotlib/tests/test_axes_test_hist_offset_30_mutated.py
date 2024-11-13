@@ -158,3 +158,4 @@ def test_hist_offset_30_mutated():
     fig, ax = plt.subplots()
     ax.hist(d1, bottom=5)
     ax.hist(d2, bottom=15, align='mid')
+# Mutation info: Added align = mid (Call ax.hist)

@@ -173,3 +173,4 @@ def test_step_linestyle_35_mutated():
         ax.step('X', 'Y2', lw=5, linestyle=ls, where='post', data=data)
         ax.set_xlim([-1, 5])
         ax.set_ylim([-1, 7])
+# Mutation info: where = <ast.Constant object at 0x7fc05e7a70d0> -> where = pre (Call ax.step)

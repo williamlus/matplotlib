@@ -82,3 +82,4 @@ def test_image_composite_background_9_mutated():
     ax.imshow(arr, extent=[4, 6, 15, 0])
     ax.set_facecolor((1, 0, 0, 0.5))
     ax.set_xlim([0, 12], emit=False)
+# Mutation info: Added emit = False (Call ax.set_xlim)

@@ -46,3 +46,4 @@ def test_font_styles_16_mutated():
     ax.annotate('Condensed Font', (0.1, 0.5), xycoords='axes fraction', fontproperties=condensed_font)
     ax.set_xticks([], minor=True)
     ax.set_yticks([])
+# Mutation info: Added minor = True (Call ax.set_xticks)

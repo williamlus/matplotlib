@@ -37,3 +37,4 @@ def test_align_titles_8_mutated():
         for tick in ax.get_xticklabels():
             tick.set_rotation(90)
         fig.align_titles()
+# Mutation info: Added loc = center (Call ax.set_xlabel)

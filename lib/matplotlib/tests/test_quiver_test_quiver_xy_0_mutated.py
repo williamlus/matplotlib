@@ -18,3 +18,4 @@ def test_quiver_xy_0_mutated():
     ax.set_xlim(0, 1.1, emit=True)
     ax.set_ylim(0, 1.1)
     ax.grid()
+# Mutation info: Added emit = True (Call ax.set_xlim)

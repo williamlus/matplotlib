@@ -17,3 +17,4 @@ def test_spines_axes_positions_23_mutated():
     ax.xaxis.set_ticks_position('bottom')
     ax.spines.left.set_color('none')
     ax.spines.bottom.set_color('none')
+# Mutation info: (0-th Positional) position = 'top' -> position = bottom (Call ax.xaxis.set_ticks_position)

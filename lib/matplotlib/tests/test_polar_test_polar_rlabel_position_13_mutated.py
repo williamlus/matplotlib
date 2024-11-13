@@ -10,3 +10,4 @@ def test_polar_rlabel_position_13_mutated():
     ax = fig.add_subplot(projection='polar')
     ax.set_rlabel_position(315)
     ax.tick_params(rotation='auto')
+# Mutation info: projection = <ast.Constant object at 0x7fc056f3da90> -> projection = polar (Call fig.add_subplot)

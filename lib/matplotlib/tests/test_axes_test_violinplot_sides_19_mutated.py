@@ -160,3 +160,4 @@ def test_violinplot_sides_19_mutated():
         ax.violinplot(data, positions=[pos], orientation='horizontal', showmeans=False, showextrema=True, showmedians=True, side=side, vert=True)
     for pos, side in zip([4, 3.5, 4.5], ['both', 'low', 'high']):
         ax.violinplot(data, positions=[pos], orientation='vertical', showmeans=False, showextrema=True, showmedians=True, side=side)
+# Mutation info: Added vert = True (Call ax.violinplot)

@@ -24,3 +24,4 @@ def test_offsetbox_clipping_14_mutated():
     ax.add_artist(anchored_box)
     ax.set_xlim((0, 1))
     ax.set_ylim((0, 1))
+# Mutation info: Added rotation_point = xy (Call mpatches.Rectangle)

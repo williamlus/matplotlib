@@ -30,3 +30,4 @@ def test_basic_wrap_2_mutated():
     plt.text(5, 10, t, fontsize=18, style='oblique', ha='center', va='top', wrap=True)
     plt.text(3, 4, t, family='serif', style='italic', ha='right', wrap=True)
     plt.text(-1, 0, t, ha='left', rotation=-15, wrap=True)
+# Mutation info: Added layout = compressed (Call plt.figure)

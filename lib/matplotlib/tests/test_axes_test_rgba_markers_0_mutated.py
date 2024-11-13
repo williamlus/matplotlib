@@ -165,3 +165,4 @@ def test_rgba_markers_0_mutated():
                 axs[i].plot(j + 1, k + 3, 'x', mec=rcolor, alpha=alpha, **kw)
     for ax in axs:
         ax.axis([-1, 4, 0, 5])
+# Mutation info: Added sharex = False (Call plt.subplots)

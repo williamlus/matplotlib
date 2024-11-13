@@ -14,3 +14,4 @@ def test_ticks_9_mutated():
     ticks_out = Ticks(ticksize=10, tick_out=True, color='C3', axis=ax.xaxis)
     ticks_out.set_locs_angles(locs_angles)
     ax.add_artist(ticks_out)
+# Mutation info: (0-th Positional) b = False -> b = True (Call ax.yaxis.set_visible)

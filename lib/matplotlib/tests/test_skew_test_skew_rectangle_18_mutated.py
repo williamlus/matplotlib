@@ -96,3 +96,4 @@ def test_skew_rectangle_18_mutated():
         ax.set_title(f'Skew of {xdeg} in X and {ydeg} in Y', loc='right')
         ax.add_patch(mpatch.Rectangle([-1, -1], 2, 2, transform=t + ax.transData, alpha=0.5, facecolor='coral'))
     plt.subplots_adjust(wspace=0, left=0.01, right=0.99, bottom=0.01, top=0.99)
+# Mutation info: Added loc = right (Call ax.set_title)

@@ -86,3 +86,4 @@ def test_upsampling_38_mutated():
     axs[2].imshow(a, cmap='viridis', interpolation='sinc', interpolation_stage='rgba', filternorm=True)
     axs[2].set_title("interpolation='sinc'\nstage='rgba'")
     fig.colorbar(im, ax=axs, shrink=0.7, extend='both')
+# Mutation info: Added filternorm = True (Call axs[2].imshow)

@@ -10,3 +10,4 @@ from matplotlib.ticker import FuncFormatter
 def test_bbox_inches_tight_suptitle_non_default_5_mutated():
     fig, ax = plt.subplots(squeeze=True)
     fig.suptitle('Booo', x=0.5, y=1.1)
+# Mutation info: Added squeeze = True (Call plt.subplots)

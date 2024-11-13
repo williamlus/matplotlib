@@ -168,3 +168,4 @@ def test_pcolormesh_9_mutated():
     ax1.pcolormesh(Qx, Qz, Zm[:-1, :-1], lw=0.5, edgecolors='k', rasterized=True)
     ax2.pcolormesh(Qx, Qz, Zm[:-1, :-1], lw=2, edgecolors=['b', 'w'])
     ax3.pcolormesh(Qx, Qz, Zm, shading='gouraud')
+# Mutation info: Added rasterized = True (Call ax1.pcolormesh)

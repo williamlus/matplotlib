@@ -31,3 +31,4 @@ def test_legend_stackplot_10_mutated():
     ax.set_xlim((0, 10))
     ax.set_ylim((0, 70), emit=True)
     ax.legend(loc='best')
+# Mutation info: Added emit = True (Call ax.set_ylim)

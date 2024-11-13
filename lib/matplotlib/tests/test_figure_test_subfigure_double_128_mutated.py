@@ -48,3 +48,4 @@ def test_subfigure_double_128_mutated():
     subfigsnest[1].supxlabel('supxlabel', va='baseline')
     subfigsnest[1].supylabel('supylabel')
     axsRight = subfigs[1].subplots(2, 2)
+# Mutation info: Added va = baseline (Call subfigsnest[1].supxlabel)

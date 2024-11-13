@@ -30,3 +30,4 @@ def test_patch_alpha_coloring_20_mutated():
     ax.add_patch(patch)
     ax.set_xlim(-1, 2)
     ax.set_ylim(-1, 2)
+# Mutation info: Added projection = aitoff (Call plt.axes)

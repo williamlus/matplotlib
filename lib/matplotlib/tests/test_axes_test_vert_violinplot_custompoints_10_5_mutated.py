@@ -157,3 +157,4 @@ def test_vert_violinplot_custompoints_10_5_mutated():
     np.random.seed(605551275)
     data = [np.random.normal(size=100) for _ in range(4)]
     ax.violinplot(data, positions=range(4), showmeans=False, showextrema=False, showmedians=False, points=10)
+# Mutation info: Added polar = False (Call plt.axes)

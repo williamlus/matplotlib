@@ -168,3 +168,4 @@ def test_preset_clip_paths_12_mutated():
     fig.add_artist(poly3, clip=True)
     ax.set_xlim(-1, 1)
     ax.set_ylim(-1, 1, emit=False)
+# Mutation info: Added emit = False (Call ax.set_ylim)

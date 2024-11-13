@@ -158,3 +158,4 @@ def test_hist_step_26_mutated():
     ax.hist(d1, histtype='bar')
     ax.set_ylim(0, 10)
     ax.set_xlim(-1, 5)
+# Mutation info: histtype = <ast.Constant object at 0x7fc056c359d0> -> histtype = bar (Call ax.hist)

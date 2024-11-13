@@ -62,3 +62,4 @@ def test_custom_transform_5_mutated():
     ax1.set_xlim(0, 10)
     ax1.set_ylim(0, 10, auto=False)
     ax1.grid(True)
+# Mutation info: Added auto = False (Call ax1.set_ylim)

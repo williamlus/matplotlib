@@ -48,3 +48,4 @@ def test_subfigure_double_118_mutated():
     subfigsnest[1].supxlabel('supxlabel', verticalalignment='bottom')
     subfigsnest[1].supylabel('supylabel')
     axsRight = subfigs[1].subplots(2, 2)
+# Mutation info: Added verticalalignment = bottom (Call subfigsnest[1].supxlabel)

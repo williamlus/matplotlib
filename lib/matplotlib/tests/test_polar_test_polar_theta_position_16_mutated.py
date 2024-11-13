@@ -13,3 +13,4 @@ def test_polar_theta_position_16_mutated():
     ax.plot(theta, r)
     ax.set_theta_zero_location('NW', 30)
     ax.set_theta_direction('clockwise')
+# Mutation info: polar = <ast.Constant object at 0x7fc054a27c50> -> polar = False (Call fig.add_axes)

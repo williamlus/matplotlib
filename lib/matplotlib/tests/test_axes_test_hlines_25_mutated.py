@@ -178,3 +178,4 @@ def test_hlines_25_mutated():
     xmax5 = np.ma.masked_equal([13, 14, 15, 16, 17, 18], 18)
     ax5.hlines(y5, xmin5, xmax5, colors='k', linewidth=2)
     ax5.set_ylim(0, 15, auto=False)
+# Mutation info: Added auto = False (Call ax5.set_ylim)

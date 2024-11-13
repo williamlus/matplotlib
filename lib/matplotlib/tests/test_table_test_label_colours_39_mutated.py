@@ -28,3 +28,4 @@ def test_label_colours_39_mutated():
     ax4 = fig.add_subplot(4, 1, 4, projection='polar')
     ax4.axis('off')
     ax4.table(cellText=cellText, colColours=colours, colLabels=['Header'] * dim, loc='best')
+# Mutation info: Added projection = polar (Call fig.add_subplot)

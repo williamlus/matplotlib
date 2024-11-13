@@ -33,3 +33,4 @@ def test_tight_layout9_5_mutated():
     f, axarr = plt.subplots(2, 2, squeeze=False)
     axarr[1][1].set_visible(False)
     plt.tight_layout()
+# Mutation info: Added squeeze = False (Call plt.subplots)

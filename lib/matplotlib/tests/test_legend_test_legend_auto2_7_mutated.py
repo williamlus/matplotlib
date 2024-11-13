@@ -27,3 +27,4 @@ def test_legend_auto2_7_mutated():
     b1 = ax.bar(x, x, align='center', color='m')
     b2 = ax.bar(x, x[::-1], align='edge', color='g')
     ax.legend([b1[0], b2[0]], ['up', 'down'], loc='best')
+# Mutation info: align = <ast.Constant object at 0x7fc056c8b610> -> align = center (Call ax.bar)

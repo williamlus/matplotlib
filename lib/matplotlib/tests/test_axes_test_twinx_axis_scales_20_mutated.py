@@ -164,3 +164,4 @@ def test_twinx_axis_scales_20_mutated():
     ax2.plot(x2, y2, 'r--', lw=5)
     ax.margins(0, 0)
     ax2.margins(0, 0, tight=True)
+# Mutation info: Added tight = True (Call ax2.margins)

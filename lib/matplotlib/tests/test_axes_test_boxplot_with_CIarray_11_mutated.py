@@ -160,3 +160,4 @@ def test_boxplot_with_CIarray_11_mutated():
     CIs = np.array([[-1.5, 3.0], [-1.0, 3.5]])
     ax.boxplot([x, x], bootstrap=10000, usermedians=[None, 1.0], conf_intervals=CIs, notch=1, vert=True)
     ax.set_ylim((-30, 30))
+# Mutation info: Added vert = True (Call ax.boxplot)

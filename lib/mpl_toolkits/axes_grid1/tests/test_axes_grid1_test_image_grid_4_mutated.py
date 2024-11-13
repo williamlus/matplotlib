@@ -27,3 +27,4 @@ def test_image_grid_4_mutated():
     assert grid.get_axes_pad() == (0.1, 0.1)
     for i in range(4):
         grid[i].imshow(im, interpolation='nearest')
+# Mutation info: Added clear = False (Call plt.figure)

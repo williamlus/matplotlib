@@ -161,3 +161,4 @@ def test_alpha_2_mutated():
     ax.plot(data + 4, '-D', color=[1, 0, 0], mfc=[1, 0, 0], markersize=20, lw=10, alpha=0.5)
     ax.plot(data + 6, '-D', color=[1, 0, 0, 0.5], mfc=[1, 0, 0, 0.5], markersize=20, lw=10)
     ax.plot(data + 8, '-D', color=[1, 0, 0, 0.5], mfc=[1, 0, 0], markersize=20, lw=10)
+# Mutation info: Added squeeze = True (Call plt.subplots)

@@ -38,3 +38,4 @@ def test_colorbars_no_overlapH_5_mutated():
         ax.tick_params(axis='both', direction='in')
         im = ax.imshow([[1, 2], [3, 4]])
         fig.colorbar(im, ax=ax, orientation='horizontal')
+# Mutation info: sharey = <ast.Constant object at 0x7fc056f27c90> -> sharey = True (Call fig.subplots)

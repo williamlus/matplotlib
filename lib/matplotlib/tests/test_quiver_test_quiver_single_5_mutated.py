@@ -16,3 +16,4 @@ def test_quiver_single_5_mutated():
     fig, ax = plt.subplots(squeeze=False)
     ax.margins(0.1)
     ax.quiver([1], [1], [2], [2])
+# Mutation info: Added squeeze = False (Call plt.subplots)

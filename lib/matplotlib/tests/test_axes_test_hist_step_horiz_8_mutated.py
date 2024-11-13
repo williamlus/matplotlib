@@ -157,3 +157,4 @@ def test_hist_step_horiz_8_mutated():
     d2 = np.linspace(1, 3, 20)
     fig, ax = plt.subplots()
     ax.hist((d1, d2), histtype='barstacked', orientation='horizontal')
+# Mutation info: histtype = <ast.Constant object at 0x7fc056c35390> -> histtype = barstacked (Call ax.hist)

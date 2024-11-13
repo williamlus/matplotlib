@@ -160,3 +160,4 @@ def test_hexbin_extent_9_mutated():
     data = {'x': x, 'y': y}
     fig, ax = plt.subplots(squeeze=False)
     ax.hexbin('x', 'y', extent=[0.1, 0.3, 0.6, 0.7], data=data)
+# Mutation info: Added squeeze = False (Call plt.subplots)

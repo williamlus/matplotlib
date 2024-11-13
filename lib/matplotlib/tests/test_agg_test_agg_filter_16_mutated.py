@@ -101,3 +101,4 @@ def test_agg_filter_16_mutated():
     ax.set_ylim(0.0, 1.0, auto=False)
     ax.xaxis.set_visible(False)
     ax.yaxis.set_visible(False)
+# Mutation info: Added auto = False (Call ax.set_ylim)

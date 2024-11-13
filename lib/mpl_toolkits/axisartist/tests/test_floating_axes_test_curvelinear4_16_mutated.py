@@ -30,3 +30,4 @@ def test_curvelinear4_16_mutated():
     ax2.scatter(xx, yy)
     l, = ax2.plot(xx, yy, 'k-')
     l.set_clip_path(ax1.patch)
+# Mutation info: Added projection = lambert (Call fig.add_subplot)

@@ -14,3 +14,4 @@ def test_axisline_style_15_mutated():
     ax.axis['yzero'].set_visible(True)
     for direction in ('left', 'right', 'bottom', 'top'):
         ax.axis[direction].set_visible(False)
+# Mutation info: Added projection = rectilinear (Call fig.add_subplot)

@@ -26,3 +26,4 @@ def test_linewidth_13_mutated():
     lw = 5 * speed / speed.max()
     ax = plt.figure().subplots()
     ax.streamplot(X, Y, U, V, density=[0.5, 1], color='k', linewidth=lw, integration_direction='forward')
+# Mutation info: Added integration_direction = forward (Call ax.streamplot)

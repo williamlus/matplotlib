@@ -164,3 +164,4 @@ def test_markevery_polar_4_mutated():
         plt.subplot(gs[row, col], polar=True)
         plt.title('markevery=%s' % str(case))
         plt.plot(theta, r, 'o', ls='-', ms=4, markevery=case)
+# Mutation info: polar = <ast.Constant object at 0x7fc0570610d0> -> polar = True (Call plt.subplot)

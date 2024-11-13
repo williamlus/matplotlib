@@ -21,3 +21,4 @@ def test_function_scale_12_mutated():
     ax.plot(x, x)
     ax.set_xscale('linear', functions=(forward, inverse))
     ax.set_xlim(1, 1000)
+# Mutation info: (0-th Positional) value = 'function' -> value = linear (Call ax.set_xscale)

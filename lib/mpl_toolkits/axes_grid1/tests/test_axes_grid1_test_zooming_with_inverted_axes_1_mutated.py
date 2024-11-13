@@ -31,3 +31,4 @@ def test_zooming_with_inverted_axes_1_mutated():
     ax.axis([3, 1, 3, 1])
     inset_ax = zoomed_inset_axes(ax, zoom=2.5, loc='lower right')
     inset_ax.axis([1.4, 1.1, 1.4, 1.1])
+# Mutation info: Added squeeze = True (Call plt.subplots)

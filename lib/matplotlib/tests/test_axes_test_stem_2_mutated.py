@@ -157,3 +157,4 @@ def test_stem_2_mutated():
     fig, ax = plt.subplots(squeeze=False)
     ax.stem(x, np.cos(x), linefmt='C2-.', markerfmt='k+', basefmt='C1-.', label=' ')
     ax.legend()
+# Mutation info: Added squeeze = False (Call plt.subplots)

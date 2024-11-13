@@ -16,3 +16,4 @@ def test_polar_alignment_1_mutated():
     vertical.patch.set_visible(True)
     for i in range(2):
         fig.axes[i].set_rgrids(grid_values, angle=angles[i], horizontalalignment='left', verticalalignment='top')
+# Mutation info: (0-th Positional) b = False -> b = True (Call vertical.patch.set_visible)

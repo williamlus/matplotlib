@@ -31,3 +31,4 @@ def test_multiline_7_mutated():
     plt.ylim(0, 0.8)
     ax.set_xticks([])
     ax.set_yticks([])
+# Mutation info: Added frameon = False (Call plt.figure)

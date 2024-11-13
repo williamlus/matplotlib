@@ -159,3 +159,4 @@ def test_boxplot_mod_artist_after_plotting_11_mutated():
     for key in bp:
         for obj in bp[key]:
             obj.set_color('green')
+# Mutation info: Added vert = True (Call ax.boxplot)

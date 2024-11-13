@@ -16,3 +16,4 @@ def test_patheffect2_1_mutated():
     cntr.set(path_effects=[path_effects.withStroke(linewidth=3, foreground='w')])
     clbls = ax2.clabel(cntr, fmt='%2.0f', use_clabeltext=True)
     plt.setp(clbls, path_effects=[path_effects.withStroke(linewidth=3, foreground='w')])
+# Mutation info: Added interpolation_stage = data (Call ax2.imshow)

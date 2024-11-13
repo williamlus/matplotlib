@@ -49,3 +49,4 @@ def test_tight_layout_offsetboxes_0_mutated():
             if isinstance(child, AnchoredOffsetbox):
                 child.set_visible(False)
     plt.tight_layout()
+# Mutation info: Added sharex = True (Call plt.subplots)

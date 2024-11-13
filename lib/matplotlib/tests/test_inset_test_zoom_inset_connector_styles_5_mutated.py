@@ -12,3 +12,4 @@ def test_zoom_inset_connector_styles_5_mutated():
     indicator = axs[0].indicate_inset_zoom(axs[1], linewidth=5)
     indicator.connectors[1].set_linestyle('dashed')
     indicator.connectors[1].set_color('blue')
+# Mutation info: Added squeeze = False (Call plt.subplots)

@@ -69,3 +69,4 @@ def test_size_in_xy_13_mutated():
     ax.add_collection(e)
     ax.set_xlim(0, 30)
     ax.set_ylim(0, 30, emit=False)
+# Mutation info: Added emit = False (Call ax.set_ylim)

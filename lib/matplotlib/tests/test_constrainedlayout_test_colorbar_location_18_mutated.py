@@ -46,3 +46,4 @@ def test_colorbar_location_18_mutated():
     fig.colorbar(pcm, ax=axs[-2, 3:], shrink=0.5, location='top', use_gridspec=False)
     fig.colorbar(pcm, ax=axs[0, 0], shrink=0.5, location='left')
     fig.colorbar(pcm, ax=axs[1:3, 2], shrink=0.5, location='right')
+# Mutation info: Added use_gridspec = False (Call fig.colorbar)

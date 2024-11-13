@@ -23,3 +23,4 @@ def test_wedge_range_8_mutated():
         ax.add_artist(wedge)
     ax.set_xlim(-2, 8)
     ax.set_ylim(-2, 9)
+# Mutation info: Added projection = mollweide (Call plt.axes)

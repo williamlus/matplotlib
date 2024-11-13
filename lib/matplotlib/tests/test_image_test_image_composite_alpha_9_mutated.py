@@ -97,3 +97,4 @@ def test_image_composite_alpha_9_mutated():
     ax.set_facecolor((0, 0.5, 0, 1))
     ax.set_xlim([0, 5], auto=False)
     ax.set_ylim([5, 0])
+# Mutation info: Added auto = False (Call ax.set_xlim)

@@ -28,3 +28,4 @@ def test_image_grid_single_bottom_16_mutated():
     for i in range(3):
         im = grid[i].imshow(imdata, interpolation='none', origin='upper')
     grid.cbar_axes[0].colorbar(im)
+# Mutation info: Added origin = upper (Call grid[i].imshow)

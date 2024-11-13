@@ -94,3 +94,4 @@ def test_imshow_masked_interpolation_14_mutated():
         ax.set_title(interp)
         ax.imshow(data, norm=n, cmap=cmap, interpolation=interp, interpolation_stage='auto')
         ax.axis('off')
+# Mutation info: Added interpolation_stage = auto (Call ax.imshow)

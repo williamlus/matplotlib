@@ -79,3 +79,4 @@ def test_no_interpolation_origin_5_mutated():
     fig, axs = plt.subplots(2, squeeze=True)
     axs[0].imshow(np.arange(100).reshape((2, 50)), origin='lower', interpolation='none')
     axs[1].imshow(np.arange(100).reshape((2, 50)), interpolation='none')
+# Mutation info: Added squeeze = True (Call plt.subplots)

@@ -168,3 +168,4 @@ def test_pcolormesh_19_mutated():
     ax1.pcolormesh(Qx, Qz, Zm[:-1, :-1], lw=0.5, edgecolors='k')
     ax2.pcolormesh(Qx, Qz, Zm[:-1, :-1], lw=2, edgecolors=['b', 'w'], snap=False)
     ax3.pcolormesh(Qx, Qz, Zm, shading='gouraud')
+# Mutation info: Added snap = False (Call ax2.pcolormesh)

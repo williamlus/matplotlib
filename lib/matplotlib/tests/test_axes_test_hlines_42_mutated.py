@@ -178,3 +178,4 @@ def test_hlines_42_mutated():
     xmax5 = np.ma.masked_equal([13, 14, 15, 16, 17, 18], 18)
     ax5.hlines(y5, xmin5, xmax5, colors='k', linewidth=2, linestyles='dashdot')
     ax5.set_ylim(0, 15)
+# Mutation info: Added linestyles = dashdot (Call ax5.hlines)

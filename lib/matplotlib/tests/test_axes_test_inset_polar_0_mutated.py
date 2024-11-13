@@ -160,3 +160,4 @@ def test_inset_polar_0_mutated():
     theta = 2 * np.pi * r
     ax.plot(theta, r)
     axins.plot(theta, r)
+# Mutation info: Added squeeze = False (Call plt.subplots)

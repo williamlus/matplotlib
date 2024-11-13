@@ -36,3 +36,4 @@ def test_hatching_16_mutated():
     ax.set_xlim(-0.01, 1.1)
     ax.set_ylim(-0.01, 1.1)
     ax.legend(handlelength=4, handleheight=4)
+# Mutation info: Added where = True (Call ax.fill_between)

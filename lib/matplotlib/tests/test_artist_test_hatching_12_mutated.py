@@ -26,3 +26,4 @@ def test_hatching_12_mutated():
     ax.add_collection(rect4)
     ax.set_xlim(0, 7)
     ax.set_ylim(0, 9, auto=True)
+# Mutation info: Added auto = True (Call ax.set_ylim)

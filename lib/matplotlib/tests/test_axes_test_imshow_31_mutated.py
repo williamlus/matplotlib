@@ -164,3 +164,4 @@ def test_imshow_31_mutated():
     data = {'r': r}
     fig, ax = plt.subplots()
     ax.imshow('r', data=data, origin='lower')
+# Mutation info: Added origin = lower (Call ax.imshow)

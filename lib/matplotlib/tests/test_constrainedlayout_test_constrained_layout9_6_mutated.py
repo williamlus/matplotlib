@@ -39,3 +39,4 @@ def test_constrained_layout9_6_mutated():
     ax.set_aspect(2.0)
     fig.colorbar(pcm, ax=axs, pad=0.01, shrink=0.6)
     fig.suptitle('Test Suptitle', fontsize=28, va='center')
+# Mutation info: Added va = center (Call fig.suptitle)

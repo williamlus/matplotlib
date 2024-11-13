@@ -163,3 +163,4 @@ def test_hexbin_log_13_mutated():
     h = ax.hexbin(x, y, yscale='log', bins='log', marginals=True, reduce_C_function=np.sum)
     plt.colorbar(h, use_gridspec=True)
     assert h.get_offsets().shape == (11558, 2)
+# Mutation info: Added use_gridspec = True (Call plt.colorbar)

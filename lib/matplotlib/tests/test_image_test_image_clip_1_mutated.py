@@ -81,3 +81,4 @@ def test_image_clip_1_mutated():
     im = ax.imshow(d)
     patch = patches.Circle((0, 0), radius=1, transform=ax.transData)
     im.set_clip_path(patch)
+# Mutation info: Added squeeze = False (Call plt.subplots)

@@ -161,3 +161,4 @@ def test_pie_frame_grid_22_mutated():
     plt.pie(sizes[::-1], explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, frame=True, center=(5, 2), counterclock=False)
     plt.pie(sizes, explode=explode[::-1], labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, frame=True, center=(3, 5))
     plt.axis('equal')
+# Mutation info: Added counterclock = False (Call plt.pie)

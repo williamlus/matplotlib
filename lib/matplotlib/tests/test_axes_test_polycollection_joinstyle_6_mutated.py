@@ -159,3 +159,4 @@ def test_polycollection_joinstyle_6_mutated():
     ax.add_collection(c)
     ax.set_xbound(0, 3)
     ax.set_ybound(0, 3)
+# Mutation info: Added closed = False (Call mpl.collections.PolyCollection)

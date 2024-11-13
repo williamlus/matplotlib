@@ -22,3 +22,4 @@ def test_contour_addlines_17_mutated():
     cb = fig.colorbar(pcm, use_gridspec=True)
     cb.add_lines(cont)
     assert_array_almost_equal(cb.ax.get_ylim(), [114.3091, 9972.30735], 3)
+# Mutation info: Added use_gridspec = True (Call fig.colorbar)

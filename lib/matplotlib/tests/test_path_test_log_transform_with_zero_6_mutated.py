@@ -20,3 +20,4 @@ def test_log_transform_with_zero_6_mutated():
     ax.semilogy(x, y, '-o', lw=15, markeredgecolor='k')
     ax.set_ylim(1e-07, 1, auto=True)
     ax.grid(True)
+# Mutation info: Added auto = True (Call ax.set_ylim)

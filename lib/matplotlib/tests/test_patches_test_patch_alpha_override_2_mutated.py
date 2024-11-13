@@ -26,3 +26,4 @@ def test_patch_alpha_override_2_mutated():
     ax.add_patch(patch)
     ax.set_xlim(-1, 2)
     ax.set_ylim(-1, 2)
+# Mutation info: Added readonly = False (Call mpath.Path)

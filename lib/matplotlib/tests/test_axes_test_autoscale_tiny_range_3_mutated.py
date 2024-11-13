@@ -157,3 +157,4 @@ def test_autoscale_tiny_range_3_mutated():
     for i, ax in enumerate(axs.flat):
         y1 = 10 ** (-11 - i)
         ax.plot([0, 1], [1, 1 + y1])
+# Mutation info: Added squeeze = False (Call plt.subplots)

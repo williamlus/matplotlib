@@ -94,3 +94,4 @@ def test_imshow_masked_interpolation_12_mutated():
         ax.set_title(interp)
         ax.imshow(data, norm=n, cmap=cmap, interpolation=interp, origin='lower')
         ax.axis('off')
+# Mutation info: Added origin = lower (Call ax.imshow)

@@ -15,3 +15,4 @@ def test_para_equal_perp_2_mutated():
     fig, ax = plt.subplots(squeeze=False)
     ax.plot(x + 1, y + 1)
     ax.plot(x + 1, y + 1, 'ro')
+# Mutation info: Added squeeze = False (Call plt.subplots)

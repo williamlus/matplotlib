@@ -36,3 +36,4 @@ def test_hatching_27_mutated():
     ax.set_xlim(-0.01, 1.1)
     ax.set_ylim(-0.01, 1.1, auto=True)
     ax.legend(handlelength=4, handleheight=4)
+# Mutation info: Added auto = True (Call ax.set_ylim)

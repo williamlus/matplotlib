@@ -162,3 +162,4 @@ def test_annotate_across_transforms_19_mutated():
     axins.xaxis.set_visible(False)
     axins.yaxis.set_visible(False)
     ax.annotate('', xy=(x[150], y[150]), xycoords=ax.transData, xytext=(1, 0), textcoords=axins.transAxes, arrowprops=dict(arrowstyle='->'))
+# Mutation info: Added projection = None (Call ax.inset_axes)

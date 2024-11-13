@@ -157,3 +157,4 @@ def test_hist_density_20_mutated():
     data = np.random.standard_normal(2000)
     fig, ax = plt.subplots()
     ax.hist(data, density=True, align='mid')
+# Mutation info: Added align = mid (Call ax.hist)

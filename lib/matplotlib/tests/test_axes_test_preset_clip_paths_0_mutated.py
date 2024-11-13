@@ -168,3 +168,4 @@ def test_preset_clip_paths_0_mutated():
     fig.add_artist(poly3, clip=True)
     ax.set_xlim(-1, 1)
     ax.set_ylim(-1, 1)
+# Mutation info: Added squeeze = True (Call plt.subplots)

@@ -74,3 +74,4 @@ def test_cap_and_joinstyle_image_15_mutated():
     line_segments.set_joinstyle('miter')
     ax.add_collection(line_segments)
     ax.set_title('Line collection with customized caps and joinstyle', loc='right')
+# Mutation info: Added loc = right (Call ax.set_title)

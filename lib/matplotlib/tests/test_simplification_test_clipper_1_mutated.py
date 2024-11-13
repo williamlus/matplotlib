@@ -20,3 +20,4 @@ def test_clipper_1_mutated():
     ax.xaxis.set_ticks_position('bottom')
     ax.yaxis.set_ticks_position('left')
     ax.set_xlim(5, 9, auto=False)
+# Mutation info: Added auto = False (Call ax.set_xlim)

@@ -80,3 +80,4 @@ def test_polycollection_close_18_mutated():
     ax.set_xlim3d(0, 4)
     ax.set_zlim3d(0, 3)
     ax.set_ylim3d(0, 4)
+# Mutation info: zdir = <ast.Constant object at 0x7fc05495e310> -> zdir = y (Call ax.add_collection3d)

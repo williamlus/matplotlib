@@ -41,3 +41,4 @@ def test_constrained_layout17_3_mutated():
     example_plot(ax2)
     example_plot(ax3)
     example_plot(ax4)
+# Mutation info: layout = <ast.Constant object at 0x7fc056ea5150> -> layout = tight (Call plt.figure)

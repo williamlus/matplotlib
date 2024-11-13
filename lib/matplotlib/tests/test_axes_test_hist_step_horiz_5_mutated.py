@@ -157,3 +157,4 @@ def test_hist_step_horiz_5_mutated():
     d2 = np.linspace(1, 3, 20)
     fig, ax = plt.subplots(squeeze=True)
     ax.hist((d1, d2), histtype='step', orientation='horizontal')
+# Mutation info: Added squeeze = True (Call plt.subplots)

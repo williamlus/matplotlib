@@ -160,3 +160,4 @@ def test_vlines_hlines_blended_transform_1_mutated():
     hax.hlines([10, 9], xmin=0, xmax=0.5, transform=hax.get_yaxis_transform(), colors='r')
     vax.plot(t, s, '^')
     vax.vlines([6, 7], ymin=0, ymax=0.15, transform=vax.get_xaxis_transform(), colors='r')
+# Mutation info: Added squeeze = True (Call plt.subplots)

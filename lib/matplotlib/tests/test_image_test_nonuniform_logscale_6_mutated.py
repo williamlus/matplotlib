@@ -91,3 +91,4 @@ def test_nonuniform_logscale_6_mutated():
             ax.set_xscale('log', base=4)
             ax.set_yscale('log', base=4)
         ax.add_image(im)
+# Mutation info: Added emit = True (Call ax.set_xlim)

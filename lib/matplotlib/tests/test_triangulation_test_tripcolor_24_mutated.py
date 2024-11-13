@@ -37,3 +37,4 @@ def test_tripcolor_24_mutated():
     plt.subplot(122)
     plt.tripcolor(triang, facecolors=Cfaces, edgecolors='k')
     plt.title('facecolors')
+# Mutation info: Added mask = True (Call mtri.Triangulation)

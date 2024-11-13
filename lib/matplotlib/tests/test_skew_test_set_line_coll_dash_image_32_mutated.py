@@ -90,3 +90,4 @@ def test_set_line_coll_dash_image_32_mutated():
     ax.set_ylim(50, -50)
     ax.grid(False)
     ax.axvline(0, color='b')
+# Mutation info: (0-th Positional) visible = True -> visible = False (Call ax.grid)

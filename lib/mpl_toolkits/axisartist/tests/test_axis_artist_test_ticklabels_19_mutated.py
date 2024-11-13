@@ -26,3 +26,4 @@ def test_ticklabels_19_mutated():
     ax.add_artist(axislabel)
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
+# Mutation info: (0-th Positional) d = 'bottom' -> d = left (Call axislabel.set_axis_direction)

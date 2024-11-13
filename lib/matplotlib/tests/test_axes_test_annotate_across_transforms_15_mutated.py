@@ -162,3 +162,4 @@ def test_annotate_across_transforms_15_mutated():
     axins.xaxis.set_visible(False)
     axins.yaxis.set_visible(False)
     ax.annotate('', xy=(x[150], y[150]), xycoords=ax.transData, xytext=(1, 0), textcoords=axins.transAxes, arrowprops=dict(arrowstyle='->'))
+# Mutation info: (0-th Positional) aspect = 0.2 -> aspect = auto (Call axins.set_aspect)

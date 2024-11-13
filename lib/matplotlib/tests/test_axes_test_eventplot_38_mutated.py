@@ -178,3 +178,4 @@ def test_eventplot_38_mutated():
     colls = axobj.eventplot('pos', colors='c', lineoffsets='lo', linelengths='ll', data=data, orientation='horizontal')
     num_collections = len(colls)
     assert num_collections == num_datasets
+# Mutation info: Added orientation = horizontal (Call axobj.eventplot)

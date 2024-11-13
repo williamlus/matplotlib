@@ -162,3 +162,4 @@ def test_boxplot_rc_parameters_1_mutated():
     for axis, rc_axis in zip(ax, dict_list):
         _rc_test_bxp_helper(axis, rc_axis)
     assert matplotlib.patches.PathPatch in [type(t) for t in ax[1].get_children()]
+# Mutation info: Added sharey = True (Call plt.subplots)

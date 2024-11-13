@@ -81,3 +81,4 @@ def test_image_clip_16_mutated():
     im = ax.imshow(d, origin='lower')
     patch = patches.Circle((0, 0), radius=1, transform=ax.transData)
     im.set_clip_path(patch)
+# Mutation info: Added origin = lower (Call ax.imshow)

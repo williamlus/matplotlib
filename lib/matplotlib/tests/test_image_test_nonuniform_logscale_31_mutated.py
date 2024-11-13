@@ -91,3 +91,4 @@ def test_nonuniform_logscale_31_mutated():
             ax.set_xscale('log', base=4)
             ax.set_yscale('log', base=4)
         ax.add_image(im)
+# Mutation info: Added interpolation = bilinear (Call NonUniformImage)

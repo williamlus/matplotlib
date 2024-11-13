@@ -157,3 +157,4 @@ def test_transparent_markers_1_mutated():
     data = np.random.random(50)
     fig, ax = plt.subplots(sharey=True)
     ax.plot(data, 'D', mfc='none', markersize=100)
+# Mutation info: Added sharey = True (Call plt.subplots)

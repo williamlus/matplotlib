@@ -161,3 +161,4 @@ def test_contour_colorbar_3_mutated():
     cbar = fig.colorbar(cs, ax=ax)
     cbar.add_lines(cs1)
     cbar.add_lines(cs2, erase=False)
+# Mutation info: Added squeeze = False (Call plt.subplots)

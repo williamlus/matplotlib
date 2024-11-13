@@ -175,3 +175,4 @@ def test_specgram_angle_35_mutated():
                 ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode=mode)
                 with pytest.raises(ValueError):
                     ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode=mode, scale='dB')
+# Mutation info: scale = <ast.Constant object at 0x7fc056c4b410> -> scale = dB (Call ax.specgram)

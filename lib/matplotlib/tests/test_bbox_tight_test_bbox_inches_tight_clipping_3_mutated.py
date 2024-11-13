@@ -17,3 +17,4 @@ def test_bbox_inches_tight_clipping_3_mutated():
     path.vertices *= 0.25
     patch.set_clip_path(path, transform=ax.transAxes)
     plt.gcf().artists.append(patch)
+# Mutation info: Added emit = True (Call ax.set_xlim)

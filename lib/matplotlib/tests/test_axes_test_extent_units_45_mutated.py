@@ -171,3 +171,4 @@ def test_extent_units_45_mutated():
     axs[1, 1].set(xlabel='Day of Jan 2020')
     with pytest.raises(TypeError, match='set_extent\\(\\) got an unexpected'):
         im.set_extent([2, 12, date_first, date_last], clip=False)
+# Mutation info: Added interpolation_stage = data (Call axs[1, 1].imshow)

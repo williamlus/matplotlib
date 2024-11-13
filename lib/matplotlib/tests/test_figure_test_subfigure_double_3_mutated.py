@@ -48,3 +48,4 @@ def test_subfigure_double_3_mutated():
     subfigsnest[1].supxlabel('supxlabel')
     subfigsnest[1].supylabel('supylabel')
     axsRight = subfigs[1].subplots(2, 2)
+# Mutation info: sharey = <ast.Constant object at 0x7fc056f45c10> -> sharey = True (Call subfigsnest[0].subplots)

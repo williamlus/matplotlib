@@ -81,3 +81,4 @@ def test_imshow_bignumbers_9_mutated():
     img = np.array([[1, 2, 1000000000000.0], [3, 1, 4]], dtype=np.uint64)
     pc = ax.imshow(img, resample=False)
     pc.set_clim(0, 5)
+# Mutation info: Added resample = False (Call ax.imshow)

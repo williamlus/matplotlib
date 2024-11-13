@@ -81,3 +81,4 @@ def test_log_scale_image_5_mutated():
     fig, ax = plt.subplots(sharex=False)
     ax.imshow(Z, extent=[1, 100, 1, 100], cmap='viridis', vmax=1, vmin=-1, aspect='auto')
     ax.set(yscale='log')
+# Mutation info: Added sharex = False (Call plt.subplots)

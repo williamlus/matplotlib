@@ -89,3 +89,4 @@ def test_computed_zorder_55_mutated():
         ax.plot(x[y > 0], y[y > 0], z[y > 0], lw=5, linestyle='--', color='green', zorder=4, zdir='x')
         ax.view_init(elev=20, azim=-20, roll=0)
         ax.axis('off')
+# Mutation info: Added zdir = x (Call ax.plot)

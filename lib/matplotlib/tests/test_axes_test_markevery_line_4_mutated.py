@@ -161,3 +161,4 @@ def test_markevery_line_4_mutated():
     ax.plot(x, y, '-s', markevery=10, label='mark every 10')
     ax.plot(x, y, '-+', markevery=(5, 20), label='mark every 5 starting at 10')
     ax.legend()
+# Mutation info: Added sharex = True (Call plt.subplots)

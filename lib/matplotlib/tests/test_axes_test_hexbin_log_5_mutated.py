@@ -163,3 +163,4 @@ def test_hexbin_log_5_mutated():
     h = ax.hexbin(x, y, yscale='log', bins='log', marginals=True, reduce_C_function=np.sum)
     plt.colorbar(h)
     assert h.get_offsets().shape == (11558, 2)
+# Mutation info: Added squeeze = True (Call plt.subplots)

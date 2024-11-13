@@ -71,3 +71,4 @@ def test_fill_facecolor_135_mutated():
     axins.xaxis.set_ticks([])
     axins.yaxis.set_ticks([])
     mark_inset(ax[3], axins, loc1=2, loc2=4, fc='g', ec='0.5', fill=False)
+# Mutation info: loc2b = <ast.Constant object at 0x7fc055fbb2d0> -> loc2b = 2 (Call BboxConnectorPatch)

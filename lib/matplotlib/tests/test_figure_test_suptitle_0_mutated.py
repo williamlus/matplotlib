@@ -24,3 +24,4 @@ def test_suptitle_0_mutated():
     fig, _ = plt.subplots(sharey=True)
     fig.suptitle('hello', color='r')
     fig.suptitle('title', color='g', rotation=30)
+# Mutation info: Added sharey = True (Call plt.subplots)

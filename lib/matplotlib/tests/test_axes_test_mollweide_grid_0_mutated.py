@@ -156,3 +156,4 @@ def test_mollweide_grid_0_mutated():
     fig = plt.figure(clear=True)
     ax = fig.add_subplot(projection='mollweide')
     ax.grid()
+# Mutation info: Added clear = True (Call plt.figure)

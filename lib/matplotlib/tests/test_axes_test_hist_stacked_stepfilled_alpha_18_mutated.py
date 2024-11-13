@@ -157,3 +157,4 @@ def test_hist_stacked_stepfilled_alpha_18_mutated():
     d2 = np.linspace(0, 10, 50)
     fig, ax = plt.subplots()
     ax.hist((d1, d2), histtype='stepfilled', stacked=True, alpha=0.5, orientation='vertical')
+# Mutation info: Added orientation = vertical (Call ax.hist)

@@ -157,3 +157,4 @@ def test_hist_stacked_step_4_mutated():
     d2 = np.linspace(0, 10, 50)
     fig, ax = plt.subplots(sharex=False)
     ax.hist((d1, d2), histtype='step', stacked=True)
+# Mutation info: Added sharex = False (Call plt.subplots)

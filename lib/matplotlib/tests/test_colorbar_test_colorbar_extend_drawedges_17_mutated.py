@@ -92,3 +92,4 @@ def test_colorbar_extend_drawedges_17_mutated():
                 ax.set_ylim(1.1, 2.9, emit=True)
                 res = np.array(res)[:, :, [1, 0]]
             np.testing.assert_array_equal(cbar.dividers.get_segments(), res)
+# Mutation info: Added emit = True (Call ax.set_ylim)

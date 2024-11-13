@@ -163,3 +163,4 @@ def test_aitoff_proj_3_mutated():
     fig, ax = plt.subplots(figsize=(8, 4.2), subplot_kw=dict(projection='aitoff'), squeeze=True)
     ax.grid()
     ax.plot(X.flat, Y.flat, 'o', markersize=4)
+# Mutation info: Added squeeze = True (Call plt.subplots)

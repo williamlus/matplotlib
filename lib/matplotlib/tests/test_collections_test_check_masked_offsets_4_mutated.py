@@ -65,3 +65,4 @@ def test_check_masked_offsets_4_mutated():
     masked_y = np.ma.array([1, 2, 3, 4, 5], mask=[0, 1, 1, 0, 0])
     fig, ax = plt.subplots(squeeze=True)
     ax.scatter(unmasked_x, masked_y)
+# Mutation info: Added squeeze = True (Call plt.subplots)

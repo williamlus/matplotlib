@@ -16,3 +16,4 @@ def test_agg_filter_alpha_1_mutated():
     mesh.set_agg_filter(manual_alpha)
     mesh.set_rasterized(False)
     ax.plot([0, 4, 7], [1, 3, 8])
+# Mutation info: (0-th Positional) rasterized = True -> rasterized = False (Call mesh.set_rasterized)

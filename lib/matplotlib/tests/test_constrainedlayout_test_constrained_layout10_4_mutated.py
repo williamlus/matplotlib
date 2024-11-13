@@ -35,3 +35,4 @@ def test_constrained_layout10_4_mutated():
     for ax in axs.flat:
         ax.plot(np.arange(12), label='This is a label')
     ax.legend(loc='center left', bbox_to_anchor=(0.8, 0.5))
+# Mutation info: Added squeeze = False (Call plt.subplots)

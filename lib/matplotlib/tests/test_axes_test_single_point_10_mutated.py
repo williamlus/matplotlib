@@ -162,3 +162,4 @@ def test_single_point_10_mutated():
     fig, (ax1, ax2) = plt.subplots(2, sharex=False)
     ax1.plot('a', 'a', 'o', data=data)
     ax2.plot('b', 'b', 'o', data=data)
+# Mutation info: Added sharex = False (Call plt.subplots)

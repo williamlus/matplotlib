@@ -164,3 +164,4 @@ def test_eventplot_defaults_16_mutated():
     fig = plt.figure()
     axobj = fig.add_subplot(projection='hammer')
     axobj.eventplot(data)
+# Mutation info: Added projection = hammer (Call fig.add_subplot)

@@ -159,3 +159,4 @@ def test_marker_styles_0_mutated():
     markers = ['none', *markers]
     for y, marker in enumerate(markers):
         ax.plot(y % 2 * 5 + np.arange(10) * 10, np.ones(10) * 10 * y, linestyle='', marker=marker, markersize=10 + y / 5, label=marker)
+# Mutation info: Added sharey = False (Call plt.subplots)

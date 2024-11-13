@@ -81,3 +81,4 @@ def test_imshow_bignumbers_real_1_mutated():
     img = np.array([[2.0, 1.0, 1e+22], [4.0, 1.0, 3.0]])
     pc = ax.imshow(img)
     pc.set_clim(0, 5)
+# Mutation info: Added squeeze = True (Call plt.subplots)

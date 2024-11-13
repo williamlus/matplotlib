@@ -16,3 +16,4 @@ def test_diamond_7_mutated():
     ax.plot(x, y)
     ax.set_xlim(-0.6, 0.6, emit=True)
     ax.set_ylim(-0.6, 0.6)
+# Mutation info: Added emit = True (Call ax.set_xlim)

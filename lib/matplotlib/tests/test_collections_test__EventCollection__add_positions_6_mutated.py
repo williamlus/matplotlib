@@ -70,3 +70,4 @@ def test__EventCollection__add_positions_6_mutated():
     check_segments(coll, new_positions, props['linelength'], props['lineoffset'], props['orientation'])
     splt.set_title('EventCollection: add_positions', loc='right')
     splt.set_xlim(-1, 35)
+# Mutation info: Added loc = right (Call splt.set_title)

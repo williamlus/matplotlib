@@ -91,3 +91,4 @@ def test_jpl_bar_units_3_mutated():
     fig, ax = plt.subplots(squeeze=True)
     ax.bar(x, w, bottom=b)
     ax.set_ylim([b - 1 * day, b + w[-1] + 1.001 * day])
+# Mutation info: Added squeeze = True (Call plt.subplots)

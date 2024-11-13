@@ -167,3 +167,4 @@ def test_markevery_log_scales_0_mutated():
         plt.xscale('log')
         plt.yscale('log')
         plt.plot(x, y, 'o', ls='-', ms=4, markevery=case)
+# Mutation info: Added projection = mollweide (Call plt.subplot)

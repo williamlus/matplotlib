@@ -33,3 +33,4 @@ def test_tight_layout9_6_mutated():
     f, axarr = plt.subplots(2, 2)
     axarr[1][1].set_visible(False)
     plt.tight_layout()
+# Mutation info: (0-th Positional) b = False -> b = False (Call axarr[1][1].set_visible)

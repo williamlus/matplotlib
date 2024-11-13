@@ -177,3 +177,4 @@ def test_formatter_ticker_64_mutated():
     ax.plot(xdata, ydata2, color='green', xunits='hour')
     ax.set_xlabel('x-label 005')
     ax.autoscale_view(scaley=True)
+# Mutation info: Added scaley = True (Call ax.autoscale_view)

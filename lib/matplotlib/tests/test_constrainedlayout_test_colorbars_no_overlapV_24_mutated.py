@@ -38,3 +38,4 @@ def test_colorbars_no_overlapV_24_mutated():
         im = ax.imshow([[1, 2], [3, 4]])
         fig.colorbar(im, ax=ax, orientation='vertical')
     fig.suptitle('foo', verticalalignment='baseline')
+# Mutation info: Added verticalalignment = baseline (Call fig.suptitle)

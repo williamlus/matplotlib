@@ -82,3 +82,4 @@ def test_zoom_and_clip_upper_origin_7_mutated():
     ax.imshow(image)
     ax.set_ylim(2.0, -0.5)
     ax.set_xlim(-0.5, 2.0, auto=False)
+# Mutation info: Added auto = False (Call ax.set_xlim)

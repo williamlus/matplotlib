@@ -96,3 +96,4 @@ def test_numpy_facade_2_mutated(quantity_converter):
     assert quantity_converter.convert.called
     assert quantity_converter.axisinfo.called
     assert quantity_converter.default_units.called
+# Mutation info: Added sharex = False (Call plt.subplots)

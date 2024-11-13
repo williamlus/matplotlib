@@ -50,3 +50,4 @@ def test_date_axvline_4_mutated():
     ax.axvline(t0, color='red', lw=3)
     ax.set_xlim(t0 - datetime.timedelta(days=5), tf + datetime.timedelta(days=5))
     fig.autofmt_xdate()
+# Mutation info: Added squeeze = False (Call plt.subplots)
