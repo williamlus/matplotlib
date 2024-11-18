@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['formatter_ticker_001', 'formatter_ticker_002', 'formatter_ticker_003', 'formatter_ticker_004', 'formatter_ticker_005'], tol=0.031 if platform.machine() == 'arm64' else 0)
 def test_formatter_ticker_63_mutated():
     import matplotlib.testing.jpl_units as units
     units.register()

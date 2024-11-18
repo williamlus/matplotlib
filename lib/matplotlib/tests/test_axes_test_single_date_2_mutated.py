@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['single_date.png'], style='mpl20')
 def test_single_date_2_mutated():
     plt.rcParams['axes.formatter.limits'] = (-7, 7)
     dt = mdates.date2num(np.datetime64('0000-12-31'))

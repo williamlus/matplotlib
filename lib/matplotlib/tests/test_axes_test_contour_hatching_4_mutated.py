@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['contour_hatching'], remove_text=True, style='mpl20')
 def test_contour_hatching_4_mutated():
     x, y, z = contour_dat()
     fig, ax = plt.subplots(squeeze=True)

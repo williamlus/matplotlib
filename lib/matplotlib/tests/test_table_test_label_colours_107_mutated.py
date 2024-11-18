@@ -10,6 +10,7 @@ from matplotlib.testing.decorators import image_comparison, check_figures_equal
 from matplotlib.transforms import Bbox
 import matplotlib.units as munits
 
+@image_comparison(['table_labels.png'])
 def test_label_colours_107_mutated():
     dim = 3
     c = np.linspace(0, 1, dim)

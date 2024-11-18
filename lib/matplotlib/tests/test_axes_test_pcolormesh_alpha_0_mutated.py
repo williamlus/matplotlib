@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['pcolormesh_alpha'], extensions=['png', 'pdf'], remove_text=True)
 def test_pcolormesh_alpha_0_mutated():
     plt.rcParams['pcolormesh.snap'] = False
     n = 12

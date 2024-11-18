@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['specgram_magnitude_freqs.png', 'specgram_magnitude_freqs_linear.png', 'specgram_magnitude_noise.png', 'specgram_magnitude_noise_linear.png'], remove_text=True, tol=0.07, style='default')
 def test_specgram_magnitude_7_mutated():
     """Test axes.specgram in magnitude mode."""
     matplotlib.rcParams['image.interpolation'] = 'nearest'

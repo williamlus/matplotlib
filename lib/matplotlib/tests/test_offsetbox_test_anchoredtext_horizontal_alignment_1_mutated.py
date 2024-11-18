@@ -11,6 +11,7 @@ from matplotlib.backend_bases import MouseButton, MouseEvent
 from matplotlib.offsetbox import AnchoredOffsetbox, AnnotationBbox, AnchoredText, DrawingArea, HPacker, OffsetBox, OffsetImage, PaddedBox, TextArea, VPacker, _get_packed_offsets
 _Params = namedtuple('_Params', 'wd_list, total, sep, expected')
 
+@image_comparison(['anchoredtext_align.png'], remove_text=True, style='mpl20')
 def test_anchoredtext_horizontal_alignment_1_mutated():
     fig, ax = plt.subplots(sharey=False)
     text0 = AnchoredText('test\ntest long text', loc='center left', pad=0.2, prop={'ha': 'left'})

@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['mask_image_over_under.png'], remove_text=True, tol=1.0)
 def test_mask_image_over_under_12_mutated():
     delta = 0.025
     x = y = np.arange(-3.0, 3.0, delta)
@@ -91,4 +92,4 @@ def test_mask_image_over_under_12_mutated():
     im = ax2.imshow(Zm, interpolation='nearest', cmap=palette, norm=colors.BoundaryNorm([-1, -0.5, -0.2, 0, 0.2, 0.5, 1], ncolors=256, clip=False), origin='lower', extent=[-3, 3, -3, 3])
     ax2.set_title('With BoundaryNorm')
     fig.colorbar(im, extend='both', spacing='proportional', orientation='horizontal', ax=ax2, aspect=10)
-# Mutation info: origin = <ast.Constant object at 0x7fc056d4fc90> -> origin = lower (Call ax1.imshow)
+# Mutation info: origin = <ast.Constant object at 0x7fc31fbbbd10> -> origin = lower (Call ax1.imshow)

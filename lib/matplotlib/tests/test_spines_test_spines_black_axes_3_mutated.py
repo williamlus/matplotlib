@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.spines import Spines
 from matplotlib.testing.decorators import check_figures_equal, image_comparison
 
+@image_comparison(['black_axes'])
 def test_spines_black_axes_3_mutated():
     plt.rcParams['savefig.pad_inches'] = 0
     plt.rcParams['savefig.bbox'] = 'tight'

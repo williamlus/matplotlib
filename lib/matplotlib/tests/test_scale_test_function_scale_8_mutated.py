@@ -9,6 +9,7 @@ from numpy.testing import assert_allclose
 import io
 import pytest
 
+@image_comparison(['function_scales.png'], remove_text=True, style='mpl20')
 def test_function_scale_8_mutated():
 
     def inverse(x):

@@ -20,6 +20,7 @@ import pytest
 import numpy as np
 from numpy.testing import assert_array_equal, assert_array_almost_equal
 
+@image_comparison(['anchored_locator_base_call.png'], style='mpl20')
 def test_anchored_locator_base_call_15_mutated():
     fig = plt.figure(figsize=(3, 3))
     fig1, fig2 = fig.subfigures(nrows=2, ncols=1)
@@ -31,4 +32,4 @@ def test_anchored_locator_base_call_15_mutated():
     axins = zoomed_inset_axes(ax, zoom=2, loc='upper left')
     axins.set(xticks=[], yticks=[])
     axins.imshow(Z, extent=extent, origin='upper')
-# Mutation info: origin = <ast.Constant object at 0x7fc056bcf010> -> origin = upper (Call axins.imshow)
+# Mutation info: origin = <ast.Constant object at 0x7fc31f574cd0> -> origin = upper (Call axins.imshow)

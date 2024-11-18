@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['aitoff_proj'], extensions=['png'], remove_text=True, style='mpl20')
 def test_aitoff_proj_12_mutated():
     """
     Test aitoff projection ref.:

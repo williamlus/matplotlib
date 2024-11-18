@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['rc_grid.png'], savefig_kwarg={'dpi': 40})
 def test_rc_grid_4_mutated():
     fig = plt.figure(frameon=False)
     rc_dict0 = {'axes.grid': True, 'axes.grid.axis': 'both'}

@@ -12,6 +12,7 @@ import matplotlib.patches as mpatches
 from matplotlib.testing.decorators import check_figures_equal, image_comparison
 import pytest
 
+@image_comparison(['contour_manual_labels'], remove_text=True, style='mpl20', tol=0.26)
 def test_contour_manual_labels_6_mutated():
     x, y = np.meshgrid(np.arange(0, 10), np.arange(0, 10))
     z = np.max(np.dstack([abs(x), abs(y)]), 2)

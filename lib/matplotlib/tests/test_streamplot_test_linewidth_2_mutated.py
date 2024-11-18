@@ -20,6 +20,7 @@ def swirl_velocity_field():
     V = np.sin(a) * -Y + np.cos(a) * X
     return (x, y, U, V)
 
+@image_comparison(['streamplot_linewidth'], remove_text=True, style='mpl20', tol=0.004)
 def test_linewidth_2_mutated():
     X, Y, U, V = velocity_field()
     speed = np.hypot(U, V)

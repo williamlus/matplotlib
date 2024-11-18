@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 from matplotlib import patches, transforms
 from matplotlib.path import Path
 
+@image_comparison(['clipping_diamond'], remove_text=True)
 def test_diamond_0_mutated():
     x = np.array([0.0, 1.0, 0.0, -1.0, 0.0])
     y = np.array([1.0, 0.0, -1.0, 0.0, 1.0])

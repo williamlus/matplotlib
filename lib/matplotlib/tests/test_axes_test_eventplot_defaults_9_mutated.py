@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['test_eventplot_defaults.png'], remove_text=True)
 def test_eventplot_defaults_9_mutated():
     """
     test that eventplot produces the correct output given the default params

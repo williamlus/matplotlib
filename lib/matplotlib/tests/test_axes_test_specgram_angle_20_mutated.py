@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['specgram_angle_freqs.png', 'specgram_phase_freqs.png', 'specgram_angle_noise.png', 'specgram_phase_noise.png'], remove_text=True, tol=0.07, style='default')
 def test_specgram_angle_20_mutated():
     """Test axes.specgram in angle and phase modes."""
     matplotlib.rcParams['image.interpolation'] = 'nearest'

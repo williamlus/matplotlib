@@ -29,6 +29,7 @@ def add_offsetboxes(ax, size=10, margin=0.1, color='black'):
         ax.add_artist(anchored_box)
     return anchored_box
 
+@image_comparison(['tight_layout_offsetboxes1', 'tight_layout_offsetboxes2'])
 def test_tight_layout_offsetboxes_1_mutated():
     rows = cols = 2
     colors = ['red', 'blue', 'green', 'yellow']

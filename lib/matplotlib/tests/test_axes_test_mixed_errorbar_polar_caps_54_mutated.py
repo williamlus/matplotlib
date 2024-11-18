@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['mixed_errorbar_polar_caps'], extensions=['png'], remove_text=True)
 def test_mixed_errorbar_polar_caps_54_mutated():
     """
     Mix several polar errorbar use cases in a single test figure.

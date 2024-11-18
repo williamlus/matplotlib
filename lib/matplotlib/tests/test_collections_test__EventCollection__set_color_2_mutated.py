@@ -60,6 +60,7 @@ def check_segments(coll, positions, linelength, lineoffset, orientation):
         assert segment[0, pos2] == positions[i]
         assert segment[1, pos2] == positions[i]
 
+@image_comparison(['EventCollection_plot__set_color'])
 def test__EventCollection__set_color_2_mutated():
     splt, coll, _ = generate_EventCollection_plot()
     new_color = np.array([0, 1, 1, 1])

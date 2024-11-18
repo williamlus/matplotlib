@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['single_point', 'single_point'])
 def test_single_point_7_mutated():
     matplotlib.rcParams['lines.marker'] = 'o'
     matplotlib.rcParams['axes.grid'] = True

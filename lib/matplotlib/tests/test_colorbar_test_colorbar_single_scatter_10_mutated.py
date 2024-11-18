@@ -68,6 +68,7 @@ def _colorbar_extension_length(spacing):
             cax.tick_params(left=False, labelleft=False, bottom=False, labelbottom=False)
     return fig
 
+@image_comparison(['colorbar_single_scatter.png'], remove_text=True, savefig_kwarg={'dpi': 40})
 def test_colorbar_single_scatter_10_mutated():
     plt.figure()
     x = y = [0]

@@ -20,6 +20,7 @@ import matplotlib.legend as mlegend
 from matplotlib import _api, rc_context
 from matplotlib.font_manager import FontProperties
 
+@image_comparison(['legend_various_labels'], remove_text=True)
 def test_various_labels_1_mutated():
     fig = plt.figure(layout='compressed')
     ax = fig.add_subplot(121)

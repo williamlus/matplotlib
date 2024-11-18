@@ -20,6 +20,7 @@ import pytest
 import numpy as np
 from numpy.testing import assert_array_equal, assert_array_almost_equal
 
+@image_comparison(['rgb_axes.png'], remove_text=True, style=('classic', '_classic_test_patch'))
 def test_rgb_axes_5_mutated():
     fig = plt.figure(clear=False)
     ax = RGBAxes(fig, (0.1, 0.1, 0.8, 0.8), pad=0.1)

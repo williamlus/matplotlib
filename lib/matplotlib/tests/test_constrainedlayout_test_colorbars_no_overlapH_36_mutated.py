@@ -29,6 +29,7 @@ def example_pcolor(ax, fontsize=12):
     ax.set_title('Title', fontsize=fontsize)
     return pcm
 
+@image_comparison(['test_colorbars_no_overlapH.png'], style='mpl20')
 def test_colorbars_no_overlapH_36_mutated():
     fig = plt.figure(figsize=(4, 2), layout='constrained')
     fig.suptitle('foo', verticalalignment='bottom')

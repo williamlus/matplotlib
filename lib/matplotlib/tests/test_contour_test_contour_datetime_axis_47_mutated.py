@@ -12,6 +12,7 @@ import matplotlib.patches as mpatches
 from matplotlib.testing.decorators import check_figures_equal, image_comparison
 import pytest
 
+@image_comparison(['contour_datetime_axis.png'], style='mpl20')
 def test_contour_datetime_axis_47_mutated():
     fig = plt.figure()
     fig.subplots_adjust(hspace=0.4, top=0.98, bottom=0.15)

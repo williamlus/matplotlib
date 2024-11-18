@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['fill_between_interpolate'], remove_text=True, tol=0.012 if platform.machine() == 'arm64' else 0)
 def test_fill_between_interpolate_5_mutated():
     x = np.arange(0.0, 2, 0.02)
     y1 = np.sin(2 * np.pi * x)

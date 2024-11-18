@@ -8,6 +8,7 @@ from mpl_toolkits.axisartist.floating_axes import FloatingAxes, GridHelperCurveL
 from mpl_toolkits.axisartist.grid_finder import FixedLocator
 from mpl_toolkits.axisartist import angle_helper
 
+@image_comparison(['curvelinear3.png'], style='default', tol=5)
 def test_curvelinear3_19_mutated():
     fig = plt.figure(figsize=(5, 5))
     tr = mtransforms.Affine2D().scale(np.pi / 180, 1) + mprojections.PolarAxes.PolarTransform(apply_theta_transforms=False)

@@ -11,6 +11,7 @@ from mpl_toolkits.axisartist import angle_helper
 from mpl_toolkits.axisartist.axislines import Axes
 from mpl_toolkits.axisartist.grid_helper_curvelinear import GridHelperCurveLinear
 
+@image_comparison(['custom_transform.png'], style='default', tol=0.2)
 def test_custom_transform_31_mutated():
 
     class MyTransform(Transform):
@@ -62,4 +63,4 @@ def test_custom_transform_31_mutated():
     ax1.set_xlim(0, 10)
     ax1.set_ylim(0, 10)
     ax1.grid(True)
-# Mutation info: viewlim_mode = <ast.Constant object at 0x7fc0570e1a90> -> viewlim_mode = transform (Call ax1.get_aux_axes)
+# Mutation info: viewlim_mode = <ast.Constant object at 0x7fc31f7e6e10> -> viewlim_mode = transform (Call ax1.get_aux_axes)

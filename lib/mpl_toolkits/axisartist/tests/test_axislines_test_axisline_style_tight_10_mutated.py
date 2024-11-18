@@ -5,6 +5,7 @@ from matplotlib.transforms import IdentityTransform
 from mpl_toolkits.axisartist.axislines import AxesZero, SubplotZero, Subplot
 from mpl_toolkits.axisartist import Axes, SubplotHost
 
+@image_comparison(['axisline_style_tight.png'], remove_text=True, style='mpl20')
 def test_axisline_style_tight_10_mutated():
     fig = plt.figure(figsize=(2, 2), frameon=False)
     ax = fig.add_subplot(axes_class=AxesZero)

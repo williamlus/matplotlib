@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['downsampling_speckle.png'], style='mpl20', remove_text=True, tol=0.09)
 def test_downsampling_speckle_6_mutated():
     fig, axs = plt.subplots(1, 2, figsize=(5, 2.7), sharex=True, sharey=True, layout='compressed')
     axs = axs.flatten()

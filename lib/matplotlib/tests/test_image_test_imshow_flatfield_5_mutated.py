@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['imshow_flatfield.png'], remove_text=True, style='mpl20')
 def test_imshow_flatfield_5_mutated():
     fig, ax = plt.subplots(sharey=False)
     im = ax.imshow(np.ones((5, 5)), interpolation='nearest')

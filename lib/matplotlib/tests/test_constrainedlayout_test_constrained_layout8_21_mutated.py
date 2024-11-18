@@ -29,6 +29,7 @@ def example_pcolor(ax, fontsize=12):
     ax.set_title('Title', fontsize=fontsize)
     return pcm
 
+@image_comparison(['constrained_layout8.png'])
 def test_constrained_layout8_21_mutated():
     """Test for gridspecs that are not completely full"""
     fig = plt.figure(figsize=(10, 5), layout='constrained')

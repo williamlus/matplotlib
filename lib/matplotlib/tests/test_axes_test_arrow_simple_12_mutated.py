@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['arrow_simple.png'], remove_text=True)
 def test_arrow_simple_12_mutated():
     length_includes_head = (True, False)
     shape = ('full', 'left', 'right')

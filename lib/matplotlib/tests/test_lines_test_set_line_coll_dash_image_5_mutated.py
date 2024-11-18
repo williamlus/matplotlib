@@ -19,6 +19,7 @@ import matplotlib.pyplot as plt
 import matplotlib.transforms as mtransforms
 from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
+@image_comparison(['line_collection_dashes'], remove_text=True, style='mpl20', tol=0 if platform.machine() == 'x86_64' else 0.65)
 def test_set_line_coll_dash_image_5_mutated():
     fig, ax = plt.subplots(sharey=False)
     np.random.seed(0)

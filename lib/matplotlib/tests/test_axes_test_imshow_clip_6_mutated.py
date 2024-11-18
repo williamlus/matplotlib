@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['imshow_clip'], style='mpl20', tol=1.24 if platform.machine() in ('aarch64', 'arm64', 'ppc64le', 's390x') else 0)
 def test_imshow_clip_6_mutated():
     matplotlib.rcParams['image.interpolation'] = 'nearest'
     N = 100

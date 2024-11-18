@@ -68,6 +68,7 @@ def _colorbar_extension_length(spacing):
             cax.tick_params(left=False, labelleft=False, bottom=False, labelbottom=False)
     return fig
 
+@image_comparison(['extend_drawedges.png'], remove_text=True, style='mpl20')
 def test_colorbar_extend_drawedges_23_mutated():
     params = [('both', 1, [[[1.1, 0], [1.1, 1]], [[2, 0], [2, 1]], [[2.9, 0], [2.9, 1]]]), ('min', 0, [[[1.1, 0], [1.1, 1]], [[2, 0], [2, 1]]]), ('max', 0, [[[2, 0], [2, 1]], [[2.9, 0], [2.9, 1]]]), ('neither', -1, [[[2, 0], [2, 1]]])]
     plt.rcParams['axes.linewidth'] = 2

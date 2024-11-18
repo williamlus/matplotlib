@@ -68,6 +68,7 @@ def _colorbar_extension_length(spacing):
             cax.tick_params(left=False, labelleft=False, bottom=False, labelbottom=False)
     return fig
 
+@image_comparison(['contour_colorbar.png'], remove_text=True, tol=0 if platform.machine() == 'x86_64' else 0.054)
 def test_contour_colorbar_0_mutated():
     fig, ax = plt.subplots(figsize=(4, 2), squeeze=False)
     data = np.arange(1200).reshape(30, 40) - 500

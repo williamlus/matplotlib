@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['hlines_basic', 'hlines_with_nan', 'hlines_masked'], extensions=['png'])
 def test_hlines_0_mutated():
     y1 = [2, 3, 4, 5, 7]
     x1 = [2, -6, 3, 8, 2]

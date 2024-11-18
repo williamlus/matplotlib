@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['boxplot_no_inverted_whisker.png'], remove_text=True, savefig_kwarg={'dpi': 40}, style='default')
 def test_boxplot_no_weird_whisker_13_mutated():
     x = np.array([3, 9000, 150, 88, 350, 200000, 1400, 960], dtype=np.float64)
     ax1 = plt.axes()

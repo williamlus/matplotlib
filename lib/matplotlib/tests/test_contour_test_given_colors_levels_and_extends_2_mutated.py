@@ -12,6 +12,7 @@ import matplotlib.patches as mpatches
 from matplotlib.testing.decorators import check_figures_equal, image_comparison
 import pytest
 
+@image_comparison(['contour_manual_colors_and_levels.png'], remove_text=True, tol=0.018 if platform.machine() == 'arm64' else 0)
 def test_given_colors_levels_and_extends_2_mutated():
     plt.rcParams['pcolormesh.snap'] = False
     _, axs = plt.subplots(2, 4, sharey=False)

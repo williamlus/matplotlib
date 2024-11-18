@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['hist_step_filled.png'], remove_text=True)
 def test_hist_step_filled_29_mutated():
     np.random.seed(0)
     x = np.random.randn(1000, 3)

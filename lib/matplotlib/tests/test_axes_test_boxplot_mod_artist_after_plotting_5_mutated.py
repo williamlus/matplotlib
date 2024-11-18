@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['boxplot_mod_artists_after_plotting.png'], remove_text=True, savefig_kwarg={'dpi': 40}, style='default')
 def test_boxplot_mod_artist_after_plotting_5_mutated():
     x = [0.15, 0.11, 0.06, 0.06, 0.12, 0.56, -0.56]
     fig, ax = plt.subplots(squeeze=False)

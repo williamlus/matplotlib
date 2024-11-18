@@ -7,6 +7,7 @@ import matplotlib.path as mpath
 import matplotlib.patches as mpatches
 from matplotlib.ticker import FuncFormatter
 
+@image_comparison(['bbox_inches_tight_clipping'], remove_text=True, savefig_kwarg={'bbox_inches': 'tight'})
 def test_bbox_inches_tight_clipping_4_mutated():
     plt.scatter(np.arange(10), np.arange(10))
     ax = plt.gca()

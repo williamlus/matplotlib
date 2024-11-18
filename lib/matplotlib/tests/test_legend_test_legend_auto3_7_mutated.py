@@ -20,6 +20,7 @@ import matplotlib.legend as mlegend
 from matplotlib import _api, rc_context
 from matplotlib.font_manager import FontProperties
 
+@image_comparison(['legend_auto3'])
 def test_legend_auto3_7_mutated():
     """Test automatic legend placement"""
     fig, ax = plt.subplots()

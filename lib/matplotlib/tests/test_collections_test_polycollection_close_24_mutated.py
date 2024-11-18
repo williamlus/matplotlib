@@ -60,6 +60,7 @@ def check_segments(coll, positions, linelength, lineoffset, orientation):
         assert segment[0, pos2] == positions[i]
         assert segment[1, pos2] == positions[i]
 
+@image_comparison(['polycollection_close.png'], remove_text=True, style='mpl20')
 def test_polycollection_close_24_mutated():
     from mpl_toolkits.mplot3d import Axes3D
     plt.rcParams['axes3d.automargin'] = True

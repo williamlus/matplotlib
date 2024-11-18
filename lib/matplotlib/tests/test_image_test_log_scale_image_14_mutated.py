@@ -75,10 +75,11 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['log_scale_image'], remove_text=True)
 def test_log_scale_image_14_mutated():
     Z = np.zeros((10, 10))
     Z[::2] = 1
     fig, ax = plt.subplots()
     ax.imshow(Z, extent=[1, 100, 1, 100], cmap='viridis', vmax=1, vmin=-1, aspect='equal')
     ax.set(yscale='log')
-# Mutation info: aspect = <ast.Constant object at 0x7fc057136190> -> aspect = equal (Call ax.imshow)
+# Mutation info: aspect = <ast.Constant object at 0x7fc32433bc10> -> aspect = equal (Call ax.imshow)

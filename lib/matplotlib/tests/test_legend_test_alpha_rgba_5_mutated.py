@@ -20,6 +20,7 @@ import matplotlib.legend as mlegend
 from matplotlib import _api, rc_context
 from matplotlib.font_manager import FontProperties
 
+@image_comparison(['rgba_alpha.png'], remove_text=True, tol=0 if platform.machine() == 'x86_64' else 0.03)
 def test_alpha_rgba_5_mutated():
     fig, ax = plt.subplots(squeeze=False)
     ax.plot(range(10), lw=5)

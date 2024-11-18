@@ -9,6 +9,7 @@ from io import BytesIO
 from PIL import Image
 import base64
 
+@image_comparison(['bivariate_cmap_shapes.png'])
 def test_bivariate_cmap_shapes_11_mutated():
     x_0 = np.repeat(np.linspace(-0.1, 1.1, 10, dtype='float32')[None, :], 10, axis=0)
     x_1 = x_0.T
@@ -24,4 +25,4 @@ def test_bivariate_cmap_shapes_11_mutated():
     cmap = cmap.with_extremes(shape='circleignore')
     axes[3].imshow(cmap((x_0, x_1)), interpolation='nearest')
     remove_ticks_and_titles(fig)
-# Mutation info: shape = <ast.Constant object at 0x7fc05e710f10> -> shape = circleignore (Call cmap.with_extremes)
+# Mutation info: shape = <ast.Constant object at 0x7fc324baf7d0> -> shape = circleignore (Call cmap.with_extremes)

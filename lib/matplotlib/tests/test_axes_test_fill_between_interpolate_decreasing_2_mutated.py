@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['fill_between_interpolate_decreasing'], style='mpl20', remove_text=True)
 def test_fill_between_interpolate_decreasing_2_mutated():
     p = np.array([724.3, 700, 655])
     t = np.array([9.4, 7, 2.2])

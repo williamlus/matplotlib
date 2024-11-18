@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['step_linestyle', 'step_linestyle'], remove_text=True, tol=0.2)
 def test_step_linestyle_33_mutated():
     x = y = np.arange(10)
     fig, ax_lst = plt.subplots(2, 2)
@@ -173,4 +174,4 @@ def test_step_linestyle_33_mutated():
         ax.step('X', 'Y2', lw=5, linestyle=ls, where='post', data=data)
         ax.set_xlim([-1, 5])
         ax.set_ylim([-1, 7])
-# Mutation info: where = <ast.Constant object at 0x7fc056e0f390> -> where = post (Call ax.step)
+# Mutation info: where = <ast.Constant object at 0x7fc31ff9de10> -> where = post (Call ax.step)

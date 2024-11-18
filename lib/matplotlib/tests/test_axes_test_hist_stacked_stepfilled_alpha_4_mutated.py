@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['hist_stacked_stepfilled_alpha'])
 def test_hist_stacked_stepfilled_alpha_4_mutated():
     d1 = np.linspace(1, 3, 20)
     d2 = np.linspace(0, 10, 50)

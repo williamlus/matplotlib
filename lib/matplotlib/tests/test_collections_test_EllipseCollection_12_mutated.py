@@ -60,6 +60,7 @@ def check_segments(coll, positions, linelength, lineoffset, orientation):
         assert segment[0, pos2] == positions[i]
         assert segment[1, pos2] == positions[i]
 
+@image_comparison(['EllipseCollection_test_image.png'], remove_text=True, tol=0.021 if platform.machine() == 'arm64' else 0)
 def test_EllipseCollection_12_mutated():
     fig, ax = plt.subplots()
     x = np.arange(4)
@@ -72,4 +73,4 @@ def test_EllipseCollection_12_mutated():
     ec = mcollections.EllipseCollection(ww, hh, aa, units='inches', offsets=XY, offset_transform=ax.transData, facecolors='none')
     ax.add_collection(ec)
     ax.autoscale_view()
-# Mutation info: units = <ast.Constant object at 0x7fc0579d3890> -> units = inches (Call mcollections.EllipseCollection)
+# Mutation info: units = <ast.Constant object at 0x7fc3241935d0> -> units = inches (Call mcollections.EllipseCollection)

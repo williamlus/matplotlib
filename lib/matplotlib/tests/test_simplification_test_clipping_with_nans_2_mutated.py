@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 from matplotlib import patches, transforms
 from matplotlib.path import Path
 
+@image_comparison(['clipping_with_nans'])
 def test_clipping_with_nans_2_mutated():
     x = np.linspace(0, 3.14 * 2, 3000)
     y = np.sin(x)

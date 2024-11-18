@@ -20,6 +20,7 @@ from matplotlib.ticker import AutoMinorLocator, FixedFormatter, ScalarFormatter
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
+@image_comparison(['figure_legend'])
 def test_figure_legend_3_mutated():
     fig, axs = plt.subplots(2, squeeze=False)
     axs[0].plot([0, 1], [1, 0], label='x', color='g')

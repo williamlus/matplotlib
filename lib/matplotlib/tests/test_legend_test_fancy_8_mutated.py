@@ -20,6 +20,7 @@ import matplotlib.legend as mlegend
 from matplotlib import _api, rc_context
 from matplotlib.font_manager import FontProperties
 
+@image_comparison(['fancy'], remove_text=True, tol=0.05)
 def test_fancy_8_mutated():
     plt.subplot(121, projection='aitoff')
     plt.plot([5] * 10, 'o--', label='XX')

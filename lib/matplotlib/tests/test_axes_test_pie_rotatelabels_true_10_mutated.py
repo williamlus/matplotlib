@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['pie_rotatelabels_true.png'], style='mpl20', tol=0.009)
 def test_pie_rotatelabels_true_10_mutated():
     labels = ('Hogwarts', 'Frogs', 'Dogs', 'Logs')
     sizes = [15, 30, 45, 10]

@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['set_get_ticklabels.png'], tol=0.025 if platform.machine() == 'arm64' else 0)
 def test_set_get_ticklabels_17_mutated():
     fig, ax = plt.subplots(2)
     ha = ['normal', 'set_x/yticklabels']

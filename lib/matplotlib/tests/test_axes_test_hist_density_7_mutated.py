@@ -152,9 +152,10 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['hist_density.png'])
 def test_hist_density_7_mutated():
     np.random.seed(19680801)
     data = np.random.standard_normal(2000)
     fig, ax = plt.subplots()
     ax.hist(data, density=True)
-# Mutation info: density = <ast.Constant object at 0x7fc0570e3d10> -> density = True (Call ax.hist)
+# Mutation info: density = <ast.Constant object at 0x7fc32412d850> -> density = True (Call ax.hist)

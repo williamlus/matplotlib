@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 from matplotlib import patches, transforms
 from matplotlib.path import Path
 
+@image_comparison(['overflow'], remove_text=True, tol=0.007 if platform.machine() == 'arm64' else 0)
 def test_overflow_2_mutated():
     x = np.array([1.0, 2.0, 3.0, 200000.0])
     y = np.arange(len(x))

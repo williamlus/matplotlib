@@ -83,6 +83,7 @@ class SkewXAxes(Axes):
         return self.transDataToAxes.inverted().transform(pts)[:, 0]
 register_projection(SkewXAxes)
 
+@image_comparison(['skew_rects'], remove_text=True, tol=0.009 if platform.machine() == 'arm64' else 0)
 def test_skew_rectangle_12_mutated():
     fix, axes = plt.subplots(5, 5, sharex=True, sharey=True, figsize=(8, 8))
     axes = axes.flat

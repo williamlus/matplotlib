@@ -29,6 +29,7 @@ def example_pcolor(ax, fontsize=12):
     ax.set_title('Title', fontsize=fontsize)
     return pcm
 
+@image_comparison(['constrained_layout1.png'])
 def test_constrained_layout1_13_mutated():
     """Test constrained_layout for a single subplot"""
     fig = plt.figure(layout='constrained')

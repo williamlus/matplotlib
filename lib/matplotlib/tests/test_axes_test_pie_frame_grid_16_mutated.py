@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['pie_frame_grid.png'], style='mpl20', tol=0.002)
 def test_pie_frame_grid_16_mutated():
     labels = ('Frogs', 'Hogs', 'Dogs', 'Logs')
     sizes = [15, 30, 45, 10]

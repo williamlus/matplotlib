@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['axisbelow.png'], remove_text=True)
 def test_axisbelow_26_mutated():
     axs = plt.figure().subplots(ncols=3, sharex=True, sharey=True)
     settings = (False, 'line', True)

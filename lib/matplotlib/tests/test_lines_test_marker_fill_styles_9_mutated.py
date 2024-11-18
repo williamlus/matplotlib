@@ -19,6 +19,7 @@ import matplotlib.pyplot as plt
 import matplotlib.transforms as mtransforms
 from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
+@image_comparison(['marker_fill_styles.png'], remove_text=True)
 def test_marker_fill_styles_9_mutated():
     colors = itertools.cycle([[0, 0, 1], 'g', '#ff0000', 'c', 'm', 'y', np.array([0, 0, 0])])
     altcolor = 'lightgreen'

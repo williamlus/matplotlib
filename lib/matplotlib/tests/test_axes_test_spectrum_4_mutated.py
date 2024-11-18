@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['magnitude_spectrum_freqs_linear.png', 'magnitude_spectrum_freqs_dB.png', 'angle_spectrum_freqs.png', 'phase_spectrum_freqs.png', 'magnitude_spectrum_noise_linear.png', 'magnitude_spectrum_noise_dB.png', 'angle_spectrum_noise.png', 'phase_spectrum_noise.png'], remove_text=True)
 def test_spectrum_4_mutated():
     n = 10000
     Fs = 100.0

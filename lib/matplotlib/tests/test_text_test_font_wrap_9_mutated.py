@@ -20,6 +20,7 @@ from matplotlib.testing._markers import needs_usetex
 from matplotlib.text import Text, Annotation, OffsetFrom
 pyparsing_version = parse_version(pyparsing.__version__)
 
+@image_comparison(baseline_images=['fonttext_wrap'], extensions=['png'])
 def test_font_wrap_9_mutated():
     fig = plt.figure()
     plt.axis([0, 10, 0, 10], option=True)

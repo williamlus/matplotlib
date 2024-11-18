@@ -43,6 +43,7 @@ def _test_rrulewrapper(attach_tz, get_tz):
     exp = [datetime.datetime(2017, 4, 1, 13, tzinfo=dateutil.tz.tzutc()), datetime.datetime(2017, 4, 2, 14, tzinfo=dateutil.tz.tzutc())]
     assert act == exp
 
+@image_comparison(['RRuleLocator_bounds.png'])
 def test_RRuleLocator_21_mutated():
     import matplotlib.testing.jpl_units as units
     units.register()

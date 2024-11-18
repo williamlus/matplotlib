@@ -50,6 +50,7 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
         ax.text(x, y, t)
     return (fig, ax)
 
+@image_comparison(baseline_images=['scatter_spiral.png'], remove_text=True, style='mpl20')
 def test_scatter_spiral_9_mutated():
     plt.rcParams['axes3d.automargin'] = True
     fig = plt.figure()
@@ -57,4 +58,4 @@ def test_scatter_spiral_9_mutated():
     th = np.linspace(0, 2 * np.pi * 6, 256)
     sc = ax.scatter(np.sin(th), np.cos(th), th, s=1 + th * 5, c=th ** 2)
     fig.canvas.draw()
-# Mutation info: projection = <ast.Constant object at 0x7fc054b35050> -> projection = hammer (Call fig.add_subplot)
+# Mutation info: projection = <ast.Constant object at 0x7fc31f2c3a90> -> projection = hammer (Call fig.add_subplot)

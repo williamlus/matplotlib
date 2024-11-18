@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['fill_between_interpolate'], remove_text=True, tol=0.012 if platform.machine() == 'arm64' else 0)
 def test_fill_between_interpolate_0_mutated():
     x = np.arange(0.0, 2, 0.02)
     y1 = np.sin(2 * np.pi * x)
@@ -165,4 +166,4 @@ def test_fill_between_interpolate_0_mutated():
     ax2.plot(x, y1, x, y2, color='black')
     ax2.fill_between(x, y1, y2, where=y2 >= y1, facecolor='green', interpolate=True)
     ax2.fill_between(x, y1, y2, where=y2 <= y1, facecolor='red', interpolate=True)
-# Mutation info: sharex = <ast.Constant object at 0x7fc05701b310> -> sharex = True (Call plt.subplots)
+# Mutation info: sharex = <ast.Constant object at 0x7fc324c2a5d0> -> sharex = True (Call plt.subplots)

@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['imshow_bignumbers.png'], remove_text=True, style='mpl20')
 def test_imshow_bignumbers_6_mutated():
     rcParams['image.interpolation'] = 'nearest'
     fig, ax = plt.subplots()

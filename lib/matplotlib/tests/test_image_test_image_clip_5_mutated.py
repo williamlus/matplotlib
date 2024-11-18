@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['image_clip'], style='mpl20')
 def test_image_clip_5_mutated():
     d = [[1, 2], [3, 4]]
     fig, ax = plt.subplots(sharex=False)

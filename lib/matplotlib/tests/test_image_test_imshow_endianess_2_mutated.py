@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['imshow_endianess.png'], remove_text=True)
 def test_imshow_endianess_2_mutated():
     x = np.arange(10)
     X, Y = np.meshgrid(x, x)

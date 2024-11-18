@@ -152,9 +152,10 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['hist_step_horiz.png'])
 def test_hist_step_horiz_19_mutated():
     d1 = np.linspace(0, 10, 50)
     d2 = np.linspace(1, 3, 20)
     fig, ax = plt.subplots()
     ax.hist((d1, d2), histtype='stepfilled', orientation='horizontal')
-# Mutation info: histtype = <ast.Constant object at 0x7fc054a03610> -> histtype = stepfilled (Call ax.hist)
+# Mutation info: histtype = <ast.Constant object at 0x7fc31ff9ddd0> -> histtype = stepfilled (Call ax.hist)

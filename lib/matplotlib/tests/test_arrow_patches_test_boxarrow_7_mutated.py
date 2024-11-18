@@ -22,6 +22,7 @@ def __prepare_fancyarrow_dpi_cor_test():
     ax.add_patch(mpatches.FancyArrowPatch(posA=(0.3, 0.4), posB=(0.8, 0.6), lw=3, arrowstyle='->', mutation_scale=100))
     return fig2
 
+@image_comparison(['boxarrow_test_image.png'])
 def test_boxarrow_7_mutated():
     styles = mpatches.BoxStyle.get_styles()
     n = len(styles)

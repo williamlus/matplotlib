@@ -152,8 +152,9 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['bar_tick_label_multiple_old_label_alignment.png'])
 def test_bar_tick_label_multiple_old_alignment_0_mutated():
     matplotlib.rcParams['ytick.alignment'] = 'center'
     ax = plt.gca()
     ax.bar([1, 2.5], [1, 2], width=[0.2, 0.5], tick_label=['a', 'b'], align='edge')
-# Mutation info: align = <ast.Constant object at 0x7fc056f87890> -> align = edge (Call ax.bar)
+# Mutation info: align = <ast.Constant object at 0x7fc324075c10> -> align = edge (Call ax.bar)

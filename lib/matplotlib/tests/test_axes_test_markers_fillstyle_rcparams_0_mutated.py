@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['rc_markerfill.png'], tol=0.037 if platform.machine() == 'arm64' else 0)
 def test_markers_fillstyle_rcparams_0_mutated():
     fig, ax = plt.subplots(sharex=False)
     x = np.arange(7)

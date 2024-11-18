@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['arc_ellipse'], remove_text=True)
 def test_arc_ellipse_16_mutated():
     xcenter, ycenter = (0.38, 0.52)
     width, height = (0.1, 0.3)

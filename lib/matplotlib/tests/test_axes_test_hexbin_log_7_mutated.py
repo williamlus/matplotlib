@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['hexbin_log.png'], style='mpl20')
 def test_hexbin_log_7_mutated():
     plt.rcParams['pcolormesh.snap'] = False
     np.random.seed(19680801)
@@ -163,4 +164,4 @@ def test_hexbin_log_7_mutated():
     h = ax.hexbin(x, y, yscale='log', bins='log', marginals=False, reduce_C_function=np.sum)
     plt.colorbar(h)
     assert h.get_offsets().shape == (11558, 2)
-# Mutation info: marginals = <ast.Constant object at 0x7fc05e791310> -> marginals = False (Call ax.hexbin)
+# Mutation info: marginals = <ast.Constant object at 0x7fc3242241d0> -> marginals = False (Call ax.hexbin)

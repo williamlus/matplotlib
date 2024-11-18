@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['vlines_basic', 'vlines_with_nan', 'vlines_masked'], extensions=['png'])
 def test_vlines_28_mutated():
     x1 = [2, 3, 4, 5, 7]
     y1 = [2, -6, 3, 8, 2]

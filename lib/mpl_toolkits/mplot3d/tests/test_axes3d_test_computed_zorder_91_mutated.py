@@ -50,6 +50,7 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
         ax.text(x, y, t)
     return (fig, ax)
 
+@image_comparison(baseline_images=['computed_zorder'], remove_text=True, extensions=['png'], style='mpl20')
 def test_computed_zorder_91_mutated():
     plt.rcParams['axes3d.automargin'] = True
     fig = plt.figure()

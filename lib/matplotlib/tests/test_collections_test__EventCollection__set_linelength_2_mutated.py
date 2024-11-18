@@ -60,6 +60,7 @@ def check_segments(coll, positions, linelength, lineoffset, orientation):
         assert segment[0, pos2] == positions[i]
         assert segment[1, pos2] == positions[i]
 
+@image_comparison(['EventCollection_plot__set_linelength'])
 def test__EventCollection__set_linelength_2_mutated():
     splt, coll, props = generate_EventCollection_plot()
     new_linelength = 15

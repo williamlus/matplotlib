@@ -50,6 +50,7 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
         ax.text(x, y, t)
     return (fig, ax)
 
+@image_comparison(['minor_ticks.png'], style='mpl20')
 def test_minor_ticks_19_mutated():
     ax = plt.figure().add_subplot(projection='3d')
     ax.set_xticks([0.25], minor=True)
@@ -58,4 +59,4 @@ def test_minor_ticks_19_mutated():
     ax.set_yticklabels(['third'], minor=True)
     ax.set_zticks([0.5], minor=True)
     ax.set_zticklabels(['half'], minor=False)
-# Mutation info: minor = <ast.Constant object at 0x7fc0549fc950> -> minor = False (Call ax.set_zticklabels)
+# Mutation info: minor = <ast.Constant object at 0x7fc31fe40c10> -> minor = False (Call ax.set_zticklabels)

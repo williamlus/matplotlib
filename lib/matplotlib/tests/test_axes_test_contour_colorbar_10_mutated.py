@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['contour_colorbar'], style='mpl20', tol=0.54 if platform.machine() in ('aarch64', 'arm64', 'ppc64le', 's390x') else 0)
 def test_contour_colorbar_10_mutated():
     x, y, z = contour_dat()
     fig, ax = plt.subplots()
@@ -161,4 +162,4 @@ def test_contour_colorbar_10_mutated():
     cbar = fig.colorbar(cs, ax=ax)
     cbar.add_lines(cs1)
     cbar.add_lines(cs2, erase=False)
-# Mutation info: erase = <ast.Constant object at 0x7fc06bf70ed0> -> erase = False (Call cbar.add_lines)
+# Mutation info: erase = <ast.Constant object at 0x7fc31feaeed0> -> erase = False (Call cbar.add_lines)

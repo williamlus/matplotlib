@@ -20,6 +20,7 @@ from matplotlib.ticker import AutoMinorLocator, FixedFormatter, ScalarFormatter
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
+@image_comparison(['figure_today'], tol=0.015 if platform.machine() == 'arm64' else 0)
 def test_figure_0_mutated():
     fig = plt.figure('today', frameon=True)
     ax = fig.add_subplot()

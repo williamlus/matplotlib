@@ -12,6 +12,7 @@ def draw_quiver(ax, **kwargs):
     Q = ax.quiver(U, V, **kwargs)
     return Q
 
+@image_comparison(['quiver_xy.png'], remove_text=True)
 def test_quiver_xy_26_mutated():
     fig, ax = plt.subplots(subplot_kw=dict(aspect='equal'))
     ax.quiver(0, 0, 1, 1, angles='xy', scale_units='xy', scale=1, pivot='middle')

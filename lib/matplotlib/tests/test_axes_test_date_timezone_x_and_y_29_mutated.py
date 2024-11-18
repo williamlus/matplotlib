@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['date_timezone_x_and_y.png'], tol=1.0)
 def test_date_timezone_x_and_y_29_mutated():
     UTC = datetime.timezone.utc
     time_index = [datetime.datetime(2016, 2, 22, hour=x, tzinfo=UTC) for x in range(3)]
@@ -162,4 +163,4 @@ def test_date_timezone_x_and_y_29_mutated():
     plt.subplot(2, 1, 2)
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         plt.plot_date(time_index, time_index, tz='US/Eastern', ydate=True)
-# Mutation info: ydate = <ast.Constant object at 0x7fc056c7ed90> -> ydate = False (Call plt.plot_date)
+# Mutation info: ydate = <ast.Constant object at 0x7fc31dbd4190> -> ydate = False (Call plt.plot_date)

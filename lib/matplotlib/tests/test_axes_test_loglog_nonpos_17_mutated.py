@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['test_loglog_nonpos.png'], remove_text=True, style='mpl20', tol=0.029 if platform.machine() == 'arm64' else 0)
 def test_loglog_nonpos_17_mutated():
     fig, axs = plt.subplots(3, 3)
     x = np.arange(1, 11)

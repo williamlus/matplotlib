@@ -22,6 +22,7 @@ def meshgrid_triangles(n):
             tri += [[a, b, d], [a, d, c]]
     return np.array(tri, dtype=np.int32)
 
+@image_comparison(['tri_smooth_contouring.png'], remove_text=True, tol=0.072)
 def test_tri_smooth_contouring_0_mutated():
     n_angles = 20
     n_radii = 10

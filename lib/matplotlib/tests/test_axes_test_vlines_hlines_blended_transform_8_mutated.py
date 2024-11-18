@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['vlines_hlines_blended_transform'], extensions=['png'], style='mpl20')
 def test_vlines_hlines_blended_transform_8_mutated():
     t = np.arange(5.0, 10.0, 0.1)
     s = np.exp(-t) + np.sin(2 * np.pi * t) + 10

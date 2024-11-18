@@ -83,6 +83,7 @@ class SkewXAxes(Axes):
         return self.transDataToAxes.inverted().transform(pts)[:, 0]
 register_projection(SkewXAxes)
 
+@image_comparison(['skew_axes'], remove_text=True)
 def test_set_line_coll_dash_image_9_mutated():
     fig = plt.figure(clear=True)
     ax = fig.add_subplot(1, 1, 1, projection='skewx')

@@ -11,6 +11,7 @@ from mpl_toolkits.axisartist import angle_helper
 from mpl_toolkits.axisartist.axislines import Axes
 from mpl_toolkits.axisartist.grid_helper_curvelinear import GridHelperCurveLinear
 
+@image_comparison(['custom_transform.png'], style='default', tol=0.2)
 def test_custom_transform_2_mutated():
 
     class MyTransform(Transform):

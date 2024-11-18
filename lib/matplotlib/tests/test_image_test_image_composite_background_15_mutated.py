@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['image_composite_background'], remove_text=True, style='mpl20')
 def test_image_composite_background_15_mutated():
     fig, ax = plt.subplots()
     arr = np.arange(12).reshape(4, 3)

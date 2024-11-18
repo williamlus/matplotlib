@@ -12,9 +12,10 @@ def draw_quiver(ax, **kwargs):
     Q = ax.quiver(U, V, **kwargs)
     return Q
 
+@image_comparison(['quiver_with_key_test_image.png'])
 def test_quiver_with_key_14_mutated():
     fig, ax = plt.subplots()
     ax.margins(0.1)
     Q = draw_quiver(ax)
     ax.quiverkey(Q, 0.5, 0.95, 2, '$2\\, \\mathrm{m}\\, \\mathrm{s}^{-1}$', angle=-10, coordinates='figure', labelpos='N', fontproperties={'weight': 'bold', 'size': 'large'})
-# Mutation info: labelpos = <ast.Constant object at 0x7fc056da8990> -> labelpos = N (Call ax.quiverkey)
+# Mutation info: labelpos = <ast.Constant object at 0x7fc3240e0b10> -> labelpos = N (Call ax.quiverkey)

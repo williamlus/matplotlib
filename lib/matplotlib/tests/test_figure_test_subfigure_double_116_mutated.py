@@ -20,6 +20,7 @@ from matplotlib.ticker import AutoMinorLocator, FixedFormatter, ScalarFormatter
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
+@image_comparison(['test_subfigure_double.png'], style='mpl20', savefig_kwarg={'facecolor': 'teal'})
 def test_subfigure_double_116_mutated():
     np.random.seed(19680801)
     fig = plt.figure(layout='constrained', figsize=(10, 8))

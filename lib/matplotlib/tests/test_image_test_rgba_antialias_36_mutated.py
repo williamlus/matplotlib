@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['rgba_antialias.png'], style='mpl20', remove_text=True, tol=0.02)
 def test_rgba_antialias_36_mutated():
     fig, axs = plt.subplots(2, 2, figsize=(3.5, 3.5), sharex=False, sharey=False, constrained_layout=True)
     N = 250

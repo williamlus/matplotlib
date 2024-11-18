@@ -5,6 +5,7 @@ from matplotlib.transforms import IdentityTransform
 from mpl_toolkits.axisartist.axislines import AxesZero, SubplotZero, Subplot
 from mpl_toolkits.axisartist import Axes, SubplotHost
 
+@image_comparison(['subplotzero_ylabel.png'], style='mpl20')
 def test_subplotzero_ylabel_12_mutated():
     fig = plt.figure()
     ax = fig.add_subplot(111, axes_class=SubplotZero, polar=False)

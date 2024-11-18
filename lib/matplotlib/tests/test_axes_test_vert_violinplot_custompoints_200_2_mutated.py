@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['violinplot_vert_custompoints_200.png'])
 def test_vert_violinplot_custompoints_200_2_mutated():
     ax = plt.axes(polar=False)
     np.random.seed(123105625)

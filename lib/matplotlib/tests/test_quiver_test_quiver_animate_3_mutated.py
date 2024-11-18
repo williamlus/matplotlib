@@ -12,6 +12,7 @@ def draw_quiver(ax, **kwargs):
     Q = ax.quiver(U, V, **kwargs)
     return Q
 
+@image_comparison(['quiver_animated_test_image.png'])
 def test_quiver_animate_3_mutated():
     fig, ax = plt.subplots(sharey=True)
     Q = draw_quiver(ax, animated=True)

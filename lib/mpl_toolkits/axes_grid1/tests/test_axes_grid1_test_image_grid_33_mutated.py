@@ -20,6 +20,7 @@ import pytest
 import numpy as np
 from numpy.testing import assert_array_equal, assert_array_almost_equal
 
+@image_comparison(['image_grid.png'], remove_text=True, style='mpl20', savefig_kwarg={'bbox_inches': 'tight'})
 def test_image_grid_33_mutated():
     im = np.arange(100).reshape((10, 10))
     fig = plt.figure(1, (4, 4))

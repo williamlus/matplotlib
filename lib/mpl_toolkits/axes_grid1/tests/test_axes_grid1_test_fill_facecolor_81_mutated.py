@@ -20,6 +20,7 @@ import pytest
 import numpy as np
 from numpy.testing import assert_array_equal, assert_array_almost_equal
 
+@image_comparison(['fill_facecolor.png'], remove_text=True, style='mpl20')
 def test_fill_facecolor_81_mutated():
     fig, ax = plt.subplots(1, 5)
     fig.set_size_inches(5, 5)
@@ -71,4 +72,4 @@ def test_fill_facecolor_81_mutated():
     axins.xaxis.set_ticks([])
     axins.yaxis.set_ticks([])
     mark_inset(ax[3], axins, loc1=1, loc2=4, fc='g', ec='0.5', fill=False)
-# Mutation info: loc1 = <ast.Constant object at 0x7fc056e12c50> -> loc1 = 1 (Call mark_inset)
+# Mutation info: loc1 = <ast.Constant object at 0x7fc31f72b110> -> loc1 = 1 (Call mark_inset)

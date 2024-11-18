@@ -12,6 +12,7 @@ def draw_quiver(ax, **kwargs):
     Q = ax.quiver(U, V, **kwargs)
     return Q
 
+@image_comparison(['barbs_test_flip.png'], remove_text=True)
 def test_barbs_flip_11_mutated():
     """Test barbs with an array for flip_barb."""
     x = np.linspace(-5, 5, 5)
@@ -19,4 +20,4 @@ def test_barbs_flip_11_mutated():
     U, V = (12 * X, 12 * Y)
     fig, ax = plt.subplots()
     ax.barbs(X, Y, U, V, fill_empty=True, rounding=False, pivot=1.7, sizes=dict(emptybarb=0.25, spacing=0.2, height=0.3), flip_barb=Y < 0)
-# Mutation info: fill_empty = <ast.Constant object at 0x7fc0570c27d0> -> fill_empty = True (Call ax.barbs)
+# Mutation info: fill_empty = <ast.Constant object at 0x7fc31fe147d0> -> fill_empty = True (Call ax.barbs)

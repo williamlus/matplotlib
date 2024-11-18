@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['hist_stacked_weights'])
 def test_hist_stacked_weighted_14_mutated():
     d1 = np.linspace(0, 10, 50)
     d2 = np.linspace(1, 3, 20)

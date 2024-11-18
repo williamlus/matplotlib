@@ -5,6 +5,7 @@ import matplotlib as mpl
 from matplotlib import pyplot as plt
 from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
+@image_comparison(['polar_axes'], style='default', tol=0.012)
 def test_polar_annotations_1_mutated():
     r = np.arange(0.0, 1.0, 0.001)
     theta = 2.0 * 2.0 * np.pi * r

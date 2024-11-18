@@ -43,6 +43,7 @@ def _test_rrulewrapper(attach_tz, get_tz):
     exp = [datetime.datetime(2017, 4, 1, 13, tzinfo=dateutil.tz.tzutc()), datetime.datetime(2017, 4, 2, 14, tzinfo=dateutil.tz.tzutc())]
     assert act == exp
 
+@image_comparison(['DateFormatter_fractionalSeconds.png'])
 def test_DateFormatter_2_mutated():
     import matplotlib.testing.jpl_units as units
     units.register()

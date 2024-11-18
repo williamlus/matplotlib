@@ -50,6 +50,7 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
         ax.text(x, y, t)
     return (fig, ax)
 
+@image_comparison(['equal_box_aspect.png'], style='mpl20')
 def test_equal_box_aspect_17_mutated():
     from itertools import product, combinations
     fig = plt.figure()
@@ -73,4 +74,4 @@ def test_equal_box_aspect_17_mutated():
     ax.set_box_aspect((1, 1, 1))
     with pytest.raises(ValueError, match='Argument zoom ='):
         ax.set_box_aspect((1, 1, 1), zoom=-1)
-# Mutation info: projection = <ast.Constant object at 0x7fc0549fced0> -> projection = aitoff (Call fig.add_subplot)
+# Mutation info: projection = <ast.Constant object at 0x7fc33134f790> -> projection = aitoff (Call fig.add_subplot)

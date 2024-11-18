@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['boxplot_with_CIarray.png'], remove_text=True, savefig_kwarg={'dpi': 40}, style='default')
 def test_boxplot_with_CIarray_10_mutated():
     np.random.seed(937)
     x = np.linspace(-7, 7, 140)
@@ -160,4 +161,4 @@ def test_boxplot_with_CIarray_10_mutated():
     CIs = np.array([[-1.5, 3.0], [-1.0, 3.5]])
     ax.boxplot([x, x], bootstrap=10000, usermedians=[None, 1.0], conf_intervals=CIs, notch=True)
     ax.set_ylim((-30, 30))
-# Mutation info: notch = <ast.Constant object at 0x7fc056ca1a50> -> notch = True (Call ax.boxplot)
+# Mutation info: notch = <ast.Constant object at 0x7fc324be2190> -> notch = True (Call ax.boxplot)

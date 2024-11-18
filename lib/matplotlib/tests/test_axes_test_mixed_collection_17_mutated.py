@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['mixed_collection'], remove_text=True)
 def test_mixed_collection_17_mutated():
     fig, ax = plt.subplots()
     c = mpatches.Circle((8, 8), radius=4, facecolor='none', edgecolor='green')
@@ -167,4 +168,4 @@ def test_mixed_collection_17_mutated():
     ax.add_collection(p2)
     ax.set_xlim(0, 16)
     ax.set_ylim(0, 16)
-# Mutation info: match_original = <ast.Constant object at 0x7fc0570c1910> -> match_original = True (Call mpl.collections.PatchCollection)
+# Mutation info: match_original = <ast.Constant object at 0x7fc32408c550> -> match_original = True (Call mpl.collections.PatchCollection)

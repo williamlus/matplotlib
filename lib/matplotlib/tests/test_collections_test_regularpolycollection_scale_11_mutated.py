@@ -60,6 +60,7 @@ def check_segments(coll, positions, linelength, lineoffset, orientation):
         assert segment[0, pos2] == positions[i]
         assert segment[1, pos2] == positions[i]
 
+@image_comparison(['regularpolycollection_scale.png'], remove_text=True)
 def test_regularpolycollection_scale_11_mutated():
 
     class SquareCollection(mcollections.RegularPolyCollection):

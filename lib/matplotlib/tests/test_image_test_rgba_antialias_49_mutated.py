@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['rgba_antialias.png'], style='mpl20', remove_text=True, tol=0.02)
 def test_rgba_antialias_49_mutated():
     fig, axs = plt.subplots(2, 2, figsize=(3.5, 3.5), sharex=False, sharey=False, constrained_layout=True)
     N = 250
@@ -105,4 +106,4 @@ def test_rgba_antialias_49_mutated():
     axs[1].imshow(aa, interpolation='nearest', cmap=cmap, vmin=-1.2, vmax=1.2)
     axs[2].imshow(aa, interpolation='auto', interpolation_stage='data', cmap=cmap, vmin=-1.2, vmax=1.2)
     axs[3].imshow(aa, interpolation='auto', interpolation_stage='auto', cmap=cmap, vmin=-1.2, vmax=1.2)
-# Mutation info: interpolation_stage = <ast.Constant object at 0x7fc0570a02d0> -> interpolation_stage = auto (Call axs[3].imshow)
+# Mutation info: interpolation_stage = <ast.Constant object at 0x7fc31fad3a90> -> interpolation_stage = auto (Call axs[3].imshow)

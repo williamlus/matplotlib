@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['pie_ccw_true.png'], style='mpl20', tol=0.01)
 def test_pie_ccw_true_4_mutated():
     labels = ('Frogs', 'Hogs', 'Dogs', 'Logs')
     sizes = [15, 30, 45, 10]
@@ -159,4 +160,4 @@ def test_pie_ccw_true_4_mutated():
     explode = (0, 0.1, 0, 0)
     plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=False, startangle=90, counterclock=True)
     plt.axis('equal')
-# Mutation info: shadow = <ast.Constant object at 0x7fc056c7d110> -> shadow = False (Call plt.pie)
+# Mutation info: shadow = <ast.Constant object at 0x7fc31db51110> -> shadow = False (Call plt.pie)

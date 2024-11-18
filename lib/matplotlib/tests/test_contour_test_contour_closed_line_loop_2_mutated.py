@@ -12,6 +12,7 @@ import matplotlib.patches as mpatches
 from matplotlib.testing.decorators import check_figures_equal, image_comparison
 import pytest
 
+@image_comparison(baseline_images=['contour_closed_line_loop'], extensions=['png'], remove_text=True)
 def test_contour_closed_line_loop_2_mutated():
     z = [[0, 0, 0], [0, 2, 0], [0, 0, 0], [2, 1, 2]]
     fig, ax = plt.subplots(figsize=(2, 2), sharex=False)

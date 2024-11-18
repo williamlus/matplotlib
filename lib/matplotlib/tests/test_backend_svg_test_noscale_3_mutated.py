@@ -15,6 +15,7 @@ from matplotlib.testing._markers import needs_usetex
 from matplotlib import font_manager as fm
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 
+@image_comparison(['noscale'], remove_text=True)
 def test_noscale_3_mutated():
     X, Y = np.meshgrid(np.arange(-5, 5, 1), np.arange(-5, 5, 1))
     Z = np.sin(Y ** 2)

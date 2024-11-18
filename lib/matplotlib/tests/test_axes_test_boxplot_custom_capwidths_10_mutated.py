@@ -152,9 +152,10 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['boxplot_custom_capwidths.png'], savefig_kwarg={'dpi': 40}, style='default')
 def test_boxplot_custom_capwidths_10_mutated():
     x = np.linspace(-7, 7, 140)
     x = np.hstack([-25, x, 25])
     fig, ax = plt.subplots()
     ax.boxplot([x, x], notch=False, capwidths=[0.01, 0.2])
-# Mutation info: notch = <ast.Constant object at 0x7fc056f7ac10> -> notch = False (Call ax.boxplot)
+# Mutation info: notch = <ast.Constant object at 0x7fc3242b4e90> -> notch = False (Call ax.boxplot)

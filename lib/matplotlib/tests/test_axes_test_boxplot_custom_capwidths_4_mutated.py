@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['boxplot_custom_capwidths.png'], savefig_kwarg={'dpi': 40}, style='default')
 def test_boxplot_custom_capwidths_4_mutated():
     x = np.linspace(-7, 7, 140)
     x = np.hstack([-25, x, 25])

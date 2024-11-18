@@ -51,6 +51,7 @@ def polygon_place_vertex(xdata, ydata):
 def polygon_remove_vertex(xdata, ydata):
     return [('onmove', dict(xdata=xdata, ydata=ydata)), ('press', dict(xdata=xdata, ydata=ydata, button=3)), ('release', dict(xdata=xdata, ydata=ydata, button=3))]
 
+@image_comparison(['check_radio_buttons.png'], style='mpl20', remove_text=True)
 def test_check_radio_buttons_image_3_mutated():
     ax = get_ax()
     fig = ax.get_figure(root=False)

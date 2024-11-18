@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['image_alpha'], remove_text=True)
 def test_image_alpha_7_mutated():
     np.random.seed(0)
     Z = np.random.rand(6, 6)

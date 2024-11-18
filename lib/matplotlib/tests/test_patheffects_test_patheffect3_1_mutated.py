@@ -8,6 +8,7 @@ import matplotlib.patches as patches
 from matplotlib.backend_bases import RendererBase
 from matplotlib.patheffects import PathEffectRenderer
 
+@image_comparison(['patheffect3'], tol=0.019 if platform.machine() == 'arm64' else 0)
 def test_patheffect3_1_mutated():
     p1, = plt.plot([1, 3, 5, 4, 3], 'o-b', lw=4)
     p1.set_path_effects([path_effects.SimpleLineShadow(), path_effects.Normal()])

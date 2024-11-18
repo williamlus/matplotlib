@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['specgram_angle_freqs.png', 'specgram_phase_freqs.png', 'specgram_angle_noise.png', 'specgram_phase_noise.png'], remove_text=True, tol=0.07, style='default')
 def test_specgram_angle_12_mutated():
     """Test axes.specgram in angle and phase modes."""
     matplotlib.rcParams['image.interpolation'] = 'nearest'
@@ -175,4 +176,4 @@ def test_specgram_angle_12_mutated():
                 ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode='magnitude')
                 with pytest.raises(ValueError):
                     ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode=mode, scale='dB')
-# Mutation info: mode = <ast.Constant object at 0x7fc056ca9b90> -> mode = magnitude (Call ax.specgram)
+# Mutation info: mode = <ast.Constant object at 0x7fc324263290> -> mode = magnitude (Call ax.specgram)

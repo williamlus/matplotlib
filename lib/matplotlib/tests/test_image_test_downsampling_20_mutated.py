@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['downsampling.png'], style='mpl20', remove_text=True, tol=0.09)
 def test_downsampling_20_mutated():
     N = 450
     x = np.arange(N) / N - 0.5

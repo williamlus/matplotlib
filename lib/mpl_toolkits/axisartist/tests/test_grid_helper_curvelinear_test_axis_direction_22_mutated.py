@@ -11,6 +11,7 @@ from mpl_toolkits.axisartist import angle_helper
 from mpl_toolkits.axisartist.axislines import Axes
 from mpl_toolkits.axisartist.grid_helper_curvelinear import GridHelperCurveLinear
 
+@image_comparison(['axis_direction.png'], style='default', tol=0.13)
 def test_axis_direction_22_mutated():
     plt.rcParams['text.kerning_factor'] = 6
     fig = plt.figure(figsize=(5, 5), layout='compressed')

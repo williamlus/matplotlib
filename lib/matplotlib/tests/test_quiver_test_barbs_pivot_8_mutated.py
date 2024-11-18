@@ -12,6 +12,7 @@ def draw_quiver(ax, **kwargs):
     Q = ax.quiver(U, V, **kwargs)
     return Q
 
+@image_comparison(['barbs_pivot_test_image.png'], remove_text=True)
 def test_barbs_pivot_8_mutated():
     x = np.linspace(-5, 5, 5)
     X, Y = np.meshgrid(x, x)

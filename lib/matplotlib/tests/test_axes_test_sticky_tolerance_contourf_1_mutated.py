@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['sticky_tolerance_cf.png'], remove_text=True, style='mpl20')
 def test_sticky_tolerance_contourf_1_mutated():
     fig, ax = plt.subplots(sharex=False)
     x = y = [14496.71, 14496.75]

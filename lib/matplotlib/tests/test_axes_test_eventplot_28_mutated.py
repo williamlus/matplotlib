@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['eventplot', 'eventplot'], remove_text=True)
 def test_eventplot_28_mutated():
     np.random.seed(0)
     data1 = np.random.random([32, 20]).tolist()

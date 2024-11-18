@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['pie_rotatelabels_true.png'], style='mpl20', tol=0.009)
 def test_pie_rotatelabels_true_4_mutated():
     labels = ('Hogwarts', 'Frogs', 'Dogs', 'Logs')
     sizes = [15, 30, 45, 10]
@@ -159,4 +160,4 @@ def test_pie_rotatelabels_true_4_mutated():
     explode = (0, 0.1, 0, 0)
     plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=False, startangle=90, rotatelabels=True)
     plt.axis('equal')
-# Mutation info: shadow = <ast.Constant object at 0x7fc056e0b350> -> shadow = False (Call plt.pie)
+# Mutation info: shadow = <ast.Constant object at 0x7fc3240e3190> -> shadow = False (Call plt.pie)

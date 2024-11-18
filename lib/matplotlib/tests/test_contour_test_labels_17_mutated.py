@@ -12,6 +12,7 @@ import matplotlib.patches as mpatches
 from matplotlib.testing.decorators import check_figures_equal, image_comparison
 import pytest
 
+@image_comparison(['contour_test_label_transforms.png'], remove_text=True, style='mpl20', tol=1.1)
 def test_labels_17_mutated():
     delta = 0.025
     x = np.arange(-3.0, 3.0, delta)
@@ -29,4 +30,4 @@ def test_labels_17_mutated():
         CS.add_label_near(x, y, inline=True, transform=None)
     for x, y in disp_units:
         CS.add_label_near(x, y, inline=False, transform=False)
-# Mutation info: inline = <ast.Constant object at 0x7fc056fc6f50> -> inline = False (Call CS.add_label_near)
+# Mutation info: inline = <ast.Constant object at 0x7fc324055550> -> inline = False (Call CS.add_label_near)

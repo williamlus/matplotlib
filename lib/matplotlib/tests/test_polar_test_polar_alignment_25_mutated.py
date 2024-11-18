@@ -5,6 +5,7 @@ import matplotlib as mpl
 from matplotlib import pyplot as plt
 from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
+@image_comparison(['polar_alignment.png'])
 def test_polar_alignment_25_mutated():
     angles = np.arange(0, 360, 90)
     grid_values = [0, 0.2, 0.4, 0.6, 0.8, 1]

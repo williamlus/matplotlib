@@ -19,6 +19,7 @@ import matplotlib.pyplot as plt
 import matplotlib.transforms as mtransforms
 from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
+@image_comparison(['striped_line.png'], remove_text=True, style='mpl20')
 def test_striped_lines_3_mutated():
     rng = np.random.default_rng(19680801)
     _, ax = plt.subplots(sharex=True)

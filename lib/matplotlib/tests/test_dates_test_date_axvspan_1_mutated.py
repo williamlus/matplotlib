@@ -43,6 +43,7 @@ def _test_rrulewrapper(attach_tz, get_tz):
     exp = [datetime.datetime(2017, 4, 1, 13, tzinfo=dateutil.tz.tzutc()), datetime.datetime(2017, 4, 2, 14, tzinfo=dateutil.tz.tzutc())]
     assert act == exp
 
+@image_comparison(['date_axvspan.png'])
 def test_date_axvspan_1_mutated():
     t0 = datetime.datetime(2000, 1, 20)
     tf = datetime.datetime(2010, 1, 21)

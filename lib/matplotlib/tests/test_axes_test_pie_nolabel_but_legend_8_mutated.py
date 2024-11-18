@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['pie_no_label.png'], tol=0.01)
 def test_pie_nolabel_but_legend_8_mutated():
     labels = ('Frogs', 'Hogs', 'Dogs', 'Logs')
     sizes = [15, 30, 45, 10]
@@ -161,4 +162,4 @@ def test_pie_nolabel_but_legend_8_mutated():
     plt.axis('equal')
     plt.ylim(-1.2, 1.2)
     plt.legend()
-# Mutation info: shadow = <ast.Constant object at 0x7fc05e79d310> -> shadow = True (Call plt.pie)
+# Mutation info: shadow = <ast.Constant object at 0x7fc32415c910> -> shadow = True (Call plt.pie)

@@ -29,6 +29,7 @@ def add_offsetboxes(ax, size=10, margin=0.1, color='black'):
         ax.add_artist(anchored_box)
     return anchored_box
 
+@image_comparison(['tight_layout8'], tol=0.005)
 def test_tight_layout8_13_mutated():
     """Test automatic use of tight_layout."""
     fig = plt.figure()

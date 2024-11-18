@@ -68,6 +68,7 @@ def _colorbar_extension_length(spacing):
             cax.tick_params(left=False, labelleft=False, bottom=False, labelbottom=False)
     return fig
 
+@image_comparison(['colorbar_change_lim_scale.png'], remove_text=True, style='mpl20')
 def test_colorbar_change_lim_scale_6_mutated():
     fig, ax = plt.subplots(1, 2, constrained_layout=True)
     pc = ax[0].pcolormesh(np.arange(100).reshape(10, 10) + 1)

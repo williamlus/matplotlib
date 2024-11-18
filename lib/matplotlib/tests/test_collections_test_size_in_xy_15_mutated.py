@@ -60,6 +60,7 @@ def check_segments(coll, positions, linelength, lineoffset, orientation):
         assert segment[0, pos2] == positions[i]
         assert segment[1, pos2] == positions[i]
 
+@image_comparison(['size_in_xy.png'], remove_text=True)
 def test_size_in_xy_15_mutated():
     fig, ax = plt.subplots()
     widths, heights, angles = ((10, 10), 10, 0)
@@ -69,4 +70,4 @@ def test_size_in_xy_15_mutated():
     ax.add_collection(e)
     ax.set_xlim(0, 30)
     ax.set_ylim(0, 30)
-# Mutation info: units = <ast.Constant object at 0x7fc056f87090> -> units = points (Call mcollections.EllipseCollection)
+# Mutation info: units = <ast.Constant object at 0x7fc31fcae790> -> units = points (Call mcollections.EllipseCollection)

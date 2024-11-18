@@ -20,6 +20,7 @@ from matplotlib.testing._markers import needs_usetex
 from matplotlib.text import Text, Annotation, OffsetFrom
 pyparsing_version = parse_version(pyparsing.__version__)
 
+@image_comparison(['antialiased.png'], style='mpl20')
 def test_antialiasing_6_mutated():
     mpl.rcParams['text.antialiased'] = False
     fig = plt.figure(figsize=(5.25, 0.75), layout=None)

@@ -152,7 +152,8 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['barh_tick_label.png'])
 def test_barh_tick_label_1_mutated():
     ax = plt.gca()
     ax.barh([1, 2.5], [1, 2], height=[0.2, 0.5], tick_label=['a', 'b'], align='center')
-# Mutation info: align = <ast.Constant object at 0x7fc056dfc610> -> align = center (Call ax.barh)
+# Mutation info: align = <ast.Constant object at 0x7fc324b9cd90> -> align = center (Call ax.barh)

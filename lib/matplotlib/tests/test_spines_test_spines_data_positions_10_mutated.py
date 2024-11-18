@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.spines import Spines
 from matplotlib.testing.decorators import check_figures_equal, image_comparison
 
+@image_comparison(['spines_data_positions'])
 def test_spines_data_positions_10_mutated():
     fig, ax = plt.subplots()
     ax.spines.left.set_position(('data', -1.5))

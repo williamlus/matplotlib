@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['image_cliprect'], style='mpl20')
 def test_image_cliprect_4_mutated():
     fig, ax = plt.subplots(sharey=True)
     d = [[1, 2], [3, 4]]

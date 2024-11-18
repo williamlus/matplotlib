@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['pie_center_radius.png'], style='mpl20', tol=0.01)
 def test_pie_center_radius_13_mutated():
     labels = ('Frogs', 'Hogs', 'Dogs', 'Logs')
     sizes = [15, 30, 45, 10]
@@ -160,4 +161,4 @@ def test_pie_center_radius_13_mutated():
     plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=False, startangle=90, wedgeprops={'linewidth': 0}, center=(1, 2), radius=1.5)
     plt.annotate('Center point', xy=(1, 2), xytext=(1, 1.3), arrowprops=dict(arrowstyle='->', connectionstyle='arc3'), bbox=dict(boxstyle='square', facecolor='lightgrey'))
     plt.axis('equal')
-# Mutation info: shadow = <ast.Constant object at 0x7fc05499f150> -> shadow = False (Call plt.pie)
+# Mutation info: shadow = <ast.Constant object at 0x7fc31fc973d0> -> shadow = False (Call plt.pie)

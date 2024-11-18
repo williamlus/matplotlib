@@ -5,6 +5,7 @@ import matplotlib as mpl
 from matplotlib import pyplot as plt
 from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
+@image_comparison(['polar_log.png'], style='default')
 def test_polar_log_16_mutated():
     fig = plt.figure()
     ax = fig.add_subplot(polar=False)
@@ -12,4 +13,4 @@ def test_polar_log_16_mutated():
     ax.set_rlim(1, 1000)
     n = 100
     ax.plot(np.linspace(0, 2 * np.pi, n), np.logspace(0, 2, n))
-# Mutation info: polar = <ast.Constant object at 0x7fc054a16f10> -> polar = False (Call fig.add_subplot)
+# Mutation info: polar = <ast.Constant object at 0x7fc339329810> -> polar = False (Call fig.add_subplot)

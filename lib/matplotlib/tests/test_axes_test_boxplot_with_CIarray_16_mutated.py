@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['boxplot_with_CIarray.png'], remove_text=True, savefig_kwarg={'dpi': 40}, style='default')
 def test_boxplot_with_CIarray_16_mutated():
     np.random.seed(937)
     x = np.linspace(-7, 7, 140)

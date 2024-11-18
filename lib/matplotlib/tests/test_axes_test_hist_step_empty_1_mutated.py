@@ -152,7 +152,8 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['hist_step_empty.png'], remove_text=True)
 def test_hist_step_empty_1_mutated():
     ax = plt.gca()
     ax.hist([], histtype='stepfilled')
-# Mutation info: histtype = <ast.Constant object at 0x7fc05797e710> -> histtype = stepfilled (Call ax.hist)
+# Mutation info: histtype = <ast.Constant object at 0x7fc31fc8cb90> -> histtype = stepfilled (Call ax.hist)

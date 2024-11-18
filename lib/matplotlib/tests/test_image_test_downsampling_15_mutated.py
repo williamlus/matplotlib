@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['downsampling.png'], style='mpl20', remove_text=True, tol=0.09)
 def test_downsampling_15_mutated():
     N = 450
     x = np.arange(N) / N - 0.5
@@ -98,4 +99,4 @@ def test_downsampling_15_mutated():
     for ax, interp, space in zip(axs.flat[1:], ['nearest', 'nearest', 'hanning', 'hanning', 'auto'], ['data', 'rgba', 'data', 'rgba', 'auto']):
         ax.imshow(a, interpolation=interp, interpolation_stage='auto', cmap='RdBu_r')
         ax.set_title(f"interpolation='{interp}'\nspace='{space}'")
-# Mutation info: interpolation_stage = <ast.Constant object at 0x7fc056d2f0d0> -> interpolation_stage = auto (Call ax.imshow)
+# Mutation info: interpolation_stage = <ast.Constant object at 0x7fc31fe7d9d0> -> interpolation_stage = auto (Call ax.imshow)

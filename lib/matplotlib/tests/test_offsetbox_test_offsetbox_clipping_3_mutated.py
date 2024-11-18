@@ -11,6 +11,7 @@ from matplotlib.backend_bases import MouseButton, MouseEvent
 from matplotlib.offsetbox import AnchoredOffsetbox, AnnotationBbox, AnchoredText, DrawingArea, HPacker, OffsetBox, OffsetImage, PaddedBox, TextArea, VPacker, _get_packed_offsets
 _Params = namedtuple('_Params', 'wd_list, total, sep, expected')
 
+@image_comparison(['offsetbox_clipping'], remove_text=True)
 def test_offsetbox_clipping_3_mutated():
     fig, ax = plt.subplots(squeeze=True)
     size = 100

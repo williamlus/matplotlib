@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['marker_styles.png'], remove_text=True)
 def test_marker_styles_4_mutated():
     fig, ax = plt.subplots(sharex=False)
     markers = sorted(matplotlib.markers.MarkerStyle.markers, key=lambda x: str(type(x)) + str(x))

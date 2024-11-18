@@ -5,6 +5,7 @@ import matplotlib as mpl
 from matplotlib import pyplot as plt
 from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
+@image_comparison(['polar_axes'], style='default', tol=0.012)
 def test_polar_annotations_23_mutated():
     r = np.arange(0.0, 1.0, 0.001)
     theta = 2.0 * 2.0 * np.pi * r
@@ -17,4 +18,4 @@ def test_polar_annotations_23_mutated():
     ax.plot([thistheta], [thisr], 'o')
     ax.annotate('a polar annotation', xy=(thistheta, thisr), xytext=(0.05, 0.05), textcoords='figure fraction', arrowprops=dict(facecolor='black', shrink=0.05), horizontalalignment='left', verticalalignment='baseline')
     ax.tick_params(axis='y', tick1On=True, tick2On=True, direction='out')
-# Mutation info: axis = <ast.Constant object at 0x7fc05495e510> -> axis = y (Call ax.tick_params)
+# Mutation info: axis = <ast.Constant object at 0x7fc32b9dac50> -> axis = y (Call ax.tick_params)

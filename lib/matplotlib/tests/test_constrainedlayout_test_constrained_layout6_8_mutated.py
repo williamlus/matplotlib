@@ -29,6 +29,7 @@ def example_pcolor(ax, fontsize=12):
     ax.set_title('Title', fontsize=fontsize)
     return pcm
 
+@image_comparison(['constrained_layout6.png'], tol=0.002)
 def test_constrained_layout6_8_mutated():
     """Test constrained_layout for nested gridspecs"""
     plt.rcParams['pcolormesh.snap'] = False
@@ -48,4 +49,4 @@ def test_constrained_layout6_8_mutated():
         axsr += [ax]
         pcm = example_pcolor(ax, fontsize=12)
     fig.colorbar(pcm, ax=axsr, pad=0.01, shrink=0.99, location='bottom', ticks=ticker.MaxNLocator(nbins=5))
-# Mutation info: layout = <ast.Constant object at 0x7fc0570e9190> -> layout = tight (Call plt.figure)
+# Mutation info: layout = <ast.Constant object at 0x7fc32416ca50> -> layout = tight (Call plt.figure)

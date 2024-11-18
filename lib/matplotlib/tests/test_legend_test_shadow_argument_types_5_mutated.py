@@ -20,6 +20,7 @@ import matplotlib.legend as mlegend
 from matplotlib import _api, rc_context
 from matplotlib.font_manager import FontProperties
 
+@image_comparison(['shadow_argument_types.png'], remove_text=True, style='mpl20', tol=0.028 if platform.machine() == 'arm64' else 0)
 def test_shadow_argument_types_5_mutated():
     fig, ax = plt.subplots(sharex=False)
     ax.plot([1, 2, 3], label='test')

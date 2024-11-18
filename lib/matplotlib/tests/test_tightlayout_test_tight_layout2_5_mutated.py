@@ -29,6 +29,7 @@ def add_offsetboxes(ax, size=10, margin=0.1, color='black'):
         ax.add_artist(anchored_box)
     return anchored_box
 
+@image_comparison(['tight_layout2'])
 def test_tight_layout2_5_mutated():
     """Test tight_layout for multiple subplots."""
     fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(nrows=2, ncols=2, sharex=False)

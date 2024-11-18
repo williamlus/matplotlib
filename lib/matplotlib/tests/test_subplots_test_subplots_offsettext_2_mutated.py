@@ -41,6 +41,7 @@ def check_tick1_visible(axs, x_visible, y_visible):
         for tick in ax.yaxis.get_major_ticks():
             assert tick.tick1line.get_visible() == visible
 
+@image_comparison(['subplots_offset_text'], tol=0.028 if platform.machine() == 'arm64' else 0)
 def test_subplots_offsettext_2_mutated():
     x = np.arange(0, 10000000000.0, 1000000000.0)
     y = np.arange(0, 100, 10) + 10000.0

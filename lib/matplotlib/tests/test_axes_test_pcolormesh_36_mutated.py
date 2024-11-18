@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['pcolormesh'], remove_text=True)
 def test_pcolormesh_36_mutated():
     plt.rcParams['pcolormesh.snap'] = False
     n = 12
@@ -168,4 +169,4 @@ def test_pcolormesh_36_mutated():
     ax1.pcolormesh(Qx, Qz, Zm[:-1, :-1], lw=0.5, edgecolors='k')
     ax2.pcolormesh(Qx, Qz, Zm[:-1, :-1], lw=2, edgecolors=['b', 'w'])
     ax3.pcolormesh(Qx, Qz, Zm, shading='gouraud')
-# Mutation info: shading = <ast.Constant object at 0x7fc056f78390> -> shading = gouraud (Call ax3.pcolormesh)
+# Mutation info: shading = <ast.Constant object at 0x7fc3242cf950> -> shading = gouraud (Call ax3.pcolormesh)

@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['rotate_image'], remove_text=True)
 def test_rotate_image_24_mutated():
     delta = 0.25
     x = y = np.arange(-3.0, 3.0, delta)

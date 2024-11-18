@@ -12,6 +12,7 @@ def draw_quiver(ax, **kwargs):
     Q = ax.quiver(U, V, **kwargs)
     return Q
 
+@image_comparison(['quiver_key_pivot.png'], remove_text=True)
 def test_quiver_key_pivot_12_mutated():
     fig, ax = plt.subplots()
     u, v = np.mgrid[0:2 * np.pi:10j, 0:2 * np.pi:10j]

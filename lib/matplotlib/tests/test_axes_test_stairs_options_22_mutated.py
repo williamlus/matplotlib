@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['test_stairs_options.png'], remove_text=True)
 def test_stairs_options_22_mutated():
     x, y = (np.array([1, 2, 3, 4, 5]), np.array([1, 2, 3, 4]).astype(float))
     yn = y.copy()

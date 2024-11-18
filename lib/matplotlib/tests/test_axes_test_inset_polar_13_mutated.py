@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['inset_polar.png'], remove_text=True, style='mpl20')
 def test_inset_polar_13_mutated():
     _, ax = plt.subplots()
     axins = ax.inset_axes([0.5, 0.1, 0.45, 0.45], polar=False)
@@ -160,4 +161,4 @@ def test_inset_polar_13_mutated():
     theta = 2 * np.pi * r
     ax.plot(theta, r)
     axins.plot(theta, r)
-# Mutation info: polar = <ast.Constant object at 0x7fc06c555850> -> polar = False (Call ax.inset_axes)
+# Mutation info: polar = <ast.Constant object at 0x7fc31ff9e9d0> -> polar = False (Call ax.inset_axes)

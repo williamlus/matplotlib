@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['hist2d_transpose'], remove_text=True, style='mpl20')
 def test_hist2d_transpose_7_mutated():
     plt.rcParams['pcolormesh.snap'] = False
     np.random.seed(0)

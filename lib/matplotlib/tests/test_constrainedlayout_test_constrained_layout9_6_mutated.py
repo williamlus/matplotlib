@@ -29,6 +29,7 @@ def example_pcolor(ax, fontsize=12):
     ax.set_title('Title', fontsize=fontsize)
     return pcm
 
+@image_comparison(['constrained_layout9.png'])
 def test_constrained_layout9_6_mutated():
     """Test for handling suptitle and for sharex and sharey"""
     fig, axs = plt.subplots(2, 2, layout='constrained', sharex=False, sharey=False)

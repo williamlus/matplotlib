@@ -20,6 +20,7 @@ from matplotlib.testing._markers import needs_usetex
 from matplotlib.text import Text, Annotation, OffsetFrom
 pyparsing_version = parse_version(pyparsing.__version__)
 
+@image_comparison(['axes_titles.png'])
 def test_axes_titles_5_mutated():
     plt.figure(frameon=False)
     ax = plt.subplot(1, 1, 1)

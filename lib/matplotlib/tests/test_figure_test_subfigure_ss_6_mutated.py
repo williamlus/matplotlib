@@ -20,6 +20,7 @@ from matplotlib.ticker import AutoMinorLocator, FixedFormatter, ScalarFormatter
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
+@image_comparison(['test_subfigure_ss.png'], style='mpl20', savefig_kwarg={'facecolor': 'teal'}, tol=0.02)
 def test_subfigure_ss_6_mutated():
     np.random.seed(19680801)
     fig = plt.figure(layout='compressed')
@@ -34,4 +35,4 @@ def test_subfigure_ss_6_mutated():
     ax.plot(np.arange(20))
     ax.set_title('Axes')
     fig.suptitle('Figure suptitle', fontsize='xx-large')
-# Mutation info: layout = <ast.Constant object at 0x7fc056f7b850> -> layout = compressed (Call plt.figure)
+# Mutation info: layout = <ast.Constant object at 0x7fc31ff69310> -> layout = compressed (Call plt.figure)

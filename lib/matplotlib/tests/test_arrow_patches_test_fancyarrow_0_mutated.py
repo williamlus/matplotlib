@@ -22,6 +22,7 @@ def __prepare_fancyarrow_dpi_cor_test():
     ax.add_patch(mpatches.FancyArrowPatch(posA=(0.3, 0.4), posB=(0.8, 0.6), lw=3, arrowstyle='->', mutation_scale=100))
     return fig2
 
+@image_comparison(['fancyarrow_test_image'], tol=0.012 if platform.machine() == 'arm64' else 0)
 def test_fancyarrow_0_mutated():
     r = [0.4, 0.3, 0.2, 0.1, 0]
     t = ['fancy', 'simple', mpatches.ArrowStyle.Fancy()]

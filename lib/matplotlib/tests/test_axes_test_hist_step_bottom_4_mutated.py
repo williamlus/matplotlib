@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['hist_step_bottom.png'], remove_text=True)
 def test_hist_step_bottom_4_mutated():
     d1 = np.linspace(1, 3, 20)
     fig, ax = plt.subplots(squeeze=True)

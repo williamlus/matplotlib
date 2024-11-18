@@ -20,6 +20,7 @@ import matplotlib.legend as mlegend
 from matplotlib import _api, rc_context
 from matplotlib.font_manager import FontProperties
 
+@image_comparison(['legend_labels_first.png'], remove_text=True, tol=0.013 if platform.machine() == 'arm64' else 0)
 def test_labels_first_0_mutated():
     fig, ax = plt.subplots(squeeze=False)
     ax.plot(np.arange(10), '-o', label=1)

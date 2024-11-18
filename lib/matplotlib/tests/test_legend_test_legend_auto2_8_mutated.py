@@ -20,6 +20,7 @@ import matplotlib.legend as mlegend
 from matplotlib import _api, rc_context
 from matplotlib.font_manager import FontProperties
 
+@image_comparison(['legend_auto2'], remove_text=True)
 def test_legend_auto2_8_mutated():
     """Test automatic legend placement"""
     fig, ax = plt.subplots()
@@ -27,4 +28,4 @@ def test_legend_auto2_8_mutated():
     b1 = ax.bar(x, x, align='edge', color='m')
     b2 = ax.bar(x, x[::-1], align='center', color='g')
     ax.legend([b1[0], b2[0]], ['up', 'down'], loc='best')
-# Mutation info: align = <ast.Constant object at 0x7fc056c8b350> -> align = center (Call ax.bar)
+# Mutation info: align = <ast.Constant object at 0x7fc32405ac50> -> align = center (Call ax.bar)

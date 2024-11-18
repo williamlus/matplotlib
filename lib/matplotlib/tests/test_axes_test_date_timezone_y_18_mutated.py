@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['date_timezone_y.png'])
 def test_date_timezone_y_18_mutated():
     time_index = [datetime.datetime(2016, 2, 22, hour=x, tzinfo=dateutil.tz.gettz('Canada/Eastern')) for x in range(3)]
     plt.figure(figsize=(20, 12))

@@ -19,6 +19,7 @@ import matplotlib.pyplot as plt
 import matplotlib.transforms as mtransforms
 from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
+@image_comparison(['drawstyle_variants.png'], remove_text=True, tol=0.03 if platform.machine() == 'arm64' else 0)
 def test_drawstyle_variants_2_mutated():
     fig, axs = plt.subplots(6, sharey=True)
     dss = ['default', 'steps-mid', 'steps-pre', 'steps-post', 'steps', None]

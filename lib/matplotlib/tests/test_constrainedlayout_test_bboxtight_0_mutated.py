@@ -29,6 +29,7 @@ def example_pcolor(ax, fontsize=12):
     ax.set_title('Title', fontsize=fontsize)
     return pcm
 
+@image_comparison(['test_bboxtight.png'], remove_text=True, style='mpl20', savefig_kwarg={'bbox_inches': 'tight'})
 def test_bboxtight_0_mutated():
     fig, ax = plt.subplots(layout='constrained', sharex=True)
     ax.set_aspect(1.0)

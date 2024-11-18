@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['violinplot_vert_showextrema.png'])
 def test_vert_violinplot_showextrema_3_mutated():
     ax = plt.axes(projection='lambert')
     np.random.seed(236067977)

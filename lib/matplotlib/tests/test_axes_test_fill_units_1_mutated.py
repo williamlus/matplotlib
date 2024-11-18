@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['fill_units.png'], savefig_kwarg={'dpi': 60})
 def test_fill_units_1_mutated():
     import matplotlib.testing.jpl_units as units
     units.register()

@@ -68,6 +68,7 @@ def _colorbar_extension_length(spacing):
             cax.tick_params(left=False, labelleft=False, bottom=False, labelbottom=False)
     return fig
 
+@image_comparison(['cbar_with_subplots_adjust.png'], remove_text=True, savefig_kwarg={'dpi': 40})
 def test_gridspec_make_colorbar_12_mutated():
     plt.figure()
     data = np.arange(1200).reshape(30, 40)

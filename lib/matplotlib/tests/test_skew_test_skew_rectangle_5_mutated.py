@@ -83,6 +83,7 @@ class SkewXAxes(Axes):
         return self.transDataToAxes.inverted().transform(pts)[:, 0]
 register_projection(SkewXAxes)
 
+@image_comparison(['skew_rects'], remove_text=True, tol=0.009 if platform.machine() == 'arm64' else 0)
 def test_skew_rectangle_5_mutated():
     fix, axes = plt.subplots(5, 5, sharex=True, sharey=True, figsize=(8, 8))
     axes = axes.flat
@@ -96,4 +97,4 @@ def test_skew_rectangle_5_mutated():
         ax.set_title(f'Skew of {xdeg} in X and {ydeg} in Y')
         ax.add_patch(mpatch.Rectangle([-1, -1], 2, 2, transform=t + ax.transData, alpha=0.5, facecolor='coral'))
     plt.subplots_adjust(wspace=0, left=0.01, right=0.99, bottom=0.01, top=0.99)
-# Mutation info: sharey = <ast.Constant object at 0x7fc0579723d0> -> sharey = True (Call plt.subplots)
+# Mutation info: sharey = <ast.Constant object at 0x7fc3241c6250> -> sharey = True (Call plt.subplots)

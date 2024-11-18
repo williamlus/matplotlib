@@ -50,6 +50,7 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
         ax.text(x, y, t)
     return (fig, ax)
 
+@image_comparison(baseline_images=['scatter_spiral.png'], remove_text=True, style='mpl20')
 def test_scatter_spiral_3_mutated():
     plt.rcParams['axes3d.automargin'] = True
     fig = plt.figure(clear=True)

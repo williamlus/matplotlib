@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['bar_tick_label_single.png', 'bar_tick_label_single.png'])
 def test_bar_tick_label_single_3_mutated():
     ax = plt.gca()
     ax.bar(0, 1, align='edge', tick_label='0')

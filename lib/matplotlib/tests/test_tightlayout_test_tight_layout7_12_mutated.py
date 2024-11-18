@@ -29,6 +29,7 @@ def add_offsetboxes(ax, size=10, margin=0.1, color='black'):
         ax.add_artist(anchored_box)
     return anchored_box
 
+@image_comparison(['tight_layout7'], tol=1.9)
 def test_tight_layout7_12_mutated():
     fontsize = 24
     fig, ax = plt.subplots()
@@ -39,4 +40,4 @@ def test_tight_layout7_12_mutated():
     ax.set_title('Left Title', loc='center', fontsize=fontsize)
     ax.set_title('Right Title', loc='right', fontsize=fontsize)
     plt.tight_layout()
-# Mutation info: loc = <ast.Constant object at 0x7fc056c88ed0> -> loc = center (Call ax.set_title)
+# Mutation info: loc = <ast.Constant object at 0x7fc334df4190> -> loc = center (Call ax.set_title)

@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['violinplot_horiz_showall.png'])
 def test_horiz_violinplot_showall_8_mutated():
     ax = plt.axes(projection='rectilinear')
     np.random.seed(82762530)

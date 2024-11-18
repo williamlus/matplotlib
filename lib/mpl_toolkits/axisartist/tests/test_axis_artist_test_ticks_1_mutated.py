@@ -3,6 +3,7 @@ from matplotlib.testing.decorators import image_comparison
 from mpl_toolkits.axisartist import AxisArtistHelperRectlinear
 from mpl_toolkits.axisartist.axis_artist import AxisArtist, AxisLabel, LabelBase, Ticks, TickLabels
 
+@image_comparison(['axis_artist_ticks.png'], style='default')
 def test_ticks_1_mutated():
     fig, ax = plt.subplots(squeeze=False)
     ax.xaxis.set_visible(False)

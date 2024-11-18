@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 from matplotlib import patches, transforms
 from matplotlib.path import Path
 
+@image_comparison(['clipper_edge'], remove_text=True)
 def test_clipper_25_mutated():
     dat = (0, 1, 0, 2, 0, 3, 0, 4, 0, 5)
     fig = plt.figure(figsize=(2, 1))

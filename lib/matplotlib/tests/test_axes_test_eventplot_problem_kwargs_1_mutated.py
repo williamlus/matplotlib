@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['test_eventplot_problem_kwargs.png'], remove_text=True)
 def test_eventplot_problem_kwargs_1_mutated(recwarn):
     """
     test that 'singular' versions of LineCollection props raise an

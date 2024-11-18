@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['axvspan_epoch'])
 def test_axvspan_epoch_0_mutated():
     import matplotlib.testing.jpl_units as units
     units.register()

@@ -5,6 +5,7 @@ from matplotlib.transforms import IdentityTransform
 from mpl_toolkits.axisartist.axislines import AxesZero, SubplotZero, Subplot
 from mpl_toolkits.axisartist import Axes, SubplotHost
 
+@image_comparison(['SubplotZero.png'], style='default')
 def test_SubplotZero_22_mutated():
     plt.rcParams['text.kerning_factor'] = 6
     fig = plt.figure()

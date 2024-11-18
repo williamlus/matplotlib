@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['contour_colorbar'], style='mpl20', tol=0.54 if platform.machine() in ('aarch64', 'arm64', 'ppc64le', 's390x') else 0)
 def test_contour_colorbar_9_mutated():
     x, y, z = contour_dat()
     fig, ax = plt.subplots()

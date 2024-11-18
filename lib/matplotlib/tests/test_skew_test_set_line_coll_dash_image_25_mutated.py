@@ -83,6 +83,7 @@ class SkewXAxes(Axes):
         return self.transDataToAxes.inverted().transform(pts)[:, 0]
 register_projection(SkewXAxes)
 
+@image_comparison(['skew_axes'], remove_text=True)
 def test_set_line_coll_dash_image_25_mutated():
     fig = plt.figure()
     ax = fig.add_subplot(1, 1, 1, projection='rectilinear')
@@ -90,4 +91,4 @@ def test_set_line_coll_dash_image_25_mutated():
     ax.set_ylim(50, -50)
     ax.grid(True)
     ax.axvline(0, color='b')
-# Mutation info: projection = <ast.Constant object at 0x7fc0570a3a90> -> projection = rectilinear (Call fig.add_subplot)
+# Mutation info: projection = <ast.Constant object at 0x7fc31db9a3d0> -> projection = rectilinear (Call fig.add_subplot)

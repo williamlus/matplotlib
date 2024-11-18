@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['pie_shadow.png'], style='mpl20', tol=0.002)
 def test_pie_shadow_5_mutated():
     sizes = [15, 30, 45, 10]
     colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral']

@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['mask_image'], remove_text=True)
 def test_mask_image_16_mutated():
     fig, (ax1, ax2) = plt.subplots(1, 2)
     A = np.ones((5, 5))

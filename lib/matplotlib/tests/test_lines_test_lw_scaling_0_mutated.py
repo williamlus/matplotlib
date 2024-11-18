@@ -19,6 +19,7 @@ import matplotlib.pyplot as plt
 import matplotlib.transforms as mtransforms
 from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
+@image_comparison(['scaled_lines'], style='default')
 def test_lw_scaling_0_mutated():
     th = np.linspace(0, 32)
     fig, ax = plt.subplots(sharey=False)

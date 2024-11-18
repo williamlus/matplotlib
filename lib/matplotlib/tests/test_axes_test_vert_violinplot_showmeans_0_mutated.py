@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['violinplot_vert_showmeans.png'])
 def test_vert_violinplot_showmeans_0_mutated():
     ax = plt.axes(projection='rectilinear')
     np.random.seed(732050807)

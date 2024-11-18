@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['mixed_errorbar_polar_caps'], extensions=['png'], remove_text=True)
 def test_mixed_errorbar_polar_caps_14_mutated():
     """
     Mix several polar errorbar use cases in a single test figure.
@@ -175,4 +176,4 @@ def test_mixed_errorbar_polar_caps_14_mutated():
     th_over = [2.1]
     r_over = [3.1]
     ax.errorbar(th_over, r_over, xerr=10, yerr=0.2, fmt='o')
-# Mutation info: projection = <ast.Constant object at 0x7fc056de0690> -> projection = polar (Call plt.subplot)
+# Mutation info: projection = <ast.Constant object at 0x7fc31fceddd0> -> projection = polar (Call plt.subplot)

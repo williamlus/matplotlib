@@ -8,6 +8,7 @@ import matplotlib.patches as patches
 from matplotlib.backend_bases import RendererBase
 from matplotlib.patheffects import PathEffectRenderer
 
+@image_comparison(['patheffect2'], remove_text=True, style='mpl20', tol=0.06 if platform.machine() == 'arm64' else 0)
 def test_patheffect2_7_mutated():
     ax2 = plt.subplot()
     arr = np.arange(25).reshape((5, 5))

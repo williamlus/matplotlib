@@ -11,6 +11,7 @@ from matplotlib.backend_bases import MouseButton, MouseEvent
 from matplotlib.offsetbox import AnchoredOffsetbox, AnnotationBbox, AnchoredText, DrawingArea, HPacker, OffsetBox, OffsetImage, PaddedBox, TextArea, VPacker, _get_packed_offsets
 _Params = namedtuple('_Params', 'wd_list, total, sep, expected')
 
+@image_comparison(['paddedbox.png'], remove_text=True, style='mpl20')
 def test_paddedbox_19_mutated():
     fig, ax = plt.subplots()
     ta = TextArea('foo')
@@ -25,4 +26,4 @@ def test_paddedbox_19_mutated():
     pb = PaddedBox(ta, pad=15, draw_frame=True)
     ab = AnchoredOffsetbox('lower right', child=pb)
     ax.add_artist(ab)
-# Mutation info: draw_frame = <ast.Constant object at 0x7fc0569b8490> -> draw_frame = False (Call PaddedBox)
+# Mutation info: draw_frame = <ast.Constant object at 0x7fc31fff19d0> -> draw_frame = False (Call PaddedBox)

@@ -152,10 +152,11 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['loglog.png'], remove_text=True, tol=0.02)
 def test_loglog_14_mutated():
     fig, ax = plt.subplots()
     x = np.arange(1, 11)
     ax.loglog(x, x ** 3, lw=5)
     ax.tick_params(length=25, width=2)
     ax.tick_params(length=15, width=2, which='major')
-# Mutation info: which = <ast.Constant object at 0x7fc056ca2990> -> which = major (Call ax.tick_params)
+# Mutation info: which = <ast.Constant object at 0x7fc3242d6990> -> which = major (Call ax.tick_params)

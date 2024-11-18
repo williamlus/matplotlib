@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['annotate_across_transforms.png'], style='mpl20', remove_text=True, tol=0.025 if platform.machine() == 'arm64' else 0)
 def test_annotate_across_transforms_2_mutated():
     x = np.linspace(0, 10, 200)
     y = np.exp(-x) * np.sin(x)

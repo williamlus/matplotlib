@@ -22,6 +22,7 @@ def __prepare_fancyarrow_dpi_cor_test():
     ax.add_patch(mpatches.FancyArrowPatch(posA=(0.3, 0.4), posB=(0.8, 0.6), lw=3, arrowstyle='->', mutation_scale=100))
     return fig2
 
+@image_comparison(['fancyarrow_dash.png'], remove_text=True, style='default')
 def test_fancyarrow_dash_4_mutated():
     fig, ax = plt.subplots(squeeze=True)
     e = mpatches.FancyArrowPatch((0, 0), (0.5, 0.5), arrowstyle='-|>', connectionstyle='angle3,angleA=0,angleB=90', mutation_scale=10.0, linewidth=2, linestyle='dashed', color='k')

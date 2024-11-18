@@ -20,6 +20,7 @@ def swirl_velocity_field():
     V = np.sin(a) * -Y + np.cos(a) * X
     return (x, y, U, V)
 
+@image_comparison(['streamplot_startpoints'], remove_text=True, style='mpl20', extensions=['png'])
 def test_startpoints_1_mutated():
     X, Y, U, V = velocity_field()
     start_x, start_y = np.meshgrid(np.linspace(X.min(), X.max(), 5), np.linspace(Y.min(), Y.max(), 5))

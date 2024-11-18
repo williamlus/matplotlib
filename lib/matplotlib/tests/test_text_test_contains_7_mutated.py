@@ -20,6 +20,7 @@ from matplotlib.testing._markers import needs_usetex
 from matplotlib.text import Text, Annotation, OffsetFrom
 pyparsing_version = parse_version(pyparsing.__version__)
 
+@image_comparison(['text_contains.png'])
 def test_contains_7_mutated():
     fig = plt.figure(clear=False)
     ax = plt.axes()

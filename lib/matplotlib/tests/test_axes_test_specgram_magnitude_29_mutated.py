@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['specgram_magnitude_freqs.png', 'specgram_magnitude_freqs_linear.png', 'specgram_magnitude_noise.png', 'specgram_magnitude_noise_linear.png'], remove_text=True, tol=0.07, style='default')
 def test_specgram_magnitude_29_mutated():
     """Test axes.specgram in magnitude mode."""
     matplotlib.rcParams['image.interpolation'] = 'nearest'
@@ -174,4 +175,4 @@ def test_specgram_magnitude_29_mutated():
             ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode='psd')
         for ax, sides in zip(plt.figure().subplots(3), all_sides):
             ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode='magnitude', scale='linear', norm=matplotlib.colors.LogNorm())
-# Mutation info: mode = <ast.Constant object at 0x7fc0579f9c10> -> mode = psd (Call ax.specgram)
+# Mutation info: mode = <ast.Constant object at 0x7fc324274b90> -> mode = psd (Call ax.specgram)

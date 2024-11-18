@@ -68,6 +68,7 @@ def _colorbar_extension_length(spacing):
             cax.tick_params(left=False, labelleft=False, bottom=False, labelbottom=False)
     return fig
 
+@image_comparison(['colorbar_keeping_xlabel.png'], style='mpl20')
 def test_keeping_xlabel_6_mutated():
     arr = np.arange(25).reshape((5, 5))
     fig, ax = plt.subplots()

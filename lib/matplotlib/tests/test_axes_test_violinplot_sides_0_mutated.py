@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['violinplot_sides.png'], remove_text=True, style='mpl20')
 def test_violinplot_sides_0_mutated():
     ax = plt.axes(projection='mollweide')
     np.random.seed(19680801)

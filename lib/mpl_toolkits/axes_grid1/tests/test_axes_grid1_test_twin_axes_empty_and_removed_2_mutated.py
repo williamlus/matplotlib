@@ -20,6 +20,7 @@ import pytest
 import numpy as np
 from numpy.testing import assert_array_equal, assert_array_almost_equal
 
+@image_comparison(['twin_axes_empty_and_removed'], extensions=['png'], tol=1, style=('classic', '_classic_test_patch'))
 def test_twin_axes_empty_and_removed_2_mutated():
     mpl.rcParams.update({'font.size': 8, 'xtick.labelsize': 8, 'ytick.labelsize': 8})
     generators = ['twinx', 'twiny', 'twin']

@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['upsampling.png'], style='mpl20', remove_text=True)
 def test_upsampling_28_mutated():
     np.random.seed(19680801 + 9)
     a = np.random.rand(4, 4)

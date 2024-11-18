@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['vline_hline_zorder', 'errorbar_zorder'], tol=0 if platform.machine() == 'x86_64' else 0.026)
 def test_eb_line_zorder_32_mutated():
     x = list(range(10))
     fig = plt.figure()

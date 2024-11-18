@@ -55,6 +55,7 @@ def _azimuth2math(azimuth, elevation):
     phi = np.radians(90 - elevation)
     return (theta, phi)
 
+@image_comparison(['light_source_shading_topo.png'])
 def test_light_source_topo_surface_4_mutated():
     """Shades a DEM using different v.e.'s and blend modes."""
     dem = cbook.get_sample_data('jacksboro_fault_dem.npz')

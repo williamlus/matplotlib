@@ -12,6 +12,7 @@ from matplotlib.transforms import Bbox
 import matplotlib.pyplot as plt
 from matplotlib import collections as mcollections, colors as mcolors, patches as mpatches, path as mpath, transforms as mtransforms, rcParams
 
+@image_comparison(['clip_to_bbox'])
 def test_clip_to_bbox_9_mutated():
     fig, ax = plt.subplots()
     ax.set_xlim([-18, 20], emit=False)

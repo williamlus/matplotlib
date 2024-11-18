@@ -152,9 +152,10 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['hist_log'], remove_text=True)
 def test_hist_log_15_mutated():
     data0 = np.linspace(0, 1, 200) ** 3
     data = np.concatenate([1 - data0, 1 + data0])
     fig, ax = plt.subplots()
     ax.hist(data, fill=False, log=True)
-# Mutation info: log = <ast.Constant object at 0x7fc056dfc150> -> log = True (Call ax.hist)
+# Mutation info: log = <ast.Constant object at 0x7fc32430ed50> -> log = True (Call ax.hist)

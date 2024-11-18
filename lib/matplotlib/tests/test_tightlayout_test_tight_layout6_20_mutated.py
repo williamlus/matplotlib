@@ -29,6 +29,7 @@ def add_offsetboxes(ax, size=10, margin=0.1, color='black'):
         ax.add_artist(anchored_box)
     return anchored_box
 
+@image_comparison(['tight_layout6'])
 def test_tight_layout6_20_mutated():
     """Test tight_layout for gridspec."""
     with warnings.catch_warnings():

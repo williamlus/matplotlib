@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['fill_between_interpolate_decreasing'], style='mpl20', remove_text=True)
 def test_fill_between_interpolate_decreasing_21_mutated():
     p = np.array([724.3, 700, 655])
     t = np.array([9.4, 7, 2.2])
@@ -163,4 +164,4 @@ def test_fill_between_interpolate_decreasing_21_mutated():
     ax.fill_betweenx(p, t, prof, where=prof > t, facecolor='red', interpolate=False, alpha=0.4)
     ax.set_xlim(0, 30)
     ax.set_ylim(800, 600)
-# Mutation info: interpolate = <ast.Constant object at 0x7fc05e7a70d0> -> interpolate = False (Call ax.fill_betweenx)
+# Mutation info: interpolate = <ast.Constant object at 0x7fc33932aa90> -> interpolate = False (Call ax.fill_betweenx)

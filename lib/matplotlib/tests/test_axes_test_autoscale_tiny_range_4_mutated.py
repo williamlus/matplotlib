@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['autoscale_tiny_range'], remove_text=True)
 def test_autoscale_tiny_range_4_mutated():
     fig, axs = plt.subplots(2, 2, sharey=True)
     for i, ax in enumerate(axs.flat):

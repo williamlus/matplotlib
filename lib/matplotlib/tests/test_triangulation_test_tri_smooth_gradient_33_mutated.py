@@ -22,6 +22,7 @@ def meshgrid_triangles(n):
             tri += [[a, b, d], [a, d, c]]
     return np.array(tri, dtype=np.int32)
 
+@image_comparison(['tri_smooth_gradient.png'], remove_text=True, tol=0.092)
 def test_tri_smooth_gradient_33_mutated():
 
     def dipole_potential(x, y):

@@ -12,6 +12,7 @@ from matplotlib.transforms import Bbox
 import matplotlib.pyplot as plt
 from matplotlib import collections as mcollections, colors as mcolors, patches as mpatches, path as mpath, transforms as mtransforms, rcParams
 
+@image_comparison(baseline_images=['annulus'], extensions=['png'])
 def test_annulus_3_mutated():
     fig, ax = plt.subplots(squeeze=True)
     cir = Annulus((0.5, 0.5), 0.2, 0.05, fc='g')

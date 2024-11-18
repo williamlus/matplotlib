@@ -7,6 +7,7 @@ import matplotlib.path as mpath
 import matplotlib.patches as mpatches
 from matplotlib.ticker import FuncFormatter
 
+@image_comparison(['bbox_inches_tight'], remove_text=True, savefig_kwarg={'bbox_inches': 'tight'})
 def test_bbox_inches_tight_8_mutated():
     data = [[66386, 174296, 75131, 577908, 32015], [58230, 381139, 78045, 99308, 160454], [89135, 80552, 152558, 497981, 603535], [78415, 81858, 150656, 193263, 69638], [139361, 331509, 343164, 781380, 52269]]
     col_labels = row_labels = [''] * 5

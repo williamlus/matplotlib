@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['imshow_masked_interpolation'], tol=0 if platform.machine() == 'x86_64' else 0.01, remove_text=True, style='mpl20')
 def test_imshow_masked_interpolation_5_mutated():
     cmap = mpl.colormaps['viridis'].with_extremes(over='r', under='b', bad='k')
     N = 20

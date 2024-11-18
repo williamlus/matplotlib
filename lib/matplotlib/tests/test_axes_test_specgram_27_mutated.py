@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['specgram_freqs.png', 'specgram_freqs_linear.png', 'specgram_noise.png', 'specgram_noise_linear.png'], remove_text=True, tol=0.07, style='default')
 def test_specgram_27_mutated():
     """Test axes.specgram in default (psd) mode."""
     matplotlib.rcParams['image.interpolation'] = 'nearest'
@@ -172,4 +173,4 @@ def test_specgram_27_mutated():
             ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides='twosided')
         for ax, sides in zip(plt.figure().subplots(3), all_sides):
             ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, scale='linear', norm=matplotlib.colors.LogNorm())
-# Mutation info: sides = <ast.Constant object at 0x7fc0570bc610> -> sides = twosided (Call ax.specgram)
+# Mutation info: sides = <ast.Constant object at 0x7fc31fe25410> -> sides = twosided (Call ax.specgram)

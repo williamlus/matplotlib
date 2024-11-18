@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['extent_units.png'], style='mpl20')
 def test_extent_units_54_mutated():
     _, axs = plt.subplots(2, 2)
     date_first = np.datetime64('2020-01-01', 'D')

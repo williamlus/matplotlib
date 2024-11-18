@@ -152,9 +152,10 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['retain_tick_visibility.png'])
 def test_retain_tick_visibility_13_mutated():
     fig, ax = plt.subplots()
     plt.plot([0, 1, 2], [0, -1, 4])
     plt.setp(ax.get_yticklabels(), visible=False)
     ax.tick_params(axis='both', which='both', length=0)
-# Mutation info: axis = <ast.Constant object at 0x7fc056e26fd0> -> axis = both (Call ax.tick_params)
+# Mutation info: axis = <ast.Constant object at 0x7fc32422bc50> -> axis = both (Call ax.tick_params)

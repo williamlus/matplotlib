@@ -68,6 +68,7 @@ def _colorbar_extension_length(spacing):
             cax.tick_params(left=False, labelleft=False, bottom=False, labelbottom=False)
     return fig
 
+@image_comparison(['colorbar_closed_patch.png'], remove_text=True)
 def test_colorbar_closed_patch_33_mutated():
     plt.rcParams['pcolormesh.snap'] = False
     fig = plt.figure(figsize=(8, 6))

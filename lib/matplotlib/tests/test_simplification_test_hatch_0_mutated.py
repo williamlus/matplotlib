@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 from matplotlib import patches, transforms
 from matplotlib.path import Path
 
+@image_comparison(['hatch_simplify'], remove_text=True)
 def test_hatch_0_mutated():
     fig, ax = plt.subplots(squeeze=True)
     ax.add_patch(plt.Rectangle((0, 0), 1, 1, fill=False, hatch='/'))

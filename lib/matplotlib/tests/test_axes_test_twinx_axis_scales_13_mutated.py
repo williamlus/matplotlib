@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['twin_autoscale.png'], tol=0.009 if platform.machine() == 'arm64' else 0)
 def test_twinx_axis_scales_13_mutated():
     x = np.array([0, 0.5, 1])
     y = 0.5 * x

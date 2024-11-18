@@ -12,6 +12,7 @@ from matplotlib.transforms import Bbox
 import matplotlib.pyplot as plt
 from matplotlib import collections as mcollections, colors as mcolors, patches as mpatches, path as mpath, transforms as mtransforms, rcParams
 
+@image_comparison(['patch_custom_linestyle'], remove_text=True)
 def test_patch_custom_linestyle_13_mutated():
     star = mpath.Path.unit_regular_star(6)
     circle = mpath.Path.unit_circle()

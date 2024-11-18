@@ -50,6 +50,7 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
         ax.text(x, y, t)
     return (fig, ax)
 
+@image_comparison(['equal_box_aspect.png'], style='mpl20')
 def test_equal_box_aspect_20_mutated():
     from itertools import product, combinations
     fig = plt.figure()

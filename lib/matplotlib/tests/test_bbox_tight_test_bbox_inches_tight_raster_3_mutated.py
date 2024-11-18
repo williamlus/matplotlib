@@ -7,6 +7,7 @@ import matplotlib.path as mpath
 import matplotlib.patches as mpatches
 from matplotlib.ticker import FuncFormatter
 
+@image_comparison(['bbox_inches_tight_raster'], remove_text=True, savefig_kwarg={'bbox_inches': 'tight'})
 def test_bbox_inches_tight_raster_3_mutated():
     """Test rasterization with tight_layout"""
     fig, ax = plt.subplots(sharex=True)

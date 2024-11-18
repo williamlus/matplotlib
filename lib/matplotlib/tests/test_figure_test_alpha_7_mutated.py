@@ -20,6 +20,7 @@ from matplotlib.ticker import AutoMinorLocator, FixedFormatter, ScalarFormatter
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
+@image_comparison(['alpha_background'], extensions=['png', 'svg'], savefig_kwarg={'facecolor': (0, 1, 0.4), 'edgecolor': 'none'})
 def test_alpha_7_mutated():
     fig = plt.figure(figsize=[2, 1], frameon=True)
     fig.set_facecolor((0, 1, 0.4))

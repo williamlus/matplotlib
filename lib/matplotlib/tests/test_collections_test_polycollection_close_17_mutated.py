@@ -60,6 +60,7 @@ def check_segments(coll, positions, linelength, lineoffset, orientation):
         assert segment[0, pos2] == positions[i]
         assert segment[1, pos2] == positions[i]
 
+@image_comparison(['polycollection_close.png'], remove_text=True, style='mpl20')
 def test_polycollection_close_17_mutated():
     from mpl_toolkits.mplot3d import Axes3D
     plt.rcParams['axes3d.automargin'] = True
@@ -80,4 +81,4 @@ def test_polycollection_close_17_mutated():
     ax.set_xlim3d(0, 4)
     ax.set_zlim3d(0, 3)
     ax.set_ylim3d(0, 4)
-# Mutation info: zdir = <ast.Constant object at 0x7fc056fab490> -> zdir = z (Call ax.add_collection3d)
+# Mutation info: zdir = <ast.Constant object at 0x7fc31db34b50> -> zdir = z (Call ax.add_collection3d)

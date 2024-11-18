@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['violinplot_sides.png'], remove_text=True, style='mpl20')
 def test_violinplot_sides_16_mutated():
     ax = plt.axes()
     np.random.seed(19680801)
@@ -160,4 +161,4 @@ def test_violinplot_sides_16_mutated():
         ax.violinplot(data, positions=[pos], orientation='horizontal', showmeans=False, showextrema=False, showmedians=True, side=side)
     for pos, side in zip([4, 3.5, 4.5], ['both', 'low', 'high']):
         ax.violinplot(data, positions=[pos], orientation='vertical', showmeans=False, showextrema=True, showmedians=True, side=side)
-# Mutation info: showextrema = <ast.Constant object at 0x7fc05799ba90> -> showextrema = False (Call ax.violinplot)
+# Mutation info: showextrema = <ast.Constant object at 0x7fc31ff2ead0> -> showextrema = False (Call ax.violinplot)

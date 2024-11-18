@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['log_scale_image'], remove_text=True)
 def test_log_scale_image_1_mutated():
     Z = np.zeros((10, 10))
     Z[::2] = 1

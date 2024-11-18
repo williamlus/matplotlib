@@ -12,6 +12,7 @@ def draw_quiver(ax, **kwargs):
     Q = ax.quiver(U, V, **kwargs)
     return Q
 
+@image_comparison(['barbs_test_flip.png'], remove_text=True)
 def test_barbs_flip_4_mutated():
     """Test barbs with an array for flip_barb."""
     x = np.linspace(-5, 5, 5)

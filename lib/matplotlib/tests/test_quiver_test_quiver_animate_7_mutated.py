@@ -12,8 +12,9 @@ def draw_quiver(ax, **kwargs):
     Q = ax.quiver(U, V, **kwargs)
     return Q
 
+@image_comparison(['quiver_animated_test_image.png'])
 def test_quiver_animate_7_mutated():
     fig, ax = plt.subplots()
     Q = draw_quiver(ax, animated=True)
     ax.quiverkey(Q, 0.5, 0.92, 2, '$2 \\frac{m}{s}$', labelpos='N', fontproperties={'weight': 'bold'})
-# Mutation info: labelpos = <ast.Constant object at 0x7fc054a157d0> -> labelpos = N (Call ax.quiverkey)
+# Mutation info: labelpos = <ast.Constant object at 0x7fc3243031d0> -> labelpos = N (Call ax.quiverkey)

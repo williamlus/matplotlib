@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['offset_points'], remove_text=True)
 def test_basic_annotate_16_mutated():
     t = np.arange(0.0, 5.0, 0.01)
     s = np.cos(2.0 * np.pi * t)

@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['loglog.png'], remove_text=True, tol=0.02)
 def test_loglog_2_mutated():
     fig, ax = plt.subplots(squeeze=True)
     x = np.arange(1, 11)

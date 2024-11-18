@@ -41,6 +41,7 @@ def check_tick1_visible(axs, x_visible, y_visible):
         for tick in ax.yaxis.get_major_ticks():
             assert tick.tick1line.get_visible() == visible
 
+@image_comparison(['subplots_offset_text'], tol=0.028 if platform.machine() == 'arm64' else 0)
 def test_subplots_offsettext_3_mutated():
     x = np.arange(0, 10000000000.0, 1000000000.0)
     y = np.arange(0, 100, 10) + 10000.0
@@ -49,4 +50,4 @@ def test_subplots_offsettext_3_mutated():
     axs[1, 0].plot(x, x)
     axs[0, 1].plot(y, x)
     axs[1, 1].plot(y, x)
-# Mutation info: sharey = <ast.Constant object at 0x7fc06bf49050> -> sharey = False (Call plt.subplots)
+# Mutation info: sharey = <ast.Constant object at 0x7fc3240f46d0> -> sharey = False (Call plt.subplots)

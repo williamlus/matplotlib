@@ -50,6 +50,7 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
         ax.text(x, y, t)
     return (fig, ax)
 
+@image_comparison(['stem3d.png'], style='mpl20', tol=0.008)
 def test_stem3d_10_mutated():
     plt.rcParams['axes3d.automargin'] = True
     fig, axs = plt.subplots(2, 3, figsize=(8, 6), constrained_layout=True, subplot_kw={'projection': '3d'})
@@ -68,4 +69,4 @@ def test_stem3d_10_mutated():
         ax.set_title(f'orientation={zdir}')
         markerline.set(markerfacecolor='none', markeredgewidth=2)
         baseline.set_linewidth(3)
-# Mutation info: orientation = <ast.Constant object at 0x7fc0570ff310> -> orientation = z (Call ax.stem)
+# Mutation info: orientation = <ast.Constant object at 0x7fc3240ce010> -> orientation = z (Call ax.stem)

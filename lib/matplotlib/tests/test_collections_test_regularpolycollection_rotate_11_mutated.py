@@ -60,6 +60,7 @@ def check_segments(coll, positions, linelength, lineoffset, orientation):
         assert segment[0, pos2] == positions[i]
         assert segment[1, pos2] == positions[i]
 
+@image_comparison(['regularpolycollection_rotate.png'], remove_text=True)
 def test_regularpolycollection_rotate_11_mutated():
     xx, yy = np.mgrid[:10, :10]
     xy_points = np.transpose([xx.flatten(), yy.flatten()])

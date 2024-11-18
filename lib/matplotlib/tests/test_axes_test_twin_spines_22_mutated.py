@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['twin_spines.png'], remove_text=True, tol=0.022 if platform.machine() == 'arm64' else 0)
 def test_twin_spines_22_mutated():
 
     def make_patch_spines_invisible(ax):

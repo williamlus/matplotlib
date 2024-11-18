@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['errorbar_limits'])
 def test_errorbar_limits_35_mutated():
     x = np.arange(0.5, 5.5, 0.5)
     y = np.exp(-x)
@@ -179,4 +180,4 @@ def test_errorbar_limits_35_mutated():
     ax.errorbar(x, y + 2.1, marker='o', ms=8, xerr=xerr, yerr=yerr, xlolims=xlolims, xuplims=xuplims, uplims=uplims, lolims=lolims, ls='none', mec='blue', capsize=0, color='cyan')
     ax.set_xlim((0, 5.5))
     ax.set_title('Errorbar upper and lower limits')
-# Mutation info: lolims = <ast.Constant object at 0x7fc057057c10> -> lolims = False (Call ax.errorbar)
+# Mutation info: lolims = <ast.Constant object at 0x7fc31f8d7250> -> lolims = False (Call ax.errorbar)

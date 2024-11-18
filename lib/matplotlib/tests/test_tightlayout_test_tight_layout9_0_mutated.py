@@ -29,6 +29,7 @@ def add_offsetboxes(ax, size=10, margin=0.1, color='black'):
         ax.add_artist(anchored_box)
     return anchored_box
 
+@image_comparison(['tight_layout9'])
 def test_tight_layout9_0_mutated():
     f, axarr = plt.subplots(2, 2, sharex=True)
     axarr[1][1].set_visible(False)

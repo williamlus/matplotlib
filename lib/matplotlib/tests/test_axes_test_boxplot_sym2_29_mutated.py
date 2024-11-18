@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['boxplot_sym2.png'], remove_text=True, style='default')
 def test_boxplot_sym2_29_mutated():
     np.random.seed(937)
     x = np.linspace(-7, 7, 140)

@@ -60,6 +60,7 @@ def check_segments(coll, positions, linelength, lineoffset, orientation):
         assert segment[0, pos2] == positions[i]
         assert segment[1, pos2] == positions[i]
 
+@image_comparison(['EllipseCollection_test_image.png'], remove_text=True, tol=0.021 if platform.machine() == 'arm64' else 0)
 def test_EllipseCollection_3_mutated():
     fig, ax = plt.subplots(squeeze=True)
     x = np.arange(4)

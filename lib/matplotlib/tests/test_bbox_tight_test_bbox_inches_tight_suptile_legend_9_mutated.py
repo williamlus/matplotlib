@@ -7,6 +7,7 @@ import matplotlib.path as mpath
 import matplotlib.patches as mpatches
 from matplotlib.ticker import FuncFormatter
 
+@image_comparison(['bbox_inches_tight_suptile_legend'], savefig_kwarg={'bbox_inches': 'tight'}, tol=0.02 if platform.machine() == 'arm64' else 0)
 def test_bbox_inches_tight_suptile_legend_9_mutated():
     plt.plot(np.arange(10), label='a straight line')
     plt.legend(bbox_to_anchor=(0.9, 1), loc='upper left')

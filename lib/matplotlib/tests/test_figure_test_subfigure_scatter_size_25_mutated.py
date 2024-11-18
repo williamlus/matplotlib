@@ -20,6 +20,7 @@ from matplotlib.ticker import AutoMinorLocator, FixedFormatter, ScalarFormatter
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
+@image_comparison(['test_subfigure_scatter_size.png'], style='mpl20', remove_text=True)
 def test_subfigure_scatter_size_25_mutated():
     fig = plt.figure()
     gs = fig.add_gridspec(1, 2)

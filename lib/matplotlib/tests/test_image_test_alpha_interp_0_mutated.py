@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['interp_alpha.png'], remove_text=True)
 def test_alpha_interp_0_mutated():
     """Test the interpolation of the alpha channel on RGBA images"""
     fig, (axl, axr) = plt.subplots(1, 2, sharey=True)

@@ -81,6 +81,7 @@ class Kernel:
     def shape(self):
         return self._array.shape
 
+@image_comparison(['jpl_barh_units.png'], savefig_kwarg={'dpi': 120}, style='mpl20')
 def test_jpl_barh_units_10_mutated():
     import matplotlib.testing.jpl_units as units
     units.register()

@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['nonuniform_logscale.png'], style='mpl20')
 def test_nonuniform_logscale_6_mutated():
     _, axs = plt.subplots(ncols=3, nrows=1)
     for i in range(3):

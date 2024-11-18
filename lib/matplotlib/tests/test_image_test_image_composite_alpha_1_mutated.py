@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['image_composite_alpha'], remove_text=True)
 def test_image_composite_alpha_1_mutated():
     """
     Tests that the alpha value is recognized and correctly applied in the

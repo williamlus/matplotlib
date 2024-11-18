@@ -5,6 +5,7 @@ import matplotlib as mpl
 from matplotlib import pyplot as plt
 from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
+@image_comparison(['polar_coords'], style='default', remove_text=True, tol=0.014)
 def test_polar_coord_annotations_19_mutated():
     el = mpl.patches.Ellipse((0, 0), 10, 20, facecolor='r', alpha=0.5)
     fig = plt.figure()

@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['imshow', 'imshow'], remove_text=True, style='mpl20')
 def test_imshow_22_mutated():
     matplotlib.rcParams['image.interpolation'] = 'nearest'
     N = 100

@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['specgram_freqs.png', 'specgram_freqs_linear.png', 'specgram_noise.png', 'specgram_noise_linear.png'], remove_text=True, tol=0.07, style='default')
 def test_specgram_17_mutated():
     """Test axes.specgram in default (psd) mode."""
     matplotlib.rcParams['image.interpolation'] = 'nearest'

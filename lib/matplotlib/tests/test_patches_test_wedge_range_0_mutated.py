@@ -12,6 +12,7 @@ from matplotlib.transforms import Bbox
 import matplotlib.pyplot as plt
 from matplotlib import collections as mcollections, colors as mcolors, patches as mpatches, path as mpath, transforms as mtransforms, rcParams
 
+@image_comparison(['wedge_range'], remove_text=True, tol=0.009 if platform.machine() == 'arm64' else 0)
 def test_wedge_range_0_mutated():
     ax = plt.axes()
     t1 = 2.313869244286224

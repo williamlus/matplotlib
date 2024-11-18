@@ -20,6 +20,7 @@ from matplotlib.testing._markers import needs_usetex
 from matplotlib.text import Text, Annotation, OffsetFrom
 pyparsing_version = parse_version(pyparsing.__version__)
 
+@image_comparison(['annotation_negative_fig_coords.png'])
 def test_annotation_negative_fig_coords_7_mutated():
     fig, ax = plt.subplots()
     ax.annotate('+ pts', xytext=[10, 120], textcoords='figure points', xy=[10, 120], xycoords='figure points', fontsize=32, annotation_clip=False)

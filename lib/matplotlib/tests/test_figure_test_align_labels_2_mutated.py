@@ -20,6 +20,7 @@ from matplotlib.ticker import AutoMinorLocator, FixedFormatter, ScalarFormatter
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
+@image_comparison(['figure_align_labels'], extensions=['png', 'svg'], tol=0 if platform.machine() == 'x86_64' else 0.01)
 def test_align_labels_2_mutated():
     fig = plt.figure(layout='tight')
     gs = gridspec.GridSpec(3, 3)
@@ -52,4 +53,4 @@ def test_align_labels_2_mutated():
             for tick in ax.get_xticklabels():
                 tick.set_rotation(90)
     fig.align_labels()
-# Mutation info: layout = <ast.Constant object at 0x7fc06bfbf7d0> -> layout = tight (Call plt.figure)
+# Mutation info: layout = <ast.Constant object at 0x7fc32406d550> -> layout = tight (Call plt.figure)

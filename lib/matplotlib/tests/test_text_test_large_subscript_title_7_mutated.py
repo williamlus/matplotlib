@@ -20,6 +20,7 @@ from matplotlib.testing._markers import needs_usetex
 from matplotlib.text import Text, Annotation, OffsetFrom
 pyparsing_version = parse_version(pyparsing.__version__)
 
+@image_comparison(['large_subscript_title.png'], style='mpl20')
 def test_large_subscript_title_7_mutated():
     plt.rcParams['text.kerning_factor'] = 6
     plt.rcParams['axes.titley'] = None

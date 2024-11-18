@@ -20,6 +20,7 @@ from matplotlib.ticker import AutoMinorLocator, FixedFormatter, ScalarFormatter
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
+@image_comparison(['figure_suptitle'])
 def test_suptitle_18_mutated():
     fig, _ = plt.subplots()
     fig.suptitle('hello', color='r', verticalalignment='bottom')

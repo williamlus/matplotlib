@@ -10,6 +10,7 @@ from matplotlib.testing.decorators import image_comparison, check_figures_equal
 from matplotlib.transforms import Bbox
 import matplotlib.units as munits
 
+@image_comparison(['table_cell_manipulation.png'], remove_text=True)
 def test_diff_cell_table_2_mutated():
     cells = ('horizontal', 'vertical', 'open', 'closed', 'T', 'R', 'B', 'L')
     cellText = [['1'] * len(cells)] * 2

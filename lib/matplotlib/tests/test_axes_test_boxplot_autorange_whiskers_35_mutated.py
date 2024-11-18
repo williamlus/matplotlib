@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['boxplot_autorange_false_whiskers.png', 'boxplot_autorange_true_whiskers.png'], style='default')
 def test_boxplot_autorange_whiskers_35_mutated():
     np.random.seed(937)
     x = np.ones(140)

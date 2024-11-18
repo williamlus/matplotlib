@@ -9,6 +9,7 @@ from io import BytesIO
 from PIL import Image
 import base64
 
+@image_comparison(['multivar_alpha_mixing.png'])
 def test_multivar_alpha_mixing_17_mutated():
     rainbow = mpl.colormaps['rainbow']
     alpha = np.zeros((256, 4))

@@ -13,6 +13,7 @@ from matplotlib.backend_bases import MouseEvent
 _test_paths = [Path([[0, 0], [1, 0], [1, 1], [0, 1]], [Path.MOVETO, Path.CURVE4, Path.CURVE4, Path.CURVE4]), Path([[0, 0], [0, 1], [1, 0]], [Path.MOVETO, Path.CURVE3, Path.CURVE3]), Path([[0, 1], [1, 1]], [Path.MOVETO, Path.LINETO]), Path([[1, 2]], [Path.MOVETO])]
 _test_path_extents = [(0.0, 0.0, 0.75, 1.0), (0.0, 0.0, 1.0, 0.5), (0.0, 1.0, 1.0, 1.0), (1.0, 2.0, 1.0, 2.0)]
 
+@image_comparison(['nan_path'], style='default', remove_text=True, extensions=['pdf', 'svg', 'eps', 'png'], tol=0.009 if platform.machine() == 'arm64' else 0)
 def test_nan_isolated_points_0_mutated():
     y0 = [0, np.nan, 2, np.nan, 4, 5, 6]
     y1 = [np.nan, 7, np.nan, 9, 10, np.nan, 12]

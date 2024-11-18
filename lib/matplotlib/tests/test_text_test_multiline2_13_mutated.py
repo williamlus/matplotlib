@@ -20,6 +20,7 @@ from matplotlib.testing._markers import needs_usetex
 from matplotlib.text import Text, Annotation, OffsetFrom
 pyparsing_version = parse_version(pyparsing.__version__)
 
+@image_comparison(['multiline2'], style='mpl20')
 def test_multiline2_13_mutated():
     plt.rcParams['text.kerning_factor'] = 6
     fig, ax = plt.subplots()

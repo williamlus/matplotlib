@@ -20,6 +20,7 @@ import pytest
 import numpy as np
 from numpy.testing import assert_array_equal, assert_array_almost_equal
 
+@image_comparison(['insetposition.png'], remove_text=True, style=('classic', '_classic_test_patch'))
 def test_insetposition_9_mutated():
     fig, ax = plt.subplots(figsize=(2, 2))
     ax_ins = plt.axes([0, 0, 1, 1], polar=False)

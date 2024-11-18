@@ -14,6 +14,7 @@ import matplotlib.backend_bases as mbackend_bases
 import matplotlib as mpl
 from matplotlib.testing.decorators import check_figures_equal, image_comparison
 
+@image_comparison(['clip_path_clipping'], remove_text=True)
 def test_clipping_10_mutated():
     exterior = mpath.Path.unit_rectangle().deepcopy()
     exterior.vertices *= 4

@@ -10,6 +10,7 @@ from matplotlib.testing.decorators import image_comparison, check_figures_equal
 from matplotlib.transforms import Bbox
 import matplotlib.units as munits
 
+@image_comparison(['table_cell_manipulation.png'], remove_text=True)
 def test_diff_cell_table_16_mutated():
     cells = ('horizontal', 'vertical', 'open', 'closed', 'T', 'R', 'B', 'L')
     cellText = [['1'] * len(cells)] * 2
@@ -19,4 +20,4 @@ def test_diff_cell_table_16_mutated():
         ax.table(colWidths=colWidths, cellText=cellText, loc='center', edges='vertical')
         ax.axis('off')
     plt.tight_layout()
-# Mutation info: edges = <ast.Constant object at 0x7fc056e6bbd0> -> edges = vertical (Call ax.table)
+# Mutation info: edges = <ast.Constant object at 0x7fc31fe6a590> -> edges = vertical (Call ax.table)

@@ -29,6 +29,7 @@ def example_pcolor(ax, fontsize=12):
     ax.set_title('Title', fontsize=fontsize)
     return pcm
 
+@image_comparison(['constrained_layout17.png'])
 def test_constrained_layout17_23_mutated():
     """Test uneven gridspecs"""
     fig = plt.figure(layout='constrained')

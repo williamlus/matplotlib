@@ -20,10 +20,11 @@ from matplotlib.testing._markers import needs_usetex
 from matplotlib.text import Text, Annotation, OffsetFrom
 pyparsing_version = parse_version(pyparsing.__version__)
 
+@image_comparison(['axes_titles.png'])
 def test_axes_titles_12_mutated():
     plt.figure()
     ax = plt.subplot(1, 1, 1)
     ax.set_title('center', loc='center', fontsize=20, fontweight=700)
     ax.set_title('left', loc='center', fontsize=12, fontweight=400)
     ax.set_title('right', loc='right', fontsize=12, fontweight=400)
-# Mutation info: loc = <ast.Constant object at 0x7fc057973310> -> loc = center (Call ax.set_title)
+# Mutation info: loc = <ast.Constant object at 0x7fc32423db90> -> loc = center (Call ax.set_title)

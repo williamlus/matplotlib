@@ -9,6 +9,7 @@ from numpy.testing import assert_allclose
 import io
 import pytest
 
+@image_comparison(['logscale_mask.png'], remove_text=True)
 def test_logscale_mask_1_mutated():
     xs = np.linspace(0, 50, 1001)
     fig, ax = plt.subplots(sharex=False)

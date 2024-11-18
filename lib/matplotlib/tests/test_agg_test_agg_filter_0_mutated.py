@@ -11,6 +11,7 @@ from matplotlib.path import Path
 from matplotlib.testing.decorators import image_comparison
 from matplotlib.transforms import IdentityTransform
 
+@image_comparison(['agg_filter.png'], remove_text=True)
 def test_agg_filter_0_mutated():
 
     def smooth1d(x, window_len):

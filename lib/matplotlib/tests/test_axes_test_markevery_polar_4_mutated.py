@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['markevery_polar'], style='default', remove_text=True)
 def test_markevery_polar_4_mutated():
     cases = [None, 8, (30, 8), [16, 24, 30], [0, -1], slice(100, 200, 3), 0.1, 0.3, 1.5, (0.0, 0.1), (0.45, 0.1)]
     cols = 3
@@ -164,4 +165,4 @@ def test_markevery_polar_4_mutated():
         plt.subplot(gs[row, col], polar=True)
         plt.title('markevery=%s' % str(case))
         plt.plot(theta, r, 'o', ls='-', ms=4, markevery=case)
-# Mutation info: polar = <ast.Constant object at 0x7fc0570610d0> -> polar = True (Call plt.subplot)
+# Mutation info: polar = <ast.Constant object at 0x7fc324093190> -> polar = True (Call plt.subplot)

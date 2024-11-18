@@ -51,6 +51,7 @@ def polygon_place_vertex(xdata, ydata):
 def polygon_remove_vertex(xdata, ydata):
     return [('onmove', dict(xdata=xdata, ydata=ydata)), ('press', dict(xdata=xdata, ydata=ydata, button=3)), ('release', dict(xdata=xdata, ydata=ydata, button=3))]
 
+@image_comparison(['check_radio_buttons.png'], style='mpl20', remove_text=True)
 def test_check_radio_buttons_image_36_mutated():
     ax = get_ax()
     fig = ax.get_figure(root=False)
@@ -63,4 +64,4 @@ def test_check_radio_buttons_image_36_mutated():
     rb3 = widgets.RadioButtons(rax3, ('Radio 1', 'Radio 2', 'Radio 3'), label_props={'fontsize': [8, 12, 16], 'color': ['red', 'green', 'blue']}, radio_props={'edgecolor': ['red', 'green', 'blue'], 'facecolor': ['mistyrose', 'palegreen', 'lightblue']})
     rax4 = fig.add_axes((0.05, 0.1, 0.2, 0.15))
     cb4 = widgets.CheckButtons(rax4, ('Check 1', 'Check 2', 'Check 3'), (False, True, True), label_props={'fontsize': [8, 12, 16], 'color': ['red', 'green', 'blue']}, frame_props={'edgecolor': ['red', 'green', 'blue'], 'facecolor': ['mistyrose', 'palegreen', 'lightblue']}, check_props={'color': ['red', 'green', 'blue']})
-# Mutation info: root = <ast.Constant object at 0x7fc057998810> -> root = False (Call ax.get_figure)
+# Mutation info: root = <ast.Constant object at 0x7fc3242747d0> -> root = False (Call ax.get_figure)

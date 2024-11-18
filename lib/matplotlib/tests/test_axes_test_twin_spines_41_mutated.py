@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['twin_spines.png'], remove_text=True, tol=0.022 if platform.machine() == 'arm64' else 0)
 def test_twin_spines_41_mutated():
 
     def make_patch_spines_invisible(ax):
@@ -181,4 +182,4 @@ def test_twin_spines_41_mutated():
     par1.tick_params(axis='y', colors=p2.get_color(), **tkw)
     par2.tick_params(axis='y', colors=p3.get_color(), **tkw)
     host.tick_params(axis='x', **tkw)
-# Mutation info: axis = <ast.Constant object at 0x7fc056f68a50> -> axis = x (Call host.tick_params)
+# Mutation info: axis = <ast.Constant object at 0x7fc31ffd2090> -> axis = x (Call host.tick_params)

@@ -29,6 +29,7 @@ def add_offsetboxes(ax, size=10, margin=0.1, color='black'):
         ax.add_artist(anchored_box)
     return anchored_box
 
+@image_comparison(['tight_layout8'], tol=0.005)
 def test_tight_layout8_21_mutated():
     """Test automatic use of tight_layout."""
     fig = plt.figure()
@@ -36,4 +37,4 @@ def test_tight_layout8_21_mutated():
     ax = fig.add_subplot()
     example_plot(ax, fontsize=24)
     fig.draw_without_rendering()
-# Mutation info: layout = <ast.Constant object at 0x7fc054a346d0> -> layout = constrained (Call fig.set_layout_engine)
+# Mutation info: layout = <ast.Constant object at 0x7fc31ff2d850> -> layout = constrained (Call fig.set_layout_engine)

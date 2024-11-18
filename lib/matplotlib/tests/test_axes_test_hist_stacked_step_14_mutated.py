@@ -152,9 +152,10 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['hist_stacked_step'])
 def test_hist_stacked_step_14_mutated():
     d1 = np.linspace(1, 3, 20)
     d2 = np.linspace(0, 10, 50)
     fig, ax = plt.subplots()
     ax.hist((d1, d2), histtype='step', stacked=True)
-# Mutation info: histtype = <ast.Constant object at 0x7fc056c9f810> -> histtype = step (Call ax.hist)
+# Mutation info: histtype = <ast.Constant object at 0x7fc324100150> -> histtype = step (Call ax.hist)

@@ -29,6 +29,7 @@ def example_pcolor(ax, fontsize=12):
     ax.set_title('Title', fontsize=fontsize)
     return pcm
 
+@image_comparison(['constrained_layout11rat.png'])
 def test_constrained_layout11rat_27_mutated():
     """Test for multiple nested gridspecs with width_ratios"""
     fig = plt.figure(layout='constrained', figsize=(10, 3))

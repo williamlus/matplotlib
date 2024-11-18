@@ -12,10 +12,11 @@ def draw_quiver(ax, **kwargs):
     Q = ax.quiver(U, V, **kwargs)
     return Q
 
+@image_comparison(['quiver_xy.png'], remove_text=True)
 def test_quiver_xy_17_mutated():
     fig, ax = plt.subplots(subplot_kw=dict(aspect='equal'))
     ax.quiver(0, 0, 1, 1, angles='xy', scale_units='xy', scale=1)
     ax.set_xlim(0, 1.1)
     ax.set_ylim(0, 1.1)
     ax.grid()
-# Mutation info: angles = <ast.Constant object at 0x7fc056e929d0> -> angles = xy (Call ax.quiver)
+# Mutation info: angles = <ast.Constant object at 0x7fc32433ee10> -> angles = xy (Call ax.quiver)

@@ -10,6 +10,7 @@ from matplotlib.testing.decorators import image_comparison, check_figures_equal
 from matplotlib.transforms import Bbox
 import matplotlib.units as munits
 
+@image_comparison(['table_zorder.png'], remove_text=True)
 def test_zorder_24_mutated():
     data = [[66386, 174296], [58230, 381139]]
     colLabels = ('Freeze', 'Wind')

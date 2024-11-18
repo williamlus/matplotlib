@@ -20,6 +20,7 @@ import matplotlib.legend as mlegend
 from matplotlib import _api, rc_context
 from matplotlib.font_manager import FontProperties
 
+@image_comparison(['legend_multiple_keys.png'], remove_text=True, tol=0.013 if platform.machine() == 'arm64' else 0)
 def test_multiple_keys_3_mutated():
     fig, ax = plt.subplots(sharey=True)
     p1, = ax.plot([1, 2, 3], '-o')

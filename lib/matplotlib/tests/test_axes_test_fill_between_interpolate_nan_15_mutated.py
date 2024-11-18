@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['fill_between_interpolate_nan'], remove_text=True)
 def test_fill_between_interpolate_nan_15_mutated():
     x = np.arange(10)
     y1 = np.asarray([8, 18, np.nan, 18, 8, 18, 24, 18, 8, 18])

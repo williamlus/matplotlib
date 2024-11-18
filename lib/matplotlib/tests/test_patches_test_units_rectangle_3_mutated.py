@@ -12,6 +12,7 @@ from matplotlib.transforms import Bbox
 import matplotlib.pyplot as plt
 from matplotlib import collections as mcollections, colors as mcolors, patches as mpatches, path as mpath, transforms as mtransforms, rcParams
 
+@image_comparison(['units_rectangle.png'])
 def test_units_rectangle_3_mutated():
     import matplotlib.testing.jpl_units as U
     U.register()

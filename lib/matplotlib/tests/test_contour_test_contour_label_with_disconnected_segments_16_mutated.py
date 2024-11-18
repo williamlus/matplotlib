@@ -12,6 +12,7 @@ import matplotlib.patches as mpatches
 from matplotlib.testing.decorators import check_figures_equal, image_comparison
 import pytest
 
+@image_comparison(['contour_disconnected_segments'], remove_text=True, style='mpl20', extensions=['png'])
 def test_contour_label_with_disconnected_segments_16_mutated():
     x, y = np.mgrid[-1:1:21j, -1:1:21j]
     z = 1 / np.sqrt(0.01 + (x + 0.3) ** 2 + y ** 2)
@@ -19,4 +20,4 @@ def test_contour_label_with_disconnected_segments_16_mutated():
     plt.figure()
     cs = plt.contour(x, y, z, levels=[7])
     cs.clabel(manual=True)
-# Mutation info: manual = <ast.Constant object at 0x7fc056d4c090> -> manual = True (Call cs.clabel)
+# Mutation info: manual = <ast.Constant object at 0x7fc334d53190> -> manual = True (Call cs.clabel)

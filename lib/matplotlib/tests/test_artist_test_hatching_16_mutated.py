@@ -14,6 +14,7 @@ import matplotlib.backend_bases as mbackend_bases
 import matplotlib as mpl
 from matplotlib.testing.decorators import check_figures_equal, image_comparison
 
+@image_comparison(['hatching'], remove_text=True, style='default')
 def test_hatching_16_mutated():
     fig, ax = plt.subplots(1, 1)
     rect1 = mpatches.Rectangle((0, 0), 3, 4, hatch='/')

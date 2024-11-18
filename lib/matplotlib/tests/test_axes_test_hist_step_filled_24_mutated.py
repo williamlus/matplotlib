@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['hist_step_filled.png'], remove_text=True)
 def test_hist_step_filled_24_mutated():
     np.random.seed(0)
     x = np.random.randn(1000, 3)
@@ -165,4 +166,4 @@ def test_hist_step_filled_24_mutated():
         ax.set_ylim(bottom=-50)
     patches = axs[0, 0].patches
     assert all((p.get_facecolor() == p.get_edgecolor() for p in patches))
-# Mutation info: stacked = <ast.Constant object at 0x7fc056f87bd0> -> stacked = False (Call ax.hist)
+# Mutation info: stacked = <ast.Constant object at 0x7fc324286ad0> -> stacked = False (Call ax.hist)

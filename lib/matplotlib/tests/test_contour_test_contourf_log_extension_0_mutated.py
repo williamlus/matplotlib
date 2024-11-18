@@ -12,6 +12,7 @@ import matplotlib.patches as mpatches
 from matplotlib.testing.decorators import check_figures_equal, image_comparison
 import pytest
 
+@image_comparison(['contour_log_extension.png'], remove_text=True, style='mpl20', tol=1.444)
 def test_contourf_log_extension_0_mutated():
     plt.rcParams['pcolormesh.snap'] = False
     fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(10, 5), squeeze=False)

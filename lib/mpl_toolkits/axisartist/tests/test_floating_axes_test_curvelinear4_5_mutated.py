@@ -8,6 +8,7 @@ from mpl_toolkits.axisartist.floating_axes import FloatingAxes, GridHelperCurveL
 from mpl_toolkits.axisartist.grid_finder import FixedLocator
 from mpl_toolkits.axisartist import angle_helper
 
+@image_comparison(['curvelinear4.png'], style='default', tol=0.9)
 def test_curvelinear4_5_mutated():
     plt.rcParams['text.kerning_factor'] = 6
     fig = plt.figure(figsize=(5, 5), layout='constrained')

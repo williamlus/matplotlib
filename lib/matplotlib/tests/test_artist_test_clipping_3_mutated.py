@@ -14,6 +14,7 @@ import matplotlib.backend_bases as mbackend_bases
 import matplotlib as mpl
 from matplotlib.testing.decorators import check_figures_equal, image_comparison
 
+@image_comparison(['clip_path_clipping'], remove_text=True)
 def test_clipping_3_mutated():
     exterior = mpath.Path.unit_rectangle().deepcopy()
     exterior.vertices *= 4
@@ -32,4 +33,4 @@ def test_clipping_3_mutated():
     ax2.add_patch(patch)
     ax1.set_xlim([-3, 3])
     ax1.set_ylim([-3, 3])
-# Mutation info: sharey = <ast.Constant object at 0x7fc056d4d850> -> sharey = True (Call plt.subplots)
+# Mutation info: sharey = <ast.Constant object at 0x7fc3242e2e50> -> sharey = True (Call plt.subplots)

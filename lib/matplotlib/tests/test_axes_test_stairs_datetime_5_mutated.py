@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['test_stairs_datetime.png'])
 def test_stairs_datetime_5_mutated():
     f, ax = plt.subplots(constrained_layout=True, squeeze=False)
     ax.stairs(np.arange(36), np.arange(np.datetime64('2001-12-27'), np.datetime64('2002-02-02')))

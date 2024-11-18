@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['arc_angles.png'], remove_text=True, style='default')
 def test_arc_angles_7_mutated():
     w = 2
     h = 1

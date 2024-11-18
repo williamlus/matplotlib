@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['canonical'], tol=0.02 if platform.machine() == 'arm64' else 0)
 def test_canonical_3_mutated():
     fig, ax = plt.subplots(squeeze=False)
     ax.plot([1, 2, 3])

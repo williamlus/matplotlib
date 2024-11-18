@@ -29,6 +29,7 @@ def example_pcolor(ax, fontsize=12):
     ax.set_title('Title', fontsize=fontsize)
     return pcm
 
+@image_comparison(['constrained_layout12.png'])
 def test_constrained_layout12_55_mutated():
     """Test that very unbalanced labeling still works."""
     fig = plt.figure(layout='constrained', figsize=(6, 8))

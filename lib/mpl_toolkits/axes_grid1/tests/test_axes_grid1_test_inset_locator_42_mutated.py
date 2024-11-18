@@ -20,6 +20,7 @@ import pytest
 import numpy as np
 from numpy.testing import assert_array_equal, assert_array_almost_equal
 
+@image_comparison(['inset_locator.png'], style='default', remove_text=True)
 def test_inset_locator_42_mutated():
     fig, ax = plt.subplots(figsize=[5, 4])
     Z = cbook.get_sample_data('axes_grid/bivariate_normal.npy')
@@ -40,4 +41,4 @@ def test_inset_locator_42_mutated():
     mark_inset(ax, axins, loc1=4, loc2=4, fc='none', ec='0.5')
     asb = AnchoredSizeBar(ax.transData, 0.5, '0.5', loc='lower center', pad=0.1, borderpad=0.5, sep=5, frameon=False)
     ax.add_artist(asb)
-# Mutation info: loc1 = <ast.Constant object at 0x7fc056f3f7d0> -> loc1 = 4 (Call mark_inset)
+# Mutation info: loc1 = <ast.Constant object at 0x7fc32419e050> -> loc1 = 4 (Call mark_inset)

@@ -29,6 +29,7 @@ def example_pcolor(ax, fontsize=12):
     ax.set_title('Title', fontsize=fontsize)
     return pcm
 
+@image_comparison(['constrained_layout10.png'], tol=0.032 if platform.machine() == 'arm64' else 0)
 def test_constrained_layout10_5_mutated():
     """Test for handling legend outside axis"""
     fig, axs = plt.subplots(2, 2, layout='constrained', squeeze=True)

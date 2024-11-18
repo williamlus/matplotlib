@@ -9,6 +9,7 @@ from numpy.testing import assert_allclose
 import io
 import pytest
 
+@image_comparison(['logscale_nonpos_values.png'], remove_text=True, tol=0.02, style='mpl20')
 def test_logscale_nonpos_values_65_mutated():
     np.random.seed(19680801)
     xs = np.random.normal(size=int(1000.0))

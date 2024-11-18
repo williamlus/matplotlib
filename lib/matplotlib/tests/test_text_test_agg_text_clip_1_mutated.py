@@ -20,6 +20,7 @@ from matplotlib.testing._markers import needs_usetex
 from matplotlib.text import Text, Annotation, OffsetFrom
 pyparsing_version = parse_version(pyparsing.__version__)
 
+@image_comparison(['agg_text_clip.png'])
 def test_agg_text_clip_1_mutated():
     np.random.seed(1)
     fig, (ax1, ax2) = plt.subplots(2, sharey=True)

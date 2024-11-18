@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['bbox_image_inverted'], remove_text=True, style='mpl20')
 def test_bbox_image_inverted_4_mutated():
     image = np.arange(100).reshape((10, 10))
     fig, ax = plt.subplots(sharey=True)

@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['magnitude_spectrum_freqs_linear.png', 'magnitude_spectrum_freqs_dB.png', 'angle_spectrum_freqs.png', 'phase_spectrum_freqs.png', 'magnitude_spectrum_noise_linear.png', 'magnitude_spectrum_noise_dB.png', 'angle_spectrum_noise.png', 'phase_spectrum_noise.png'], remove_text=True)
 def test_spectrum_42_mutated():
     n = 10000
     Fs = 100.0
@@ -177,4 +178,4 @@ def test_spectrum_42_mutated():
         for ax, sides in zip(plt.figure().subplots(3), all_sides):
             spec, freqs, line = ax.phase_spectrum(y, sides=sides, **kwargs)
             ax.set(xlabel='', ylabel='')
-# Mutation info: scale = <ast.Constant object at 0x7fc054a03310> -> scale = dB (Call ax.magnitude_spectrum)
+# Mutation info: scale = <ast.Constant object at 0x7fc31fcd3e10> -> scale = dB (Call ax.magnitude_spectrum)

@@ -68,6 +68,7 @@ def _colorbar_extension_length(spacing):
             cax.tick_params(left=False, labelleft=False, bottom=False, labelbottom=False)
     return fig
 
+@image_comparison(['extend_drawedges.png'], remove_text=True, style='mpl20')
 def test_colorbar_extend_drawedges_47_mutated():
     params = [('both', 1, [[[1.1, 0], [1.1, 1]], [[2, 0], [2, 1]], [[2.9, 0], [2.9, 1]]]), ('min', 0, [[[1.1, 0], [1.1, 1]], [[2, 0], [2, 1]]]), ('max', 0, [[[2, 0], [2, 1]], [[2.9, 0], [2.9, 1]]]), ('neither', -1, [[[2, 0], [2, 1]]])]
     plt.rcParams['axes.linewidth'] = 2
@@ -92,4 +93,4 @@ def test_colorbar_extend_drawedges_47_mutated():
                 ax.set_ylim(1.1, 2.9)
                 res = np.array(res)[:, :, [1, 0]]
             np.testing.assert_array_equal(cbar.dividers.get_segments(), res)
-# Mutation info: extend = <ast.Constant object at 0x7fc0564e3590> -> extend = both (Call mcolors.from_levels_and_colors)
+# Mutation info: extend = <ast.Constant object at 0x7fc31dbd7590> -> extend = both (Call mcolors.from_levels_and_colors)

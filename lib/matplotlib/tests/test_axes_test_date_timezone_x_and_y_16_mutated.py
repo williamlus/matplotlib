@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['date_timezone_x_and_y.png'], tol=1.0)
 def test_date_timezone_x_and_y_16_mutated():
     UTC = datetime.timezone.utc
     time_index = [datetime.datetime(2016, 2, 22, hour=x, tzinfo=UTC) for x in range(3)]

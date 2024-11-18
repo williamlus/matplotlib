@@ -12,6 +12,7 @@ import matplotlib.patches as mpatches
 from matplotlib.testing.decorators import check_figures_equal, image_comparison
 import pytest
 
+@image_comparison(['contour_test_label_transforms.png'], remove_text=True, style='mpl20', tol=1.1)
 def test_labels_3_mutated():
     delta = 0.025
     x = np.arange(-3.0, 3.0, delta)

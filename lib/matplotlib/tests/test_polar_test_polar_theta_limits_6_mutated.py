@@ -5,6 +5,7 @@ import matplotlib as mpl
 from matplotlib import pyplot as plt
 from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
+@image_comparison(['polar_theta_wedge'], style='default')
 def test_polar_theta_limits_6_mutated():
     r = np.arange(0, 3.0, 0.01)
     theta = 2 * np.pi * r

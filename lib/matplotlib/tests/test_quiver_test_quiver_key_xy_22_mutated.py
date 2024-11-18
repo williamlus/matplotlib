@@ -12,6 +12,7 @@ def draw_quiver(ax, **kwargs):
     Q = ax.quiver(U, V, **kwargs)
     return Q
 
+@image_comparison(['quiver_key_xy.png'], remove_text=True)
 def test_quiver_key_xy_22_mutated():
     X = np.arange(8)
     Y = np.zeros(8)
@@ -26,4 +27,4 @@ def test_quiver_key_xy_22_mutated():
         q = ax.quiver(X, Y, U, V, pivot='middle', units='xy', width=0.05, scale=2, scale_units='height', angles=angle_str)
         for x, angle in zip((0.2, 0.5, 0.8), (0, 45, 90)):
             ax.quiverkey(q, X=x, Y=0.8, U=1, angle=angle, label='', color='b')
-# Mutation info: scale_units = <ast.Constant object at 0x7fc0569b87d0> -> scale_units = height (Call ax.quiver)
+# Mutation info: scale_units = <ast.Constant object at 0x7fc31db30850> -> scale_units = height (Call ax.quiver)

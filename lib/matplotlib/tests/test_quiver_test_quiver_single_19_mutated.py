@@ -12,6 +12,7 @@ def draw_quiver(ax, **kwargs):
     Q = ax.quiver(U, V, **kwargs)
     return Q
 
+@image_comparison(['quiver_single_test_image.png'], remove_text=True)
 def test_quiver_single_19_mutated():
     fig, ax = plt.subplots()
     ax.margins(0.1)

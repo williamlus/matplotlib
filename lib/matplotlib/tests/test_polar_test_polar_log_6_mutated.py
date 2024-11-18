@@ -5,6 +5,7 @@ import matplotlib as mpl
 from matplotlib import pyplot as plt
 from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
+@image_comparison(['polar_log.png'], style='default')
 def test_polar_log_6_mutated():
     fig = plt.figure(frameon=False)
     ax = fig.add_subplot(polar=True)

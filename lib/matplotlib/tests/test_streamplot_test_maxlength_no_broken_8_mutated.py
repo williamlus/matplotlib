@@ -20,6 +20,7 @@ def swirl_velocity_field():
     V = np.sin(a) * -Y + np.cos(a) * X
     return (x, y, U, V)
 
+@image_comparison(['streamplot_maxlength_no_broken.png'], remove_text=True, style='mpl20', tol=0.302)
 def test_maxlength_no_broken_8_mutated():
     x, y, U, V = swirl_velocity_field()
     ax = plt.figure(layout='constrained').subplots()

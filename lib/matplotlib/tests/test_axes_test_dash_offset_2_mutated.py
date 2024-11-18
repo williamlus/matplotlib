@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['dash_offset'], remove_text=True)
 def test_dash_offset_2_mutated():
     fig, ax = plt.subplots(sharex=False)
     x = np.linspace(0, 10)

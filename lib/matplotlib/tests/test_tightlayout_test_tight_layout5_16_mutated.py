@@ -29,6 +29,7 @@ def add_offsetboxes(ax, size=10, margin=0.1, color='black'):
         ax.add_artist(anchored_box)
     return anchored_box
 
+@image_comparison(['tight_layout5'])
 def test_tight_layout5_16_mutated():
     """Test tight_layout for image."""
     ax = plt.subplot(projection='lambert')

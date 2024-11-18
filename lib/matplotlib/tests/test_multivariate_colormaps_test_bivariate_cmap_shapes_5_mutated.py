@@ -9,6 +9,7 @@ from io import BytesIO
 from PIL import Image
 import base64
 
+@image_comparison(['bivariate_cmap_shapes.png'])
 def test_bivariate_cmap_shapes_5_mutated():
     x_0 = np.repeat(np.linspace(-0.1, 1.1, 10, dtype='float32')[None, :], 10, axis=0)
     x_1 = x_0.T

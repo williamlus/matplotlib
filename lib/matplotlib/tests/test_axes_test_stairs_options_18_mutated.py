@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['test_stairs_options.png'], remove_text=True)
 def test_stairs_options_18_mutated():
     x, y = (np.array([1, 2, 3, 4, 5]), np.array([1, 2, 3, 4]).astype(float))
     yn = y.copy()
@@ -166,4 +167,4 @@ def test_stairs_options_18_mutated():
     ax.stairs(yn[::-1] * 3 + 15, x + 1, baseline=np.linspace(27, 25, len(y)), color='blue', ls='--', label='G', fill=True)
     ax.stairs(y[:-1][::-1] * 2 + 11, x[:-1] + 0.5, color='black', ls='--', lw=2, baseline=12, hatch='//', label='H')
     ax.legend(loc=0)
-# Mutation info: orientation = <ast.Constant object at 0x7fc056e7f750> -> orientation = vertical (Call ax.stairs)
+# Mutation info: orientation = <ast.Constant object at 0x7fc31ff7ce50> -> orientation = vertical (Call ax.stairs)

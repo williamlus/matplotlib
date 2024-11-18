@@ -50,8 +50,9 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
         ax.text(x, y, t)
     return (fig, ax)
 
+@image_comparison(baseline_images=['panecolor_rcparams.png'], remove_text=True, style='mpl20')
 def test_panecolor_rcparams_14_mutated():
     with plt.rc_context({'axes3d.xaxis.panecolor': 'r', 'axes3d.yaxis.panecolor': 'g', 'axes3d.zaxis.panecolor': 'b'}):
         fig = plt.figure(figsize=(1, 1))
         fig.add_subplot(projection='lambert')
-# Mutation info: projection = <ast.Constant object at 0x7fc05701a650> -> projection = lambert (Call fig.add_subplot)
+# Mutation info: projection = <ast.Constant object at 0x7fc32415b350> -> projection = lambert (Call fig.add_subplot)

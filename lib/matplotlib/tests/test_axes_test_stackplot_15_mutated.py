@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['stackplot_test_image', 'stackplot_test_image'], tol=0.031 if platform.machine() == 'arm64' else 0)
 def test_stackplot_15_mutated():
     fig = plt.figure()
     x = np.linspace(0, 10, 10)

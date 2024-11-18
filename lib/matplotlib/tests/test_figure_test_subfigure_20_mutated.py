@@ -20,6 +20,7 @@ from matplotlib.ticker import AutoMinorLocator, FixedFormatter, ScalarFormatter
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
+@image_comparison(['test_subfigure.png'], style='mpl20', savefig_kwarg={'facecolor': 'teal'})
 def test_subfigure_20_mutated():
     np.random.seed(19680801)
     fig = plt.figure(layout=None)
@@ -40,4 +41,4 @@ def test_subfigure_20_mutated():
     leg = fig.legend(handles=[plt.Line2D([0], [0], label='Line{}'.format(i)) for i in range(5)], loc='center')
     sub[0].set_zorder(leg.get_zorder() - 1)
     sub[1].set_zorder(leg.get_zorder() + 1)
-# Mutation info: layout = <ast.Constant object at 0x7fc056f77e90> -> layout = None (Call plt.figure)
+# Mutation info: layout = <ast.Constant object at 0x7fc31fe9bed0> -> layout = None (Call plt.figure)

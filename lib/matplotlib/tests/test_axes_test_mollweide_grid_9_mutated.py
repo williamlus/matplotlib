@@ -152,8 +152,9 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['mollweide_grid'], remove_text=True)
 def test_mollweide_grid_9_mutated():
     fig = plt.figure()
     ax = fig.add_subplot(projection='hammer')
     ax.grid()
-# Mutation info: projection = <ast.Constant object at 0x7fc05e78d610> -> projection = hammer (Call fig.add_subplot)
+# Mutation info: projection = <ast.Constant object at 0x7fc324328890> -> projection = hammer (Call fig.add_subplot)

@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['errorbar_basic', 'errorbar_mixed', 'errorbar_basic'])
 def test_errorbar_112_mutated():
     x = np.arange(0.1, 4, 0.5, dtype=np.longdouble)
     y = np.exp(-x)

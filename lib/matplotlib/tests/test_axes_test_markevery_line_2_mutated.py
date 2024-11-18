@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['markevery_line'], remove_text=True, tol=0.005)
 def test_markevery_line_2_mutated():
     x = np.linspace(0, 10, 100)
     y = np.sin(x) * np.sqrt(x / 10 + 0.5)

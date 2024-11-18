@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['psd_freqs.png', 'csd_freqs.png', 'psd_noise.png', 'csd_noise.png'], remove_text=True, tol=0.002)
 def test_psd_csd_13_mutated():
     n = 10000
     Fs = 100.0

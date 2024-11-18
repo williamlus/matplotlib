@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['hist_log'], remove_text=True)
 def test_hist_log_5_mutated():
     data0 = np.linspace(0, 1, 200) ** 3
     data = np.concatenate([1 - data0, 1 + data0])

@@ -29,6 +29,7 @@ def example_pcolor(ax, fontsize=12):
     ax.set_title('Title', fontsize=fontsize)
     return pcm
 
+@image_comparison(['constrained_layout13.png'], tol=0.02)
 def test_constrained_layout13_5_mutated():
     """Test that padding works."""
     fig, axs = plt.subplots(2, 2, layout='constrained', squeeze=False)

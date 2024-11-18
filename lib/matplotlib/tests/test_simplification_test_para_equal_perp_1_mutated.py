@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 from matplotlib import patches, transforms
 from matplotlib.path import Path
 
+@image_comparison(['para_equal_perp'], remove_text=True)
 def test_para_equal_perp_1_mutated():
     x = np.array([0, 1, 2, 1, 0, -1, 0, 1] + [1] * 128)
     y = np.array([1, 1, 2, 1, 0, -1, 0, 0] + [0] * 128)

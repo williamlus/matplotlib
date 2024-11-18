@@ -81,6 +81,7 @@ class Kernel:
     def shape(self):
         return self._array.shape
 
+@image_comparison(['plot_masked_units.png'], remove_text=True, style='mpl20', tol=0 if platform.machine() == 'x86_64' else 0.02)
 def test_plot_masked_units_1_mutated():
     data = np.linspace(-5, 5)
     data_masked = np.ma.array(data, mask=(data > -2) & (data < 2))

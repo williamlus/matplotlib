@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['fill_between_interpolate_nan'], remove_text=True)
 def test_fill_between_interpolate_nan_10_mutated():
     x = np.arange(10)
     y1 = np.asarray([8, 18, np.nan, 18, 8, 18, 24, 18, 8, 18])
@@ -161,4 +162,4 @@ def test_fill_between_interpolate_nan_10_mutated():
     ax.plot(x, y2, c='b')
     ax.fill_between(x, y1, y2, where=y2 >= y1, facecolor='green', interpolate=False, alpha=0.5)
     ax.fill_between(x, y1, y2, where=y1 >= y2, facecolor='red', interpolate=True, alpha=0.5)
-# Mutation info: interpolate = <ast.Constant object at 0x7fc056c615d0> -> interpolate = False (Call ax.fill_between)
+# Mutation info: interpolate = <ast.Constant object at 0x7fc3241c7990> -> interpolate = False (Call ax.fill_between)

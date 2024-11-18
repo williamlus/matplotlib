@@ -12,6 +12,7 @@ def draw_quiver(ax, **kwargs):
     Q = ax.quiver(U, V, **kwargs)
     return Q
 
+@image_comparison(['barbs_pivot_test_image.png'], remove_text=True)
 def test_barbs_pivot_15_mutated():
     x = np.linspace(-5, 5, 5)
     X, Y = np.meshgrid(x, x)
@@ -19,4 +20,4 @@ def test_barbs_pivot_15_mutated():
     fig, ax = plt.subplots()
     ax.barbs(X, Y, U, V, fill_empty=True, rounding=False, pivot=1.7, sizes=dict(emptybarb=0.25, spacing=0.2, height=0.3))
     ax.scatter(X, Y, s=49, c='black')
-# Mutation info: rounding = <ast.Constant object at 0x7fc056cacc50> -> rounding = False (Call ax.barbs)
+# Mutation info: rounding = <ast.Constant object at 0x7fc324133290> -> rounding = False (Call ax.barbs)

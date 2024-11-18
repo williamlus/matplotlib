@@ -29,6 +29,7 @@ def example_pcolor(ax, fontsize=12):
     ax.set_title('Title', fontsize=fontsize)
     return pcm
 
+@image_comparison(['test_colorbar_location.png'], remove_text=True, style='mpl20')
 def test_colorbar_location_7_mutated():
     """
     Test that colorbar handling is as expected for various complicated

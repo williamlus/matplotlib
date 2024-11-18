@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['nonuniform_and_pcolor.png'], style='mpl20')
 def test_nonuniform_and_pcolor_1_mutated():
     axs = plt.figure(figsize=(3, 3), clear=False).subplots(3, sharex=True, sharey=True)
     for ax, interpolation in zip(axs, ['nearest', 'bilinear']):

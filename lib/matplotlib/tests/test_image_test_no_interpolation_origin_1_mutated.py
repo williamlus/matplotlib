@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['no_interpolation_origin'], remove_text=True)
 def test_no_interpolation_origin_1_mutated():
     fig, axs = plt.subplots(2, sharey=False)
     axs[0].imshow(np.arange(100).reshape((2, 50)), origin='lower', interpolation='none')

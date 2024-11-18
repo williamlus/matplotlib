@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['rgba_markers'], remove_text=True)
 def test_rgba_markers_2_mutated():
     fig, axs = plt.subplots(ncols=2, sharex=True)
     rcolors = [(1, 0, 0, 1), (1, 0, 0, 0.5)]

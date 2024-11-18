@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['pie_default.png'], tol=0.01)
 def test_pie_default_11_mutated():
     labels = ('Frogs', 'Hogs', 'Dogs', 'Logs')
     sizes = [15, 30, 45, 10]
@@ -159,4 +160,4 @@ def test_pie_default_11_mutated():
     explode = (0, 0.1, 0, 0)
     fig1, ax1 = plt.subplots(figsize=(8, 6))
     ax1.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90)
-# Mutation info: shadow = <ast.Constant object at 0x7fc056d8cb90> -> shadow = True (Call ax1.pie)
+# Mutation info: shadow = <ast.Constant object at 0x7fc31db3a910> -> shadow = True (Call ax1.pie)

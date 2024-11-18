@@ -11,6 +11,7 @@ from mpl_toolkits.axisartist import angle_helper
 from mpl_toolkits.axisartist.axislines import Axes
 from mpl_toolkits.axisartist.grid_helper_curvelinear import GridHelperCurveLinear
 
+@image_comparison(['polar_box.png'], style='default', tol=0.04)
 def test_polar_box_40_mutated():
     fig = plt.figure(figsize=(5, 5))
     tr = Affine2D().scale(np.pi / 180.0, 1.0) + PolarAxes.PolarTransform(apply_theta_transforms=False)
@@ -36,4 +37,4 @@ def test_polar_box_40_mutated():
     ax1.set_xlim(-5, 12)
     ax1.set_ylim(-5, 10)
     ax1.grid(True)
-# Mutation info: viewlim_mode = <ast.Constant object at 0x7fc055b78d10> -> viewlim_mode = equal (Call ax1.get_aux_axes)
+# Mutation info: viewlim_mode = <ast.Constant object at 0x7fc3240f82d0> -> viewlim_mode = equal (Call ax1.get_aux_axes)

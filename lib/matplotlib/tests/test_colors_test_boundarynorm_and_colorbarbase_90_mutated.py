@@ -55,6 +55,7 @@ def _azimuth2math(azimuth, elevation):
     phi = np.radians(90 - elevation)
     return (theta, phi)
 
+@image_comparison(baseline_images=['boundarynorm_and_colorbar'], extensions=['png'], tol=1.0)
 def test_boundarynorm_and_colorbarbase_90_mutated():
     plt.rcParams['pcolormesh.snap'] = False
     fig = plt.figure()

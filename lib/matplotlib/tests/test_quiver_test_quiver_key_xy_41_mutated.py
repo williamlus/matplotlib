@@ -12,6 +12,7 @@ def draw_quiver(ax, **kwargs):
     Q = ax.quiver(U, V, **kwargs)
     return Q
 
+@image_comparison(['quiver_key_xy.png'], remove_text=True)
 def test_quiver_key_xy_41_mutated():
     X = np.arange(8)
     Y = np.zeros(8)

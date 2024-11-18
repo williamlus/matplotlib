@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['preset_clip_paths.png'], remove_text=True, style='mpl20', tol=0.027 if platform.machine() == 'arm64' else 0)
 def test_preset_clip_paths_14_mutated():
     fig, ax = plt.subplots()
     poly = mpl.patches.Polygon([[1, 0], [0, 1], [-1, 0], [0, -1]], facecolor='#ddffdd', edgecolor='#00ff00', linewidth=2, alpha=0.5)
@@ -168,4 +169,4 @@ def test_preset_clip_paths_14_mutated():
     fig.add_artist(poly3, clip=True)
     ax.set_xlim(-1, 1)
     ax.set_ylim(-1, 1)
-# Mutation info: clip = <ast.Constant object at 0x7fc056eeedd0> -> clip = True (Call fig.add_artist)
+# Mutation info: clip = <ast.Constant object at 0x7fc3242544d0> -> clip = True (Call fig.add_artist)

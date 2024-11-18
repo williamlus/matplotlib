@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['hist_stacked_weights'])
 def test_hist_stacked_weighted_12_mutated():
     d1 = np.linspace(0, 10, 50)
     d2 = np.linspace(1, 3, 20)
@@ -159,4 +160,4 @@ def test_hist_stacked_weighted_12_mutated():
     w2 = np.linspace(0.05, 2.0, 20)
     fig, ax = plt.subplots()
     ax.hist((d1, d2), weights=(w1, w2), histtype='barstacked', stacked=True)
-# Mutation info: histtype = <ast.Constant object at 0x7fc0570bf210> -> histtype = barstacked (Call ax.hist)
+# Mutation info: histtype = <ast.Constant object at 0x7fc31fe25610> -> histtype = barstacked (Call ax.hist)

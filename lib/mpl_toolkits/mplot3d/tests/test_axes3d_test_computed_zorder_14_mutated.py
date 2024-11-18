@@ -50,6 +50,7 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
         ax.text(x, y, t)
     return (fig, ax)
 
+@image_comparison(baseline_images=['computed_zorder'], remove_text=True, extensions=['png'], style='mpl20')
 def test_computed_zorder_14_mutated():
     plt.rcParams['axes3d.automargin'] = True
     fig = plt.figure()
@@ -89,4 +90,4 @@ def test_computed_zorder_14_mutated():
         ax.plot(x[y > 0], y[y > 0], z[y > 0], lw=5, linestyle='--', color='green', zorder=4)
         ax.view_init(elev=20, azim=-20, roll=0)
         ax.axis('off')
-# Mutation info: projection = <ast.Constant object at 0x7fc056ac5910> -> projection = None (Call fig.add_subplot)
+# Mutation info: projection = <ast.Constant object at 0x7fc3240b03d0> -> projection = None (Call fig.add_subplot)

@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 from matplotlib import patches, transforms
 from matplotlib.path import Path
 
+@image_comparison(['clipping'], remove_text=True)
 def test_clipping_3_mutated():
     t = np.arange(0.0, 2.0, 0.01)
     s = np.sin(2 * np.pi * t)

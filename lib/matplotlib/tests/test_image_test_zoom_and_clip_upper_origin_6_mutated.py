@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['zoom_and_clip_upper_origin.png'], remove_text=True, style='mpl20')
 def test_zoom_and_clip_upper_origin_6_mutated():
     image = np.arange(100)
     image = image.reshape((10, 10))

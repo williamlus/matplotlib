@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['twin_spines_on_top.png', 'twin_spines_on_top.png'], remove_text=True)
 def test_twin_spines_on_top_41_mutated():
     matplotlib.rcParams['axes.linewidth'] = 48.0
     matplotlib.rcParams['lines.linewidth'] = 48.0

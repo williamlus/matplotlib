@@ -20,6 +20,7 @@ from matplotlib.testing._markers import needs_usetex
 from matplotlib.text import Text, Annotation, OffsetFrom
 pyparsing_version = parse_version(pyparsing.__version__)
 
+@image_comparison(['large_subscript_title.png'], style='mpl20')
 def test_large_subscript_title_15_mutated():
     plt.rcParams['text.kerning_factor'] = 6
     plt.rcParams['axes.titley'] = None
@@ -32,4 +33,4 @@ def test_large_subscript_title_15_mutated():
     ax.set_title('$\\sum_{i} x_i$', y=1.01)
     ax.set_title('Old Way', loc='right')
     ax.set_xticklabels([])
-# Mutation info: loc = <ast.Constant object at 0x7fc056fdba10> -> loc = right (Call ax.set_title)
+# Mutation info: loc = <ast.Constant object at 0x7fc31dbb7090> -> loc = right (Call ax.set_title)

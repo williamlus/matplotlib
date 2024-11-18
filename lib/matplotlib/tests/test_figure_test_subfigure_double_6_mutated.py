@@ -20,6 +20,7 @@ from matplotlib.ticker import AutoMinorLocator, FixedFormatter, ScalarFormatter
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
+@image_comparison(['test_subfigure_double.png'], style='mpl20', savefig_kwarg={'facecolor': 'teal'})
 def test_subfigure_double_6_mutated():
     np.random.seed(19680801)
     fig = plt.figure(layout='constrained', figsize=(10, 8))
@@ -48,4 +49,4 @@ def test_subfigure_double_6_mutated():
     subfigsnest[1].supxlabel('supxlabel')
     subfigsnest[1].supylabel('supylabel')
     axsRight = subfigs[1].subplots(2, 2)
-# Mutation info: sharex = <ast.Constant object at 0x7fc056c83310> -> sharex = False (Call subfigsnest[1].subplots)
+# Mutation info: sharex = <ast.Constant object at 0x7fc32426ddd0> -> sharex = False (Call subfigsnest[1].subplots)

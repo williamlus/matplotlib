@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.spines import Spines
 from matplotlib.testing.decorators import check_figures_equal, image_comparison
 
+@image_comparison(['spines_axes_positions'])
 def test_spines_axes_positions_9_mutated():
     fig = plt.figure()
     x = np.linspace(0, 2 * np.pi, 100)

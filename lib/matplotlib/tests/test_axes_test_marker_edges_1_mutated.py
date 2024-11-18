@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['marker_edges'], remove_text=True)
 def test_marker_edges_1_mutated():
     x = np.linspace(0, 1, 10)
     fig, ax = plt.subplots(sharex=True)

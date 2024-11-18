@@ -60,6 +60,7 @@ def check_segments(coll, positions, linelength, lineoffset, orientation):
         assert segment[0, pos2] == positions[i]
         assert segment[1, pos2] == positions[i]
 
+@image_comparison(['EventCollection_plot__set_orientation'])
 def test__EventCollection__set_orientation_3_mutated():
     splt, coll, props = generate_EventCollection_plot()
     new_orientation = 'vertical'

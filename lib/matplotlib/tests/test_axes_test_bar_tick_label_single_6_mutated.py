@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['bar_tick_label_single.png', 'bar_tick_label_single.png'])
 def test_bar_tick_label_single_6_mutated():
     ax = plt.gca()
     ax.bar(0, 1, align='center', tick_label='0')
@@ -159,4 +160,4 @@ def test_bar_tick_label_single_6_mutated():
     fig, ax = plt.subplots()
     ax = plt.gca()
     ax.bar('a', 'b', align='edge', tick_label='0', data=data)
-# Mutation info: align = <ast.Constant object at 0x7fc056e7fad0> -> align = center (Call ax.bar)
+# Mutation info: align = <ast.Constant object at 0x7fc3242831d0> -> align = center (Call ax.bar)

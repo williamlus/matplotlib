@@ -20,6 +20,7 @@ import matplotlib.legend as mlegend
 from matplotlib import _api, rc_context
 from matplotlib.font_manager import FontProperties
 
+@image_comparison(['legend_stackplot.png'], tol=0.031 if platform.machine() == 'arm64' else 0)
 def test_legend_stackplot_10_mutated():
     """Test legend for PolyCollection using stackplot."""
     fig, ax = plt.subplots()

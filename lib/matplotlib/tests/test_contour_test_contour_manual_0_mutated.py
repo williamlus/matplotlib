@@ -12,6 +12,7 @@ import matplotlib.patches as mpatches
 from matplotlib.testing.decorators import check_figures_equal, image_comparison
 import pytest
 
+@image_comparison(baseline_images=['contour_manual'], extensions=['png'], remove_text=True, tol=0.89)
 def test_contour_manual_0_mutated():
     from matplotlib.contour import ContourSet
     fig, ax = plt.subplots(figsize=(4, 4), squeeze=True)

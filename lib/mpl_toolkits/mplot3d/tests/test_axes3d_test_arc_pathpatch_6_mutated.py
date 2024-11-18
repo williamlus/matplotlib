@@ -50,6 +50,7 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
         ax.text(x, y, t)
     return (fig, ax)
 
+@image_comparison(baseline_images=['arc_pathpatch.png'], remove_text=True, style='mpl20')
 def test_arc_pathpatch_6_mutated():
     ax = plt.subplot(1, 1, 1, projection='3d', polar=False)
     a = mpatch.Arc((0.5, 0.5), width=0.5, height=0.9, angle=20, theta1=10, theta2=130)

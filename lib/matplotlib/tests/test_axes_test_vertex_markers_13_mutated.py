@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['vertex_markers.png'], remove_text=True)
 def test_vertex_markers_13_mutated():
     data = list(range(10))
     marker_as_tuple = ((-1, -1), (1, -1), (1, 1), (-1, 1))

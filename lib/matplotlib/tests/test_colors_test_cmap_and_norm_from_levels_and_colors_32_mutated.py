@@ -55,6 +55,7 @@ def _azimuth2math(azimuth, elevation):
     phi = np.radians(90 - elevation)
     return (theta, phi)
 
+@image_comparison(['levels_and_colors.png'])
 def test_cmap_and_norm_from_levels_and_colors_32_mutated():
     plt.rcParams['pcolormesh.snap'] = False
     data = np.linspace(-2, 4, 49).reshape(7, 7)
@@ -66,4 +67,4 @@ def test_cmap_and_norm_from_levels_and_colors_32_mutated():
     m = plt.pcolormesh(data, cmap=cmap, norm=norm)
     plt.colorbar(m)
     ax.tick_params(labelleft=False, labelbottom=False)
-# Mutation info: extend = <ast.Constant object at 0x7fc056c7e510> -> extend = neither (Call mcolors.from_levels_and_colors)
+# Mutation info: extend = <ast.Constant object at 0x7fc324baf250> -> extend = neither (Call mcolors.from_levels_and_colors)

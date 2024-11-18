@@ -12,6 +12,7 @@ import matplotlib.patches as mpatches
 from matplotlib.testing.decorators import check_figures_equal, image_comparison
 import pytest
 
+@image_comparison(['contour_addlines.png'], remove_text=True, style='mpl20', tol=0.15 if platform.machine() in ('aarch64', 'arm64', 'ppc64le', 's390x') else 0.03)
 def test_contour_addlines_11_mutated():
     plt.rcParams['pcolormesh.snap'] = False
     fig, ax = plt.subplots()

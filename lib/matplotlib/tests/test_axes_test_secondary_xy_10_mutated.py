@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['secondary_xy.png'], style='mpl20', tol=0.027 if platform.machine() == 'arm64' else 0)
 def test_secondary_xy_10_mutated():
     fig, axs = plt.subplots(1, 2, figsize=(10, 5), constrained_layout=True)
 

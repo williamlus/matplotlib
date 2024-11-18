@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['hexbin_linear.png'], style='mpl20', remove_text=True)
 def test_hexbin_linear_2_mutated():
     np.random.seed(19680801)
     n = 100000

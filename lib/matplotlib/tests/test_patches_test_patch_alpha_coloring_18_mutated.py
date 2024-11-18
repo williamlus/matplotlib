@@ -12,6 +12,7 @@ from matplotlib.transforms import Bbox
 import matplotlib.pyplot as plt
 from matplotlib import collections as mcollections, colors as mcolors, patches as mpatches, path as mpath, transforms as mtransforms, rcParams
 
+@image_comparison(['patch_alpha_coloring'], remove_text=True)
 def test_patch_alpha_coloring_18_mutated():
     """
     Test checks that the patch and collection are rendered with the specified

@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['hist_density.png'])
 def test_hist_density_3_mutated():
     np.random.seed(19680801)
     data = np.random.standard_normal(2000)

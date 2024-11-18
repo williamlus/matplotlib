@@ -5,6 +5,7 @@ import matplotlib as mpl
 from matplotlib import pyplot as plt
 from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
+@image_comparison(['polar_alignment.png'])
 def test_polar_alignment_16_mutated():
     angles = np.arange(0, 360, 90)
     grid_values = [0, 0.2, 0.4, 0.6, 0.8, 1]
@@ -16,4 +17,4 @@ def test_polar_alignment_16_mutated():
     vertical.patch.set_visible(False)
     for i in range(2):
         fig.axes[i].set_rgrids(grid_values, angle=angles[i], horizontalalignment='left', verticalalignment='top')
-# Mutation info: polar = <ast.Constant object at 0x7fc056c99fd0> -> polar = False (Call fig.add_axes)
+# Mutation info: polar = <ast.Constant object at 0x7fc31fe9acd0> -> polar = False (Call fig.add_axes)

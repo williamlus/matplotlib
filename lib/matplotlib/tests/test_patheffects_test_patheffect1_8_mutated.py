@@ -8,6 +8,7 @@ import matplotlib.patches as patches
 from matplotlib.backend_bases import RendererBase
 from matplotlib.patheffects import PathEffectRenderer
 
+@image_comparison(['patheffect1'], remove_text=True)
 def test_patheffect1_8_mutated():
     ax1 = plt.subplot()
     ax1.imshow([[1, 2], [2, 3]], interpolation_stage='data')

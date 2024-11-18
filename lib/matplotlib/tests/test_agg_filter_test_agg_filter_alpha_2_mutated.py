@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.testing.decorators import image_comparison
 
+@image_comparison(baseline_images=['agg_filter_alpha'], extensions=['png', 'pdf'])
 def test_agg_filter_alpha_2_mutated():
     plt.rcParams['pcolormesh.snap'] = False
     ax = plt.axes(projection='rectilinear')

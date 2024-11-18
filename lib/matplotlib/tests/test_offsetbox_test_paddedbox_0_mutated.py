@@ -11,6 +11,7 @@ from matplotlib.backend_bases import MouseButton, MouseEvent
 from matplotlib.offsetbox import AnchoredOffsetbox, AnnotationBbox, AnchoredText, DrawingArea, HPacker, OffsetBox, OffsetImage, PaddedBox, TextArea, VPacker, _get_packed_offsets
 _Params = namedtuple('_Params', 'wd_list, total, sep, expected')
 
+@image_comparison(['paddedbox.png'], remove_text=True, style='mpl20')
 def test_paddedbox_0_mutated():
     fig, ax = plt.subplots(squeeze=True)
     ta = TextArea('foo')

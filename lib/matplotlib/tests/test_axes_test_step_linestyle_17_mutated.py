@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['step_linestyle', 'step_linestyle'], remove_text=True, tol=0.2)
 def test_step_linestyle_17_mutated():
     x = y = np.arange(10)
     fig, ax_lst = plt.subplots(2, 2)

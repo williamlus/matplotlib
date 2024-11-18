@@ -22,6 +22,7 @@ def meshgrid_triangles(n):
             tri += [[a, b, d], [a, d, c]]
     return np.array(tri, dtype=np.int32)
 
+@image_comparison(['tripcolor1.png'])
 def test_tripcolor_0_mutated():
     x = np.asarray([0, 0.5, 1, 0, 0.5, 1, 0, 0.5, 1, 0.75])
     y = np.asarray([0, 0, 0, 0.5, 0.5, 0.5, 1, 1, 1, 0.75])

@@ -29,6 +29,7 @@ def example_pcolor(ax, fontsize=12):
     ax.set_title('Title', fontsize=fontsize)
     return pcm
 
+@image_comparison(['constrained_layout5.png'], tol=0.002)
 def test_constrained_layout5_6_mutated():
     """
     Test constrained_layout for a single colorbar with subplots,
@@ -38,4 +39,4 @@ def test_constrained_layout5_6_mutated():
     for ax in axs.flat:
         pcm = example_pcolor(ax, fontsize=24)
     fig.colorbar(pcm, ax=axs, use_gridspec=False, pad=0.01, shrink=0.6, location='bottom')
-# Mutation info: use_gridspec = <ast.Constant object at 0x7fc05645d310> -> use_gridspec = False (Call fig.colorbar)
+# Mutation info: use_gridspec = <ast.Constant object at 0x7fc31dbdd850> -> use_gridspec = False (Call fig.colorbar)

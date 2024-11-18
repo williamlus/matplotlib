@@ -13,6 +13,7 @@ from matplotlib.backend_bases import MouseEvent
 _test_paths = [Path([[0, 0], [1, 0], [1, 1], [0, 1]], [Path.MOVETO, Path.CURVE4, Path.CURVE4, Path.CURVE4]), Path([[0, 0], [0, 1], [1, 0]], [Path.MOVETO, Path.CURVE3, Path.CURVE3]), Path([[0, 1], [1, 1]], [Path.MOVETO, Path.LINETO]), Path([[1, 2]], [Path.MOVETO])]
 _test_path_extents = [(0.0, 0.0, 0.75, 1.0), (0.0, 0.0, 1.0, 0.5), (0.0, 1.0, 1.0, 1.0), (1.0, 2.0, 1.0, 2.0)]
 
+@image_comparison(['semi_log_with_zero.png'], style='mpl20')
 def test_log_transform_with_zero_13_mutated():
     x = np.arange(-10, 10)
     y = (1.0 - 1.0 / (x ** 2 + 1)) ** 20

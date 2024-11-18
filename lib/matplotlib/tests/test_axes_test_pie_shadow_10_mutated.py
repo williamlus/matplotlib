@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['pie_shadow.png'], style='mpl20', tol=0.002)
 def test_pie_shadow_10_mutated():
     sizes = [15, 30, 45, 10]
     colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral']
@@ -161,4 +162,4 @@ def test_pie_shadow_10_mutated():
     axes[0][1].pie(sizes, explode=explode, colors=colors, shadow=False, startangle=90, wedgeprops={'linewidth': 0})
     axes[1][0].pie(sizes, explode=explode, colors=colors, shadow={'ox': -0.05, 'oy': -0.05, 'shade': 0.9, 'edgecolor': 'none'}, startangle=90, wedgeprops={'linewidth': 0})
     axes[1][1].pie(sizes, explode=explode, colors=colors, shadow={'ox': 0.05, 'linewidth': 2, 'shade': 0.2}, startangle=90, wedgeprops={'linewidth': 0})
-# Mutation info: shadow = <ast.Constant object at 0x7fc056e12550> -> shadow = False (Call axes[0][0].pie)
+# Mutation info: shadow = <ast.Constant object at 0x7fc339321590> -> shadow = False (Call axes[0][0].pie)

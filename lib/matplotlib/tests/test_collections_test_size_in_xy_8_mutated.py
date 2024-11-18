@@ -60,6 +60,7 @@ def check_segments(coll, positions, linelength, lineoffset, orientation):
         assert segment[0, pos2] == positions[i]
         assert segment[1, pos2] == positions[i]
 
+@image_comparison(['size_in_xy.png'], remove_text=True)
 def test_size_in_xy_8_mutated():
     fig, ax = plt.subplots()
     widths, heights, angles = ((10, 10), 10, 0)

@@ -20,6 +20,7 @@ import pytest
 import numpy as np
 from numpy.testing import assert_array_equal, assert_array_almost_equal
 
+@image_comparison(['anchored_direction_arrows.png'], tol=0 if platform.machine() == 'x86_64' else 0.01, style=('classic', '_classic_test_patch'))
 def test_anchored_direction_arrows_6_mutated():
     fig, ax = plt.subplots()
     ax.imshow(np.zeros((10, 10)), interpolation='nearest')

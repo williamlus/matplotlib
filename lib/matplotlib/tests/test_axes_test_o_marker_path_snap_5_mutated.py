@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['o_marker_path_snap.png'], savefig_kwarg={'dpi': 72})
 def test_o_marker_path_snap_5_mutated():
     fig, ax = plt.subplots(squeeze=False)
     ax.margins(0.1)

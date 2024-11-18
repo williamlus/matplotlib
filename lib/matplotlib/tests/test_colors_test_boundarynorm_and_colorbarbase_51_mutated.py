@@ -55,6 +55,7 @@ def _azimuth2math(azimuth, elevation):
     phi = np.radians(90 - elevation)
     return (theta, phi)
 
+@image_comparison(baseline_images=['boundarynorm_and_colorbar'], extensions=['png'], tol=1.0)
 def test_boundarynorm_and_colorbarbase_51_mutated():
     plt.rcParams['pcolormesh.snap'] = False
     fig = plt.figure()
@@ -69,4 +70,4 @@ def test_boundarynorm_and_colorbarbase_51_mutated():
     cb2 = mcolorbar.ColorbarBase(ax2, cmap=cmap, norm=norm, orientation='horizontal')
     norm = mcolors.BoundaryNorm(bounds, cmap.N, extend='both')
     cb3 = mcolorbar.ColorbarBase(ax3, cmap=cmap, norm=norm, extend='neither', orientation='horizontal')
-# Mutation info: extend = <ast.Constant object at 0x7fc056cf4d10> -> extend = both (Call mcolors.BoundaryNorm)
+# Mutation info: extend = <ast.Constant object at 0x7fc334d65f90> -> extend = both (Call mcolors.BoundaryNorm)

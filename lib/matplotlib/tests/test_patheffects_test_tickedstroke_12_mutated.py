@@ -8,6 +8,7 @@ import matplotlib.patches as patches
 from matplotlib.backend_bases import RendererBase
 from matplotlib.patheffects import PathEffectRenderer
 
+@image_comparison(['tickedstroke'], remove_text=True, extensions=['png'], tol=0.22)
 def test_tickedstroke_12_mutated():
     fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(12, 4))
     path = Path.unit_circle()

@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['test_alpha'], remove_text=True)
 def test_alpha_3_mutated():
     np.random.seed(0)
     data = np.random.random(50)

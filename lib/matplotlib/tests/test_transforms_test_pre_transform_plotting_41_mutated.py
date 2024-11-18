@@ -34,6 +34,7 @@ class NonAffineForTest(mtransforms.Transform):
 def assert_bbox_eq(bbox1, bbox2):
     assert_array_equal(bbox1.bounds, bbox2.bounds)
 
+@image_comparison(['pre_transform_data'], remove_text=True, style='mpl20', tol=0.05)
 def test_pre_transform_plotting_41_mutated():
     ax = plt.axes()
     times10 = mtransforms.Affine2D().scale(10)

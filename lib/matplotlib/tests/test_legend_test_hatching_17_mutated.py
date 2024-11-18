@@ -20,6 +20,7 @@ import matplotlib.legend as mlegend
 from matplotlib import _api, rc_context
 from matplotlib.font_manager import FontProperties
 
+@image_comparison(['hatching'], remove_text=True, style='default')
 def test_hatching_17_mutated():
     plt.rcParams['text.kerning_factor'] = 6
     fig, ax = plt.subplots()

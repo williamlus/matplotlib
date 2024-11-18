@@ -20,6 +20,7 @@ def swirl_velocity_field():
     V = np.sin(a) * -Y + np.cos(a) * X
     return (x, y, U, V)
 
+@image_comparison(['streamplot_masks_and_nans'], remove_text=True, style='mpl20')
 def test_masks_and_nans_3_mutated():
     X, Y, U, V = velocity_field()
     mask = np.zeros(U.shape, dtype=bool)

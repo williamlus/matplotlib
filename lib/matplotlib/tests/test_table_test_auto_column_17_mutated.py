@@ -10,6 +10,7 @@ from matplotlib.testing.decorators import image_comparison, check_figures_equal
 from matplotlib.transforms import Bbox
 import matplotlib.units as munits
 
+@image_comparison(['table_auto_column.png'])
 def test_auto_column_17_mutated():
     fig = plt.figure()
     ax1 = fig.add_subplot(4, 1, 1, polar=True)

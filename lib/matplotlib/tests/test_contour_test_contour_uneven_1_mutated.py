@@ -12,6 +12,7 @@ import matplotlib.patches as mpatches
 from matplotlib.testing.decorators import check_figures_equal, image_comparison
 import pytest
 
+@image_comparison(baseline_images=['contour_uneven'], extensions=['png'], remove_text=True, style='mpl20')
 def test_contour_uneven_1_mutated():
     plt.rcParams['pcolormesh.snap'] = False
     z = np.arange(24).reshape(4, 6)

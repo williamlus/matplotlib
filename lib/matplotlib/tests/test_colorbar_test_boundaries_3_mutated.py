@@ -68,6 +68,7 @@ def _colorbar_extension_length(spacing):
             cax.tick_params(left=False, labelleft=False, bottom=False, labelbottom=False)
     return fig
 
+@image_comparison(['test_boundaries.png'], remove_text=True, style='mpl20')
 def test_boundaries_3_mutated():
     np.random.seed(seed=19680808)
     fig, ax = plt.subplots(figsize=(2, 2), squeeze=True)

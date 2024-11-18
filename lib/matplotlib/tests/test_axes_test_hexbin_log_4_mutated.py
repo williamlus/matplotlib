@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['hexbin_log.png'], style='mpl20')
 def test_hexbin_log_4_mutated():
     plt.rcParams['pcolormesh.snap'] = False
     np.random.seed(19680801)

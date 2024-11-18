@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['transparent_markers'], remove_text=True)
 def test_transparent_markers_0_mutated():
     np.random.seed(0)
     data = np.random.random(50)

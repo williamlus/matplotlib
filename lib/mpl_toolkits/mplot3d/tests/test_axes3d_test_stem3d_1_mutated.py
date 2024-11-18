@@ -50,6 +50,7 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
         ax.text(x, y, t)
     return (fig, ax)
 
+@image_comparison(['stem3d.png'], style='mpl20', tol=0.008)
 def test_stem3d_1_mutated():
     plt.rcParams['axes3d.automargin'] = True
     fig, axs = plt.subplots(2, 3, figsize=(8, 6), constrained_layout=True, subplot_kw={'projection': '3d'}, sharey=True)

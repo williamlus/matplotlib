@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['axis_options.png'], remove_text=True, style='mpl20')
 def test_axis_options_1_mutated():
     fig, axes = plt.subplots(2, 3, squeeze=False)
     for i, option in enumerate(('scaled', 'tight', 'image')):

@@ -152,9 +152,10 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['hist_stacked_stepfilled_alpha'])
 def test_hist_stacked_stepfilled_alpha_7_mutated():
     d1 = np.linspace(1, 3, 20)
     d2 = np.linspace(0, 10, 50)
     fig, ax = plt.subplots()
     ax.hist((d1, d2), histtype='barstacked', stacked=True, alpha=0.5)
-# Mutation info: histtype = <ast.Constant object at 0x7fc056c37510> -> histtype = barstacked (Call ax.hist)
+# Mutation info: histtype = <ast.Constant object at 0x7fc31dc9b490> -> histtype = barstacked (Call ax.hist)

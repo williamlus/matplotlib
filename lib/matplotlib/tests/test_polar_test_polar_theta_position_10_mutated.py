@@ -5,6 +5,7 @@ import matplotlib as mpl
 from matplotlib import pyplot as plt
 from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
+@image_comparison(['polar_theta_position'], style='default')
 def test_polar_theta_position_10_mutated():
     r = np.arange(0, 3.0, 0.01)
     theta = 2 * np.pi * r
@@ -13,4 +14,4 @@ def test_polar_theta_position_10_mutated():
     ax.plot(theta, r)
     ax.set_theta_zero_location('NW', 30)
     ax.set_theta_direction('clockwise')
-# Mutation info: polar = <ast.Constant object at 0x7fc0570105d0> -> polar = True (Call fig.add_axes)
+# Mutation info: polar = <ast.Constant object at 0x7fc3242a9810> -> polar = True (Call fig.add_axes)

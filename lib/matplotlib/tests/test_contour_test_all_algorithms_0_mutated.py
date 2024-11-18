@@ -12,6 +12,7 @@ import matplotlib.patches as mpatches
 from matplotlib.testing.decorators import check_figures_equal, image_comparison
 import pytest
 
+@image_comparison(baseline_images=['contour_all_algorithms'], extensions=['png'], remove_text=True, tol=0.06)
 def test_all_algorithms_0_mutated():
     algorithms = ['mpl2005', 'mpl2014', 'serial', 'threaded']
     rng = np.random.default_rng(2981)

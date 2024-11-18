@@ -11,6 +11,7 @@ from matplotlib.path import Path
 from matplotlib.testing.decorators import image_comparison
 from matplotlib.transforms import IdentityTransform
 
+@image_comparison(['agg_filter.png'], remove_text=True)
 def test_agg_filter_10_mutated():
 
     def smooth1d(x, window_len):
@@ -101,4 +102,4 @@ def test_agg_filter_10_mutated():
     ax.set_ylim(0.0, 1.0)
     ax.xaxis.set_visible(False)
     ax.yaxis.set_visible(False)
-# Mutation info: units = <ast.Constant object at 0x7fc057026110> -> units = points (Call mtransforms.offset_copy)
+# Mutation info: units = <ast.Constant object at 0x7fc324c13d90> -> units = points (Call mtransforms.offset_copy)

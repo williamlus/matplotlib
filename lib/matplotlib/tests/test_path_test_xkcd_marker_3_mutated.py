@@ -13,6 +13,7 @@ from matplotlib.backend_bases import MouseEvent
 _test_paths = [Path([[0, 0], [1, 0], [1, 1], [0, 1]], [Path.MOVETO, Path.CURVE4, Path.CURVE4, Path.CURVE4]), Path([[0, 0], [0, 1], [1, 0]], [Path.MOVETO, Path.CURVE3, Path.CURVE3]), Path([[0, 1], [1, 1]], [Path.MOVETO, Path.LINETO]), Path([[1, 2]], [Path.MOVETO])]
 _test_path_extents = [(0.0, 0.0, 0.75, 1.0), (0.0, 0.0, 1.0, 0.5), (0.0, 1.0, 1.0, 1.0), (1.0, 2.0, 1.0, 2.0)]
 
+@image_comparison(['xkcd_marker.png'], remove_text=True)
 def test_xkcd_marker_3_mutated():
     np.random.seed(0)
     x = np.linspace(0, 5, 8)

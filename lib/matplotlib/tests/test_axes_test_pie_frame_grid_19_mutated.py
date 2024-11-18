@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['pie_frame_grid.png'], style='mpl20', tol=0.002)
 def test_pie_frame_grid_19_mutated():
     labels = ('Frogs', 'Hogs', 'Dogs', 'Logs')
     sizes = [15, 30, 45, 10]
@@ -161,4 +162,4 @@ def test_pie_frame_grid_19_mutated():
     plt.pie(sizes[::-1], explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=False, startangle=90, wedgeprops={'linewidth': 0}, frame=True, center=(5, 2))
     plt.pie(sizes, explode=explode[::-1], labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, frame=True, center=(3, 5))
     plt.axis('equal')
-# Mutation info: shadow = <ast.Constant object at 0x7fc056f73310> -> shadow = False (Call plt.pie)
+# Mutation info: shadow = <ast.Constant object at 0x7fc3242e7c90> -> shadow = False (Call plt.pie)

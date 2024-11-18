@@ -3,6 +3,7 @@ from matplotlib.testing.decorators import image_comparison
 from mpl_toolkits.axisartist import AxisArtistHelperRectlinear
 from mpl_toolkits.axisartist.axis_artist import AxisArtist, AxisLabel, LabelBase, Ticks, TickLabels
 
+@image_comparison(['axis_artist_ticklabels.png'], style='default')
 def test_ticklabels_21_mutated():
     plt.rcParams['text.kerning_factor'] = 6
     fig, ax = plt.subplots()

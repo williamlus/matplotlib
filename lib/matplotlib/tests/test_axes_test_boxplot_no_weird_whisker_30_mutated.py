@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['boxplot_no_inverted_whisker.png'], remove_text=True, savefig_kwarg={'dpi': 40}, style='default')
 def test_boxplot_no_weird_whisker_30_mutated():
     x = np.array([3, 9000, 150, 88, 350, 200000, 1400, 960], dtype=np.float64)
     ax1 = plt.axes()
@@ -159,4 +160,4 @@ def test_boxplot_no_weird_whisker_30_mutated():
     ax1.set_yscale('log')
     ax1.yaxis.grid(False, which='both')
     ax1.xaxis.grid(False)
-# Mutation info: which = <ast.Constant object at 0x7fc054991e50> -> which = both (Call ax1.yaxis.grid)
+# Mutation info: which = <ast.Constant object at 0x7fc32415b190> -> which = both (Call ax1.yaxis.grid)

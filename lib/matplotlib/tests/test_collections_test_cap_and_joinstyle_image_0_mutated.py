@@ -60,6 +60,7 @@ def check_segments(coll, positions, linelength, lineoffset, orientation):
         assert segment[0, pos2] == positions[i]
         assert segment[1, pos2] == positions[i]
 
+@image_comparison(['cap_and_joinstyle.png'])
 def test_cap_and_joinstyle_image_0_mutated():
     fig, ax = plt.subplots(sharex=True)
     ax.set_xlim([-0.5, 1.5])

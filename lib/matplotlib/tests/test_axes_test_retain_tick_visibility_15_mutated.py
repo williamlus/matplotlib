@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['retain_tick_visibility.png'])
 def test_retain_tick_visibility_15_mutated():
     fig, ax = plt.subplots()
     plt.plot([0, 1, 2], [0, -1, 4])

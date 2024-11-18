@@ -152,9 +152,10 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['hist_stacked_normed'])
 def test_hist_stacked_density_12_mutated():
     d1 = np.linspace(1, 3, 20)
     d2 = np.linspace(0, 10, 50)
     fig, ax = plt.subplots()
     ax.hist((d1, d2), stacked=False, density=True)
-# Mutation info: stacked = <ast.Constant object at 0x7fc056ddfed0> -> stacked = False (Call ax.hist)
+# Mutation info: stacked = <ast.Constant object at 0x7fc324bc91d0> -> stacked = False (Call ax.hist)

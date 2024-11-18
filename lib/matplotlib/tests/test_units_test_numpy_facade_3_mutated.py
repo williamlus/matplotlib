@@ -81,6 +81,7 @@ class Kernel:
     def shape(self):
         return self._array.shape
 
+@image_comparison(['plot_pint.png'], style='mpl20', tol=0 if platform.machine() == 'x86_64' else 0.03)
 def test_numpy_facade_3_mutated(quantity_converter):
     plt.rcParams['axes.formatter.limits'] = (-7, 7)
     munits.registry[Quantity] = quantity_converter

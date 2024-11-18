@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['violinplot_horiz_showmedians.png'])
 def test_horiz_violinplot_showmedians_4_mutated():
     ax = plt.axes(projection='polar')
     np.random.seed(795831523)

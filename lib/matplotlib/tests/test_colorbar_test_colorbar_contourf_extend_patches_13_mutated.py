@@ -68,6 +68,7 @@ def _colorbar_extension_length(spacing):
             cax.tick_params(left=False, labelleft=False, bottom=False, labelbottom=False)
     return fig
 
+@image_comparison(['contourf_extend_patches.png'], remove_text=True, style='mpl20')
 def test_colorbar_contourf_extend_patches_13_mutated():
     params = [('both', 5, ['\\', '//']), ('min', 7, ['+']), ('max', 2, ['|', '-', '/', '\\', '//']), ('neither', 10, ['//', '\\', '||'])]
     plt.rcParams['axes.linewidth'] = 2

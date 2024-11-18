@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['polycollection_joinstyle'], remove_text=True)
 def test_polycollection_joinstyle_5_mutated():
     fig, ax = plt.subplots(sharey=False)
     verts = np.array([[1, 1], [1, 2], [2, 2], [2, 1]])

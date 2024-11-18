@@ -60,6 +60,7 @@ def check_segments(coll, positions, linelength, lineoffset, orientation):
         assert segment[0, pos2] == positions[i]
         assert segment[1, pos2] == positions[i]
 
+@image_comparison(['EventCollection_plot__set_linestyle', 'EventCollection_plot__set_linestyle', 'EventCollection_plot__set_linewidth'])
 def test__EventCollection__set_prop_2_mutated():
     for prop, value, expected in [('linestyle', 'dashed', [(0, (6.0, 6.0))]), ('linestyle', (0, (6.0, 6.0)), [(0, (6.0, 6.0))]), ('linewidth', 5, 5)]:
         splt, coll, _ = generate_EventCollection_plot()

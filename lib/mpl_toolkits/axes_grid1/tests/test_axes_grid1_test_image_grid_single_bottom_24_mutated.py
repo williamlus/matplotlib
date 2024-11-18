@@ -20,6 +20,7 @@ import pytest
 import numpy as np
 from numpy.testing import assert_array_equal, assert_array_almost_equal
 
+@image_comparison(['image_grid_single_bottom_label_mode_1.png'], style='mpl20', savefig_kwarg={'bbox_inches': 'tight'})
 def test_image_grid_single_bottom_24_mutated():
     imdata = np.arange(100).reshape((10, 10))
     fig = plt.figure(1, (2.5, 1.5))
@@ -28,4 +29,4 @@ def test_image_grid_single_bottom_24_mutated():
     for i in range(3):
         im = grid[i].imshow(imdata, interpolation='none')
     grid.cbar_axes[0].colorbar(im)
-# Mutation info: label_mode = <ast.Constant object at 0x7fc057033350> -> label_mode = L (Call ImageGrid)
+# Mutation info: label_mode = <ast.Constant object at 0x7fc31faad290> -> label_mode = L (Call ImageGrid)

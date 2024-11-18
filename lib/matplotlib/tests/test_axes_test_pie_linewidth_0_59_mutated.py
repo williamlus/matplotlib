@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['pie_linewidth_0', 'pie_linewidth_0', 'pie_linewidth_0'], extensions=['png'], style='mpl20', tol=0.01)
 def test_pie_linewidth_0_59_mutated():
     labels = ('Frogs', 'Hogs', 'Dogs', 'Logs')
     sizes = [15, 30, 45, 10]
@@ -167,4 +168,4 @@ def test_pie_linewidth_0_59_mutated():
     plt.figure()
     plt.pie('s', explode='ex', labels='l', colors='c', autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, data=data)
     plt.axis('equal')
-# Mutation info: shadow = <ast.Constant object at 0x7fc056f87890> -> shadow = True (Call plt.pie)
+# Mutation info: shadow = <ast.Constant object at 0x7fc31db24750> -> shadow = True (Call plt.pie)

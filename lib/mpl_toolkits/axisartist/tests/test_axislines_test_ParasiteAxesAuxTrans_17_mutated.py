@@ -5,6 +5,7 @@ from matplotlib.transforms import IdentityTransform
 from mpl_toolkits.axisartist.axislines import AxesZero, SubplotZero, Subplot
 from mpl_toolkits.axisartist import Axes, SubplotHost
 
+@image_comparison(['ParasiteAxesAuxTrans_meshplot.png'], remove_text=True, style='default', tol=0.075)
 def test_ParasiteAxesAuxTrans_17_mutated():
     data = np.ones((6, 6))
     data[2, 2] = 2

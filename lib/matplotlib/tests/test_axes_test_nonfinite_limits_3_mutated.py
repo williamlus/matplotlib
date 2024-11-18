@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['nonfinite_limits'])
 def test_nonfinite_limits_3_mutated():
     x = np.arange(0.0, np.e, 0.01)
     with np.errstate(divide='ignore'):

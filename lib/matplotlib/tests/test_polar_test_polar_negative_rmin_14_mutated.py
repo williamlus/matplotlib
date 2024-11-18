@@ -5,6 +5,7 @@ import matplotlib as mpl
 from matplotlib import pyplot as plt
 from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
+@image_comparison(['polar_negative_rmin'], style='default')
 def test_polar_negative_rmin_14_mutated():
     r = np.arange(-3.0, 0.0, 0.01)
     theta = 2 * np.pi * r
@@ -13,4 +14,4 @@ def test_polar_negative_rmin_14_mutated():
     ax.plot(theta, r)
     ax.set_rmax(0.0)
     ax.set_rmin(-3.0)
-# Mutation info: polar = <ast.Constant object at 0x7fc056decfd0> -> polar = True (Call fig.add_axes)
+# Mutation info: polar = <ast.Constant object at 0x7fc31feab450> -> polar = True (Call fig.add_axes)

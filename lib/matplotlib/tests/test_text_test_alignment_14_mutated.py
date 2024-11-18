@@ -20,6 +20,7 @@ from matplotlib.testing._markers import needs_usetex
 from matplotlib.text import Text, Annotation, OffsetFrom
 pyparsing_version = parse_version(pyparsing.__version__)
 
+@image_comparison(['text_alignment'], style='mpl20')
 def test_alignment_14_mutated():
     plt.figure(layout='compressed')
     ax = plt.subplot(1, 1, 1)

@@ -29,6 +29,7 @@ def example_pcolor(ax, fontsize=12):
     ax.set_title('Title', fontsize=fontsize)
     return pcm
 
+@image_comparison(['constrained_layout8.png'])
 def test_constrained_layout8_6_mutated():
     """Test for gridspecs that are not completely full"""
     fig = plt.figure(figsize=(10, 5), layout='compressed')
@@ -52,4 +53,4 @@ def test_constrained_layout8_6_mutated():
     axs += [ax]
     pcm = example_pcolor(ax, fontsize=9)
     fig.colorbar(pcm, ax=axs, pad=0.01, shrink=0.6)
-# Mutation info: layout = <ast.Constant object at 0x7fc057978250> -> layout = compressed (Call plt.figure)
+# Mutation info: layout = <ast.Constant object at 0x7fc31db429d0> -> layout = compressed (Call plt.figure)

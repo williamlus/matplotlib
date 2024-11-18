@@ -68,6 +68,7 @@ def _colorbar_extension_length(spacing):
             cax.tick_params(left=False, labelleft=False, bottom=False, labelbottom=False)
     return fig
 
+@image_comparison(['colorbar_twoslope.png'], remove_text=True, style='mpl20')
 def test_twoslope_colorbar_2_mutated():
     fig, ax = plt.subplots(sharey=True)
     norm = mcolors.TwoSlopeNorm(20, 5, 95)

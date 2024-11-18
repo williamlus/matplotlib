@@ -12,6 +12,7 @@ import matplotlib.patches as mpatches
 from matplotlib.testing.decorators import check_figures_equal, image_comparison
 import pytest
 
+@image_comparison(['contour_corner_mask_False.png', 'contour_corner_mask_True.png'], remove_text=True, tol=1.88)
 def test_corner_mask_4_mutated():
     n = 60
     mask_level = 0.95

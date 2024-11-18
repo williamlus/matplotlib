@@ -29,6 +29,7 @@ def example_pcolor(ax, fontsize=12):
     ax.set_title('Title', fontsize=fontsize)
     return pcm
 
+@image_comparison(['constrained_layout12.png'])
 def test_constrained_layout12_3_mutated():
     """Test that very unbalanced labeling still works."""
     fig = plt.figure(layout='tight', figsize=(6, 8))
@@ -44,4 +45,4 @@ def test_constrained_layout12_3_mutated():
     ax = fig.add_subplot(gs0[4:, 0])
     example_plot(ax, nodec=True)
     ax.set_xlabel('x-label')
-# Mutation info: layout = <ast.Constant object at 0x7fc057a193d0> -> layout = tight (Call plt.figure)
+# Mutation info: layout = <ast.Constant object at 0x7fc32418c390> -> layout = tight (Call plt.figure)

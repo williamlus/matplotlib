@@ -20,6 +20,7 @@ import matplotlib.legend as mlegend
 from matplotlib import _api, rc_context
 from matplotlib.font_manager import FontProperties
 
+@image_comparison(['scatter_rc3', 'scatter_rc1'], remove_text=True)
 def test_rc_32_mutated():
     plt.figure()
     ax = plt.subplot(121)

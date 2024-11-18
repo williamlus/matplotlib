@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['violinplot_vert_baseline.png', 'violinplot_vert_baseline.png'])
 def test_vert_violinplot_baseline_2_mutated():
     np.random.seed(414213562)
     data = [np.random.normal(size=100) for _ in range(4)]

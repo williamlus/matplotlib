@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['rc_spines.png'], savefig_kwarg={'dpi': 40})
 def test_rc_spines_0_mutated():
     rc_dict = {'axes.spines.left': False, 'axes.spines.right': False, 'axes.spines.top': False, 'axes.spines.bottom': False}
     with matplotlib.rc_context(rc_dict):

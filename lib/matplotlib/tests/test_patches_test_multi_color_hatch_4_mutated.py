@@ -12,6 +12,7 @@ from matplotlib.transforms import Bbox
 import matplotlib.pyplot as plt
 from matplotlib import collections as mcollections, colors as mcolors, patches as mpatches, path as mpath, transforms as mtransforms, rcParams
 
+@image_comparison(['multi_color_hatch'], remove_text=True, style='default')
 def test_multi_color_hatch_4_mutated():
     fig, ax = plt.subplots(sharex=False)
     rects = ax.bar(range(5), range(1, 6))

@@ -5,6 +5,7 @@ import matplotlib as mpl
 from matplotlib import pyplot as plt
 from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
+@image_comparison(['polar_rorigin'], style='default')
 def test_polar_rorigin_10_mutated():
     r = np.arange(0, 3.0, 0.01)
     theta = 2 * np.pi * r
@@ -14,4 +15,4 @@ def test_polar_rorigin_10_mutated():
     ax.set_rmax(2.0)
     ax.set_rmin(0.5)
     ax.set_rorigin(0.0)
-# Mutation info: polar = <ast.Constant object at 0x7fc06bf97090> -> polar = True (Call fig.add_axes)
+# Mutation info: polar = <ast.Constant object at 0x7fc31fea9250> -> polar = True (Call fig.add_axes)

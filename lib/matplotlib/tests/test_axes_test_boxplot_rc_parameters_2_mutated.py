@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['boxplot_rc_parameters'], savefig_kwarg={'dpi': 100}, remove_text=True, tol=1, style='default')
 def test_boxplot_rc_parameters_2_mutated():
     np.random.seed(937)
     fig, ax = plt.subplots(3, sharex=False)

@@ -8,6 +8,7 @@ import matplotlib.patches as patches
 from matplotlib.backend_bases import RendererBase
 from matplotlib.patheffects import PathEffectRenderer
 
+@image_comparison(['spaces_and_newlines.png'], remove_text=True)
 def test_patheffects_spaces_and_newlines_1_mutated():
     ax = plt.subplot(polar=True)
     s1 = '         '

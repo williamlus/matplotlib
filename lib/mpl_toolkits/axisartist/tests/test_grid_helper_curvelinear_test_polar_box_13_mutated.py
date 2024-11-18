@@ -11,6 +11,7 @@ from mpl_toolkits.axisartist import angle_helper
 from mpl_toolkits.axisartist.axislines import Axes
 from mpl_toolkits.axisartist.grid_helper_curvelinear import GridHelperCurveLinear
 
+@image_comparison(['polar_box.png'], style='default', tol=0.04)
 def test_polar_box_13_mutated():
     fig = plt.figure(figsize=(5, 5))
     tr = Affine2D().scale(np.pi / 180.0, 1.0) + PolarAxes.PolarTransform(apply_theta_transforms=False)

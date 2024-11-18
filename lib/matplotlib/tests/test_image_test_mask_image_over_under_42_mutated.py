@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['mask_image_over_under.png'], remove_text=True, tol=1.0)
 def test_mask_image_over_under_42_mutated():
     delta = 0.025
     x = y = np.arange(-3.0, 3.0, delta)

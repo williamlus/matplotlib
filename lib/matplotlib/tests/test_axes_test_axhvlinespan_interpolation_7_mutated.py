@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['axhvlinespan_interpolation.png'], style='default')
 def test_axhvlinespan_interpolation_7_mutated():
     ax = plt.figure(layout='compressed').add_subplot(projection='polar')
     ax.set_axis_off()

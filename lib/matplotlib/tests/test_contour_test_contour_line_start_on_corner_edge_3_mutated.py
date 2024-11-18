@@ -12,6 +12,7 @@ import matplotlib.patches as mpatches
 from matplotlib.testing.decorators import check_figures_equal, image_comparison
 import pytest
 
+@image_comparison(baseline_images=['contour_line_start_on_corner_edge'], extensions=['png'], remove_text=True)
 def test_contour_line_start_on_corner_edge_3_mutated():
     fig, ax = plt.subplots(figsize=(6, 5), squeeze=True)
     x, y = np.meshgrid([0, 1, 2, 3, 4], [0, 1, 2])

@@ -12,6 +12,7 @@ from matplotlib.transforms import Bbox
 import matplotlib.pyplot as plt
 from matplotlib import collections as mcollections, colors as mcolors, patches as mpatches, path as mpath, transforms as mtransforms, rcParams
 
+@image_comparison(['connection_patch.png'], style='mpl20', remove_text=True, tol=0.024 if platform.machine() == 'arm64' else 0)
 def test_connection_patch_1_mutated():
     fig, (ax1, ax2) = plt.subplots(1, 2, sharex=False)
     con = mpatches.ConnectionPatch(xyA=(0.1, 0.1), xyB=(0.9, 0.9), coordsA='data', coordsB='data', axesA=ax2, axesB=ax1, arrowstyle='->')

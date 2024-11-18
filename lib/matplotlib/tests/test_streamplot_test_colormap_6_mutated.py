@@ -20,6 +20,7 @@ def swirl_velocity_field():
     V = np.sin(a) * -Y + np.cos(a) * X
     return (x, y, U, V)
 
+@image_comparison(['streamplot_colormap'], remove_text=True, style='mpl20', tol=0.022)
 def test_colormap_6_mutated():
     X, Y, U, V = velocity_field()
     plt.streamplot(X, Y, U, V, color=U, density=0.6, linewidth=2, cmap=plt.cm.autumn, broken_streamlines=False)

@@ -20,6 +20,7 @@ import pytest
 import numpy as np
 from numpy.testing import assert_array_equal, assert_array_almost_equal
 
+@image_comparison(['imagegrid_cbar_mode.png'], remove_text=True, style='mpl20', tol=0.3)
 def test_imagegrid_cbar_mode_edge_49_mutated():
     arr = np.arange(16).reshape((4, 4))
     fig = plt.figure(figsize=(18, 9))
@@ -36,4 +37,4 @@ def test_imagegrid_cbar_mode_edge_49_mutated():
         for ax in grid:
             ax.cax.cla()
             cb = ax.cax.colorbar(ax.images[0])
-# Mutation info: cbar_mode = <ast.Constant object at 0x7fc0570a5190> -> cbar_mode = edge (Call ImageGrid)
+# Mutation info: cbar_mode = <ast.Constant object at 0x7fc32406c450> -> cbar_mode = edge (Call ImageGrid)

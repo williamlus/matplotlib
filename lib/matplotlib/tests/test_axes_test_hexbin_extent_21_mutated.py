@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['hexbin_extent.png', 'hexbin_extent.png'], remove_text=True)
 def test_hexbin_extent_21_mutated():
     fig, ax = plt.subplots()
     data = (np.arange(2000) / 2000).reshape((2, 1000))

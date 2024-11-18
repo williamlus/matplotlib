@@ -20,6 +20,7 @@ import pytest
 import numpy as np
 from numpy.testing import assert_array_equal, assert_array_almost_equal
 
+@image_comparison(['fill_facecolor.png'], remove_text=True, style='mpl20')
 def test_fill_facecolor_31_mutated():
     fig, ax = plt.subplots(1, 5)
     fig.set_size_inches(5, 5)

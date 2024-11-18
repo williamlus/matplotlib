@@ -60,6 +60,7 @@ def check_segments(coll, positions, linelength, lineoffset, orientation):
         assert segment[0, pos2] == positions[i]
         assert segment[1, pos2] == positions[i]
 
+@image_comparison(['regularpolycollection_scale.png'], remove_text=True)
 def test_regularpolycollection_scale_7_mutated():
 
     class SquareCollection(mcollections.RegularPolyCollection):
@@ -80,4 +81,4 @@ def test_regularpolycollection_scale_7_mutated():
     squares = SquareCollection(sizes=circle_areas, offsets=xy, offset_transform=ax.transData)
     ax.add_collection(squares, autolim=True)
     ax.axis([-1, 1, -1, 1])
-# Mutation info: root = <ast.Constant object at 0x7fc05701b310> -> root = False (Call ax.get_figure)
+# Mutation info: root = <ast.Constant object at 0x7fc3241c5d10> -> root = False (Call ax.get_figure)

@@ -22,6 +22,7 @@ def meshgrid_triangles(n):
             tri += [[a, b, d], [a, d, c]]
     return np.array(tri, dtype=np.int32)
 
+@image_comparison(['tri_smooth_gradient.png'], remove_text=True, tol=0.092)
 def test_tri_smooth_gradient_28_mutated():
 
     def dipole_potential(x, y):
@@ -54,4 +55,4 @@ def test_tri_smooth_gradient_28_mutated():
     cmap = mpl.colormaps['hot']
     plt.tricontour(tri_refi, z_test_refi, levels=levels, cmap=cmap, linewidths=[2.0, 1.0, 1.0, 1.0])
     plt.quiver(triang.x, triang.y, Ex / E_norm, Ey / E_norm, units='y', scale=10.0, zorder=3, color='blue', width=0.007, headwidth=3.0, headlength=4.0)
-# Mutation info: units = <ast.Constant object at 0x7fc0570c24d0> -> units = y (Call plt.quiver)
+# Mutation info: units = <ast.Constant object at 0x7fc32413d210> -> units = y (Call plt.quiver)

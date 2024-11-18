@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['boxplot', 'boxplot'], tol=1.28, style='default')
 def test_boxplot_44_mutated():
     np.random.seed(937)
     x = np.linspace(-7, 7, 140)
@@ -163,4 +164,4 @@ def test_boxplot_44_mutated():
     fig, ax = plt.subplots()
     ax.boxplot('x', bootstrap=10000, notch=False, data=data)
     ax.set_ylim((-30, 30))
-# Mutation info: notch = <ast.Constant object at 0x7fc054993ed0> -> notch = False (Call ax.boxplot)
+# Mutation info: notch = <ast.Constant object at 0x7fc334d9ec90> -> notch = False (Call ax.boxplot)

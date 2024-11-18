@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['mixed_collection'], remove_text=True)
 def test_mixed_collection_13_mutated():
     fig, ax = plt.subplots()
     c = mpatches.Circle((8, 8), radius=4, facecolor='none', edgecolor='green')

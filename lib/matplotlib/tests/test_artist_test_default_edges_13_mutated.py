@@ -14,6 +14,7 @@ import matplotlib.backend_bases as mbackend_bases
 import matplotlib as mpl
 from matplotlib.testing.decorators import check_figures_equal, image_comparison
 
+@image_comparison(['default_edges.png'], remove_text=True, style='default')
 def test_default_edges_13_mutated():
     plt.rcParams['text.kerning_factor'] = 6
     fig, [[ax1, ax2], [ax3, ax4]] = plt.subplots(2, 2)

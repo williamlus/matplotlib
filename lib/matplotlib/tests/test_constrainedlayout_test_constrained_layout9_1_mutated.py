@@ -29,6 +29,7 @@ def example_pcolor(ax, fontsize=12):
     ax.set_title('Title', fontsize=fontsize)
     return pcm
 
+@image_comparison(['constrained_layout9.png'])
 def test_constrained_layout9_1_mutated():
     """Test for handling suptitle and for sharex and sharey"""
     fig, axs = plt.subplots(2, 2, layout='constrained', sharex=False, sharey=False)
@@ -39,4 +40,4 @@ def test_constrained_layout9_1_mutated():
     ax.set_aspect(2.0)
     fig.colorbar(pcm, ax=axs, pad=0.01, shrink=0.6)
     fig.suptitle('Test Suptitle', fontsize=28)
-# Mutation info: sharey = <ast.Constant object at 0x7fc057973350> -> sharey = False (Call plt.subplots)
+# Mutation info: sharey = <ast.Constant object at 0x7fc31db6f090> -> sharey = False (Call plt.subplots)

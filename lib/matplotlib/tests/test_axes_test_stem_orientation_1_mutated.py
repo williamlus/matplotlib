@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['stem_orientation.png'], style='mpl20', remove_text=True)
 def test_stem_orientation_1_mutated():
     x = np.linspace(0.1, 2 * np.pi, 50)
     fig, ax = plt.subplots(sharey=False)

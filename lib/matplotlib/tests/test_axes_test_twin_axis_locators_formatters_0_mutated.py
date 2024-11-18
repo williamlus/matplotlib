@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['twin_axis_locators_formatters'])
 def test_twin_axis_locators_formatters_0_mutated():
     vals = np.linspace(0, 1, num=5, endpoint=True)
     locs = np.sin(np.pi * vals / 2.0)

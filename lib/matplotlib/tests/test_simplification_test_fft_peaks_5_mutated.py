@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 from matplotlib import patches, transforms
 from matplotlib.path import Path
 
+@image_comparison(['fft_peaks'], remove_text=True)
 def test_fft_peaks_5_mutated():
     fig, ax = plt.subplots(sharey=True)
     t = np.arange(65536)

@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['pcolor_datetime_axis.png'], style='mpl20')
 def test_pcolor_datetime_axis_65_mutated():
     fig = plt.figure()
     fig.subplots_adjust(hspace=0.4, top=0.98, bottom=0.15)

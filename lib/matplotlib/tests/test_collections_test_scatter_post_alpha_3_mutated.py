@@ -60,6 +60,7 @@ def check_segments(coll, positions, linelength, lineoffset, orientation):
         assert segment[0, pos2] == positions[i]
         assert segment[1, pos2] == positions[i]
 
+@image_comparison(['scatter_post_alpha.png'], remove_text=True, style='default')
 def test_scatter_post_alpha_3_mutated():
     fig, ax = plt.subplots(sharex=True)
     sc = ax.scatter(range(5), range(5), c=range(5))

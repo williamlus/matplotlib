@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['stackplot_test_baseline'], remove_text=True)
 def test_stackplot_baseline_1_mutated():
     np.random.seed(0)
 

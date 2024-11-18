@@ -75,6 +75,7 @@ class QuantityND(np.ndarray):
     def v(self):
         return self.view(np.ndarray)
 
+@image_comparison(['downsampling_speckle.png'], style='mpl20', remove_text=True, tol=0.09)
 def test_downsampling_speckle_0_mutated():
     fig, axs = plt.subplots(1, 2, figsize=(5, 2.7), sharex=True, sharey=True, layout='compressed')
     axs = axs.flatten()
@@ -86,4 +87,4 @@ def test_downsampling_speckle_0_mutated():
     axs[0].imshow(np.triu(img), cmap=cm, norm=norm, interpolation_stage='rgba')
     axs[1].set_title("interpolation='auto', stage='auto'")
     axs[1].imshow(np.triu(img), cmap=cm, norm=norm)
-# Mutation info: sharex = <ast.Constant object at 0x7fc054994650> -> sharex = True (Call plt.subplots)
+# Mutation info: sharex = <ast.Constant object at 0x7fc32409e790> -> sharex = True (Call plt.subplots)

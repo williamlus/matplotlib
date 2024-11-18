@@ -152,6 +152,7 @@ def color_boxes(fig, ax):
     bbtb = bb2
     return (bbaxis, bbspines, bbax, bbtb)
 
+@image_comparison(['pcolormesh_datetime_axis.png'], style='mpl20')
 def test_pcolormesh_datetime_axis_92_mutated():
     plt.rcParams['pcolormesh.snap'] = False
     fig = plt.figure()
