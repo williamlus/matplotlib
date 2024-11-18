@@ -6,10 +6,11 @@ from matplotlib.testing.decorators import image_comparison
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import art3d
 
+@image_comparison(['legend_bar.png'], remove_text=True, style='mpl20')
 def test_legend_bar_5_mutated():
     fig, ax = plt.subplots(subplot_kw=dict(projection='3d'))
     x = np.arange(10)
     b1 = ax.bar(x, x, zdir='y', align='edge', color='m')
     b2 = ax.bar(x, x[::-1], zdir='y', align='edge', color='g')
     ax.legend([b1[0], b2[0]], ['up', 'down'])
-# Mutation info: zdir = <ast.Constant object at 0x7fc055b91550> -> zdir = y (Call ax.bar)
+# Mutation info: zdir = <ast.Constant object at 0x7fc31fc37450> -> zdir = y (Call ax.bar)
