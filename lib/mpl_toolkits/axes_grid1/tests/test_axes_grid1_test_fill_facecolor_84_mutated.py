@@ -72,4 +72,4 @@ def test_fill_facecolor_84_mutated():
     axins.xaxis.set_ticks([])
     axins.yaxis.set_ticks([])
     mark_inset(ax[3], axins, loc1=2, loc2=3, fc='g', ec='0.5', fill=False)
-# Mutation info: loc2 = <ast.Constant object at 0x7fc32418b190> -> loc2 = 3 (Call mark_inset)
+# Mutation info: loc2 = 4 -> loc2 = 3 (Call mark_inset)

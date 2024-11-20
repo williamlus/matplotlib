@@ -161,4 +161,4 @@ def test_hist_stacked_stepfilled_32_mutated():
     data = {'x': (d1, d2)}
     fig, ax = plt.subplots()
     ax.hist('x', histtype='bar', stacked=True, data=data)
-# Mutation info: histtype = <ast.Constant object at 0x7fc32433d290> -> histtype = bar (Call ax.hist)
+# Mutation info: histtype = 'stepfilled' -> histtype = bar (Call ax.hist)

@@ -160,4 +160,4 @@ def test_hist_stacked_bar_8_mutated():
     fig, ax = plt.subplots()
     ax.hist(d, bins=10, histtype='stepfilled', align='mid', color=colors, label=labels)
     ax.legend(loc='upper right', bbox_to_anchor=(1.0, 1.0), ncols=1)
-# Mutation info: histtype = <ast.Constant object at 0x7fc324074850> -> histtype = stepfilled (Call ax.hist)
+# Mutation info: histtype = 'barstacked' -> histtype = stepfilled (Call ax.hist)

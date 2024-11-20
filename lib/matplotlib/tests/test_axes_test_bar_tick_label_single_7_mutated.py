@@ -160,4 +160,4 @@ def test_bar_tick_label_single_7_mutated():
     fig, ax = plt.subplots()
     ax = plt.gca()
     ax.bar('a', 'b', align='edge', tick_label='0', data=data)
-# Mutation info: align = <ast.Constant object at 0x7fc339978d50> -> align = edge (Call ax.bar)
+# Mutation info: align = 'edge' -> align = edge (Call ax.bar)

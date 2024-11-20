@@ -37,4 +37,4 @@ def test_tight_layout8_18_mutated():
     ax = fig.add_subplot()
     example_plot(ax, fontsize=24)
     fig.draw_without_rendering()
-# Mutation info: layout = <ast.Constant object at 0x7fc32421cc90> -> layout = tight (Call fig.set_layout_engine)
+# Mutation info: layout = 'tight' -> layout = tight (Call fig.set_layout_engine)

@@ -58,4 +58,4 @@ def test_scatter_spiral_15_mutated():
     th = np.linspace(0, 2 * np.pi * 6, 256)
     sc = ax.scatter(np.sin(th), np.cos(th), th, s=1 + th * 5, c=th ** 2)
     fig.canvas.draw()
-# Mutation info: projection = <ast.Constant object at 0x7fc324bef190> -> projection = rectilinear (Call fig.add_subplot)
+# Mutation info: projection = '3d' -> projection = rectilinear (Call fig.add_subplot)

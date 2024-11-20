@@ -167,4 +167,4 @@ def test_stairs_options_7_mutated():
     ax.stairs(yn[::-1] * 3 + 15, x + 1, baseline=np.linspace(27, 25, len(y)), color='blue', ls='--', label='G', fill=True)
     ax.stairs(y[:-1][::-1] * 2 + 11, x[:-1] + 0.5, color='black', ls='--', lw=2, baseline=12, hatch='//', label='H')
     ax.legend(loc=0)
-# Mutation info: fill = <ast.Constant object at 0x7fc324335dd0> -> fill = True (Call ax.stairs)
+# Mutation info: fill = True -> fill = True (Call ax.stairs)

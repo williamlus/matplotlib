@@ -160,4 +160,4 @@ def test_boxplot_no_weird_whisker_31_mutated():
     ax1.set_yscale('log')
     ax1.yaxis.grid(False, which='major')
     ax1.xaxis.grid(False)
-# Mutation info: which = <ast.Constant object at 0x7fc31ff39190> -> which = major (Call ax1.yaxis.grid)
+# Mutation info: which = 'minor' -> which = major (Call ax1.yaxis.grid)

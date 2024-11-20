@@ -33,4 +33,4 @@ def test_large_subscript_title_15_mutated():
     ax.set_title('$\\sum_{i} x_i$', y=1.01)
     ax.set_title('Old Way', loc='right')
     ax.set_xticklabels([])
-# Mutation info: loc = <ast.Constant object at 0x7fc31dbb7090> -> loc = right (Call ax.set_title)
+# Mutation info: loc = 'left' -> loc = right (Call ax.set_title)

@@ -27,4 +27,4 @@ def test_quiver_key_xy_30_mutated():
         q = ax.quiver(X, Y, U, V, pivot='middle', units='xy', width=0.05, scale=2, scale_units='xy', angles=angle_str)
         for x, angle in zip((0.2, 0.5, 0.8), (0, 45, 90)):
             ax.quiverkey(q, X=x, Y=0.8, U=1, angle=angle, label='', color='b')
-# Mutation info: units = <ast.Constant object at 0x7fc31db7ff50> -> units = xy (Call ax.quiver)
+# Mutation info: units = 'xy' -> units = xy (Call ax.quiver)

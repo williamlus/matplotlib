@@ -25,4 +25,4 @@ def test_offsetbox_clipping_18_mutated():
     ax.add_artist(anchored_box)
     ax.set_xlim((0, 1))
     ax.set_ylim((0, 1))
-# Mutation info: frameon = <ast.Constant object at 0x7fc32430f450> -> frameon = True (Call AnchoredOffsetbox)
+# Mutation info: frameon = False -> frameon = True (Call AnchoredOffsetbox)

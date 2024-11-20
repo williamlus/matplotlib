@@ -162,4 +162,4 @@ def test_contour_colorbar_10_mutated():
     cbar = fig.colorbar(cs, ax=ax)
     cbar.add_lines(cs1)
     cbar.add_lines(cs2, erase=False)
-# Mutation info: erase = <ast.Constant object at 0x7fc31feaeed0> -> erase = False (Call cbar.add_lines)
+# Mutation info: erase = False -> erase = False (Call cbar.add_lines)

@@ -20,4 +20,4 @@ def test_barbs_flip_10_mutated():
     U, V = (12 * X, 12 * Y)
     fig, ax = plt.subplots()
     ax.barbs(X, Y, U, V, fill_empty=True, rounding=False, pivot='middle', sizes=dict(emptybarb=0.25, spacing=0.2, height=0.3), flip_barb=Y < 0)
-# Mutation info: pivot = <ast.Constant object at 0x7fc31dc3ec50> -> pivot = middle (Call ax.barbs)
+# Mutation info: pivot = 1.7 -> pivot = middle (Call ax.barbs)

@@ -55,4 +55,4 @@ def test_panecolor_rcparams_11_mutated():
     with plt.rc_context({'axes3d.xaxis.panecolor': 'r', 'axes3d.yaxis.panecolor': 'g', 'axes3d.zaxis.panecolor': 'b'}):
         fig = plt.figure(figsize=(1, 1))
         fig.add_subplot(projection='mollweide')
-# Mutation info: projection = <ast.Constant object at 0x7fc324103610> -> projection = mollweide (Call fig.add_subplot)
+# Mutation info: projection = '3d' -> projection = mollweide (Call fig.add_subplot)

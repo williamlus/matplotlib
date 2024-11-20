@@ -158,4 +158,4 @@ def test_hist_log_18_mutated():
     data = np.concatenate([1 - data0, 1 + data0])
     fig, ax = plt.subplots()
     ax.hist(data, fill=False, log=False)
-# Mutation info: log = <ast.Constant object at 0x7fc3241c79d0> -> log = False (Call ax.hist)
+# Mutation info: log = True -> log = False (Call ax.hist)

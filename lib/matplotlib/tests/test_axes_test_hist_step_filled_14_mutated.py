@@ -166,4 +166,4 @@ def test_hist_step_filled_14_mutated():
         ax.set_ylim(bottom=-50)
     patches = axs[0, 0].patches
     assert all((p.get_facecolor() == p.get_edgecolor() for p in patches))
-# Mutation info: histtype = <ast.Constant object at 0x7fc334d9f250> -> histtype = step (Call ax.hist)
+# Mutation info: histtype = _type -> histtype = step (Call ax.hist)

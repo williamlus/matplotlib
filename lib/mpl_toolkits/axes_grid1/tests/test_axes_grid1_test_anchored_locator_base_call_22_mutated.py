@@ -32,4 +32,4 @@ def test_anchored_locator_base_call_22_mutated():
     axins = zoomed_inset_axes(ax, zoom=2, loc='upper left')
     axins.set(xticks=[], yticks=[])
     axins.imshow(Z, extent=extent, origin='lower')
-# Mutation info: origin = <ast.Constant object at 0x7fc31ffd3290> -> origin = lower (Call axins.imshow)
+# Mutation info: origin = 'lower' -> origin = lower (Call axins.imshow)

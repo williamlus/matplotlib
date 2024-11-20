@@ -20,4 +20,4 @@ def test_diff_cell_table_15_mutated():
         ax.table(colWidths=colWidths, cellText=cellText, loc='center', edges='horizontal')
         ax.axis('off')
     plt.tight_layout()
-# Mutation info: edges = <ast.Constant object at 0x7fc31db25e50> -> edges = horizontal (Call ax.table)
+# Mutation info: edges = cell -> edges = horizontal (Call ax.table)

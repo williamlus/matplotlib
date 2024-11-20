@@ -93,4 +93,4 @@ def test_colorbar_extend_drawedges_40_mutated():
                 ax.set_ylim(1.1, 2.9)
                 res = np.array(res)[:, :, [1, 0]]
             np.testing.assert_array_equal(cbar.dividers.get_segments(), res)
-# Mutation info: drawedges = <ast.Constant object at 0x7fc31dbd6090> -> drawedges = False (Call Colorbar)
+# Mutation info: drawedges = True -> drawedges = False (Call Colorbar)

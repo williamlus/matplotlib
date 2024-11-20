@@ -35,4 +35,4 @@ def test_constrained_layout1_5_mutated():
     fig = plt.figure(layout='tight')
     ax = fig.add_subplot()
     example_plot(ax, fontsize=24)
-# Mutation info: layout = <ast.Constant object at 0x7fc324174690> -> layout = tight (Call plt.figure)
+# Mutation info: layout = 'constrained' -> layout = tight (Call plt.figure)

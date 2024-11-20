@@ -162,4 +162,4 @@ def test_pie_nolabel_but_legend_4_mutated():
     plt.axis('equal')
     plt.ylim(-1.2, 1.2)
     plt.legend()
-# Mutation info: shadow = <ast.Constant object at 0x7fc32b9db1d0> -> shadow = False (Call plt.pie)
+# Mutation info: shadow = True -> shadow = False (Call plt.pie)

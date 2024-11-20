@@ -37,4 +37,4 @@ def test_imagegrid_cbar_mode_edge_43_mutated():
         for ax in grid:
             ax.cax.cla()
             cb = ax.cax.colorbar(ax.images[0])
-# Mutation info: direction = <ast.Constant object at 0x7fc31efb76d0> -> direction = column (Call ImageGrid)
+# Mutation info: direction = direction -> direction = column (Call ImageGrid)

@@ -159,4 +159,4 @@ def test_loglog_17_mutated():
     ax.loglog(x, x ** 3, lw=5)
     ax.tick_params(length=25, width=2)
     ax.tick_params(length=15, width=2, which='minor')
-# Mutation info: which = <ast.Constant object at 0x7fc3240db050> -> which = minor (Call ax.tick_params)
+# Mutation info: which = 'minor' -> which = minor (Call ax.tick_params)

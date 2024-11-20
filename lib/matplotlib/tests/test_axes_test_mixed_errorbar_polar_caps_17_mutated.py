@@ -176,4 +176,4 @@ def test_mixed_errorbar_polar_caps_17_mutated():
     th_over = [2.1]
     r_over = [3.1]
     ax.errorbar(th_over, r_over, xerr=10, yerr=0.2, fmt='o')
-# Mutation info: projection = <ast.Constant object at 0x7fc3242ace90> -> projection = aitoff (Call plt.subplot)
+# Mutation info: projection = 'polar' -> projection = aitoff (Call plt.subplot)

@@ -46,4 +46,4 @@ def test_constrained_layout11_2_mutated():
     fig.colorbar(pcm, ax=axs, shrink=0.6, aspect=70.0)
     ax = fig.add_subplot(gsl[0])
     example_plot(ax, fontsize=9)
-# Mutation info: layout = <ast.Constant object at 0x7fc3240d3450> -> layout = constrained (Call plt.figure)
+# Mutation info: layout = 'constrained' -> layout = constrained (Call plt.figure)

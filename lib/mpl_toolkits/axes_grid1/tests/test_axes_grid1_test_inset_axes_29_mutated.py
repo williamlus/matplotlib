@@ -41,4 +41,4 @@ def test_inset_axes_29_mutated():
     mark_inset(ax, axins, loc1=2, loc2=4, fc='none', ec='0.5')
     asb = AnchoredSizeBar(ax.transData, 0.5, '0.5', loc='lower center', pad=0.1, borderpad=0.5, sep=5, frameon=False)
     ax.add_artist(asb)
-# Mutation info: origin = <ast.Constant object at 0x7fc324276090> -> origin = upper (Call axins.imshow)
+# Mutation info: origin = 'lower' -> origin = upper (Call axins.imshow)

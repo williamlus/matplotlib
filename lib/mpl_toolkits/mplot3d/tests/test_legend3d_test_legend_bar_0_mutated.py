@@ -13,4 +13,4 @@ def test_legend_bar_0_mutated():
     b1 = ax.bar(x, x, zdir='y', align='edge', color='m')
     b2 = ax.bar(x, x[::-1], zdir='x', align='edge', color='g')
     ax.legend([b1[0], b2[0]], ['up', 'down'])
-# Mutation info: zdir = <ast.Constant object at 0x7fc32415b8d0> -> zdir = y (Call ax.bar)
+# Mutation info: zdir = 'y' -> zdir = y (Call ax.bar)

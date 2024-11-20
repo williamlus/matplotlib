@@ -87,4 +87,4 @@ def test_upsampling_35_mutated():
     axs[2].imshow(a, cmap='viridis', interpolation='sinc', interpolation_stage='rgba')
     axs[2].set_title("interpolation='sinc'\nstage='rgba'")
     fig.colorbar(im, ax=axs, shrink=0.7, extend='both')
-# Mutation info: interpolation_stage = <ast.Constant object at 0x7fc31ff62490> -> interpolation_stage = rgba (Call axs[2].imshow)
+# Mutation info: interpolation_stage = 'rgba' -> interpolation_stage = rgba (Call axs[2].imshow)

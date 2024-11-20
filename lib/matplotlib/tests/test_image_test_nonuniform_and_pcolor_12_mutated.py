@@ -86,4 +86,4 @@ def test_nonuniform_and_pcolor_12_mutated():
     for ax in axs:
         ax.set_axis_off()
         ax.set(xlim=(0, 10))
-# Mutation info: interpolation = <ast.Constant object at 0x7fc31db9e010> -> interpolation = nearest (Call NonUniformImage)
+# Mutation info: interpolation = interpolation -> interpolation = nearest (Call NonUniformImage)

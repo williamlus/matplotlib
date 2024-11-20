@@ -160,4 +160,4 @@ def test_hist_stacked_weighted_12_mutated():
     w2 = np.linspace(0.05, 2.0, 20)
     fig, ax = plt.subplots()
     ax.hist((d1, d2), weights=(w1, w2), histtype='barstacked', stacked=True)
-# Mutation info: histtype = <ast.Constant object at 0x7fc31fe25610> -> histtype = barstacked (Call ax.hist)
+# Mutation info: histtype = 'stepfilled' -> histtype = barstacked (Call ax.hist)

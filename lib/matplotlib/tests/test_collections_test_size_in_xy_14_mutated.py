@@ -70,4 +70,4 @@ def test_size_in_xy_14_mutated():
     ax.add_collection(e)
     ax.set_xlim(0, 30)
     ax.set_ylim(0, 30)
-# Mutation info: units = <ast.Constant object at 0x7fc3241180d0> -> units = height (Call mcollections.EllipseCollection)
+# Mutation info: units = 'xy' -> units = height (Call mcollections.EllipseCollection)

@@ -25,4 +25,4 @@ def test_offsetbox_clipping_17_mutated():
     ax.add_artist(anchored_box)
     ax.set_xlim((0, 1))
     ax.set_ylim((0, 1))
-# Mutation info: clip = <ast.Constant object at 0x7fc324144cd0> -> clip = False (Call DrawingArea)
+# Mutation info: clip = True -> clip = False (Call DrawingArea)

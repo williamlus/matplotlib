@@ -20,4 +20,4 @@ def test_barbs_pivot_17_mutated():
     fig, ax = plt.subplots()
     ax.barbs(X, Y, U, V, fill_empty=True, rounding=True, pivot=1.7, sizes=dict(emptybarb=0.25, spacing=0.2, height=0.3))
     ax.scatter(X, Y, s=49, c='black')
-# Mutation info: rounding = <ast.Constant object at 0x7fc324301cd0> -> rounding = True (Call ax.barbs)
+# Mutation info: rounding = False -> rounding = True (Call ax.barbs)

@@ -15,8 +15,8 @@ def draw_quiver(ax, **kwargs):
 @image_comparison(['quiver_xy.png'], remove_text=True)
 def test_quiver_xy_22_mutated():
     fig, ax = plt.subplots(subplot_kw=dict(aspect='equal'))
-    ax.quiver(0, 0, 1, 1, angles='xy', scale_units='xy', scale=1, pivot='mid')
+    ax.quiver(0, 0, 1, 1, angles='xy', scale_units='x', scale=1)
     ax.set_xlim(0, 1.1)
     ax.set_ylim(0, 1.1)
     ax.grid()
-# Mutation info: Added pivot = mid (Call ax.quiver)
+# Mutation info: scale_units = 'xy' -> scale_units = x (Call ax.quiver)

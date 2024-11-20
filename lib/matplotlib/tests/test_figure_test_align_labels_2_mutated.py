@@ -53,4 +53,4 @@ def test_align_labels_2_mutated():
             for tick in ax.get_xticklabels():
                 tick.set_rotation(90)
     fig.align_labels()
-# Mutation info: layout = <ast.Constant object at 0x7fc32406d550> -> layout = tight (Call plt.figure)
+# Mutation info: layout = 'tight' -> layout = tight (Call plt.figure)

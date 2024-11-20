@@ -59,4 +59,4 @@ def test_minor_ticks_20_mutated():
     ax.set_yticklabels(['third'], minor=True)
     ax.set_zticks([0.5], minor=True)
     ax.set_zticklabels(['half'], minor=True)
-# Mutation info: minor = <ast.Constant object at 0x7fc31fe431d0> -> minor = True (Call ax.set_zticklabels)
+# Mutation info: minor = True -> minor = True (Call ax.set_zticklabels)

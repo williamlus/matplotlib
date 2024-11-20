@@ -55,4 +55,4 @@ def test_panecolor_rcparams_16_mutated():
     with plt.rc_context({'axes3d.xaxis.panecolor': 'r', 'axes3d.yaxis.panecolor': 'g', 'axes3d.zaxis.panecolor': 'b'}):
         fig = plt.figure(figsize=(1, 1))
         fig.add_subplot(projection='hammer')
-# Mutation info: projection = <ast.Constant object at 0x7fc31f29c1d0> -> projection = hammer (Call fig.add_subplot)
+# Mutation info: projection = '3d' -> projection = hammer (Call fig.add_subplot)

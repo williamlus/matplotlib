@@ -13,4 +13,4 @@ def test_legend_plot_3_mutated():
     ax.plot(x, 5 - x, 'o', zdir='y', label='z=1')
     ax.plot(x, x - 5, 'o', zdir='y', label='z=-1')
     ax.legend()
-# Mutation info: zdir = <ast.Constant object at 0x7fc31fe6b1d0> -> zdir = y (Call ax.plot)
+# Mutation info: zdir = 'y' -> zdir = y (Call ax.plot)

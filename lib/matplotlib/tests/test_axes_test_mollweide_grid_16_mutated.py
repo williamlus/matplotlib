@@ -157,4 +157,4 @@ def test_mollweide_grid_16_mutated():
     fig = plt.figure()
     ax = fig.add_subplot(projection='rectilinear')
     ax.grid()
-# Mutation info: projection = <ast.Constant object at 0x7fc324260f10> -> projection = rectilinear (Call fig.add_subplot)
+# Mutation info: projection = 'mollweide' -> projection = rectilinear (Call fig.add_subplot)

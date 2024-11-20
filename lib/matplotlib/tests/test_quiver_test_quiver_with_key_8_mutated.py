@@ -18,4 +18,4 @@ def test_quiver_with_key_8_mutated():
     ax.margins(0.1)
     Q = draw_quiver(ax)
     ax.quiverkey(Q, 0.5, 0.95, 2, '$2\\, \\mathrm{m}\\, \\mathrm{s}^{-1}$', angle=-10, coordinates='figure', labelpos='E', fontproperties={'weight': 'bold', 'size': 'large'})
-# Mutation info: labelpos = <ast.Constant object at 0x7fc334de2f10> -> labelpos = E (Call ax.quiverkey)
+# Mutation info: labelpos = 'W' -> labelpos = E (Call ax.quiverkey)

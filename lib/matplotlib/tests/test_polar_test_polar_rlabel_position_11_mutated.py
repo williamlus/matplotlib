@@ -11,4 +11,4 @@ def test_polar_rlabel_position_11_mutated():
     ax = fig.add_subplot(projection='mollweide')
     ax.set_rlabel_position(315)
     ax.tick_params(rotation='auto')
-# Mutation info: projection = <ast.Constant object at 0x7fc32b8a2290> -> projection = mollweide (Call fig.add_subplot)
+# Mutation info: projection = 'polar' -> projection = mollweide (Call fig.add_subplot)

@@ -92,4 +92,4 @@ def test_mask_image_over_under_14_mutated():
     im = ax2.imshow(Zm, interpolation='nearest', cmap=palette, norm=colors.BoundaryNorm([-1, -0.5, -0.2, 0, 0.2, 0.5, 1], ncolors=256, clip=False), origin='lower', extent=[-3, 3, -3, 3])
     ax2.set_title('With BoundaryNorm')
     fig.colorbar(im, extend='both', spacing='proportional', orientation='horizontal', ax=ax2, aspect=10)
-# Mutation info: origin = <ast.Constant object at 0x7fc31fd0b290> -> origin = upper (Call ax1.imshow)
+# Mutation info: origin = 'lower' -> origin = upper (Call ax1.imshow)

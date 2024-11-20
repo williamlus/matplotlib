@@ -164,4 +164,4 @@ def test_fill_between_interpolate_decreasing_15_mutated():
     ax.fill_betweenx(p, t, prof, where=prof > t, facecolor='red', interpolate=True, alpha=0.4)
     ax.set_xlim(0, 30)
     ax.set_ylim(800, 600)
-# Mutation info: where = <ast.Constant object at 0x7fc32b83c110> -> where = True (Call ax.fill_betweenx)
+# Mutation info: where = prof < t -> where = True (Call ax.fill_betweenx)

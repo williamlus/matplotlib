@@ -162,4 +162,4 @@ def test_fill_between_interpolate_nan_19_mutated():
     ax.plot(x, y2, c='b')
     ax.fill_between(x, y1, y2, where=y2 >= y1, facecolor='green', interpolate=True, alpha=0.5)
     ax.fill_between(x, y1, y2, where=y1 >= y2, facecolor='red', interpolate=False, alpha=0.5)
-# Mutation info: interpolate = <ast.Constant object at 0x7fc3241c5250> -> interpolate = False (Call ax.fill_between)
+# Mutation info: interpolate = True -> interpolate = False (Call ax.fill_between)

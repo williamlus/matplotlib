@@ -16,4 +16,4 @@ def test_pngsuite_0_mutated():
         plt.imshow(data, extent=(i, i + 1, 0, 1), cmap=cmap, interpolation_stage='data')
     plt.gca().patch.set_facecolor('#ddffff')
     plt.gca().set_xlim(0, len(files))
-# Mutation info: interpolation_stage = <ast.Constant object at 0x7fc324bfb1d0> -> interpolation_stage = data (Call plt.imshow)
+# Mutation info: interpolation_stage = 'data' -> interpolation_stage = data (Call plt.imshow)

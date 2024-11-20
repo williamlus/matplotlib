@@ -37,4 +37,4 @@ def test_polar_box_38_mutated():
     ax1.set_xlim(-5, 12)
     ax1.set_ylim(-5, 10)
     ax1.grid(True)
-# Mutation info: viewlim_mode = <ast.Constant object at 0x7fc324152310> -> viewlim_mode = transform (Call ax1.get_aux_axes)
+# Mutation info: viewlim_mode = 'equal' -> viewlim_mode = transform (Call ax1.get_aux_axes)

@@ -87,4 +87,4 @@ def test_downsampling_speckle_0_mutated():
     axs[0].imshow(np.triu(img), cmap=cm, norm=norm, interpolation_stage='rgba')
     axs[1].set_title("interpolation='auto', stage='auto'")
     axs[1].imshow(np.triu(img), cmap=cm, norm=norm)
-# Mutation info: sharex = <ast.Constant object at 0x7fc32409e790> -> sharex = True (Call plt.subplots)
+# Mutation info: sharex = True -> sharex = True (Call plt.subplots)

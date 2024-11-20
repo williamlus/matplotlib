@@ -180,4 +180,4 @@ def test_errorbar_limits_40_mutated():
     ax.errorbar(x, y + 2.1, marker='o', ms=8, xerr=xerr, yerr=yerr, xlolims=xlolims, xuplims=xuplims, uplims=uplims, lolims=lolims, ls='none', mec='blue', capsize=0, color='cyan')
     ax.set_xlim((0, 5.5))
     ax.set_title('Errorbar upper and lower limits')
-# Mutation info: lolims = <ast.Constant object at 0x7fc31dbd83d0> -> lolims = True (Call ax.errorbar)
+# Mutation info: lolims = lolims -> lolims = True (Call ax.errorbar)

@@ -158,4 +158,4 @@ def test_boxplot_custom_capwidths_10_mutated():
     x = np.hstack([-25, x, 25])
     fig, ax = plt.subplots()
     ax.boxplot([x, x], notch=False, capwidths=[0.01, 0.2])
-# Mutation info: notch = <ast.Constant object at 0x7fc3242b4e90> -> notch = False (Call ax.boxplot)
+# Mutation info: notch = 1 -> notch = False (Call ax.boxplot)

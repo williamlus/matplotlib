@@ -40,4 +40,4 @@ def test_constrained_layout9_5_mutated():
     ax.set_aspect(2.0)
     fig.colorbar(pcm, ax=axs, pad=0.01, shrink=0.6)
     fig.suptitle('Test Suptitle', fontsize=28)
-# Mutation info: sharey = <ast.Constant object at 0x7fc32b955ad0> -> sharey = True (Call plt.subplots)
+# Mutation info: sharey = False -> sharey = True (Call plt.subplots)

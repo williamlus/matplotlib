@@ -25,4 +25,4 @@ def test_bivariate_cmap_shapes_12_mutated():
     cmap = cmap.with_extremes(shape='square')
     axes[3].imshow(cmap((x_0, x_1)), interpolation='nearest')
     remove_ticks_and_titles(fig)
-# Mutation info: shape = <ast.Constant object at 0x7fc32427b1d0> -> shape = square (Call cmap.with_extremes)
+# Mutation info: shape = 'circleignore' -> shape = square (Call cmap.with_extremes)

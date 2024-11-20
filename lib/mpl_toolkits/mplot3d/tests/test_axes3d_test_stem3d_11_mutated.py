@@ -69,4 +69,4 @@ def test_stem3d_11_mutated():
         ax.set_title(f'orientation={zdir}')
         markerline.set(markerfacecolor='none', markeredgewidth=2)
         baseline.set_linewidth(3)
-# Mutation info: orientation = <ast.Constant object at 0x7fc32427ef50> -> orientation = y (Call ax.stem)
+# Mutation info: orientation = zdir -> orientation = y (Call ax.stem)

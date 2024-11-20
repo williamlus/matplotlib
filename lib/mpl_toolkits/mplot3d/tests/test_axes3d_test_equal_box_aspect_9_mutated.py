@@ -74,4 +74,4 @@ def test_equal_box_aspect_9_mutated():
     ax.set_box_aspect((1, 1, 1))
     with pytest.raises(ValueError, match='Argument zoom ='):
         ax.set_box_aspect((1, 1, 1), zoom=-1)
-# Mutation info: projection = <ast.Constant object at 0x7fc31ed2add0> -> projection = lambert (Call fig.add_subplot)
+# Mutation info: projection = '3d' -> projection = lambert (Call fig.add_subplot)

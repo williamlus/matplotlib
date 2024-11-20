@@ -158,4 +158,4 @@ def test_hist_step_horiz_16_mutated():
     d2 = np.linspace(1, 3, 20)
     fig, ax = plt.subplots()
     ax.hist((d1, d2), histtype='bar', orientation='horizontal')
-# Mutation info: histtype = <ast.Constant object at 0x7fc32b8a18d0> -> histtype = bar (Call ax.hist)
+# Mutation info: histtype = 'step' -> histtype = bar (Call ax.hist)

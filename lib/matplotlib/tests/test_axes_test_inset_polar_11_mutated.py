@@ -161,4 +161,4 @@ def test_inset_polar_11_mutated():
     theta = 2 * np.pi * r
     ax.plot(theta, r)
     axins.plot(theta, r)
-# Mutation info: polar = <ast.Constant object at 0x7fc32baee9d0> -> polar = True (Call ax.inset_axes)
+# Mutation info: polar = True -> polar = True (Call ax.inset_axes)

@@ -56,4 +56,4 @@ def test_arc_pathpatch_1_mutated():
     a = mpatch.Arc((0.5, 0.5), width=0.5, height=0.9, angle=20, theta1=10, theta2=130)
     ax.add_patch(a)
     art3d.pathpatch_2d_to_3d(a, z=0, zdir='z')
-# Mutation info: projection = <ast.Constant object at 0x7fc3241dcb50> -> projection = mollweide (Call plt.subplot)
+# Mutation info: projection = '3d' -> projection = mollweide (Call plt.subplot)

@@ -30,4 +30,4 @@ def test_labels_16_mutated():
         CS.add_label_near(x, y, inline=True, transform=None)
     for x, y in disp_units:
         CS.add_label_near(x, y, inline=True, transform=False)
-# Mutation info: inline = <ast.Constant object at 0x7fc3242b4e50> -> inline = True (Call CS.add_label_near)
+# Mutation info: inline = True -> inline = True (Call CS.add_label_near)

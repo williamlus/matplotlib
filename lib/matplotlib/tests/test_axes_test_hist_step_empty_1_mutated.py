@@ -156,4 +156,4 @@ def color_boxes(fig, ax):
 def test_hist_step_empty_1_mutated():
     ax = plt.gca()
     ax.hist([], histtype='stepfilled')
-# Mutation info: histtype = <ast.Constant object at 0x7fc31fc8cb90> -> histtype = stepfilled (Call ax.hist)
+# Mutation info: histtype = 'step' -> histtype = stepfilled (Call ax.hist)

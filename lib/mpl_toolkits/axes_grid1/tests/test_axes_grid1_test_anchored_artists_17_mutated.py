@@ -38,4 +38,4 @@ def test_anchored_artists_17_mutated():
     ax.add_artist(ae)
     asb = AnchoredSizeBar(ax.transData, 0.2, '0.2 units', loc='lower right', pad=0.3, borderpad=0.4, sep=4, fill_bar=True, frameon=False, label_top=True, prop={'size': 20}, size_vertical=0.05, color='green')
     ax.add_artist(asb)
-# Mutation info: frameon = <ast.Constant object at 0x7fc3241631d0> -> frameon = False (Call AnchoredEllipse)
+# Mutation info: frameon = True -> frameon = False (Call AnchoredEllipse)

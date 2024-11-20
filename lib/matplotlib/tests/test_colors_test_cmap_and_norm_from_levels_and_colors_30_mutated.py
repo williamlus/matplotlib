@@ -67,4 +67,4 @@ def test_cmap_and_norm_from_levels_and_colors_30_mutated():
     m = plt.pcolormesh(data, cmap=cmap, norm=norm)
     plt.colorbar(m)
     ax.tick_params(labelleft=False, labelbottom=False)
-# Mutation info: extend = <ast.Constant object at 0x7fc31ff8f810> -> extend = both (Call mcolors.from_levels_and_colors)
+# Mutation info: extend = extend -> extend = both (Call mcolors.from_levels_and_colors)

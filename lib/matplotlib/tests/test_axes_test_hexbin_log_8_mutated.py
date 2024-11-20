@@ -164,4 +164,4 @@ def test_hexbin_log_8_mutated():
     h = ax.hexbin(x, y, yscale='linear', bins='log', marginals=True, reduce_C_function=np.sum)
     plt.colorbar(h)
     assert h.get_offsets().shape == (11558, 2)
-# Mutation info: yscale = <ast.Constant object at 0x7fc32412b190> -> yscale = linear (Call ax.hexbin)
+# Mutation info: yscale = 'log' -> yscale = linear (Call ax.hexbin)

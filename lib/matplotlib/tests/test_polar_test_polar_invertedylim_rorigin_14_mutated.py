@@ -13,4 +13,4 @@ def test_polar_invertedylim_rorigin_14_mutated():
     ax.plot([0, 0], [0, 2], c='none')
     ax.margins(0)
     ax.set_rorigin(3)
-# Mutation info: polar = <ast.Constant object at 0x7fc31feb8110> -> polar = True (Call fig.add_axes)
+# Mutation info: polar = True -> polar = True (Call fig.add_axes)

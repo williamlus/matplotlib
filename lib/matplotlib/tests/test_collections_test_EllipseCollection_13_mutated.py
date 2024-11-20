@@ -73,4 +73,4 @@ def test_EllipseCollection_13_mutated():
     ec = mcollections.EllipseCollection(ww, hh, aa, units='width', offsets=XY, offset_transform=ax.transData, facecolors='none')
     ax.add_collection(ec)
     ax.autoscale_view()
-# Mutation info: units = <ast.Constant object at 0x7fc324bac190> -> units = width (Call mcollections.EllipseCollection)
+# Mutation info: units = 'x' -> units = width (Call mcollections.EllipseCollection)

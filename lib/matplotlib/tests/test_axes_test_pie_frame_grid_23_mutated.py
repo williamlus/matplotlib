@@ -162,4 +162,4 @@ def test_pie_frame_grid_23_mutated():
     plt.pie(sizes[::-1], explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, frame=True, center=(5, 2))
     plt.pie(sizes, explode=explode[::-1], labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, frame=True, center=(3, 5))
     plt.axis('equal')
-# Mutation info: shadow = <ast.Constant object at 0x7fc324117b90> -> shadow = True (Call plt.pie)
+# Mutation info: shadow = True -> shadow = True (Call plt.pie)

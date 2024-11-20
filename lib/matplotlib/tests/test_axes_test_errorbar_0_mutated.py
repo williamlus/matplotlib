@@ -186,4 +186,4 @@ def test_errorbar_0_mutated():
     ax = fig.gca()
     ax.errorbar('x', 'y', xerr=0.2, yerr=0.4, data=data)
     ax.set_title('Simplest errorbars, 0.2 in x, 0.4 in y')
-# Mutation info: sharex = <ast.Constant object at 0x7fc32ba04d10> -> sharex = True (Call plt.subplots)
+# Mutation info: sharex = True -> sharex = True (Call plt.subplots)

@@ -73,4 +73,4 @@ def test_EllipseCollection_19_mutated():
     ec = mcollections.EllipseCollection(ww, hh, aa, units='xy', offsets=XY, offset_transform=ax.transData, facecolors='none')
     ax.add_collection(ec)
     ax.autoscale_view()
-# Mutation info: units = <ast.Constant object at 0x7fc324bed850> -> units = xy (Call mcollections.EllipseCollection)
+# Mutation info: units = 'x' -> units = xy (Call mcollections.EllipseCollection)

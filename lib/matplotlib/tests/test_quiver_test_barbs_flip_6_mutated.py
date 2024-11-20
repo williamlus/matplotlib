@@ -20,4 +20,4 @@ def test_barbs_flip_6_mutated():
     U, V = (12 * X, 12 * Y)
     fig, ax = plt.subplots()
     ax.barbs(X, Y, U, V, fill_empty=True, rounding=True, pivot=1.7, sizes=dict(emptybarb=0.25, spacing=0.2, height=0.3), flip_barb=Y < 0)
-# Mutation info: rounding = <ast.Constant object at 0x7fc31db4d110> -> rounding = True (Call ax.barbs)
+# Mutation info: rounding = False -> rounding = True (Call ax.barbs)

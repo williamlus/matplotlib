@@ -63,4 +63,4 @@ def test_custom_transform_32_mutated():
     ax1.set_xlim(0, 10)
     ax1.set_ylim(0, 10)
     ax1.grid(True)
-# Mutation info: viewlim_mode = <ast.Constant object at 0x7fc32b9da190> -> viewlim_mode = equal (Call ax1.get_aux_axes)
+# Mutation info: viewlim_mode = 'equal' -> viewlim_mode = equal (Call ax1.get_aux_axes)

@@ -93,4 +93,4 @@ def test_colorbar_extend_drawedges_50_mutated():
                 ax.set_ylim(1.1, 2.9)
                 res = np.array(res)[:, :, [1, 0]]
             np.testing.assert_array_equal(cbar.dividers.get_segments(), res)
-# Mutation info: extend = <ast.Constant object at 0x7fc31ffdfcd0> -> extend = min (Call mcolors.from_levels_and_colors)
+# Mutation info: extend = extend -> extend = min (Call mcolors.from_levels_and_colors)

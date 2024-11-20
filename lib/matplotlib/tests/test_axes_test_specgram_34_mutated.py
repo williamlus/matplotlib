@@ -173,4 +173,4 @@ def test_specgram_34_mutated():
             ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides)
         for ax, sides in zip(plt.figure().subplots(3), all_sides):
             ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides='default', scale='linear', norm=matplotlib.colors.LogNorm())
-# Mutation info: sides = <ast.Constant object at 0x7fc32413d050> -> sides = default (Call ax.specgram)
+# Mutation info: sides = sides -> sides = default (Call ax.specgram)

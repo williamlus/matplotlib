@@ -168,4 +168,4 @@ def test_mixed_collection_15_mutated():
     ax.add_collection(p2)
     ax.set_xlim(0, 16)
     ax.set_ylim(0, 16)
-# Mutation info: match_original = <ast.Constant object at 0x7fc31db4b1d0> -> match_original = True (Call mpl.collections.PatchCollection)
+# Mutation info: match_original = True -> match_original = True (Call mpl.collections.PatchCollection)

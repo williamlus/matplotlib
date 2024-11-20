@@ -158,4 +158,4 @@ def test_hist_stacked_step_19_mutated():
     d2 = np.linspace(0, 10, 50)
     fig, ax = plt.subplots()
     ax.hist((d1, d2), histtype='step', stacked=False)
-# Mutation info: stacked = <ast.Constant object at 0x7fc31dcb0e10> -> stacked = False (Call ax.hist)
+# Mutation info: stacked = True -> stacked = False (Call ax.hist)

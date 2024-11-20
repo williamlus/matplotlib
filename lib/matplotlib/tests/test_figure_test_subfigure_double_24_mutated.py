@@ -49,4 +49,4 @@ def test_subfigure_double_24_mutated():
     subfigsnest[1].supxlabel('supxlabel')
     subfigsnest[1].supylabel('supylabel')
     axsRight = subfigs[1].subplots(2, 2)
-# Mutation info: layout = <ast.Constant object at 0x7fc32433f010> -> layout = none (Call plt.figure)
+# Mutation info: layout = 'constrained' -> layout = none (Call plt.figure)

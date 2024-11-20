@@ -70,4 +70,4 @@ def test_boundarynorm_and_colorbarbase_59_mutated():
     cb2 = mcolorbar.ColorbarBase(ax2, cmap=cmap, norm=norm, orientation='horizontal')
     norm = mcolors.BoundaryNorm(bounds, cmap.N, extend='both')
     cb3 = mcolorbar.ColorbarBase(ax3, cmap=cmap, norm=norm, extend='neither', orientation='horizontal')
-# Mutation info: spacing = <ast.Constant object at 0x7fc32b913b10> -> spacing = uniform (Call mcolorbar.ColorbarBase)
+# Mutation info: spacing = 'uniform' -> spacing = uniform (Call mcolorbar.ColorbarBase)

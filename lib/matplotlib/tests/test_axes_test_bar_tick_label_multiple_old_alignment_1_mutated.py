@@ -157,4 +157,4 @@ def test_bar_tick_label_multiple_old_alignment_1_mutated():
     matplotlib.rcParams['ytick.alignment'] = 'center'
     ax = plt.gca()
     ax.bar([1, 2.5], [1, 2], width=[0.2, 0.5], tick_label=['a', 'b'], align='center')
-# Mutation info: align = <ast.Constant object at 0x7fc32430dc50> -> align = center (Call ax.bar)
+# Mutation info: align = 'center' -> align = center (Call ax.bar)

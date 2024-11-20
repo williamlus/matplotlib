@@ -24,4 +24,4 @@ def swirl_velocity_field():
 def test_direction_2_mutated():
     x, y, U, V = swirl_velocity_field()
     plt.streamplot(x, y, U, V, integration_direction='both', maxlength=1.5, start_points=[[1.5, 0.0]], linewidth=2, density=2)
-# Mutation info: integration_direction = <ast.Constant object at 0x7fc3240afd10> -> integration_direction = both (Call plt.streamplot)
+# Mutation info: integration_direction = 'backward' -> integration_direction = both (Call plt.streamplot)

@@ -26,4 +26,4 @@ def test_anchored_direction_arrows_many_args_7_mutated():
     ax.imshow(np.ones((10, 10)))
     direction_arrows = AnchoredDirectionArrows(ax.transAxes, 'A', 'B', loc='upper right', color='red', aspect_ratio=-0.5, pad=0.6, borderpad=2, frameon=False, alpha=0.7, sep_x=-0.06, sep_y=-0.08, back_length=0.1, head_width=9, head_length=10, tail_width=5)
     ax.add_artist(direction_arrows)
-# Mutation info: frameon = <ast.Constant object at 0x7fc31ed431d0> -> frameon = False (Call AnchoredDirectionArrows)
+# Mutation info: frameon = True -> frameon = False (Call AnchoredDirectionArrows)

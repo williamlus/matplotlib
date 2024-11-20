@@ -166,4 +166,4 @@ def test_fill_between_interpolate_7_mutated():
     ax2.plot(x, y1, x, y2, color='black')
     ax2.fill_between(x, y1, y2, where=y2 >= y1, facecolor='green', interpolate=True)
     ax2.fill_between(x, y1, y2, where=y2 <= y1, facecolor='red', interpolate=True)
-# Mutation info: where = <ast.Constant object at 0x7fc31db242d0> -> where = False (Call ax1.fill_between)
+# Mutation info: where = y2 >= y1 -> where = False (Call ax1.fill_between)

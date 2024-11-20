@@ -106,4 +106,4 @@ def test_rgba_antialias_5_mutated():
     axs[1].imshow(aa, interpolation='nearest', cmap=cmap, vmin=-1.2, vmax=1.2)
     axs[2].imshow(aa, interpolation='auto', interpolation_stage='data', cmap=cmap, vmin=-1.2, vmax=1.2)
     axs[3].imshow(aa, interpolation='auto', interpolation_stage='rgba', cmap=cmap, vmin=-1.2, vmax=1.2)
-# Mutation info: sharey = <ast.Constant object at 0x7fc32428a810> -> sharey = True (Call plt.subplots)
+# Mutation info: sharey = False -> sharey = True (Call plt.subplots)

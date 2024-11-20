@@ -169,4 +169,4 @@ def test_pcolormesh_8_mutated():
     ax1.pcolormesh(Qx, Qz, Zm[:-1, :-1], lw=0.5, edgecolors='face')
     ax2.pcolormesh(Qx, Qz, Zm[:-1, :-1], lw=2, edgecolors=['b', 'w'])
     ax3.pcolormesh(Qx, Qz, Zm, shading='gouraud')
-# Mutation info: edgecolors = <ast.Constant object at 0x7fc3240547d0> -> edgecolors = face (Call ax1.pcolormesh)
+# Mutation info: edgecolors = 'k' -> edgecolors = face (Call ax1.pcolormesh)

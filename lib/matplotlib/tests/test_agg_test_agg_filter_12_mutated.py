@@ -102,4 +102,4 @@ def test_agg_filter_12_mutated():
     ax.set_ylim(0.0, 1.0)
     ax.xaxis.set_visible(False)
     ax.yaxis.set_visible(False)
-# Mutation info: units = <ast.Constant object at 0x7fc3240ab190> -> units = inches (Call mtransforms.offset_copy)
+# Mutation info: units = 'points' -> units = inches (Call mtransforms.offset_copy)

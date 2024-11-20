@@ -71,4 +71,4 @@ def test_light_source_topo_surface_19_mutated():
             rgb = ls.shade(elev, cmap, vert_exag=ve, dx=dx, dy=dy, blend_mode='overlay')
             ax.imshow(rgb)
             ax.set(xticks=[], yticks=[])
-# Mutation info: blend_mode = <ast.Constant object at 0x7fc31ffbc550> -> blend_mode = overlay (Call ls.shade)
+# Mutation info: blend_mode = mode -> blend_mode = overlay (Call ls.shade)

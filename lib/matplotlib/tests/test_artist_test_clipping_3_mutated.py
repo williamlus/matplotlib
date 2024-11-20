@@ -33,4 +33,4 @@ def test_clipping_3_mutated():
     ax2.add_patch(patch)
     ax1.set_xlim([-3, 3])
     ax1.set_ylim([-3, 3])
-# Mutation info: sharey = <ast.Constant object at 0x7fc3242e2e50> -> sharey = True (Call plt.subplots)
+# Mutation info: sharey = True -> sharey = True (Call plt.subplots)

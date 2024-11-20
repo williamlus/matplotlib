@@ -163,4 +163,4 @@ def test_boxplot_autorange_whiskers_33_mutated():
     fig2, ax2 = plt.subplots()
     ax2.boxplot([x, x], bootstrap=10000, notch=1, autorange=True)
     ax2.set_ylim((-5, 5))
-# Mutation info: notch = <ast.Constant object at 0x7fc31ffa5110> -> notch = False (Call ax1.boxplot)
+# Mutation info: notch = 1 -> notch = False (Call ax1.boxplot)

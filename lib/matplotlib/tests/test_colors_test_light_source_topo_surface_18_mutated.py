@@ -71,4 +71,4 @@ def test_light_source_topo_surface_18_mutated():
             rgb = ls.shade(elev, cmap, vert_exag=ve, dx=dx, dy=dy, blend_mode='soft')
             ax.imshow(rgb)
             ax.set(xticks=[], yticks=[])
-# Mutation info: blend_mode = <ast.Constant object at 0x7fc31fe7b190> -> blend_mode = soft (Call ls.shade)
+# Mutation info: blend_mode = mode -> blend_mode = soft (Call ls.shade)

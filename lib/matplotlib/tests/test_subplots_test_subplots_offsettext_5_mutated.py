@@ -50,4 +50,4 @@ def test_subplots_offsettext_5_mutated():
     axs[1, 0].plot(x, x)
     axs[0, 1].plot(y, x)
     axs[1, 1].plot(y, x)
-# Mutation info: sharex = <ast.Constant object at 0x7fc32b913190> -> sharex = False (Call plt.subplots)
+# Mutation info: sharex = 'col' -> sharex = False (Call plt.subplots)

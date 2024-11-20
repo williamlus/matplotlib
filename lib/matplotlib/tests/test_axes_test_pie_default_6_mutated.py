@@ -160,4 +160,4 @@ def test_pie_default_6_mutated():
     explode = (0, 0.1, 0, 0)
     fig1, ax1 = plt.subplots(figsize=(8, 6))
     ax1.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=False, startangle=90)
-# Mutation info: shadow = <ast.Constant object at 0x7fc32419ee90> -> shadow = False (Call ax1.pie)
+# Mutation info: shadow = True -> shadow = False (Call ax1.pie)

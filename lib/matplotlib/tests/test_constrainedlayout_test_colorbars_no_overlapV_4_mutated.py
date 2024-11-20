@@ -39,4 +39,4 @@ def test_colorbars_no_overlapV_4_mutated():
         im = ax.imshow([[1, 2], [3, 4]])
         fig.colorbar(im, ax=ax, orientation='vertical')
     fig.suptitle('foo')
-# Mutation info: sharex = <ast.Constant object at 0x7fc3241ddc90> -> sharex = False (Call fig.subplots)
+# Mutation info: sharex = True -> sharex = False (Call fig.subplots)

@@ -91,4 +91,4 @@ def test_set_line_coll_dash_image_20_mutated():
     ax.set_ylim(50, -50)
     ax.grid(True)
     ax.axvline(0, color='b')
-# Mutation info: projection = <ast.Constant object at 0x7fc3242aad10> -> projection = hammer (Call fig.add_subplot)
+# Mutation info: projection = 'skewx' -> projection = hammer (Call fig.add_subplot)

@@ -158,4 +158,4 @@ def test_hist_density_7_mutated():
     data = np.random.standard_normal(2000)
     fig, ax = plt.subplots()
     ax.hist(data, density=True)
-# Mutation info: density = <ast.Constant object at 0x7fc32412d850> -> density = True (Call ax.hist)
+# Mutation info: density = True -> density = True (Call ax.hist)

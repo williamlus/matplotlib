@@ -171,4 +171,4 @@ def test_loglog_nonpos_6_mutated():
                 ax.set_xscale('log', nonpositive=mcx)
             if mcy:
                 ax.set_yscale('log', nonpositive=mcy)
-# Mutation info: nonpositive = <ast.Constant object at 0x7fc31dc3f250> -> nonpositive = mask (Call ax.loglog)
+# Mutation info: nonpositive = mcx -> nonpositive = mask (Call ax.loglog)

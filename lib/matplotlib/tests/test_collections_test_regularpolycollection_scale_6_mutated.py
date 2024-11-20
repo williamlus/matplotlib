@@ -81,4 +81,4 @@ def test_regularpolycollection_scale_6_mutated():
     squares = SquareCollection(sizes=circle_areas, offsets=xy, offset_transform=ax.transData)
     ax.add_collection(squares, autolim=True)
     ax.axis([-1, 1, -1, 1])
-# Mutation info: root = <ast.Constant object at 0x7fc3240c6f50> -> root = True (Call ax.get_figure)
+# Mutation info: root = True -> root = True (Call ax.get_figure)

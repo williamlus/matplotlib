@@ -27,4 +27,4 @@ def test_bbox_inches_tight_7_mutated():
     fig.legend([''] * 5, bbox_to_anchor=(0, 0.2), loc='lower left')
     cell_text.reverse()
     plt.table(cellText=cell_text, rowLabels=row_labels, colLabels=col_labels, loc='bottom')
-# Mutation info: align = <ast.Constant object at 0x7fc324045110> -> align = center (Call ax.bar)
+# Mutation info: align = 'edge' -> align = center (Call ax.bar)

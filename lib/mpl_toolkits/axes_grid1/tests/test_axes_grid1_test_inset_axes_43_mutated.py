@@ -41,4 +41,4 @@ def test_inset_axes_43_mutated():
     mark_inset(ax, axins, loc1=4, loc2=4, fc='none', ec='0.5')
     asb = AnchoredSizeBar(ax.transData, 0.5, '0.5', loc='lower center', pad=0.1, borderpad=0.5, sep=5, frameon=False)
     ax.add_artist(asb)
-# Mutation info: loc1 = <ast.Constant object at 0x7fc31fff3190> -> loc1 = 4 (Call mark_inset)
+# Mutation info: loc1 = 2 -> loc1 = 4 (Call mark_inset)

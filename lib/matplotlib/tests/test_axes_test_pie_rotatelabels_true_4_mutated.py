@@ -160,4 +160,4 @@ def test_pie_rotatelabels_true_4_mutated():
     explode = (0, 0.1, 0, 0)
     plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=False, startangle=90, rotatelabels=True)
     plt.axis('equal')
-# Mutation info: shadow = <ast.Constant object at 0x7fc3240e3190> -> shadow = False (Call plt.pie)
+# Mutation info: shadow = True -> shadow = False (Call plt.pie)

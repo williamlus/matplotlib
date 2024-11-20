@@ -40,4 +40,4 @@ def test_tight_layout7_12_mutated():
     ax.set_title('Left Title', loc='center', fontsize=fontsize)
     ax.set_title('Right Title', loc='right', fontsize=fontsize)
     plt.tight_layout()
-# Mutation info: loc = <ast.Constant object at 0x7fc334df4190> -> loc = center (Call ax.set_title)
+# Mutation info: loc = 'left' -> loc = center (Call ax.set_title)

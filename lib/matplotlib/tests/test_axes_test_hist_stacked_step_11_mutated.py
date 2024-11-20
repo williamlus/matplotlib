@@ -158,4 +158,4 @@ def test_hist_stacked_step_11_mutated():
     d2 = np.linspace(0, 10, 50)
     fig, ax = plt.subplots()
     ax.hist((d1, d2), histtype='barstacked', stacked=True)
-# Mutation info: histtype = <ast.Constant object at 0x7fc324bcb290> -> histtype = barstacked (Call ax.hist)
+# Mutation info: histtype = 'step' -> histtype = barstacked (Call ax.hist)

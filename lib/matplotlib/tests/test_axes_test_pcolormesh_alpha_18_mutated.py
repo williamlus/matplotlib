@@ -172,4 +172,4 @@ def test_pcolormesh_alpha_18_mutated():
     ax2.pcolormesh(Qx, Qy, Z, cmap=vir, alpha=0.4, shading='gouraud', zorder=1)
     ax3.pcolormesh(Qx, Qy, Z[:-1, :-1], cmap=cmap, shading='flat', zorder=1)
     ax4.pcolormesh(Qx, Qy, Z, cmap=cmap, shading='gouraud', zorder=1)
-# Mutation info: shading = <ast.Constant object at 0x7fc324b6df10> -> shading = gouraud (Call ax2.pcolormesh)
+# Mutation info: shading = 'gouraud' -> shading = gouraud (Call ax2.pcolormesh)

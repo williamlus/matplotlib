@@ -156,4 +156,4 @@ def color_boxes(fig, ax):
 def test_barh_tick_label_0_mutated():
     ax = plt.gca()
     ax.barh([1, 2.5], [1, 2], height=[0.2, 0.5], tick_label=['a', 'b'], align='edge')
-# Mutation info: align = <ast.Constant object at 0x7fc324b9e050> -> align = edge (Call ax.barh)
+# Mutation info: align = 'center' -> align = edge (Call ax.barh)

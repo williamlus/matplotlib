@@ -39,4 +39,4 @@ def test_colorbars_no_overlapH_14_mutated():
         ax.tick_params(axis='both', direction='in')
         im = ax.imshow([[1, 2], [3, 4]])
         fig.colorbar(im, ax=ax, orientation='horizontal')
-# Mutation info: layout = <ast.Constant object at 0x7fc31ff5c5d0> -> layout = tight (Call plt.figure)
+# Mutation info: layout = 'constrained' -> layout = tight (Call plt.figure)

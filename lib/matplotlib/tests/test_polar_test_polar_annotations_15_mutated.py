@@ -18,4 +18,4 @@ def test_polar_annotations_15_mutated():
     ax.plot([thistheta], [thisr], 'o')
     ax.annotate('a polar annotation', xy=(thistheta, thisr), xytext=(0.05, 0.05), textcoords='figure fraction', arrowprops=dict(facecolor='black', shrink=0.05), horizontalalignment='left', verticalalignment='baseline')
     ax.tick_params(axis='x', tick1On=True, tick2On=True, direction='out')
-# Mutation info: polar = <ast.Constant object at 0x7fc32427bb90> -> polar = False (Call fig.add_subplot)
+# Mutation info: polar = True -> polar = False (Call fig.add_subplot)
