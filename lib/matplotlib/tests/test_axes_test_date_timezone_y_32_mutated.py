@@ -161,5 +161,5 @@ def test_date_timezone_y_32_mutated():
         plt.plot_date([3] * 3, time_index, tz='Canada/Eastern', xdate=False, ydate=True)
     plt.subplot(2, 1, 2)
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
-        plt.plot_date([3] * 3, time_index, tz='UTC', xdate=False, ydate=False)
-# Mutation info: ydate = True -> ydate = False (Call plt.plot_date)
+        plt.plot_date([3] * 3, time_index, tz='UTC', xdate=False, ydate=True)
+# Mutation info: xdate = False -> xdate = False (Call plt.plot_date)

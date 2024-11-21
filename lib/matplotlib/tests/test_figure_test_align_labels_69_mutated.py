@@ -34,7 +34,7 @@ def test_align_labels_69_mutated():
         ax.set_ylabel('YLabel1 %d' % i)
         ax.set_xlabel('XLabel1 %d' % i)
         if i in [0, 2]:
-            ax.xaxis.set_label_position('top')
+            ax.xaxis.set_label_position('bottom')
             ax.xaxis.tick_top()
         if i == 0:
             for tick in ax.get_xticklabels():
@@ -53,4 +53,4 @@ def test_align_labels_69_mutated():
             for tick in ax.get_xticklabels():
                 tick.set_rotation(90)
     fig.align_labels()
-# Mutation info: (0-th Positional) position = 'top' -> position = top (Call ax.xaxis.set_label_position)
+# Mutation info: (0-th Positional) position = 'top' -> position = bottom (Call ax.xaxis.set_label_position)

@@ -10,10 +10,10 @@ from matplotlib.patheffects import PathEffectRenderer
 
 @image_comparison(['patheffect1'], remove_text=True)
 def test_patheffect1_19_mutated():
-    ax1 = plt.subplot(projection='aitoff')
+    ax1 = plt.subplot(projection=None)
     ax1.imshow([[1, 2], [2, 3]])
     txt = ax1.annotate('test', (1.0, 1.0), (0.0, 0), arrowprops=dict(arrowstyle='->', connectionstyle='angle3', lw=2), size=20, ha='center', path_effects=[path_effects.withStroke(linewidth=3, foreground='w')])
     txt.arrow_patch.set_path_effects([path_effects.Stroke(linewidth=5, foreground='w'), path_effects.Normal()])
     pe = [path_effects.withStroke(linewidth=3, foreground='w')]
     ax1.grid(True, linestyle='-', path_effects=pe)
-# Mutation info: Added projection = aitoff (Call plt.subplot)
+# Mutation info: Added projection = None (Call plt.subplot)

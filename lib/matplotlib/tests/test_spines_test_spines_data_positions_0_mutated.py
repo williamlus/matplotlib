@@ -6,11 +6,11 @@ from matplotlib.testing.decorators import check_figures_equal, image_comparison
 
 @image_comparison(['spines_data_positions'])
 def test_spines_data_positions_0_mutated():
-    fig, ax = plt.subplots(sharey=True)
+    fig, ax = plt.subplots(squeeze=False)
     ax.spines.left.set_position(('data', -1.5))
     ax.spines.top.set_position(('data', 0.5))
     ax.spines.right.set_position(('data', -0.5))
     ax.spines.bottom.set_position('zero')
     ax.set_xlim([-2, 2])
     ax.set_ylim([-2, 2])
-# Mutation info: Added sharey = True (Call plt.subplots)
+# Mutation info: Added squeeze = False (Call plt.subplots)

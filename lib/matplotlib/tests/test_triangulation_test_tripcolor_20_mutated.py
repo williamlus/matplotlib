@@ -34,8 +34,8 @@ def test_tripcolor_20_mutated():
     Cfaces = 0.5 * xmid + ymid
     plt.subplot(121)
     plt.tripcolor(triang, Cpoints, edgecolors='k')
-    plt.title('point colors', loc='right')
+    plt.title('point colors', loc='center')
     plt.subplot(122)
     plt.tripcolor(triang, facecolors=Cfaces, edgecolors='k')
     plt.title('facecolors')
-# Mutation info: Added loc = right (Call plt.title)
+# Mutation info: Added loc = center (Call plt.title)

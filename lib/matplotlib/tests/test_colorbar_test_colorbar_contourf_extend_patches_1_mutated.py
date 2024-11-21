@@ -80,8 +80,8 @@ def test_colorbar_contourf_extend_patches_1_mutated():
     z = np.cos(x[np.newaxis, :]) + np.sin(y[:, np.newaxis])
     cmap = mpl.colormaps['viridis']
     for orientation, subfig in zip(['horizontal', 'vertical'], subfigs):
-        axs = subfig.subplots(2, 2, sharex=False).ravel()
+        axs = subfig.subplots(2, 2, squeeze=True).ravel()
         for ax, (extend, levels, hatches) in zip(axs, params):
             cs = ax.contourf(x, y, z, levels, hatches=hatches, cmap=cmap, extend=extend)
             subfig.colorbar(cs, ax=ax, orientation=orientation, fraction=0.4, extendfrac=0.2, aspect=5)
-# Mutation info: Added sharex = False (Call subfig.subplots)
+# Mutation info: Added squeeze = True (Call subfig.subplots)

@@ -82,8 +82,8 @@ def test_nonuniform_and_pcolor_10_mutated():
         im = NonUniformImage(ax, interpolation=interpolation)
         im.set_data(np.arange(3) ** 2, np.arange(3) ** 2, np.arange(9).reshape((3, 3)))
         ax.add_image(im)
-    axs[2].pcolorfast(np.arange(4) ** 2, np.arange(4) ** 2, np.arange(9).reshape((3, 3)), snap=True)
+    axs[2].pcolorfast(np.arange(4) ** 2, np.arange(4) ** 2, np.arange(9).reshape((3, 3)), snap=False)
     for ax in axs:
         ax.set_axis_off()
         ax.set(xlim=(0, 10))
-# Mutation info: Added snap = True (Call axs[2].pcolorfast)
+# Mutation info: Added snap = False (Call axs[2].pcolorfast)

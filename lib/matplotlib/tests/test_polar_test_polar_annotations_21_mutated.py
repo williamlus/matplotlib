@@ -17,5 +17,5 @@ def test_polar_annotations_21_mutated():
     thisr, thistheta = (r[ind], theta[ind])
     ax.plot([thistheta], [thisr], 'o')
     ax.annotate('a polar annotation', xy=(thistheta, thisr), xytext=(0.05, 0.05), textcoords='figure fraction', arrowprops=dict(facecolor='black', shrink=0.05), horizontalalignment='left', verticalalignment='baseline')
-    ax.tick_params(axis='x', tick1On=True, tick2On=True, direction='out', reset=False)
-# Mutation info: Added reset = False (Call ax.tick_params)
+    ax.tick_params(axis='y', tick1On=True, tick2On=True, direction='out')
+# Mutation info: axis = 'x' -> axis = y (Call ax.tick_params)

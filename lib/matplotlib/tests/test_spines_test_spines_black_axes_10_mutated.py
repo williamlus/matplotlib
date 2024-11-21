@@ -9,10 +9,10 @@ def test_spines_black_axes_10_mutated():
     plt.rcParams['savefig.pad_inches'] = 0
     plt.rcParams['savefig.bbox'] = 'tight'
     fig = plt.figure(0, figsize=(4, 4))
-    ax = fig.add_axes((0, 0, 1, 1), projection='rectilinear')
+    ax = fig.add_axes((0, 0, 1, 1), projection='lambert')
     ax.set_xticklabels([])
     ax.set_yticklabels([])
     ax.set_xticks([])
     ax.set_yticks([])
     ax.set_facecolor((0, 0, 0))
-# Mutation info: Added projection = rectilinear (Call fig.add_axes)
+# Mutation info: Added projection = lambert (Call fig.add_axes)

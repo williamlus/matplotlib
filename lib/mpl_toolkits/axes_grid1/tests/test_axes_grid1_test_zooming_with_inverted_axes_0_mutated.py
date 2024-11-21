@@ -22,7 +22,7 @@ from numpy.testing import assert_array_equal, assert_array_almost_equal
 
 @image_comparison(['zoomed_axes.png', 'inverted_zoomed_axes.png'], style=('classic', '_classic_test_patch'), tol=0.02 if platform.machine() == 'arm64' else 0)
 def test_zooming_with_inverted_axes_0_mutated():
-    fig, ax = plt.subplots(sharex=True)
+    fig, ax = plt.subplots(sharey=True)
     ax.plot([1, 2, 3], [1, 2, 3])
     ax.axis([1, 3, 1, 3])
     inset_ax = zoomed_inset_axes(ax, zoom=2.5, loc='lower right')
@@ -32,4 +32,4 @@ def test_zooming_with_inverted_axes_0_mutated():
     ax.axis([3, 1, 3, 1])
     inset_ax = zoomed_inset_axes(ax, zoom=2.5, loc='lower right')
     inset_ax.axis([1.4, 1.1, 1.4, 1.1])
-# Mutation info: Added sharex = True (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

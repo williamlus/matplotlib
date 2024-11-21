@@ -10,8 +10,8 @@ def test_polar_theta_position_17_mutated():
     r = np.arange(0, 3.0, 0.01)
     theta = 2 * np.pi * r
     fig = plt.figure()
-    ax = fig.add_axes([0.1, 0.1, 0.8, 0.8], polar=True, projection='rectilinear')
+    ax = fig.add_axes([0.1, 0.1, 0.8, 0.8], polar=True, projection='lambert')
     ax.plot(theta, r)
     ax.set_theta_zero_location('NW', 30)
     ax.set_theta_direction('clockwise')
-# Mutation info: Added projection = rectilinear (Call fig.add_axes)
+# Mutation info: Added projection = lambert (Call fig.add_axes)

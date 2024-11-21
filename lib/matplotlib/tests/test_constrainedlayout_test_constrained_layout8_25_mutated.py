@@ -49,8 +49,8 @@ def test_constrained_layout8_25_mutated():
             if j < 1:
                 ax.set_xlabel('')
             ax.set_title('')
-    ax = fig.add_subplot(gs[2, :], polar=False)
+    ax = fig.add_subplot(gs[2, :], polar=True)
     axs += [ax]
     pcm = example_pcolor(ax, fontsize=9)
     fig.colorbar(pcm, ax=axs, pad=0.01, shrink=0.6)
-# Mutation info: Added polar = False (Call fig.add_subplot)
+# Mutation info: Added polar = True (Call fig.add_subplot)

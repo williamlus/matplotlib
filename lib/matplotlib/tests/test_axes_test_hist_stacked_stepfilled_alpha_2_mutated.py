@@ -156,6 +156,6 @@ def color_boxes(fig, ax):
 def test_hist_stacked_stepfilled_alpha_2_mutated():
     d1 = np.linspace(1, 3, 20)
     d2 = np.linspace(0, 10, 50)
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(squeeze=True)
     ax.hist((d1, d2), histtype='stepfilled', stacked=True, alpha=0.5)
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added squeeze = True (Call plt.subplots)

@@ -69,6 +69,6 @@ def test_light_source_topo_surface_15_mutated():
     for row, mode in zip(axs, ['hsv', 'overlay', 'soft']):
         for ax, ve in zip(row, [0.1, 1, 10]):
             rgb = ls.shade(elev, cmap, vert_exag=ve, dx=dx, dy=dy, blend_mode=mode)
-            ax.imshow(rgb, filternorm=True)
+            ax.imshow(rgb, interpolation_stage='rgba')
             ax.set(xticks=[], yticks=[])
-# Mutation info: Added filternorm = True (Call ax.imshow)
+# Mutation info: Added interpolation_stage = rgba (Call ax.imshow)

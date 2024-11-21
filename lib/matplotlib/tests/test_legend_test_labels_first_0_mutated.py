@@ -22,9 +22,9 @@ from matplotlib.font_manager import FontProperties
 
 @image_comparison(['legend_labels_first.png'], remove_text=True, tol=0.013 if platform.machine() == 'arm64' else 0)
 def test_labels_first_0_mutated():
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(sharey=False)
     ax.plot(np.arange(10), '-o', label=1)
     ax.plot(np.ones(10) * 5, ':x', label='x')
     ax.plot(np.arange(20, 10, -1), 'd', label='diamond')
     ax.legend(loc='best', markerfirst=False)
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

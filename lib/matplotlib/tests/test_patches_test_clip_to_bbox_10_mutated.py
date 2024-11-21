@@ -16,7 +16,7 @@ from matplotlib import collections as mcollections, colors as mcolors, patches a
 def test_clip_to_bbox_10_mutated():
     fig, ax = plt.subplots()
     ax.set_xlim([-18, 20])
-    ax.set_ylim([-150, 100], emit=False)
+    ax.set_ylim([-150, 100], auto=True)
     path = mpath.Path.unit_regular_star(8).deepcopy()
     path.vertices *= [10, 100]
     path.vertices -= [5, 25]
@@ -30,4 +30,4 @@ def test_clip_to_bbox_10_mutated():
     result_path = combined.clip_to_bbox(bbox)
     result_patch = mpatches.PathPatch(result_path, alpha=0.5, facecolor='green', lw=4, edgecolor='black')
     ax.add_patch(result_patch)
-# Mutation info: Added emit = False (Call ax.set_ylim)
+# Mutation info: Added auto = True (Call ax.set_ylim)

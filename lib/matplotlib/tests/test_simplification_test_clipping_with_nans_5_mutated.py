@@ -14,7 +14,7 @@ def test_clipping_with_nans_5_mutated():
     x = np.linspace(0, 3.14 * 2, 3000)
     y = np.sin(x)
     x[::100] = np.nan
-    fig, ax = plt.subplots(sharex=False)
+    fig, ax = plt.subplots(sharey=False)
     ax.plot(x, y)
     ax.set_ylim(-0.25, 0.25)
-# Mutation info: Added sharex = False (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

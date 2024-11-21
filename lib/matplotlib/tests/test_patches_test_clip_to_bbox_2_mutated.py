@@ -14,7 +14,7 @@ from matplotlib import collections as mcollections, colors as mcolors, patches a
 
 @image_comparison(['clip_to_bbox'])
 def test_clip_to_bbox_2_mutated():
-    fig, ax = plt.subplots(sharey=True)
+    fig, ax = plt.subplots(squeeze=False)
     ax.set_xlim([-18, 20])
     ax.set_ylim([-150, 100])
     path = mpath.Path.unit_regular_star(8).deepcopy()
@@ -30,4 +30,4 @@ def test_clip_to_bbox_2_mutated():
     result_path = combined.clip_to_bbox(bbox)
     result_patch = mpatches.PathPatch(result_path, alpha=0.5, facecolor='green', lw=4, edgecolor='black')
     ax.add_patch(result_patch)
-# Mutation info: Added sharey = True (Call plt.subplots)
+# Mutation info: Added squeeze = False (Call plt.subplots)

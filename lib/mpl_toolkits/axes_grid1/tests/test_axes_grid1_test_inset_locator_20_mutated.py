@@ -28,7 +28,7 @@ def test_inset_locator_20_mutated():
     Z2 = np.zeros((150, 150))
     ny, nx = Z.shape
     Z2[30:30 + ny, 30:30 + nx] = Z
-    ax.imshow(Z2, extent=extent, interpolation='nearest', origin='lower', filternorm=True)
+    ax.imshow(Z2, extent=extent, interpolation='nearest', origin='lower', aspect='equal')
     axins = zoomed_inset_axes(ax, zoom=6, loc='upper right')
     axins.imshow(Z2, extent=extent, interpolation='nearest', origin='lower')
     axins.yaxis.get_major_locator().set_params(nbins=7)
@@ -41,4 +41,4 @@ def test_inset_locator_20_mutated():
     mark_inset(ax, axins, loc1=2, loc2=4, fc='none', ec='0.5')
     asb = AnchoredSizeBar(ax.transData, 0.5, '0.5', loc='lower center', pad=0.1, borderpad=0.5, sep=5, frameon=False)
     ax.add_artist(asb)
-# Mutation info: Added filternorm = True (Call ax.imshow)
+# Mutation info: Added aspect = equal (Call ax.imshow)

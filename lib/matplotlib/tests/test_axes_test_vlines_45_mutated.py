@@ -177,6 +177,6 @@ def test_vlines_45_mutated():
     x5 = np.ma.masked_equal([2, 4, 6, 8, 10, 12], 8)
     ymin5 = np.ma.masked_equal([0, 1, -1, 0, 2, 1], 2)
     ymax5 = np.ma.masked_equal([13, 14, 15, 16, 17, 18], 18)
-    ax5.vlines(x5, ymin5, ymax5, colors='k', linewidth=2, linestyles='dashed')
+    ax5.vlines(x5, ymin5, ymax5, colors='k', linewidth=2, linestyles='solid')
     ax5.set_xlim(0, 15)
-# Mutation info: Added linestyles = dashed (Call ax5.vlines)
+# Mutation info: Added linestyles = solid (Call ax5.vlines)

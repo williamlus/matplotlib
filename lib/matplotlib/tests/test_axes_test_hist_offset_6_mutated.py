@@ -157,6 +157,6 @@ def test_hist_offset_6_mutated():
     d1 = np.linspace(0, 10, 50)
     d2 = np.linspace(1, 3, 20)
     fig, ax = plt.subplots()
-    ax.hist(d1, bottom=5, cumulative=False)
+    ax.hist(d1, bottom=5, histtype='stepfilled')
     ax.hist(d2, bottom=15)
-# Mutation info: Added cumulative = False (Call ax.hist)
+# Mutation info: Added histtype = stepfilled (Call ax.hist)

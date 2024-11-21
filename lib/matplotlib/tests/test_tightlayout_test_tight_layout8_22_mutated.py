@@ -33,8 +33,8 @@ def add_offsetboxes(ax, size=10, margin=0.1, color='black'):
 def test_tight_layout8_22_mutated():
     """Test automatic use of tight_layout."""
     fig = plt.figure()
-    fig.set_layout_engine(layout='compressed', pad=0.1)
+    fig.set_layout_engine(layout='constrained', pad=0.1)
     ax = fig.add_subplot()
     example_plot(ax, fontsize=24)
     fig.draw_without_rendering()
-# Mutation info: layout = 'tight' -> layout = compressed (Call fig.set_layout_engine)
+# Mutation info: layout = 'tight' -> layout = constrained (Call fig.set_layout_engine)

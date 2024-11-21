@@ -25,6 +25,6 @@ def test_patch_alpha_override_9_mutated():
     ax.add_collection(col)
     patch = mpatches.PathPatch(cut_star1, linewidth=5, linestyle='dashdot', alpha=0.25, facecolor=(1, 0, 0, 0.5), edgecolor=(0, 0, 1, 0.75))
     ax.add_patch(patch)
-    ax.set_xlim(-1, 2, auto=False)
+    ax.set_xlim(-1, 2, emit=False)
     ax.set_ylim(-1, 2)
-# Mutation info: Added auto = False (Call ax.set_xlim)
+# Mutation info: Added emit = False (Call ax.set_xlim)

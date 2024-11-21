@@ -22,7 +22,7 @@ import matplotlib.dates as mdates
 
 @image_comparison(['figure_today'], tol=0.015 if platform.machine() == 'arm64' else 0)
 def test_figure_7_mutated():
-    fig = plt.figure('today', layout='constrained')
+    fig = plt.figure('today', layout='compressed')
     ax = fig.add_subplot()
     ax.set_title(fig.get_label())
     ax.plot(np.arange(5))
@@ -30,4 +30,4 @@ def test_figure_7_mutated():
     plt.plot([0, 1], [1, 0], 'r')
     plt.figure('today')
     plt.close('tomorrow')
-# Mutation info: Added layout = constrained (Call plt.figure)
+# Mutation info: Added layout = compressed (Call plt.figure)

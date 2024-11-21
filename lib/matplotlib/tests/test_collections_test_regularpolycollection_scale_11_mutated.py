@@ -80,5 +80,5 @@ def test_regularpolycollection_scale_11_mutated():
     circle_areas = [np.pi / 2]
     squares = SquareCollection(sizes=circle_areas, offsets=xy, offset_transform=ax.transData)
     ax.add_collection(squares, autolim=True)
-    ax.axis([-1, 1, -1, 1], emit=False)
-# Mutation info: Added emit = False (Call ax.axis)
+    ax.axis([-1, 1, -1, 1], emit=True)
+# Mutation info: Added emit = True (Call ax.axis)

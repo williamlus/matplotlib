@@ -169,7 +169,7 @@ def test_hlines_20_mutated():
     x4 = [np.nan, 2, -6, 3, 8, np.nan]
     ax4.hlines(y4, 0, x4, colors='k', linewidth=2)
     for ax in [ax1, ax2, ax3, ax4]:
-        ax.set_ylim(0, 10, emit=False)
+        ax.set_ylim(0, 10, auto=True)
     assert ax1.get_xlim() == ax2.get_xlim()
     assert ax1.get_xlim() == ax3.get_xlim()
     assert ax1.get_xlim() == ax4.get_xlim()
@@ -179,4 +179,4 @@ def test_hlines_20_mutated():
     xmax5 = np.ma.masked_equal([13, 14, 15, 16, 17, 18], 18)
     ax5.hlines(y5, xmin5, xmax5, colors='k', linewidth=2)
     ax5.set_ylim(0, 15)
-# Mutation info: Added emit = False (Call ax.set_ylim)
+# Mutation info: Added auto = True (Call ax.set_ylim)

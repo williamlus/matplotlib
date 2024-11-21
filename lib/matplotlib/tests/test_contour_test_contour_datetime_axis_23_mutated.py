@@ -23,7 +23,7 @@ def test_contour_datetime_axis_23_mutated():
     z = z1 * z2
     plt.subplot(221)
     plt.contour(x, y, z)
-    plt.subplot(222, projection='aitoff')
+    plt.subplot(222, projection=None)
     plt.contourf(x, y, z)
     x = np.repeat(x[np.newaxis], 20, axis=0)
     y = np.repeat(y[:, np.newaxis], 20, axis=1)
@@ -35,4 +35,4 @@ def test_contour_datetime_axis_23_mutated():
         for label in ax.get_xticklabels():
             label.set_ha('right')
             label.set_rotation(30)
-# Mutation info: Added projection = aitoff (Call plt.subplot)
+# Mutation info: Added projection = None (Call plt.subplot)

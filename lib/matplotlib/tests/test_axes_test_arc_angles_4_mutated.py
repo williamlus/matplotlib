@@ -158,7 +158,7 @@ def test_arc_angles_4_mutated():
     h = 1
     centre = (0.2, 0.5)
     scale = 2
-    fig, axs = plt.subplots(3, 3, sharex=True)
+    fig, axs = plt.subplots(3, 3, squeeze=False)
     for i, ax in enumerate(axs.flat):
         theta2 = i * 360 / 9
         theta1 = theta2 - 45
@@ -171,4 +171,4 @@ def test_arc_angles_4_mutated():
         h *= 10
         centre = (centre[0] * 10, centre[1] * 10)
         scale *= 10
-# Mutation info: Added sharex = True (Call plt.subplots)
+# Mutation info: Added squeeze = False (Call plt.subplots)

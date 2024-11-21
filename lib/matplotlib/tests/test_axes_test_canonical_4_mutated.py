@@ -154,6 +154,6 @@ def color_boxes(fig, ax):
 
 @image_comparison(['canonical'], tol=0.02 if platform.machine() == 'arm64' else 0)
 def test_canonical_4_mutated():
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(sharex=True)
     ax.plot([1, 2, 3])
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

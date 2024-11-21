@@ -76,7 +76,7 @@ def test_colorbar_extend_drawedges_5_mutated():
     subfigs = fig.subfigures(1, 2)
     for orientation, subfig in zip(['horizontal', 'vertical'], subfigs):
         if orientation == 'horizontal':
-            axs = subfig.subplots(4, 1, sharey=False)
+            axs = subfig.subplots(4, 1, sharex=True)
         else:
             axs = subfig.subplots(1, 4)
         fig.subplots_adjust(left=0.05, bottom=0.05, right=0.95, top=0.95)
@@ -93,4 +93,4 @@ def test_colorbar_extend_drawedges_5_mutated():
                 ax.set_ylim(1.1, 2.9)
                 res = np.array(res)[:, :, [1, 0]]
             np.testing.assert_array_equal(cbar.dividers.get_segments(), res)
-# Mutation info: Added sharey = False (Call subfig.subplots)
+# Mutation info: Added sharex = True (Call subfig.subplots)

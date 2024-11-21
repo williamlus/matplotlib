@@ -14,7 +14,7 @@ from matplotlib import collections as mcollections, colors as mcolors, patches a
 
 @image_comparison(['multi_color_hatch'], remove_text=True, style='default')
 def test_multi_color_hatch_5_mutated():
-    fig, ax = plt.subplots(squeeze=True)
+    fig, ax = plt.subplots(sharex=True)
     rects = ax.bar(range(5), range(1, 6))
     for i, rect in enumerate(rects):
         rect.set_facecolor('none')
@@ -26,4 +26,4 @@ def test_multi_color_hatch_5_mutated():
         with mpl.style.context({'hatch.color': f'C{i}'}):
             r = Rectangle((i - 0.8 / 2, 5), 0.8, 1, hatch='//', fc='none')
         ax.add_patch(r)
-# Mutation info: Added squeeze = True (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

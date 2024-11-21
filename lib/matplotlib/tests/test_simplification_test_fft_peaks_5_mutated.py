@@ -11,7 +11,7 @@ from matplotlib.path import Path
 
 @image_comparison(['fft_peaks'], remove_text=True)
 def test_fft_peaks_5_mutated():
-    fig, ax = plt.subplots(sharey=True)
+    fig, ax = plt.subplots(sharey=False)
     t = np.arange(65536)
     p1 = ax.plot(abs(np.fft.fft(np.sin(2 * np.pi * 0.01 * t) * np.blackman(len(t)))))
     fig.canvas.draw()
@@ -20,4 +20,4 @@ def test_fft_peaks_5_mutated():
     path = transform.transform_path(path)
     simplified = path.cleaned(simplify=True)
     assert simplified.vertices.size == 36
-# Mutation info: Added sharey = True (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

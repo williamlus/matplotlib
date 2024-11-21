@@ -23,8 +23,8 @@ pyparsing_version = parse_version(pyparsing.__version__)
 @image_comparison(['agg_text_clip.png'])
 def test_agg_text_clip_4_mutated():
     np.random.seed(1)
-    fig, (ax1, ax2) = plt.subplots(2, sharex=True)
+    fig, (ax1, ax2) = plt.subplots(2, sharex=False)
     for x, y in np.random.rand(10, 2):
         ax1.text(x, y, 'foo', clip_on=True)
         ax2.text(x, y, 'foo')
-# Mutation info: Added sharex = True (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

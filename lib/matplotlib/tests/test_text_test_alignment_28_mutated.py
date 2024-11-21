@@ -35,5 +35,5 @@ def test_alignment_28_mutated():
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1.5)
     ax.set_xticks([])
-    ax.set_yticks([], minor=True)
-# Mutation info: Added minor = True (Call ax.set_yticks)
+    ax.set_yticks([], minor=False)
+# Mutation info: Added minor = False (Call ax.set_yticks)

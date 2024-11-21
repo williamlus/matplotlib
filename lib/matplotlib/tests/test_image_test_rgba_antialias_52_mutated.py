@@ -105,5 +105,5 @@ def test_rgba_antialias_52_mutated():
     axs[0].set_ylim([N / 2 + 50, N / 2 - 10])
     axs[1].imshow(aa, interpolation='nearest', cmap=cmap, vmin=-1.2, vmax=1.2)
     axs[2].imshow(aa, interpolation='auto', interpolation_stage='data', cmap=cmap, vmin=-1.2, vmax=1.2)
-    axs[3].imshow(aa, interpolation='auto', interpolation_stage='rgba', cmap=cmap, vmin=-1.2, vmax=1.2, aspect='equal')
-# Mutation info: Added aspect = equal (Call axs[3].imshow)
+    axs[3].imshow(aa, interpolation='auto', interpolation_stage='rgba', cmap=cmap, vmin=-1.2, vmax=1.2, resample=True)
+# Mutation info: Added resample = True (Call axs[3].imshow)

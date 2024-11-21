@@ -163,9 +163,9 @@ def test_pie_linewidth_0_35_mutated():
     data = {'l': labels, 's': sizes, 'c': colors, 'ex': explode}
     fig = plt.figure()
     ax = fig.gca()
-    ax.pie('s', explode='ex', labels='l', colors='c', autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, data=data, rotatelabels=False)
+    ax.pie('s', explode='ex', labels='l', colors='c', autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, data=data)
     ax.axis('equal')
     plt.figure()
     plt.pie('s', explode='ex', labels='l', colors='c', autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, data=data)
     plt.axis('equal')
-# Mutation info: Added rotatelabels = False (Call ax.pie)
+# Mutation info: shadow = True -> shadow = True (Call ax.pie)

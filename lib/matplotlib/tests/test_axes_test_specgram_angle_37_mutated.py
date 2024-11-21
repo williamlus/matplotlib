@@ -175,5 +175,5 @@ def test_specgram_angle_37_mutated():
             for ax, sides in zip(plt.figure().subplots(3), all_sides):
                 ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode=mode)
                 with pytest.raises(ValueError):
-                    ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides='default', mode=mode, scale='dB')
-# Mutation info: sides = sides -> sides = default (Call ax.specgram)
+                    ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode=mode, scale='dB', detrend='linear')
+# Mutation info: Added detrend = linear (Call ax.specgram)

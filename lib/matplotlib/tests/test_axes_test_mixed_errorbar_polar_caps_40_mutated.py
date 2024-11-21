@@ -172,8 +172,8 @@ def test_mixed_errorbar_polar_caps_40_mutated():
     r_asym = [1.1] * 3
     xerr = [[0.3, 0.3, 0.2], [0.2, 0.3, 0.3]]
     yerr = [[0.35, 0.5, 0.5], [0.5, 0.35, 0.5]]
-    ax.errorbar(th_asym, r_asym, xerr=xerr, yerr=yerr, fmt='o', xuplims=False)
+    ax.errorbar(th_asym, r_asym, xerr=xerr, yerr=yerr, fmt='o', barsabove=True)
     th_over = [2.1]
     r_over = [3.1]
     ax.errorbar(th_over, r_over, xerr=10, yerr=0.2, fmt='o')
-# Mutation info: Added xuplims = False (Call ax.errorbar)
+# Mutation info: Added barsabove = True (Call ax.errorbar)

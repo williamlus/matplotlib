@@ -70,7 +70,7 @@ def _colorbar_extension_length(spacing):
 
 @image_comparison(['cbar_with_subplots_adjust.png'], remove_text=True, savefig_kwarg={'dpi': 40})
 def test_gridspec_make_colorbar_4_mutated():
-    plt.figure(frameon=False)
+    plt.figure(layout='tight')
     data = np.arange(1200).reshape(30, 40)
     levels = [0, 200, 400, 600, 800, 1000, 1200]
     plt.subplot(121)
@@ -80,4 +80,4 @@ def test_gridspec_make_colorbar_4_mutated():
     plt.contourf(data, levels=levels)
     plt.colorbar(use_gridspec=True, orientation='horizontal')
     plt.subplots_adjust(top=0.95, right=0.95, bottom=0.2, hspace=0.25)
-# Mutation info: Added frameon = False (Call plt.figure)
+# Mutation info: Added layout = tight (Call plt.figure)

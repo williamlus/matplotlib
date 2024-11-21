@@ -165,7 +165,7 @@ def test_arc_ellipse_1_mutated():
     x, y = np.dot(R, [x, y])
     x += xcenter
     y += ycenter
-    fig = plt.figure(frameon=False)
+    fig = plt.figure(layout=None)
     ax = fig.add_subplot(211, aspect='auto')
     ax.fill(x, y, alpha=0.2, facecolor='yellow', edgecolor='yellow', linewidth=1, zorder=1)
     e1 = mpatches.Arc((xcenter, ycenter), width, height, angle=angle, linewidth=2, fill=False, zorder=2)
@@ -174,4 +174,4 @@ def test_arc_ellipse_1_mutated():
     ax.fill(x, y, alpha=0.2, facecolor='green', edgecolor='green', zorder=1)
     e2 = mpatches.Arc((xcenter, ycenter), width, height, angle=angle, linewidth=2, fill=False, zorder=2)
     ax.add_patch(e2)
-# Mutation info: Added frameon = False (Call plt.figure)
+# Mutation info: Added layout = None (Call plt.figure)

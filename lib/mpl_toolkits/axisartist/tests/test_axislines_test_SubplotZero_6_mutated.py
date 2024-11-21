@@ -8,7 +8,7 @@ from mpl_toolkits.axisartist import Axes, SubplotHost
 @image_comparison(['SubplotZero.png'], style='default')
 def test_SubplotZero_6_mutated():
     plt.rcParams['text.kerning_factor'] = 6
-    fig = plt.figure(frameon=False)
+    fig = plt.figure(layout=None)
     ax = SubplotZero(fig, 1, 1, 1)
     fig.add_subplot(ax)
     ax.axis['xzero'].set_visible(True)
@@ -18,4 +18,4 @@ def test_SubplotZero_6_mutated():
     xx = np.arange(0, 2 * np.pi, 0.01)
     ax.plot(xx, np.sin(xx))
     ax.set_ylabel('Test')
-# Mutation info: Added frameon = False (Call plt.figure)
+# Mutation info: Added layout = None (Call plt.figure)

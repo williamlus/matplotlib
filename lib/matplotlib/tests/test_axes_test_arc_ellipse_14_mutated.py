@@ -166,7 +166,7 @@ def test_arc_ellipse_14_mutated():
     x += xcenter
     y += ycenter
     fig = plt.figure()
-    ax = fig.add_subplot(211, aspect='auto', projection='hammer')
+    ax = fig.add_subplot(211, aspect='auto', polar=False)
     ax.fill(x, y, alpha=0.2, facecolor='yellow', edgecolor='yellow', linewidth=1, zorder=1)
     e1 = mpatches.Arc((xcenter, ycenter), width, height, angle=angle, linewidth=2, fill=False, zorder=2)
     ax.add_patch(e1)
@@ -174,4 +174,4 @@ def test_arc_ellipse_14_mutated():
     ax.fill(x, y, alpha=0.2, facecolor='green', edgecolor='green', zorder=1)
     e2 = mpatches.Arc((xcenter, ycenter), width, height, angle=angle, linewidth=2, fill=False, zorder=2)
     ax.add_patch(e2)
-# Mutation info: Added projection = hammer (Call fig.add_subplot)
+# Mutation info: Added polar = False (Call fig.add_subplot)

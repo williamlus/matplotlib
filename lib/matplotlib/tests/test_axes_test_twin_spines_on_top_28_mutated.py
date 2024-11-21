@@ -156,7 +156,7 @@ def color_boxes(fig, ax):
 def test_twin_spines_on_top_28_mutated():
     matplotlib.rcParams['axes.linewidth'] = 48.0
     matplotlib.rcParams['lines.linewidth'] = 48.0
-    fig = plt.figure(layout=None)
+    fig = plt.figure(layout='compressed')
     ax1 = fig.add_subplot(1, 1, 1)
     data = np.array([[1000, 1100, 1200, 1250], [310, 301, 360, 400]])
     ax2 = ax1.twinx()
@@ -172,4 +172,4 @@ def test_twin_spines_on_top_28_mutated():
     ax1.fill_between('i', 'j', color='#BEAED4', alpha=0.8, data=data)
     ax2.plot('i', 'j', color='#7FC97F', data=data)
     ax2.fill_between('i', 'j', color='#7FC97F', alpha=0.5, data=data)
-# Mutation info: Added layout = None (Call plt.figure)
+# Mutation info: Added layout = compressed (Call plt.figure)

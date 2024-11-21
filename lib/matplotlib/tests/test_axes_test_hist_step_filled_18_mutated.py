@@ -161,9 +161,9 @@ def test_hist_step_filled_18_mutated():
     types = ['step'] * 4 + ['stepfilled'] * 4
     fig, axs = plt.subplots(nrows=2, ncols=4)
     for kg, _type, ax in zip(kwargs, types, axs.flat):
-        ax.hist(x, n_bins, histtype='bar', stacked=True, **kg)
+        ax.hist(x, n_bins, histtype=_type, stacked=True, **kg, orientation='horizontal')
         ax.set_title(f'{kg}/{_type}')
         ax.set_ylim(bottom=-50)
     patches = axs[0, 0].patches
     assert all((p.get_facecolor() == p.get_edgecolor() for p in patches))
-# Mutation info: histtype = _type -> histtype = bar (Call ax.hist)
+# Mutation info: Added orientation = horizontal (Call ax.hist)

@@ -19,5 +19,5 @@ def test_barbs_flip_6_mutated():
     X, Y = np.meshgrid(x, x)
     U, V = (12 * X, 12 * Y)
     fig, ax = plt.subplots()
-    ax.barbs(X, Y, U, V, fill_empty=True, rounding=True, pivot=1.7, sizes=dict(emptybarb=0.25, spacing=0.2, height=0.3), flip_barb=Y < 0)
-# Mutation info: rounding = False -> rounding = True (Call ax.barbs)
+    ax.barbs(X, Y, U, V, fill_empty=True, rounding=False, pivot='middle', sizes=dict(emptybarb=0.25, spacing=0.2, height=0.3), flip_barb=Y < 0)
+# Mutation info: pivot = 1.7 -> pivot = middle (Call ax.barbs)

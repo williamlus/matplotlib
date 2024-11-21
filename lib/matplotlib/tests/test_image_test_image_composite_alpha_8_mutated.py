@@ -96,6 +96,6 @@ def test_image_composite_alpha_8_mutated():
     ax.imshow(arr2, extent=[0, 5, 2, 3], alpha=0.6)
     ax.imshow(arr2, extent=[0, 5, 3, 4], alpha=0.3)
     ax.set_facecolor((0, 0.5, 0, 1))
-    ax.set_xlim([0, 5], emit=True)
+    ax.set_xlim([0, 5], auto=True)
     ax.set_ylim([5, 0])
-# Mutation info: Added emit = True (Call ax.set_xlim)
+# Mutation info: Added auto = True (Call ax.set_xlim)

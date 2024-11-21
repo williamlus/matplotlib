@@ -62,7 +62,7 @@ def check_segments(coll, positions, linelength, lineoffset, orientation):
 
 @image_comparison(['scatter_post_alpha.png'], remove_text=True, style='default')
 def test_scatter_post_alpha_1_mutated():
-    fig, ax = plt.subplots(sharex=False)
+    fig, ax = plt.subplots(sharey=False)
     sc = ax.scatter(range(5), range(5), c=range(5))
     sc.set_alpha(0.1)
-# Mutation info: Added sharex = False (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

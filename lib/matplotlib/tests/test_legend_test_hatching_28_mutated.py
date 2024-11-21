@@ -24,11 +24,11 @@ from matplotlib.font_manager import FontProperties
 def test_hatching_28_mutated():
     plt.rcParams['text.kerning_factor'] = 6
     fig, ax = plt.subplots()
-    patch = plt.Rectangle((0, 0), 0.3, 0.3, hatch='xx', label='Patch\ndefault color\nfilled', rotation_point='center')
+    patch = plt.Rectangle((0, 0), 0.3, 0.3, hatch='xx', label='Patch\ndefault color\nfilled')
     ax.add_patch(patch)
     patch = plt.Rectangle((0.33, 0), 0.3, 0.3, hatch='||', edgecolor='C1', label='Patch\nexplicit color\nfilled')
     ax.add_patch(patch)
-    patch = plt.Rectangle((0, 0.4), 0.3, 0.3, hatch='xx', fill=False, label='Patch\ndefault color\nunfilled')
+    patch = plt.Rectangle((0, 0.4), 0.3, 0.3, hatch='xx', fill=False, label='Patch\ndefault color\nunfilled', rotation_point='xy')
     ax.add_patch(patch)
     patch = plt.Rectangle((0.33, 0.4), 0.3, 0.3, hatch='||', fill=False, edgecolor='C1', label='Patch\nexplicit color\nunfilled')
     ax.add_patch(patch)
@@ -37,4 +37,4 @@ def test_hatching_28_mutated():
     ax.set_xlim(-0.01, 1.1)
     ax.set_ylim(-0.01, 1.1)
     ax.legend(handlelength=4, handleheight=4)
-# Mutation info: Added rotation_point = center (Call plt.Rectangle)
+# Mutation info: Added rotation_point = xy (Call plt.Rectangle)

@@ -69,6 +69,6 @@ def test__EventCollection__add_positions_4_mutated():
     coll.switch_orientation()
     np.testing.assert_array_equal(new_positions, coll.get_positions())
     check_segments(coll, new_positions, props['linelength'], props['lineoffset'], props['orientation'])
-    splt.set_title('EventCollection: add_positions', loc='center')
+    splt.set_title('EventCollection: add_positions', loc='left')
     splt.set_xlim(-1, 35)
-# Mutation info: Added loc = center (Call splt.set_title)
+# Mutation info: Added loc = left (Call splt.set_title)

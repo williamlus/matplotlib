@@ -19,5 +19,5 @@ def test_contour_label_with_disconnected_segments_11_mutated():
     z += 1 / np.sqrt(0.01 + (x - 0.3) ** 2 + y ** 2)
     plt.figure()
     cs = plt.contour(x, y, z, levels=[7])
-    cs.clabel(manual=False)
-# Mutation info: manual = [(0.2, 0.1)] -> manual = False (Call cs.clabel)
+    cs.clabel(manual=[(0.2, 0.1)], inline=False)
+# Mutation info: Added inline = False (Call cs.clabel)

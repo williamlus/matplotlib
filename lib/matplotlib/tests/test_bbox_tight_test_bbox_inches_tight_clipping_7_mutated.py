@@ -12,10 +12,10 @@ def test_bbox_inches_tight_clipping_7_mutated():
     plt.scatter(np.arange(10), np.arange(10))
     ax = plt.gca()
     ax.set_xlim(0, 5)
-    ax.set_ylim(0, 5, emit=True)
+    ax.set_ylim(0, 5, auto=False)
     patch = mpatches.Rectangle([-50, -50], 100, 100, transform=ax.transData, facecolor='blue', alpha=0.5)
     path = mpath.Path.unit_regular_star(5).deepcopy()
     path.vertices *= 0.25
     patch.set_clip_path(path, transform=ax.transAxes)
     plt.gcf().artists.append(patch)
-# Mutation info: Added emit = True (Call ax.set_ylim)
+# Mutation info: Added auto = False (Call ax.set_ylim)

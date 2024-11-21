@@ -157,7 +157,7 @@ def test_hlines_28_mutated():
     y1 = [2, 3, 4, 5, 7]
     x1 = [2, -6, 3, 8, 2]
     fig1, ax1 = plt.subplots()
-    ax1.hlines(y1, 0, x1, colors='g', linewidth=5, linestyles='dotted')
+    ax1.hlines(y1, 0, x1, colors='g', linewidth=5, linestyles='dashed')
     y2 = [2, 3, 4, 5, 6, 7]
     x2 = [2, -6, 3, 8, np.nan, 2]
     fig2, (ax2, ax3, ax4) = plt.subplots(nrows=3, figsize=(4, 8))
@@ -179,4 +179,4 @@ def test_hlines_28_mutated():
     xmax5 = np.ma.masked_equal([13, 14, 15, 16, 17, 18], 18)
     ax5.hlines(y5, xmin5, xmax5, colors='k', linewidth=2)
     ax5.set_ylim(0, 15)
-# Mutation info: Added linestyles = dotted (Call ax1.hlines)
+# Mutation info: Added linestyles = dashed (Call ax1.hlines)

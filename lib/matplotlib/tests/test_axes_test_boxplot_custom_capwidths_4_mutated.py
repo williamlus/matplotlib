@@ -156,6 +156,6 @@ def color_boxes(fig, ax):
 def test_boxplot_custom_capwidths_4_mutated():
     x = np.linspace(-7, 7, 140)
     x = np.hstack([-25, x, 25])
-    fig, ax = plt.subplots(squeeze=True)
+    fig, ax = plt.subplots(sharex=False)
     ax.boxplot([x, x], notch=1, capwidths=[0.01, 0.2])
-# Mutation info: Added squeeze = True (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

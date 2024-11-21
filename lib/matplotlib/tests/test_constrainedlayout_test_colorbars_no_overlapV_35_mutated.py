@@ -38,5 +38,5 @@ def test_colorbars_no_overlapV_35_mutated():
         ax.tick_params(axis='both', direction='in')
         im = ax.imshow([[1, 2], [3, 4]])
         fig.colorbar(im, ax=ax, orientation='vertical')
-    fig.suptitle('foo', horizontalalignment='center')
-# Mutation info: Added horizontalalignment = center (Call fig.suptitle)
+    fig.suptitle('foo', verticalalignment='center')
+# Mutation info: Added verticalalignment = center (Call fig.suptitle)

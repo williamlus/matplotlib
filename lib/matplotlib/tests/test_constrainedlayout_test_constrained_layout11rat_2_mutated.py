@@ -32,7 +32,7 @@ def example_pcolor(ax, fontsize=12):
 @image_comparison(['constrained_layout11rat.png'])
 def test_constrained_layout11rat_2_mutated():
     """Test for multiple nested gridspecs with width_ratios"""
-    fig = plt.figure(layout=None, figsize=(10, 3))
+    fig = plt.figure(layout='constrained', figsize=(10, 3), clear=False)
     gs0 = gridspec.GridSpec(1, 2, figure=fig, width_ratios=[6, 1])
     gsl = gridspec.GridSpecFromSubplotSpec(1, 2, gs0[0])
     gsl0 = gridspec.GridSpecFromSubplotSpec(2, 2, gsl[1], height_ratios=[2, 1])
@@ -46,4 +46,4 @@ def test_constrained_layout11rat_2_mutated():
     fig.colorbar(pcm, ax=axs, shrink=0.6, aspect=70.0)
     ax = fig.add_subplot(gsl[0])
     example_plot(ax, fontsize=9)
-# Mutation info: layout = 'constrained' -> layout = None (Call plt.figure)
+# Mutation info: Added clear = False (Call plt.figure)

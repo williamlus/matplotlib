@@ -65,5 +65,5 @@ def test_check_masked_offsets_7_mutated():
     unmasked_x = [datetime(2022, 12, 15, 4, 49, 52), datetime(2022, 12, 15, 4, 49, 53), datetime(2022, 12, 15, 4, 49, 54), datetime(2022, 12, 15, 4, 49, 55), datetime(2022, 12, 15, 4, 49, 56)]
     masked_y = np.ma.array([1, 2, 3, 4, 5], mask=[0, 1, 1, 0, 0])
     fig, ax = plt.subplots()
-    ax.scatter(unmasked_x, masked_y, edgecolors='none')
-# Mutation info: Added edgecolors = none (Call ax.scatter)
+    ax.scatter(unmasked_x, masked_y, edgecolors='face')
+# Mutation info: Added edgecolors = face (Call ax.scatter)

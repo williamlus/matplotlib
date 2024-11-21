@@ -37,6 +37,6 @@ def test_tickedstroke_12_mutated():
     cg2.set(path_effects=[path_effects.withTickedStroke(angle=60, length=2)])
     cg3 = ax3.contour(x1, x2, g3, [0], colors=('b',))
     cg3.set(path_effects=[path_effects.withTickedStroke(spacing=7)])
-    ax3.set_xlim(0, 4, auto=True)
+    ax3.set_xlim(0, 4, emit=True)
     ax3.set_ylim(0, 4)
-# Mutation info: Added auto = True (Call ax3.set_xlim)
+# Mutation info: Added emit = True (Call ax3.set_xlim)

@@ -18,7 +18,7 @@ def test_multivar_alpha_mixing_1_mutated():
     cmap = mpl.colors.MultivarColormap((rainbow, alpha_cmap), 'sRGB_add')
     y, x = np.mgrid[0:10, 0:10] / 9
     im = cmap((y, x))
-    fig, ax = plt.subplots(sharex=True)
+    fig, ax = plt.subplots(squeeze=True)
     ax.imshow(im, interpolation='nearest')
     remove_ticks_and_titles(fig)
-# Mutation info: Added sharex = True (Call plt.subplots)
+# Mutation info: Added squeeze = True (Call plt.subplots)

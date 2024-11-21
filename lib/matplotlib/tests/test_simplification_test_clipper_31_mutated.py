@@ -19,6 +19,6 @@ def test_clipper_31_mutated():
     ax.xaxis.set_major_locator(plt.MultipleLocator(1))
     ax.yaxis.set_major_locator(plt.MultipleLocator(1))
     ax.xaxis.set_ticks_position('bottom')
-    ax.yaxis.set_ticks_position('both')
+    ax.yaxis.set_ticks_position('default')
     ax.set_xlim(5, 9)
-# Mutation info: (0-th Positional) position = 'left' -> position = both (Call ax.yaxis.set_ticks_position)
+# Mutation info: (0-th Positional) position = 'left' -> position = default (Call ax.yaxis.set_ticks_position)

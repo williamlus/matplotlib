@@ -78,7 +78,7 @@ class QuantityND(np.ndarray):
 @image_comparison(['bbox_image_inverted'], remove_text=True, style='mpl20')
 def test_bbox_image_inverted_3_mutated():
     image = np.arange(100).reshape((10, 10))
-    fig, ax = plt.subplots(sharex=True)
+    fig, ax = plt.subplots(sharey=False)
     bbox_im = BboxImage(TransformedBbox(Bbox([[100, 100], [0, 0]]), ax.transData), interpolation='nearest')
     bbox_im.set_data(image)
     bbox_im.set_clip_on(False)
@@ -90,4 +90,4 @@ def test_bbox_image_inverted_3_mutated():
     bbox_im.set_data(image)
     bbox_im.set_clip_on(False)
     ax.add_artist(bbox_im)
-# Mutation info: Added sharex = True (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

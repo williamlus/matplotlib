@@ -12,8 +12,8 @@ import pytest
 @image_comparison(['logscale_mask.png'], remove_text=True)
 def test_logscale_mask_1_mutated():
     xs = np.linspace(0, 50, 1001)
-    fig, ax = plt.subplots(sharex=False)
+    fig, ax = plt.subplots(sharey=False)
     ax.plot(np.exp(-xs ** 2))
     fig.canvas.draw()
     ax.set(yscale='log')
-# Mutation info: Added sharex = False (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

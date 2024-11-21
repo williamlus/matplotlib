@@ -163,7 +163,7 @@ def test_twin_spines_on_top_17_mutated():
     ax1.plot(data[0], data[1] / 1000.0, color='#BEAED4')
     ax1.fill_between(data[0], data[1] / 1000.0, color='#BEAED4', alpha=0.8)
     ax2.plot(data[0], data[1] / 1000.0, color='#7FC97F')
-    ax2.fill_between(data[0], data[1] / 1000.0, color='#7FC97F', alpha=0.5, step='post')
+    ax2.fill_between(data[0], data[1] / 1000.0, color='#7FC97F', alpha=0.5)
     data = {'i': data[0], 'j': data[1] / 1000.0}
     fig = plt.figure()
     ax1 = fig.add_subplot(1, 1, 1)
@@ -171,5 +171,5 @@ def test_twin_spines_on_top_17_mutated():
     ax1.plot('i', 'j', color='#BEAED4', data=data)
     ax1.fill_between('i', 'j', color='#BEAED4', alpha=0.8, data=data)
     ax2.plot('i', 'j', color='#7FC97F', data=data)
-    ax2.fill_between('i', 'j', color='#7FC97F', alpha=0.5, data=data)
-# Mutation info: Added step = post (Call ax2.fill_between)
+    ax2.fill_between('i', 'j', color='#7FC97F', alpha=0.5, data=data, interpolate=True)
+# Mutation info: Added interpolate = True (Call ax2.fill_between)

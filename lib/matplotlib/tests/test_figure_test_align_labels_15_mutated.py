@@ -24,7 +24,7 @@ import matplotlib.dates as mdates
 def test_align_labels_15_mutated():
     fig = plt.figure(layout='tight')
     gs = gridspec.GridSpec(3, 3)
-    ax = fig.add_subplot(gs[0, :2], projection='aitoff')
+    ax = fig.add_subplot(gs[0, :2], projection='rectilinear')
     ax.plot(np.arange(0, 1000000.0, 1000))
     ax.set_ylabel('Ylabel0 0')
     ax = fig.add_subplot(gs[0, -1])
@@ -53,4 +53,4 @@ def test_align_labels_15_mutated():
             for tick in ax.get_xticklabels():
                 tick.set_rotation(90)
     fig.align_labels()
-# Mutation info: Added projection = aitoff (Call fig.add_subplot)
+# Mutation info: Added projection = rectilinear (Call fig.add_subplot)

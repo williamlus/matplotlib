@@ -30,5 +30,5 @@ def test_patch_alpha_coloring_14_mutated():
     patch = mpatches.PathPatch(cut_star1, linewidth=5, linestyle='dashdot', facecolor=(1, 0, 0, 0.5), edgecolor=(0, 0, 1, 0.75))
     ax.add_patch(patch)
     ax.set_xlim(-1, 2)
-    ax.set_ylim(-1, 2, emit=True)
-# Mutation info: Added emit = True (Call ax.set_ylim)
+    ax.set_ylim(-1, 2, auto=True)
+# Mutation info: Added auto = True (Call ax.set_ylim)

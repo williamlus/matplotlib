@@ -57,6 +57,6 @@ def test_RRuleLocator_9_mutated():
     locator = mdates.RRuleLocator(rrule)
     ax.xaxis.set_major_locator(locator)
     ax.xaxis.set_major_formatter(mdates.AutoDateFormatter(locator))
-    ax.autoscale_view(tight=True)
+    ax.autoscale_view(scalex=True)
     fig.autofmt_xdate()
-# Mutation info: Added tight = True (Call ax.autoscale_view)
+# Mutation info: Added scalex = True (Call ax.autoscale_view)

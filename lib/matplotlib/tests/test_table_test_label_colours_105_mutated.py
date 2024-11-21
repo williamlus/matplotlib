@@ -28,5 +28,5 @@ def test_label_colours_105_mutated():
     ax3.table(cellText=cellText, colColours=colours, loc='best')
     ax4 = fig.add_subplot(4, 1, 4)
     ax4.axis('off')
-    ax4.table(cellText=cellText, colColours=colours, colLabels=['Header'] * dim, loc='best', colLoc='left')
-# Mutation info: Added colLoc = left (Call ax4.table)
+    ax4.table(cellText=cellText, colColours=colours, colLabels=['Header'] * dim, loc='best', colLoc='right')
+# Mutation info: Added colLoc = right (Call ax4.table)

@@ -165,11 +165,11 @@ def test_pcolormesh_alpha_4_mutated():
     colors = vir(np.arange(16))
     colors[:, 3] = 0.5 + 0.5 * np.sin(np.arange(16))
     cmap = mcolors.ListedColormap(colors)
-    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, squeeze=True)
+    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, sharey=False)
     for ax in (ax1, ax2, ax3, ax4):
         ax.add_patch(mpatches.Rectangle((0, -1.5), 1.5, 3, facecolor=[0.7, 0.1, 0.1, 0.5], zorder=0))
     ax1.pcolormesh(Qx, Qy, Z[:-1, :-1], cmap=vir, alpha=0.4, shading='flat', zorder=1)
     ax2.pcolormesh(Qx, Qy, Z, cmap=vir, alpha=0.4, shading='gouraud', zorder=1)
     ax3.pcolormesh(Qx, Qy, Z[:-1, :-1], cmap=cmap, shading='flat', zorder=1)
     ax4.pcolormesh(Qx, Qy, Z, cmap=cmap, shading='gouraud', zorder=1)
-# Mutation info: Added squeeze = True (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

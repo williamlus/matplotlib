@@ -27,7 +27,7 @@ def test_masks_and_nans_7_mutated():
     mask[40:60, 80:120] = 1
     U[:20, :40] = np.nan
     U = np.ma.array(U, mask=mask)
-    ax = plt.figure(layout='constrained').subplots()
+    ax = plt.figure(layout='none').subplots()
     with np.errstate(invalid='ignore'):
         ax.streamplot(X, Y, U, V, color=U, cmap=plt.cm.Blues)
-# Mutation info: Added layout = constrained (Call plt.figure)
+# Mutation info: Added layout = none (Call plt.figure)

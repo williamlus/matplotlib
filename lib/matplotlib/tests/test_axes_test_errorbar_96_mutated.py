@@ -171,7 +171,7 @@ def test_errorbar_96_mutated():
     ax.errorbar(x, y, xerr=xerr, fmt='o', alpha=0.4)
     ax.set_title('Hor. symmetric w/ alpha')
     ax = axs[1, 0]
-    ax.errorbar(x, y, yerr=[yerr, 2 * yerr], xerr=[xerr, 2 * xerr], fmt='--o', xuplims=False)
+    ax.errorbar(x, y, yerr=[yerr, 2 * yerr], xerr=[xerr, 2 * xerr], fmt='--o', uplims=False)
     ax.set_title('H, V asymmetric')
     ax = axs[1, 1]
     ax.set_yscale('log')
@@ -186,4 +186,4 @@ def test_errorbar_96_mutated():
     ax = fig.gca()
     ax.errorbar('x', 'y', xerr=0.2, yerr=0.4, data=data)
     ax.set_title('Simplest errorbars, 0.2 in x, 0.4 in y')
-# Mutation info: Added xuplims = False (Call ax.errorbar)
+# Mutation info: Added uplims = False (Call ax.errorbar)

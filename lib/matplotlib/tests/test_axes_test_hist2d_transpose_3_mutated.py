@@ -158,6 +158,6 @@ def test_hist2d_transpose_3_mutated():
     np.random.seed(0)
     x = np.array([5] * 100)
     y = np.random.randn(100) - 2
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(sharex=False)
     ax.hist2d(x, y, bins=10, rasterized=True)
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

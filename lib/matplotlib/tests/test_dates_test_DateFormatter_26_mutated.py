@@ -54,5 +54,5 @@ def test_DateFormatter_26_mutated():
     ax.set_autoscale_on(True)
     ax.plot([t0, tf], [0.0, 1.0], marker='o')
     ax.autoscale_view()
-    fig.autofmt_xdate(which='major')
-# Mutation info: Added which = major (Call fig.autofmt_xdate)
+    fig.autofmt_xdate(which='minor')
+# Mutation info: Added which = minor (Call fig.autofmt_xdate)

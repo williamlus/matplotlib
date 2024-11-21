@@ -157,5 +157,5 @@ def test_hist_step_horiz_7_mutated():
     d1 = np.linspace(0, 10, 50)
     d2 = np.linspace(1, 3, 20)
     fig, ax = plt.subplots()
-    ax.hist((d1, d2), histtype='step', orientation='horizontal', density=True)
-# Mutation info: Added density = True (Call ax.hist)
+    ax.hist((d1, d2), histtype='step', orientation='horizontal', log=False)
+# Mutation info: Added log = False (Call ax.hist)

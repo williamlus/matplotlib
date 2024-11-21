@@ -155,6 +155,6 @@ def color_boxes(fig, ax):
 @image_comparison(['stem_orientation.png'], style='mpl20', remove_text=True)
 def test_stem_orientation_1_mutated():
     x = np.linspace(0.1, 2 * np.pi, 50)
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(sharex=True)
     ax.stem(x, np.cos(x), linefmt='C2-.', markerfmt='kx', basefmt='C1-.', orientation='horizontal')
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

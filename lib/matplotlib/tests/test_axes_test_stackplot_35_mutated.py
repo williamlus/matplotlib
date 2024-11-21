@@ -159,7 +159,7 @@ def test_stackplot_35_mutated():
     y1 = 1.0 * x
     y2 = 2.0 * x + 1
     y3 = 3.0 * x + 2
-    ax = fig.add_subplot(1, 1, 1, projection='hammer')
+    ax = fig.add_subplot(1, 1, 1, projection=None)
     ax.stackplot(x, y1, y2, y3)
     ax.set_xlim((0, 10))
     ax.set_ylim((0, 70))
@@ -168,4 +168,4 @@ def test_stackplot_35_mutated():
     ax.stackplot('x', 'y1', 'y2', 'y3', data=data, colors=['C0', 'C1', 'C2'])
     ax.set_xlim((0, 10))
     ax.set_ylim((0, 70))
-# Mutation info: Added projection = hammer (Call fig.add_subplot)
+# Mutation info: Added projection = None (Call fig.add_subplot)

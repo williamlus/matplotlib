@@ -23,7 +23,7 @@ from matplotlib.font_manager import FontProperties
 @image_comparison(['hatching'], remove_text=True, style='default')
 def test_hatching_5_mutated():
     plt.rcParams['text.kerning_factor'] = 6
-    fig, ax = plt.subplots(squeeze=True)
+    fig, ax = plt.subplots(sharex=True)
     patch = plt.Rectangle((0, 0), 0.3, 0.3, hatch='xx', label='Patch\ndefault color\nfilled')
     ax.add_patch(patch)
     patch = plt.Rectangle((0.33, 0), 0.3, 0.3, hatch='||', edgecolor='C1', label='Patch\nexplicit color\nfilled')
@@ -37,4 +37,4 @@ def test_hatching_5_mutated():
     ax.set_xlim(-0.01, 1.1)
     ax.set_ylim(-0.01, 1.1)
     ax.legend(handlelength=4, handleheight=4)
-# Mutation info: Added squeeze = True (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

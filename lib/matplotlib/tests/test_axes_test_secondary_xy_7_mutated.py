@@ -165,10 +165,10 @@ def test_secondary_xy_7_mutated():
             secax = ax.secondary_xaxis
         else:
             secax = ax.secondary_yaxis
-        secax('top', functions=(invert, invert))
+        secax('left', functions=(invert, invert))
         secax(0.4, functions=(lambda x: 2 * x, lambda x: x / 2))
         secax(0.6, functions=(lambda x: x ** 2, lambda x: x ** (1 / 2)))
         secax(0.8)
         secax('top' if nn == 0 else 'right', functions=_Translation(2))
         secax(6.25, transform=ax.transData)
-# Mutation info: (0-th Positional) location = 0.2 -> location = top (Call secax)
+# Mutation info: (0-th Positional) location = 0.2 -> location = left (Call secax)

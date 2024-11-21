@@ -33,7 +33,7 @@ def test_auto_column_42_mutated():
     tb3.auto_set_column_width(-1)
     tb3.auto_set_column_width(0)
     tb3.auto_set_column_width(1)
-    ax4 = fig.add_subplot(4, 1, 4, projection='mollweide')
+    ax4 = fig.add_subplot(4, 1, 4, projection='lambert')
     ax4.axis('off')
     tb4 = ax4.table(cellText=[['Fit Text', 2], ['very long long text, Longer text than default', 1]], rowLabels=['A', 'B'], colLabels=['Col1', 'Col2'], loc='center')
     tb4.auto_set_font_size(False)
@@ -42,4 +42,4 @@ def test_auto_column_42_mutated():
         tb4.auto_set_column_width('-101')
     with pytest.warns(mpl.MatplotlibDeprecationWarning, match="'col' must be an int or sequence of ints"):
         tb4.auto_set_column_width(['-101'])
-# Mutation info: Added projection = mollweide (Call fig.add_subplot)
+# Mutation info: Added projection = lambert (Call fig.add_subplot)

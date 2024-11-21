@@ -21,5 +21,5 @@ def test_function_scale_7_mutated():
     x = np.arange(1, 1000)
     ax.plot(x, x)
     ax.set_xscale('function', functions=(forward, inverse))
-    ax.set_xlim(1, 1000, auto=False)
-# Mutation info: Added auto = False (Call ax.set_xlim)
+    ax.set_xlim(1, 1000, auto=True)
+# Mutation info: Added auto = True (Call ax.set_xlim)

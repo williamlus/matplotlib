@@ -70,10 +70,10 @@ def _colorbar_extension_length(spacing):
 
 @image_comparison(['colorbar_single_scatter.png'], remove_text=True, savefig_kwarg={'dpi': 40})
 def test_colorbar_single_scatter_0_mutated():
-    plt.figure(layout='constrained')
+    plt.figure(frameon=True)
     x = y = [0]
     z = [50]
     cmap = mpl.colormaps['jet'].resampled(16)
     cs = plt.scatter(x, y, z, c=z, cmap=cmap)
     plt.colorbar(cs)
-# Mutation info: Added layout = constrained (Call plt.figure)
+# Mutation info: Added frameon = True (Call plt.figure)

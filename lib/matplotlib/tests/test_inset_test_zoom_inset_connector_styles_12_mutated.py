@@ -11,6 +11,6 @@ def test_zoom_inset_connector_styles_12_mutated():
         ax.plot([1, 2, 3])
     axs[1].set_xlim(0.5, 1.5)
     indicator = axs[0].indicate_inset_zoom(axs[1], linewidth=5)
-    indicator.connectors[1].set_linestyle('')
+    indicator.connectors[1].set_linestyle('-')
     indicator.connectors[1].set_color('blue')
-# Mutation info: (0-th Positional) ls = 'dashed' -> ls =  (Call indicator.connectors[1].set_linestyle)
+# Mutation info: (0-th Positional) ls = 'dashed' -> ls = - (Call indicator.connectors[1].set_linestyle)

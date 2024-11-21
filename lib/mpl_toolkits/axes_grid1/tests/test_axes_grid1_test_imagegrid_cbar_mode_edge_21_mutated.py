@@ -31,10 +31,10 @@ def test_imagegrid_cbar_mode_edge_21_mutated():
         grid = ImageGrid(fig, position, nrows_ncols=(2, 2), direction=direction, cbar_location=location, cbar_size='20%', cbar_mode='edge')
         ax1, ax2, ax3, ax4 = grid
         ax1.imshow(arr, cmap='nipy_spectral')
-        ax2.imshow(arr.T, cmap='hot', interpolation_stage='auto')
+        ax2.imshow(arr.T, cmap='hot', interpolation_stage='rgba')
         ax3.imshow(np.hypot(arr, arr.T), cmap='jet')
         ax4.imshow(np.arctan2(arr, arr.T), cmap='hsv')
         for ax in grid:
             ax.cax.cla()
             cb = ax.cax.colorbar(ax.images[0])
-# Mutation info: Added interpolation_stage = auto (Call ax2.imshow)
+# Mutation info: Added interpolation_stage = rgba (Call ax2.imshow)

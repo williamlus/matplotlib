@@ -17,8 +17,8 @@ def test_multivar_alpha_mixing_17_mutated():
     alpha_cmap = mpl.colors.LinearSegmentedColormap.from_list('from_list', alpha)
     cmap = mpl.colors.MultivarColormap((rainbow, alpha_cmap), 'sRGB_add')
     y, x = np.mgrid[0:10, 0:10] / 9
-    im = cmap((y, x), clip=False)
+    im = cmap((y, x), clip=True)
     fig, ax = plt.subplots()
     ax.imshow(im, interpolation='nearest')
     remove_ticks_and_titles(fig)
-# Mutation info: Added clip = False (Call cmap)
+# Mutation info: Added clip = True (Call cmap)

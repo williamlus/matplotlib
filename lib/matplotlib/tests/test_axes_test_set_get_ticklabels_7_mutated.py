@@ -157,7 +157,7 @@ def test_set_get_ticklabels_7_mutated():
     fig, ax = plt.subplots(2)
     ha = ['normal', 'set_x/yticklabels']
     ax[0].plot(np.arange(10))
-    ax[0].set_title(ha[0], loc='right')
+    ax[0].set_title(ha[0], loc='left')
     ax[1].plot(np.arange(10))
     ax[1].set_title(ha[1])
     ax[0].set_xticks(range(10))
@@ -168,4 +168,4 @@ def test_set_get_ticklabels_7_mutated():
     ax[1].set_yticks(ax[0].get_yticks())
     ax[1].set_xticklabels(ax[0].get_xticklabels())
     ax[1].set_yticklabels(ax[0].get_yticklabels())
-# Mutation info: Added loc = right (Call ax[0].set_title)
+# Mutation info: Added loc = left (Call ax[0].set_title)

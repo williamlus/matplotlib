@@ -34,7 +34,7 @@ def test_polar_box_1_mutated():
     assert ax2.transData == tr + ax1.transData
     ax2.plot(np.linspace(0, 30, 50), np.linspace(10, 10, 50))
     ax1.set_aspect(1.0)
-    ax1.set_xlim(-5, 12, auto=False)
+    ax1.set_xlim(-5, 12, emit=True)
     ax1.set_ylim(-5, 10)
     ax1.grid(True)
-# Mutation info: Added auto = False (Call ax1.set_xlim)
+# Mutation info: Added emit = True (Call ax1.set_xlim)

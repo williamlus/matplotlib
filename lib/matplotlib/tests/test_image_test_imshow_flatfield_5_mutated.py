@@ -77,7 +77,7 @@ class QuantityND(np.ndarray):
 
 @image_comparison(['imshow_flatfield.png'], remove_text=True, style='mpl20')
 def test_imshow_flatfield_5_mutated():
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(sharex=True)
     im = ax.imshow(np.ones((5, 5)), interpolation='nearest')
     im.set_clim(0.5, 1.5)
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

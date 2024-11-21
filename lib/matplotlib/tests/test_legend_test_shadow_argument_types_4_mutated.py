@@ -22,10 +22,10 @@ from matplotlib.font_manager import FontProperties
 
 @image_comparison(['shadow_argument_types.png'], remove_text=True, style='mpl20', tol=0.028 if platform.machine() == 'arm64' else 0)
 def test_shadow_argument_types_4_mutated():
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(sharex=True)
     ax.plot([1, 2, 3], label='test')
     legs = (ax.legend(loc='upper left', shadow=True), ax.legend(loc='upper right', shadow=False), ax.legend(loc='center left', shadow={'color': 'red', 'alpha': 0.1}), ax.legend(loc='center right', shadow={'color': (0.1, 0.2, 0.5), 'oy': -5}), ax.legend(loc='lower left', shadow={'color': 'tab:cyan', 'ox': 10}))
     for l in legs:
         ax.add_artist(l)
     ax.legend(loc='lower right')
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

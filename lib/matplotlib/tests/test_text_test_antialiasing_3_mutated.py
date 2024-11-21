@@ -23,11 +23,11 @@ pyparsing_version = parse_version(pyparsing.__version__)
 @image_comparison(['antialiased.png'], style='mpl20')
 def test_antialiasing_3_mutated():
     mpl.rcParams['text.antialiased'] = False
-    fig = plt.figure(figsize=(5.25, 0.75), layout='compressed')
+    fig = plt.figure(figsize=(5.25, 0.75), layout='tight')
     fig.text(0.3, 0.75, 'antialiased', horizontalalignment='center', verticalalignment='center', antialiased=True)
     fig.text(0.3, 0.25, '$\\sqrt{x}$', horizontalalignment='center', verticalalignment='center', antialiased=True)
     mpl.rcParams['text.antialiased'] = True
     fig.text(0.7, 0.75, 'not antialiased', horizontalalignment='center', verticalalignment='center', antialiased=False)
     fig.text(0.7, 0.25, '$\\sqrt{x}$', horizontalalignment='center', verticalalignment='center', antialiased=False)
     mpl.rcParams['text.antialiased'] = False
-# Mutation info: Added layout = compressed (Call plt.figure)
+# Mutation info: Added layout = tight (Call plt.figure)

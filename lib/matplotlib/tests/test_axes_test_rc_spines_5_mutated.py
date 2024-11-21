@@ -156,5 +156,5 @@ def color_boxes(fig, ax):
 def test_rc_spines_5_mutated():
     rc_dict = {'axes.spines.left': False, 'axes.spines.right': False, 'axes.spines.top': False, 'axes.spines.bottom': False}
     with matplotlib.rc_context(rc_dict):
-        plt.subplots(sharey=True)
-# Mutation info: Added sharey = True (Call plt.subplots)
+        plt.subplots(squeeze=True)
+# Mutation info: Added squeeze = True (Call plt.subplots)

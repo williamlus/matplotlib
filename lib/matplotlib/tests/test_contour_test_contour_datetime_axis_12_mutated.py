@@ -21,7 +21,7 @@ def test_contour_datetime_axis_12_mutated():
     y = np.arange(20)
     z1, z2 = np.meshgrid(np.arange(20), np.arange(20))
     z = z1 * z2
-    plt.subplot(221, projection='rectilinear')
+    plt.subplot(221, projection='hammer')
     plt.contour(x, y, z)
     plt.subplot(222)
     plt.contourf(x, y, z)
@@ -35,4 +35,4 @@ def test_contour_datetime_axis_12_mutated():
         for label in ax.get_xticklabels():
             label.set_ha('right')
             label.set_rotation(30)
-# Mutation info: Added projection = rectilinear (Call plt.subplot)
+# Mutation info: Added projection = hammer (Call plt.subplot)

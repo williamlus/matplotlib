@@ -92,11 +92,11 @@ def test_downsampling_34_mutated():
     aa[:, int(N / 3):] = a[:, int(N / 3):]
     a = aa
     fig, axs = plt.subplots(2, 3, figsize=(7, 6), layout='compressed')
-    axs[0, 0].imshow(a, interpolation='nearest', interpolation_stage='rgba', cmap='RdBu_r', filternorm=True)
+    axs[0, 0].imshow(a, interpolation='nearest', interpolation_stage='rgba', cmap='RdBu_r', aspect='auto')
     axs[0, 0].set_xlim(125, 175)
     axs[0, 0].set_ylim(250, 200)
     axs[0, 0].set_title('Zoom')
     for ax, interp, space in zip(axs.flat[1:], ['nearest', 'nearest', 'hanning', 'hanning', 'auto'], ['data', 'rgba', 'data', 'rgba', 'auto']):
         ax.imshow(a, interpolation=interp, interpolation_stage=space, cmap='RdBu_r')
         ax.set_title(f"interpolation='{interp}'\nspace='{space}'")
-# Mutation info: Added filternorm = True (Call axs[0, 0].imshow)
+# Mutation info: Added aspect = auto (Call axs[0, 0].imshow)

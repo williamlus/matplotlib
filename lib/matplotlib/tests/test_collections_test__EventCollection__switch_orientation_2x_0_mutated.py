@@ -74,5 +74,5 @@ def test__EventCollection__switch_orientation_2x_0_mutated():
     assert coll.is_horizontal()
     np.testing.assert_array_equal(props['positions'], new_positions)
     check_segments(coll, new_positions, props['linelength'], props['lineoffset'], props['orientation'])
-    splt.set_title('EventCollection: switch_orientation 2x', loc='center')
-# Mutation info: Added loc = center (Call splt.set_title)
+    splt.set_title('EventCollection: switch_orientation 2x', loc='right')
+# Mutation info: Added loc = right (Call splt.set_title)

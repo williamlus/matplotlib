@@ -77,7 +77,7 @@ class QuantityND(np.ndarray):
 
 @image_comparison(['no_interpolation_origin'], remove_text=True)
 def test_no_interpolation_origin_4_mutated():
-    fig, axs = plt.subplots(2, squeeze=False)
+    fig, axs = plt.subplots(2, sharex=True)
     axs[0].imshow(np.arange(100).reshape((2, 50)), origin='lower', interpolation='none')
     axs[1].imshow(np.arange(100).reshape((2, 50)), interpolation='none')
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

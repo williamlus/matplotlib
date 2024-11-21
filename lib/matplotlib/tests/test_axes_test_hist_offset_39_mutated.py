@@ -158,5 +158,5 @@ def test_hist_offset_39_mutated():
     d2 = np.linspace(1, 3, 20)
     fig, ax = plt.subplots()
     ax.hist(d1, bottom=5)
-    ax.hist(d2, bottom=15, density=False)
-# Mutation info: Added density = False (Call ax.hist)
+    ax.hist(d2, bottom=15, orientation='horizontal')
+# Mutation info: Added orientation = horizontal (Call ax.hist)

@@ -172,7 +172,7 @@ def test_psd_csd_23_mutated():
             assert len(ret) == 2 + kwargs.get('return_line', False)
             ax.set(xlabel='', ylabel='')
         for ax, kwargs in zip(plt.figure().subplots(3), all_kwargs):
-            ret = ax.csd(*ys, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, **kwargs, sides='default')
+            ret = ax.csd(*ys, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, **kwargs, sides='twosided')
             assert len(ret) == 2 + kwargs.get('return_line', False)
             ax.set(xlabel='', ylabel='')
-# Mutation info: Added sides = default (Call ax.csd)
+# Mutation info: Added sides = twosided (Call ax.csd)

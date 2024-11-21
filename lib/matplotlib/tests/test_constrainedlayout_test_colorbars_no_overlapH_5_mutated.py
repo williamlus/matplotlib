@@ -33,10 +33,10 @@ def example_pcolor(ax, fontsize=12):
 def test_colorbars_no_overlapH_5_mutated():
     fig = plt.figure(figsize=(4, 2), layout='constrained')
     fig.suptitle('foo')
-    axs = fig.subplots(1, 2, sharex=True, sharey=True)
+    axs = fig.subplots(1, 2, sharex=False, sharey=True)
     for ax in axs:
         ax.yaxis.set_major_formatter(ticker.NullFormatter())
         ax.tick_params(axis='both', direction='in')
         im = ax.imshow([[1, 2], [3, 4]])
         fig.colorbar(im, ax=ax, orientation='horizontal')
-# Mutation info: sharey = True -> sharey = True (Call fig.subplots)
+# Mutation info: sharex = True -> sharex = False (Call fig.subplots)

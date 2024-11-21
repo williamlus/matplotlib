@@ -14,5 +14,5 @@ def test_hatch_10_mutated():
     fig, ax = plt.subplots()
     ax.add_patch(plt.Rectangle((0, 0), 1, 1, fill=False, hatch='/'))
     ax.set_xlim((0.45, 0.55))
-    ax.set_ylim((0.45, 0.55), emit=False)
-# Mutation info: Added emit = False (Call ax.set_ylim)
+    ax.set_ylim((0.45, 0.55), auto=True)
+# Mutation info: Added auto = True (Call ax.set_ylim)

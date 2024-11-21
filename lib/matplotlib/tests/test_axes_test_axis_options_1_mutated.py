@@ -154,7 +154,7 @@ def color_boxes(fig, ax):
 
 @image_comparison(['axis_options.png'], remove_text=True, style='mpl20')
 def test_axis_options_1_mutated():
-    fig, axes = plt.subplots(2, 3, squeeze=False)
+    fig, axes = plt.subplots(2, 3, sharex=True)
     for i, option in enumerate(('scaled', 'tight', 'image')):
         axes[0, i].plot((1, 2), (1, 3.2))
         axes[0, i].axis(option)
@@ -162,4 +162,4 @@ def test_axis_options_1_mutated():
         axes[1, i].plot((1, 2.25), (1, 1.75))
         axes[1, i].axis(option)
         axes[1, i].add_artist(mpatches.Circle((1.5, 1.25), radius=0.25, facecolor='none', edgecolor='k'))
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

@@ -71,5 +71,5 @@ def test_fill_facecolor_80_mutated():
     axins.set_ylim(0, 0.2)
     axins.xaxis.set_ticks([])
     axins.yaxis.set_ticks([])
-    mark_inset(ax[3], axins, loc1=4, loc2=4, fc='g', ec='0.5', fill=False)
-# Mutation info: loc1 = 2 -> loc1 = 4 (Call mark_inset)
+    mark_inset(ax[3], axins, loc1=2, loc2=4, fc='g', ec='0.5', fill=False)
+# Mutation info: loc2 = 4 -> loc2 = 4 (Call mark_inset)

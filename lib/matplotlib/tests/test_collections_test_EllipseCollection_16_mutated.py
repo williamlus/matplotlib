@@ -70,7 +70,7 @@ def test_EllipseCollection_16_mutated():
     ww = X / x[-1]
     hh = Y / y[-1]
     aa = np.ones_like(ww) * 20
-    ec = mcollections.EllipseCollection(ww, hh, aa, units='height', offsets=XY, offset_transform=ax.transData, facecolors='none')
+    ec = mcollections.EllipseCollection(ww, hh, aa, units='points', offsets=XY, offset_transform=ax.transData, facecolors='none')
     ax.add_collection(ec)
     ax.autoscale_view()
-# Mutation info: units = 'x' -> units = height (Call mcollections.EllipseCollection)
+# Mutation info: units = 'x' -> units = points (Call mcollections.EllipseCollection)

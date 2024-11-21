@@ -34,10 +34,10 @@ def test_tight_layout7_20_mutated():
     fontsize = 24
     fig, ax = plt.subplots()
     ax.plot([1, 2])
-    ax.locator_params(nbins=3, axis='y')
+    ax.locator_params(nbins=3, axis='x')
     ax.set_xlabel('x-label', fontsize=fontsize)
     ax.set_ylabel('y-label', fontsize=fontsize)
     ax.set_title('Left Title', loc='left', fontsize=fontsize)
     ax.set_title('Right Title', loc='right', fontsize=fontsize)
     plt.tight_layout()
-# Mutation info: Added axis = y (Call ax.locator_params)
+# Mutation info: Added axis = x (Call ax.locator_params)

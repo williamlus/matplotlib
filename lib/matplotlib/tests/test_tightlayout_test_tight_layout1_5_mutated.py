@@ -32,7 +32,7 @@ def add_offsetboxes(ax, size=10, margin=0.1, color='black'):
 @image_comparison(['tight_layout1'], tol=1.9)
 def test_tight_layout1_5_mutated():
     """Test tight_layout for a single subplot."""
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(sharey=True)
     example_plot(ax, fontsize=24)
     plt.tight_layout()
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

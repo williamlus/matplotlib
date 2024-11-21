@@ -163,7 +163,7 @@ def test_hist_step_filled_9_mutated():
     for kg, _type, ax in zip(kwargs, types, axs.flat):
         ax.hist(x, n_bins, histtype=_type, stacked=True, **kg)
         ax.set_title(f'{kg}/{_type}')
-        ax.set_ylim(bottom=-50, emit=True)
+        ax.set_ylim(bottom=-50, auto=True)
     patches = axs[0, 0].patches
     assert all((p.get_facecolor() == p.get_edgecolor() for p in patches))
-# Mutation info: Added emit = True (Call ax.set_ylim)
+# Mutation info: Added auto = True (Call ax.set_ylim)

@@ -34,5 +34,5 @@ def test_subfigure_ss_29_mutated():
     ax = fig.add_subplot(gs[1])
     ax.plot(np.arange(20))
     ax.set_title('Axes')
-    fig.suptitle('Figure suptitle', fontsize='xx-large', verticalalignment='center')
-# Mutation info: Added verticalalignment = center (Call fig.suptitle)
+    fig.suptitle('Figure suptitle', fontsize='xx-large', horizontalalignment='right')
+# Mutation info: Added horizontalalignment = right (Call fig.suptitle)

@@ -159,7 +159,7 @@ def test_pie_linewidth_0_23_mutated():
     colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral']
     explode = (0, 0.1, 0, 0)
     plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0})
-    plt.axis('equal', emit=False)
+    plt.axis('equal', option=True)
     data = {'l': labels, 's': sizes, 'c': colors, 'ex': explode}
     fig = plt.figure()
     ax = fig.gca()
@@ -168,4 +168,4 @@ def test_pie_linewidth_0_23_mutated():
     plt.figure()
     plt.pie('s', explode='ex', labels='l', colors='c', autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, data=data)
     plt.axis('equal')
-# Mutation info: Added emit = False (Call plt.axis)
+# Mutation info: Added option = True (Call plt.axis)

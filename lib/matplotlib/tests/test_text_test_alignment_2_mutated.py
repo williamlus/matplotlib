@@ -32,8 +32,8 @@ def test_alignment_2_mutated():
             x += 0.1
     ax.plot([0, 1], [0.5, 0.5])
     ax.plot([0, 1], [1.0, 1.0])
-    ax.set_xlim(0, 1, emit=False)
+    ax.set_xlim(0, 1, auto=True)
     ax.set_ylim(0, 1.5)
     ax.set_xticks([])
     ax.set_yticks([])
-# Mutation info: Added emit = False (Call ax.set_xlim)
+# Mutation info: Added auto = True (Call ax.set_xlim)

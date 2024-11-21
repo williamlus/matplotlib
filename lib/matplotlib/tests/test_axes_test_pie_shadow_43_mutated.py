@@ -161,5 +161,5 @@ def test_pie_shadow_43_mutated():
     axes[0][0].pie(sizes, explode=explode, colors=colors, shadow=True, startangle=90, wedgeprops={'linewidth': 0})
     axes[0][1].pie(sizes, explode=explode, colors=colors, shadow=False, startangle=90, wedgeprops={'linewidth': 0})
     axes[1][0].pie(sizes, explode=explode, colors=colors, shadow={'ox': -0.05, 'oy': -0.05, 'shade': 0.9, 'edgecolor': 'none'}, startangle=90, wedgeprops={'linewidth': 0})
-    axes[1][1].pie(sizes, explode=explode, colors=colors, shadow={'ox': 0.05, 'linewidth': 2, 'shade': 0.2}, startangle=90, wedgeprops={'linewidth': 0}, frame=True)
-# Mutation info: Added frame = True (Call axes[1][1].pie)
+    axes[1][1].pie(sizes, explode=explode, colors=colors, shadow={'ox': 0.05, 'linewidth': 2, 'shade': 0.2}, startangle=90, wedgeprops={'linewidth': 0}, counterclock=False)
+# Mutation info: Added counterclock = False (Call axes[1][1].pie)

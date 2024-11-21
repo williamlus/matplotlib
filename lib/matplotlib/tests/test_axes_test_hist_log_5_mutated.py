@@ -156,6 +156,6 @@ def color_boxes(fig, ax):
 def test_hist_log_5_mutated():
     data0 = np.linspace(0, 1, 200) ** 3
     data = np.concatenate([1 - data0, 1 + data0])
-    fig, ax = plt.subplots(sharex=False)
+    fig, ax = plt.subplots(sharex=True)
     ax.hist(data, fill=False, log=True)
-# Mutation info: Added sharex = False (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

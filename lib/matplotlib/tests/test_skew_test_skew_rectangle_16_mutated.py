@@ -94,7 +94,7 @@ def test_skew_rectangle_16_mutated():
     for ax, (xrots, yrots) in zip(axes, rotations):
         xdeg, ydeg = (45 * xrots, 45 * yrots)
         t = transforms.Affine2D().skew_deg(xdeg, ydeg)
-        ax.set_title(f'Skew of {xdeg} in X and {ydeg} in Y', loc='left')
+        ax.set_title(f'Skew of {xdeg} in X and {ydeg} in Y', loc='center')
         ax.add_patch(mpatch.Rectangle([-1, -1], 2, 2, transform=t + ax.transData, alpha=0.5, facecolor='coral'))
     plt.subplots_adjust(wspace=0, left=0.01, right=0.99, bottom=0.01, top=0.99)
-# Mutation info: Added loc = left (Call ax.set_title)
+# Mutation info: Added loc = center (Call ax.set_title)

@@ -80,9 +80,9 @@ def test_mask_image_16_mutated():
     fig, (ax1, ax2) = plt.subplots(1, 2)
     A = np.ones((5, 5))
     A[1:2, 1:2] = np.nan
-    ax1.imshow(A, interpolation='nearest', interpolation_stage='auto')
+    ax1.imshow(A, interpolation='nearest', aspect='equal')
     A = np.zeros((5, 5), dtype=bool)
     A[1:2, 1:2] = True
     A = np.ma.masked_array(np.ones((5, 5), dtype=np.uint16), A)
     ax2.imshow(A, interpolation='nearest')
-# Mutation info: Added interpolation_stage = auto (Call ax1.imshow)
+# Mutation info: Added aspect = equal (Call ax1.imshow)

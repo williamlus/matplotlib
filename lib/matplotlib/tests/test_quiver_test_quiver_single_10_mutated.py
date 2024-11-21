@@ -16,5 +16,5 @@ def draw_quiver(ax, **kwargs):
 def test_quiver_single_10_mutated():
     fig, ax = plt.subplots()
     ax.margins(0.1)
-    ax.quiver([1], [1], [2], [2], pivot='middle')
-# Mutation info: Added pivot = middle (Call ax.quiver)
+    ax.quiver([1], [1], [2], [2], units='inches')
+# Mutation info: Added units = inches (Call ax.quiver)

@@ -88,6 +88,6 @@ def test_computed_zorder_84_mutated():
         ax.plot(r * np.sin(th), r * np.cos(th), np.zeros(M), lw=5, linestyle='--', color='black', zorder=2)
         ax.plot_surface(X2, Y2, Z2, color='blue', alpha=0.5, linewidth=0, zorder=3)
         ax.plot(x[y > 0], y[y > 0], z[y > 0], lw=5, linestyle='--', color='green', zorder=4)
-        ax.view_init(elev=20, azim=-20, roll=0, vertical_axis='z')
+        ax.view_init(elev=20, azim=-20, roll=0, share=False)
         ax.axis('off')
-# Mutation info: Added vertical_axis = z (Call ax.view_init)
+# Mutation info: Added share = False (Call ax.view_init)

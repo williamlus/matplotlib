@@ -14,5 +14,5 @@ def test_polar_coord_annotations_7_mutated():
     el.set_clip_box(ax.bbox)
     ax.annotate('the top', xy=(np.pi / 2.0, 10.0), xytext=(np.pi / 3, 20.0), xycoords='polar', textcoords='polar', arrowprops=dict(facecolor='black', shrink=0.05), horizontalalignment='left', verticalalignment='baseline', clip_on=True)
     ax.set_xlim(-20, 20)
-    ax.set_ylim(-20, 20, emit=True)
-# Mutation info: Added emit = True (Call ax.set_ylim)
+    ax.set_ylim(-20, 20, auto=False)
+# Mutation info: Added auto = False (Call ax.set_ylim)

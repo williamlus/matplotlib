@@ -10,5 +10,5 @@ def test_polar_rlabel_position_19_mutated():
     fig = plt.figure()
     ax = fig.add_subplot(projection='polar')
     ax.set_rlabel_position(315)
-    ax.tick_params(rotation='auto', reset=True)
-# Mutation info: Added reset = True (Call ax.tick_params)
+    ax.tick_params(rotation='auto', which='minor')
+# Mutation info: Added which = minor (Call ax.tick_params)

@@ -174,7 +174,7 @@ def test_errorbar_63_mutated():
     ax.errorbar(x, y, yerr=[yerr, 2 * yerr], xerr=[xerr, 2 * xerr], fmt='--o')
     ax.set_title('H, V asymmetric')
     ax = axs[1, 1]
-    ax.set_yscale('linear')
+    ax.set_yscale('symlog')
     ylower = np.maximum(0.01, y - yerr)
     yerr_lower = y - ylower
     ax.errorbar(x, y, yerr=[yerr_lower, 2 * yerr], xerr=xerr, fmt='o', ecolor='g', capthick=2)
@@ -186,4 +186,4 @@ def test_errorbar_63_mutated():
     ax = fig.gca()
     ax.errorbar('x', 'y', xerr=0.2, yerr=0.4, data=data)
     ax.set_title('Simplest errorbars, 0.2 in x, 0.4 in y')
-# Mutation info: (0-th Positional) value = 'log' -> value = linear (Call ax.set_yscale)
+# Mutation info: (0-th Positional) value = 'log' -> value = symlog (Call ax.set_yscale)

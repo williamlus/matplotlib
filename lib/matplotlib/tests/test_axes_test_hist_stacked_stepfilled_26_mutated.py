@@ -157,8 +157,8 @@ def test_hist_stacked_stepfilled_26_mutated():
     d1 = np.linspace(1, 3, 20)
     d2 = np.linspace(0, 10, 50)
     fig, ax = plt.subplots()
-    ax.hist((d1, d2), histtype='stepfilled', stacked=True, cumulative=False)
+    ax.hist((d1, d2), histtype='stepfilled', stacked=True, density=True)
     data = {'x': (d1, d2)}
     fig, ax = plt.subplots()
     ax.hist('x', histtype='stepfilled', stacked=True, data=data)
-# Mutation info: Added cumulative = False (Call ax.hist)
+# Mutation info: Added density = True (Call ax.hist)

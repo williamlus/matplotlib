@@ -171,8 +171,8 @@ def test_psd_csd_15_mutated():
             ret = ax.psd(np.concatenate(ys), NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, **kwargs)
             assert len(ret) == 2 + kwargs.get('return_line', False)
             ax.set(xlabel='', ylabel='')
-        for ax, kwargs in zip(plt.figure(layout='none').subplots(3), all_kwargs):
+        for ax, kwargs in zip(plt.figure(frameon=False).subplots(3), all_kwargs):
             ret = ax.csd(*ys, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, **kwargs)
             assert len(ret) == 2 + kwargs.get('return_line', False)
             ax.set(xlabel='', ylabel='')
-# Mutation info: Added layout = none (Call plt.figure)
+# Mutation info: Added frameon = False (Call plt.figure)

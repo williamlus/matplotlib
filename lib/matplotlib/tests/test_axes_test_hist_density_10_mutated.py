@@ -157,5 +157,5 @@ def test_hist_density_10_mutated():
     np.random.seed(19680801)
     data = np.random.standard_normal(2000)
     fig, ax = plt.subplots()
-    ax.hist(data, density=True, orientation='vertical')
-# Mutation info: Added orientation = vertical (Call ax.hist)
+    ax.hist(data, density=True, cumulative=False)
+# Mutation info: Added cumulative = False (Call ax.hist)

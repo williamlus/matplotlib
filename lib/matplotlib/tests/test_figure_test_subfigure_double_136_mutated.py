@@ -47,6 +47,6 @@ def test_subfigure_double_136_mutated():
     for nn, ax in enumerate(axsnest1):
         ax.set_ylabel(f'ylabel{nn}')
     subfigsnest[1].supxlabel('supxlabel')
-    subfigsnest[1].supylabel('supylabel', verticalalignment='baseline')
+    subfigsnest[1].supylabel('supylabel', va='bottom')
     axsRight = subfigs[1].subplots(2, 2)
-# Mutation info: Added verticalalignment = baseline (Call subfigsnest[1].supylabel)
+# Mutation info: Added va = bottom (Call subfigsnest[1].supylabel)

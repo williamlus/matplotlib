@@ -35,8 +35,8 @@ def test_colorbars_no_overlapV_20_mutated():
     axs = fig.subplots(2, 1, sharex=True, sharey=True)
     for ax in axs:
         ax.yaxis.set_major_formatter(ticker.NullFormatter())
-        ax.tick_params(axis='x', direction='in')
+        ax.tick_params(axis='both', direction='in', which='both')
         im = ax.imshow([[1, 2], [3, 4]])
         fig.colorbar(im, ax=ax, orientation='vertical')
     fig.suptitle('foo')
-# Mutation info: axis = 'both' -> axis = x (Call ax.tick_params)
+# Mutation info: Added which = both (Call ax.tick_params)

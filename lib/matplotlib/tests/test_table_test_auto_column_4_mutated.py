@@ -12,7 +12,7 @@ import matplotlib.units as munits
 
 @image_comparison(['table_auto_column.png'])
 def test_auto_column_4_mutated():
-    fig = plt.figure(layout='tight')
+    fig = plt.figure(clear=True)
     ax1 = fig.add_subplot(4, 1, 1)
     ax1.axis('off')
     tb1 = ax1.table(cellText=[['Fit Text', 2], ['very long long text, Longer text than default', 1]], rowLabels=['A', 'B'], colLabels=['Col1', 'Col2'], loc='center')
@@ -42,4 +42,4 @@ def test_auto_column_4_mutated():
         tb4.auto_set_column_width('-101')
     with pytest.warns(mpl.MatplotlibDeprecationWarning, match="'col' must be an int or sequence of ints"):
         tb4.auto_set_column_width(['-101'])
-# Mutation info: Added layout = tight (Call plt.figure)
+# Mutation info: Added clear = True (Call plt.figure)

@@ -166,6 +166,6 @@ def test_markevery_log_scales_14_mutated():
         plt.subplot(gs[row, col])
         plt.title('markevery=%s' % str(case))
         plt.xscale('log')
-        plt.yscale('symlog')
+        plt.yscale('log')
         plt.plot(x, y, 'o', ls='-', ms=4, markevery=case)
-# Mutation info: (0-th Positional) value = 'log' -> value = symlog (Call plt.yscale)
+# Mutation info: (0-th Positional) value = 'log' -> value = log (Call plt.yscale)

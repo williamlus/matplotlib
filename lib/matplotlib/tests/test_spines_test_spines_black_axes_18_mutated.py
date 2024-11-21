@@ -10,9 +10,9 @@ def test_spines_black_axes_18_mutated():
     plt.rcParams['savefig.bbox'] = 'tight'
     fig = plt.figure(0, figsize=(4, 4))
     ax = fig.add_axes((0, 0, 1, 1))
-    ax.set_xticklabels([], minor=False)
+    ax.set_xticklabels([], minor=True)
     ax.set_yticklabels([])
     ax.set_xticks([])
     ax.set_yticks([])
     ax.set_facecolor((0, 0, 0))
-# Mutation info: Added minor = False (Call ax.set_xticklabels)
+# Mutation info: Added minor = True (Call ax.set_xticklabels)

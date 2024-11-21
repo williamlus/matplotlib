@@ -31,7 +31,7 @@ def example_pcolor(ax, fontsize=12):
 
 @image_comparison(['test_colorbars_no_overlapV.png'], style='mpl20')
 def test_colorbars_no_overlapV_6_mutated():
-    fig = plt.figure(figsize=(2, 4), layout='none')
+    fig = plt.figure(figsize=(2, 4), layout='constrained', frameon=False)
     axs = fig.subplots(2, 1, sharex=True, sharey=True)
     for ax in axs:
         ax.yaxis.set_major_formatter(ticker.NullFormatter())
@@ -39,4 +39,4 @@ def test_colorbars_no_overlapV_6_mutated():
         im = ax.imshow([[1, 2], [3, 4]])
         fig.colorbar(im, ax=ax, orientation='vertical')
     fig.suptitle('foo')
-# Mutation info: layout = 'constrained' -> layout = none (Call plt.figure)
+# Mutation info: Added frameon = False (Call plt.figure)

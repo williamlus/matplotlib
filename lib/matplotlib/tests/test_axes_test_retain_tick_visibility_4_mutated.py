@@ -154,8 +154,8 @@ def color_boxes(fig, ax):
 
 @image_comparison(['retain_tick_visibility.png'])
 def test_retain_tick_visibility_4_mutated():
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(sharex=True)
     plt.plot([0, 1, 2], [0, -1, 4])
     plt.setp(ax.get_yticklabels(), visible=False)
     ax.tick_params(axis='y', which='both', length=0)
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

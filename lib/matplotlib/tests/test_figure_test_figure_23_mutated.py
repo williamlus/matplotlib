@@ -28,6 +28,6 @@ def test_figure_23_mutated():
     ax.plot(np.arange(5))
     plt.figure('tomorrow')
     plt.plot([0, 1], [1, 0], 'r')
-    plt.figure('today', layout='compressed')
+    plt.figure('today', layout=None)
     plt.close('tomorrow')
-# Mutation info: Added layout = compressed (Call plt.figure)
+# Mutation info: Added layout = None (Call plt.figure)

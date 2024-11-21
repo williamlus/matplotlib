@@ -157,6 +157,6 @@ def test_boxplot_sym_14_mutated():
     x = np.linspace(-7, 7, 140)
     x = np.hstack([-25, x, 25])
     fig, ax = plt.subplots()
-    ax.boxplot([x, x], sym='gs', autorange=True)
+    ax.boxplot([x, x], sym='gs', notch=True)
     ax.set_ylim((-30, 30))
-# Mutation info: Added autorange = True (Call ax.boxplot)
+# Mutation info: Added notch = True (Call ax.boxplot)

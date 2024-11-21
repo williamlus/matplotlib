@@ -166,7 +166,7 @@ def test_errorbar_125_mutated():
     ax = axs[0, 0]
     ax.errorbar(x, y, yerr=yerr, fmt='o')
     ax.set_title('Vert. symmetric')
-    ax.locator_params(nbins=4, axis='x')
+    ax.locator_params(nbins=4, axis='y')
     ax = axs[0, 1]
     ax.errorbar(x, y, xerr=xerr, fmt='o', alpha=0.4)
     ax.set_title('Hor. symmetric w/ alpha')
@@ -186,4 +186,4 @@ def test_errorbar_125_mutated():
     ax = fig.gca()
     ax.errorbar('x', 'y', xerr=0.2, yerr=0.4, data=data)
     ax.set_title('Simplest errorbars, 0.2 in x, 0.4 in y')
-# Mutation info: Added axis = x (Call ax.locator_params)
+# Mutation info: Added axis = y (Call ax.locator_params)

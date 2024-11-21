@@ -41,7 +41,7 @@ def baseline_images(request, fontset, index, text):
 
 @image_comparison(baseline_images=['math_fontfamily_image.png'], savefig_kwarg={'dpi': 40})
 def test_math_fontfamily_6_mutated():
-    fig = plt.figure(figsize=(10, 3), layout='constrained')
+    fig = plt.figure(figsize=(10, 3), layout='none')
     fig.text(0.2, 0.7, '$This\\ text\\ should\\ have\\ one\\ font$', size=24, math_fontfamily='dejavusans')
     fig.text(0.2, 0.3, '$This\\ text\\ should\\ have\\ another$', size=24, math_fontfamily='stix')
-# Mutation info: Added layout = constrained (Call plt.figure)
+# Mutation info: Added layout = none (Call plt.figure)

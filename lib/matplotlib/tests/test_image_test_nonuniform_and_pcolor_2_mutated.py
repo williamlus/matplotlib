@@ -77,7 +77,7 @@ class QuantityND(np.ndarray):
 
 @image_comparison(['nonuniform_and_pcolor.png'], style='mpl20')
 def test_nonuniform_and_pcolor_2_mutated():
-    axs = plt.figure(figsize=(3, 3), layout='compressed').subplots(3, sharex=True, sharey=True)
+    axs = plt.figure(figsize=(3, 3), layout='none').subplots(3, sharex=True, sharey=True)
     for ax, interpolation in zip(axs, ['nearest', 'bilinear']):
         im = NonUniformImage(ax, interpolation=interpolation)
         im.set_data(np.arange(3) ** 2, np.arange(3) ** 2, np.arange(9).reshape((3, 3)))
@@ -86,4 +86,4 @@ def test_nonuniform_and_pcolor_2_mutated():
     for ax in axs:
         ax.set_axis_off()
         ax.set(xlim=(0, 10))
-# Mutation info: Added layout = compressed (Call plt.figure)
+# Mutation info: Added layout = none (Call plt.figure)

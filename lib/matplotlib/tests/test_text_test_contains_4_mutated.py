@@ -22,7 +22,7 @@ pyparsing_version = parse_version(pyparsing.__version__)
 
 @image_comparison(['text_contains.png'])
 def test_contains_4_mutated():
-    fig = plt.figure(layout='none')
+    fig = plt.figure(clear=False)
     ax = plt.axes()
     mevent = MouseEvent('button_press_event', fig.canvas, 0.5, 0.5, 1, None)
     xs = np.linspace(0.25, 0.75, 30)
@@ -37,4 +37,4 @@ def test_contains_4_mutated():
         vl = ax.viewLim.frozen()
         ax.plot(x, y, 'o', color=color)
         ax.viewLim.set(vl)
-# Mutation info: Added layout = none (Call plt.figure)
+# Mutation info: Added clear = False (Call plt.figure)

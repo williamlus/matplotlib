@@ -92,7 +92,7 @@ def test_imshow_masked_interpolation_17_mutated():
     interps.remove('auto')
     interps.remove('antialiased')
     for interp, ax in zip(interps, ax_grid.ravel()):
-        ax.set_title(interp, loc='center')
+        ax.set_title(interp, loc='right')
         ax.imshow(data, norm=n, cmap=cmap, interpolation=interp)
         ax.axis('off')
-# Mutation info: Added loc = center (Call ax.set_title)
+# Mutation info: Added loc = right (Call ax.set_title)

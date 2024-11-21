@@ -25,6 +25,6 @@ def test_linewidth_1_mutated():
     X, Y, U, V = velocity_field()
     speed = np.hypot(U, V)
     lw = 5 * speed / speed.max()
-    ax = plt.figure(frameon=False).subplots()
+    ax = plt.figure(clear=True).subplots()
     ax.streamplot(X, Y, U, V, density=[0.5, 1], color='k', linewidth=lw)
-# Mutation info: Added frameon = False (Call plt.figure)
+# Mutation info: Added clear = True (Call plt.figure)

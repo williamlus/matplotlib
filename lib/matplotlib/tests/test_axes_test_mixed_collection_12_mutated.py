@@ -167,5 +167,5 @@ def test_mixed_collection_12_mutated():
     ax.add_collection(p1)
     ax.add_collection(p2)
     ax.set_xlim(0, 16)
-    ax.set_ylim(0, 16, auto=False)
-# Mutation info: Added auto = False (Call ax.set_ylim)
+    ax.set_ylim(0, 16, emit=False)
+# Mutation info: Added emit = False (Call ax.set_ylim)

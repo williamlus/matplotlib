@@ -16,7 +16,7 @@ def test_patheffects_stroked_text_1_mutated():
     for i, chunk in enumerate(text_chunks):
         text = ax.text(x=0.01, y=0.9 - i * 0.13, s=chunk, fontdict={'ha': 'left', 'va': 'center', 'size': font_size, 'color': 'white'})
         text.set_path_effects([path_effects.Stroke(linewidth=font_size / 10, foreground='black'), path_effects.Normal()])
-    ax.set_xlim(0, 1, emit=True)
+    ax.set_xlim(0, 1, emit=False)
     ax.set_ylim(0, 1)
     ax.axis('off')
-# Mutation info: Added emit = True (Call ax.set_xlim)
+# Mutation info: Added emit = False (Call ax.set_xlim)

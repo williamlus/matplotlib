@@ -156,6 +156,6 @@ def color_boxes(fig, ax):
 def test_hist_stacked_density_1_mutated():
     d1 = np.linspace(1, 3, 20)
     d2 = np.linspace(0, 10, 50)
-    fig, ax = plt.subplots(sharex=True)
+    fig, ax = plt.subplots(squeeze=False)
     ax.hist((d1, d2), stacked=True, density=True)
-# Mutation info: Added sharex = True (Call plt.subplots)
+# Mutation info: Added squeeze = False (Call plt.subplots)

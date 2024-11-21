@@ -15,7 +15,7 @@ def test_auto_column_67_mutated():
     fig = plt.figure()
     ax1 = fig.add_subplot(4, 1, 1)
     ax1.axis('off')
-    tb1 = ax1.table(cellText=[['Fit Text', 2], ['very long long text, Longer text than default', 1]], rowLabels=['A', 'B'], colLabels=['Col1', 'Col2'], loc='center', cellLoc='center')
+    tb1 = ax1.table(cellText=[['Fit Text', 2], ['very long long text, Longer text than default', 1]], rowLabels=['A', 'B'], colLabels=['Col1', 'Col2'], loc='center', edges='horizontal')
     tb1.auto_set_font_size(False)
     tb1.set_fontsize(12)
     tb1.auto_set_column_width([-1, 0, 1])
@@ -42,4 +42,4 @@ def test_auto_column_67_mutated():
         tb4.auto_set_column_width('-101')
     with pytest.warns(mpl.MatplotlibDeprecationWarning, match="'col' must be an int or sequence of ints"):
         tb4.auto_set_column_width(['-101'])
-# Mutation info: Added cellLoc = center (Call ax1.table)
+# Mutation info: Added edges = horizontal (Call ax1.table)

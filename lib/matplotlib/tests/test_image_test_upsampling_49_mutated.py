@@ -86,5 +86,5 @@ def test_upsampling_49_mutated():
     axs[1].set_title("interpolation='sinc'\nstage='auto'\n(default for upsampling)")
     axs[2].imshow(a, cmap='viridis', interpolation='sinc', interpolation_stage='rgba')
     axs[2].set_title("interpolation='sinc'\nstage='rgba'")
-    fig.colorbar(im, ax=axs, shrink=0.7, extend='both', use_gridspec=False)
-# Mutation info: Added use_gridspec = False (Call fig.colorbar)
+    fig.colorbar(im, ax=axs, shrink=0.7, extend='both', use_gridspec=True)
+# Mutation info: Added use_gridspec = True (Call fig.colorbar)

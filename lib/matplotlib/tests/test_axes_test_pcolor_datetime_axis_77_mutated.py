@@ -172,7 +172,7 @@ def test_pcolor_datetime_axis_77_mutated():
     plt.subplot(224)
     plt.pcolor(x, y, z)
     for ax in fig.get_axes():
-        for label in ax.get_xticklabels(minor=False):
+        for label in ax.get_xticklabels(minor=True):
             label.set_ha('right')
             label.set_rotation(30)
-# Mutation info: Added minor = False (Call ax.get_xticklabels)
+# Mutation info: Added minor = True (Call ax.get_xticklabels)

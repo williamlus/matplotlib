@@ -80,6 +80,6 @@ def test_log_scale_image_8_mutated():
     Z = np.zeros((10, 10))
     Z[::2] = 1
     fig, ax = plt.subplots()
-    ax.imshow(Z, extent=[1, 100, 1, 100], cmap='viridis', vmax=1, vmin=-1, aspect='auto', interpolation_stage='auto')
+    ax.imshow(Z, extent=[1, 100, 1, 100], cmap='viridis', vmax=1, vmin=-1, aspect='auto', resample=True)
     ax.set(yscale='log')
-# Mutation info: Added interpolation_stage = auto (Call ax.imshow)
+# Mutation info: Added resample = True (Call ax.imshow)

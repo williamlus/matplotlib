@@ -13,9 +13,9 @@ def test_bbox_inches_tight_clipping_9_mutated():
     ax = plt.gca()
     ax.set_xlim(0, 5)
     ax.set_ylim(0, 5)
-    patch = mpatches.Rectangle([-50, -50], 100, 100, transform=ax.transData, facecolor='blue', alpha=0.5, rotation_point='xy')
+    patch = mpatches.Rectangle([-50, -50], 100, 100, transform=ax.transData, facecolor='blue', alpha=0.5, rotation_point='center')
     path = mpath.Path.unit_regular_star(5).deepcopy()
     path.vertices *= 0.25
     patch.set_clip_path(path, transform=ax.transAxes)
     plt.gcf().artists.append(patch)
-# Mutation info: Added rotation_point = xy (Call mpatches.Rectangle)
+# Mutation info: Added rotation_point = center (Call mpatches.Rectangle)

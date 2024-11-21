@@ -159,5 +159,5 @@ def test_bar_tick_label_single_9_mutated():
     data = {'a': 0, 'b': 1}
     fig, ax = plt.subplots()
     ax = plt.gca()
-    ax.bar('a', 'b', align='edge', tick_label='0', data=data)
-# Mutation info: align = 'edge' -> align = edge (Call ax.bar)
+    ax.bar('a', 'b', align='center', tick_label='0', data=data)
+# Mutation info: align = 'edge' -> align = center (Call ax.bar)

@@ -159,7 +159,7 @@ def test_extent_units_13_mutated():
     date_last = np.datetime64('2020-01-11', 'D')
     arr = [[i + j for i in range(10)] for j in range(10)]
     axs[0, 0].set_title('Date extents on y axis')
-    im = axs[0, 0].imshow(arr, origin='lower', extent=[1, 11, date_first, date_last], cmap=mpl.colormaps['plasma'], interpolation_stage='data')
+    im = axs[0, 0].imshow(arr, origin='lower', extent=[1, 11, date_first, date_last], cmap=mpl.colormaps['plasma'], interpolation_stage='auto')
     axs[0, 1].set_title('Date extents on x axis (Day of Jan 2020)')
     im = axs[0, 1].imshow(arr, origin='lower', extent=[date_first, date_last, 1, 11], cmap=mpl.colormaps['plasma'])
     axs[0, 1].xaxis.set_major_formatter(mdates.DateFormatter('%d'))
@@ -172,4 +172,4 @@ def test_extent_units_13_mutated():
     axs[1, 1].set(xlabel='Day of Jan 2020')
     with pytest.raises(TypeError, match='set_extent\\(\\) got an unexpected'):
         im.set_extent([2, 12, date_first, date_last], clip=False)
-# Mutation info: Added interpolation_stage = data (Call axs[0, 0].imshow)
+# Mutation info: Added interpolation_stage = auto (Call axs[0, 0].imshow)

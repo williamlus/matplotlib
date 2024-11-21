@@ -161,7 +161,7 @@ def test_twin_spines_on_top_2_mutated():
     data = np.array([[1000, 1100, 1200, 1250], [310, 301, 360, 400]])
     ax2 = ax1.twinx()
     ax1.plot(data[0], data[1] / 1000.0, color='#BEAED4')
-    ax1.fill_between(data[0], data[1] / 1000.0, color='#BEAED4', alpha=0.8, where=False)
+    ax1.fill_between(data[0], data[1] / 1000.0, color='#BEAED4', alpha=0.8, step='post')
     ax2.plot(data[0], data[1] / 1000.0, color='#7FC97F')
     ax2.fill_between(data[0], data[1] / 1000.0, color='#7FC97F', alpha=0.5)
     data = {'i': data[0], 'j': data[1] / 1000.0}
@@ -172,4 +172,4 @@ def test_twin_spines_on_top_2_mutated():
     ax1.fill_between('i', 'j', color='#BEAED4', alpha=0.8, data=data)
     ax2.plot('i', 'j', color='#7FC97F', data=data)
     ax2.fill_between('i', 'j', color='#7FC97F', alpha=0.5, data=data)
-# Mutation info: Added where = False (Call ax1.fill_between)
+# Mutation info: Added step = post (Call ax1.fill_between)

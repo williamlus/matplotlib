@@ -58,5 +58,5 @@ def test_RRuleLocator_29_mutated():
     ax.xaxis.set_major_locator(locator)
     ax.xaxis.set_major_formatter(mdates.AutoDateFormatter(locator))
     ax.autoscale_view()
-    fig.autofmt_xdate(ha='left')
-# Mutation info: Added ha = left (Call fig.autofmt_xdate)
+    fig.autofmt_xdate(which='both')
+# Mutation info: Added which = both (Call fig.autofmt_xdate)

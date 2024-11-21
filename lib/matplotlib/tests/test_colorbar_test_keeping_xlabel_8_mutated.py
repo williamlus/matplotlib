@@ -72,8 +72,8 @@ def _colorbar_extension_length(spacing):
 def test_keeping_xlabel_8_mutated():
     arr = np.arange(25).reshape((5, 5))
     fig, ax = plt.subplots()
-    im = ax.imshow(arr, origin='lower')
+    im = ax.imshow(arr, resample=False)
     cbar = plt.colorbar(im)
     cbar.ax.set_xlabel('Visible Xlabel')
     cbar.set_label('YLabel')
-# Mutation info: Added origin = lower (Call ax.imshow)
+# Mutation info: Added resample = False (Call ax.imshow)

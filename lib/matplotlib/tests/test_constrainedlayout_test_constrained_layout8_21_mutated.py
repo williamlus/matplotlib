@@ -49,8 +49,8 @@ def test_constrained_layout8_21_mutated():
             if j < 1:
                 ax.set_xlabel('')
             ax.set_title('')
-    ax = fig.add_subplot(gs[2, :], projection='hammer')
+    ax = fig.add_subplot(gs[2, :], projection='lambert')
     axs += [ax]
     pcm = example_pcolor(ax, fontsize=9)
     fig.colorbar(pcm, ax=axs, pad=0.01, shrink=0.6)
-# Mutation info: Added projection = hammer (Call fig.add_subplot)
+# Mutation info: Added projection = lambert (Call fig.add_subplot)

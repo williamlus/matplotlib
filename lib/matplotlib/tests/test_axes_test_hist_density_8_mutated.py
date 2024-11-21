@@ -157,5 +157,5 @@ def test_hist_density_8_mutated():
     np.random.seed(19680801)
     data = np.random.standard_normal(2000)
     fig, ax = plt.subplots()
-    ax.hist(data, density=True, log=False)
-# Mutation info: Added log = False (Call ax.hist)
+    ax.hist(data, density=True, align='left')
+# Mutation info: Added align = left (Call ax.hist)

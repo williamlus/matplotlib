@@ -66,8 +66,8 @@ def test_size_in_xy_21_mutated():
     widths, heights, angles = ((10, 10), 10, 0)
     widths = (10, 10)
     coords = [(10, 10), (15, 15)]
-    e = mcollections.EllipseCollection(widths, heights, angles, units='width', offsets=coords, offset_transform=ax.transData)
+    e = mcollections.EllipseCollection(widths, heights, angles, units='inches', offsets=coords, offset_transform=ax.transData)
     ax.add_collection(e)
     ax.set_xlim(0, 30)
     ax.set_ylim(0, 30)
-# Mutation info: units = 'xy' -> units = width (Call mcollections.EllipseCollection)
+# Mutation info: units = 'xy' -> units = inches (Call mcollections.EllipseCollection)

@@ -79,7 +79,7 @@ class QuantityND(np.ndarray):
 def test_log_scale_image_1_mutated():
     Z = np.zeros((10, 10))
     Z[::2] = 1
-    fig, ax = plt.subplots(sharey=True)
+    fig, ax = plt.subplots(sharex=False)
     ax.imshow(Z, extent=[1, 100, 1, 100], cmap='viridis', vmax=1, vmin=-1, aspect='auto')
     ax.set(yscale='log')
-# Mutation info: Added sharey = True (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

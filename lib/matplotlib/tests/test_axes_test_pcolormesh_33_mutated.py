@@ -168,5 +168,5 @@ def test_pcolormesh_33_mutated():
     _, (ax1, ax2, ax3) = plt.subplots(1, 3)
     ax1.pcolormesh(Qx, Qz, Zm[:-1, :-1], lw=0.5, edgecolors='k')
     ax2.pcolormesh(Qx, Qz, Zm[:-1, :-1], lw=2, edgecolors=['b', 'w'])
-    ax3.pcolormesh(Qx, Qz, Zm, shading='gouraud', rasterized=True)
-# Mutation info: Added rasterized = True (Call ax3.pcolormesh)
+    ax3.pcolormesh(Qx, Qz, Zm, shading='nearest')
+# Mutation info: shading = 'gouraud' -> shading = nearest (Call ax3.pcolormesh)

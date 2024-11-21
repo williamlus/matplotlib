@@ -20,6 +20,6 @@ def test_function_scale_11_mutated():
     fig, ax = plt.subplots()
     x = np.arange(1, 1000)
     ax.plot(x, x)
-    ax.set_xscale('logit', functions=(forward, inverse))
+    ax.set_xscale('log', functions=(forward, inverse))
     ax.set_xlim(1, 1000)
-# Mutation info: (0-th Positional) value = 'function' -> value = logit (Call ax.set_xscale)
+# Mutation info: (0-th Positional) value = 'function' -> value = log (Call ax.set_xscale)

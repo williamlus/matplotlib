@@ -26,5 +26,5 @@ def test_patch_alpha_override_14_mutated():
     patch = mpatches.PathPatch(cut_star1, linewidth=5, linestyle='dashdot', alpha=0.25, facecolor=(1, 0, 0, 0.5), edgecolor=(0, 0, 1, 0.75))
     ax.add_patch(patch)
     ax.set_xlim(-1, 2)
-    ax.set_ylim(-1, 2, emit=False)
-# Mutation info: Added emit = False (Call ax.set_ylim)
+    ax.set_ylim(-1, 2, auto=False)
+# Mutation info: Added auto = False (Call ax.set_ylim)

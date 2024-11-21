@@ -162,6 +162,6 @@ def test_boxplot_34_mutated():
     ax.set_ylim((-30, 30))
     data = {'x': [x, x]}
     fig, ax = plt.subplots()
-    ax.boxplot('x', bootstrap=10000, notch=1, data=data, orientation='vertical')
+    ax.boxplot('x', bootstrap=10000, notch=1, data=data, orientation='horizontal')
     ax.set_ylim((-30, 30))
-# Mutation info: Added orientation = vertical (Call ax.boxplot)
+# Mutation info: Added orientation = horizontal (Call ax.boxplot)

@@ -32,5 +32,5 @@ def test_arrow_contains_point_15_mutated():
         for m, patch in enumerate(patches_list):
             inside, res = patch.contains(event)
             if inside:
-                ax.scatter(x, y, s=5, c='r', edgecolors='face')
-# Mutation info: Added edgecolors = face (Call ax.scatter)
+                ax.scatter(x, y, s=5, c='r', plotnonfinite=True)
+# Mutation info: Added plotnonfinite = True (Call ax.scatter)

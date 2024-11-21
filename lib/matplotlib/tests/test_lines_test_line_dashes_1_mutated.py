@@ -21,6 +21,6 @@ from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
 @image_comparison(['line_dashes'], remove_text=True, tol=0.003)
 def test_line_dashes_1_mutated():
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(squeeze=True)
     ax.plot(range(10), linestyle=(0, (3, 3)), lw=5)
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added squeeze = True (Call plt.subplots)

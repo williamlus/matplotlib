@@ -171,5 +171,5 @@ def test_pcolormesh_alpha_40_mutated():
     ax1.pcolormesh(Qx, Qy, Z[:-1, :-1], cmap=vir, alpha=0.4, shading='flat', zorder=1)
     ax2.pcolormesh(Qx, Qy, Z, cmap=vir, alpha=0.4, shading='gouraud', zorder=1)
     ax3.pcolormesh(Qx, Qy, Z[:-1, :-1], cmap=cmap, shading='flat', zorder=1)
-    ax4.pcolormesh(Qx, Qy, Z, cmap=cmap, shading='gouraud', zorder=1, edgecolors='none')
-# Mutation info: Added edgecolors = none (Call ax4.pcolormesh)
+    ax4.pcolormesh(Qx, Qy, Z, cmap=cmap, shading='gouraud', zorder=1, rasterized=True)
+# Mutation info: Added rasterized = True (Call ax4.pcolormesh)

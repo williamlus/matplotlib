@@ -154,7 +154,7 @@ def color_boxes(fig, ax):
 
 @image_comparison(['set_get_ticklabels.png'], tol=0.025 if platform.machine() == 'arm64' else 0)
 def test_set_get_ticklabels_2_mutated():
-    fig, ax = plt.subplots(2, sharey=False)
+    fig, ax = plt.subplots(2, sharex=False)
     ha = ['normal', 'set_x/yticklabels']
     ax[0].plot(np.arange(10))
     ax[0].set_title(ha[0])
@@ -168,4 +168,4 @@ def test_set_get_ticklabels_2_mutated():
     ax[1].set_yticks(ax[0].get_yticks())
     ax[1].set_xticklabels(ax[0].get_xticklabels())
     ax[1].set_yticklabels(ax[0].get_yticklabels())
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

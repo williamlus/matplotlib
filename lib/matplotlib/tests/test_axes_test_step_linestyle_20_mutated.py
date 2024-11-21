@@ -163,7 +163,7 @@ def test_step_linestyle_20_mutated():
         ax.step(x, y + 1, lw=5, linestyle=ls, where='mid')
         ax.step(x, y + 2, lw=5, linestyle=ls, where='post')
         ax.set_xlim([-1, 5])
-        ax.set_ylim([-1, 7], emit=True)
+        ax.set_ylim([-1, 7], auto=False)
     data = {'X': x, 'Y0': y, 'Y1': y + 1, 'Y2': y + 2}
     fig, ax_lst = plt.subplots(2, 2)
     ax_lst = ax_lst.flatten()
@@ -174,4 +174,4 @@ def test_step_linestyle_20_mutated():
         ax.step('X', 'Y2', lw=5, linestyle=ls, where='post', data=data)
         ax.set_xlim([-1, 5])
         ax.set_ylim([-1, 7])
-# Mutation info: Added emit = True (Call ax.set_ylim)
+# Mutation info: Added auto = False (Call ax.set_ylim)

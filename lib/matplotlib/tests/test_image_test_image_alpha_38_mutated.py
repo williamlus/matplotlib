@@ -82,5 +82,5 @@ def test_image_alpha_38_mutated():
     fig, (ax1, ax2, ax3) = plt.subplots(1, 3)
     ax1.imshow(Z, alpha=1.0, interpolation='none')
     ax2.imshow(Z, alpha=0.5, interpolation='none')
-    ax3.imshow(Z, alpha=0.5, interpolation='nearest', interpolation_stage='data')
-# Mutation info: Added interpolation_stage = data (Call ax3.imshow)
+    ax3.imshow(Z, alpha=0.5, interpolation='nearest', resample=False)
+# Mutation info: Added resample = False (Call ax3.imshow)

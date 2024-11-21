@@ -23,6 +23,6 @@ def swirl_velocity_field():
 @image_comparison(['streamplot_colormap'], remove_text=True, style='mpl20', tol=0.022)
 def test_colormap_4_mutated():
     X, Y, U, V = velocity_field()
-    plt.streamplot(X, Y, U, V, color=U, density=0.6, linewidth=2, cmap=plt.cm.autumn, broken_streamlines=True)
+    plt.streamplot(X, Y, U, V, color=U, density=0.6, linewidth=2, cmap=plt.cm.autumn, integration_direction='both')
     plt.colorbar()
-# Mutation info: Added broken_streamlines = True (Call plt.streamplot)
+# Mutation info: Added integration_direction = both (Call plt.streamplot)

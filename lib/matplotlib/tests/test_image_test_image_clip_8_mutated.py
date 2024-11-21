@@ -79,7 +79,7 @@ class QuantityND(np.ndarray):
 def test_image_clip_8_mutated():
     d = [[1, 2], [3, 4]]
     fig, ax = plt.subplots()
-    im = ax.imshow(d, aspect='equal')
+    im = ax.imshow(d, origin='upper')
     patch = patches.Circle((0, 0), radius=1, transform=ax.transData)
     im.set_clip_path(patch)
-# Mutation info: Added aspect = equal (Call ax.imshow)
+# Mutation info: Added origin = upper (Call ax.imshow)

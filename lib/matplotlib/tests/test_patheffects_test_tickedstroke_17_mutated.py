@@ -16,7 +16,7 @@ def test_tickedstroke_17_mutated():
     ax1.add_patch(patch)
     ax1.axis('equal')
     ax1.set_xlim(-2, 2)
-    ax1.set_ylim(-2, 2, auto=False)
+    ax1.set_ylim(-2, 2, auto=True)
     ax2.plot([0, 1], [0, 1], label=' ', path_effects=[path_effects.withTickedStroke(spacing=7, angle=135)])
     nx = 101
     x = np.linspace(0.0, 1.0, nx)
@@ -39,4 +39,4 @@ def test_tickedstroke_17_mutated():
     cg3.set(path_effects=[path_effects.withTickedStroke(spacing=7)])
     ax3.set_xlim(0, 4)
     ax3.set_ylim(0, 4)
-# Mutation info: Added auto = False (Call ax1.set_ylim)
+# Mutation info: Added auto = True (Call ax1.set_ylim)

@@ -25,9 +25,9 @@ def test_labels_13_mutated():
     CS = ax.contour(X, Y, Z)
     disp_units = [(216, 177), (359, 290), (521, 406)]
     data_units = [(-2, 0.5), (0, -1.5), (2.8, 1)]
-    CS.clabel(manual=True)
+    CS.clabel(use_clabeltext=False)
     for x, y in data_units:
         CS.add_label_near(x, y, inline=True, transform=None)
     for x, y in disp_units:
         CS.add_label_near(x, y, inline=True, transform=False)
-# Mutation info: Added manual = True (Call CS.clabel)
+# Mutation info: Added use_clabeltext = False (Call CS.clabel)

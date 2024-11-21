@@ -160,7 +160,7 @@ def test_date_timezone_x_and_y_21_mutated():
     plt.subplot(2, 1, 1)
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         plt.plot_date(time_index, time_index, tz='UTC', ydate=True)
-    plt.subplot(2, 1, 2, projection='lambert')
+    plt.subplot(2, 1, 2, projection='mollweide')
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         plt.plot_date(time_index, time_index, tz='US/Eastern', ydate=True)
-# Mutation info: Added projection = lambert (Call plt.subplot)
+# Mutation info: Added projection = mollweide (Call plt.subplot)

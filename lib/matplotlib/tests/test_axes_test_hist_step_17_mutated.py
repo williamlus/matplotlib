@@ -156,7 +156,7 @@ def color_boxes(fig, ax):
 def test_hist_step_17_mutated():
     d1 = np.linspace(1, 3, 20)
     fig, ax = plt.subplots()
-    ax.hist(d1, histtype='step', cumulative=True)
+    ax.hist(d1, histtype='step', cumulative=False)
     ax.set_ylim(0, 10)
     ax.set_xlim(-1, 5)
-# Mutation info: Added cumulative = True (Call ax.hist)
+# Mutation info: Added cumulative = False (Call ax.hist)

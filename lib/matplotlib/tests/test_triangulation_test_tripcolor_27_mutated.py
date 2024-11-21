@@ -33,9 +33,9 @@ def test_tripcolor_27_mutated():
     ymid = y[triang.triangles].mean(axis=1)
     Cfaces = 0.5 * xmid + ymid
     plt.subplot(121)
-    plt.tripcolor(triang, Cpoints, edgecolors='k', shading='gouraud')
+    plt.tripcolor(triang, Cpoints, edgecolors='k')
     plt.title('point colors')
     plt.subplot(122)
-    plt.tripcolor(triang, facecolors=Cfaces, edgecolors='k')
+    plt.tripcolor(triang, facecolors=Cfaces, edgecolors='k', shading='flat')
     plt.title('facecolors')
-# Mutation info: Added shading = gouraud (Call plt.tripcolor)
+# Mutation info: Added shading = flat (Call plt.tripcolor)

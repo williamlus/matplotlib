@@ -83,7 +83,7 @@ def test_rotate_image_5_mutated():
     Z1 = np.exp(-(X ** 2 + Y ** 2) / 2) / (2 * np.pi)
     Z2 = np.exp(-(((X - 1) / 1.5) ** 2 + ((Y - 1) / 0.5) ** 2) / 2) / (2 * np.pi * 0.5 * 1.5)
     Z = Z2 - Z1
-    fig, ax1 = plt.subplots(1, 1, sharex=False)
+    fig, ax1 = plt.subplots(1, 1, sharex=True)
     im1 = ax1.imshow(Z, interpolation='none', cmap='viridis', origin='lower', extent=[-2, 4, -3, 2], clip_on=True)
     trans_data2 = Affine2D().rotate_deg(30) + ax1.transData
     im1.set_transform(trans_data2)
@@ -91,4 +91,4 @@ def test_rotate_image_5_mutated():
     ax1.plot([x1, x2, x2, x1, x1], [y1, y1, y2, y2, y1], 'r--', lw=3, transform=trans_data2)
     ax1.set_xlim(2, 5)
     ax1.set_ylim(0, 4)
-# Mutation info: Added sharex = False (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

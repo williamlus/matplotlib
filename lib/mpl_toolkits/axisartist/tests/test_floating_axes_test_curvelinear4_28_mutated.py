@@ -22,7 +22,7 @@ def test_curvelinear4_28_mutated():
     axis = grid_helper.new_floating_axis(1, 70, axes=ax1, axis_direction='bottom')
     ax1.axis['z'] = axis
     axis.toggle(all=True, label=True)
-    axis.label.set_axis_direction('bottom')
+    axis.label.set_axis_direction('left')
     axis.label.set_text('z = ?')
     axis.label.set_visible(True)
     axis.line.set_color('0.5')
@@ -31,4 +31,4 @@ def test_curvelinear4_28_mutated():
     ax2.scatter(xx, yy)
     l, = ax2.plot(xx, yy, 'k-')
     l.set_clip_path(ax1.patch)
-# Mutation info: (0-th Positional) d = 'top' -> d = bottom (Call axis.label.set_axis_direction)
+# Mutation info: (0-th Positional) d = 'top' -> d = left (Call axis.label.set_axis_direction)

@@ -67,11 +67,11 @@ def test_equal_box_aspect_22_mutated():
             ax.plot3D(*zip(s, e), color='b')
     xyzlim = np.column_stack([ax.get_xlim3d(), ax.get_ylim3d(), ax.get_zlim3d()])
     XYZlim = [min(xyzlim[0]), max(xyzlim[1])]
-    ax.set_xlim3d(XYZlim, auto=False)
+    ax.set_xlim3d(XYZlim, emit=False)
     ax.set_ylim3d(XYZlim)
     ax.set_zlim3d(XYZlim)
     ax.axis('off')
     ax.set_box_aspect((1, 1, 1))
     with pytest.raises(ValueError, match='Argument zoom ='):
         ax.set_box_aspect((1, 1, 1), zoom=-1)
-# Mutation info: Added auto = False (Call ax.set_xlim3d)
+# Mutation info: Added emit = False (Call ax.set_xlim3d)

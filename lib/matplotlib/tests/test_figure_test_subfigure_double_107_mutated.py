@@ -45,8 +45,8 @@ def test_subfigure_double_107_mutated():
     subfigsnest[1].set_facecolor('g')
     axsnest1 = subfigsnest[1].subplots(3, 1, sharex=True)
     for nn, ax in enumerate(axsnest1):
-        ax.set_ylabel(f'ylabel{nn}', loc='bottom')
+        ax.set_ylabel(f'ylabel{nn}', loc='top')
     subfigsnest[1].supxlabel('supxlabel')
     subfigsnest[1].supylabel('supylabel')
     axsRight = subfigs[1].subplots(2, 2)
-# Mutation info: Added loc = bottom (Call ax.set_ylabel)
+# Mutation info: Added loc = top (Call ax.set_ylabel)

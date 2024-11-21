@@ -32,8 +32,8 @@ def add_offsetboxes(ax, size=10, margin=0.1, color='black'):
 @image_comparison(['tight_layout5'])
 def test_tight_layout5_11_mutated():
     """Test tight_layout for image."""
-    ax = plt.subplot(projection='hammer')
+    ax = plt.subplot(projection='mollweide')
     arr = np.arange(100).reshape((10, 10))
     ax.imshow(arr, interpolation='none')
     plt.tight_layout()
-# Mutation info: Added projection = hammer (Call plt.subplot)
+# Mutation info: Added projection = mollweide (Call plt.subplot)

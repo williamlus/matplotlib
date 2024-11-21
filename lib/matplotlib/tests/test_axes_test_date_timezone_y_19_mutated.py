@@ -159,7 +159,7 @@ def test_date_timezone_y_19_mutated():
     plt.subplot(2, 1, 1)
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         plt.plot_date([3] * 3, time_index, tz='Canada/Eastern', xdate=False, ydate=True)
-    plt.subplot(2, 1, 2, projection='rectilinear')
+    plt.subplot(2, 1, 2, projection=None)
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         plt.plot_date([3] * 3, time_index, tz='UTC', xdate=False, ydate=True)
-# Mutation info: Added projection = rectilinear (Call plt.subplot)
+# Mutation info: Added projection = None (Call plt.subplot)

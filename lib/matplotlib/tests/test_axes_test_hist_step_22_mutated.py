@@ -156,7 +156,7 @@ def color_boxes(fig, ax):
 def test_hist_step_22_mutated():
     d1 = np.linspace(1, 3, 20)
     fig, ax = plt.subplots()
-    ax.hist(d1, histtype='step', align='right')
+    ax.hist(d1, histtype='step', log=False)
     ax.set_ylim(0, 10)
     ax.set_xlim(-1, 5)
-# Mutation info: Added align = right (Call ax.hist)
+# Mutation info: Added log = False (Call ax.hist)

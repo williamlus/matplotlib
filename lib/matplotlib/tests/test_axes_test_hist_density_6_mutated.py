@@ -157,5 +157,5 @@ def test_hist_density_6_mutated():
     np.random.seed(19680801)
     data = np.random.standard_normal(2000)
     fig, ax = plt.subplots()
-    ax.hist(data, density=True, histtype='bar')
-# Mutation info: Added histtype = bar (Call ax.hist)
+    ax.hist(data, density=True, stacked=True)
+# Mutation info: Added stacked = True (Call ax.hist)

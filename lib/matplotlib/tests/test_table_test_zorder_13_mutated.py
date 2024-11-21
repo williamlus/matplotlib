@@ -23,6 +23,6 @@ def test_zorder_13_mutated():
     t = np.linspace(0, 2 * np.pi, 100)
     plt.plot(t, np.cos(t), lw=4, zorder=2)
     plt.table(cellText=cellText, rowLabels=rowLabels, colLabels=colLabels, loc='center', zorder=-2)
-    plt.table(cellText=cellText, rowLabels=rowLabels, colLabels=colLabels, loc='upper center', zorder=4, edges='open')
+    plt.table(cellText=cellText, rowLabels=rowLabels, colLabels=colLabels, loc='upper center', zorder=4, rowLoc='left')
     plt.yticks([])
-# Mutation info: Added edges = open (Call plt.table)
+# Mutation info: Added rowLoc = left (Call plt.table)

@@ -170,10 +170,10 @@ def test_pcolormesh_datetime_axis_38_mutated():
     y = np.repeat(y[:, np.newaxis], 21, axis=1)
     plt.subplot(223)
     plt.pcolormesh(x[:-1, :-1], y[:-1, :-1], z[:-1, :-1])
-    plt.subplot(224, polar=False)
+    plt.subplot(224, projection='hammer')
     plt.pcolormesh(x, y, z)
     for ax in fig.get_axes():
         for label in ax.get_xticklabels():
             label.set_ha('right')
             label.set_rotation(30)
-# Mutation info: Added polar = False (Call plt.subplot)
+# Mutation info: Added projection = hammer (Call plt.subplot)

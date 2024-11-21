@@ -156,8 +156,8 @@ def color_boxes(fig, ax):
 def test_boxplot_no_weird_whisker_17_mutated():
     x = np.array([3, 9000, 150, 88, 350, 200000, 1400, 960], dtype=np.float64)
     ax1 = plt.axes()
-    ax1.boxplot(x, meanline=False)
+    ax1.boxplot(x, vert=False)
     ax1.set_yscale('log')
     ax1.yaxis.grid(False, which='minor')
     ax1.xaxis.grid(False)
-# Mutation info: Added meanline = False (Call ax1.boxplot)
+# Mutation info: Added vert = False (Call ax1.boxplot)

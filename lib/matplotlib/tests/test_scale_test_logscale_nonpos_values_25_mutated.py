@@ -27,6 +27,6 @@ def test_logscale_nonpos_values_25_mutated():
     y = x ** 3
     yerr = x ** 2
     ax4.errorbar(x, y, yerr=yerr)
-    ax4.set_yscale('linear')
+    ax4.set_yscale('logit')
     ax4.set_xscale('log')
-# Mutation info: (0-th Positional) value = 'log' -> value = linear (Call ax4.set_yscale)
+# Mutation info: (0-th Positional) value = 'log' -> value = logit (Call ax4.set_yscale)

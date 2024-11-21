@@ -157,5 +157,5 @@ def test_hist_density_15_mutated():
     np.random.seed(19680801)
     data = np.random.standard_normal(2000)
     fig, ax = plt.subplots()
-    ax.hist(data, density=True, histtype='stepfilled')
-# Mutation info: Added histtype = stepfilled (Call ax.hist)
+    ax.hist(data, density=True, orientation='vertical')
+# Mutation info: Added orientation = vertical (Call ax.hist)

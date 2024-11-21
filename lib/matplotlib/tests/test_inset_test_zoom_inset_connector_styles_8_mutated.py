@@ -9,8 +9,8 @@ def test_zoom_inset_connector_styles_8_mutated():
     fig, axs = plt.subplots(2)
     for ax in axs:
         ax.plot([1, 2, 3])
-    axs[1].set_xlim(0.5, 1.5, auto=True)
+    axs[1].set_xlim(0.5, 1.5, emit=True)
     indicator = axs[0].indicate_inset_zoom(axs[1], linewidth=5)
     indicator.connectors[1].set_linestyle('dashed')
     indicator.connectors[1].set_color('blue')
-# Mutation info: Added auto = True (Call axs[1].set_xlim)
+# Mutation info: Added emit = True (Call axs[1].set_xlim)

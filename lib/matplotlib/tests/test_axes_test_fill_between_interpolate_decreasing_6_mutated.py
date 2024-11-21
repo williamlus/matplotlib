@@ -162,6 +162,6 @@ def test_fill_between_interpolate_decreasing_6_mutated():
     ax.plot(prof, p, 'k')
     ax.fill_betweenx(p, t, prof, where=prof < t, facecolor='blue', interpolate=True, alpha=0.4)
     ax.fill_betweenx(p, t, prof, where=prof > t, facecolor='red', interpolate=True, alpha=0.4)
-    ax.set_xlim(0, 30, emit=False)
+    ax.set_xlim(0, 30, auto=False)
     ax.set_ylim(800, 600)
-# Mutation info: Added emit = False (Call ax.set_xlim)
+# Mutation info: Added auto = False (Call ax.set_xlim)

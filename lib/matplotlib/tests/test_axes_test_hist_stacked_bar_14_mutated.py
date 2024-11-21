@@ -158,6 +158,6 @@ def test_hist_stacked_bar_14_mutated():
     colors = [(0.5759849696758961, 1.0, 0.0), (0.0, 1.0, 0.350624650815206), (0.0, 1.0, 0.6549834156005998), (0.0, 0.6569064625276622, 1.0), (0.28302699607823545, 0.0, 1.0), (0.6849123462299822, 0.0, 1.0)]
     labels = ['green', 'orange', ' yellow', 'magenta', 'black']
     fig, ax = plt.subplots()
-    ax.hist(d, bins=10, histtype='barstacked', align='mid', color=colors, label=labels, orientation='vertical')
+    ax.hist(d, bins=10, histtype='barstacked', align='mid', color=colors, label=labels, stacked=True)
     ax.legend(loc='upper right', bbox_to_anchor=(1.0, 1.0), ncols=1)
-# Mutation info: Added orientation = vertical (Call ax.hist)
+# Mutation info: Added stacked = True (Call ax.hist)

@@ -30,9 +30,9 @@ def test_subfigure_ss_43_mutated():
     for ax in axs.flat:
         pc = ax.pcolormesh(np.random.randn(30, 30), vmin=-2, vmax=2)
     sub.colorbar(pc, ax=axs)
-    sub.suptitle('Left Side', va='baseline')
+    sub.suptitle('Left Side', verticalalignment='bottom')
     ax = fig.add_subplot(gs[1])
     ax.plot(np.arange(20))
     ax.set_title('Axes')
     fig.suptitle('Figure suptitle', fontsize='xx-large')
-# Mutation info: Added va = baseline (Call sub.suptitle)
+# Mutation info: Added verticalalignment = bottom (Call sub.suptitle)

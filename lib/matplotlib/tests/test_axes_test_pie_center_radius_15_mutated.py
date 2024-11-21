@@ -159,6 +159,6 @@ def test_pie_center_radius_15_mutated():
     colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral']
     explode = (0, 0.1, 0, 0)
     plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, center=(1, 2), radius=1.5)
-    plt.annotate('Center point', xy=(1, 2), xytext=(1, 1.3), arrowprops=dict(arrowstyle='->', connectionstyle='arc3'), bbox=dict(boxstyle='square', facecolor='lightgrey'), annotation_clip=False)
+    plt.annotate('Center point', xy=(1, 2), xytext=(1, 1.3), arrowprops=dict(arrowstyle='->', connectionstyle='arc3'), bbox=dict(boxstyle='square', facecolor='lightgrey'), annotation_clip=True)
     plt.axis('equal')
-# Mutation info: Added annotation_clip = False (Call plt.annotate)
+# Mutation info: Added annotation_clip = True (Call plt.annotate)

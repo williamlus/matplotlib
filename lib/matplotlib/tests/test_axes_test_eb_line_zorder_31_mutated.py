@@ -168,9 +168,9 @@ def test_eb_line_zorder_31_mutated():
     x = list(range(10))
     y = np.zeros(10)
     yerr = list(range(10))
-    ax.errorbar(x, y, yerr=yerr, zorder=5, lw=5, color='r', lolims=True)
+    ax.errorbar(x, y, yerr=yerr, zorder=5, lw=5, color='r', uplims=True)
     for j in range(10):
         ax.axhline(j, lw=5, color='k', zorder=j)
         ax.axhline(-j, lw=5, color='k', zorder=j)
     ax.set_title('errorbar zorder test')
-# Mutation info: Added lolims = True (Call ax.errorbar)
+# Mutation info: Added uplims = True (Call ax.errorbar)

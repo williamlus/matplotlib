@@ -64,6 +64,6 @@ def check_segments(coll, positions, linelength, lineoffset, orientation):
 def test_check_masked_offsets_0_mutated():
     unmasked_x = [datetime(2022, 12, 15, 4, 49, 52), datetime(2022, 12, 15, 4, 49, 53), datetime(2022, 12, 15, 4, 49, 54), datetime(2022, 12, 15, 4, 49, 55), datetime(2022, 12, 15, 4, 49, 56)]
     masked_y = np.ma.array([1, 2, 3, 4, 5], mask=[0, 1, 1, 0, 0])
-    fig, ax = plt.subplots(sharex=False)
+    fig, ax = plt.subplots(squeeze=False)
     ax.scatter(unmasked_x, masked_y)
-# Mutation info: Added sharex = False (Call plt.subplots)
+# Mutation info: Added squeeze = False (Call plt.subplots)

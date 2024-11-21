@@ -41,7 +41,7 @@ def test_subfigure_double_91_mutated():
         ax.set_ylabel('y-label', fontsize=fontsize)
         ax.set_title('Title', fontsize=fontsize)
     subfigsnest[0].colorbar(pc, ax=axsnest0)
-    subfigsnest[1].suptitle('subfigsnest[1]', horizontalalignment='left')
+    subfigsnest[1].suptitle('subfigsnest[1]', verticalalignment='center')
     subfigsnest[1].set_facecolor('g')
     axsnest1 = subfigsnest[1].subplots(3, 1, sharex=True)
     for nn, ax in enumerate(axsnest1):
@@ -49,4 +49,4 @@ def test_subfigure_double_91_mutated():
     subfigsnest[1].supxlabel('supxlabel')
     subfigsnest[1].supylabel('supylabel')
     axsRight = subfigs[1].subplots(2, 2)
-# Mutation info: Added horizontalalignment = left (Call subfigsnest[1].suptitle)
+# Mutation info: Added verticalalignment = center (Call subfigsnest[1].suptitle)

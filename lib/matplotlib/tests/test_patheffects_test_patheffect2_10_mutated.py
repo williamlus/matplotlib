@@ -12,9 +12,9 @@ from matplotlib.patheffects import PathEffectRenderer
 def test_patheffect2_10_mutated():
     ax2 = plt.subplot()
     arr = np.arange(25).reshape((5, 5))
-    ax2.imshow(arr, interpolation='nearest', resample=False)
+    ax2.imshow(arr, interpolation='nearest', interpolation_stage='data')
     cntr = ax2.contour(arr, colors='k')
     cntr.set(path_effects=[path_effects.withStroke(linewidth=3, foreground='w')])
     clbls = ax2.clabel(cntr, fmt='%2.0f', use_clabeltext=True)
     plt.setp(clbls, path_effects=[path_effects.withStroke(linewidth=3, foreground='w')])
-# Mutation info: Added resample = False (Call ax2.imshow)
+# Mutation info: Added interpolation_stage = data (Call ax2.imshow)

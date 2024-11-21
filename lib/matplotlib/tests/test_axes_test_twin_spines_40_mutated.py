@@ -181,5 +181,5 @@ def test_twin_spines_40_mutated():
     host.tick_params(axis='y', colors=p1.get_color(), **tkw)
     par1.tick_params(axis='y', colors=p2.get_color(), **tkw)
     par2.tick_params(axis='y', colors=p3.get_color(), **tkw)
-    host.tick_params(axis='x', **tkw, reset=True)
-# Mutation info: Added reset = True (Call host.tick_params)
+    host.tick_params(axis='x', **tkw)
+# Mutation info: axis = 'x' -> axis = x (Call host.tick_params)

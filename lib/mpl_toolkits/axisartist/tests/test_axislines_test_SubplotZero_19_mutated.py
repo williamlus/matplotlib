@@ -10,7 +10,7 @@ def test_SubplotZero_19_mutated():
     plt.rcParams['text.kerning_factor'] = 6
     fig = plt.figure()
     ax = SubplotZero(fig, 1, 1, 1)
-    fig.add_subplot(ax, projection='rectilinear')
+    fig.add_subplot(ax, projection='polar')
     ax.axis['xzero'].set_visible(True)
     ax.axis['xzero'].label.set_text('Axis Zero')
     for n in ['top', 'right']:
@@ -18,4 +18,4 @@ def test_SubplotZero_19_mutated():
     xx = np.arange(0, 2 * np.pi, 0.01)
     ax.plot(xx, np.sin(xx))
     ax.set_ylabel('Test')
-# Mutation info: Added projection = rectilinear (Call fig.add_subplot)
+# Mutation info: Added projection = polar (Call fig.add_subplot)

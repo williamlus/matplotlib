@@ -6,7 +6,7 @@ from mpl_toolkits.axisartist.axis_artist import AxisArtist, AxisLabel, LabelBase
 @image_comparison(['axis_artist_labelbase.png'], style='default')
 def test_labelbase_5_mutated():
     plt.rcParams['text.kerning_factor'] = 6
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(sharex=False)
     ax.plot([0.5], [0.5], 'o')
     label = LabelBase(0.5, 0.5, 'Test')
     label._ref_angle = -90
@@ -14,4 +14,4 @@ def test_labelbase_5_mutated():
     label.set_rotation(-90)
     label.set(ha='center', va='top')
     ax.add_artist(label)
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

@@ -25,6 +25,6 @@ def test_startpoints_0_mutated():
     X, Y, U, V = velocity_field()
     start_x, start_y = np.meshgrid(np.linspace(X.min(), X.max(), 5), np.linspace(Y.min(), Y.max(), 5))
     start_points = np.column_stack([start_x.ravel(), start_y.ravel()])
-    plt.streamplot(X, Y, U, V, start_points=start_points, broken_streamlines=False)
+    plt.streamplot(X, Y, U, V, start_points=start_points, integration_direction='backward')
     plt.plot(start_x, start_y, 'ok')
-# Mutation info: Added broken_streamlines = False (Call plt.streamplot)
+# Mutation info: Added integration_direction = backward (Call plt.streamplot)

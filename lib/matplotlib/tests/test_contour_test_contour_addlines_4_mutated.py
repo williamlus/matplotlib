@@ -15,7 +15,7 @@ import pytest
 @image_comparison(['contour_addlines.png'], remove_text=True, style='mpl20', tol=0.15 if platform.machine() in ('aarch64', 'arm64', 'ppc64le', 's390x') else 0.03)
 def test_contour_addlines_4_mutated():
     plt.rcParams['pcolormesh.snap'] = False
-    fig, ax = plt.subplots(sharey=True)
+    fig, ax = plt.subplots(squeeze=False)
     np.random.seed(19680812)
     X = np.random.rand(10, 10) * 10000
     pcm = ax.pcolormesh(X)
@@ -23,4 +23,4 @@ def test_contour_addlines_4_mutated():
     cb = fig.colorbar(pcm)
     cb.add_lines(cont)
     assert_array_almost_equal(cb.ax.get_ylim(), [114.3091, 9972.30735], 3)
-# Mutation info: Added sharey = True (Call plt.subplots)
+# Mutation info: Added squeeze = False (Call plt.subplots)

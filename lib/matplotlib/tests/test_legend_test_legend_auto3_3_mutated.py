@@ -23,11 +23,11 @@ from matplotlib.font_manager import FontProperties
 @image_comparison(['legend_auto3'])
 def test_legend_auto3_3_mutated():
     """Test automatic legend placement"""
-    fig, ax = plt.subplots(sharey=True)
+    fig, ax = plt.subplots(sharex=True)
     x = [0.9, 0.1, 0.1, 0.9, 0.9, 0.5]
     y = [0.95, 0.95, 0.05, 0.05, 0.5, 0.5]
     ax.plot(x, y, 'o-', label='line')
     ax.set_xlim(0.0, 1.0)
     ax.set_ylim(0.0, 1.0)
     ax.legend(loc='best')
-# Mutation info: Added sharey = True (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

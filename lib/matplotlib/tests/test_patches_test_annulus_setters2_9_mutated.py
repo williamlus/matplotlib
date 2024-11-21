@@ -19,7 +19,7 @@ def test_annulus_setters2_9_mutated():
     ell = Annulus((0.0, 0.0), (1, 2), 0.1, 0, fc='m', ec='b', alpha=0.5, hatch='xxx')
     ax.add_patch(cir)
     ax.add_patch(ell)
-    ax.set_aspect('equal', share=False)
+    ax.set_aspect('equal')
     cir.center = (0.5, 0.5)
     cir.set_semimajor(0.2)
     cir.set_semiminor(0.2)
@@ -31,4 +31,4 @@ def test_annulus_setters2_9_mutated():
     assert ell.radii == (0.5, 0.3)
     ell.width = 0.1
     ell.angle = 45
-# Mutation info: Added share = False (Call ax.set_aspect)
+# Mutation info: (0-th Positional) aspect = 'equal' -> aspect = equal (Call ax.set_aspect)

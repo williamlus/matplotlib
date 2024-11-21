@@ -70,5 +70,5 @@ def test__EventCollection__set_orientation_1_mutated():
     check_segments(coll, props['positions'], props['linelength'], props['lineoffset'], new_orientation)
     splt.set_title('EventCollection: set_orientation')
     splt.set_ylim(-1, 22)
-    splt.set_xlim(0, 2, auto=True)
-# Mutation info: Added auto = True (Call splt.set_xlim)
+    splt.set_xlim(0, 2, emit=False)
+# Mutation info: Added emit = False (Call splt.set_xlim)

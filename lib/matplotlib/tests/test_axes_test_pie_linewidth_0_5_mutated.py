@@ -161,11 +161,11 @@ def test_pie_linewidth_0_5_mutated():
     plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0})
     plt.axis('equal')
     data = {'l': labels, 's': sizes, 'c': colors, 'ex': explode}
-    fig = plt.figure(clear=False)
+    fig = plt.figure(layout='tight')
     ax = fig.gca()
     ax.pie('s', explode='ex', labels='l', colors='c', autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, data=data)
     ax.axis('equal')
     plt.figure()
     plt.pie('s', explode='ex', labels='l', colors='c', autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, data=data)
     plt.axis('equal')
-# Mutation info: Added clear = False (Call plt.figure)
+# Mutation info: Added layout = tight (Call plt.figure)

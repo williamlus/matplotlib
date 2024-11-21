@@ -88,9 +88,9 @@ def test_colorbar_extend_drawedges_1_mutated():
             cmap, norm = mcolors.from_levels_and_colors(bounds, colors, extend=extend)
             cbar = Colorbar(ax, cmap=cmap, norm=norm, orientation=orientation, drawedges=True)
             if orientation == 'horizontal':
-                ax.set_xlim(1.1, 2.9, auto=False)
+                ax.set_xlim(1.1, 2.9, emit=True)
             else:
                 ax.set_ylim(1.1, 2.9)
                 res = np.array(res)[:, :, [1, 0]]
             np.testing.assert_array_equal(cbar.dividers.get_segments(), res)
-# Mutation info: Added auto = False (Call ax.set_xlim)
+# Mutation info: Added emit = True (Call ax.set_xlim)

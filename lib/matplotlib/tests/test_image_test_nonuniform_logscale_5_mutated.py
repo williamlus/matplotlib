@@ -77,7 +77,7 @@ class QuantityND(np.ndarray):
 
 @image_comparison(['nonuniform_logscale.png'], style='mpl20')
 def test_nonuniform_logscale_5_mutated():
-    _, axs = plt.subplots(ncols=3, nrows=1, sharey=True)
+    _, axs = plt.subplots(ncols=3, nrows=1, sharey=False)
     for i in range(3):
         ax = axs[i]
         im = NonUniformImage(ax)
@@ -92,4 +92,4 @@ def test_nonuniform_logscale_5_mutated():
             ax.set_xscale('log', base=4)
             ax.set_yscale('log', base=4)
         ax.add_image(im)
-# Mutation info: Added sharey = True (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

@@ -23,9 +23,9 @@ from matplotlib.font_manager import FontProperties
 @image_comparison(['legend_auto1'], remove_text=True)
 def test_legend_auto1_1_mutated():
     """Test automatic legend placement"""
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(sharey=False)
     x = np.arange(100)
     ax.plot(x, 50 - x, 'o', label='y=1')
     ax.plot(x, x - 50, 'o', label='y=-1')
     ax.legend(loc='best')
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

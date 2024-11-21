@@ -161,5 +161,5 @@ def test_boxplot_sym2_11_mutated():
     ax1.boxplot([x, x], bootstrap=10000, sym='^')
     ax1.set_ylim((-30, 30))
     ax2.boxplot([x, x], bootstrap=10000, sym='g')
-    ax2.set_ylim((-30, 30), auto=True)
-# Mutation info: Added auto = True (Call ax2.set_ylim)
+    ax2.set_ylim((-30, 30), emit=True)
+# Mutation info: Added emit = True (Call ax2.set_ylim)

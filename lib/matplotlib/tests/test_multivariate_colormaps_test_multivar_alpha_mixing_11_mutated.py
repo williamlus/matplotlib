@@ -19,6 +19,6 @@ def test_multivar_alpha_mixing_11_mutated():
     y, x = np.mgrid[0:10, 0:10] / 9
     im = cmap((y, x))
     fig, ax = plt.subplots()
-    ax.imshow(im, interpolation='nearest', interpolation_stage='auto')
+    ax.imshow(im, interpolation='nearest', origin='upper')
     remove_ticks_and_titles(fig)
-# Mutation info: Added interpolation_stage = auto (Call ax.imshow)
+# Mutation info: Added origin = upper (Call ax.imshow)

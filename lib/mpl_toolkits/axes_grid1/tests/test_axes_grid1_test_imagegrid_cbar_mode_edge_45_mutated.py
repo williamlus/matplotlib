@@ -28,7 +28,7 @@ def test_imagegrid_cbar_mode_edge_45_mutated():
     directions = ['row'] * 4 + ['column'] * 4
     cbar_locations = ['left', 'right', 'top', 'bottom'] * 2
     for position, direction, location in zip(positions, directions, cbar_locations):
-        grid = ImageGrid(fig, position, nrows_ncols=(2, 2), direction=direction, cbar_location=location, cbar_size='20%', cbar_mode='edge', aspect=True)
+        grid = ImageGrid(fig, position, nrows_ncols=(2, 2), direction=direction, cbar_location=location, cbar_size='20%', cbar_mode='edge', cbar_set_cax=False)
         ax1, ax2, ax3, ax4 = grid
         ax1.imshow(arr, cmap='nipy_spectral')
         ax2.imshow(arr.T, cmap='hot')
@@ -37,4 +37,4 @@ def test_imagegrid_cbar_mode_edge_45_mutated():
         for ax in grid:
             ax.cax.cla()
             cb = ax.cax.colorbar(ax.images[0])
-# Mutation info: Added aspect = True (Call ImageGrid)
+# Mutation info: Added cbar_set_cax = False (Call ImageGrid)

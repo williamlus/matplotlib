@@ -170,7 +170,7 @@ def test_eventplot_37_mutated():
     linelengths = linelengths1 + linelengths2
     fig = plt.figure()
     axobj = fig.add_subplot()
-    colls = axobj.eventplot(data, colors=colors, lineoffsets=lineoffsets, linelengths=linelengths, orientation='vertical')
+    colls = axobj.eventplot(data, colors=colors, lineoffsets=lineoffsets, linelengths=linelengths, orientation='horizontal')
     num_collections = len(colls)
     assert num_collections == num_datasets
     data = {'pos': data, 'c': colors, 'lo': lineoffsets, 'll': linelengths}
@@ -179,4 +179,4 @@ def test_eventplot_37_mutated():
     colls = axobj.eventplot('pos', colors='c', lineoffsets='lo', linelengths='ll', data=data)
     num_collections = len(colls)
     assert num_collections == num_datasets
-# Mutation info: Added orientation = vertical (Call axobj.eventplot)
+# Mutation info: Added orientation = horizontal (Call axobj.eventplot)

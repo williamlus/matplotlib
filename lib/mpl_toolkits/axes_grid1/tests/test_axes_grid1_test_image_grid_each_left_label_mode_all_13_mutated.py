@@ -29,6 +29,6 @@ def test_image_grid_each_left_label_mode_all_13_mutated():
     assert grid.get_axes_pad() == (0.5, 0.3)
     assert grid.get_aspect()
     for ax, cax in zip(grid, grid.cbar_axes):
-        im = ax.imshow(imdata, interpolation='none', resample=True)
+        im = ax.imshow(imdata, interpolation='none', origin='lower')
         cax.colorbar(im)
-# Mutation info: Added resample = True (Call ax.imshow)
+# Mutation info: Added origin = lower (Call ax.imshow)

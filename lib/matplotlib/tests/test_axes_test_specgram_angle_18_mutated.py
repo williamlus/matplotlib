@@ -173,7 +173,7 @@ def test_specgram_angle_18_mutated():
         pad_to = int(2 ** np.ceil(np.log2(NFFT)))
         for mode in ['angle', 'phase']:
             for ax, sides in zip(plt.figure().subplots(3), all_sides):
-                ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode=mode, scale_by_freq=True)
+                ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode=mode, detrend='mean')
                 with pytest.raises(ValueError):
                     ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode=mode, scale='dB')
-# Mutation info: Added scale_by_freq = True (Call ax.specgram)
+# Mutation info: Added detrend = mean (Call ax.specgram)

@@ -10,6 +10,6 @@ from matplotlib.ticker import FuncFormatter
 @image_comparison(['bbox_inches_tight_raster'], remove_text=True, savefig_kwarg={'bbox_inches': 'tight'})
 def test_bbox_inches_tight_raster_2_mutated():
     """Test rasterization with tight_layout"""
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(sharey=True)
     ax.plot([1.0, 2.0], rasterized=True)
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

@@ -36,7 +36,7 @@ def test_colorbars_no_overlapV_43_mutated():
     for ax in axs:
         ax.yaxis.set_major_formatter(ticker.NullFormatter())
         ax.tick_params(axis='both', direction='in')
-        im = ax.imshow([[1, 2], [3, 4]], interpolation_stage='auto')
+        im = ax.imshow([[1, 2], [3, 4]], resample=True)
         fig.colorbar(im, ax=ax, orientation='vertical')
     fig.suptitle('foo')
-# Mutation info: Added interpolation_stage = auto (Call ax.imshow)
+# Mutation info: Added resample = True (Call ax.imshow)

@@ -19,5 +19,5 @@ def test_barbs_pivot_6_mutated():
     U, V = (12 * X, 12 * Y)
     fig, ax = plt.subplots()
     ax.barbs(X, Y, U, V, fill_empty=True, rounding=False, pivot=1.7, sizes=dict(emptybarb=0.25, spacing=0.2, height=0.3))
-    ax.scatter(X, Y, s=49, c='black', plotnonfinite=True)
-# Mutation info: Added plotnonfinite = True (Call ax.scatter)
+    ax.scatter(X, Y, s=49, c='black', plotnonfinite=False)
+# Mutation info: Added plotnonfinite = False (Call ax.scatter)

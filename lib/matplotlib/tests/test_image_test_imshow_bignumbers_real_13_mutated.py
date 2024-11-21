@@ -80,6 +80,6 @@ def test_imshow_bignumbers_real_13_mutated():
     rcParams['image.interpolation'] = 'nearest'
     fig, ax = plt.subplots()
     img = np.array([[2.0, 1.0, 1e+22], [4.0, 1.0, 3.0]])
-    pc = ax.imshow(img, filternorm=False)
+    pc = ax.imshow(img, interpolation_stage='data')
     pc.set_clim(0, 5)
-# Mutation info: Added filternorm = False (Call ax.imshow)
+# Mutation info: Added interpolation_stage = data (Call ax.imshow)

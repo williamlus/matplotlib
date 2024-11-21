@@ -168,5 +168,5 @@ def test_preset_clip_paths_11_mutated():
     poly3 = mpl.patches.Polygon([[0, 0], [0, 0.5], [0.5, 0.5], [0.5, 0]], facecolor='g', edgecolor='y', linewidth=2, alpha=0.3, clip_on=True, clip_path=poly)
     fig.add_artist(poly3, clip=True)
     ax.set_xlim(-1, 1)
-    ax.set_ylim(-1, 1, auto=True)
-# Mutation info: Added auto = True (Call ax.set_ylim)
+    ax.set_ylim(-1, 1, auto=False)
+# Mutation info: Added auto = False (Call ax.set_ylim)

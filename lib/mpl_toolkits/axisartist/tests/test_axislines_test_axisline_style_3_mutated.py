@@ -12,7 +12,7 @@ def test_axisline_style_3_mutated():
     ax.axis['xzero'].set_axisline_style('-|>')
     ax.axis['xzero'].set_visible(True)
     ax.axis['yzero'].set_axisline_style('->')
-    ax.axis['yzero'].set_visible(False)
+    ax.axis['yzero'].set_visible(True)
     for direction in ('left', 'right', 'bottom', 'top'):
         ax.axis[direction].set_visible(False)
-# Mutation info: (0-th Positional) b = True -> b = False (Call ax.axis['yzero'].set_visible)
+# Mutation info: (0-th Positional) b = True -> b = True (Call ax.axis['yzero'].set_visible)

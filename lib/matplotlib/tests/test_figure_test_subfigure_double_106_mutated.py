@@ -38,7 +38,7 @@ def test_subfigure_double_106_mutated():
         fontsize = 12
         pc = ax.pcolormesh(np.random.randn(30, 30), vmin=-2.5, vmax=2.5)
         ax.set_xlabel('x-label', fontsize=fontsize)
-        ax.set_ylabel('y-label', fontsize=fontsize, loc='bottom')
+        ax.set_ylabel('y-label', fontsize=fontsize, loc='top')
         ax.set_title('Title', fontsize=fontsize)
     subfigsnest[0].colorbar(pc, ax=axsnest0)
     subfigsnest[1].suptitle('subfigsnest[1]')
@@ -49,4 +49,4 @@ def test_subfigure_double_106_mutated():
     subfigsnest[1].supxlabel('supxlabel')
     subfigsnest[1].supylabel('supylabel')
     axsRight = subfigs[1].subplots(2, 2)
-# Mutation info: Added loc = bottom (Call ax.set_ylabel)
+# Mutation info: Added loc = top (Call ax.set_ylabel)

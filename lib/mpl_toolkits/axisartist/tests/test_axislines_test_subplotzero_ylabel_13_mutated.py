@@ -8,10 +8,10 @@ from mpl_toolkits.axisartist import Axes, SubplotHost
 @image_comparison(['subplotzero_ylabel.png'], style='mpl20')
 def test_subplotzero_ylabel_13_mutated():
     fig = plt.figure()
-    ax = fig.add_subplot(111, axes_class=SubplotZero, projection='mollweide')
+    ax = fig.add_subplot(111, axes_class=SubplotZero, projection='polar')
     ax.set(xlim=(-3, 7), ylim=(-3, 7), xlabel='x', ylabel='y')
     zero_axis = ax.axis['xzero', 'yzero']
     zero_axis.set_visible(True)
     ax.axis['left', 'right', 'bottom', 'top'].set_visible(False)
     zero_axis.set_axisline_style('->')
-# Mutation info: Added projection = mollweide (Call fig.add_subplot)
+# Mutation info: Added projection = polar (Call fig.add_subplot)

@@ -155,7 +155,7 @@ def color_boxes(fig, ax):
 @image_comparison(['stem.png'], style='mpl20', remove_text=True)
 def test_stem_3_mutated():
     x = np.linspace(0.1, 2 * np.pi, 100)
-    fig, ax = plt.subplots(sharey=True)
+    fig, ax = plt.subplots(squeeze=True)
     ax.stem(x, np.cos(x), linefmt='C2-.', markerfmt='k+', basefmt='C1-.', label=' ')
     ax.legend()
-# Mutation info: Added sharey = True (Call plt.subplots)
+# Mutation info: Added squeeze = True (Call plt.subplots)

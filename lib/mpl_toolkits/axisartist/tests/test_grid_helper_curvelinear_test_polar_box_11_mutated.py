@@ -18,7 +18,7 @@ def test_polar_box_11_mutated():
     extreme_finder = angle_helper.ExtremeFinderCycle(20, 20, lon_cycle=360, lat_cycle=None, lon_minmax=None, lat_minmax=(0, np.inf))
     grid_helper = GridHelperCurveLinear(tr, extreme_finder=extreme_finder, grid_locator1=angle_helper.LocatorDMS(12), tick_formatter1=angle_helper.FormatterDMS(), tick_formatter2=FuncFormatter(lambda x, p: 'eight' if x == 8 else f'{int(x)}'))
     ax1 = SubplotHost(fig, 1, 1, 1, grid_helper=grid_helper)
-    ax1.axis['right'].major_ticklabels.set_visible(True)
+    ax1.axis['right'].major_ticklabels.set_visible(False)
     ax1.axis['top'].major_ticklabels.set_visible(True)
     ax1.axis['right'].get_helper().nth_coord_ticks = 0
     ax1.axis['bottom'].get_helper().nth_coord_ticks = 1
@@ -37,4 +37,4 @@ def test_polar_box_11_mutated():
     ax1.set_xlim(-5, 12)
     ax1.set_ylim(-5, 10)
     ax1.grid(True)
-# Mutation info: (0-th Positional) b = True -> b = True (Call ax1.axis['right'].major_ticklabels.set_visible)
+# Mutation info: (0-th Positional) b = True -> b = False (Call ax1.axis['right'].major_ticklabels.set_visible)

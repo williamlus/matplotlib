@@ -32,7 +32,7 @@ def test_align_labels_47_mutated():
     for i in range(3):
         ax = fig.add_subplot(gs[1, i])
         ax.set_ylabel('YLabel1 %d' % i)
-        ax.set_xlabel('XLabel1 %d' % i, loc='right')
+        ax.set_xlabel('XLabel1 %d' % i, loc='center')
         if i in [0, 2]:
             ax.xaxis.set_label_position('top')
             ax.xaxis.tick_top()
@@ -53,4 +53,4 @@ def test_align_labels_47_mutated():
             for tick in ax.get_xticklabels():
                 tick.set_rotation(90)
     fig.align_labels()
-# Mutation info: Added loc = right (Call ax.set_xlabel)
+# Mutation info: Added loc = center (Call ax.set_xlabel)

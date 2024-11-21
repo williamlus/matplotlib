@@ -25,6 +25,6 @@ def test_patch_custom_linestyle_10_mutated():
     ax.add_collection(col)
     patch = mpatches.PathPatch(cut_star1, linewidth=5, linestyle=(0, (5, 7, 10, 7)), facecolor=(1, 0, 0), edgecolor=(0, 0, 1))
     ax.add_patch(patch)
-    ax.set_xlim(-1, 2, emit=True)
+    ax.set_xlim(-1, 2, auto=False)
     ax.set_ylim(-1, 2)
-# Mutation info: Added emit = True (Call ax.set_xlim)
+# Mutation info: Added auto = False (Call ax.set_xlim)

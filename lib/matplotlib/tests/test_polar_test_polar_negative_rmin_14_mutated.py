@@ -10,8 +10,8 @@ def test_polar_negative_rmin_14_mutated():
     r = np.arange(-3.0, 0.0, 0.01)
     theta = 2 * np.pi * r
     fig = plt.figure()
-    ax = fig.add_axes([0.1, 0.1, 0.8, 0.8], polar=True)
+    ax = fig.add_axes([0.1, 0.1, 0.8, 0.8], polar=True, projection='aitoff')
     ax.plot(theta, r)
     ax.set_rmax(0.0)
     ax.set_rmin(-3.0)
-# Mutation info: polar = True -> polar = True (Call fig.add_axes)
+# Mutation info: Added projection = aitoff (Call fig.add_axes)

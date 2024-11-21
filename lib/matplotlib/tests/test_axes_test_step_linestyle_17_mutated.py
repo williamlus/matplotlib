@@ -172,6 +172,6 @@ def test_step_linestyle_17_mutated():
         ax.step('X', 'Y0', lw=5, linestyle=ls, where='pre', data=data)
         ax.step('X', 'Y1', lw=5, linestyle=ls, where='mid', data=data)
         ax.step('X', 'Y2', lw=5, linestyle=ls, where='post', data=data)
-        ax.set_xlim([-1, 5], emit=True)
+        ax.set_xlim([-1, 5], auto=True)
         ax.set_ylim([-1, 7])
-# Mutation info: Added emit = True (Call ax.set_xlim)
+# Mutation info: Added auto = True (Call ax.set_xlim)

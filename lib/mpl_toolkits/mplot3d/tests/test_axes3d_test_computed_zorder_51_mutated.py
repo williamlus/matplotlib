@@ -61,7 +61,7 @@ def test_computed_zorder_51_mutated():
     for ax in (ax1, ax2):
         tri = art3d.Poly3DCollection([corners], facecolors='white', edgecolors='black', zorder=1)
         ax.add_collection3d(tri)
-        ax.plot((2, 2), (2, 2), (0, 4), c='red', zorder=2, zdir='z')
+        ax.plot((2, 2), (2, 2), (0, 4), c='red', zorder=2, zdir='y')
         ax.scatter((3, 3), (1, 3), (1, 3), c='red', zorder=10)
         ax.set_xlim((0, 5.0))
         ax.set_ylim((0, 5.0))
@@ -90,4 +90,4 @@ def test_computed_zorder_51_mutated():
         ax.plot(x[y > 0], y[y > 0], z[y > 0], lw=5, linestyle='--', color='green', zorder=4)
         ax.view_init(elev=20, azim=-20, roll=0)
         ax.axis('off')
-# Mutation info: Added zdir = z (Call ax.plot)
+# Mutation info: Added zdir = y (Call ax.plot)

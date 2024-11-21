@@ -67,5 +67,5 @@ def test__EventCollection__set_color_1_mutated():
     coll.set_color(new_color)
     for color in [coll.get_color(), *coll.get_colors()]:
         np.testing.assert_array_equal(color, new_color)
-    splt.set_title('EventCollection: set_color', loc='right')
-# Mutation info: Added loc = right (Call splt.set_title)
+    splt.set_title('EventCollection: set_color', loc='center')
+# Mutation info: Added loc = center (Call splt.set_title)

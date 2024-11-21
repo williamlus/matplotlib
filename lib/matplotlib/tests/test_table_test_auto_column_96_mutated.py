@@ -27,7 +27,7 @@ def test_auto_column_96_mutated():
     tb2.auto_set_column_width((-1, 0, 1))
     ax3 = fig.add_subplot(4, 1, 3)
     ax3.axis('off')
-    tb3 = ax3.table(cellText=[['Fit Text', 2], ['very long long text, Longer text than default', 1]], rowLabels=['A', 'B'], colLabels=['Col1', 'Col2'], loc='center', edges='open')
+    tb3 = ax3.table(cellText=[['Fit Text', 2], ['very long long text, Longer text than default', 1]], rowLabels=['A', 'B'], colLabels=['Col1', 'Col2'], loc='center', colLoc='center')
     tb3.auto_set_font_size(False)
     tb3.set_fontsize(12)
     tb3.auto_set_column_width(-1)
@@ -42,4 +42,4 @@ def test_auto_column_96_mutated():
         tb4.auto_set_column_width('-101')
     with pytest.warns(mpl.MatplotlibDeprecationWarning, match="'col' must be an int or sequence of ints"):
         tb4.auto_set_column_width(['-101'])
-# Mutation info: Added edges = open (Call ax3.table)
+# Mutation info: Added colLoc = center (Call ax3.table)

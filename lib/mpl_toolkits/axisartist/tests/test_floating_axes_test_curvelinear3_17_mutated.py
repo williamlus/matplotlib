@@ -13,7 +13,7 @@ def test_curvelinear3_17_mutated():
     fig = plt.figure(figsize=(5, 5))
     tr = mtransforms.Affine2D().scale(np.pi / 180, 1) + mprojections.PolarAxes.PolarTransform(apply_theta_transforms=False)
     grid_helper = GridHelperCurveLinear(tr, extremes=(0, 360, 10, 3), grid_locator1=angle_helper.LocatorDMS(15), grid_locator2=FixedLocator([2, 4, 6, 8, 10]), tick_formatter1=angle_helper.FormatterDMS(), tick_formatter2=None)
-    ax1 = fig.add_subplot(axes_class=FloatingAxes, grid_helper=grid_helper, projection='hammer')
+    ax1 = fig.add_subplot(axes_class=FloatingAxes, grid_helper=grid_helper, projection='polar')
     r_scale = 10
     tr2 = mtransforms.Affine2D().scale(1, 1 / r_scale) + tr
     grid_helper2 = GridHelperCurveLinear(tr2, extremes=(0, 360, 10 * r_scale, 3 * r_scale), grid_locator2=FixedLocator([30, 60, 90]))
@@ -32,4 +32,4 @@ def test_curvelinear3_17_mutated():
     ax2.scatter(xx, yy)
     l, = ax2.plot(xx, yy, 'k-')
     l.set_clip_path(ax1.patch)
-# Mutation info: Added projection = hammer (Call fig.add_subplot)
+# Mutation info: Added projection = polar (Call fig.add_subplot)

@@ -160,6 +160,6 @@ def test_fill_between_interpolate_nan_6_mutated():
     fig, ax = plt.subplots()
     ax.plot(x, y1, c='k')
     ax.plot(x, y2, c='b')
-    ax.fill_between(x, y1, y2, where=True, facecolor='green', interpolate=True, alpha=0.5)
+    ax.fill_between(x, y1, y2, where=y2 >= y1, facecolor='green', interpolate=True, alpha=0.5, step='post')
     ax.fill_between(x, y1, y2, where=y1 >= y2, facecolor='red', interpolate=True, alpha=0.5)
-# Mutation info: where = y2 >= y1 -> where = True (Call ax.fill_between)
+# Mutation info: Added step = post (Call ax.fill_between)

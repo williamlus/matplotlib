@@ -74,6 +74,6 @@ def test_colorbar_single_scatter_11_mutated():
     x = y = [0]
     z = [50]
     cmap = mpl.colormaps['jet'].resampled(16)
-    cs = plt.scatter(x, y, z, c=z, cmap=cmap, plotnonfinite=False)
+    cs = plt.scatter(x, y, z, c=z, cmap=cmap, edgecolors='none')
     plt.colorbar(cs)
-# Mutation info: Added plotnonfinite = False (Call plt.scatter)
+# Mutation info: Added edgecolors = none (Call plt.scatter)

@@ -10,11 +10,11 @@ from matplotlib.patheffects import PathEffectRenderer
 
 @image_comparison(['patheffect2'], remove_text=True, style='mpl20', tol=0.06 if platform.machine() == 'arm64' else 0)
 def test_patheffect2_15_mutated():
-    ax2 = plt.subplot(projection='rectilinear')
+    ax2 = plt.subplot(projection=None)
     arr = np.arange(25).reshape((5, 5))
     ax2.imshow(arr, interpolation='nearest')
     cntr = ax2.contour(arr, colors='k')
     cntr.set(path_effects=[path_effects.withStroke(linewidth=3, foreground='w')])
     clbls = ax2.clabel(cntr, fmt='%2.0f', use_clabeltext=True)
     plt.setp(clbls, path_effects=[path_effects.withStroke(linewidth=3, foreground='w')])
-# Mutation info: Added projection = rectilinear (Call plt.subplot)
+# Mutation info: Added projection = None (Call plt.subplot)

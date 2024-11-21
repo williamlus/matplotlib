@@ -80,6 +80,6 @@ def test_log_scale_image_15_mutated():
     Z = np.zeros((10, 10))
     Z[::2] = 1
     fig, ax = plt.subplots()
-    ax.imshow(Z, extent=[1, 100, 1, 100], cmap='viridis', vmax=1, vmin=-1, aspect='auto')
+    ax.imshow(Z, extent=[1, 100, 1, 100], cmap='viridis', vmax=1, vmin=-1, aspect='auto', filternorm=False)
     ax.set(yscale='log')
-# Mutation info: aspect = 'auto' -> aspect = auto (Call ax.imshow)
+# Mutation info: Added filternorm = False (Call ax.imshow)

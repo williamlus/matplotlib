@@ -23,6 +23,6 @@ def test_corner_mask_7_mutated():
     mask = np.random.rand(n, n) >= mask_level
     z = np.ma.array(z, mask=mask)
     for corner_mask in [False, True]:
-        plt.figure(clear=False)
+        plt.figure(layout='constrained')
         plt.contourf(z, corner_mask=corner_mask)
-# Mutation info: Added clear = False (Call plt.figure)
+# Mutation info: Added layout = constrained (Call plt.figure)

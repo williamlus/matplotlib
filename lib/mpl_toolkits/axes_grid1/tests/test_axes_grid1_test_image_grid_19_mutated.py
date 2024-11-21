@@ -27,5 +27,5 @@ def test_image_grid_19_mutated():
     grid = ImageGrid(fig, 111, nrows_ncols=(2, 2), axes_pad=0.1)
     assert grid.get_axes_pad() == (0.1, 0.1)
     for i in range(4):
-        grid[i].imshow(im, interpolation='nearest', origin='lower')
-# Mutation info: Added origin = lower (Call grid[i].imshow)
+        grid[i].imshow(im, interpolation='nearest', filternorm=True)
+# Mutation info: Added filternorm = True (Call grid[i].imshow)

@@ -16,7 +16,7 @@ def test_bbox_inches_tight_1_mutated():
     cell_text = []
     width = 0.4
     yoff = np.zeros(len(col_labels))
-    fig, ax = plt.subplots(1, 1, squeeze=False)
+    fig, ax = plt.subplots(1, 1, sharex=True)
     for row in range(rows):
         ax.bar(ind, data[row], width, bottom=yoff, align='edge', color='b')
         yoff = yoff + data[row]
@@ -27,4 +27,4 @@ def test_bbox_inches_tight_1_mutated():
     fig.legend([''] * 5, bbox_to_anchor=(0, 0.2), loc='lower left')
     cell_text.reverse()
     plt.table(cellText=cell_text, rowLabels=row_labels, colLabels=col_labels, loc='bottom')
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

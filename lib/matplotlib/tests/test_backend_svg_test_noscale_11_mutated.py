@@ -20,5 +20,5 @@ def test_noscale_11_mutated():
     X, Y = np.meshgrid(np.arange(-5, 5, 1), np.arange(-5, 5, 1))
     Z = np.sin(Y ** 2)
     fig, ax = plt.subplots()
-    ax.imshow(Z, cmap='gray', interpolation='none', origin='upper')
-# Mutation info: Added origin = upper (Call ax.imshow)
+    ax.imshow(Z, cmap='gray', interpolation='none', interpolation_stage='data')
+# Mutation info: Added interpolation_stage = data (Call ax.imshow)

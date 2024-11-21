@@ -26,7 +26,7 @@ def test_ParasiteAxesAuxTrans_1_mutated():
             getattr(ax2, name)(xx, yy, data[:-1, :-1])
         else:
             getattr(ax2, name)(xx, yy, data)
-        ax1.set_xlim((0, 5), auto=False)
+        ax1.set_xlim((0, 5), emit=True)
         ax1.set_ylim((0, 5))
     ax2.contour(xx, yy, data, colors='k')
-# Mutation info: Added auto = False (Call ax1.set_xlim)
+# Mutation info: Added emit = True (Call ax1.set_xlim)

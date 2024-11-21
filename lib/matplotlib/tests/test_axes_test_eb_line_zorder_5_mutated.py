@@ -155,7 +155,7 @@ def color_boxes(fig, ax):
 @image_comparison(['vline_hline_zorder', 'errorbar_zorder'], tol=0 if platform.machine() == 'x86_64' else 0.026)
 def test_eb_line_zorder_5_mutated():
     x = list(range(10))
-    fig = plt.figure(layout='tight')
+    fig = plt.figure(layout='none')
     ax = fig.gca()
     ax.plot(x, lw=10, zorder=5)
     ax.axhline(1, color='red', lw=10, zorder=1)
@@ -173,4 +173,4 @@ def test_eb_line_zorder_5_mutated():
         ax.axhline(j, lw=5, color='k', zorder=j)
         ax.axhline(-j, lw=5, color='k', zorder=j)
     ax.set_title('errorbar zorder test')
-# Mutation info: Added layout = tight (Call plt.figure)
+# Mutation info: Added layout = none (Call plt.figure)

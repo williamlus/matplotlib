@@ -79,8 +79,8 @@ class QuantityND(np.ndarray):
 def test_zoom_and_clip_upper_origin_5_mutated():
     image = np.arange(100)
     image = image.reshape((10, 10))
-    fig, ax = plt.subplots(sharex=False)
+    fig, ax = plt.subplots(sharey=False)
     ax.imshow(image)
     ax.set_ylim(2.0, -0.5)
     ax.set_xlim(-0.5, 2.0)
-# Mutation info: Added sharex = False (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

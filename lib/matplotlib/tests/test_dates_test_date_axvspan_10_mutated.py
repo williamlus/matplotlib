@@ -50,5 +50,5 @@ def test_date_axvspan_10_mutated():
     fig, ax = plt.subplots()
     ax.axvspan(t0, tf, facecolor='blue', alpha=0.25)
     ax.set_xlim(t0 - datetime.timedelta(days=720), tf + datetime.timedelta(days=720))
-    fig.autofmt_xdate(ha='center')
-# Mutation info: Added ha = center (Call fig.autofmt_xdate)
+    fig.autofmt_xdate(which='minor')
+# Mutation info: Added which = minor (Call fig.autofmt_xdate)

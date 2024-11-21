@@ -71,7 +71,7 @@ def _colorbar_extension_length(spacing):
 @image_comparison(['colorbar_closed_patch.png'], remove_text=True)
 def test_colorbar_closed_patch_8_mutated():
     plt.rcParams['pcolormesh.snap'] = False
-    fig = plt.figure(figsize=(8, 6), layout='tight')
+    fig = plt.figure(figsize=(8, 6), layout=None)
     ax1 = fig.add_axes([0.05, 0.85, 0.9, 0.1])
     ax2 = fig.add_axes([0.1, 0.65, 0.75, 0.1])
     ax3 = fig.add_axes([0.05, 0.45, 0.9, 0.1])
@@ -86,4 +86,4 @@ def test_colorbar_closed_patch_8_mutated():
         plt.colorbar(im, cax=ax3, extend='both', **cbar_kw)
         plt.colorbar(im, cax=ax4, extend='both', extendrect=True, **cbar_kw)
         plt.colorbar(im, cax=ax5, extend='neither', **cbar_kw)
-# Mutation info: Added layout = tight (Call plt.figure)
+# Mutation info: Added layout = None (Call plt.figure)

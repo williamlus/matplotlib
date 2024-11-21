@@ -34,7 +34,7 @@ def test_tight_layout6_8_mutated():
     """Test tight_layout for gridspec."""
     with warnings.catch_warnings():
         warnings.simplefilter('ignore', UserWarning)
-        fig = plt.figure(layout=None)
+        fig = plt.figure(frameon=False)
         gs1 = mpl.gridspec.GridSpec(2, 1)
         ax1 = fig.add_subplot(gs1[0])
         ax2 = fig.add_subplot(gs1[1])
@@ -53,4 +53,4 @@ def test_tight_layout6_8_mutated():
         bottom = max(gs1.bottom, gs2.bottom)
         gs1.tight_layout(fig, rect=[None, 0 + (bottom - gs1.bottom), 0.5, 1 - (gs1.top - top)])
         gs2.tight_layout(fig, rect=[0.5, 0 + (bottom - gs2.bottom), None, 1 - (gs2.top - top)], h_pad=0.45)
-# Mutation info: Added layout = None (Call plt.figure)
+# Mutation info: Added frameon = False (Call plt.figure)

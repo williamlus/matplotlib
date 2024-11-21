@@ -156,8 +156,8 @@ def color_boxes(fig, ax):
 def test_boxplot_mod_artist_after_plotting_12_mutated():
     x = [0.15, 0.11, 0.06, 0.06, 0.12, 0.56, -0.56]
     fig, ax = plt.subplots()
-    bp = ax.boxplot(x, sym='o', notch=False)
+    bp = ax.boxplot(x, sym='o', manage_ticks=True)
     for key in bp:
         for obj in bp[key]:
             obj.set_color('green')
-# Mutation info: Added notch = False (Call ax.boxplot)
+# Mutation info: Added manage_ticks = True (Call ax.boxplot)

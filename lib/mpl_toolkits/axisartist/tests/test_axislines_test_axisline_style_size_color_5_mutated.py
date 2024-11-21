@@ -14,5 +14,5 @@ def test_axisline_style_size_color_5_mutated():
     ax.axis['yzero'].set_axisline_style('->, size=1.5')
     ax.axis['yzero'].set_visible(True)
     for direction in ('left', 'right', 'bottom', 'top'):
-        ax.axis[direction].set_visible(False)
-# Mutation info: (0-th Positional) b = False -> b = False (Call ax.axis[direction].set_visible)
+        ax.axis[direction].set_visible(True)
+# Mutation info: (0-th Positional) b = False -> b = True (Call ax.axis[direction].set_visible)

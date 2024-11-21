@@ -22,7 +22,7 @@ def test_polar_box_31_mutated():
     ax1.axis['top'].major_ticklabels.set_visible(True)
     ax1.axis['right'].get_helper().nth_coord_ticks = 0
     ax1.axis['bottom'].get_helper().nth_coord_ticks = 1
-    fig.add_subplot(ax1, projection='hammer')
+    fig.add_subplot(ax1, projection='mollweide')
     ax1.axis['lat'] = axis = grid_helper.new_floating_axis(0, 45, axes=ax1)
     axis.label.set_text('Test')
     axis.label.set_visible(True)
@@ -37,4 +37,4 @@ def test_polar_box_31_mutated():
     ax1.set_xlim(-5, 12)
     ax1.set_ylim(-5, 10)
     ax1.grid(True)
-# Mutation info: Added projection = hammer (Call fig.add_subplot)
+# Mutation info: Added projection = mollweide (Call fig.add_subplot)

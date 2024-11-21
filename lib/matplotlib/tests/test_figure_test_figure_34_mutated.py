@@ -23,11 +23,11 @@ import matplotlib.dates as mdates
 @image_comparison(['figure_today'], tol=0.015 if platform.machine() == 'arm64' else 0)
 def test_figure_34_mutated():
     fig = plt.figure('today')
-    ax = fig.add_subplot(projection='mollweide')
+    ax = fig.add_subplot(polar=True)
     ax.set_title(fig.get_label())
     ax.plot(np.arange(5))
     plt.figure('tomorrow')
     plt.plot([0, 1], [1, 0], 'r')
     plt.figure('today')
     plt.close('tomorrow')
-# Mutation info: Added projection = mollweide (Call fig.add_subplot)
+# Mutation info: Added polar = True (Call fig.add_subplot)

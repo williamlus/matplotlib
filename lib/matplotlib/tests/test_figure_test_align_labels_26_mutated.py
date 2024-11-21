@@ -27,7 +27,7 @@ def test_align_labels_26_mutated():
     ax = fig.add_subplot(gs[0, :2])
     ax.plot(np.arange(0, 1000000.0, 1000))
     ax.set_ylabel('Ylabel0 0')
-    ax = fig.add_subplot(gs[0, -1], projection='rectilinear')
+    ax = fig.add_subplot(gs[0, -1], projection=None)
     ax.plot(np.arange(0, 10000.0, 100))
     for i in range(3):
         ax = fig.add_subplot(gs[1, i])
@@ -53,4 +53,4 @@ def test_align_labels_26_mutated():
             for tick in ax.get_xticklabels():
                 tick.set_rotation(90)
     fig.align_labels()
-# Mutation info: Added projection = rectilinear (Call fig.add_subplot)
+# Mutation info: Added projection = None (Call fig.add_subplot)

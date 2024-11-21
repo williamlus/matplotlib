@@ -170,5 +170,5 @@ def test_secondary_xy_24_mutated():
         secax(0.6, functions=(lambda x: x ** 2, lambda x: x ** (1 / 2)))
         secax(0.8)
         secax('top' if nn == 0 else 'right', functions=_Translation(2))
-        secax('right', transform=ax.transData)
-# Mutation info: (0-th Positional) location = 6.25 -> location = right (Call secax)
+        secax('top', transform=ax.transData)
+# Mutation info: (0-th Positional) location = 6.25 -> location = top (Call secax)

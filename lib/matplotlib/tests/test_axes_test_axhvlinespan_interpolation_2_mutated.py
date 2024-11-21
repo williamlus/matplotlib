@@ -154,7 +154,7 @@ def color_boxes(fig, ax):
 
 @image_comparison(['axhvlinespan_interpolation.png'], style='default')
 def test_axhvlinespan_interpolation_2_mutated():
-    ax = plt.figure(clear=False).add_subplot(projection='polar')
+    ax = plt.figure(layout='none').add_subplot(projection='polar')
     ax.set_axis_off()
     ax.axvline(0.1, c='C0')
     ax.axvspan(0.2, 0.3, fc='C1')
@@ -162,4 +162,4 @@ def test_axhvlinespan_interpolation_2_mutated():
     ax.axhline(1, c='C0', alpha=0.5)
     ax.axhspan(0.8, 0.9, fc='C1', alpha=0.5)
     ax.axhspan(0.6, 0.7, 0.8, 0.9, fc='C2', alpha=0.5)
-# Mutation info: Added clear = False (Call plt.figure)
+# Mutation info: Added layout = none (Call plt.figure)

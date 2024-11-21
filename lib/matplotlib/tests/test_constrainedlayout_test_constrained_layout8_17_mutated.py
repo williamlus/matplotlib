@@ -41,7 +41,7 @@ def test_constrained_layout8_17_mutated():
         else:
             ilist = [0, 4]
         for i in ilist:
-            ax = fig.add_subplot(gs[j, i], projection=None)
+            ax = fig.add_subplot(gs[j, i], projection='mollweide')
             axs += [ax]
             example_pcolor(ax, fontsize=9)
             if i > 0:
@@ -53,4 +53,4 @@ def test_constrained_layout8_17_mutated():
     axs += [ax]
     pcm = example_pcolor(ax, fontsize=9)
     fig.colorbar(pcm, ax=axs, pad=0.01, shrink=0.6)
-# Mutation info: Added projection = None (Call fig.add_subplot)
+# Mutation info: Added projection = mollweide (Call fig.add_subplot)

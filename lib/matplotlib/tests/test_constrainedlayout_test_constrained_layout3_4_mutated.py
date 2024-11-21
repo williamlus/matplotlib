@@ -32,7 +32,7 @@ def example_pcolor(ax, fontsize=12):
 @image_comparison(['constrained_layout3.png'])
 def test_constrained_layout3_4_mutated():
     """Test constrained_layout for colorbars with subplots"""
-    fig, axs = plt.subplots(2, 2, layout='constrained', sharex=False)
+    fig, axs = plt.subplots(2, 2, layout='constrained', sharey=False)
     for nn, ax in enumerate(axs.flat):
         pcm = example_pcolor(ax, fontsize=24)
         if nn == 3:
@@ -40,4 +40,4 @@ def test_constrained_layout3_4_mutated():
         else:
             pad = 0.02
         fig.colorbar(pcm, ax=ax, pad=pad)
-# Mutation info: Added sharex = False (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

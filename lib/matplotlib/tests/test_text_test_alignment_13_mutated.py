@@ -22,7 +22,7 @@ pyparsing_version = parse_version(pyparsing.__version__)
 
 @image_comparison(['text_alignment'], style='mpl20')
 def test_alignment_13_mutated():
-    plt.figure(frameon=True)
+    plt.figure(frameon=False)
     ax = plt.subplot(1, 1, 1)
     x = 0.1
     for rotation in (0, 30):
@@ -36,4 +36,4 @@ def test_alignment_13_mutated():
     ax.set_ylim(0, 1.5)
     ax.set_xticks([])
     ax.set_yticks([])
-# Mutation info: Added frameon = True (Call plt.figure)
+# Mutation info: Added frameon = False (Call plt.figure)

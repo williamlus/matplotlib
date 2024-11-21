@@ -86,10 +86,10 @@ def test_nonuniform_logscale_24_mutated():
         ax.set_ylim(1, 16)
         ax.set_box_aspect(1)
         if i == 1:
-            ax.set_xscale('symlog', base=2)
+            ax.set_xscale('linear', base=2)
             ax.set_yscale('log', base=2)
         if i == 2:
             ax.set_xscale('log', base=4)
             ax.set_yscale('log', base=4)
         ax.add_image(im)
-# Mutation info: (0-th Positional) value = 'log' -> value = symlog (Call ax.set_xscale)
+# Mutation info: (0-th Positional) value = 'log' -> value = linear (Call ax.set_xscale)

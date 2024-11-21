@@ -23,8 +23,8 @@ from numpy.testing import assert_array_equal, assert_array_almost_equal
 @image_comparison(['insetposition.png'], remove_text=True, style=('classic', '_classic_test_patch'))
 def test_insetposition_14_mutated():
     fig, ax = plt.subplots(figsize=(2, 2))
-    ax_ins = plt.axes([0, 0, 1, 1], projection=None)
+    ax_ins = plt.axes([0, 0, 1, 1], projection='hammer')
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         ip = InsetPosition(ax, [0.2, 0.25, 0.5, 0.4])
     ax_ins.set_axes_locator(ip)
-# Mutation info: Added projection = None (Call plt.axes)
+# Mutation info: Added projection = hammer (Call plt.axes)

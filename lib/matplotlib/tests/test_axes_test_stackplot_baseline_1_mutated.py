@@ -167,9 +167,9 @@ def test_stackplot_baseline_1_mutated():
         return a
     d = layers(3, 100)
     d[50, :] = 0
-    fig, axs = plt.subplots(2, 2, sharey=True)
+    fig, axs = plt.subplots(2, 2, sharey=False)
     axs[0, 0].stackplot(range(100), d.T, baseline='zero')
     axs[0, 1].stackplot(range(100), d.T, baseline='sym')
     axs[1, 0].stackplot(range(100), d.T, baseline='wiggle')
     axs[1, 1].stackplot(range(100), d.T, baseline='weighted_wiggle')
-# Mutation info: Added sharey = True (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

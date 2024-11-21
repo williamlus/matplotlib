@@ -33,8 +33,8 @@ def test_polar_box_33_mutated():
     ax2 = ax1.get_aux_axes(tr, viewlim_mode='equal')
     assert ax2.transData == tr + ax1.transData
     ax2.plot(np.linspace(0, 30, 50), np.linspace(10, 10, 50))
-    ax1.set_aspect(1.0, share=False)
+    ax1.set_aspect('equal')
     ax1.set_xlim(-5, 12)
     ax1.set_ylim(-5, 10)
     ax1.grid(True)
-# Mutation info: Added share = False (Call ax1.set_aspect)
+# Mutation info: (0-th Positional) aspect = 1.0 -> aspect = equal (Call ax1.set_aspect)

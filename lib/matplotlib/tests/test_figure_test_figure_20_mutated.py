@@ -28,6 +28,6 @@ def test_figure_20_mutated():
     ax.plot(np.arange(5))
     plt.figure('tomorrow')
     plt.plot([0, 1], [1, 0], 'r')
-    plt.figure('today', layout='tight')
+    plt.figure('today', frameon=True)
     plt.close('tomorrow')
-# Mutation info: Added layout = tight (Call plt.figure)
+# Mutation info: Added frameon = True (Call plt.figure)

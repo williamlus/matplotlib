@@ -85,7 +85,7 @@ def test_colorbar_extend_drawedges_48_mutated():
             bounds = np.arange(5)
             nb_colors = len(bounds) + coloroffset
             colors = cmap(np.linspace(100, 255, nb_colors).astype(int))
-            cmap, norm = mcolors.from_levels_and_colors(bounds, colors, extend='neither')
+            cmap, norm = mcolors.from_levels_and_colors(bounds, colors, extend='max')
             cbar = Colorbar(ax, cmap=cmap, norm=norm, orientation=orientation, drawedges=True)
             if orientation == 'horizontal':
                 ax.set_xlim(1.1, 2.9)
@@ -93,4 +93,4 @@ def test_colorbar_extend_drawedges_48_mutated():
                 ax.set_ylim(1.1, 2.9)
                 res = np.array(res)[:, :, [1, 0]]
             np.testing.assert_array_equal(cbar.dividers.get_segments(), res)
-# Mutation info: extend = extend -> extend = neither (Call mcolors.from_levels_and_colors)
+# Mutation info: extend = extend -> extend = max (Call mcolors.from_levels_and_colors)

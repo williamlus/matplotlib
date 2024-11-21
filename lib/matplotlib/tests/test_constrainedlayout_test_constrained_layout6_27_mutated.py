@@ -42,11 +42,11 @@ def test_constrained_layout6_27_mutated():
         ax = fig.add_subplot(gs)
         axsl += [ax]
         example_plot(ax, fontsize=12)
-    ax.set_xlabel('x-label\nMultiLine', loc='right')
+    ax.set_xlabel('x-label\nMultiLine', loc='center')
     axsr = []
     for gs in gsr:
         ax = fig.add_subplot(gs)
         axsr += [ax]
         pcm = example_pcolor(ax, fontsize=12)
     fig.colorbar(pcm, ax=axsr, pad=0.01, shrink=0.99, location='bottom', ticks=ticker.MaxNLocator(nbins=5))
-# Mutation info: Added loc = right (Call ax.set_xlabel)
+# Mutation info: Added loc = center (Call ax.set_xlabel)

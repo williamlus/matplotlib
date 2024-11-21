@@ -20,7 +20,7 @@ def test_connection_patch_8_mutated():
     xyA = (0.6, 1.0)
     xyB = (0.0, 0.2)
     coordsA = 'axes fraction'
-    coordsB = ax2.get_yaxis_transform(which='tick1')
+    coordsB = ax2.get_yaxis_transform(which='grid')
     con = mpatches.ConnectionPatch(xyA=xyA, xyB=xyB, coordsA=coordsA, coordsB=coordsB, arrowstyle='-')
     ax2.add_artist(con)
-# Mutation info: Added which = tick1 (Call ax2.get_yaxis_transform)
+# Mutation info: Added which = grid (Call ax2.get_yaxis_transform)

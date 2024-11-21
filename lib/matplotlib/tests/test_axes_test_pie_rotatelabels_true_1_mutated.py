@@ -159,5 +159,5 @@ def test_pie_rotatelabels_true_1_mutated():
     colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral']
     explode = (0, 0.1, 0, 0)
     plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90, rotatelabels=True)
-    plt.axis('equal', emit=False)
-# Mutation info: Added emit = False (Call plt.axis)
+    plt.axis('equal', emit=True)
+# Mutation info: Added emit = True (Call plt.axis)

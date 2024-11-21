@@ -16,5 +16,5 @@ def draw_quiver(ax, **kwargs):
 def test_quiver_animate_11_mutated():
     fig, ax = plt.subplots()
     Q = draw_quiver(ax, animated=True)
-    ax.quiverkey(Q, 0.5, 0.92, 2, '$2 \\frac{m}{s}$', labelpos='S', fontproperties={'weight': 'bold'})
-# Mutation info: labelpos = 'W' -> labelpos = S (Call ax.quiverkey)
+    ax.quiverkey(Q, 0.5, 0.92, 2, '$2 \\frac{m}{s}$', labelpos='W', fontproperties={'weight': 'bold'}, coordinates='inches')
+# Mutation info: Added coordinates = inches (Call ax.quiverkey)

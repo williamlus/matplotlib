@@ -22,6 +22,6 @@ def test_wedge_range_1_mutated():
         y = i // 3
         wedge = mpatches.Wedge((x * 3, y * 3), 1, theta1, theta2, facecolor='none', edgecolor='k', lw=3)
         ax.add_artist(wedge)
-    ax.set_xlim(-2, 8, emit=False)
+    ax.set_xlim(-2, 8, auto=False)
     ax.set_ylim(-2, 9)
-# Mutation info: Added emit = False (Call ax.set_xlim)
+# Mutation info: Added auto = False (Call ax.set_xlim)

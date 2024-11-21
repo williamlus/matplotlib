@@ -45,7 +45,7 @@ def test_tight_layout6_44_mutated():
         for ss in gs2:
             ax = fig.add_subplot(ss)
             example_plot(ax)
-            ax.set_title('', loc='right')
+            ax.set_title('', loc='left')
             ax.set_xlabel('')
         ax.set_xlabel('x-label', fontsize=12)
         gs2.tight_layout(fig, rect=[0.5, 0, 1, 1], h_pad=0.45)
@@ -53,4 +53,4 @@ def test_tight_layout6_44_mutated():
         bottom = max(gs1.bottom, gs2.bottom)
         gs1.tight_layout(fig, rect=[None, 0 + (bottom - gs1.bottom), 0.5, 1 - (gs1.top - top)])
         gs2.tight_layout(fig, rect=[0.5, 0 + (bottom - gs2.bottom), None, 1 - (gs2.top - top)], h_pad=0.45)
-# Mutation info: Added loc = right (Call ax.set_title)
+# Mutation info: Added loc = left (Call ax.set_title)

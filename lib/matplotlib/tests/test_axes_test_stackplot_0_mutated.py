@@ -164,8 +164,8 @@ def test_stackplot_0_mutated():
     ax.set_xlim((0, 10))
     ax.set_ylim((0, 70))
     data = {'x': x, 'y1': y1, 'y2': y2, 'y3': y3}
-    fig, ax = plt.subplots(sharex=False)
+    fig, ax = plt.subplots(squeeze=True)
     ax.stackplot('x', 'y1', 'y2', 'y3', data=data, colors=['C0', 'C1', 'C2'])
     ax.set_xlim((0, 10))
     ax.set_ylim((0, 70))
-# Mutation info: Added sharex = False (Call plt.subplots)
+# Mutation info: Added squeeze = True (Call plt.subplots)

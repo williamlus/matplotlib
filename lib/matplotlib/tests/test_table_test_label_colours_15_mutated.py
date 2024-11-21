@@ -17,7 +17,7 @@ def test_label_colours_15_mutated():
     colours = plt.cm.RdYlGn(c)
     cellText = [['1'] * dim] * dim
     fig = plt.figure()
-    ax1 = fig.add_subplot(4, 1, 1, projection='lambert')
+    ax1 = fig.add_subplot(4, 1, 1, projection='mollweide')
     ax1.axis('off')
     ax1.table(cellText=cellText, rowColours=colours, loc='best')
     ax2 = fig.add_subplot(4, 1, 2)
@@ -29,4 +29,4 @@ def test_label_colours_15_mutated():
     ax4 = fig.add_subplot(4, 1, 4)
     ax4.axis('off')
     ax4.table(cellText=cellText, colColours=colours, colLabels=['Header'] * dim, loc='best')
-# Mutation info: Added projection = lambert (Call fig.add_subplot)
+# Mutation info: Added projection = mollweide (Call fig.add_subplot)

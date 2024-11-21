@@ -155,8 +155,8 @@ def color_boxes(fig, ax):
 @image_comparison(['marker_edges'], remove_text=True)
 def test_marker_edges_4_mutated():
     x = np.linspace(0, 1, 10)
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(sharey=True)
     ax.plot(x, np.sin(x), 'y.', ms=30.0, mew=0, mec='r')
     ax.plot(x + 0.1, np.sin(x), 'y.', ms=30.0, mew=1, mec='r')
     ax.plot(x + 0.2, np.sin(x), 'y.', ms=30.0, mew=2, mec='b')
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

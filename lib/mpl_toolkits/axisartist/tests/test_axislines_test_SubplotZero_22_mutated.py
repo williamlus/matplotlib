@@ -17,5 +17,5 @@ def test_SubplotZero_22_mutated():
         ax.axis[n].set_visible(False)
     xx = np.arange(0, 2 * np.pi, 0.01)
     ax.plot(xx, np.sin(xx))
-    ax.set_ylabel('Test', loc='center')
-# Mutation info: Added loc = center (Call ax.set_ylabel)
+    ax.set_ylabel('Test', loc='top')
+# Mutation info: Added loc = top (Call ax.set_ylabel)

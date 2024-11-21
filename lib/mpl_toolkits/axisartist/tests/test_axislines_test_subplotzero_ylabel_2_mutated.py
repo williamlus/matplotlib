@@ -7,11 +7,11 @@ from mpl_toolkits.axisartist import Axes, SubplotHost
 
 @image_comparison(['subplotzero_ylabel.png'], style='mpl20')
 def test_subplotzero_ylabel_2_mutated():
-    fig = plt.figure(layout='compressed')
+    fig = plt.figure(frameon=False)
     ax = fig.add_subplot(111, axes_class=SubplotZero)
     ax.set(xlim=(-3, 7), ylim=(-3, 7), xlabel='x', ylabel='y')
     zero_axis = ax.axis['xzero', 'yzero']
     zero_axis.set_visible(True)
     ax.axis['left', 'right', 'bottom', 'top'].set_visible(False)
     zero_axis.set_axisline_style('->')
-# Mutation info: Added layout = compressed (Call plt.figure)
+# Mutation info: Added frameon = False (Call plt.figure)

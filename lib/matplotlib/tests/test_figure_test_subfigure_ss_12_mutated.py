@@ -23,7 +23,7 @@ import matplotlib.dates as mdates
 @image_comparison(['test_subfigure_ss.png'], style='mpl20', savefig_kwarg={'facecolor': 'teal'}, tol=0.02)
 def test_subfigure_ss_12_mutated():
     np.random.seed(19680801)
-    fig = plt.figure(layout='constrained')
+    fig = plt.figure(layout='constrained', frameon=False)
     gs = fig.add_gridspec(1, 2)
     sub = fig.add_subfigure(gs[0], facecolor='pink')
     axs = sub.subplots(2, 2)
@@ -35,4 +35,4 @@ def test_subfigure_ss_12_mutated():
     ax.plot(np.arange(20))
     ax.set_title('Axes')
     fig.suptitle('Figure suptitle', fontsize='xx-large')
-# Mutation info: layout = 'constrained' -> layout = constrained (Call plt.figure)
+# Mutation info: Added frameon = False (Call plt.figure)

@@ -159,7 +159,7 @@ def test_errorbar_limits_0_mutated():
     xerr = 0.1
     yerr = 0.2
     ls = 'dotted'
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(sharex=True)
     ax.errorbar(x, y, xerr=xerr, yerr=yerr, ls=ls, color='blue')
     uplims = np.zeros_like(x)
     uplims[[1, 5, 9]] = True
@@ -180,4 +180,4 @@ def test_errorbar_limits_0_mutated():
     ax.errorbar(x, y + 2.1, marker='o', ms=8, xerr=xerr, yerr=yerr, xlolims=xlolims, xuplims=xuplims, uplims=uplims, lolims=lolims, ls='none', mec='blue', capsize=0, color='cyan')
     ax.set_xlim((0, 5.5))
     ax.set_title('Errorbar upper and lower limits')
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

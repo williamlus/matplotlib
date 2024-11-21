@@ -29,7 +29,7 @@ def test_subfigure_42_mutated():
     for ax in axs.flat:
         pc = ax.pcolormesh(np.random.randn(30, 30), vmin=-2, vmax=2)
     sub[0].colorbar(pc, ax=axs)
-    sub[0].suptitle('Left Side', verticalalignment='bottom')
+    sub[0].suptitle('Left Side', va='center')
     sub[0].set_facecolor('white')
     axs = sub[1].subplots(1, 3)
     for ax in axs.flat:
@@ -41,4 +41,4 @@ def test_subfigure_42_mutated():
     leg = fig.legend(handles=[plt.Line2D([0], [0], label='Line{}'.format(i)) for i in range(5)], loc='center')
     sub[0].set_zorder(leg.get_zorder() - 1)
     sub[1].set_zorder(leg.get_zorder() + 1)
-# Mutation info: Added verticalalignment = bottom (Call sub[0].suptitle)
+# Mutation info: Added va = center (Call sub[0].suptitle)

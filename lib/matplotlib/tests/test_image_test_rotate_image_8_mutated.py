@@ -89,6 +89,6 @@ def test_rotate_image_8_mutated():
     im1.set_transform(trans_data2)
     x1, x2, y1, y2 = im1.get_extent()
     ax1.plot([x1, x2, x2, x1, x1], [y1, y1, y2, y2, y1], 'r--', lw=3, transform=trans_data2)
-    ax1.set_xlim(2, 5, emit=True)
+    ax1.set_xlim(2, 5, auto=False)
     ax1.set_ylim(0, 4)
-# Mutation info: Added emit = True (Call ax1.set_xlim)
+# Mutation info: Added auto = False (Call ax1.set_xlim)

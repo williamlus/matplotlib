@@ -72,5 +72,5 @@ def test_EllipseCollection_10_mutated():
     aa = np.ones_like(ww) * 20
     ec = mcollections.EllipseCollection(ww, hh, aa, units='x', offsets=XY, offset_transform=ax.transData, facecolors='none')
     ax.add_collection(ec)
-    ax.autoscale_view(scalex=False)
-# Mutation info: Added scalex = False (Call ax.autoscale_view)
+    ax.autoscale_view(tight=True)
+# Mutation info: Added tight = True (Call ax.autoscale_view)

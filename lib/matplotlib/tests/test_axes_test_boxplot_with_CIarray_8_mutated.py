@@ -160,5 +160,5 @@ def test_boxplot_with_CIarray_8_mutated():
     fig, ax = plt.subplots()
     CIs = np.array([[-1.5, 3.0], [-1.0, 3.5]])
     ax.boxplot([x, x], bootstrap=10000, usermedians=[None, 1.0], conf_intervals=CIs, notch=1)
-    ax.set_ylim((-30, 30), emit=True)
-# Mutation info: Added emit = True (Call ax.set_ylim)
+    ax.set_ylim((-30, 30), emit=False)
+# Mutation info: Added emit = False (Call ax.set_ylim)

@@ -72,8 +72,8 @@ def _colorbar_extension_length(spacing):
 def test_keeping_xlabel_6_mutated():
     arr = np.arange(25).reshape((5, 5))
     fig, ax = plt.subplots()
-    im = ax.imshow(arr, interpolation_stage='rgba')
+    im = ax.imshow(arr, aspect='equal')
     cbar = plt.colorbar(im)
     cbar.ax.set_xlabel('Visible Xlabel')
     cbar.set_label('YLabel')
-# Mutation info: Added interpolation_stage = rgba (Call ax.imshow)
+# Mutation info: Added aspect = equal (Call ax.imshow)

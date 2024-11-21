@@ -34,9 +34,9 @@ def test_tight_layout3_18_mutated():
     """Test tight_layout for multiple subplots."""
     ax1 = plt.subplot(221)
     ax2 = plt.subplot(223)
-    ax3 = plt.subplot(122, projection='lambert')
+    ax3 = plt.subplot(122, polar=False)
     example_plot(ax1)
     example_plot(ax2)
     example_plot(ax3)
     plt.tight_layout()
-# Mutation info: Added projection = lambert (Call plt.subplot)
+# Mutation info: Added polar = False (Call plt.subplot)

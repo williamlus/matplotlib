@@ -167,6 +167,6 @@ def test_pcolormesh_26_mutated():
     Zm = ma.masked_where(np.abs(Qz) < 0.5 * np.max(Qz), Z)
     _, (ax1, ax2, ax3) = plt.subplots(1, 3)
     ax1.pcolormesh(Qx, Qz, Zm[:-1, :-1], lw=0.5, edgecolors='k')
-    ax2.pcolormesh(Qx, Qz, Zm[:-1, :-1], lw=2, edgecolors=['b', 'w'], snap=True)
+    ax2.pcolormesh(Qx, Qz, Zm[:-1, :-1], lw=2, edgecolors='face')
     ax3.pcolormesh(Qx, Qz, Zm, shading='gouraud')
-# Mutation info: Added snap = True (Call ax2.pcolormesh)
+# Mutation info: edgecolors = ['b', 'w'] -> edgecolors = face (Call ax2.pcolormesh)

@@ -8,7 +8,7 @@ from mpl_toolkits.axisartist import Axes, SubplotHost
 @image_comparison(['Subplot.png'], style='default')
 def test_Subplot_6_mutated():
     plt.rcParams['text.kerning_factor'] = 6
-    fig = plt.figure(clear=True)
+    fig = plt.figure(layout='constrained')
     ax = Subplot(fig, 1, 1, 1)
     fig.add_subplot(ax)
     xx = np.arange(0, 2 * np.pi, 0.01)
@@ -17,4 +17,4 @@ def test_Subplot_6_mutated():
     ax.axis['top'].major_ticks.set_tick_out(True)
     ax.axis['bottom'].major_ticks.set_tick_out(True)
     ax.axis['bottom'].set_label('Tk0')
-# Mutation info: Added clear = True (Call plt.figure)
+# Mutation info: Added layout = constrained (Call plt.figure)

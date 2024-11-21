@@ -154,9 +154,9 @@ def color_boxes(fig, ax):
 
 @image_comparison(['rc_markerfill.png'], tol=0.037 if platform.machine() == 'arm64' else 0)
 def test_markers_fillstyle_rcparams_3_mutated():
-    fig, ax = plt.subplots(sharey=True)
+    fig, ax = plt.subplots(sharex=False)
     x = np.arange(7)
     for idx, (style, marker) in enumerate([('top', 's'), ('bottom', 'o'), ('none', '^')]):
         matplotlib.rcParams['markers.fillstyle'] = style
         ax.plot(x + idx, marker=marker)
-# Mutation info: Added sharey = True (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

@@ -7,7 +7,7 @@ from mpl_toolkits.axisartist.axis_artist import AxisArtist, AxisLabel, LabelBase
 def test_ticklabels_15_mutated():
     plt.rcParams['text.kerning_factor'] = 6
     fig, ax = plt.subplots()
-    ax.xaxis.set_visible(False)
+    ax.xaxis.set_visible(True)
     ax.yaxis.set_visible(False)
     ax.plot([0.2, 0.4], [0.5, 0.5], 'o')
     ticks = Ticks(ticksize=10, axis=ax.xaxis)
@@ -27,4 +27,4 @@ def test_ticklabels_15_mutated():
     ax.add_artist(axislabel)
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
-# Mutation info: (0-th Positional) b = False -> b = False (Call ax.xaxis.set_visible)
+# Mutation info: (0-th Positional) b = False -> b = True (Call ax.xaxis.set_visible)

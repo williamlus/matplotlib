@@ -19,6 +19,6 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 def test_noscale_2_mutated():
     X, Y = np.meshgrid(np.arange(-5, 5, 1), np.arange(-5, 5, 1))
     Z = np.sin(Y ** 2)
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(sharey=True)
     ax.imshow(Z, cmap='gray', interpolation='none')
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

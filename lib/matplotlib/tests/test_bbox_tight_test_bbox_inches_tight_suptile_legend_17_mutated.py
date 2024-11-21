@@ -20,5 +20,5 @@ def test_bbox_inches_tight_suptile_legend_17_mutated():
         else:
             return str(y)
     plt.gca().yaxis.set_major_formatter(FuncFormatter(y_formatter))
-    plt.xlabel('X axis', loc='right')
-# Mutation info: Added loc = right (Call plt.xlabel)
+    plt.xlabel('X axis', loc='left')
+# Mutation info: Added loc = left (Call plt.xlabel)

@@ -180,10 +180,10 @@ def test_errorbar_37_mutated():
     ax.errorbar(x, y, yerr=[yerr_lower, 2 * yerr], xerr=xerr, fmt='o', ecolor='g', capthick=2)
     ax.set_title('Mixed sym., log y')
     ax.set_ylim(0.01, 10.0)
-    fig.suptitle('Variable errorbars', ha='left')
+    fig.suptitle('Variable errorbars', verticalalignment='top')
     data = {'x': x, 'y': y}
     fig = plt.figure()
     ax = fig.gca()
     ax.errorbar('x', 'y', xerr=0.2, yerr=0.4, data=data)
     ax.set_title('Simplest errorbars, 0.2 in x, 0.4 in y')
-# Mutation info: Added ha = left (Call fig.suptitle)
+# Mutation info: Added verticalalignment = top (Call fig.suptitle)

@@ -157,5 +157,5 @@ def test_hist_stacked_density_11_mutated():
     d1 = np.linspace(1, 3, 20)
     d2 = np.linspace(0, 10, 50)
     fig, ax = plt.subplots()
-    ax.hist((d1, d2), stacked=True, density=True, log=False)
-# Mutation info: Added log = False (Call ax.hist)
+    ax.hist((d1, d2), stacked=True, density=True, histtype='bar')
+# Mutation info: Added histtype = bar (Call ax.hist)

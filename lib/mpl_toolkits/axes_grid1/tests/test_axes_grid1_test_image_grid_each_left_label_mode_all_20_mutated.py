@@ -24,11 +24,11 @@ from numpy.testing import assert_array_equal, assert_array_almost_equal
 def test_image_grid_each_left_label_mode_all_20_mutated():
     imdata = np.arange(100).reshape((10, 10))
     fig = plt.figure(1, (3, 3))
-    grid = ImageGrid(fig, (1, 1, 1), nrows_ncols=(3, 2), axes_pad=(0.5, 0.3), cbar_mode='each', cbar_location='left', cbar_size='15%', label_mode='all', direction='column')
+    grid = ImageGrid(fig, (1, 1, 1), nrows_ncols=(3, 2), axes_pad=(0.5, 0.3), cbar_mode='single', cbar_location='left', cbar_size='15%', label_mode='all')
     assert isinstance(grid.get_divider(), SubplotDivider)
     assert grid.get_axes_pad() == (0.5, 0.3)
     assert grid.get_aspect()
     for ax, cax in zip(grid, grid.cbar_axes):
         im = ax.imshow(imdata, interpolation='none')
         cax.colorbar(im)
-# Mutation info: Added direction = column (Call ImageGrid)
+# Mutation info: cbar_mode = 'each' -> cbar_mode = single (Call ImageGrid)

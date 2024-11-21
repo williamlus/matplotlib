@@ -21,9 +21,9 @@ from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
 @image_comparison(['drawstyle_variants.png'], remove_text=True, tol=0.03 if platform.machine() == 'arm64' else 0)
 def test_drawstyle_variants_5_mutated():
-    fig, axs = plt.subplots(6, sharey=False)
+    fig, axs = plt.subplots(6, sharey=True)
     dss = ['default', 'steps-mid', 'steps-pre', 'steps-post', 'steps', None]
     for ax, ds in zip(axs.flat, dss):
         ax.plot(range(2000), drawstyle=ds)
         ax.set(xlim=(0, 2), ylim=(0, 2))
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

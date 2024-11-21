@@ -39,5 +39,5 @@ def test_constrained_layout9_15_mutated():
         ax.set_ylabel('')
     ax.set_aspect(2.0)
     fig.colorbar(pcm, ax=axs, pad=0.01, shrink=0.6)
-    fig.suptitle('Test Suptitle', fontsize=28, verticalalignment='center')
-# Mutation info: Added verticalalignment = center (Call fig.suptitle)
+    fig.suptitle('Test Suptitle', fontsize=28, va='baseline')
+# Mutation info: Added va = baseline (Call fig.suptitle)

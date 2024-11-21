@@ -23,7 +23,7 @@ pyparsing_version = parse_version(pyparsing.__version__)
 @image_comparison(['multiline2'], style='mpl20')
 def test_multiline2_4_mutated():
     plt.rcParams['text.kerning_factor'] = 6
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(sharey=True)
     ax.set_xlim([0, 1.4])
     ax.set_ylim([0, 2])
     ax.axhline(0.5, color='C2', linewidth=0.3)
@@ -54,4 +54,4 @@ def test_multiline2_4_mutated():
         tt = ax.text(0.2 * nn + 0.1, 0.1, st, horizontalalignment=horal, verticalalignment='bottom', rotation=20)
         draw_box(ax, tt)
     ax.text(1.2, 0.1, 'Bot align, rot20', color='C2')
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

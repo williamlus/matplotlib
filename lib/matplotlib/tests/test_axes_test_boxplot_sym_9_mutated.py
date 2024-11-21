@@ -158,5 +158,5 @@ def test_boxplot_sym_9_mutated():
     x = np.hstack([-25, x, 25])
     fig, ax = plt.subplots()
     ax.boxplot([x, x], sym='gs')
-    ax.set_ylim((-30, 30), emit=False)
-# Mutation info: Added emit = False (Call ax.set_ylim)
+    ax.set_ylim((-30, 30), auto=True)
+# Mutation info: Added auto = True (Call ax.set_ylim)

@@ -157,5 +157,5 @@ def test_retain_tick_visibility_6_mutated():
     fig, ax = plt.subplots()
     plt.plot([0, 1, 2], [0, -1, 4])
     plt.setp(ax.get_yticklabels(), visible=False)
-    ax.tick_params(axis='x', which='both', length=0)
-# Mutation info: axis = 'y' -> axis = x (Call ax.tick_params)
+    ax.tick_params(axis='y', which='both', length=0)
+# Mutation info: axis = 'y' -> axis = y (Call ax.tick_params)

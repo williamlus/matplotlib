@@ -159,6 +159,6 @@ def test_boxplot_with_CIarray_23_mutated():
     x = np.hstack([-25, x, 25])
     fig, ax = plt.subplots()
     CIs = np.array([[-1.5, 3.0], [-1.0, 3.5]])
-    ax.boxplot([x, x], bootstrap=10000, usermedians=[None, 1.0], conf_intervals=CIs, notch=1, autorange=True)
+    ax.boxplot([x, x], bootstrap=10000, usermedians=[None, 1.0], conf_intervals=CIs, notch=1, meanline=False)
     ax.set_ylim((-30, 30))
-# Mutation info: Added autorange = True (Call ax.boxplot)
+# Mutation info: Added meanline = False (Call ax.boxplot)

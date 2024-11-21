@@ -158,5 +158,5 @@ def test_loglog_15_mutated():
     x = np.arange(1, 11)
     ax.loglog(x, x ** 3, lw=5)
     ax.tick_params(length=25, width=2)
-    ax.tick_params(length=15, width=2, which='both')
-# Mutation info: which = 'minor' -> which = both (Call ax.tick_params)
+    ax.tick_params(length=15, width=2, which='minor', reset=False)
+# Mutation info: Added reset = False (Call ax.tick_params)

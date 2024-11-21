@@ -157,7 +157,7 @@ def test_bar_tick_label_single_5_mutated():
     ax = plt.gca()
     ax.bar(0, 1, align='edge', tick_label='0')
     data = {'a': 0, 'b': 1}
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(squeeze=True)
     ax = plt.gca()
     ax.bar('a', 'b', align='edge', tick_label='0', data=data)
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added squeeze = True (Call plt.subplots)

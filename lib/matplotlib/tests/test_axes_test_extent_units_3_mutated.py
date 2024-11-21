@@ -154,7 +154,7 @@ def color_boxes(fig, ax):
 
 @image_comparison(['extent_units.png'], style='mpl20')
 def test_extent_units_3_mutated():
-    _, axs = plt.subplots(2, 2, sharey=True)
+    _, axs = plt.subplots(2, 2, sharey=False)
     date_first = np.datetime64('2020-01-01', 'D')
     date_last = np.datetime64('2020-01-11', 'D')
     arr = [[i + j for i in range(10)] for j in range(10)]
@@ -172,4 +172,4 @@ def test_extent_units_3_mutated():
     axs[1, 1].set(xlabel='Day of Jan 2020')
     with pytest.raises(TypeError, match='set_extent\\(\\) got an unexpected'):
         im.set_extent([2, 12, date_first, date_last], clip=False)
-# Mutation info: Added sharey = True (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

@@ -11,5 +11,5 @@ from matplotlib.ticker import FuncFormatter
 def test_bbox_inches_tight_layout_constrained_8_mutated():
     fig, ax = plt.subplots(layout='constrained')
     fig.get_layout_engine().set(h_pad=0.5)
-    ax.set_aspect('auto')
-# Mutation info: (0-th Positional) aspect = 'equal' -> aspect = auto (Call ax.set_aspect)
+    ax.set_aspect('equal', share=True)
+# Mutation info: Added share = True (Call ax.set_aspect)

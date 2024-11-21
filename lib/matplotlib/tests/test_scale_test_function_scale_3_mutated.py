@@ -17,9 +17,9 @@ def test_function_scale_3_mutated():
 
     def forward(x):
         return x ** (1 / 2)
-    fig, ax = plt.subplots(sharey=True)
+    fig, ax = plt.subplots(sharey=False)
     x = np.arange(1, 1000)
     ax.plot(x, x)
     ax.set_xscale('function', functions=(forward, inverse))
     ax.set_xlim(1, 1000)
-# Mutation info: Added sharey = True (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

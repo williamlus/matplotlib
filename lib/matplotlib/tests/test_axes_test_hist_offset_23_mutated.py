@@ -158,5 +158,5 @@ def test_hist_offset_23_mutated():
     d2 = np.linspace(1, 3, 20)
     fig, ax = plt.subplots()
     ax.hist(d1, bottom=5)
-    ax.hist(d2, bottom=15, align='left')
-# Mutation info: Added align = left (Call ax.hist)
+    ax.hist(d2, bottom=15, histtype='bar')
+# Mutation info: Added histtype = bar (Call ax.hist)

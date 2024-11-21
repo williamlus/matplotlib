@@ -79,7 +79,7 @@ class QuantityND(np.ndarray):
 def test_log_scale_image_4_mutated():
     Z = np.zeros((10, 10))
     Z[::2] = 1
-    fig, ax = plt.subplots(squeeze=True)
+    fig, ax = plt.subplots(squeeze=False)
     ax.imshow(Z, extent=[1, 100, 1, 100], cmap='viridis', vmax=1, vmin=-1, aspect='auto')
     ax.set(yscale='log')
-# Mutation info: Added squeeze = True (Call plt.subplots)
+# Mutation info: Added squeeze = False (Call plt.subplots)

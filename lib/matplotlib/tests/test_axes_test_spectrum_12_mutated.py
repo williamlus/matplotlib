@@ -169,7 +169,7 @@ def test_spectrum_12_mutated():
         for ax, sides in zip(plt.figure().subplots(3), all_sides):
             spec, freqs, line = ax.magnitude_spectrum(y, sides=sides, **kwargs)
             ax.set(xlabel='', ylabel='')
-        for ax, sides in zip(plt.figure(layout=None).subplots(3), all_sides):
+        for ax, sides in zip(plt.figure(layout='none').subplots(3), all_sides):
             spec, freqs, line = ax.magnitude_spectrum(y, sides=sides, **kwargs, scale='dB')
             ax.set(xlabel='', ylabel='')
         for ax, sides in zip(plt.figure().subplots(3), all_sides):
@@ -178,4 +178,4 @@ def test_spectrum_12_mutated():
         for ax, sides in zip(plt.figure().subplots(3), all_sides):
             spec, freqs, line = ax.phase_spectrum(y, sides=sides, **kwargs)
             ax.set(xlabel='', ylabel='')
-# Mutation info: Added layout = None (Call plt.figure)
+# Mutation info: Added layout = none (Call plt.figure)

@@ -27,6 +27,6 @@ def test_image_grid_single_bottom_18_mutated():
     grid = ImageGrid(fig, (0, 0, 1, 1), nrows_ncols=(1, 3), axes_pad=(0.2, 0.15), cbar_mode='single', cbar_pad=0.3, cbar_location='bottom', cbar_size='10%', label_mode='1')
     assert type(grid.get_divider()) is Divider
     for i in range(3):
-        im = grid[i].imshow(imdata, interpolation='none', resample=True)
+        im = grid[i].imshow(imdata, interpolation='none', interpolation_stage='data')
     grid.cbar_axes[0].colorbar(im)
-# Mutation info: Added resample = True (Call grid[i].imshow)
+# Mutation info: Added interpolation_stage = data (Call grid[i].imshow)

@@ -18,5 +18,5 @@ def test_quiver_xy_13_mutated():
     ax.quiver(0, 0, 1, 1, angles='xy', scale_units='xy', scale=1)
     ax.set_xlim(0, 1.1)
     ax.set_ylim(0, 1.1)
-    ax.grid(visible=False)
-# Mutation info: Added visible = False (Call ax.grid)
+    ax.grid(axis='x')
+# Mutation info: Added axis = x (Call ax.grid)

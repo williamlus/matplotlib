@@ -36,7 +36,7 @@ def test_tight_layout_offsetboxes_3_mutated():
     x = y = [0, 1]
 
     def _subplots():
-        _, axs = plt.subplots(rows, cols, squeeze=True)
+        _, axs = plt.subplots(rows, cols, sharey=False)
         axs = axs.flat
         for ax, color in zip(axs, colors):
             ax.plot(x, y, color=color)
@@ -50,4 +50,4 @@ def test_tight_layout_offsetboxes_3_mutated():
             if isinstance(child, AnchoredOffsetbox):
                 child.set_visible(False)
     plt.tight_layout()
-# Mutation info: Added squeeze = True (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

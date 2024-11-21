@@ -18,5 +18,5 @@ def test_patheffects_stroked_text_19_mutated():
         text.set_path_effects([path_effects.Stroke(linewidth=font_size / 10, foreground='black'), path_effects.Normal()])
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
-    ax.axis('off', option=False)
-# Mutation info: Added option = False (Call ax.axis)
+    ax.axis('off', emit=False)
+# Mutation info: Added emit = False (Call ax.axis)

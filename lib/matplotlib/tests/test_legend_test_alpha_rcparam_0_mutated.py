@@ -22,9 +22,9 @@ from matplotlib.font_manager import FontProperties
 
 @image_comparison(['rcparam_alpha.png'], remove_text=True, tol=0 if platform.machine() == 'x86_64' else 0.03)
 def test_alpha_rcparam_0_mutated():
-    fig, ax = plt.subplots(sharex=False)
+    fig, ax = plt.subplots(sharey=False)
     ax.plot(range(10), lw=5)
     with mpl.rc_context(rc={'legend.framealpha': 0.75}):
         leg = plt.legend(['Longlabel that will go away'], loc='center')
         leg.legendPatch.set_facecolor([1, 0, 0, 0.5])
-# Mutation info: Added sharex = False (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

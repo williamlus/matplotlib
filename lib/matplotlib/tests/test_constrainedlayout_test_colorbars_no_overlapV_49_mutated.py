@@ -37,6 +37,6 @@ def test_colorbars_no_overlapV_49_mutated():
         ax.yaxis.set_major_formatter(ticker.NullFormatter())
         ax.tick_params(axis='both', direction='in')
         im = ax.imshow([[1, 2], [3, 4]])
-        fig.colorbar(im, ax=ax, orientation='vertical', use_gridspec=True)
+        fig.colorbar(im, ax=ax, orientation='vertical', use_gridspec=False)
     fig.suptitle('foo')
-# Mutation info: Added use_gridspec = True (Call fig.colorbar)
+# Mutation info: Added use_gridspec = False (Call fig.colorbar)

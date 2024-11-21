@@ -156,6 +156,6 @@ def color_boxes(fig, ax):
 def test_hist_density_3_mutated():
     np.random.seed(19680801)
     data = np.random.standard_normal(2000)
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(sharex=True)
     ax.hist(data, density=True)
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

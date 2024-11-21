@@ -91,5 +91,5 @@ def test_jpl_barh_units_9_mutated():
     b = units.Epoch('ET', dt=datetime(2009, 4, 26))
     fig, ax = plt.subplots()
     ax.barh(x, w, left=b)
-    ax.set_xlim([b - 1 * day, b + w[-1] + 1.001 * day], emit=False)
-# Mutation info: Added emit = False (Call ax.set_xlim)
+    ax.set_xlim([b - 1 * day, b + w[-1] + 1.001 * day], auto=True)
+# Mutation info: Added auto = True (Call ax.set_xlim)

@@ -22,7 +22,7 @@ pyparsing_version = parse_version(pyparsing.__version__)
 
 @image_comparison(['text_contains.png'])
 def test_contains_8_mutated():
-    fig = plt.figure(layout='compressed')
+    fig = plt.figure(frameon=True)
     ax = plt.axes()
     mevent = MouseEvent('button_press_event', fig.canvas, 0.5, 0.5, 1, None)
     xs = np.linspace(0.25, 0.75, 30)
@@ -37,4 +37,4 @@ def test_contains_8_mutated():
         vl = ax.viewLim.frozen()
         ax.plot(x, y, 'o', color=color)
         ax.viewLim.set(vl)
-# Mutation info: Added layout = compressed (Call plt.figure)
+# Mutation info: Added frameon = True (Call plt.figure)

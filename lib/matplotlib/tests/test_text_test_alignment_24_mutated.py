@@ -23,7 +23,7 @@ pyparsing_version = parse_version(pyparsing.__version__)
 @image_comparison(['text_alignment'], style='mpl20')
 def test_alignment_24_mutated():
     plt.figure()
-    ax = plt.subplot(1, 1, 1, projection='aitoff')
+    ax = plt.subplot(1, 1, 1, projection='polar')
     x = 0.1
     for rotation in (0, 30):
         for alignment in ('top', 'bottom', 'baseline', 'center'):
@@ -36,4 +36,4 @@ def test_alignment_24_mutated():
     ax.set_ylim(0, 1.5)
     ax.set_xticks([])
     ax.set_yticks([])
-# Mutation info: Added projection = aitoff (Call plt.subplot)
+# Mutation info: Added projection = polar (Call plt.subplot)

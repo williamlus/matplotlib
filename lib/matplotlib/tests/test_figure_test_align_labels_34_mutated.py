@@ -30,7 +30,7 @@ def test_align_labels_34_mutated():
     ax = fig.add_subplot(gs[0, -1])
     ax.plot(np.arange(0, 10000.0, 100))
     for i in range(3):
-        ax = fig.add_subplot(gs[1, i], projection='hammer')
+        ax = fig.add_subplot(gs[1, i], projection='aitoff')
         ax.set_ylabel('YLabel1 %d' % i)
         ax.set_xlabel('XLabel1 %d' % i)
         if i in [0, 2]:
@@ -53,4 +53,4 @@ def test_align_labels_34_mutated():
             for tick in ax.get_xticklabels():
                 tick.set_rotation(90)
     fig.align_labels()
-# Mutation info: Added projection = hammer (Call fig.add_subplot)
+# Mutation info: Added projection = aitoff (Call fig.add_subplot)

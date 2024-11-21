@@ -27,5 +27,5 @@ def test_image_grid_11_mutated():
     grid = ImageGrid(fig, 111, nrows_ncols=(2, 2), axes_pad=0.1)
     assert grid.get_axes_pad() == (0.1, 0.1)
     for i in range(4):
-        grid[i].imshow(im, interpolation='nearest', aspect='auto')
-# Mutation info: Added aspect = auto (Call grid[i].imshow)
+        grid[i].imshow(im, interpolation='nearest', aspect='equal')
+# Mutation info: Added aspect = equal (Call grid[i].imshow)

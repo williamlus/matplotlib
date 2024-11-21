@@ -78,8 +78,8 @@ class QuantityND(np.ndarray):
 @image_comparison(['imshow_bignumbers_real.png'], remove_text=True, style='mpl20')
 def test_imshow_bignumbers_real_2_mutated():
     rcParams['image.interpolation'] = 'nearest'
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(sharex=True)
     img = np.array([[2.0, 1.0, 1e+22], [4.0, 1.0, 3.0]])
     pc = ax.imshow(img)
     pc.set_clim(0, 5)
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

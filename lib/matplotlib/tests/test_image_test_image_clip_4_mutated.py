@@ -78,8 +78,8 @@ class QuantityND(np.ndarray):
 @image_comparison(['image_clip'], style='mpl20')
 def test_image_clip_4_mutated():
     d = [[1, 2], [3, 4]]
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(sharey=True)
     im = ax.imshow(d)
     patch = patches.Circle((0, 0), radius=1, transform=ax.transData)
     im.set_clip_path(patch)
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

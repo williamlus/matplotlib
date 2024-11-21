@@ -31,7 +31,7 @@ def test_subfigure_double_82_mutated():
     subfigs[1].set_facecolor('coral')
     subfigs[1].suptitle('subfigs[1]')
     subfigsnest = subfigs[0].subfigures(2, 1, height_ratios=[1, 1.4])
-    subfigsnest[0].suptitle('subfigsnest[0]', va='bottom')
+    subfigsnest[0].suptitle('subfigsnest[0]', ha='right')
     subfigsnest[0].set_facecolor('r')
     axsnest0 = subfigsnest[0].subplots(1, 2, sharey=True)
     for ax in axsnest0:
@@ -49,4 +49,4 @@ def test_subfigure_double_82_mutated():
     subfigsnest[1].supxlabel('supxlabel')
     subfigsnest[1].supylabel('supylabel')
     axsRight = subfigs[1].subplots(2, 2)
-# Mutation info: Added va = bottom (Call subfigsnest[0].suptitle)
+# Mutation info: Added ha = right (Call subfigsnest[0].suptitle)

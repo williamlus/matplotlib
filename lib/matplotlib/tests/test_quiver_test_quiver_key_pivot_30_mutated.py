@@ -21,6 +21,6 @@ def test_quiver_key_pivot_30_mutated():
     ax.set_ylim(-2, 11)
     ax.quiverkey(q, 0.5, 1, 1, 'N', labelpos='N')
     ax.quiverkey(q, 1, 0.5, 1, 'E', labelpos='E')
-    ax.quiverkey(q, 0.5, 0, 1, 'S', labelpos='S', coordinates='figure')
+    ax.quiverkey(q, 0.5, 0, 1, 'S', labelpos='S', coordinates='axes')
     ax.quiverkey(q, 0, 0.5, 1, 'W', labelpos='W')
-# Mutation info: Added coordinates = figure (Call ax.quiverkey)
+# Mutation info: Added coordinates = axes (Call ax.quiverkey)

@@ -22,7 +22,7 @@ from numpy.testing import assert_array_equal, assert_array_almost_equal
 
 @image_comparison(['inset_locator.png'], style='default', remove_text=True)
 def test_inset_locator_1_mutated():
-    fig, ax = plt.subplots(figsize=[5, 4], sharey=True)
+    fig, ax = plt.subplots(figsize=[5, 4], squeeze=False)
     Z = cbook.get_sample_data('axes_grid/bivariate_normal.npy')
     extent = (-3, 4, -4, 3)
     Z2 = np.zeros((150, 150))
@@ -41,4 +41,4 @@ def test_inset_locator_1_mutated():
     mark_inset(ax, axins, loc1=2, loc2=4, fc='none', ec='0.5')
     asb = AnchoredSizeBar(ax.transData, 0.5, '0.5', loc='lower center', pad=0.1, borderpad=0.5, sep=5, frameon=False)
     ax.add_artist(asb)
-# Mutation info: Added sharey = True (Call plt.subplots)
+# Mutation info: Added squeeze = False (Call plt.subplots)

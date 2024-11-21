@@ -154,7 +154,7 @@ def color_boxes(fig, ax):
 
 @image_comparison(['rgba_markers'], remove_text=True)
 def test_rgba_markers_0_mutated():
-    fig, axs = plt.subplots(ncols=2, sharex=False)
+    fig, axs = plt.subplots(ncols=2, sharex=True)
     rcolors = [(1, 0, 0, 1), (1, 0, 0, 0.5)]
     bcolors = [(0, 0, 1, 1), (0, 0, 1, 0.5)]
     alphas = [None, 0.2]
@@ -166,4 +166,4 @@ def test_rgba_markers_0_mutated():
                 axs[i].plot(j + 1, k + 3, 'x', mec=rcolor, alpha=alpha, **kw)
     for ax in axs:
         ax.axis([-1, 4, 0, 5])
-# Mutation info: Added sharex = False (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

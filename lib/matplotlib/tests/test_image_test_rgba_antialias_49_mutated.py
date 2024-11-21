@@ -105,5 +105,5 @@ def test_rgba_antialias_49_mutated():
     axs[0].set_ylim([N / 2 + 50, N / 2 - 10])
     axs[1].imshow(aa, interpolation='nearest', cmap=cmap, vmin=-1.2, vmax=1.2)
     axs[2].imshow(aa, interpolation='auto', interpolation_stage='data', cmap=cmap, vmin=-1.2, vmax=1.2)
-    axs[3].imshow(aa, interpolation='auto', interpolation_stage='auto', cmap=cmap, vmin=-1.2, vmax=1.2)
-# Mutation info: interpolation_stage = 'rgba' -> interpolation_stage = auto (Call axs[3].imshow)
+    axs[3].imshow(aa, interpolation='auto', interpolation_stage='rgba', cmap=cmap, vmin=-1.2, vmax=1.2, origin='upper')
+# Mutation info: Added origin = upper (Call axs[3].imshow)

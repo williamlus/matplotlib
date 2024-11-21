@@ -84,5 +84,5 @@ def test_mask_image_17_mutated():
     A = np.zeros((5, 5), dtype=bool)
     A[1:2, 1:2] = True
     A = np.ma.masked_array(np.ones((5, 5), dtype=np.uint16), A)
-    ax2.imshow(A, interpolation='nearest', filternorm=True)
-# Mutation info: Added filternorm = True (Call ax2.imshow)
+    ax2.imshow(A, interpolation='nearest', interpolation_stage='data')
+# Mutation info: Added interpolation_stage = data (Call ax2.imshow)

@@ -74,6 +74,6 @@ def test_keeping_xlabel_19_mutated():
     fig, ax = plt.subplots()
     im = ax.imshow(arr)
     cbar = plt.colorbar(im)
-    cbar.ax.set_xlabel('Visible Xlabel', loc='right')
+    cbar.ax.set_xlabel('Visible Xlabel', loc='center')
     cbar.set_label('YLabel')
-# Mutation info: Added loc = right (Call cbar.ax.set_xlabel)
+# Mutation info: Added loc = center (Call cbar.ax.set_xlabel)

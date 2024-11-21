@@ -162,6 +162,6 @@ def test_boxplot_44_mutated():
     ax.set_ylim((-30, 30))
     data = {'x': [x, x]}
     fig, ax = plt.subplots()
-    ax.boxplot('x', bootstrap=10000, notch=False, data=data)
+    ax.boxplot('x', bootstrap=10000, notch=True, data=data)
     ax.set_ylim((-30, 30))
-# Mutation info: notch = 1 -> notch = False (Call ax.boxplot)
+# Mutation info: notch = 1 -> notch = True (Call ax.boxplot)

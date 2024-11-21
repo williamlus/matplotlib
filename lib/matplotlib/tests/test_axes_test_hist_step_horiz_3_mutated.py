@@ -156,6 +156,6 @@ def color_boxes(fig, ax):
 def test_hist_step_horiz_3_mutated():
     d1 = np.linspace(0, 10, 50)
     d2 = np.linspace(1, 3, 20)
-    fig, ax = plt.subplots(sharex=False)
+    fig, ax = plt.subplots(squeeze=True)
     ax.hist((d1, d2), histtype='step', orientation='horizontal')
-# Mutation info: Added sharex = False (Call plt.subplots)
+# Mutation info: Added squeeze = True (Call plt.subplots)

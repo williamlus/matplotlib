@@ -16,11 +16,11 @@ import pytest
 def test_contour_uneven_2_mutated():
     plt.rcParams['pcolormesh.snap'] = False
     z = np.arange(24).reshape(4, 6)
-    fig, axs = plt.subplots(1, 2, sharey=True)
+    fig, axs = plt.subplots(1, 2, squeeze=False)
     ax = axs[0]
     cs = ax.contourf(z, levels=[2, 4, 6, 10, 20])
     fig.colorbar(cs, ax=ax, spacing='proportional')
     ax = axs[1]
     cs = ax.contourf(z, levels=[2, 4, 6, 10, 20])
     fig.colorbar(cs, ax=ax, spacing='uniform')
-# Mutation info: Added sharey = True (Call plt.subplots)
+# Mutation info: Added squeeze = False (Call plt.subplots)

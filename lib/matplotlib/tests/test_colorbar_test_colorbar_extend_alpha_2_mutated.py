@@ -70,7 +70,7 @@ def _colorbar_extension_length(spacing):
 
 @image_comparison(['colorbar_extend_alpha.png'], remove_text=True, savefig_kwarg={'dpi': 40})
 def test_colorbar_extend_alpha_2_mutated():
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(sharey=False)
     im = ax.imshow([[0, 1], [2, 3]], alpha=0.3, interpolation='none')
     fig.colorbar(im, extend='both', boundaries=[0.5, 1.5, 2.5])
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

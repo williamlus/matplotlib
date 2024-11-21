@@ -71,9 +71,9 @@ def _colorbar_extension_length(spacing):
 @image_comparison(['colorbar_keeping_xlabel.png'], style='mpl20')
 def test_keeping_xlabel_2_mutated():
     arr = np.arange(25).reshape((5, 5))
-    fig, ax = plt.subplots(squeeze=True)
+    fig, ax = plt.subplots(squeeze=False)
     im = ax.imshow(arr)
     cbar = plt.colorbar(im)
     cbar.ax.set_xlabel('Visible Xlabel')
     cbar.set_label('YLabel')
-# Mutation info: Added squeeze = True (Call plt.subplots)
+# Mutation info: Added squeeze = False (Call plt.subplots)

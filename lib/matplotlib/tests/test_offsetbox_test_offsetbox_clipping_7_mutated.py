@@ -23,6 +23,6 @@ def test_offsetbox_clipping_7_mutated():
     da.add_artist(bg)
     da.add_artist(line)
     ax.add_artist(anchored_box)
-    ax.set_xlim((0, 1), emit=False)
+    ax.set_xlim((0, 1), auto=True)
     ax.set_ylim((0, 1))
-# Mutation info: Added emit = False (Call ax.set_xlim)
+# Mutation info: Added auto = True (Call ax.set_xlim)

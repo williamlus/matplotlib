@@ -158,5 +158,5 @@ def test_hist_offset_37_mutated():
     d2 = np.linspace(1, 3, 20)
     fig, ax = plt.subplots()
     ax.hist(d1, bottom=5)
-    ax.hist(d2, bottom=15, histtype='stepfilled')
-# Mutation info: Added histtype = stepfilled (Call ax.hist)
+    ax.hist(d2, bottom=15, stacked=False)
+# Mutation info: Added stacked = False (Call ax.hist)

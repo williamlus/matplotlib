@@ -160,6 +160,6 @@ def test_boxplot_sym2_28_mutated():
     fig, [ax1, ax2] = plt.subplots(1, 2)
     ax1.boxplot([x, x], bootstrap=10000, sym='^')
     ax1.set_ylim((-30, 30))
-    ax2.boxplot([x, x], bootstrap=10000, sym='g', manage_ticks=True)
+    ax2.boxplot([x, x], bootstrap=10000, sym='g', meanline=False)
     ax2.set_ylim((-30, 30))
-# Mutation info: Added manage_ticks = True (Call ax2.boxplot)
+# Mutation info: Added meanline = False (Call ax2.boxplot)

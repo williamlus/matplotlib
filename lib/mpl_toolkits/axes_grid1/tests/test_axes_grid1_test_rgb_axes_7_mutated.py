@@ -22,11 +22,11 @@ from numpy.testing import assert_array_equal, assert_array_almost_equal
 
 @image_comparison(['rgb_axes.png'], remove_text=True, style=('classic', '_classic_test_patch'))
 def test_rgb_axes_7_mutated():
-    fig = plt.figure(frameon=False)
+    fig = plt.figure(layout='none')
     ax = RGBAxes(fig, (0.1, 0.1, 0.8, 0.8), pad=0.1)
     rng = np.random.default_rng(19680801)
     r = rng.random((5, 5))
     g = rng.random((5, 5))
     b = rng.random((5, 5))
     ax.imshow_rgb(r, g, b, interpolation='none')
-# Mutation info: Added frameon = False (Call plt.figure)
+# Mutation info: Added layout = none (Call plt.figure)

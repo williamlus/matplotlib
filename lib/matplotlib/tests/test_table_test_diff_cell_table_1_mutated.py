@@ -18,6 +18,6 @@ def test_diff_cell_table_1_mutated():
     _, axs = plt.subplots(nrows=len(cells), figsize=(4, len(cells) + 1))
     for ax, cell in zip(axs, cells):
         ax.table(colWidths=colWidths, cellText=cellText, loc='center', edges=cell)
-        ax.axis('off', emit=False)
+        ax.axis('off', emit=True)
     plt.tight_layout()
-# Mutation info: Added emit = False (Call ax.axis)
+# Mutation info: Added emit = True (Call ax.axis)

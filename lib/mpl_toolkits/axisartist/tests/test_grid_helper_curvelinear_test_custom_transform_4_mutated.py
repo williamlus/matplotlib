@@ -61,6 +61,6 @@ def test_custom_transform_4_mutated():
     ax2.plot([3, 6], [5.0, 10.0])
     ax1.set_aspect(1.0)
     ax1.set_xlim(0, 10)
-    ax1.set_ylim(0, 10, emit=False)
+    ax1.set_ylim(0, 10, auto=False)
     ax1.grid(True)
-# Mutation info: Added emit = False (Call ax1.set_ylim)
+# Mutation info: Added auto = False (Call ax1.set_ylim)

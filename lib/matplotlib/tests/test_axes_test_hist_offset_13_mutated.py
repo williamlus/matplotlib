@@ -157,6 +157,6 @@ def test_hist_offset_13_mutated():
     d1 = np.linspace(0, 10, 50)
     d2 = np.linspace(1, 3, 20)
     fig, ax = plt.subplots()
-    ax.hist(d1, bottom=5, histtype='barstacked')
+    ax.hist(d1, bottom=5, histtype='bar')
     ax.hist(d2, bottom=15)
-# Mutation info: Added histtype = barstacked (Call ax.hist)
+# Mutation info: Added histtype = bar (Call ax.hist)

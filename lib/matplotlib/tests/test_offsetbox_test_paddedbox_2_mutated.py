@@ -13,7 +13,7 @@ _Params = namedtuple('_Params', 'wd_list, total, sep, expected')
 
 @image_comparison(['paddedbox.png'], remove_text=True, style='mpl20')
 def test_paddedbox_2_mutated():
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(sharex=False)
     ta = TextArea('foo')
     pb = PaddedBox(ta, pad=5, patch_attrs={'facecolor': 'r'}, draw_frame=True)
     ab = AnchoredOffsetbox('upper left', child=pb)
@@ -26,4 +26,4 @@ def test_paddedbox_2_mutated():
     pb = PaddedBox(ta, pad=15, draw_frame=True)
     ab = AnchoredOffsetbox('lower right', child=pb)
     ax.add_artist(ab)
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

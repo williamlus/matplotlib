@@ -17,7 +17,7 @@ def test_ParasiteAxesAuxTrans_13_mutated():
     y = np.arange(6)
     xx, yy = np.meshgrid(x, y)
     funcnames = ['pcolor', 'pcolormesh', 'contourf']
-    fig = plt.figure(layout='tight')
+    fig = plt.figure(frameon=False)
     for i, name in enumerate(funcnames):
         ax1 = SubplotHost(fig, 1, 3, i + 1)
         fig.add_subplot(ax1)
@@ -29,4 +29,4 @@ def test_ParasiteAxesAuxTrans_13_mutated():
         ax1.set_xlim((0, 5))
         ax1.set_ylim((0, 5))
     ax2.contour(xx, yy, data, colors='k')
-# Mutation info: Added layout = tight (Call plt.figure)
+# Mutation info: Added frameon = False (Call plt.figure)

@@ -64,10 +64,10 @@ def test_boundarynorm_and_colorbarbase_37_mutated():
     ax3 = fig.add_axes([0.05, 0.15, 0.9, 0.15])
     bounds = [-1, 2, 5, 7, 12, 15]
     cmap = mpl.colormaps['viridis']
-    norm = mcolors.BoundaryNorm(bounds, cmap.N, extend='max')
+    norm = mcolors.BoundaryNorm(bounds, cmap.N, clip=False)
     cb1 = mcolorbar.ColorbarBase(ax1, cmap=cmap, norm=norm, extend='both', orientation='horizontal', spacing='uniform')
     norm = mcolors.BoundaryNorm(bounds, cmap.N, extend='both')
     cb2 = mcolorbar.ColorbarBase(ax2, cmap=cmap, norm=norm, orientation='horizontal')
     norm = mcolors.BoundaryNorm(bounds, cmap.N, extend='both')
     cb3 = mcolorbar.ColorbarBase(ax3, cmap=cmap, norm=norm, extend='neither', orientation='horizontal')
-# Mutation info: Added extend = max (Call mcolors.BoundaryNorm)
+# Mutation info: Added clip = False (Call mcolors.BoundaryNorm)

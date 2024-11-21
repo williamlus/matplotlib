@@ -8,7 +8,7 @@ from mpl_toolkits.axisartist import Axes, SubplotHost
 @image_comparison(['axisline_style_tight.png'], remove_text=True, style='mpl20')
 def test_axisline_style_tight_19_mutated():
     fig = plt.figure(figsize=(2, 2))
-    ax = fig.add_subplot(axes_class=AxesZero, projection='lambert')
+    ax = fig.add_subplot(axes_class=AxesZero, projection='rectilinear')
     ax.axis['xzero'].set_axisline_style('-|>', size=5, facecolor='g')
     ax.axis['xzero'].set_visible(True)
     ax.axis['yzero'].set_axisline_style('->, size=8')
@@ -16,4 +16,4 @@ def test_axisline_style_tight_19_mutated():
     for direction in ('left', 'right', 'bottom', 'top'):
         ax.axis[direction].set_visible(False)
     fig.tight_layout()
-# Mutation info: Added projection = lambert (Call fig.add_subplot)
+# Mutation info: Added projection = rectilinear (Call fig.add_subplot)

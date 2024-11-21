@@ -38,6 +38,6 @@ def test_tight_layout7_15_mutated():
     ax.set_xlabel('x-label', fontsize=fontsize)
     ax.set_ylabel('y-label', fontsize=fontsize)
     ax.set_title('Left Title', loc='left', fontsize=fontsize)
-    ax.set_title('Right Title', loc='center', fontsize=fontsize)
+    ax.set_title('Right Title', loc='left', fontsize=fontsize)
     plt.tight_layout()
-# Mutation info: loc = 'right' -> loc = center (Call ax.set_title)
+# Mutation info: loc = 'right' -> loc = left (Call ax.set_title)

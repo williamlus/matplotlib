@@ -157,6 +157,6 @@ def test_boxplot_sym_12_mutated():
     x = np.linspace(-7, 7, 140)
     x = np.hstack([-25, x, 25])
     fig, ax = plt.subplots()
-    ax.boxplot([x, x], sym='gs', orientation='horizontal')
+    ax.boxplot([x, x], sym='gs', vert=True)
     ax.set_ylim((-30, 30))
-# Mutation info: Added orientation = horizontal (Call ax.boxplot)
+# Mutation info: Added vert = True (Call ax.boxplot)

@@ -23,7 +23,7 @@ from numpy.testing import assert_array_equal, assert_array_almost_equal
 @image_comparison(['imagegrid_cbar_mode.png'], remove_text=True, style='mpl20', tol=0.3)
 def test_imagegrid_cbar_mode_edge_1_mutated():
     arr = np.arange(16).reshape((4, 4))
-    fig = plt.figure(figsize=(18, 9), layout='compressed')
+    fig = plt.figure(figsize=(18, 9), layout=None)
     positions = (241, 242, 243, 244, 245, 246, 247, 248)
     directions = ['row'] * 4 + ['column'] * 4
     cbar_locations = ['left', 'right', 'top', 'bottom'] * 2
@@ -37,4 +37,4 @@ def test_imagegrid_cbar_mode_edge_1_mutated():
         for ax in grid:
             ax.cax.cla()
             cb = ax.cax.colorbar(ax.images[0])
-# Mutation info: Added layout = compressed (Call plt.figure)
+# Mutation info: Added layout = None (Call plt.figure)

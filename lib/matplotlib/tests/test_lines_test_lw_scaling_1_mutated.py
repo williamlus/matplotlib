@@ -22,10 +22,10 @@ from matplotlib.testing.decorators import image_comparison, check_figures_equal
 @image_comparison(['scaled_lines'], style='default')
 def test_lw_scaling_1_mutated():
     th = np.linspace(0, 32)
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(sharex=True)
     lins_styles = ['dashed', 'dotted', 'dashdot']
     cy = cycler(matplotlib.rcParams['axes.prop_cycle'])
     for j, (ls, sty) in enumerate(zip(lins_styles, cy)):
         for lw in np.linspace(0.5, 10, 10):
             ax.plot(th, j * np.ones(50) + 0.1 * lw, linestyle=ls, lw=lw, **sty)
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

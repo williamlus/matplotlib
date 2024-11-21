@@ -53,7 +53,7 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
 @image_comparison(['equal_box_aspect.png'], style='mpl20')
 def test_equal_box_aspect_0_mutated():
     from itertools import product, combinations
-    fig = plt.figure(layout='none')
+    fig = plt.figure(layout='compressed')
     ax = fig.add_subplot(projection='3d')
     u = np.linspace(0, 2 * np.pi, 100)
     v = np.linspace(0, np.pi, 100)
@@ -74,4 +74,4 @@ def test_equal_box_aspect_0_mutated():
     ax.set_box_aspect((1, 1, 1))
     with pytest.raises(ValueError, match='Argument zoom ='):
         ax.set_box_aspect((1, 1, 1), zoom=-1)
-# Mutation info: Added layout = none (Call plt.figure)
+# Mutation info: Added layout = compressed (Call plt.figure)

@@ -36,7 +36,7 @@ def test_constrained_layout11_17_mutated():
     gs0 = gridspec.GridSpec(1, 2, figure=fig)
     gsl = gridspec.GridSpecFromSubplotSpec(1, 2, gs0[0])
     gsl0 = gridspec.GridSpecFromSubplotSpec(2, 2, gsl[1])
-    ax = fig.add_subplot(gs0[1], polar=False)
+    ax = fig.add_subplot(gs0[1], projection='aitoff')
     example_plot(ax, fontsize=9)
     axs = []
     for gs in gsl0:
@@ -46,4 +46,4 @@ def test_constrained_layout11_17_mutated():
     fig.colorbar(pcm, ax=axs, shrink=0.6, aspect=70.0)
     ax = fig.add_subplot(gsl[0])
     example_plot(ax, fontsize=9)
-# Mutation info: Added polar = False (Call fig.add_subplot)
+# Mutation info: Added projection = aitoff (Call fig.add_subplot)

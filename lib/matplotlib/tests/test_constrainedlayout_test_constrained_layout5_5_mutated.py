@@ -35,8 +35,8 @@ def test_constrained_layout5_5_mutated():
     Test constrained_layout for a single colorbar with subplots,
     colorbar bottom
     """
-    fig, axs = plt.subplots(2, 2, layout='constrained', squeeze=True)
+    fig, axs = plt.subplots(2, 2, layout='constrained', sharey=True)
     for ax in axs.flat:
         pcm = example_pcolor(ax, fontsize=24)
     fig.colorbar(pcm, ax=axs, use_gridspec=False, pad=0.01, shrink=0.6, location='bottom')
-# Mutation info: Added squeeze = True (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

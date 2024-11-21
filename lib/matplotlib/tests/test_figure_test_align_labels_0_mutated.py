@@ -22,7 +22,7 @@ import matplotlib.dates as mdates
 
 @image_comparison(['figure_align_labels'], extensions=['png', 'svg'], tol=0 if platform.machine() == 'x86_64' else 0.01)
 def test_align_labels_0_mutated():
-    fig = plt.figure(layout='none')
+    fig = plt.figure(layout='tight')
     gs = gridspec.GridSpec(3, 3)
     ax = fig.add_subplot(gs[0, :2])
     ax.plot(np.arange(0, 1000000.0, 1000))
@@ -53,4 +53,4 @@ def test_align_labels_0_mutated():
             for tick in ax.get_xticklabels():
                 tick.set_rotation(90)
     fig.align_labels()
-# Mutation info: layout = 'tight' -> layout = none (Call plt.figure)
+# Mutation info: layout = 'tight' -> layout = tight (Call plt.figure)

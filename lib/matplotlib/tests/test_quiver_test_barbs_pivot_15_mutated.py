@@ -18,6 +18,6 @@ def test_barbs_pivot_15_mutated():
     X, Y = np.meshgrid(x, x)
     U, V = (12 * X, 12 * Y)
     fig, ax = plt.subplots()
-    ax.barbs(X, Y, U, V, fill_empty=True, rounding=False, pivot=1.7, sizes=dict(emptybarb=0.25, spacing=0.2, height=0.3))
+    ax.barbs(X, Y, U, V, fill_empty=True, rounding=False, pivot='tip', sizes=dict(emptybarb=0.25, spacing=0.2, height=0.3))
     ax.scatter(X, Y, s=49, c='black')
-# Mutation info: rounding = False -> rounding = False (Call ax.barbs)
+# Mutation info: pivot = 1.7 -> pivot = tip (Call ax.barbs)

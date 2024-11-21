@@ -24,9 +24,9 @@ from numpy.testing import assert_array_equal, assert_array_almost_equal
 def test_image_grid_single_bottom_28_mutated():
     imdata = np.arange(100).reshape((10, 10))
     fig = plt.figure(1, (2.5, 1.5))
-    grid = ImageGrid(fig, (0, 0, 1, 1), nrows_ncols=(1, 3), axes_pad=(0.2, 0.15), cbar_mode='single', cbar_pad=0.3, cbar_location='bottom', cbar_size='10%', label_mode='1', cbar_set_cax=True)
+    grid = ImageGrid(fig, (0, 0, 1, 1), nrows_ncols=(1, 3), axes_pad=(0.2, 0.15), cbar_mode='single', cbar_pad=0.3, cbar_location='bottom', cbar_size='10%', label_mode='1', direction='row')
     assert type(grid.get_divider()) is Divider
     for i in range(3):
         im = grid[i].imshow(imdata, interpolation='none')
     grid.cbar_axes[0].colorbar(im)
-# Mutation info: Added cbar_set_cax = True (Call ImageGrid)
+# Mutation info: Added direction = row (Call ImageGrid)

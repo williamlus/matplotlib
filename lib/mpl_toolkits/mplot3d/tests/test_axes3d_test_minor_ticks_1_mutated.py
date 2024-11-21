@@ -52,11 +52,11 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
 
 @image_comparison(['minor_ticks.png'], style='mpl20')
 def test_minor_ticks_1_mutated():
-    ax = plt.figure(layout=None).add_subplot(projection='3d')
+    ax = plt.figure(frameon=False).add_subplot(projection='3d')
     ax.set_xticks([0.25], minor=True)
     ax.set_xticklabels(['quarter'], minor=True)
     ax.set_yticks([0.33], minor=True)
     ax.set_yticklabels(['third'], minor=True)
     ax.set_zticks([0.5], minor=True)
     ax.set_zticklabels(['half'], minor=True)
-# Mutation info: Added layout = None (Call plt.figure)
+# Mutation info: Added frameon = False (Call plt.figure)

@@ -172,7 +172,7 @@ def test_specgram_magnitude_31_mutated():
         noverlap = NFFT // 2
         pad_to = int(2 ** np.ceil(np.log2(NFFT)))
         for ax, sides in zip(plt.figure().subplots(3), all_sides):
-            ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode='magnitude', detrend='linear')
+            ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode='magnitude', scale='linear')
         for ax, sides in zip(plt.figure().subplots(3), all_sides):
             ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode='magnitude', scale='linear', norm=matplotlib.colors.LogNorm())
-# Mutation info: Added detrend = linear (Call ax.specgram)
+# Mutation info: Added scale = linear (Call ax.specgram)

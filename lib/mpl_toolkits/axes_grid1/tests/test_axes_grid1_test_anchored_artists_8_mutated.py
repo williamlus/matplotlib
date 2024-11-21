@@ -36,6 +36,6 @@ def test_anchored_artists_8_mutated():
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         ae = AnchoredEllipse(ax.transData, width=0.1, height=0.25, angle=-60, loc='lower left', pad=0.5, borderpad=0.4, frameon=True)
     ax.add_artist(ae)
-    asb = AnchoredSizeBar(ax.transData, 0.2, '0.2 units', loc='lower right', pad=0.3, borderpad=0.4, sep=4, fill_bar=False, frameon=False, label_top=True, prop={'size': 20}, size_vertical=0.05, color='green')
+    asb = AnchoredSizeBar(ax.transData, 0.2, '0.2 units', loc='lower right', pad=0.3, borderpad=0.4, sep=4, fill_bar=True, frameon=False, label_top=False, prop={'size': 20}, size_vertical=0.05, color='green')
     ax.add_artist(asb)
-# Mutation info: fill_bar = True -> fill_bar = False (Call AnchoredSizeBar)
+# Mutation info: label_top = True -> label_top = False (Call AnchoredSizeBar)

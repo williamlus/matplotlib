@@ -66,5 +66,5 @@ def test_cmap_and_norm_from_levels_and_colors_11_mutated():
     ax = plt.axes()
     m = plt.pcolormesh(data, cmap=cmap, norm=norm)
     plt.colorbar(m)
-    ax.tick_params(labelleft=False, labelbottom=False, reset=True)
-# Mutation info: Added reset = True (Call ax.tick_params)
+    ax.tick_params(labelleft=False, labelbottom=False, reset=False)
+# Mutation info: Added reset = False (Call ax.tick_params)

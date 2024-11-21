@@ -158,5 +158,5 @@ def test_hist_offset_33_mutated():
     d2 = np.linspace(1, 3, 20)
     fig, ax = plt.subplots()
     ax.hist(d1, bottom=5)
-    ax.hist(d2, bottom=15, log=True)
-# Mutation info: Added log = True (Call ax.hist)
+    ax.hist(d2, bottom=15, histtype='step')
+# Mutation info: Added histtype = step (Call ax.hist)

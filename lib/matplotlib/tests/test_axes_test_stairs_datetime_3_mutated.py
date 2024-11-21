@@ -154,7 +154,7 @@ def color_boxes(fig, ax):
 
 @image_comparison(['test_stairs_datetime.png'])
 def test_stairs_datetime_3_mutated():
-    f, ax = plt.subplots(constrained_layout=True, sharey=False)
+    f, ax = plt.subplots(constrained_layout=True, sharey=True)
     ax.stairs(np.arange(36), np.arange(np.datetime64('2001-12-27'), np.datetime64('2002-02-02')))
     plt.xticks(rotation=30)
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

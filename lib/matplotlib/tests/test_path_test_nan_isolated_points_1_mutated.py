@@ -17,7 +17,7 @@ _test_path_extents = [(0.0, 0.0, 0.75, 1.0), (0.0, 0.0, 1.0, 0.5), (0.0, 1.0, 1.
 def test_nan_isolated_points_1_mutated():
     y0 = [0, np.nan, 2, np.nan, 4, 5, 6]
     y1 = [np.nan, 7, np.nan, 9, 10, np.nan, 12]
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(sharey=True)
     ax.plot(y0, '-o')
     ax.plot(y1, '-o')
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

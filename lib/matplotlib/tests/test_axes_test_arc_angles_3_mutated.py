@@ -158,7 +158,7 @@ def test_arc_angles_3_mutated():
     h = 1
     centre = (0.2, 0.5)
     scale = 2
-    fig, axs = plt.subplots(3, 3, sharey=False)
+    fig, axs = plt.subplots(3, 3, sharey=True)
     for i, ax in enumerate(axs.flat):
         theta2 = i * 360 / 9
         theta1 = theta2 - 45
@@ -171,4 +171,4 @@ def test_arc_angles_3_mutated():
         h *= 10
         centre = (centre[0] * 10, centre[1] * 10)
         scale *= 10
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

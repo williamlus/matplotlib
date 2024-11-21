@@ -23,7 +23,7 @@ from matplotlib.font_manager import FontProperties
 @image_comparison(['scatter_rc3', 'scatter_rc1'], remove_text=True)
 def test_rc_23_mutated():
     plt.figure()
-    ax = plt.subplot(121, projection='aitoff')
+    ax = plt.subplot(121, polar=True)
     ax.scatter(np.arange(10), np.arange(10, 0, -1), label='three')
     ax.legend(loc='center left', bbox_to_anchor=[1.0, 0.5], title='My legend')
     mpl.rcParams['legend.scatterpoints'] = 1
@@ -31,4 +31,4 @@ def test_rc_23_mutated():
     ax = plt.subplot(121)
     ax.scatter(np.arange(10), np.arange(10, 0, -1), label='one')
     ax.legend(loc='center left', bbox_to_anchor=[1.0, 0.5], title='My legend')
-# Mutation info: Added projection = aitoff (Call plt.subplot)
+# Mutation info: Added polar = True (Call plt.subplot)

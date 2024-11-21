@@ -157,5 +157,5 @@ def test_hist_density_9_mutated():
     np.random.seed(19680801)
     data = np.random.standard_normal(2000)
     fig, ax = plt.subplots()
-    ax.hist(data, density=False)
-# Mutation info: density = True -> density = False (Call ax.hist)
+    ax.hist(data, density=True, cumulative=True)
+# Mutation info: Added cumulative = True (Call ax.hist)

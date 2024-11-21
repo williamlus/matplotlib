@@ -156,7 +156,7 @@ def color_boxes(fig, ax):
 def test_vlines_5_mutated():
     x1 = [2, 3, 4, 5, 7]
     y1 = [2, -6, 3, 8, 2]
-    fig1, ax1 = plt.subplots(squeeze=True)
+    fig1, ax1 = plt.subplots(sharex=False)
     ax1.vlines(x1, 0, y1, colors='g', linewidth=5)
     x2 = [2, 3, 4, 5, 6, 7]
     y2 = [2, -6, 3, 8, np.nan, 2]
@@ -179,4 +179,4 @@ def test_vlines_5_mutated():
     ymax5 = np.ma.masked_equal([13, 14, 15, 16, 17, 18], 18)
     ax5.vlines(x5, ymin5, ymax5, colors='k', linewidth=2)
     ax5.set_xlim(0, 15)
-# Mutation info: Added squeeze = True (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

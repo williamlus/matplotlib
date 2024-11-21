@@ -22,9 +22,9 @@ pyparsing_version = parse_version(pyparsing.__version__)
 
 @image_comparison(['axes_titles.png'])
 def test_axes_titles_4_mutated():
-    plt.figure(frameon=True)
+    plt.figure(layout=None)
     ax = plt.subplot(1, 1, 1)
     ax.set_title('center', loc='center', fontsize=20, fontweight=700)
     ax.set_title('left', loc='left', fontsize=12, fontweight=400)
     ax.set_title('right', loc='right', fontsize=12, fontweight=400)
-# Mutation info: Added frameon = True (Call plt.figure)
+# Mutation info: Added layout = None (Call plt.figure)

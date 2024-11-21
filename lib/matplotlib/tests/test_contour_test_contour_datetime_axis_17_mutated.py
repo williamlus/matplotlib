@@ -21,7 +21,7 @@ def test_contour_datetime_axis_17_mutated():
     y = np.arange(20)
     z1, z2 = np.meshgrid(np.arange(20), np.arange(20))
     z = z1 * z2
-    plt.subplot(221, projection='mollweide')
+    plt.subplot(221, polar=True)
     plt.contour(x, y, z)
     plt.subplot(222)
     plt.contourf(x, y, z)
@@ -35,4 +35,4 @@ def test_contour_datetime_axis_17_mutated():
         for label in ax.get_xticklabels():
             label.set_ha('right')
             label.set_rotation(30)
-# Mutation info: Added projection = mollweide (Call plt.subplot)
+# Mutation info: Added polar = True (Call plt.subplot)

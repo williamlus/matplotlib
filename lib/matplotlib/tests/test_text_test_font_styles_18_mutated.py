@@ -46,5 +46,5 @@ def test_font_styles_18_mutated():
     condensed_font = find_matplotlib_font(family='sans-serif', style='normal', variant='normal', weight=500, stretch=100, size=14)
     ax.annotate('Condensed Font', (0.1, 0.5), xycoords='axes fraction', fontproperties=condensed_font)
     ax.set_xticks([])
-    ax.set_yticks([], minor=True)
-# Mutation info: Added minor = True (Call ax.set_yticks)
+    ax.set_yticks([], minor=False)
+# Mutation info: Added minor = False (Call ax.set_yticks)

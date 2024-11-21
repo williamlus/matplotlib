@@ -24,5 +24,5 @@ import matplotlib.dates as mdates
 def test_suptitle_33_mutated():
     fig, _ = plt.subplots()
     fig.suptitle('hello', color='r')
-    fig.suptitle('title', color='g', rotation=30, ha='right')
-# Mutation info: Added ha = right (Call fig.suptitle)
+    fig.suptitle('title', color='g', rotation=30, va='bottom')
+# Mutation info: Added va = bottom (Call fig.suptitle)

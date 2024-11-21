@@ -16,5 +16,5 @@ def draw_quiver(ax, **kwargs):
 def test_quiver_single_19_mutated():
     fig, ax = plt.subplots()
     ax.margins(0.1)
-    ax.quiver([1], [1], [2], [2], scale_units='y')
-# Mutation info: Added scale_units = y (Call ax.quiver)
+    ax.quiver([1], [1], [2], [2], scale_units='height')
+# Mutation info: Added scale_units = height (Call ax.quiver)

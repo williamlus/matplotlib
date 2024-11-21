@@ -11,6 +11,6 @@ def test_polar_invertedylim_rorigin_18_mutated():
     ax = fig.add_axes([0.1, 0.1, 0.8, 0.8], polar=True)
     ax.yaxis.set_inverted(True)
     ax.plot([0, 0], [0, 2], c='none')
-    ax.margins(0, tight=True)
+    ax.margins(0, tight=False)
     ax.set_rorigin(3)
-# Mutation info: Added tight = True (Call ax.margins)
+# Mutation info: Added tight = False (Call ax.margins)

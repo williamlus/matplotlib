@@ -88,6 +88,6 @@ def test_bbox_image_inverted_18_mutated():
     image = np.identity(10)
     bbox_im = BboxImage(TransformedBbox(Bbox([[0.1, 0.2], [0.3, 0.25]]), ax.get_figure().transFigure), interpolation='nearest')
     bbox_im.set_data(image)
-    bbox_im.set_clip_on(False)
+    bbox_im.set_clip_on(True)
     ax.add_artist(bbox_im)
-# Mutation info: (0-th Positional) b = False -> b = False (Call bbox_im.set_clip_on)
+# Mutation info: (0-th Positional) b = False -> b = True (Call bbox_im.set_clip_on)

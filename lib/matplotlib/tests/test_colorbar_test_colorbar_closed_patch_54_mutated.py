@@ -82,8 +82,8 @@ def test_colorbar_closed_patch_54_mutated():
     values = np.linspace(0, 10, 5)
     cbar_kw = dict(orientation='horizontal', values=values, ticks=[])
     with rc_context({'axes.linewidth': 16}):
-        plt.colorbar(im, cax=ax2, extend='both', extendfrac=0.5, **cbar_kw, use_gridspec=False)
+        plt.colorbar(im, cax=ax2, extend='both', extendfrac=0.5, **cbar_kw, use_gridspec=True)
         plt.colorbar(im, cax=ax3, extend='both', **cbar_kw)
         plt.colorbar(im, cax=ax4, extend='both', extendrect=True, **cbar_kw)
         plt.colorbar(im, cax=ax5, extend='neither', **cbar_kw)
-# Mutation info: Added use_gridspec = False (Call plt.colorbar)
+# Mutation info: Added use_gridspec = True (Call plt.colorbar)

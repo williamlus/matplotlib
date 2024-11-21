@@ -163,6 +163,6 @@ def test_eventplot_defaults_15_mutated():
     data2 = np.random.random([6, 20]).tolist()
     data = data1 + data2
     fig = plt.figure()
-    axobj = fig.add_subplot(projection=None)
+    axobj = fig.add_subplot(projection='lambert')
     axobj.eventplot(data)
-# Mutation info: Added projection = None (Call fig.add_subplot)
+# Mutation info: Added projection = lambert (Call fig.add_subplot)

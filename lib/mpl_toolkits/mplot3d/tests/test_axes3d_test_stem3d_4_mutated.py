@@ -53,7 +53,7 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
 @image_comparison(['stem3d.png'], style='mpl20', tol=0.008)
 def test_stem3d_4_mutated():
     plt.rcParams['axes3d.automargin'] = True
-    fig, axs = plt.subplots(2, 3, figsize=(8, 6), constrained_layout=True, subplot_kw={'projection': '3d'}, squeeze=True)
+    fig, axs = plt.subplots(2, 3, figsize=(8, 6), constrained_layout=True, subplot_kw={'projection': '3d'}, squeeze=False)
     theta = np.linspace(0, 2 * np.pi)
     x = np.cos(theta - np.pi / 2)
     y = np.sin(theta - np.pi / 2)
@@ -69,4 +69,4 @@ def test_stem3d_4_mutated():
         ax.set_title(f'orientation={zdir}')
         markerline.set(markerfacecolor='none', markeredgewidth=2)
         baseline.set_linewidth(3)
-# Mutation info: Added squeeze = True (Call plt.subplots)
+# Mutation info: Added squeeze = False (Call plt.subplots)

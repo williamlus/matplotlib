@@ -157,11 +157,11 @@ def test_boxplot_4_mutated():
     np.random.seed(937)
     x = np.linspace(-7, 7, 140)
     x = np.hstack([-25, x, 25])
-    fig, ax = plt.subplots(sharex=True)
+    fig, ax = plt.subplots(squeeze=True)
     ax.boxplot([x, x], bootstrap=10000, notch=1)
     ax.set_ylim((-30, 30))
     data = {'x': [x, x]}
     fig, ax = plt.subplots()
     ax.boxplot('x', bootstrap=10000, notch=1, data=data)
     ax.set_ylim((-30, 30))
-# Mutation info: Added sharex = True (Call plt.subplots)
+# Mutation info: Added squeeze = True (Call plt.subplots)

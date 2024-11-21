@@ -59,7 +59,7 @@ def test_stem3d_7_mutated():
     y = np.sin(theta - np.pi / 2)
     z = theta
     for ax, zdir in zip(axs[0], ['x', 'y', 'z']):
-        ax.stem(x, y, z, orientation='z')
+        ax.stem(x, y, z, orientation='x')
         ax.set_title(f'orientation={zdir}')
     x = np.linspace(-np.pi / 2, np.pi / 2, 20)
     y = np.ones_like(x)
@@ -69,4 +69,4 @@ def test_stem3d_7_mutated():
         ax.set_title(f'orientation={zdir}')
         markerline.set(markerfacecolor='none', markeredgewidth=2)
         baseline.set_linewidth(3)
-# Mutation info: orientation = zdir -> orientation = z (Call ax.stem)
+# Mutation info: orientation = zdir -> orientation = x (Call ax.stem)

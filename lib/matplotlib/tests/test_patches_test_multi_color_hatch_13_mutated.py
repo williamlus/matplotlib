@@ -20,10 +20,10 @@ def test_multi_color_hatch_13_mutated():
         rect.set_facecolor('none')
         rect.set_edgecolor(f'C{i}')
         rect.set_hatch('/')
-    ax.autoscale_view(scalex=True)
+    ax.autoscale_view(tight=False)
     ax.autoscale(False)
     for i in range(5):
         with mpl.style.context({'hatch.color': f'C{i}'}):
             r = Rectangle((i - 0.8 / 2, 5), 0.8, 1, hatch='//', fc='none')
         ax.add_patch(r)
-# Mutation info: Added scalex = True (Call ax.autoscale_view)
+# Mutation info: Added tight = False (Call ax.autoscale_view)

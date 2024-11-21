@@ -156,7 +156,7 @@ def color_boxes(fig, ax):
 def test_hlines_4_mutated():
     y1 = [2, 3, 4, 5, 7]
     x1 = [2, -6, 3, 8, 2]
-    fig1, ax1 = plt.subplots(sharey=True)
+    fig1, ax1 = plt.subplots(sharex=False)
     ax1.hlines(y1, 0, x1, colors='g', linewidth=5)
     y2 = [2, 3, 4, 5, 6, 7]
     x2 = [2, -6, 3, 8, np.nan, 2]
@@ -179,4 +179,4 @@ def test_hlines_4_mutated():
     xmax5 = np.ma.masked_equal([13, 14, 15, 16, 17, 18], 18)
     ax5.hlines(y5, xmin5, xmax5, colors='k', linewidth=2)
     ax5.set_ylim(0, 15)
-# Mutation info: Added sharey = True (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

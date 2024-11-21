@@ -26,5 +26,5 @@ def test_axes_titles_15_mutated():
     ax = plt.subplot(1, 1, 1)
     ax.set_title('center', loc='center', fontsize=20, fontweight=700)
     ax.set_title('left', loc='left', fontsize=12, fontweight=400)
-    ax.set_title('right', loc='left', fontsize=12, fontweight=400)
-# Mutation info: loc = 'right' -> loc = left (Call ax.set_title)
+    ax.set_title('right', loc='center', fontsize=12, fontweight=400)
+# Mutation info: loc = 'right' -> loc = center (Call ax.set_title)

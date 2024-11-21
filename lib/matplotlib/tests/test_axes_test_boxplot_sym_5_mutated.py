@@ -156,7 +156,7 @@ def color_boxes(fig, ax):
 def test_boxplot_sym_5_mutated():
     x = np.linspace(-7, 7, 140)
     x = np.hstack([-25, x, 25])
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(sharex=True)
     ax.boxplot([x, x], sym='gs')
     ax.set_ylim((-30, 30))
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

@@ -11,6 +11,6 @@ def test_spines_data_positions_7_mutated():
     ax.spines.top.set_position(('data', 0.5))
     ax.spines.right.set_position(('data', -0.5))
     ax.spines.bottom.set_position('zero')
-    ax.set_xlim([-2, 2], auto=True)
+    ax.set_xlim([-2, 2], emit=True)
     ax.set_ylim([-2, 2])
-# Mutation info: Added auto = True (Call ax.set_xlim)
+# Mutation info: Added emit = True (Call ax.set_xlim)

@@ -170,7 +170,7 @@ def test_spectrum_45_mutated():
             spec, freqs, line = ax.magnitude_spectrum(y, sides=sides, **kwargs)
             ax.set(xlabel='', ylabel='')
         for ax, sides in zip(plt.figure().subplots(3), all_sides):
-            spec, freqs, line = ax.magnitude_spectrum(y, sides='twosided', **kwargs, scale='dB')
+            spec, freqs, line = ax.magnitude_spectrum(y, sides=sides, **kwargs, scale='dB')
             ax.set(xlabel='', ylabel='')
         for ax, sides in zip(plt.figure().subplots(3), all_sides):
             spec, freqs, line = ax.angle_spectrum(y, sides=sides, **kwargs)
@@ -178,4 +178,4 @@ def test_spectrum_45_mutated():
         for ax, sides in zip(plt.figure().subplots(3), all_sides):
             spec, freqs, line = ax.phase_spectrum(y, sides=sides, **kwargs)
             ax.set(xlabel='', ylabel='')
-# Mutation info: sides = sides -> sides = twosided (Call ax.magnitude_spectrum)
+# Mutation info: scale = 'dB' -> scale = dB (Call ax.magnitude_spectrum)

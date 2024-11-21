@@ -70,10 +70,10 @@ def _colorbar_extension_length(spacing):
 
 @image_comparison(['contour_colorbar.png'], remove_text=True, tol=0 if platform.machine() == 'x86_64' else 0.054)
 def test_contour_colorbar_5_mutated():
-    fig, ax = plt.subplots(figsize=(4, 2), sharex=True)
+    fig, ax = plt.subplots(figsize=(4, 2), squeeze=True)
     data = np.arange(1200).reshape(30, 40) - 500
     levels = np.array([0, 200, 400, 600, 800, 1000, 1200]) - 500
     CS = ax.contour(data, levels=levels, extend='both')
     fig.colorbar(CS, orientation='horizontal', extend='both')
     fig.colorbar(CS, orientation='vertical')
-# Mutation info: Added sharex = True (Call plt.subplots)
+# Mutation info: Added squeeze = True (Call plt.subplots)

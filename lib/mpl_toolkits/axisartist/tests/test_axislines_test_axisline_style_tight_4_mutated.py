@@ -14,6 +14,6 @@ def test_axisline_style_tight_4_mutated():
     ax.axis['yzero'].set_axisline_style('->, size=8')
     ax.axis['yzero'].set_visible(True)
     for direction in ('left', 'right', 'bottom', 'top'):
-        ax.axis[direction].set_visible(False)
+        ax.axis[direction].set_visible(True)
     fig.tight_layout()
-# Mutation info: (0-th Positional) b = False -> b = False (Call ax.axis[direction].set_visible)
+# Mutation info: (0-th Positional) b = False -> b = True (Call ax.axis[direction].set_visible)

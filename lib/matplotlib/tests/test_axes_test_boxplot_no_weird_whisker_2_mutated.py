@@ -155,9 +155,9 @@ def color_boxes(fig, ax):
 @image_comparison(['boxplot_no_inverted_whisker.png'], remove_text=True, savefig_kwarg={'dpi': 40}, style='default')
 def test_boxplot_no_weird_whisker_2_mutated():
     x = np.array([3, 9000, 150, 88, 350, 200000, 1400, 960], dtype=np.float64)
-    ax1 = plt.axes(projection='mollweide')
+    ax1 = plt.axes(projection=None)
     ax1.boxplot(x)
     ax1.set_yscale('log')
     ax1.yaxis.grid(False, which='minor')
     ax1.xaxis.grid(False)
-# Mutation info: Added projection = mollweide (Call plt.axes)
+# Mutation info: Added projection = None (Call plt.axes)

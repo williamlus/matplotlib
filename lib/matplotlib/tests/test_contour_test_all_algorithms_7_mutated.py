@@ -25,5 +25,5 @@ def test_all_algorithms_7_mutated():
     for ax, algorithm in zip(axs.ravel(), algorithms):
         ax.contourf(x, y, z, algorithm=algorithm)
         ax.contour(x, y, z, algorithm=algorithm, colors='k')
-        ax.set_title(algorithm, loc='right')
-# Mutation info: Added loc = right (Call ax.set_title)
+        ax.set_title(algorithm, loc='left')
+# Mutation info: Added loc = left (Call ax.set_title)

@@ -155,6 +155,6 @@ def color_boxes(fig, ax):
 @image_comparison(['contour_hatching'], remove_text=True, style='mpl20')
 def test_contour_hatching_3_mutated():
     x, y, z = contour_dat()
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(squeeze=True)
     ax.contourf(x, y, z, 7, hatches=['/', '\\', '//', '-'], cmap=mpl.colormaps['gray'], extend='both', alpha=0.5)
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added squeeze = True (Call plt.subplots)

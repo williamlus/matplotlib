@@ -156,6 +156,6 @@ def color_boxes(fig, ax):
 def test_hist_density_0_mutated():
     np.random.seed(19680801)
     data = np.random.standard_normal(2000)
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(squeeze=True)
     ax.hist(data, density=True)
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added squeeze = True (Call plt.subplots)

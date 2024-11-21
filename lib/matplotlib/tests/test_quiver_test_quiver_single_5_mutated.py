@@ -14,7 +14,7 @@ def draw_quiver(ax, **kwargs):
 
 @image_comparison(['quiver_single_test_image.png'], remove_text=True)
 def test_quiver_single_5_mutated():
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(sharey=False)
     ax.margins(0.1)
     ax.quiver([1], [1], [2], [2])
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

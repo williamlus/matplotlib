@@ -154,10 +154,10 @@ def color_boxes(fig, ax):
 
 @image_comparison(['o_marker_path_snap.png'], savefig_kwarg={'dpi': 72})
 def test_o_marker_path_snap_4_mutated():
-    fig, ax = plt.subplots(sharex=True)
+    fig, ax = plt.subplots(sharey=False)
     ax.margins(0.1)
     for ms in range(1, 15):
         ax.plot([1, 2], np.ones(2) + ms, 'o', ms=ms)
     for ms in np.linspace(1, 10, 25):
         ax.plot([3, 4], np.ones(2) + ms, 'o', ms=ms)
-# Mutation info: Added sharex = True (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

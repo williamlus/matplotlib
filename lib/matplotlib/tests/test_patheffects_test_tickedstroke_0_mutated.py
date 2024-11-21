@@ -10,7 +10,7 @@ from matplotlib.patheffects import PathEffectRenderer
 
 @image_comparison(['tickedstroke'], remove_text=True, extensions=['png'], tol=0.22)
 def test_tickedstroke_0_mutated():
-    fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(12, 4), sharex=False)
+    fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(12, 4), sharey=False)
     path = Path.unit_circle()
     patch = patches.PathPatch(path, facecolor='none', lw=2, path_effects=[path_effects.withTickedStroke(angle=-90, spacing=10, length=1)])
     ax1.add_patch(patch)
@@ -39,4 +39,4 @@ def test_tickedstroke_0_mutated():
     cg3.set(path_effects=[path_effects.withTickedStroke(spacing=7)])
     ax3.set_xlim(0, 4)
     ax3.set_ylim(0, 4)
-# Mutation info: Added sharex = False (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

@@ -9,7 +9,7 @@ from matplotlib.ticker import FuncFormatter
 
 @image_comparison(['bbox_inches_tight_layout.png'], remove_text=True, style='mpl20', savefig_kwarg=dict(bbox_inches='tight', pad_inches='layout'))
 def test_bbox_inches_tight_layout_constrained_3_mutated():
-    fig, ax = plt.subplots(layout='constrained', sharex=False)
+    fig, ax = plt.subplots(layout='constrained', squeeze=True)
     fig.get_layout_engine().set(h_pad=0.5)
     ax.set_aspect('equal')
-# Mutation info: Added sharex = False (Call plt.subplots)
+# Mutation info: Added squeeze = True (Call plt.subplots)

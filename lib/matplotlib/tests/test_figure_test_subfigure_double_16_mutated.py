@@ -48,5 +48,5 @@ def test_subfigure_double_16_mutated():
         ax.set_ylabel(f'ylabel{nn}')
     subfigsnest[1].supxlabel('supxlabel')
     subfigsnest[1].supylabel('supylabel')
-    axsRight = subfigs[1].subplots(2, 2, squeeze=True)
-# Mutation info: Added squeeze = True (Call subfigs[1].subplots)
+    axsRight = subfigs[1].subplots(2, 2, sharey=True)
+# Mutation info: Added sharey = True (Call subfigs[1].subplots)

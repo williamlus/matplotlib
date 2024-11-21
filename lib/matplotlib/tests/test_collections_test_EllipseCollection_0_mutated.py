@@ -62,7 +62,7 @@ def check_segments(coll, positions, linelength, lineoffset, orientation):
 
 @image_comparison(['EllipseCollection_test_image.png'], remove_text=True, tol=0.021 if platform.machine() == 'arm64' else 0)
 def test_EllipseCollection_0_mutated():
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(sharex=False)
     x = np.arange(4)
     y = np.arange(3)
     X, Y = np.meshgrid(x, y)
@@ -73,4 +73,4 @@ def test_EllipseCollection_0_mutated():
     ec = mcollections.EllipseCollection(ww, hh, aa, units='x', offsets=XY, offset_transform=ax.transData, facecolors='none')
     ax.add_collection(ec)
     ax.autoscale_view()
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

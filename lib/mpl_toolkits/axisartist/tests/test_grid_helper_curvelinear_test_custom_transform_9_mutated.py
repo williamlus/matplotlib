@@ -51,7 +51,7 @@ def test_custom_transform_9_mutated():
 
         def inverted(self):
             return MyTransform(self._resolution)
-    fig = plt.figure(layout='tight')
+    fig = plt.figure(clear=True)
     SubplotHost = host_axes_class_factory(Axes)
     tr = MyTransform(1)
     grid_helper = GridHelperCurveLinear(tr)
@@ -63,4 +63,4 @@ def test_custom_transform_9_mutated():
     ax1.set_xlim(0, 10)
     ax1.set_ylim(0, 10)
     ax1.grid(True)
-# Mutation info: Added layout = tight (Call plt.figure)
+# Mutation info: Added clear = True (Call plt.figure)

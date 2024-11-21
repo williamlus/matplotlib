@@ -17,7 +17,7 @@ def test_bivariate_cmap_shapes_16_mutated():
     cmap = mpl.bivar_colormaps['BiPeak']
     axes[0].imshow(cmap((x_0, x_1)), interpolation='nearest')
     cmap = mpl.bivar_colormaps['BiCone']
-    axes[1].imshow(cmap((x_0, x_1), bytes=False), interpolation='nearest')
+    axes[1].imshow(cmap((x_0, x_1), bytes=True), interpolation='nearest')
     cmap = mpl.bivar_colormaps['BiPeak']
     cmap = cmap.with_extremes(shape='ignore')
     axes[2].imshow(cmap((x_0, x_1)), interpolation='nearest')
@@ -25,4 +25,4 @@ def test_bivariate_cmap_shapes_16_mutated():
     cmap = cmap.with_extremes(shape='circleignore')
     axes[3].imshow(cmap((x_0, x_1)), interpolation='nearest')
     remove_ticks_and_titles(fig)
-# Mutation info: Added bytes = False (Call cmap)
+# Mutation info: Added bytes = True (Call cmap)

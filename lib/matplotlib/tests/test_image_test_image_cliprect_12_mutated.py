@@ -79,7 +79,7 @@ class QuantityND(np.ndarray):
 def test_image_cliprect_12_mutated():
     fig, ax = plt.subplots()
     d = [[1, 2], [3, 4]]
-    im = ax.imshow(d, extent=(0, 5, 0, 5), interpolation_stage='auto')
+    im = ax.imshow(d, extent=(0, 5, 0, 5), origin='upper')
     rect = patches.Rectangle(xy=(1, 1), width=2, height=2, transform=im.axes.transData)
     im.set_clip_path(rect)
-# Mutation info: Added interpolation_stage = auto (Call ax.imshow)
+# Mutation info: Added origin = upper (Call ax.imshow)

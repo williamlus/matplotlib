@@ -162,7 +162,7 @@ def test_pcolor_datetime_axis_47_mutated():
     z1, z2 = np.meshgrid(np.arange(20), np.arange(20))
     z = z1 * z2
     plt.subplot(221)
-    plt.pcolor(x[:-1], y[:-1], z[:-1, :-1], edgecolors='none')
+    plt.pcolor(x[:-1], y[:-1], z[:-1, :-1], edgecolors=None)
     plt.subplot(222)
     plt.pcolor(x, y, z)
     x = np.repeat(x[np.newaxis], 21, axis=0)
@@ -175,4 +175,4 @@ def test_pcolor_datetime_axis_47_mutated():
         for label in ax.get_xticklabels():
             label.set_ha('right')
             label.set_rotation(30)
-# Mutation info: Added edgecolors = none (Call plt.pcolor)
+# Mutation info: Added edgecolors = None (Call plt.pcolor)

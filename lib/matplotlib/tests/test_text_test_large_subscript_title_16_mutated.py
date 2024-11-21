@@ -31,6 +31,6 @@ def test_large_subscript_title_16_mutated():
     ax.set_xticklabels([])
     ax = axs[1]
     ax.set_title('$\\sum_{i} x_i$', y=1.01)
-    ax.set_title('Old Way', loc='left')
+    ax.set_title('Old Way', loc='right')
     ax.set_xticklabels([])
-# Mutation info: loc = 'left' -> loc = left (Call ax.set_title)
+# Mutation info: loc = 'left' -> loc = right (Call ax.set_title)

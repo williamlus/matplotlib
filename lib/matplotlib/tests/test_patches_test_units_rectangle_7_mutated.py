@@ -19,6 +19,6 @@ def test_units_rectangle_7_mutated():
     p = mpatches.Rectangle((5 * U.km, 6 * U.km), 1 * U.km, 2 * U.km)
     fig, ax = plt.subplots()
     ax.add_patch(p)
-    ax.set_xlim([4 * U.km, 7 * U.km], auto=True)
+    ax.set_xlim([4 * U.km, 7 * U.km], emit=True)
     ax.set_ylim([5 * U.km, 9 * U.km])
-# Mutation info: Added auto = True (Call ax.set_xlim)
+# Mutation info: Added emit = True (Call ax.set_xlim)

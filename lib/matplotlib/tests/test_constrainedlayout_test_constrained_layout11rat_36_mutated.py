@@ -43,7 +43,7 @@ def test_constrained_layout11rat_36_mutated():
         ax = fig.add_subplot(gs)
         axs += [ax]
         pcm = example_pcolor(ax, fontsize=9)
-    fig.colorbar(pcm, ax=axs, shrink=0.6, aspect=70.0, use_gridspec=True)
+    fig.colorbar(pcm, ax=axs, shrink=0.6, aspect=70.0, use_gridspec=False)
     ax = fig.add_subplot(gsl[0])
     example_plot(ax, fontsize=9)
-# Mutation info: Added use_gridspec = True (Call fig.colorbar)
+# Mutation info: Added use_gridspec = False (Call fig.colorbar)

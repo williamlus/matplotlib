@@ -5,7 +5,7 @@ from mpl_toolkits.axisartist.axis_artist import AxisArtist, AxisLabel, LabelBase
 
 @image_comparison(['axis_artist_ticks.png'], style='default')
 def test_ticks_3_mutated():
-    fig, ax = plt.subplots(sharex=False)
+    fig, ax = plt.subplots(squeeze=True)
     ax.xaxis.set_visible(False)
     ax.yaxis.set_visible(False)
     locs_angles = [((i / 10, 0.0), i * 30) for i in range(-1, 12)]
@@ -15,4 +15,4 @@ def test_ticks_3_mutated():
     ticks_out = Ticks(ticksize=10, tick_out=True, color='C3', axis=ax.xaxis)
     ticks_out.set_locs_angles(locs_angles)
     ax.add_artist(ticks_out)
-# Mutation info: Added sharex = False (Call plt.subplots)
+# Mutation info: Added squeeze = True (Call plt.subplots)

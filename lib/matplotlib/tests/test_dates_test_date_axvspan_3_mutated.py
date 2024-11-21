@@ -47,8 +47,8 @@ def _test_rrulewrapper(attach_tz, get_tz):
 def test_date_axvspan_3_mutated():
     t0 = datetime.datetime(2000, 1, 20)
     tf = datetime.datetime(2010, 1, 21)
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(sharey=False)
     ax.axvspan(t0, tf, facecolor='blue', alpha=0.25)
     ax.set_xlim(t0 - datetime.timedelta(days=720), tf + datetime.timedelta(days=720))
     fig.autofmt_xdate()
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

@@ -24,6 +24,6 @@ def test_multi_color_hatch_6_mutated():
     ax.autoscale(False)
     for i in range(5):
         with mpl.style.context({'hatch.color': f'C{i}'}):
-            r = Rectangle((i - 0.8 / 2, 5), 0.8, 1, hatch='//', fc='none', rotation_point='center')
+            r = Rectangle((i - 0.8 / 2, 5), 0.8, 1, hatch='//', fc='none', rotation_point='xy')
         ax.add_patch(r)
-# Mutation info: Added rotation_point = center (Call Rectangle)
+# Mutation info: Added rotation_point = xy (Call Rectangle)

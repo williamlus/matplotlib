@@ -167,5 +167,5 @@ def test_pie_linewidth_0_29_mutated():
     ax.axis('equal')
     plt.figure()
     plt.pie('s', explode='ex', labels='l', colors='c', autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, data=data)
-    plt.axis('equal', option=False)
-# Mutation info: Added option = False (Call plt.axis)
+    plt.axis('equal', emit=False)
+# Mutation info: Added emit = False (Call plt.axis)

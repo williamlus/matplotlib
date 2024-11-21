@@ -53,6 +53,6 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
 @image_comparison(baseline_images=['panecolor_rcparams.png'], remove_text=True, style='mpl20')
 def test_panecolor_rcparams_8_mutated():
     with plt.rc_context({'axes3d.xaxis.panecolor': 'r', 'axes3d.yaxis.panecolor': 'g', 'axes3d.zaxis.panecolor': 'b'}):
-        fig = plt.figure(figsize=(1, 1), layout='constrained')
+        fig = plt.figure(figsize=(1, 1), layout='compressed')
         fig.add_subplot(projection='3d')
-# Mutation info: Added layout = constrained (Call plt.figure)
+# Mutation info: Added layout = compressed (Call plt.figure)

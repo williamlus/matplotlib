@@ -71,7 +71,7 @@ def _colorbar_extension_length(spacing):
 @image_comparison(['test_boundaries.png'], remove_text=True, style='mpl20')
 def test_boundaries_2_mutated():
     np.random.seed(seed=19680808)
-    fig, ax = plt.subplots(figsize=(2, 2), sharey=False)
+    fig, ax = plt.subplots(figsize=(2, 2), sharex=True)
     pc = ax.pcolormesh(np.random.randn(10, 10), cmap='RdBu_r')
     cb = fig.colorbar(pc, ax=ax, boundaries=np.linspace(-3, 3, 7))
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

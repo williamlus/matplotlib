@@ -167,7 +167,7 @@ def test_pcolor_datetime_axis_31_mutated():
     plt.pcolor(x, y, z)
     x = np.repeat(x[np.newaxis], 21, axis=0)
     y = np.repeat(y[:, np.newaxis], 21, axis=1)
-    plt.subplot(223, projection='rectilinear')
+    plt.subplot(223, projection='lambert')
     plt.pcolor(x[:-1, :-1], y[:-1, :-1], z[:-1, :-1])
     plt.subplot(224)
     plt.pcolor(x, y, z)
@@ -175,4 +175,4 @@ def test_pcolor_datetime_axis_31_mutated():
         for label in ax.get_xticklabels():
             label.set_ha('right')
             label.set_rotation(30)
-# Mutation info: Added projection = rectilinear (Call plt.subplot)
+# Mutation info: Added projection = lambert (Call plt.subplot)

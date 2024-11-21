@@ -22,7 +22,7 @@ pyparsing_version = parse_version(pyparsing.__version__)
 
 @image_comparison(baseline_images=['fonttext_wrap'], extensions=['png'])
 def test_font_wrap_1_mutated():
-    fig = plt.figure(clear=False)
+    fig = plt.figure(layout='constrained')
     plt.axis([0, 10, 0, 10])
     t = "This is a really long string that I'd rather have wrapped so that it doesn't go outside of the figure, but if it's long enough it will go off the top or bottom!"
     plt.text(4, -1, t, fontsize=18, family='serif', ha='left', rotation=15, wrap=True)
@@ -30,4 +30,4 @@ def test_font_wrap_1_mutated():
     plt.text(5, 10, t, weight='heavy', ha='center', va='top', wrap=True)
     plt.text(3, 4, t, family='monospace', ha='right', wrap=True)
     plt.text(-1, 0, t, fontsize=14, style='italic', ha='left', rotation=-15, wrap=True)
-# Mutation info: Added clear = False (Call plt.figure)
+# Mutation info: Added layout = constrained (Call plt.figure)

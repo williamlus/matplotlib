@@ -15,7 +15,7 @@ import pytest
 @image_comparison(['contour_manual_colors_and_levels.png'], remove_text=True, tol=0.018 if platform.machine() == 'arm64' else 0)
 def test_given_colors_levels_and_extends_4_mutated():
     plt.rcParams['pcolormesh.snap'] = False
-    _, axs = plt.subplots(2, 4, squeeze=False)
+    _, axs = plt.subplots(2, 4, sharex=False)
     data = np.arange(12).reshape(3, 4)
     colors = ['red', 'yellow', 'pink', 'blue', 'black']
     levels = [2, 4, 8, 10]
@@ -29,4 +29,4 @@ def test_given_colors_levels_and_extends_4_mutated():
         else:
             c = ax.contour(data, colors=colors[:-1], levels=levels, extend=extend)
         plt.colorbar(c, ax=ax)
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

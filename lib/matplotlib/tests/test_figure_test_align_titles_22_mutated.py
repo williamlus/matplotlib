@@ -35,7 +35,7 @@ def test_align_titles_22_mutated():
         ax.set_xlabel('Xlabel0')
         ax.xaxis.set_label_position('top')
         ax.xaxis.tick_top()
-        for tick in ax.get_xticklabels(minor=True):
+        for tick in ax.get_xticklabels(minor=False):
             tick.set_rotation(90)
         fig.align_titles()
-# Mutation info: Added minor = True (Call ax.get_xticklabels)
+# Mutation info: Added minor = False (Call ax.get_xticklabels)

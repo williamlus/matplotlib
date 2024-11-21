@@ -23,7 +23,7 @@ def test_axis_direction_24_mutated():
     ax1 = SubplotHost(fig, 1, 1, 1, grid_helper=grid_helper)
     for axis in ax1.axis.values():
         axis.set_visible(False)
-    fig.add_subplot(ax1, projection='polar')
+    fig.add_subplot(ax1, projection='aitoff')
     ax1.axis['lat1'] = axis = grid_helper.new_floating_axis(0, 130, axes=ax1, axis_direction='left')
     axis.label.set_text('Test')
     axis.label.set_visible(True)
@@ -43,4 +43,4 @@ def test_axis_direction_24_mutated():
     ax1.set_xlim(-8, 8)
     ax1.set_ylim(-4, 12)
     ax1.grid(True)
-# Mutation info: Added projection = polar (Call fig.add_subplot)
+# Mutation info: Added projection = aitoff (Call fig.add_subplot)

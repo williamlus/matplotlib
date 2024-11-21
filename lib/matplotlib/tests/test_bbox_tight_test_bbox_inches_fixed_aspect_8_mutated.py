@@ -12,6 +12,6 @@ def test_bbox_inches_fixed_aspect_8_mutated():
     with plt.rc_context({'figure.constrained_layout.use': True}):
         fig, ax = plt.subplots()
         ax.plot([0, 1])
-        ax.set_xlim(0, 1, auto=True)
+        ax.set_xlim(0, 1, emit=True)
         ax.set_aspect('equal')
-# Mutation info: Added auto = True (Call ax.set_xlim)
+# Mutation info: Added emit = True (Call ax.set_xlim)

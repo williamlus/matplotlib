@@ -28,8 +28,8 @@ def test_legend_stackplot_16_mutated():
     y1 = 1.0 * x
     y2 = 2.0 * x + 1
     y3 = 3.0 * x + 2
-    ax.stackplot(x, y1, y2, y3, labels=['y1', 'y2', 'y3'], baseline='weighted_wiggle')
+    ax.stackplot(x, y1, y2, y3, labels=['y1', 'y2', 'y3'], baseline='zero')
     ax.set_xlim((0, 10))
     ax.set_ylim((0, 70))
     ax.legend(loc='best')
-# Mutation info: Added baseline = weighted_wiggle (Call ax.stackplot)
+# Mutation info: Added baseline = zero (Call ax.stackplot)

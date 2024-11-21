@@ -154,8 +154,8 @@ def color_boxes(fig, ax):
 
 @image_comparison(['violinplot_vert_custompoints_200.png'])
 def test_vert_violinplot_custompoints_200_6_mutated():
-    ax = plt.axes(projection=None)
+    ax = plt.axes(projection='aitoff')
     np.random.seed(123105625)
     data = [np.random.normal(size=100) for _ in range(4)]
     ax.violinplot(data, positions=range(4), showmeans=False, showextrema=False, showmedians=False, points=200)
-# Mutation info: Added projection = None (Call plt.axes)
+# Mutation info: Added projection = aitoff (Call plt.axes)

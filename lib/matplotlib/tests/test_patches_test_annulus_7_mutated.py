@@ -19,5 +19,5 @@ def test_annulus_7_mutated():
     ell = Annulus((0.5, 0.5), (0.5, 0.3), 0.1, 45, fc='m', ec='b', alpha=0.5, hatch='xxx')
     ax.add_patch(cir)
     ax.add_patch(ell)
-    ax.set_aspect('equal', share=True)
-# Mutation info: Added share = True (Call ax.set_aspect)
+    ax.set_aspect('auto')
+# Mutation info: (0-th Positional) aspect = 'equal' -> aspect = auto (Call ax.set_aspect)

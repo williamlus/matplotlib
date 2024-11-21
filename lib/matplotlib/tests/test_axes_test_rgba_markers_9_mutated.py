@@ -165,5 +165,5 @@ def test_rgba_markers_9_mutated():
                 axs[i].plot(j + 1, k + 1, 'o', mfc=bcolor, mec=rcolor, alpha=alpha, **kw)
                 axs[i].plot(j + 1, k + 3, 'x', mec=rcolor, alpha=alpha, **kw)
     for ax in axs:
-        ax.axis([-1, 4, 0, 5], option=True)
-# Mutation info: Added option = True (Call ax.axis)
+        ax.axis([-1, 4, 0, 5], emit=False)
+# Mutation info: Added emit = False (Call ax.axis)

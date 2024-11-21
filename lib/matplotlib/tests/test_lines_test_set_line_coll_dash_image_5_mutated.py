@@ -21,7 +21,7 @@ from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
 @image_comparison(['line_collection_dashes'], remove_text=True, style='mpl20', tol=0 if platform.machine() == 'x86_64' else 0.65)
 def test_set_line_coll_dash_image_5_mutated():
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(sharey=True)
     np.random.seed(0)
     ax.contour(np.random.randn(20, 30), linestyles=[(0, (3, 3))])
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

@@ -65,9 +65,9 @@ def test_boundarynorm_and_colorbarbase_57_mutated():
     bounds = [-1, 2, 5, 7, 12, 15]
     cmap = mpl.colormaps['viridis']
     norm = mcolors.BoundaryNorm(bounds, cmap.N)
-    cb1 = mcolorbar.ColorbarBase(ax1, cmap=cmap, norm=norm, extend='both', orientation='horizontal', spacing='uniform', ticklocation='auto')
+    cb1 = mcolorbar.ColorbarBase(ax1, cmap=cmap, norm=norm, extend='both', orientation='horizontal', spacing='uniform', ticklocation='right')
     norm = mcolors.BoundaryNorm(bounds, cmap.N, extend='both')
     cb2 = mcolorbar.ColorbarBase(ax2, cmap=cmap, norm=norm, orientation='horizontal')
     norm = mcolors.BoundaryNorm(bounds, cmap.N, extend='both')
     cb3 = mcolorbar.ColorbarBase(ax3, cmap=cmap, norm=norm, extend='neither', orientation='horizontal')
-# Mutation info: Added ticklocation = auto (Call mcolorbar.ColorbarBase)
+# Mutation info: Added ticklocation = right (Call mcolorbar.ColorbarBase)

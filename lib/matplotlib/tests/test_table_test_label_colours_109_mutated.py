@@ -28,5 +28,5 @@ def test_label_colours_109_mutated():
     ax3.table(cellText=cellText, colColours=colours, loc='best')
     ax4 = fig.add_subplot(4, 1, 4)
     ax4.axis('off')
-    ax4.table(cellText=cellText, colColours=colours, colLabels=['Header'] * dim, loc='best', edges='vertical')
-# Mutation info: Added edges = vertical (Call ax4.table)
+    ax4.table(cellText=cellText, colColours=colours, colLabels=['Header'] * dim, loc='best', edges='horizontal')
+# Mutation info: Added edges = horizontal (Call ax4.table)

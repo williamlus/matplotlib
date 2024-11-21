@@ -22,10 +22,10 @@ pyparsing_version = parse_version(pyparsing.__version__)
 
 @image_comparison(['titles'])
 def test_titles_5_mutated():
-    plt.figure(frameon=True)
+    plt.figure(clear=False)
     ax = plt.subplot(1, 1, 1)
     ax.set_title('left title', loc='left')
     ax.set_title('right title', loc='right')
     ax.set_xticks([])
     ax.set_yticks([])
-# Mutation info: Added frameon = True (Call plt.figure)
+# Mutation info: Added clear = False (Call plt.figure)

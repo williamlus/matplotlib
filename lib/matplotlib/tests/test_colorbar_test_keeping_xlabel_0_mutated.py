@@ -71,9 +71,9 @@ def _colorbar_extension_length(spacing):
 @image_comparison(['colorbar_keeping_xlabel.png'], style='mpl20')
 def test_keeping_xlabel_0_mutated():
     arr = np.arange(25).reshape((5, 5))
-    fig, ax = plt.subplots(sharey=True)
+    fig, ax = plt.subplots(sharex=True)
     im = ax.imshow(arr)
     cbar = plt.colorbar(im)
     cbar.ax.set_xlabel('Visible Xlabel')
     cbar.set_label('YLabel')
-# Mutation info: Added sharey = True (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

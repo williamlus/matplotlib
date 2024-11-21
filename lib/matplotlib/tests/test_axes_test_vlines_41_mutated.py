@@ -167,7 +167,7 @@ def test_vlines_41_mutated():
     ax3.vlines(x3, 0, y3, colors='r', linewidth=3, linestyle='--')
     x4 = [2, 3, 4, 5, 6, 7]
     y4 = [np.nan, 2, -6, 3, 8, np.nan]
-    ax4.vlines(x4, 0, y4, colors='k', linewidth=2, linestyles='solid')
+    ax4.vlines(x4, 0, y4, colors='k', linewidth=2, linestyles='dashdot')
     for ax in [ax1, ax2, ax3, ax4]:
         ax.set_xlim(0, 10)
     assert ax1.get_ylim() == ax2.get_ylim()
@@ -179,4 +179,4 @@ def test_vlines_41_mutated():
     ymax5 = np.ma.masked_equal([13, 14, 15, 16, 17, 18], 18)
     ax5.vlines(x5, ymin5, ymax5, colors='k', linewidth=2)
     ax5.set_xlim(0, 15)
-# Mutation info: Added linestyles = solid (Call ax4.vlines)
+# Mutation info: Added linestyles = dashdot (Call ax4.vlines)

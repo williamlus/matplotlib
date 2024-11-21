@@ -14,7 +14,7 @@ from matplotlib import collections as mcollections, colors as mcolors, patches a
 
 @image_comparison(['wedge_range'], remove_text=True, tol=0.009 if platform.machine() == 'arm64' else 0)
 def test_wedge_range_14_mutated():
-    ax = plt.axes(polar=False)
+    ax = plt.axes(projection='hammer')
     t1 = 2.313869244286224
     args = [[52.31386924, 232.31386924], [52.313869244286224, 232.31386924428622], [t1, t1 + 180.0], [0, 360], [90, 90 + 360], [-180, 180], [0, 380], [45, 46], [46, 45]]
     for i, (theta1, theta2) in enumerate(args):
@@ -24,4 +24,4 @@ def test_wedge_range_14_mutated():
         ax.add_artist(wedge)
     ax.set_xlim(-2, 8)
     ax.set_ylim(-2, 9)
-# Mutation info: Added polar = False (Call plt.axes)
+# Mutation info: Added projection = hammer (Call plt.axes)

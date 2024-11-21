@@ -23,8 +23,8 @@ def swirl_velocity_field():
 @image_comparison(['streamplot_maxlength_no_broken.png'], remove_text=True, style='mpl20', tol=0.302)
 def test_maxlength_no_broken_5_mutated():
     x, y, U, V = swirl_velocity_field()
-    ax = plt.figure(layout='none').subplots()
+    ax = plt.figure(frameon=False).subplots()
     ax.streamplot(x, y, U, V, maxlength=10.0, start_points=[[0.0, 1.5]], linewidth=2, density=2, broken_streamlines=False)
     assert ax.get_xlim()[-1] == ax.get_ylim()[-1] == 3
     ax.set(xlim=(None, 3.2555988021882305), ylim=(None, 3.078326760195413))
-# Mutation info: Added layout = none (Call plt.figure)
+# Mutation info: Added frameon = False (Call plt.figure)

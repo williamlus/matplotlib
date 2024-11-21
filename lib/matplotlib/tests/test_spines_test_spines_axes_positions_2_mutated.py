@@ -6,7 +6,7 @@ from matplotlib.testing.decorators import check_figures_equal, image_comparison
 
 @image_comparison(['spines_axes_positions'])
 def test_spines_axes_positions_2_mutated():
-    fig = plt.figure(clear=True)
+    fig = plt.figure(frameon=False)
     x = np.linspace(0, 2 * np.pi, 100)
     y = 2 * np.sin(x)
     ax = fig.add_subplot(1, 1, 1)
@@ -18,4 +18,4 @@ def test_spines_axes_positions_2_mutated():
     ax.xaxis.set_ticks_position('top')
     ax.spines.left.set_color('none')
     ax.spines.bottom.set_color('none')
-# Mutation info: Added clear = True (Call plt.figure)
+# Mutation info: Added frameon = False (Call plt.figure)

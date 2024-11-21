@@ -35,5 +35,5 @@ def test_constrained_layout4_6_mutated():
     fig, axs = plt.subplots(2, 2, layout='constrained')
     for ax in axs.flat:
         pcm = example_pcolor(ax, fontsize=24)
-    fig.colorbar(pcm, ax=axs, pad=0.01, shrink=0.6, use_gridspec=False)
-# Mutation info: Added use_gridspec = False (Call fig.colorbar)
+    fig.colorbar(pcm, ax=axs, pad=0.01, shrink=0.6, use_gridspec=True)
+# Mutation info: Added use_gridspec = True (Call fig.colorbar)

@@ -80,6 +80,6 @@ def test_imshow_bignumbers_real_9_mutated():
     rcParams['image.interpolation'] = 'nearest'
     fig, ax = plt.subplots()
     img = np.array([[2.0, 1.0, 1e+22], [4.0, 1.0, 3.0]])
-    pc = ax.imshow(img, resample=True)
+    pc = ax.imshow(img, aspect='auto')
     pc.set_clim(0, 5)
-# Mutation info: Added resample = True (Call ax.imshow)
+# Mutation info: Added aspect = auto (Call ax.imshow)

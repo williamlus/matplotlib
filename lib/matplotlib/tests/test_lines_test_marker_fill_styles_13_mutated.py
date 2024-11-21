@@ -30,6 +30,6 @@ def test_marker_fill_styles_13_mutated():
         for i, fs in enumerate(mlines.Line2D.fillStyles):
             color = next(colors)
             ax.plot(j * 10 + x, y + i + 0.5 * (j % 2), marker=marker, markersize=20, markerfacecoloralt=altcolor, fillstyle=fs, label=fs, linewidth=5, color=color, markeredgecolor=color, markeredgewidth=2)
-    ax.set_ylim([0, 7.5], auto=True)
+    ax.set_ylim([0, 7.5], emit=False)
     ax.set_xlim([-5, 155])
-# Mutation info: Added auto = True (Call ax.set_ylim)
+# Mutation info: Added emit = False (Call ax.set_ylim)

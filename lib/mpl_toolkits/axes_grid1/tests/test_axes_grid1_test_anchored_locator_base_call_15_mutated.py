@@ -31,5 +31,5 @@ def test_anchored_locator_base_call_15_mutated():
     extent = (-3, 4, -4, 3)
     axins = zoomed_inset_axes(ax, zoom=2, loc='upper left')
     axins.set(xticks=[], yticks=[])
-    axins.imshow(Z, extent=extent, origin='upper')
-# Mutation info: origin = 'lower' -> origin = upper (Call axins.imshow)
+    axins.imshow(Z, extent=extent, origin='lower', filternorm=True)
+# Mutation info: Added filternorm = True (Call axins.imshow)

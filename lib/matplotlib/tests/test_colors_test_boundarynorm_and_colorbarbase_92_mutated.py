@@ -69,5 +69,5 @@ def test_boundarynorm_and_colorbarbase_92_mutated():
     norm = mcolors.BoundaryNorm(bounds, cmap.N, extend='both')
     cb2 = mcolorbar.ColorbarBase(ax2, cmap=cmap, norm=norm, orientation='horizontal')
     norm = mcolors.BoundaryNorm(bounds, cmap.N, extend='both')
-    cb3 = mcolorbar.ColorbarBase(ax3, cmap=cmap, norm=norm, extend='neither', orientation='horizontal', ticklocation='top')
-# Mutation info: Added ticklocation = top (Call mcolorbar.ColorbarBase)
+    cb3 = mcolorbar.ColorbarBase(ax3, cmap=cmap, norm=norm, extend='neither', orientation='horizontal', spacing='uniform')
+# Mutation info: Added spacing = uniform (Call mcolorbar.ColorbarBase)

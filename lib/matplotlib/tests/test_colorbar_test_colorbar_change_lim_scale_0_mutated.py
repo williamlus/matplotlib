@@ -70,11 +70,11 @@ def _colorbar_extension_length(spacing):
 
 @image_comparison(['colorbar_change_lim_scale.png'], remove_text=True, style='mpl20')
 def test_colorbar_change_lim_scale_0_mutated():
-    fig, ax = plt.subplots(1, 2, constrained_layout=True, squeeze=True)
+    fig, ax = plt.subplots(1, 2, constrained_layout=True, sharex=True)
     pc = ax[0].pcolormesh(np.arange(100).reshape(10, 10) + 1)
     cb = fig.colorbar(pc, ax=ax[0], extend='both')
     cb.ax.set_yscale('log')
     pc = ax[1].pcolormesh(np.arange(100).reshape(10, 10) + 1)
     cb = fig.colorbar(pc, ax=ax[1], extend='both')
     cb.ax.set_ylim([20, 90])
-# Mutation info: Added squeeze = True (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

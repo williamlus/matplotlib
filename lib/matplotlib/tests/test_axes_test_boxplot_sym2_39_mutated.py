@@ -160,6 +160,6 @@ def test_boxplot_sym2_39_mutated():
     fig, [ax1, ax2] = plt.subplots(1, 2)
     ax1.boxplot([x, x], bootstrap=10000, sym='^')
     ax1.set_ylim((-30, 30))
-    ax2.boxplot([x, x], bootstrap=10000, sym='g', patch_artist=True)
+    ax2.boxplot([x, x], bootstrap=10000, sym='g', notch=True)
     ax2.set_ylim((-30, 30))
-# Mutation info: Added patch_artist = True (Call ax2.boxplot)
+# Mutation info: Added notch = True (Call ax2.boxplot)

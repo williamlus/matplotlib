@@ -32,8 +32,8 @@ def add_offsetboxes(ax, size=10, margin=0.1, color='black'):
 @image_comparison(['tight_layout5'])
 def test_tight_layout5_19_mutated():
     """Test tight_layout for image."""
-    ax = plt.subplot(projection='rectilinear')
+    ax = plt.subplot(polar=False)
     arr = np.arange(100).reshape((10, 10))
     ax.imshow(arr, interpolation='none')
     plt.tight_layout()
-# Mutation info: Added projection = rectilinear (Call plt.subplot)
+# Mutation info: Added polar = False (Call plt.subplot)

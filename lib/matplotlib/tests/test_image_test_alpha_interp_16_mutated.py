@@ -82,6 +82,6 @@ def test_alpha_interp_16_mutated():
     img = np.zeros((5, 5, 4))
     img[..., 1] = np.ones((5, 5))
     img[..., 3] = np.tril(np.ones((5, 5), dtype=np.uint8))
-    axl.imshow(img, interpolation='none', resample=True)
+    axl.imshow(img, interpolation='none', origin='upper')
     axr.imshow(img, interpolation='bilinear')
-# Mutation info: Added resample = True (Call axl.imshow)
+# Mutation info: Added origin = upper (Call axl.imshow)

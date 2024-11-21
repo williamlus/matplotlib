@@ -160,7 +160,7 @@ def test_errorbar_71_mutated():
     xerr = 0.1 + yerr
     fig = plt.figure()
     ax = fig.gca()
-    ax.errorbar(x, y, xerr=0.2, yerr=0.4, lolims=True)
+    ax.errorbar(x, y, xerr=0.2, yerr=0.4, uplims=False)
     ax.set_title('Simplest errorbars, 0.2 in x, 0.4 in y')
     fig, axs = plt.subplots(nrows=2, ncols=2, sharex=True)
     ax = axs[0, 0]
@@ -186,4 +186,4 @@ def test_errorbar_71_mutated():
     ax = fig.gca()
     ax.errorbar('x', 'y', xerr=0.2, yerr=0.4, data=data)
     ax.set_title('Simplest errorbars, 0.2 in x, 0.4 in y')
-# Mutation info: Added lolims = True (Call ax.errorbar)
+# Mutation info: Added uplims = False (Call ax.errorbar)

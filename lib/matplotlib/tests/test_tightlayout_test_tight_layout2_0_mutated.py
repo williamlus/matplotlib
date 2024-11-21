@@ -32,10 +32,10 @@ def add_offsetboxes(ax, size=10, margin=0.1, color='black'):
 @image_comparison(['tight_layout2'])
 def test_tight_layout2_0_mutated():
     """Test tight_layout for multiple subplots."""
-    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(nrows=2, ncols=2, sharey=True)
+    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(nrows=2, ncols=2, sharex=True)
     example_plot(ax1)
     example_plot(ax2)
     example_plot(ax3)
     example_plot(ax4)
     plt.tight_layout()
-# Mutation info: Added sharey = True (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

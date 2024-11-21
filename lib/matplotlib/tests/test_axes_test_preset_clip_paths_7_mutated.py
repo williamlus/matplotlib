@@ -167,6 +167,6 @@ def test_preset_clip_paths_7_mutated():
     ax.annotate('Annotation', (-0.75, -0.75), xytext=(0.1, 0.75), arrowprops={'color': 'k'}, clip_on=True, clip_path=poly)
     poly3 = mpl.patches.Polygon([[0, 0], [0, 0.5], [0.5, 0.5], [0.5, 0]], facecolor='g', edgecolor='y', linewidth=2, alpha=0.3, clip_on=True, clip_path=poly)
     fig.add_artist(poly3, clip=True)
-    ax.set_xlim(-1, 1, emit=True)
+    ax.set_xlim(-1, 1, emit=False)
     ax.set_ylim(-1, 1)
-# Mutation info: Added emit = True (Call ax.set_xlim)
+# Mutation info: Added emit = False (Call ax.set_xlim)

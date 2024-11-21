@@ -24,7 +24,7 @@ from numpy.testing import assert_array_equal, assert_array_almost_equal
 def test_zooming_with_inverted_axes_12_mutated():
     fig, ax = plt.subplots()
     ax.plot([1, 2, 3], [1, 2, 3])
-    ax.axis([1, 3, 1, 3], option=False)
+    ax.axis([1, 3, 1, 3], emit=False)
     inset_ax = zoomed_inset_axes(ax, zoom=2.5, loc='lower right')
     inset_ax.axis([1.1, 1.4, 1.1, 1.4])
     fig, ax = plt.subplots()
@@ -32,4 +32,4 @@ def test_zooming_with_inverted_axes_12_mutated():
     ax.axis([3, 1, 3, 1])
     inset_ax = zoomed_inset_axes(ax, zoom=2.5, loc='lower right')
     inset_ax.axis([1.4, 1.1, 1.4, 1.1])
-# Mutation info: Added option = False (Call ax.axis)
+# Mutation info: Added emit = False (Call ax.axis)

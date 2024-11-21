@@ -177,6 +177,6 @@ def test_hlines_44_mutated():
     y5 = np.ma.masked_equal([2, 4, 6, 8, 10, 12], 8)
     xmin5 = np.ma.masked_equal([0, 1, -1, 0, 2, 1], 2)
     xmax5 = np.ma.masked_equal([13, 14, 15, 16, 17, 18], 18)
-    ax5.hlines(y5, xmin5, xmax5, colors='k', linewidth=2, linestyles='dashed')
+    ax5.hlines(y5, xmin5, xmax5, colors='k', linewidth=2, linestyles='solid')
     ax5.set_ylim(0, 15)
-# Mutation info: Added linestyles = dashed (Call ax5.hlines)
+# Mutation info: Added linestyles = solid (Call ax5.hlines)

@@ -167,7 +167,7 @@ def test_psd_csd_5_mutated():
     for ys, NFFT in [(ys_freqs, NFFT_freqs), (ys_noise, NFFT_noise)]:
         noverlap = NFFT // 2
         pad_to = int(2 ** np.ceil(np.log2(NFFT)))
-        for ax, kwargs in zip(plt.figure(frameon=False).subplots(3), all_kwargs):
+        for ax, kwargs in zip(plt.figure(layout=None).subplots(3), all_kwargs):
             ret = ax.psd(np.concatenate(ys), NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, **kwargs)
             assert len(ret) == 2 + kwargs.get('return_line', False)
             ax.set(xlabel='', ylabel='')
@@ -175,4 +175,4 @@ def test_psd_csd_5_mutated():
             ret = ax.csd(*ys, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, **kwargs)
             assert len(ret) == 2 + kwargs.get('return_line', False)
             ax.set(xlabel='', ylabel='')
-# Mutation info: Added frameon = False (Call plt.figure)
+# Mutation info: Added layout = None (Call plt.figure)

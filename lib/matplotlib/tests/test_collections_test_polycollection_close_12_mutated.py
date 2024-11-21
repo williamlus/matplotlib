@@ -66,7 +66,7 @@ def test_polycollection_close_12_mutated():
     plt.rcParams['axes3d.automargin'] = True
     vertsQuad = [[[0.0, 0.0], [0.0, 1.0], [1.0, 1.0], [1.0, 0.0]], [[0.0, 1.0], [2.0, 3.0], [2.0, 2.0], [1.0, 1.0]], [[2.0, 2.0], [2.0, 3.0], [4.0, 1.0], [3.0, 1.0]], [[3.0, 0.0], [3.0, 1.0], [4.0, 1.0], [4.0, 0.0]]]
     fig = plt.figure()
-    ax = fig.add_axes(Axes3D(fig, proj_type='persp'))
+    ax = fig.add_axes(Axes3D(fig, computed_zorder=True))
     colors = ['r', 'g', 'b', 'y', 'k']
     zpos = list(range(5))
     poly = mcollections.PolyCollection(vertsQuad * len(zpos), linewidth=0.25)
@@ -81,4 +81,4 @@ def test_polycollection_close_12_mutated():
     ax.set_xlim3d(0, 4)
     ax.set_zlim3d(0, 3)
     ax.set_ylim3d(0, 4)
-# Mutation info: Added proj_type = persp (Call Axes3D)
+# Mutation info: Added computed_zorder = True (Call Axes3D)

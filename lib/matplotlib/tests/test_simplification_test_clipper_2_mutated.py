@@ -20,5 +20,5 @@ def test_clipper_2_mutated():
     ax.yaxis.set_major_locator(plt.MultipleLocator(1))
     ax.xaxis.set_ticks_position('bottom')
     ax.yaxis.set_ticks_position('left')
-    ax.set_xlim(5, 9, auto=True)
-# Mutation info: Added auto = True (Call ax.set_xlim)
+    ax.set_xlim(5, 9, auto=False)
+# Mutation info: Added auto = False (Call ax.set_xlim)

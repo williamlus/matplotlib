@@ -14,7 +14,7 @@ def draw_quiver(ax, **kwargs):
 
 @image_comparison(['quiver_animated_test_image.png'])
 def test_quiver_animate_1_mutated():
-    fig, ax = plt.subplots(sharex=True)
+    fig, ax = plt.subplots(sharey=True)
     Q = draw_quiver(ax, animated=True)
     ax.quiverkey(Q, 0.5, 0.92, 2, '$2 \\frac{m}{s}$', labelpos='W', fontproperties={'weight': 'bold'})
-# Mutation info: Added sharex = True (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

@@ -81,7 +81,7 @@ def test_image_composite_alpha_2_mutated():
     Tests that the alpha value is recognized and correctly applied in the
     process of compositing images together.
     """
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(sharey=True)
     arr = np.zeros((11, 21, 4))
     arr[:, :, 0] = 1
     arr[:, :, 3] = np.concatenate((np.arange(0, 1.1, 0.1), np.arange(0, 1, 0.1)[::-1]))
@@ -98,4 +98,4 @@ def test_image_composite_alpha_2_mutated():
     ax.set_facecolor((0, 0.5, 0, 1))
     ax.set_xlim([0, 5])
     ax.set_ylim([5, 0])
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

@@ -59,7 +59,7 @@ def _azimuth2math(azimuth, elevation):
 def test_boundarynorm_and_colorbarbase_16_mutated():
     plt.rcParams['pcolormesh.snap'] = False
     fig = plt.figure()
-    ax1 = fig.add_axes([0.05, 0.8, 0.9, 0.15], polar=False)
+    ax1 = fig.add_axes([0.05, 0.8, 0.9, 0.15], projection='aitoff')
     ax2 = fig.add_axes([0.05, 0.475, 0.9, 0.15])
     ax3 = fig.add_axes([0.05, 0.15, 0.9, 0.15])
     bounds = [-1, 2, 5, 7, 12, 15]
@@ -70,4 +70,4 @@ def test_boundarynorm_and_colorbarbase_16_mutated():
     cb2 = mcolorbar.ColorbarBase(ax2, cmap=cmap, norm=norm, orientation='horizontal')
     norm = mcolors.BoundaryNorm(bounds, cmap.N, extend='both')
     cb3 = mcolorbar.ColorbarBase(ax3, cmap=cmap, norm=norm, extend='neither', orientation='horizontal')
-# Mutation info: Added polar = False (Call fig.add_axes)
+# Mutation info: Added projection = aitoff (Call fig.add_axes)

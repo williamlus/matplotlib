@@ -155,8 +155,8 @@ def color_boxes(fig, ax):
 @image_comparison(['hist_step.png'], remove_text=True)
 def test_hist_step_2_mutated():
     d1 = np.linspace(1, 3, 20)
-    fig, ax = plt.subplots(sharex=True)
+    fig, ax = plt.subplots(squeeze=True)
     ax.hist(d1, histtype='step')
     ax.set_ylim(0, 10)
     ax.set_xlim(-1, 5)
-# Mutation info: Added sharex = True (Call plt.subplots)
+# Mutation info: Added squeeze = True (Call plt.subplots)

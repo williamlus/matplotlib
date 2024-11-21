@@ -9,7 +9,7 @@ from matplotlib.testing.decorators import image_comparison, check_figures_equal
 def test_polar_alignment_10_mutated():
     angles = np.arange(0, 360, 90)
     grid_values = [0, 0.2, 0.4, 0.6, 0.8, 1]
-    fig = plt.figure(layout='tight')
+    fig = plt.figure(layout=None)
     rect = [0.1, 0.1, 0.8, 0.8]
     horizontal = fig.add_axes(rect, polar=True, label='horizontal')
     horizontal.set_thetagrids(angles)
@@ -17,4 +17,4 @@ def test_polar_alignment_10_mutated():
     vertical.patch.set_visible(False)
     for i in range(2):
         fig.axes[i].set_rgrids(grid_values, angle=angles[i], horizontalalignment='left', verticalalignment='top')
-# Mutation info: Added layout = tight (Call plt.figure)
+# Mutation info: Added layout = None (Call plt.figure)

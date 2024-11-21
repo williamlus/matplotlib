@@ -175,5 +175,5 @@ def test_specgram_angle_38_mutated():
             for ax, sides in zip(plt.figure().subplots(3), all_sides):
                 ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode=mode)
                 with pytest.raises(ValueError):
-                    ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides='onesided', mode=mode, scale='dB')
-# Mutation info: sides = sides -> sides = onesided (Call ax.specgram)
+                    ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides='twosided', mode=mode, scale='dB')
+# Mutation info: sides = sides -> sides = twosided (Call ax.specgram)

@@ -27,5 +27,5 @@ def test_image_grid_15_mutated():
     grid = ImageGrid(fig, 111, nrows_ncols=(2, 2), axes_pad=0.1)
     assert grid.get_axes_pad() == (0.1, 0.1)
     for i in range(4):
-        grid[i].imshow(im, interpolation='nearest', interpolation_stage='rgba')
-# Mutation info: Added interpolation_stage = rgba (Call grid[i].imshow)
+        grid[i].imshow(im, interpolation='nearest', interpolation_stage='data')
+# Mutation info: Added interpolation_stage = data (Call grid[i].imshow)

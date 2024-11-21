@@ -161,6 +161,6 @@ def test_hist2d_7_mutated():
     fig, ax = plt.subplots()
     ax.hist2d(x, y, bins=10, rasterized=True)
     data = {'x': x, 'y': y}
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(sharey=True)
     ax.hist2d('x', 'y', bins=10, data=data, rasterized=True)
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

@@ -21,9 +21,9 @@ def test_all_algorithms_3_mutated():
     mask = np.zeros_like(z, dtype=bool)
     mask[3, 7] = True
     z = np.ma.array(z, mask=mask)
-    _, axs = plt.subplots(2, 2, sharey=False)
+    _, axs = plt.subplots(2, 2, sharex=False)
     for ax, algorithm in zip(axs.ravel(), algorithms):
         ax.contourf(x, y, z, algorithm=algorithm)
         ax.contour(x, y, z, algorithm=algorithm, colors='k')
         ax.set_title(algorithm)
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

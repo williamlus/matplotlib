@@ -155,11 +155,11 @@ def color_boxes(fig, ax):
 @image_comparison(['date_timezone_x.png'], tol=1.0)
 def test_date_timezone_x_2_mutated():
     time_index = [datetime.datetime(2016, 2, 22, hour=x, tzinfo=dateutil.tz.gettz('Canada/Eastern')) for x in range(3)]
-    plt.figure(figsize=(20, 12), frameon=False)
+    plt.figure(figsize=(20, 12), layout='compressed')
     plt.subplot(2, 1, 1)
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         plt.plot_date(time_index, [3] * 3, tz='Canada/Eastern')
     plt.subplot(2, 1, 2)
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         plt.plot_date(time_index, [3] * 3, tz='UTC')
-# Mutation info: Added frameon = False (Call plt.figure)
+# Mutation info: Added layout = compressed (Call plt.figure)

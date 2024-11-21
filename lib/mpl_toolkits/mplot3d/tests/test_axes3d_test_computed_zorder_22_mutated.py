@@ -55,7 +55,7 @@ def test_computed_zorder_22_mutated():
     plt.rcParams['axes3d.automargin'] = True
     fig = plt.figure()
     ax1 = fig.add_subplot(221, projection='3d')
-    ax2 = fig.add_subplot(222, projection='rectilinear')
+    ax2 = fig.add_subplot(222, projection='lambert')
     ax2.computed_zorder = False
     corners = ((0, 0, 0), (0, 5, 0), (5, 5, 0), (5, 0, 0))
     for ax in (ax1, ax2):
@@ -90,4 +90,4 @@ def test_computed_zorder_22_mutated():
         ax.plot(x[y > 0], y[y > 0], z[y > 0], lw=5, linestyle='--', color='green', zorder=4)
         ax.view_init(elev=20, azim=-20, roll=0)
         ax.axis('off')
-# Mutation info: projection = '3d' -> projection = rectilinear (Call fig.add_subplot)
+# Mutation info: projection = '3d' -> projection = lambert (Call fig.add_subplot)

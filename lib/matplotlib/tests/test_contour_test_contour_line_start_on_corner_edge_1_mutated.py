@@ -14,7 +14,7 @@ import pytest
 
 @image_comparison(baseline_images=['contour_line_start_on_corner_edge'], extensions=['png'], remove_text=True)
 def test_contour_line_start_on_corner_edge_1_mutated():
-    fig, ax = plt.subplots(figsize=(6, 5), sharex=True)
+    fig, ax = plt.subplots(figsize=(6, 5), sharey=True)
     x, y = np.meshgrid([0, 1, 2, 3, 4], [0, 1, 2])
     z = 1.2 - (x - 2) ** 2 + (y - 1) ** 2
     mask = np.zeros_like(z, dtype=bool)
@@ -24,4 +24,4 @@ def test_contour_line_start_on_corner_edge_1_mutated():
     cbar = fig.colorbar(filled)
     lines = ax.contour(x, y, z, corner_mask=True, colors='k')
     cbar.add_lines(lines)
-# Mutation info: Added sharex = True (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

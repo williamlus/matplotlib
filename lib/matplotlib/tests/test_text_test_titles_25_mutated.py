@@ -26,6 +26,6 @@ def test_titles_25_mutated():
     ax = plt.subplot(1, 1, 1)
     ax.set_title('left title', loc='left')
     ax.set_title('right title', loc='right')
-    ax.set_xticks([], minor=True)
+    ax.set_xticks([], minor=False)
     ax.set_yticks([])
-# Mutation info: Added minor = True (Call ax.set_xticks)
+# Mutation info: Added minor = False (Call ax.set_xticks)

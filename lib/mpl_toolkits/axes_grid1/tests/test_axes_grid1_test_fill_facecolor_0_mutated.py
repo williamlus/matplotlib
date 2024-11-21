@@ -22,7 +22,7 @@ from numpy.testing import assert_array_equal, assert_array_almost_equal
 
 @image_comparison(['fill_facecolor.png'], remove_text=True, style='mpl20')
 def test_fill_facecolor_0_mutated():
-    fig, ax = plt.subplots(1, 5, sharey=False)
+    fig, ax = plt.subplots(1, 5, sharex=True)
     fig.set_size_inches(5, 5)
     for i in range(1, 4):
         ax[i].yaxis.set_visible(False)
@@ -72,4 +72,4 @@ def test_fill_facecolor_0_mutated():
     axins.xaxis.set_ticks([])
     axins.yaxis.set_ticks([])
     mark_inset(ax[3], axins, loc1=2, loc2=4, fc='g', ec='0.5', fill=False)
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

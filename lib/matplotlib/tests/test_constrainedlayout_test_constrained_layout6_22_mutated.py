@@ -45,8 +45,8 @@ def test_constrained_layout6_22_mutated():
     ax.set_xlabel('x-label\nMultiLine')
     axsr = []
     for gs in gsr:
-        ax = fig.add_subplot(gs, projection='aitoff')
+        ax = fig.add_subplot(gs, projection='mollweide')
         axsr += [ax]
         pcm = example_pcolor(ax, fontsize=12)
     fig.colorbar(pcm, ax=axsr, pad=0.01, shrink=0.99, location='bottom', ticks=ticker.MaxNLocator(nbins=5))
-# Mutation info: Added projection = aitoff (Call fig.add_subplot)
+# Mutation info: Added projection = mollweide (Call fig.add_subplot)

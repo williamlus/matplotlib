@@ -157,5 +157,5 @@ def test_hist_stacked_density_16_mutated():
     d1 = np.linspace(1, 3, 20)
     d2 = np.linspace(0, 10, 50)
     fig, ax = plt.subplots()
-    ax.hist((d1, d2), stacked=True, density=True, align='mid')
-# Mutation info: Added align = mid (Call ax.hist)
+    ax.hist((d1, d2), stacked=True, density=True, align='left')
+# Mutation info: Added align = left (Call ax.hist)

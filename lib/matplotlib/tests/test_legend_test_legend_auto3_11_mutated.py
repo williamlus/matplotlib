@@ -28,6 +28,6 @@ def test_legend_auto3_11_mutated():
     y = [0.95, 0.95, 0.05, 0.05, 0.5, 0.5]
     ax.plot(x, y, 'o-', label='line')
     ax.set_xlim(0.0, 1.0)
-    ax.set_ylim(0.0, 1.0, emit=True)
+    ax.set_ylim(0.0, 1.0, auto=False)
     ax.legend(loc='best')
-# Mutation info: Added emit = True (Call ax.set_ylim)
+# Mutation info: Added auto = False (Call ax.set_ylim)

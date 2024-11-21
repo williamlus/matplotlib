@@ -157,5 +157,5 @@ def test_hist_stacked_density_22_mutated():
     d1 = np.linspace(1, 3, 20)
     d2 = np.linspace(0, 10, 50)
     fig, ax = plt.subplots()
-    ax.hist((d1, d2), stacked=True, density=True, orientation='horizontal')
-# Mutation info: Added orientation = horizontal (Call ax.hist)
+    ax.hist((d1, d2), stacked=True, density=True)
+# Mutation info: stacked = True -> stacked = True (Call ax.hist)

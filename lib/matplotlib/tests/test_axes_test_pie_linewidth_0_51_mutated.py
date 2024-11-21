@@ -166,6 +166,6 @@ def test_pie_linewidth_0_51_mutated():
     ax.pie('s', explode='ex', labels='l', colors='c', autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, data=data)
     ax.axis('equal')
     plt.figure()
-    plt.pie('s', explode='ex', labels='l', colors='c', autopct='%1.1f%%', shadow=False, startangle=90, wedgeprops={'linewidth': 0}, data=data)
+    plt.pie('s', explode='ex', labels='l', colors='c', autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 0}, data=data, normalize=False)
     plt.axis('equal')
-# Mutation info: shadow = True -> shadow = False (Call plt.pie)
+# Mutation info: Added normalize = False (Call plt.pie)

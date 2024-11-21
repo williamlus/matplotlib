@@ -43,7 +43,7 @@ def test_align_labels_37_mutated():
             ax.yaxis.set_label_position('right')
             ax.yaxis.tick_right()
     for i in range(3):
-        ax = fig.add_subplot(gs[2, i], polar=True)
+        ax = fig.add_subplot(gs[2, i], projection=None)
         ax.set_xlabel(f'XLabel2 {i}')
         ax.set_ylabel(f'YLabel2 {i}')
         if i == 2:
@@ -53,4 +53,4 @@ def test_align_labels_37_mutated():
             for tick in ax.get_xticklabels():
                 tick.set_rotation(90)
     fig.align_labels()
-# Mutation info: Added polar = True (Call fig.add_subplot)
+# Mutation info: Added projection = None (Call fig.add_subplot)

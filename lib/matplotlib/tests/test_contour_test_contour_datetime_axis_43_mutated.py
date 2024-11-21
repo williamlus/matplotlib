@@ -29,10 +29,10 @@ def test_contour_datetime_axis_43_mutated():
     y = np.repeat(y[:, np.newaxis], 20, axis=1)
     plt.subplot(223)
     plt.contour(x, y, z)
-    plt.subplot(224, projection='lambert')
+    plt.subplot(224, projection='mollweide')
     plt.contourf(x, y, z)
     for ax in fig.get_axes():
         for label in ax.get_xticklabels():
             label.set_ha('right')
             label.set_rotation(30)
-# Mutation info: Added projection = lambert (Call plt.subplot)
+# Mutation info: Added projection = mollweide (Call plt.subplot)

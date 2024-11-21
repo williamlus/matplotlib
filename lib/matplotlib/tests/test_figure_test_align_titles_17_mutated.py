@@ -28,7 +28,7 @@ def test_align_titles_17_mutated():
         ax.plot(np.arange(0, 1000000.0, 1000))
         ax.set_title('Title0 left', loc='left')
         ax.set_title('Title0 center', loc='center')
-        ax.set_title('Title0 right', loc='left')
+        ax.set_title('Title0 right', loc='right')
         ax = axs[1]
         ax.plot(np.arange(0, 10000.0, 100))
         ax.set_title('Title1')
@@ -38,4 +38,4 @@ def test_align_titles_17_mutated():
         for tick in ax.get_xticklabels():
             tick.set_rotation(90)
         fig.align_titles()
-# Mutation info: loc = 'right' -> loc = left (Call ax.set_title)
+# Mutation info: loc = 'right' -> loc = right (Call ax.set_title)

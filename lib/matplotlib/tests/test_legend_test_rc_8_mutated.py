@@ -22,7 +22,7 @@ from matplotlib.font_manager import FontProperties
 
 @image_comparison(['scatter_rc3', 'scatter_rc1'], remove_text=True)
 def test_rc_8_mutated():
-    plt.figure(layout='compressed')
+    plt.figure(layout='tight')
     ax = plt.subplot(121)
     ax.scatter(np.arange(10), np.arange(10, 0, -1), label='three')
     ax.legend(loc='center left', bbox_to_anchor=[1.0, 0.5], title='My legend')
@@ -31,4 +31,4 @@ def test_rc_8_mutated():
     ax = plt.subplot(121)
     ax.scatter(np.arange(10), np.arange(10, 0, -1), label='one')
     ax.legend(loc='center left', bbox_to_anchor=[1.0, 0.5], title='My legend')
-# Mutation info: Added layout = compressed (Call plt.figure)
+# Mutation info: Added layout = tight (Call plt.figure)

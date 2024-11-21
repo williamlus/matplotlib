@@ -33,6 +33,6 @@ def example_pcolor(ax, fontsize=12):
 def test_constrained_layout1_12_mutated():
     """Test constrained_layout for a single subplot"""
     fig = plt.figure(layout='constrained')
-    ax = fig.add_subplot(polar=False)
+    ax = fig.add_subplot(projection='polar')
     example_plot(ax, fontsize=24)
-# Mutation info: Added polar = False (Call fig.add_subplot)
+# Mutation info: Added projection = polar (Call fig.add_subplot)

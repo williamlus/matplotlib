@@ -17,7 +17,7 @@ def test_diff_cell_table_4_mutated():
     colWidths = [0.1] * len(cells)
     _, axs = plt.subplots(nrows=len(cells), figsize=(4, len(cells) + 1))
     for ax, cell in zip(axs, cells):
-        ax.table(colWidths=colWidths, cellText=cellText, loc='center', edges=cell, cellLoc='left')
+        ax.table(colWidths=colWidths, cellText=cellText, loc='center', edges='closed')
         ax.axis('off')
     plt.tight_layout()
-# Mutation info: Added cellLoc = left (Call ax.table)
+# Mutation info: edges = cell -> edges = closed (Call ax.table)

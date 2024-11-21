@@ -27,8 +27,8 @@ def test_rc_16_mutated():
     ax.scatter(np.arange(10), np.arange(10, 0, -1), label='three')
     ax.legend(loc='center left', bbox_to_anchor=[1.0, 0.5], title='My legend')
     mpl.rcParams['legend.scatterpoints'] = 1
-    plt.figure(layout='tight')
+    plt.figure(layout=None)
     ax = plt.subplot(121)
     ax.scatter(np.arange(10), np.arange(10, 0, -1), label='one')
     ax.legend(loc='center left', bbox_to_anchor=[1.0, 0.5], title='My legend')
-# Mutation info: Added layout = tight (Call plt.figure)
+# Mutation info: Added layout = None (Call plt.figure)

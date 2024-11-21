@@ -156,10 +156,10 @@ def color_boxes(fig, ax):
 def test_markevery_line_1_mutated():
     x = np.linspace(0, 10, 100)
     y = np.sin(x) * np.sqrt(x / 10 + 0.5)
-    fig, ax = plt.subplots(sharex=False)
+    fig, ax = plt.subplots(sharey=True)
     ax.plot(x, y, '-o', label='default')
     ax.plot(x, y, '-d', markevery=None, label='mark all')
     ax.plot(x, y, '-s', markevery=10, label='mark every 10')
     ax.plot(x, y, '-+', markevery=(5, 20), label='mark every 5 starting at 10')
     ax.legend()
-# Mutation info: Added sharex = False (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

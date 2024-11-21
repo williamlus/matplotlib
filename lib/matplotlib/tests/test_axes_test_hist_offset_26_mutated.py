@@ -158,5 +158,5 @@ def test_hist_offset_26_mutated():
     d2 = np.linspace(1, 3, 20)
     fig, ax = plt.subplots()
     ax.hist(d1, bottom=5)
-    ax.hist(d2, bottom=15, cumulative=True)
-# Mutation info: Added cumulative = True (Call ax.hist)
+    ax.hist(d2, bottom=15, cumulative=False)
+# Mutation info: Added cumulative = False (Call ax.hist)

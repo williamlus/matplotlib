@@ -159,7 +159,7 @@ def test_pie_nolabel_but_legend_1_mutated():
     colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral']
     explode = (0, 0.1, 0, 0)
     plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90, labeldistance=None, rotatelabels=True)
-    plt.axis('equal', emit=True)
+    plt.axis('equal', option=True)
     plt.ylim(-1.2, 1.2)
     plt.legend()
-# Mutation info: Added emit = True (Call plt.axis)
+# Mutation info: Added option = True (Call plt.axis)

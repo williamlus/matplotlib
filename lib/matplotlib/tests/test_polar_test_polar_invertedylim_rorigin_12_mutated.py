@@ -8,9 +8,9 @@ from matplotlib.testing.decorators import image_comparison, check_figures_equal
 @image_comparison(['polar_invertedylim_rorigin.png'], style='default')
 def test_polar_invertedylim_rorigin_12_mutated():
     fig = plt.figure()
-    ax = fig.add_axes([0.1, 0.1, 0.8, 0.8], polar=True, projection='mollweide')
+    ax = fig.add_axes([0.1, 0.1, 0.8, 0.8], polar=True, projection='hammer')
     ax.yaxis.set_inverted(True)
     ax.plot([0, 0], [0, 2], c='none')
     ax.margins(0)
     ax.set_rorigin(3)
-# Mutation info: Added projection = mollweide (Call fig.add_axes)
+# Mutation info: Added projection = hammer (Call fig.add_axes)

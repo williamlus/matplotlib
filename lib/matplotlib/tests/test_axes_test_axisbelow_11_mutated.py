@@ -161,8 +161,8 @@ def test_axisbelow_11_mutated():
         circ = mpatches.Circle((3, 3), color='r')
         ax.add_patch(circ)
         ax.grid(color='c', linestyle='-', linewidth=3)
-        ax.tick_params(top=False, bottom=False, left=False, right=False, axis='x')
+        ax.tick_params(top=False, bottom=False, left=False, right=False, which='both')
         ax.spines[:].set_visible(False)
         ax.set_axisbelow(setting)
         assert ax.get_axisbelow() == setting
-# Mutation info: Added axis = x (Call ax.tick_params)
+# Mutation info: Added which = both (Call ax.tick_params)

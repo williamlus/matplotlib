@@ -79,8 +79,8 @@ class QuantityND(np.ndarray):
 def test_image_alpha_5_mutated():
     np.random.seed(0)
     Z = np.random.rand(6, 6)
-    fig, (ax1, ax2, ax3) = plt.subplots(1, 3, sharey=True)
+    fig, (ax1, ax2, ax3) = plt.subplots(1, 3, squeeze=True)
     ax1.imshow(Z, alpha=1.0, interpolation='none')
     ax2.imshow(Z, alpha=0.5, interpolation='none')
     ax3.imshow(Z, alpha=0.5, interpolation='nearest')
-# Mutation info: Added sharey = True (Call plt.subplots)
+# Mutation info: Added squeeze = True (Call plt.subplots)

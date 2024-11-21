@@ -36,7 +36,7 @@ def test_colorbar_location_3_mutated():
     cases...
     """
     plt.rcParams['pcolormesh.snap'] = False
-    fig, axs = plt.subplots(4, 5, layout='constrained', squeeze=False)
+    fig, axs = plt.subplots(4, 5, layout='constrained', sharey=False)
     for ax in axs.flat:
         pcm = example_pcolor(ax)
         ax.set_xlabel('')
@@ -47,4 +47,4 @@ def test_colorbar_location_3_mutated():
     fig.colorbar(pcm, ax=axs[-2, 3:], shrink=0.5, location='top')
     fig.colorbar(pcm, ax=axs[0, 0], shrink=0.5, location='left')
     fig.colorbar(pcm, ax=axs[1:3, 2], shrink=0.5, location='right')
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

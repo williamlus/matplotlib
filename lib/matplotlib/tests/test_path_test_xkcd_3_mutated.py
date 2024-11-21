@@ -19,6 +19,6 @@ def test_xkcd_3_mutated():
     x = np.linspace(0, 2 * np.pi, 100)
     y = np.sin(x)
     with plt.xkcd():
-        fig, ax = plt.subplots(sharey=False)
+        fig, ax = plt.subplots(sharex=True)
         ax.plot(x, y)
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

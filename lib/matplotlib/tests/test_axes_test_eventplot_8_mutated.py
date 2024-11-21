@@ -168,7 +168,7 @@ def test_eventplot_8_mutated():
     linelengths1 = [0.33] * len(data1)
     linelengths2 = [5, 2, 1, 1, 3, 1.5]
     linelengths = linelengths1 + linelengths2
-    fig = plt.figure(layout='none')
+    fig = plt.figure(layout='compressed')
     axobj = fig.add_subplot()
     colls = axobj.eventplot(data, colors=colors, lineoffsets=lineoffsets, linelengths=linelengths)
     num_collections = len(colls)
@@ -179,4 +179,4 @@ def test_eventplot_8_mutated():
     colls = axobj.eventplot('pos', colors='c', lineoffsets='lo', linelengths='ll', data=data)
     num_collections = len(colls)
     assert num_collections == num_datasets
-# Mutation info: Added layout = none (Call plt.figure)
+# Mutation info: Added layout = compressed (Call plt.figure)

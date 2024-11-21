@@ -13,8 +13,8 @@ def test_polar_alignment_22_mutated():
     rect = [0.1, 0.1, 0.8, 0.8]
     horizontal = fig.add_axes(rect, polar=True, label='horizontal')
     horizontal.set_thetagrids(angles)
-    vertical = fig.add_axes(rect, polar=True, label='vertical', projection='hammer')
+    vertical = fig.add_axes(rect, polar=True, label='vertical')
     vertical.patch.set_visible(False)
     for i in range(2):
         fig.axes[i].set_rgrids(grid_values, angle=angles[i], horizontalalignment='left', verticalalignment='top')
-# Mutation info: Added projection = hammer (Call fig.add_axes)
+# Mutation info: polar = True -> polar = True (Call fig.add_axes)

@@ -154,8 +154,8 @@ def color_boxes(fig, ax):
 
 @image_comparison(['violinplot_vert_showmeans.png'])
 def test_vert_violinplot_showmeans_0_mutated():
-    ax = plt.axes(projection='rectilinear')
+    ax = plt.axes(projection='hammer')
     np.random.seed(732050807)
     data = [np.random.normal(size=100) for _ in range(4)]
     ax.violinplot(data, positions=range(4), showmeans=True, showextrema=False, showmedians=False)
-# Mutation info: Added projection = rectilinear (Call plt.axes)
+# Mutation info: Added projection = hammer (Call plt.axes)

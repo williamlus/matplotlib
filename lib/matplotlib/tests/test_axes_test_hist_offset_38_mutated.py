@@ -158,5 +158,5 @@ def test_hist_offset_38_mutated():
     d2 = np.linspace(1, 3, 20)
     fig, ax = plt.subplots()
     ax.hist(d1, bottom=5)
-    ax.hist(d2, bottom=15, orientation='vertical')
-# Mutation info: Added orientation = vertical (Call ax.hist)
+    ax.hist(d2, bottom=15, align='mid')
+# Mutation info: Added align = mid (Call ax.hist)

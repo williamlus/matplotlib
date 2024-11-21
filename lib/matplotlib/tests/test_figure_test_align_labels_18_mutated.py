@@ -27,7 +27,7 @@ def test_align_labels_18_mutated():
     ax = fig.add_subplot(gs[0, :2])
     ax.plot(np.arange(0, 1000000.0, 1000))
     ax.set_ylabel('Ylabel0 0')
-    ax = fig.add_subplot(gs[0, -1], polar=False)
+    ax = fig.add_subplot(gs[0, -1], polar=True)
     ax.plot(np.arange(0, 10000.0, 100))
     for i in range(3):
         ax = fig.add_subplot(gs[1, i])
@@ -53,4 +53,4 @@ def test_align_labels_18_mutated():
             for tick in ax.get_xticklabels():
                 tick.set_rotation(90)
     fig.align_labels()
-# Mutation info: Added polar = False (Call fig.add_subplot)
+# Mutation info: Added polar = True (Call fig.add_subplot)

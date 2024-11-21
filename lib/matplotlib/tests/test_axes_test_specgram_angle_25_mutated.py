@@ -175,5 +175,5 @@ def test_specgram_angle_25_mutated():
             for ax, sides in zip(plt.figure().subplots(3), all_sides):
                 ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode=mode)
                 with pytest.raises(ValueError):
-                    ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode='magnitude', scale='dB')
-# Mutation info: mode = mode -> mode = magnitude (Call ax.specgram)
+                    ax.specgram(y, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, sides=sides, mode=mode, scale='dB', scale_by_freq=False)
+# Mutation info: Added scale_by_freq = False (Call ax.specgram)

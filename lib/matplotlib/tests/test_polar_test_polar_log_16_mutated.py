@@ -8,9 +8,9 @@ from matplotlib.testing.decorators import image_comparison, check_figures_equal
 @image_comparison(['polar_log.png'], style='default')
 def test_polar_log_16_mutated():
     fig = plt.figure()
-    ax = fig.add_subplot(polar=False)
+    ax = fig.add_subplot(polar=True, projection='polar')
     ax.set_rscale('log')
     ax.set_rlim(1, 1000)
     n = 100
     ax.plot(np.linspace(0, 2 * np.pi, n), np.logspace(0, 2, n))
-# Mutation info: polar = True -> polar = False (Call fig.add_subplot)
+# Mutation info: Added projection = polar (Call fig.add_subplot)

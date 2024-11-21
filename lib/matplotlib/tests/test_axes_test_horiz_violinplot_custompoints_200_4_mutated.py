@@ -154,8 +154,8 @@ def color_boxes(fig, ax):
 
 @image_comparison(['violinplot_horiz_custompoints_200.png'])
 def test_horiz_violinplot_custompoints_200_4_mutated():
-    ax = plt.axes(projection='lambert')
+    ax = plt.axes(projection='aitoff')
     np.random.seed(557438524)
     data = [np.random.normal(size=100) for _ in range(4)]
     ax.violinplot(data, positions=range(4), orientation='horizontal', showmeans=False, showextrema=False, showmedians=False, points=200)
-# Mutation info: Added projection = lambert (Call plt.axes)
+# Mutation info: Added projection = aitoff (Call plt.axes)

@@ -155,5 +155,5 @@ def color_boxes(fig, ax):
 @image_comparison(['hist_bar_empty.png'], remove_text=True)
 def test_hist_bar_empty_15_mutated():
     ax = plt.gca()
-    ax.hist([], histtype='bar', density=True)
-# Mutation info: Added density = True (Call ax.hist)
+    ax.hist([], histtype='bar', cumulative=True)
+# Mutation info: Added cumulative = True (Call ax.hist)

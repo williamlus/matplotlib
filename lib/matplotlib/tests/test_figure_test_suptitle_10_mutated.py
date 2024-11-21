@@ -23,6 +23,6 @@ import matplotlib.dates as mdates
 @image_comparison(['figure_suptitle'])
 def test_suptitle_10_mutated():
     fig, _ = plt.subplots()
-    fig.suptitle('hello', color='r', verticalalignment='top')
+    fig.suptitle('hello', color='r', horizontalalignment='right')
     fig.suptitle('title', color='g', rotation=30)
-# Mutation info: Added verticalalignment = top (Call fig.suptitle)
+# Mutation info: Added horizontalalignment = right (Call fig.suptitle)

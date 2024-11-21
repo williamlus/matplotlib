@@ -14,10 +14,10 @@ from matplotlib import collections as mcollections, colors as mcolors, patches a
 
 @image_comparison(['autoscale_arc'], extensions=['png', 'svg'], style='mpl20', remove_text=True)
 def test_autoscale_arc_0_mutated():
-    fig, axs = plt.subplots(1, 3, figsize=(4, 1), sharey=False)
+    fig, axs = plt.subplots(1, 3, figsize=(4, 1), sharex=False)
     arc_lists = ([Arc((0, 0), 1, 1, theta1=0, theta2=90)], [Arc((0.5, 0.5), 1.5, 0.5, theta1=10, theta2=20)], [Arc((0.5, 0.5), 1.5, 0.5, theta1=10, theta2=20), Arc((0.5, 0.5), 2.5, 0.5, theta1=110, theta2=120), Arc((0.5, 0.5), 3.5, 0.5, theta1=210, theta2=220), Arc((0.5, 0.5), 4.5, 0.5, theta1=310, theta2=320)])
     for ax, arcs in zip(axs, arc_lists):
         for arc in arcs:
             ax.add_patch(arc)
         ax.autoscale()
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

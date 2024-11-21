@@ -77,7 +77,7 @@ class QuantityND(np.ndarray):
 
 @image_comparison(['downsampling_speckle.png'], style='mpl20', remove_text=True, tol=0.09)
 def test_downsampling_speckle_3_mutated():
-    fig, axs = plt.subplots(1, 2, figsize=(5, 2.7), sharex=True, sharey=True, layout='compressed', squeeze=True)
+    fig, axs = plt.subplots(1, 2, figsize=(5, 2.7), sharex=True, sharey=True, layout='compressed', squeeze=False)
     axs = axs.flatten()
     img = (np.arange(1024).reshape(-1, 1) * np.ones(720) // 50).T
     cm = plt.get_cmap('viridis')
@@ -87,4 +87,4 @@ def test_downsampling_speckle_3_mutated():
     axs[0].imshow(np.triu(img), cmap=cm, norm=norm, interpolation_stage='rgba')
     axs[1].set_title("interpolation='auto', stage='auto'")
     axs[1].imshow(np.triu(img), cmap=cm, norm=norm)
-# Mutation info: Added squeeze = True (Call plt.subplots)
+# Mutation info: Added squeeze = False (Call plt.subplots)

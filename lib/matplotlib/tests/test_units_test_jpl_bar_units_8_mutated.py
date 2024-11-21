@@ -91,5 +91,5 @@ def test_jpl_bar_units_8_mutated():
     b = units.Epoch('ET', dt=datetime(2009, 4, 26))
     fig, ax = plt.subplots()
     ax.bar(x, w, bottom=b)
-    ax.set_ylim([b - 1 * day, b + w[-1] + 1.001 * day], auto=False)
-# Mutation info: Added auto = False (Call ax.set_ylim)
+    ax.set_ylim([b - 1 * day, b + w[-1] + 1.001 * day], emit=False)
+# Mutation info: Added emit = False (Call ax.set_ylim)

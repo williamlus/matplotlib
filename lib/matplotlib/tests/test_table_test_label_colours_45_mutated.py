@@ -18,7 +18,7 @@ def test_label_colours_45_mutated():
     cellText = [['1'] * dim] * dim
     fig = plt.figure()
     ax1 = fig.add_subplot(4, 1, 1)
-    ax1.axis('off', option=False)
+    ax1.axis('off', emit=False)
     ax1.table(cellText=cellText, rowColours=colours, loc='best')
     ax2 = fig.add_subplot(4, 1, 2)
     ax2.axis('off')
@@ -29,4 +29,4 @@ def test_label_colours_45_mutated():
     ax4 = fig.add_subplot(4, 1, 4)
     ax4.axis('off')
     ax4.table(cellText=cellText, colColours=colours, colLabels=['Header'] * dim, loc='best')
-# Mutation info: Added option = False (Call ax1.axis)
+# Mutation info: Added emit = False (Call ax1.axis)

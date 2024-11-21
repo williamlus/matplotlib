@@ -15,5 +15,5 @@ def test_overflow_9_mutated():
     y = np.arange(len(x))
     fig, ax = plt.subplots()
     ax.plot(x, y)
-    ax.set_xlim(2, 6, auto=True)
-# Mutation info: Added auto = True (Call ax.set_xlim)
+    ax.set_xlim(2, 6, auto=False)
+# Mutation info: Added auto = False (Call ax.set_xlim)

@@ -47,6 +47,6 @@ def test_subfigure_double_129_mutated():
     for nn, ax in enumerate(axsnest1):
         ax.set_ylabel(f'ylabel{nn}')
     subfigsnest[1].supxlabel('supxlabel')
-    subfigsnest[1].supylabel('supylabel', horizontalalignment='right')
+    subfigsnest[1].supylabel('supylabel', ha='center')
     axsRight = subfigs[1].subplots(2, 2)
-# Mutation info: Added horizontalalignment = right (Call subfigsnest[1].supylabel)
+# Mutation info: Added ha = center (Call subfigsnest[1].supylabel)

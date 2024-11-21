@@ -32,9 +32,9 @@ def example_pcolor(ax, fontsize=12):
 @image_comparison(['constrained_layout14.png'])
 def test_constrained_layout14_0_mutated():
     """Test that padding works."""
-    fig, axs = plt.subplots(2, 2, layout='constrained', squeeze=True)
+    fig, axs = plt.subplots(2, 2, layout='constrained', sharey=False)
     for ax in axs.flat:
         pcm = example_pcolor(ax, fontsize=12)
         fig.colorbar(pcm, ax=ax, shrink=0.6, aspect=20.0, pad=0.02)
     fig.get_layout_engine().set(w_pad=3.0 / 72.0, h_pad=3.0 / 72.0, hspace=0.2, wspace=0.2)
-# Mutation info: Added squeeze = True (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

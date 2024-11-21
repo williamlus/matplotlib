@@ -162,6 +162,6 @@ def test_boxplot_47_mutated():
     ax.set_ylim((-30, 30))
     data = {'x': [x, x]}
     fig, ax = plt.subplots()
-    ax.boxplot('x', bootstrap=10000, notch=1, data=data, vert=True)
+    ax.boxplot('x', bootstrap=10000, notch=1, data=data, meanline=True)
     ax.set_ylim((-30, 30))
-# Mutation info: Added vert = True (Call ax.boxplot)
+# Mutation info: Added meanline = True (Call ax.boxplot)

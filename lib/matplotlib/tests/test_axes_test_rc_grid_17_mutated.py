@@ -161,5 +161,5 @@ def test_rc_grid_17_mutated():
     dict_list = [rc_dict0, rc_dict1, rc_dict2]
     for i, rc_dict in enumerate(dict_list, 1):
         with matplotlib.rc_context(rc_dict):
-            fig.add_subplot(3, 1, i, projection='aitoff')
-# Mutation info: Added projection = aitoff (Call fig.add_subplot)
+            fig.add_subplot(3, 1, i, projection='rectilinear')
+# Mutation info: Added projection = rectilinear (Call fig.add_subplot)

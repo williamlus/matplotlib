@@ -65,9 +65,9 @@ def test_regularpolycollection_rotate_1_mutated():
     xx, yy = np.mgrid[:10, :10]
     xy_points = np.transpose([xx.flatten(), yy.flatten()])
     rotations = np.linspace(0, 2 * np.pi, len(xy_points))
-    fig, ax = plt.subplots(sharey=True)
+    fig, ax = plt.subplots(sharey=False)
     for xy, alpha in zip(xy_points, rotations):
         col = mcollections.RegularPolyCollection(4, sizes=(100,), rotation=alpha, offsets=[xy], offset_transform=ax.transData)
         ax.add_collection(col, autolim=True)
     ax.autoscale_view()
-# Mutation info: Added sharey = True (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

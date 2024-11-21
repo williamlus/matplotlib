@@ -18,9 +18,9 @@ def test_contour_addlines_7_mutated():
     fig, ax = plt.subplots()
     np.random.seed(19680812)
     X = np.random.rand(10, 10) * 10000
-    pcm = ax.pcolormesh(X, shading='auto')
+    pcm = ax.pcolormesh(X, snap=False)
     cont = ax.contour(X + 1000)
     cb = fig.colorbar(pcm)
     cb.add_lines(cont)
     assert_array_almost_equal(cb.ax.get_ylim(), [114.3091, 9972.30735], 3)
-# Mutation info: Added shading = auto (Call ax.pcolormesh)
+# Mutation info: Added snap = False (Call ax.pcolormesh)

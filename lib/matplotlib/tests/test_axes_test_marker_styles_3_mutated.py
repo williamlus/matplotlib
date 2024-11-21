@@ -154,10 +154,10 @@ def color_boxes(fig, ax):
 
 @image_comparison(['marker_styles.png'], remove_text=True)
 def test_marker_styles_3_mutated():
-    fig, ax = plt.subplots(sharex=True)
+    fig, ax = plt.subplots(sharey=False)
     markers = sorted(matplotlib.markers.MarkerStyle.markers, key=lambda x: str(type(x)) + str(x))
     markers.remove('none')
     markers = ['none', *markers]
     for y, marker in enumerate(markers):
         ax.plot(y % 2 * 5 + np.arange(10) * 10, np.ones(10) * 10 * y, linestyle='', marker=marker, markersize=10 + y / 5, label=marker)
-# Mutation info: Added sharex = True (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

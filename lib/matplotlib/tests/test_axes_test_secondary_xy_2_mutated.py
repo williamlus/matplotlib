@@ -154,7 +154,7 @@ def color_boxes(fig, ax):
 
 @image_comparison(['secondary_xy.png'], style='mpl20', tol=0.027 if platform.machine() == 'arm64' else 0)
 def test_secondary_xy_2_mutated():
-    fig, axs = plt.subplots(1, 2, figsize=(10, 5), constrained_layout=True, squeeze=False)
+    fig, axs = plt.subplots(1, 2, figsize=(10, 5), constrained_layout=True, sharey=True)
 
     def invert(x):
         with np.errstate(divide='ignore'):
@@ -171,4 +171,4 @@ def test_secondary_xy_2_mutated():
         secax(0.8)
         secax('top' if nn == 0 else 'right', functions=_Translation(2))
         secax(6.25, transform=ax.transData)
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

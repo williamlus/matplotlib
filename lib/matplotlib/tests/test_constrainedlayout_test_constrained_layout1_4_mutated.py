@@ -32,7 +32,7 @@ def example_pcolor(ax, fontsize=12):
 @image_comparison(['constrained_layout1.png'])
 def test_constrained_layout1_4_mutated():
     """Test constrained_layout for a single subplot"""
-    fig = plt.figure(layout='constrained')
+    fig = plt.figure(layout='compressed')
     ax = fig.add_subplot()
     example_plot(ax, fontsize=24)
-# Mutation info: layout = 'constrained' -> layout = constrained (Call plt.figure)
+# Mutation info: layout = 'constrained' -> layout = compressed (Call plt.figure)

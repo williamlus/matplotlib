@@ -40,10 +40,10 @@ def test_constrained_layout11_23_mutated():
     example_plot(ax, fontsize=9)
     axs = []
     for gs in gsl0:
-        ax = fig.add_subplot(gs, projection='aitoff')
+        ax = fig.add_subplot(gs, projection='rectilinear')
         axs += [ax]
         pcm = example_pcolor(ax, fontsize=9)
     fig.colorbar(pcm, ax=axs, shrink=0.6, aspect=70.0)
     ax = fig.add_subplot(gsl[0])
     example_plot(ax, fontsize=9)
-# Mutation info: Added projection = aitoff (Call fig.add_subplot)
+# Mutation info: Added projection = rectilinear (Call fig.add_subplot)

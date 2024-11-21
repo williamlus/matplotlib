@@ -77,9 +77,9 @@ class QuantityND(np.ndarray):
 
 @image_comparison(['image_cliprect'], style='mpl20')
 def test_image_cliprect_2_mutated():
-    fig, ax = plt.subplots(squeeze=True)
+    fig, ax = plt.subplots(sharex=False)
     d = [[1, 2], [3, 4]]
     im = ax.imshow(d, extent=(0, 5, 0, 5))
     rect = patches.Rectangle(xy=(1, 1), width=2, height=2, transform=im.axes.transData)
     im.set_clip_path(rect)
-# Mutation info: Added squeeze = True (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

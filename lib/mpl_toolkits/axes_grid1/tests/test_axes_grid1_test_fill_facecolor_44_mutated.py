@@ -70,6 +70,6 @@ def test_fill_facecolor_44_mutated():
     axins.set_xlim(0, 0.2)
     axins.set_ylim(0, 0.2)
     axins.xaxis.set_ticks([])
-    axins.yaxis.set_ticks([], minor=False)
+    axins.yaxis.set_ticks([], minor=True)
     mark_inset(ax[3], axins, loc1=2, loc2=4, fc='g', ec='0.5', fill=False)
-# Mutation info: Added minor = False (Call axins.yaxis.set_ticks)
+# Mutation info: Added minor = True (Call axins.yaxis.set_ticks)

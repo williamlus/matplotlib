@@ -154,7 +154,7 @@ def color_boxes(fig, ax):
 
 @image_comparison(['mixed_collection'], remove_text=True)
 def test_mixed_collection_0_mutated():
-    fig, ax = plt.subplots(squeeze=True)
+    fig, ax = plt.subplots(sharey=True)
     c = mpatches.Circle((8, 8), radius=4, facecolor='none', edgecolor='green')
     p1 = mpl.collections.PatchCollection([c], match_original=True)
     p1.set_offsets([[0, 0], [24, 24]])
@@ -168,4 +168,4 @@ def test_mixed_collection_0_mutated():
     ax.add_collection(p2)
     ax.set_xlim(0, 16)
     ax.set_ylim(0, 16)
-# Mutation info: Added squeeze = True (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

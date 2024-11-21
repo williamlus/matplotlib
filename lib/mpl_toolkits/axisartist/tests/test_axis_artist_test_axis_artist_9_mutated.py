@@ -8,7 +8,7 @@ def test_axis_artist_9_mutated():
     plt.rcParams['text.kerning_factor'] = 6
     fig, ax = plt.subplots()
     ax.xaxis.set_visible(False)
-    ax.yaxis.set_visible(True)
+    ax.yaxis.set_visible(False)
     for loc in ('left', 'right', 'bottom'):
         helper = AxisArtistHelperRectlinear.Fixed(ax, loc=loc)
         axisline = AxisArtist(ax, helper, offset=None, axis_direction=loc)
@@ -17,4 +17,4 @@ def test_axis_artist_9_mutated():
     axisline.major_ticks.set_tick_out(False)
     axisline.label.set_pad(5)
     ax.set_ylabel('Test')
-# Mutation info: (0-th Positional) b = False -> b = True (Call ax.yaxis.set_visible)
+# Mutation info: (0-th Positional) b = False -> b = False (Call ax.yaxis.set_visible)

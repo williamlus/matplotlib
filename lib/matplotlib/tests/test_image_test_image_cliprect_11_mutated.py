@@ -79,7 +79,7 @@ class QuantityND(np.ndarray):
 def test_image_cliprect_11_mutated():
     fig, ax = plt.subplots()
     d = [[1, 2], [3, 4]]
-    im = ax.imshow(d, extent=(0, 5, 0, 5), resample=True)
+    im = ax.imshow(d, extent=(0, 5, 0, 5), aspect='equal')
     rect = patches.Rectangle(xy=(1, 1), width=2, height=2, transform=im.axes.transData)
     im.set_clip_path(rect)
-# Mutation info: Added resample = True (Call ax.imshow)
+# Mutation info: Added aspect = equal (Call ax.imshow)

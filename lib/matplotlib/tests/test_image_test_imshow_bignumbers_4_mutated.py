@@ -78,8 +78,8 @@ class QuantityND(np.ndarray):
 @image_comparison(['imshow_bignumbers.png'], remove_text=True, style='mpl20')
 def test_imshow_bignumbers_4_mutated():
     rcParams['image.interpolation'] = 'nearest'
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(squeeze=False)
     img = np.array([[1, 2, 1000000000000.0], [3, 1, 4]], dtype=np.uint64)
     pc = ax.imshow(img)
     pc.set_clim(0, 5)
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added squeeze = False (Call plt.subplots)

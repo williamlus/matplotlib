@@ -166,9 +166,9 @@ def test_arc_angles_11_mutated():
         ax.add_patch(mpatches.Arc(centre, w, h, theta1=theta1, theta2=theta2))
         ax.plot([scale * np.cos(np.deg2rad(theta1)) + centre[0], centre[0], scale * np.cos(np.deg2rad(theta2)) + centre[0]], [scale * np.sin(np.deg2rad(theta1)) + centre[1], centre[1], scale * np.sin(np.deg2rad(theta2)) + centre[1]])
         ax.set_xlim(-scale, scale)
-        ax.set_ylim(-scale, scale, emit=False)
+        ax.set_ylim(-scale, scale, emit=True)
         w *= 10
         h *= 10
         centre = (centre[0] * 10, centre[1] * 10)
         scale *= 10
-# Mutation info: Added emit = False (Call ax.set_ylim)
+# Mutation info: Added emit = True (Call ax.set_ylim)

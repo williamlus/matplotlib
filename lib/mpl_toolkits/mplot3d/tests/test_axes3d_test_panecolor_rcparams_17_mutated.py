@@ -54,5 +54,5 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
 def test_panecolor_rcparams_17_mutated():
     with plt.rc_context({'axes3d.xaxis.panecolor': 'r', 'axes3d.yaxis.panecolor': 'g', 'axes3d.zaxis.panecolor': 'b'}):
         fig = plt.figure(figsize=(1, 1))
-        fig.add_subplot(projection='aitoff')
-# Mutation info: projection = '3d' -> projection = aitoff (Call fig.add_subplot)
+        fig.add_subplot(projection=None)
+# Mutation info: projection = '3d' -> projection = None (Call fig.add_subplot)

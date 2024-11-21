@@ -62,7 +62,7 @@ def check_segments(coll, positions, linelength, lineoffset, orientation):
 
 @image_comparison(['size_in_xy.png'], remove_text=True)
 def test_size_in_xy_1_mutated():
-    fig, ax = plt.subplots(squeeze=True)
+    fig, ax = plt.subplots(sharey=True)
     widths, heights, angles = ((10, 10), 10, 0)
     widths = (10, 10)
     coords = [(10, 10), (15, 15)]
@@ -70,4 +70,4 @@ def test_size_in_xy_1_mutated():
     ax.add_collection(e)
     ax.set_xlim(0, 30)
     ax.set_ylim(0, 30)
-# Mutation info: Added squeeze = True (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

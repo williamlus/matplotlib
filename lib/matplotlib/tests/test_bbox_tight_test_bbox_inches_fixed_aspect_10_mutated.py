@@ -13,5 +13,5 @@ def test_bbox_inches_fixed_aspect_10_mutated():
         fig, ax = plt.subplots()
         ax.plot([0, 1])
         ax.set_xlim(0, 1)
-        ax.set_aspect('equal', share=False)
-# Mutation info: Added share = False (Call ax.set_aspect)
+        ax.set_aspect('auto')
+# Mutation info: (0-th Positional) aspect = 'equal' -> aspect = auto (Call ax.set_aspect)

@@ -154,7 +154,7 @@ def color_boxes(fig, ax):
 
 @image_comparison(['mollweide_grid'], remove_text=True)
 def test_mollweide_grid_0_mutated():
-    fig = plt.figure(clear=True)
+    fig = plt.figure(layout='constrained')
     ax = fig.add_subplot(projection='mollweide')
     ax.grid()
-# Mutation info: Added clear = True (Call plt.figure)
+# Mutation info: Added layout = constrained (Call plt.figure)

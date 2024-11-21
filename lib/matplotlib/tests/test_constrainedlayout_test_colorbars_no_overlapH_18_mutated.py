@@ -36,7 +36,7 @@ def test_colorbars_no_overlapH_18_mutated():
     axs = fig.subplots(1, 2, sharex=True, sharey=True)
     for ax in axs:
         ax.yaxis.set_major_formatter(ticker.NullFormatter())
-        ax.tick_params(axis='y', direction='in')
+        ax.tick_params(axis='both', direction='in')
         im = ax.imshow([[1, 2], [3, 4]])
         fig.colorbar(im, ax=ax, orientation='horizontal')
-# Mutation info: axis = 'both' -> axis = y (Call ax.tick_params)
+# Mutation info: axis = 'both' -> axis = both (Call ax.tick_params)

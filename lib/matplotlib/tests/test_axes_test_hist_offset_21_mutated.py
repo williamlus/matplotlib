@@ -157,6 +157,6 @@ def test_hist_offset_21_mutated():
     d1 = np.linspace(0, 10, 50)
     d2 = np.linspace(1, 3, 20)
     fig, ax = plt.subplots()
-    ax.hist(d1, bottom=5, histtype='bar')
+    ax.hist(d1, bottom=5, orientation='horizontal')
     ax.hist(d2, bottom=15)
-# Mutation info: Added histtype = bar (Call ax.hist)
+# Mutation info: Added orientation = horizontal (Call ax.hist)

@@ -79,7 +79,7 @@ def test_proportional_colorbars_8_mutated():
     cmap = mcolors.ListedColormap(['0.3', '0.5', 'white', 'lightblue', 'steelblue'])
     cmap.set_under('darkred')
     cmap.set_over('crimson')
-    norm = mcolors.BoundaryNorm(levels, cmap.N, extend='min')
+    norm = mcolors.BoundaryNorm(levels, cmap.N, extend='neither')
     extends = ['neither', 'both']
     spacings = ['uniform', 'proportional']
     fig, axs = plt.subplots(2, 2)
@@ -87,4 +87,4 @@ def test_proportional_colorbars_8_mutated():
         for j in range(2):
             CS3 = axs[i, j].contourf(X, Y, Z, levels, cmap=cmap, norm=norm, extend=extends[i])
             fig.colorbar(CS3, spacing=spacings[j], ax=axs[i, j])
-# Mutation info: Added extend = min (Call mcolors.BoundaryNorm)
+# Mutation info: Added extend = neither (Call mcolors.BoundaryNorm)

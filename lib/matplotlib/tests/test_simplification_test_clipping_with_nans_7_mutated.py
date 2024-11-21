@@ -16,5 +16,5 @@ def test_clipping_with_nans_7_mutated():
     x[::100] = np.nan
     fig, ax = plt.subplots()
     ax.plot(x, y)
-    ax.set_ylim(-0.25, 0.25, emit=True)
-# Mutation info: Added emit = True (Call ax.set_ylim)
+    ax.set_ylim(-0.25, 0.25, emit=False)
+# Mutation info: Added emit = False (Call ax.set_ylim)

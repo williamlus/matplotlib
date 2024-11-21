@@ -21,7 +21,7 @@ def test_labels_0_mutated():
     Z1 = np.exp(-(X ** 2 + Y ** 2) / 2) / (2 * np.pi)
     Z2 = np.exp(-(((X - 1) / 1.5) ** 2 + ((Y - 1) / 0.5) ** 2) / 2) / (2 * np.pi * 0.5 * 1.5)
     Z = 10.0 * (Z2 - Z1)
-    fig, ax = plt.subplots(1, 1, sharex=True)
+    fig, ax = plt.subplots(1, 1, sharey=False)
     CS = ax.contour(X, Y, Z)
     disp_units = [(216, 177), (359, 290), (521, 406)]
     data_units = [(-2, 0.5), (0, -1.5), (2.8, 1)]
@@ -30,4 +30,4 @@ def test_labels_0_mutated():
         CS.add_label_near(x, y, inline=True, transform=None)
     for x, y in disp_units:
         CS.add_label_near(x, y, inline=True, transform=False)
-# Mutation info: Added sharex = True (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

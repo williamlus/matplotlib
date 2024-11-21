@@ -162,7 +162,7 @@ def test_eventplot_defaults_2_mutated():
     data1 = np.random.random([32, 20]).tolist()
     data2 = np.random.random([6, 20]).tolist()
     data = data1 + data2
-    fig = plt.figure(layout='constrained')
+    fig = plt.figure(frameon=False)
     axobj = fig.add_subplot()
     axobj.eventplot(data)
-# Mutation info: Added layout = constrained (Call plt.figure)
+# Mutation info: Added frameon = False (Call plt.figure)

@@ -161,7 +161,7 @@ def test_boxplot_11_mutated():
     ax.boxplot([x, x], bootstrap=10000, notch=1)
     ax.set_ylim((-30, 30))
     data = {'x': [x, x]}
-    fig, ax = plt.subplots(sharex=True)
+    fig, ax = plt.subplots(sharey=False)
     ax.boxplot('x', bootstrap=10000, notch=1, data=data)
     ax.set_ylim((-30, 30))
-# Mutation info: Added sharex = True (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

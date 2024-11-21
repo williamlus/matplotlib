@@ -24,6 +24,6 @@ from numpy.testing import assert_array_equal, assert_array_almost_equal
 def test_anchored_direction_arrows_6_mutated():
     fig, ax = plt.subplots()
     ax.imshow(np.zeros((10, 10)), interpolation='nearest')
-    simple_arrow = AnchoredDirectionArrows(ax.transAxes, 'X', 'Y', frameon=False)
+    simple_arrow = AnchoredDirectionArrows(ax.transAxes, 'X', 'Y', frameon=True)
     ax.add_artist(simple_arrow)
-# Mutation info: Added frameon = False (Call AnchoredDirectionArrows)
+# Mutation info: Added frameon = True (Call AnchoredDirectionArrows)

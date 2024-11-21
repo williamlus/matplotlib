@@ -10,11 +10,11 @@ def test_Subplot_16_mutated():
     plt.rcParams['text.kerning_factor'] = 6
     fig = plt.figure()
     ax = Subplot(fig, 1, 1, 1)
-    fig.add_subplot(ax, polar=False)
+    fig.add_subplot(ax, projection='lambert')
     xx = np.arange(0, 2 * np.pi, 0.01)
     ax.plot(xx, np.sin(xx))
     ax.set_ylabel('Test')
     ax.axis['top'].major_ticks.set_tick_out(True)
     ax.axis['bottom'].major_ticks.set_tick_out(True)
     ax.axis['bottom'].set_label('Tk0')
-# Mutation info: Added polar = False (Call fig.add_subplot)
+# Mutation info: Added projection = lambert (Call fig.add_subplot)

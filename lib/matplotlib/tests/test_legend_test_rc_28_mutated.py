@@ -28,7 +28,7 @@ def test_rc_28_mutated():
     ax.legend(loc='center left', bbox_to_anchor=[1.0, 0.5], title='My legend')
     mpl.rcParams['legend.scatterpoints'] = 1
     plt.figure()
-    ax = plt.subplot(121, polar=False)
+    ax = plt.subplot(121, projection='polar')
     ax.scatter(np.arange(10), np.arange(10, 0, -1), label='one')
     ax.legend(loc='center left', bbox_to_anchor=[1.0, 0.5], title='My legend')
-# Mutation info: Added polar = False (Call plt.subplot)
+# Mutation info: Added projection = polar (Call plt.subplot)

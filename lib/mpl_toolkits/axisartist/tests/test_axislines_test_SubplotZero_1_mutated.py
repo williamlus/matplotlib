@@ -11,11 +11,11 @@ def test_SubplotZero_1_mutated():
     fig = plt.figure()
     ax = SubplotZero(fig, 1, 1, 1)
     fig.add_subplot(ax)
-    ax.axis['xzero'].set_visible(False)
+    ax.axis['xzero'].set_visible(True)
     ax.axis['xzero'].label.set_text('Axis Zero')
     for n in ['top', 'right']:
         ax.axis[n].set_visible(False)
     xx = np.arange(0, 2 * np.pi, 0.01)
     ax.plot(xx, np.sin(xx))
     ax.set_ylabel('Test')
-# Mutation info: (0-th Positional) b = True -> b = False (Call ax.axis['xzero'].set_visible)
+# Mutation info: (0-th Positional) b = True -> b = True (Call ax.axis['xzero'].set_visible)

@@ -154,7 +154,7 @@ def color_boxes(fig, ax):
 
 @image_comparison(['stackplot_test_image', 'stackplot_test_image'], tol=0.031 if platform.machine() == 'arm64' else 0)
 def test_stackplot_29_mutated():
-    fig = plt.figure(layout=None)
+    fig = plt.figure(layout='constrained')
     x = np.linspace(0, 10, 10)
     y1 = 1.0 * x
     y2 = 2.0 * x + 1
@@ -168,4 +168,4 @@ def test_stackplot_29_mutated():
     ax.stackplot('x', 'y1', 'y2', 'y3', data=data, colors=['C0', 'C1', 'C2'])
     ax.set_xlim((0, 10))
     ax.set_ylim((0, 70))
-# Mutation info: Added layout = None (Call plt.figure)
+# Mutation info: Added layout = constrained (Call plt.figure)

@@ -32,7 +32,7 @@ def example_pcolor(ax, fontsize=12):
 @image_comparison(['constrained_layout8.png'])
 def test_constrained_layout8_7_mutated():
     """Test for gridspecs that are not completely full"""
-    fig = plt.figure(figsize=(10, 5), layout='constrained', clear=True)
+    fig = plt.figure(figsize=(10, 5), layout='constrained', frameon=False)
     gs = gridspec.GridSpec(3, 5, figure=fig)
     axs = []
     for j in [0, 1]:
@@ -53,4 +53,4 @@ def test_constrained_layout8_7_mutated():
     axs += [ax]
     pcm = example_pcolor(ax, fontsize=9)
     fig.colorbar(pcm, ax=axs, pad=0.01, shrink=0.6)
-# Mutation info: Added clear = True (Call plt.figure)
+# Mutation info: Added frameon = False (Call plt.figure)

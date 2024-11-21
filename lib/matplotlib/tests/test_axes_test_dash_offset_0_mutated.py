@@ -154,9 +154,9 @@ def color_boxes(fig, ax):
 
 @image_comparison(['dash_offset'], remove_text=True)
 def test_dash_offset_0_mutated():
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(sharex=False)
     x = np.linspace(0, 10)
     y = np.ones_like(x)
     for j in range(0, 100, 2):
         ax.plot(x, j * y, ls=(j, (10, 10)), lw=5, color='k')
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

@@ -9,6 +9,6 @@ from matplotlib.ticker import FuncFormatter
 
 @image_comparison(['bbox_inches_tight_suptile_non_default.png'], savefig_kwarg={'bbox_inches': 'tight'}, tol=0.1)
 def test_bbox_inches_tight_suptitle_non_default_5_mutated():
-    fig, ax = plt.subplots(squeeze=True)
+    fig, ax = plt.subplots(sharex=False)
     fig.suptitle('Booo', x=0.5, y=1.1)
-# Mutation info: Added squeeze = True (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

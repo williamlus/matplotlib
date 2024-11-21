@@ -7,10 +7,10 @@ from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
 @image_comparison(['polar_log.png'], style='default')
 def test_polar_log_5_mutated():
-    fig = plt.figure(layout='none')
+    fig = plt.figure(layout=None)
     ax = fig.add_subplot(polar=True)
     ax.set_rscale('log')
     ax.set_rlim(1, 1000)
     n = 100
     ax.plot(np.linspace(0, 2 * np.pi, n), np.logspace(0, 2, n))
-# Mutation info: Added layout = none (Call plt.figure)
+# Mutation info: Added layout = None (Call plt.figure)

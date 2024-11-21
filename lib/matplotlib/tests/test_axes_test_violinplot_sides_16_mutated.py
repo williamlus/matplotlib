@@ -158,7 +158,7 @@ def test_violinplot_sides_16_mutated():
     np.random.seed(19680801)
     data = [np.random.normal(size=100)]
     for pos, side in zip([0, -0.5, 0.5], ['both', 'low', 'high']):
-        ax.violinplot(data, positions=[pos], orientation='horizontal', showmeans=False, showextrema=False, showmedians=True, side=side)
+        ax.violinplot(data, positions=[pos], orientation='horizontal', showmeans=False, showextrema=True, showmedians=True, side=side, bw_method='silverman')
     for pos, side in zip([4, 3.5, 4.5], ['both', 'low', 'high']):
         ax.violinplot(data, positions=[pos], orientation='vertical', showmeans=False, showextrema=True, showmedians=True, side=side)
-# Mutation info: showextrema = True -> showextrema = False (Call ax.violinplot)
+# Mutation info: Added bw_method = silverman (Call ax.violinplot)

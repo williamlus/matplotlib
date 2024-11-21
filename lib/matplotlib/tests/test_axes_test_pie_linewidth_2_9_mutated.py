@@ -158,6 +158,6 @@ def test_pie_linewidth_2_9_mutated():
     sizes = [15, 30, 45, 10]
     colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral']
     explode = (0, 0.1, 0, 0)
-    plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 2}, counterclock=False)
+    plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90, wedgeprops={'linewidth': 2}, rotatelabels=False)
     plt.axis('equal')
-# Mutation info: Added counterclock = False (Call plt.pie)
+# Mutation info: Added rotatelabels = False (Call plt.pie)

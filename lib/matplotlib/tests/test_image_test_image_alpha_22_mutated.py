@@ -81,6 +81,6 @@ def test_image_alpha_22_mutated():
     Z = np.random.rand(6, 6)
     fig, (ax1, ax2, ax3) = plt.subplots(1, 3)
     ax1.imshow(Z, alpha=1.0, interpolation='none')
-    ax2.imshow(Z, alpha=0.5, interpolation='none', aspect='auto')
+    ax2.imshow(Z, alpha=0.5, interpolation='none', origin='lower')
     ax3.imshow(Z, alpha=0.5, interpolation='nearest')
-# Mutation info: Added aspect = auto (Call ax2.imshow)
+# Mutation info: Added origin = lower (Call ax2.imshow)

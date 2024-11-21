@@ -155,7 +155,7 @@ def color_boxes(fig, ax):
 @image_comparison(['step_linestyle', 'step_linestyle'], remove_text=True, tol=0.2)
 def test_step_linestyle_0_mutated():
     x = y = np.arange(10)
-    fig, ax_lst = plt.subplots(2, 2, sharex=True)
+    fig, ax_lst = plt.subplots(2, 2, sharex=False)
     ax_lst = ax_lst.flatten()
     ln_styles = ['-', '--', '-.', ':']
     for ax, ls in zip(ax_lst, ln_styles):
@@ -174,4 +174,4 @@ def test_step_linestyle_0_mutated():
         ax.step('X', 'Y2', lw=5, linestyle=ls, where='post', data=data)
         ax.set_xlim([-1, 5])
         ax.set_ylim([-1, 7])
-# Mutation info: Added sharex = True (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

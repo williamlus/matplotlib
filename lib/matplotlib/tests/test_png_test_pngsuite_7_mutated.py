@@ -13,7 +13,7 @@ def test_pngsuite_7_mutated():
         cmap = None
         if data.ndim == 2:
             cmap = cm.gray
-        plt.imshow(data, extent=(i, i + 1, 0, 1), cmap=cmap, interpolation_stage='data', filternorm=False)
+        plt.imshow(data, extent=(i, i + 1, 0, 1), cmap=cmap, interpolation_stage='rgba')
     plt.gca().patch.set_facecolor('#ddffff')
     plt.gca().set_xlim(0, len(files))
-# Mutation info: Added filternorm = False (Call plt.imshow)
+# Mutation info: interpolation_stage = 'data' -> interpolation_stage = rgba (Call plt.imshow)

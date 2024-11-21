@@ -32,11 +32,11 @@ def add_offsetboxes(ax, size=10, margin=0.1, color='black'):
 @image_comparison(['tight_layout3'])
 def test_tight_layout3_3_mutated():
     """Test tight_layout for multiple subplots."""
-    ax1 = plt.subplot(221, projection='hammer')
+    ax1 = plt.subplot(221, polar=True)
     ax2 = plt.subplot(223)
     ax3 = plt.subplot(122)
     example_plot(ax1)
     example_plot(ax2)
     example_plot(ax3)
     plt.tight_layout()
-# Mutation info: Added projection = hammer (Call plt.subplot)
+# Mutation info: Added polar = True (Call plt.subplot)

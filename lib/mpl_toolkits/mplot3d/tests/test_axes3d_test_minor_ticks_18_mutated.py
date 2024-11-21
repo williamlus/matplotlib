@@ -57,6 +57,6 @@ def test_minor_ticks_18_mutated():
     ax.set_xticklabels(['quarter'], minor=True)
     ax.set_yticks([0.33], minor=True)
     ax.set_yticklabels(['third'], minor=True)
-    ax.set_zticks([0.5], minor=True)
+    ax.set_zticks([0.5], minor=False)
     ax.set_zticklabels(['half'], minor=True)
-# Mutation info: minor = True -> minor = True (Call ax.set_zticks)
+# Mutation info: minor = True -> minor = False (Call ax.set_zticks)

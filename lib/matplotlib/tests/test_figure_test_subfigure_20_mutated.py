@@ -23,7 +23,7 @@ import matplotlib.dates as mdates
 @image_comparison(['test_subfigure.png'], style='mpl20', savefig_kwarg={'facecolor': 'teal'})
 def test_subfigure_20_mutated():
     np.random.seed(19680801)
-    fig = plt.figure(layout=None)
+    fig = plt.figure(layout='tight')
     sub = fig.subfigures(1, 2)
     axs = sub[0].subplots(2, 2)
     for ax in axs.flat:
@@ -41,4 +41,4 @@ def test_subfigure_20_mutated():
     leg = fig.legend(handles=[plt.Line2D([0], [0], label='Line{}'.format(i)) for i in range(5)], loc='center')
     sub[0].set_zorder(leg.get_zorder() - 1)
     sub[1].set_zorder(leg.get_zorder() + 1)
-# Mutation info: layout = 'constrained' -> layout = None (Call plt.figure)
+# Mutation info: layout = 'constrained' -> layout = tight (Call plt.figure)

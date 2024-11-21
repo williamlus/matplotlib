@@ -165,7 +165,7 @@ def test_step_linestyle_9_mutated():
         ax.set_xlim([-1, 5])
         ax.set_ylim([-1, 7])
     data = {'X': x, 'Y0': y, 'Y1': y + 1, 'Y2': y + 2}
-    fig, ax_lst = plt.subplots(2, 2, sharey=False)
+    fig, ax_lst = plt.subplots(2, 2, squeeze=False)
     ax_lst = ax_lst.flatten()
     ln_styles = ['-', '--', '-.', ':']
     for ax, ls in zip(ax_lst, ln_styles):
@@ -174,4 +174,4 @@ def test_step_linestyle_9_mutated():
         ax.step('X', 'Y2', lw=5, linestyle=ls, where='post', data=data)
         ax.set_xlim([-1, 5])
         ax.set_ylim([-1, 7])
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added squeeze = False (Call plt.subplots)

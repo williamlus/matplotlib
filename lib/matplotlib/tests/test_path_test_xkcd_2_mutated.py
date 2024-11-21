@@ -19,6 +19,6 @@ def test_xkcd_2_mutated():
     x = np.linspace(0, 2 * np.pi, 100)
     y = np.sin(x)
     with plt.xkcd():
-        fig, ax = plt.subplots(squeeze=False)
+        fig, ax = plt.subplots(squeeze=True)
         ax.plot(x, y)
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added squeeze = True (Call plt.subplots)

@@ -49,5 +49,5 @@ def test_pre_transform_plotting_13_mutated():
     x, y = (x[::3], y[::3])
     u, v = (u[::3, ::3], v[::3, ::3])
     ax.quiver(x, y + 5, u, v, transform=times10 + ax.transData)
-    ax.barbs(x - 3, y + 5, u ** 2, v ** 2, transform=times10 + ax.transData, fill_empty=True)
-# Mutation info: Added fill_empty = True (Call ax.barbs)
+    ax.barbs(x - 3, y + 5, u ** 2, v ** 2, transform=times10 + ax.transData, rounding=False)
+# Mutation info: Added rounding = False (Call ax.barbs)

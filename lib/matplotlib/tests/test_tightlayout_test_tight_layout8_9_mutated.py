@@ -34,7 +34,7 @@ def test_tight_layout8_9_mutated():
     """Test automatic use of tight_layout."""
     fig = plt.figure()
     fig.set_layout_engine(layout='tight', pad=0.1)
-    ax = fig.add_subplot(projection='polar')
+    ax = fig.add_subplot(polar=False)
     example_plot(ax, fontsize=24)
     fig.draw_without_rendering()
-# Mutation info: Added projection = polar (Call fig.add_subplot)
+# Mutation info: Added polar = False (Call fig.add_subplot)

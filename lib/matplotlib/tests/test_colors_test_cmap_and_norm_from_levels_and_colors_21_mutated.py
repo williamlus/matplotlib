@@ -64,7 +64,7 @@ def test_cmap_and_norm_from_levels_and_colors_21_mutated():
     extend = 'both'
     cmap, norm = mcolors.from_levels_and_colors(levels, colors, extend=extend)
     ax = plt.axes()
-    m = plt.pcolormesh(data, cmap=cmap, norm=norm, shading='flat')
+    m = plt.pcolormesh(data, cmap=cmap, norm=norm, edgecolors='none')
     plt.colorbar(m)
     ax.tick_params(labelleft=False, labelbottom=False)
-# Mutation info: Added shading = flat (Call plt.pcolormesh)
+# Mutation info: Added edgecolors = none (Call plt.pcolormesh)

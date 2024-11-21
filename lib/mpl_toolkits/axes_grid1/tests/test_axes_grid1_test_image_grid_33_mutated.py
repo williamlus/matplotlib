@@ -24,8 +24,8 @@ from numpy.testing import assert_array_equal, assert_array_almost_equal
 def test_image_grid_33_mutated():
     im = np.arange(100).reshape((10, 10))
     fig = plt.figure(1, (4, 4))
-    grid = ImageGrid(fig, 111, nrows_ncols=(2, 2), axes_pad=0.1, cbar_location='right')
+    grid = ImageGrid(fig, 111, nrows_ncols=(2, 2), axes_pad=0.1, label_mode=1)
     assert grid.get_axes_pad() == (0.1, 0.1)
     for i in range(4):
         grid[i].imshow(im, interpolation='nearest')
-# Mutation info: Added cbar_location = right (Call ImageGrid)
+# Mutation info: Added label_mode = 1 (Call ImageGrid)

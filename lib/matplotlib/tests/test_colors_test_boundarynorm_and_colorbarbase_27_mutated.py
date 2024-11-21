@@ -61,7 +61,7 @@ def test_boundarynorm_and_colorbarbase_27_mutated():
     fig = plt.figure()
     ax1 = fig.add_axes([0.05, 0.8, 0.9, 0.15])
     ax2 = fig.add_axes([0.05, 0.475, 0.9, 0.15])
-    ax3 = fig.add_axes([0.05, 0.15, 0.9, 0.15], projection='lambert')
+    ax3 = fig.add_axes([0.05, 0.15, 0.9, 0.15], projection='rectilinear')
     bounds = [-1, 2, 5, 7, 12, 15]
     cmap = mpl.colormaps['viridis']
     norm = mcolors.BoundaryNorm(bounds, cmap.N)
@@ -70,4 +70,4 @@ def test_boundarynorm_and_colorbarbase_27_mutated():
     cb2 = mcolorbar.ColorbarBase(ax2, cmap=cmap, norm=norm, orientation='horizontal')
     norm = mcolors.BoundaryNorm(bounds, cmap.N, extend='both')
     cb3 = mcolorbar.ColorbarBase(ax3, cmap=cmap, norm=norm, extend='neither', orientation='horizontal')
-# Mutation info: Added projection = lambert (Call fig.add_axes)
+# Mutation info: Added projection = rectilinear (Call fig.add_axes)

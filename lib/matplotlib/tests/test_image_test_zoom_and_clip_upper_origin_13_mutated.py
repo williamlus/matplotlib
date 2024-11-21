@@ -81,6 +81,6 @@ def test_zoom_and_clip_upper_origin_13_mutated():
     image = image.reshape((10, 10))
     fig, ax = plt.subplots()
     ax.imshow(image)
-    ax.set_ylim(2.0, -0.5, emit=True)
+    ax.set_ylim(2.0, -0.5, auto=False)
     ax.set_xlim(-0.5, 2.0)
-# Mutation info: Added emit = True (Call ax.set_ylim)
+# Mutation info: Added auto = False (Call ax.set_ylim)

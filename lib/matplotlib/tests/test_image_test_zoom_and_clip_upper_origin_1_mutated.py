@@ -79,8 +79,8 @@ class QuantityND(np.ndarray):
 def test_zoom_and_clip_upper_origin_1_mutated():
     image = np.arange(100)
     image = image.reshape((10, 10))
-    fig, ax = plt.subplots(squeeze=True)
+    fig, ax = plt.subplots(squeeze=False)
     ax.imshow(image)
     ax.set_ylim(2.0, -0.5)
     ax.set_xlim(-0.5, 2.0)
-# Mutation info: Added squeeze = True (Call plt.subplots)
+# Mutation info: Added squeeze = False (Call plt.subplots)

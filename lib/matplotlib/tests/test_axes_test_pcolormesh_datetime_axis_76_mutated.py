@@ -169,11 +169,11 @@ def test_pcolormesh_datetime_axis_76_mutated():
     x = np.repeat(x[np.newaxis], 21, axis=0)
     y = np.repeat(y[:, np.newaxis], 21, axis=1)
     plt.subplot(223)
-    plt.pcolormesh(x[:-1, :-1], y[:-1, :-1], z[:-1, :-1], snap=False)
+    plt.pcolormesh(x[:-1, :-1], y[:-1, :-1], z[:-1, :-1], rasterized=True)
     plt.subplot(224)
     plt.pcolormesh(x, y, z)
     for ax in fig.get_axes():
         for label in ax.get_xticklabels():
             label.set_ha('right')
             label.set_rotation(30)
-# Mutation info: Added snap = False (Call plt.pcolormesh)
+# Mutation info: Added rasterized = True (Call plt.pcolormesh)

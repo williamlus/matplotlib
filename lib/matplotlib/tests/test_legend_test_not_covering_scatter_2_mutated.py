@@ -24,8 +24,8 @@ from matplotlib.font_manager import FontProperties
 def test_not_covering_scatter_2_mutated():
     colors = ['b', 'g', 'r']
     for n in range(3):
-        plt.scatter([n], [n], color=colors[n], edgecolors='face')
+        plt.scatter([n], [n], color=colors[n], edgecolors='none')
     plt.legend(['foo', 'foo', 'foo'], loc='best')
     plt.gca().set_xlim(-0.5, 2.2)
     plt.gca().set_ylim(-0.5, 2.2)
-# Mutation info: Added edgecolors = face (Call plt.scatter)
+# Mutation info: Added edgecolors = none (Call plt.scatter)

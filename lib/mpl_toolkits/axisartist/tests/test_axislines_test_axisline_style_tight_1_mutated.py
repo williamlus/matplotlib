@@ -10,10 +10,10 @@ def test_axisline_style_tight_1_mutated():
     fig = plt.figure(figsize=(2, 2))
     ax = fig.add_subplot(axes_class=AxesZero)
     ax.axis['xzero'].set_axisline_style('-|>', size=5, facecolor='g')
-    ax.axis['xzero'].set_visible(False)
+    ax.axis['xzero'].set_visible(True)
     ax.axis['yzero'].set_axisline_style('->, size=8')
     ax.axis['yzero'].set_visible(True)
     for direction in ('left', 'right', 'bottom', 'top'):
         ax.axis[direction].set_visible(False)
     fig.tight_layout()
-# Mutation info: (0-th Positional) b = True -> b = False (Call ax.axis['xzero'].set_visible)
+# Mutation info: (0-th Positional) b = True -> b = True (Call ax.axis['xzero'].set_visible)

@@ -69,7 +69,7 @@ def test_polycollection_close_10_mutated():
     ax = fig.add_axes(Axes3D(fig))
     colors = ['r', 'g', 'b', 'y', 'k']
     zpos = list(range(5))
-    poly = mcollections.PolyCollection(vertsQuad * len(zpos), linewidth=0.25, closed=True)
+    poly = mcollections.PolyCollection(vertsQuad * len(zpos), linewidth=0.25, closed=False)
     poly.set_alpha(0.7)
     zs = []
     cs = []
@@ -81,4 +81,4 @@ def test_polycollection_close_10_mutated():
     ax.set_xlim3d(0, 4)
     ax.set_zlim3d(0, 3)
     ax.set_ylim3d(0, 4)
-# Mutation info: Added closed = True (Call mcollections.PolyCollection)
+# Mutation info: Added closed = False (Call mcollections.PolyCollection)

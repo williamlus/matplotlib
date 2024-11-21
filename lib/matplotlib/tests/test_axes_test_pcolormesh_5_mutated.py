@@ -165,8 +165,8 @@ def test_pcolormesh_5_mutated():
     Z = np.hypot(X, Y) / 5
     Z = (Z - Z.min()) / np.ptp(Z)
     Zm = ma.masked_where(np.abs(Qz) < 0.5 * np.max(Qz), Z)
-    _, (ax1, ax2, ax3) = plt.subplots(1, 3, sharey=True)
+    _, (ax1, ax2, ax3) = plt.subplots(1, 3, squeeze=False)
     ax1.pcolormesh(Qx, Qz, Zm[:-1, :-1], lw=0.5, edgecolors='k')
     ax2.pcolormesh(Qx, Qz, Zm[:-1, :-1], lw=2, edgecolors=['b', 'w'])
     ax3.pcolormesh(Qx, Qz, Zm, shading='gouraud')
-# Mutation info: Added sharey = True (Call plt.subplots)
+# Mutation info: Added squeeze = False (Call plt.subplots)

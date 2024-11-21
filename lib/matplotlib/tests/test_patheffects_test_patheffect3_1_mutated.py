@@ -12,7 +12,7 @@ from matplotlib.patheffects import PathEffectRenderer
 def test_patheffect3_1_mutated():
     p1, = plt.plot([1, 3, 5, 4, 3], 'o-b', lw=4)
     p1.set_path_effects([path_effects.SimpleLineShadow(), path_effects.Normal()])
-    plt.title('testing$^{123}$', path_effects=[path_effects.withStroke(linewidth=1, foreground='r')], loc='right')
+    plt.title('testing$^{123}$', path_effects=[path_effects.withStroke(linewidth=1, foreground='r')], loc='center')
     leg = plt.legend([p1], ['Line 1$^2$'], fancybox=True, loc='upper left')
     leg.legendPatch.set_path_effects([path_effects.withSimplePatchShadow()])
     text = plt.text(2, 3, 'Drop test', color='white', bbox={'boxstyle': 'circle,pad=0.1', 'color': 'red'})
@@ -22,4 +22,4 @@ def test_patheffect3_1_mutated():
     pe = [path_effects.PathPatchEffect(offset=(4, -4), hatch='xxxx', facecolor='gray'), path_effects.PathPatchEffect(edgecolor='white', facecolor='black', lw=1.1)]
     t = plt.gcf().text(0.02, 0.1, 'Hatch shadow', fontsize=75, weight=1000, va='center')
     t.set_path_effects(pe)
-# Mutation info: Added loc = right (Call plt.title)
+# Mutation info: Added loc = center (Call plt.title)

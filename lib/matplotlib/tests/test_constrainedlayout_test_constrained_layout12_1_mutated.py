@@ -32,7 +32,7 @@ def example_pcolor(ax, fontsize=12):
 @image_comparison(['constrained_layout12.png'])
 def test_constrained_layout12_1_mutated():
     """Test that very unbalanced labeling still works."""
-    fig = plt.figure(layout=None, figsize=(6, 8))
+    fig = plt.figure(layout='tight', figsize=(6, 8))
     gs0 = gridspec.GridSpec(6, 2, figure=fig)
     ax1 = fig.add_subplot(gs0[:3, 1])
     ax2 = fig.add_subplot(gs0[3:, 1])
@@ -45,4 +45,4 @@ def test_constrained_layout12_1_mutated():
     ax = fig.add_subplot(gs0[4:, 0])
     example_plot(ax, nodec=True)
     ax.set_xlabel('x-label')
-# Mutation info: layout = 'constrained' -> layout = None (Call plt.figure)
+# Mutation info: layout = 'constrained' -> layout = tight (Call plt.figure)

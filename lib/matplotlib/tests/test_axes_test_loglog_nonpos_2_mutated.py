@@ -154,7 +154,7 @@ def color_boxes(fig, ax):
 
 @image_comparison(['test_loglog_nonpos.png'], remove_text=True, style='mpl20', tol=0.029 if platform.machine() == 'arm64' else 0)
 def test_loglog_nonpos_2_mutated():
-    fig, axs = plt.subplots(3, 3, sharey=False)
+    fig, axs = plt.subplots(3, 3, sharex=False)
     x = np.arange(1, 11)
     y = x ** 3
     y[7] = -3.0
@@ -171,4 +171,4 @@ def test_loglog_nonpos_2_mutated():
                 ax.set_xscale('log', nonpositive=mcx)
             if mcy:
                 ax.set_yscale('log', nonpositive=mcy)
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

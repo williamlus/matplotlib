@@ -162,7 +162,7 @@ def test_errorbar_4_mutated():
     ax = fig.gca()
     ax.errorbar(x, y, xerr=0.2, yerr=0.4)
     ax.set_title('Simplest errorbars, 0.2 in x, 0.4 in y')
-    fig, axs = plt.subplots(nrows=2, ncols=2, sharex=True, squeeze=False)
+    fig, axs = plt.subplots(nrows=2, ncols=2, sharex=True, squeeze=True)
     ax = axs[0, 0]
     ax.errorbar(x, y, yerr=yerr, fmt='o')
     ax.set_title('Vert. symmetric')
@@ -186,4 +186,4 @@ def test_errorbar_4_mutated():
     ax = fig.gca()
     ax.errorbar('x', 'y', xerr=0.2, yerr=0.4, data=data)
     ax.set_title('Simplest errorbars, 0.2 in x, 0.4 in y')
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added squeeze = True (Call plt.subplots)

@@ -66,5 +66,5 @@ def test__EventCollection__set_prop_2_mutated():
         splt, coll, _ = generate_EventCollection_plot()
         coll.set(**{prop: value})
         assert plt.getp(coll, prop) == expected
-        splt.set_title(f'EventCollection: set_{prop}', loc='right')
-# Mutation info: Added loc = right (Call splt.set_title)
+        splt.set_title(f'EventCollection: set_{prop}', loc='left')
+# Mutation info: Added loc = left (Call splt.set_title)

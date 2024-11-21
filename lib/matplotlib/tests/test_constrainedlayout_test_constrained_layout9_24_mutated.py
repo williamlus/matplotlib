@@ -36,8 +36,8 @@ def test_constrained_layout9_24_mutated():
     for ax in axs.flat:
         pcm = example_pcolor(ax, fontsize=24)
         ax.set_xlabel('')
-        ax.set_ylabel('', loc='bottom')
+        ax.set_ylabel('', loc='center')
     ax.set_aspect(2.0)
     fig.colorbar(pcm, ax=axs, pad=0.01, shrink=0.6)
     fig.suptitle('Test Suptitle', fontsize=28)
-# Mutation info: Added loc = bottom (Call ax.set_ylabel)
+# Mutation info: Added loc = center (Call ax.set_ylabel)

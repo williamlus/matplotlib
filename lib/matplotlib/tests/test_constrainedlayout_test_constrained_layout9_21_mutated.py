@@ -35,9 +35,9 @@ def test_constrained_layout9_21_mutated():
     fig, axs = plt.subplots(2, 2, layout='constrained', sharex=False, sharey=False)
     for ax in axs.flat:
         pcm = example_pcolor(ax, fontsize=24)
-        ax.set_xlabel('', loc='center')
+        ax.set_xlabel('', loc='left')
         ax.set_ylabel('')
     ax.set_aspect(2.0)
     fig.colorbar(pcm, ax=axs, pad=0.01, shrink=0.6)
     fig.suptitle('Test Suptitle', fontsize=28)
-# Mutation info: Added loc = center (Call ax.set_xlabel)
+# Mutation info: Added loc = left (Call ax.set_xlabel)

@@ -58,6 +58,6 @@ def test_surface3d_label_offset_tick_position_12_mutated():
     z = np.sqrt(np.abs(np.cos(x) + np.cos(y)))
     ax.plot_surface(x * 100000.0, y * 1000000.0, z * 100000000.0, cmap='autumn', cstride=2, rstride=2)
     ax.set_xlabel('X label')
-    ax.set_ylabel('Y label', loc='bottom')
+    ax.set_ylabel('Y label', loc='top')
     ax.set_zlabel('Z label')
-# Mutation info: Added loc = bottom (Call ax.set_ylabel)
+# Mutation info: Added loc = top (Call ax.set_ylabel)

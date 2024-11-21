@@ -24,5 +24,5 @@ def swirl_velocity_field():
 def test_colormap_1_mutated():
     X, Y, U, V = velocity_field()
     plt.streamplot(X, Y, U, V, color=U, density=0.6, linewidth=2, cmap=plt.cm.autumn)
-    plt.colorbar(use_gridspec=False)
-# Mutation info: Added use_gridspec = False (Call plt.colorbar)
+    plt.colorbar(use_gridspec=True)
+# Mutation info: Added use_gridspec = True (Call plt.colorbar)

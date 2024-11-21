@@ -157,5 +157,5 @@ def test_hist_log_6_mutated():
     data0 = np.linspace(0, 1, 200) ** 3
     data = np.concatenate([1 - data0, 1 + data0])
     fig, ax = plt.subplots()
-    ax.hist(data, fill=False, log=True, stacked=False)
-# Mutation info: Added stacked = False (Call ax.hist)
+    ax.hist(data, fill=False, log=True, orientation='horizontal')
+# Mutation info: Added orientation = horizontal (Call ax.hist)

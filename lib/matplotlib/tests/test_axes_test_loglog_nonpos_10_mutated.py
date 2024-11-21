@@ -164,11 +164,11 @@ def test_loglog_nonpos_10_mutated():
             if mcx:
                 ax.loglog(x, y ** 3, lw=2, nonpositive=mcx)
             else:
-                ax.loglog(x, y ** 3, lw=2, nonpositive='mask')
+                ax.loglog(x, y ** 3, lw=2, nonpositive='clip')
         else:
             ax.loglog(x, y ** 3, lw=2)
             if mcx:
                 ax.set_xscale('log', nonpositive=mcx)
             if mcy:
                 ax.set_yscale('log', nonpositive=mcy)
-# Mutation info: Added nonpositive = mask (Call ax.loglog)
+# Mutation info: Added nonpositive = clip (Call ax.loglog)

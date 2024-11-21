@@ -24,7 +24,7 @@ pyparsing_version = parse_version(pyparsing.__version__)
 def test_multiline2_7_mutated():
     plt.rcParams['text.kerning_factor'] = 6
     fig, ax = plt.subplots()
-    ax.set_xlim([0, 1.4], auto=True)
+    ax.set_xlim([0, 1.4], auto=False)
     ax.set_ylim([0, 2])
     ax.axhline(0.5, color='C2', linewidth=0.3)
     sts = ['Line', '2 Lineg\n 2 Lg', '$\\sum_i x $', 'hi $\\sum_i x $\ntest', 'test\n $\\sum_i x $', '$\\sum_i x $\n $\\sum_i x $']
@@ -54,4 +54,4 @@ def test_multiline2_7_mutated():
         tt = ax.text(0.2 * nn + 0.1, 0.1, st, horizontalalignment=horal, verticalalignment='bottom', rotation=20)
         draw_box(ax, tt)
     ax.text(1.2, 0.1, 'Bot align, rot20', color='C2')
-# Mutation info: Added auto = True (Call ax.set_xlim)
+# Mutation info: Added auto = False (Call ax.set_xlim)

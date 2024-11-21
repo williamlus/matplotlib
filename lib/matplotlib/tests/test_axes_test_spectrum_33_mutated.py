@@ -175,7 +175,7 @@ def test_spectrum_33_mutated():
         for ax, sides in zip(plt.figure().subplots(3), all_sides):
             spec, freqs, line = ax.angle_spectrum(y, sides=sides, **kwargs)
             ax.set(xlabel='', ylabel='')
-        for ax, sides in zip(plt.figure(clear=False).subplots(3), all_sides):
+        for ax, sides in zip(plt.figure(layout='none').subplots(3), all_sides):
             spec, freqs, line = ax.phase_spectrum(y, sides=sides, **kwargs)
             ax.set(xlabel='', ylabel='')
-# Mutation info: Added clear = False (Call plt.figure)
+# Mutation info: Added layout = none (Call plt.figure)

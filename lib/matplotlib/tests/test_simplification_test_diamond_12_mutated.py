@@ -16,5 +16,5 @@ def test_diamond_12_mutated():
     fig, ax = plt.subplots()
     ax.plot(x, y)
     ax.set_xlim(-0.6, 0.6)
-    ax.set_ylim(-0.6, 0.6, emit=True)
-# Mutation info: Added emit = True (Call ax.set_ylim)
+    ax.set_ylim(-0.6, 0.6, auto=True)
+# Mutation info: Added auto = True (Call ax.set_ylim)

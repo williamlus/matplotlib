@@ -161,6 +161,6 @@ def test_boxplot_autorange_whiskers_46_mutated():
     ax1.boxplot([x, x], bootstrap=10000, notch=1)
     ax1.set_ylim((-5, 5))
     fig2, ax2 = plt.subplots()
-    ax2.boxplot([x, x], bootstrap=10000, notch=1, autorange=True, vert=False)
+    ax2.boxplot([x, x], bootstrap=10000, notch=1, autorange=True, patch_artist=False)
     ax2.set_ylim((-5, 5))
-# Mutation info: Added vert = False (Call ax2.boxplot)
+# Mutation info: Added patch_artist = False (Call ax2.boxplot)

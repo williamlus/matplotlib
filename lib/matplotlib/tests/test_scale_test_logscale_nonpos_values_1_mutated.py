@@ -13,7 +13,7 @@ import pytest
 def test_logscale_nonpos_values_1_mutated():
     np.random.seed(19680801)
     xs = np.random.normal(size=int(1000.0))
-    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, squeeze=True)
+    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, sharey=True)
     ax1.hist(xs, range=(-5, 5), bins=10)
     ax1.set_yscale('log')
     ax2.hist(xs, range=(-5, 5), bins=10)
@@ -29,4 +29,4 @@ def test_logscale_nonpos_values_1_mutated():
     ax4.errorbar(x, y, yerr=yerr)
     ax4.set_yscale('log')
     ax4.set_xscale('log')
-# Mutation info: Added squeeze = True (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

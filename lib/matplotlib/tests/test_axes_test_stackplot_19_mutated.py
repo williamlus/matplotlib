@@ -167,5 +167,5 @@ def test_stackplot_19_mutated():
     fig, ax = plt.subplots()
     ax.stackplot('x', 'y1', 'y2', 'y3', data=data, colors=['C0', 'C1', 'C2'])
     ax.set_xlim((0, 10))
-    ax.set_ylim((0, 70), emit=False)
-# Mutation info: Added emit = False (Call ax.set_ylim)
+    ax.set_ylim((0, 70), auto=False)
+# Mutation info: Added auto = False (Call ax.set_ylim)

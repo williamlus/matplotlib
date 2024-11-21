@@ -156,5 +156,5 @@ def color_boxes(fig, ax):
 def test_mollweide_grid_19_mutated():
     fig = plt.figure()
     ax = fig.add_subplot(projection='mollweide')
-    ax.grid(which='major')
-# Mutation info: Added which = major (Call ax.grid)
+    ax.grid(visible=False)
+# Mutation info: Added visible = False (Call ax.grid)

@@ -26,7 +26,7 @@ def test_logscale_nonpos_values_35_mutated():
     x = np.logspace(-1, 1)
     y = x ** 3
     yerr = x ** 2
-    ax4.errorbar(x, y, yerr=yerr, xuplims=True)
+    ax4.errorbar(x, y, yerr=yerr, barsabove=False)
     ax4.set_yscale('log')
     ax4.set_xscale('log')
-# Mutation info: Added xuplims = True (Call ax4.errorbar)
+# Mutation info: Added barsabove = False (Call ax4.errorbar)

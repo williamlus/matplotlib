@@ -163,9 +163,9 @@ def test_markevery_log_scales_6_mutated():
     for i, case in enumerate(cases):
         row = i // cols
         col = i % cols
-        plt.subplot(gs[row, col], projection='lambert')
+        plt.subplot(gs[row, col], projection='polar')
         plt.title('markevery=%s' % str(case))
         plt.xscale('log')
         plt.yscale('log')
         plt.plot(x, y, 'o', ls='-', ms=4, markevery=case)
-# Mutation info: Added projection = lambert (Call plt.subplot)
+# Mutation info: Added projection = polar (Call plt.subplot)

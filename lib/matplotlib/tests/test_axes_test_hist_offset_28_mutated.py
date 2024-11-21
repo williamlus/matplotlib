@@ -158,5 +158,5 @@ def test_hist_offset_28_mutated():
     d2 = np.linspace(1, 3, 20)
     fig, ax = plt.subplots()
     ax.hist(d1, bottom=5)
-    ax.hist(d2, bottom=15, log=False)
-# Mutation info: Added log = False (Call ax.hist)
+    ax.hist(d2, bottom=15, density=True)
+# Mutation info: Added density = True (Call ax.hist)

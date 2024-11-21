@@ -21,8 +21,8 @@ def test_xkcd_marker_4_mutated():
     y2 = 5 - x
     y3 = 2.5 * np.ones(8)
     with plt.xkcd():
-        fig, ax = plt.subplots(sharey=False)
+        fig, ax = plt.subplots(squeeze=False)
         ax.plot(x, y1, '+', ms=10)
         ax.plot(x, y2, 'o', ms=10)
         ax.plot(x, y3, '^', ms=10)
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added squeeze = False (Call plt.subplots)

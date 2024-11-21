@@ -14,8 +14,8 @@ def draw_quiver(ax, **kwargs):
 
 @image_comparison(['quiver_with_key_test_image.png'])
 def test_quiver_with_key_2_mutated():
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(sharey=True)
     ax.margins(0.1)
     Q = draw_quiver(ax)
     ax.quiverkey(Q, 0.5, 0.95, 2, '$2\\, \\mathrm{m}\\, \\mathrm{s}^{-1}$', angle=-10, coordinates='figure', labelpos='W', fontproperties={'weight': 'bold', 'size': 'large'})
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

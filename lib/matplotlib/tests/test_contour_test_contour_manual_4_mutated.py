@@ -15,7 +15,7 @@ import pytest
 @image_comparison(baseline_images=['contour_manual'], extensions=['png'], remove_text=True, tol=0.89)
 def test_contour_manual_4_mutated():
     from matplotlib.contour import ContourSet
-    fig, ax = plt.subplots(figsize=(4, 4), squeeze=False)
+    fig, ax = plt.subplots(figsize=(4, 4), squeeze=True)
     cmap = 'viridis'
     lines0 = [[[2, 0], [1, 2], [1, 3]]]
     lines1 = [[[3, 0], [3, 2]], [[3, 3], [3, 4]]]
@@ -27,4 +27,4 @@ def test_contour_manual_4_mutated():
     kinds = [[1, 2, 2, 2, 79, 1, 2, 2, 2, 79]]
     ContourSet(ax, [2, 3], [segs], [kinds], filled=True, cmap=cmap)
     ContourSet(ax, [2], [segs], [kinds], colors='k', linewidths=3)
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added squeeze = True (Call plt.subplots)

@@ -159,5 +159,5 @@ def test_pie_default_14_mutated():
     colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral']
     explode = (0, 0.1, 0, 0)
     fig1, ax1 = plt.subplots(figsize=(8, 6))
-    ax1.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90, frame=False)
-# Mutation info: Added frame = False (Call ax1.pie)
+    ax1.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=90, normalize=True)
+# Mutation info: Added normalize = True (Call ax1.pie)

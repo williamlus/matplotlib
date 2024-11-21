@@ -47,8 +47,8 @@ def _test_rrulewrapper(attach_tz, get_tz):
 def test_date_axhline_1_mutated():
     t0 = datetime.datetime(2009, 1, 20)
     tf = datetime.datetime(2009, 1, 31)
-    fig, ax = plt.subplots(sharey=False)
+    fig, ax = plt.subplots(sharex=False)
     ax.axhline(t0, color='blue', lw=3)
     ax.set_ylim(t0 - datetime.timedelta(days=5), tf + datetime.timedelta(days=5))
     fig.subplots_adjust(left=0.25)
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

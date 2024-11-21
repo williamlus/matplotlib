@@ -154,7 +154,7 @@ def color_boxes(fig, ax):
 
 @image_comparison(['axisbelow.png'], remove_text=True)
 def test_axisbelow_4_mutated():
-    axs = plt.figure(layout='tight').subplots(ncols=3, sharex=True, sharey=True)
+    axs = plt.figure(frameon=False).subplots(ncols=3, sharex=True, sharey=True)
     settings = (False, 'line', True)
     for ax, setting in zip(axs, settings):
         ax.plot((0, 10), (0, 10), lw=10, color='m')
@@ -165,4 +165,4 @@ def test_axisbelow_4_mutated():
         ax.spines[:].set_visible(False)
         ax.set_axisbelow(setting)
         assert ax.get_axisbelow() == setting
-# Mutation info: Added layout = tight (Call plt.figure)
+# Mutation info: Added frameon = False (Call plt.figure)

@@ -169,7 +169,7 @@ def test_vlines_19_mutated():
     y4 = [np.nan, 2, -6, 3, 8, np.nan]
     ax4.vlines(x4, 0, y4, colors='k', linewidth=2)
     for ax in [ax1, ax2, ax3, ax4]:
-        ax.set_xlim(0, 10, auto=False)
+        ax.set_xlim(0, 10, auto=True)
     assert ax1.get_ylim() == ax2.get_ylim()
     assert ax1.get_ylim() == ax3.get_ylim()
     assert ax1.get_ylim() == ax4.get_ylim()
@@ -179,4 +179,4 @@ def test_vlines_19_mutated():
     ymax5 = np.ma.masked_equal([13, 14, 15, 16, 17, 18], 18)
     ax5.vlines(x5, ymin5, ymax5, colors='k', linewidth=2)
     ax5.set_xlim(0, 15)
-# Mutation info: Added auto = False (Call ax.set_xlim)
+# Mutation info: Added auto = True (Call ax.set_xlim)

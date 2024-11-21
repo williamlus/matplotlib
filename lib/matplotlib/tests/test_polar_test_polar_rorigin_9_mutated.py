@@ -10,9 +10,9 @@ def test_polar_rorigin_9_mutated():
     r = np.arange(0, 3.0, 0.01)
     theta = 2 * np.pi * r
     fig = plt.figure()
-    ax = fig.add_axes([0.1, 0.1, 0.8, 0.8], polar=True, projection='mollweide')
+    ax = fig.add_axes([0.1, 0.1, 0.8, 0.8], polar=False)
     ax.plot(theta, r)
     ax.set_rmax(2.0)
     ax.set_rmin(0.5)
     ax.set_rorigin(0.0)
-# Mutation info: Added projection = mollweide (Call fig.add_axes)
+# Mutation info: polar = True -> polar = False (Call fig.add_axes)

@@ -34,5 +34,5 @@ def test_constrained_layout16_9_mutated():
     """Test ax.set_position."""
     fig, ax = plt.subplots(layout='constrained')
     example_plot(ax, fontsize=12)
-    ax2 = fig.add_axes([0.2, 0.2, 0.4, 0.4], polar=True)
-# Mutation info: Added polar = True (Call fig.add_axes)
+    ax2 = fig.add_axes([0.2, 0.2, 0.4, 0.4], projection='aitoff')
+# Mutation info: Added projection = aitoff (Call fig.add_axes)

@@ -156,10 +156,10 @@ def color_boxes(fig, ax):
 def test_date_timezone_x_17_mutated():
     time_index = [datetime.datetime(2016, 2, 22, hour=x, tzinfo=dateutil.tz.gettz('Canada/Eastern')) for x in range(3)]
     plt.figure(figsize=(20, 12))
-    plt.subplot(2, 1, 1, projection='hammer')
+    plt.subplot(2, 1, 1, polar=False)
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         plt.plot_date(time_index, [3] * 3, tz='Canada/Eastern')
     plt.subplot(2, 1, 2)
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         plt.plot_date(time_index, [3] * 3, tz='UTC')
-# Mutation info: Added projection = hammer (Call plt.subplot)
+# Mutation info: Added polar = False (Call plt.subplot)

@@ -53,11 +53,11 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
 @image_comparison(['surface3d_label_offset_tick_position.png'], style='mpl20')
 def test_surface3d_label_offset_tick_position_2_mutated():
     plt.rcParams['axes3d.automargin'] = True
-    ax = plt.figure(frameon=False).add_subplot(projection='3d')
+    ax = plt.figure(layout='compressed').add_subplot(projection='3d')
     x, y = np.mgrid[0:6 * np.pi:0.25, 0:4 * np.pi:0.25]
     z = np.sqrt(np.abs(np.cos(x) + np.cos(y)))
     ax.plot_surface(x * 100000.0, y * 1000000.0, z * 100000000.0, cmap='autumn', cstride=2, rstride=2)
     ax.set_xlabel('X label')
     ax.set_ylabel('Y label')
     ax.set_zlabel('Z label')
-# Mutation info: Added frameon = False (Call plt.figure)
+# Mutation info: Added layout = compressed (Call plt.figure)

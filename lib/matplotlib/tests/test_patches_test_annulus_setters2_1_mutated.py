@@ -14,7 +14,7 @@ from matplotlib import collections as mcollections, colors as mcolors, patches a
 
 @image_comparison(baseline_images=['annulus'], extensions=['png'])
 def test_annulus_setters2_1_mutated():
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(sharex=False)
     cir = Annulus((0.0, 0.0), 0.2, 0.01, fc='g')
     ell = Annulus((0.0, 0.0), (1, 2), 0.1, 0, fc='m', ec='b', alpha=0.5, hatch='xxx')
     ax.add_patch(cir)
@@ -31,4 +31,4 @@ def test_annulus_setters2_1_mutated():
     assert ell.radii == (0.5, 0.3)
     ell.width = 0.1
     ell.angle = 45
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

@@ -14,7 +14,7 @@ def test_logscale_nonpos_values_38_mutated():
     np.random.seed(19680801)
     xs = np.random.normal(size=int(1000.0))
     fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2)
-    ax1.hist(xs, range=(-5, 5), bins=10)
+    ax1.hist(xs, range=(-5, 5), bins=10, orientation='vertical')
     ax1.set_yscale('log')
     ax2.hist(xs, range=(-5, 5), bins=10)
     ax2.set_yscale('log', nonpositive='mask')
@@ -26,7 +26,7 @@ def test_logscale_nonpos_values_38_mutated():
     x = np.logspace(-1, 1)
     y = x ** 3
     yerr = x ** 2
-    ax4.errorbar(x, y, yerr=yerr, xlolims=True)
+    ax4.errorbar(x, y, yerr=yerr)
     ax4.set_yscale('log')
     ax4.set_xscale('log')
-# Mutation info: Added xlolims = True (Call ax4.errorbar)
+# Mutation info: Added orientation = vertical (Call ax1.hist)

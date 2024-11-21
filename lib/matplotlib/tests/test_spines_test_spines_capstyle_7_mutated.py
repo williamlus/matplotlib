@@ -8,6 +8,6 @@ from matplotlib.testing.decorators import check_figures_equal, image_comparison
 def test_spines_capstyle_7_mutated():
     plt.rc('axes', linewidth=20)
     fig, ax = plt.subplots()
-    ax.set_xticks([], minor=False)
+    ax.set_xticks([], minor=True)
     ax.set_yticks([])
-# Mutation info: Added minor = False (Call ax.set_xticks)
+# Mutation info: Added minor = True (Call ax.set_xticks)

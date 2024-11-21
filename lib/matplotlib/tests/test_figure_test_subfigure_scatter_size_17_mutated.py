@@ -24,7 +24,7 @@ import matplotlib.dates as mdates
 def test_subfigure_scatter_size_17_mutated():
     fig = plt.figure()
     gs = fig.add_gridspec(1, 2)
-    ax0 = fig.add_subplot(gs[1], projection='hammer')
+    ax0 = fig.add_subplot(gs[1], projection='lambert')
     ax0.scatter([1, 2, 3], [1, 2, 3], s=30, marker='s')
     ax0.scatter([3, 4, 5], [1, 2, 3], s=[20, 30, 40], marker='s')
     sfig = fig.add_subfigure(gs[0])
@@ -32,4 +32,4 @@ def test_subfigure_scatter_size_17_mutated():
     for ax in [ax0, axs[0]]:
         ax.scatter([1, 2, 3], [1, 2, 3], s=30, marker='s', color='r')
         ax.scatter([3, 4, 5], [1, 2, 3], s=[20, 30, 40], marker='s', color='g')
-# Mutation info: Added projection = hammer (Call fig.add_subplot)
+# Mutation info: Added projection = lambert (Call fig.add_subplot)

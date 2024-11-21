@@ -22,7 +22,7 @@ pyparsing_version = parse_version(pyparsing.__version__)
 
 @image_comparison(['multiline'])
 def test_multiline_5_mutated():
-    plt.figure(layout='none')
+    plt.figure(frameon=True)
     ax = plt.subplot(1, 1, 1)
     ax.set_title('multiline\ntext alignment')
     plt.text(0.2, 0.5, 'TpTpTp\n$M$\nTpTpTp', size=20, ha='center', va='top')
@@ -32,4 +32,4 @@ def test_multiline_5_mutated():
     plt.ylim(0, 0.8)
     ax.set_xticks([])
     ax.set_yticks([])
-# Mutation info: Added layout = none (Call plt.figure)
+# Mutation info: Added frameon = True (Call plt.figure)

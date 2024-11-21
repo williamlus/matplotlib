@@ -44,6 +44,6 @@ def test_constrained_layout11rat_31_mutated():
         axs += [ax]
         pcm = example_pcolor(ax, fontsize=9)
     fig.colorbar(pcm, ax=axs, shrink=0.6, aspect=70.0)
-    ax = fig.add_subplot(gsl[0], projection='aitoff')
+    ax = fig.add_subplot(gsl[0], projection='mollweide')
     example_plot(ax, fontsize=9)
-# Mutation info: Added projection = aitoff (Call fig.add_subplot)
+# Mutation info: Added projection = mollweide (Call fig.add_subplot)

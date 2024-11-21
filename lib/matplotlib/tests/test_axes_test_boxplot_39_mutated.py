@@ -162,6 +162,6 @@ def test_boxplot_39_mutated():
     ax.set_ylim((-30, 30))
     data = {'x': [x, x]}
     fig, ax = plt.subplots()
-    ax.boxplot('x', bootstrap=10000, notch=1, data=data, vert=False)
+    ax.boxplot('x', bootstrap=10000, notch=1, data=data, autorange=True)
     ax.set_ylim((-30, 30))
-# Mutation info: Added vert = False (Call ax.boxplot)
+# Mutation info: Added autorange = True (Call ax.boxplot)

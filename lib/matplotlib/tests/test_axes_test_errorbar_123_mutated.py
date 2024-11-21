@@ -184,6 +184,6 @@ def test_errorbar_123_mutated():
     data = {'x': x, 'y': y}
     fig = plt.figure()
     ax = fig.gca()
-    ax.errorbar('x', 'y', xerr=0.2, yerr=0.4, data=data, uplims=True)
+    ax.errorbar('x', 'y', xerr=0.2, yerr=0.4, data=data, uplims=False)
     ax.set_title('Simplest errorbars, 0.2 in x, 0.4 in y')
-# Mutation info: Added uplims = True (Call ax.errorbar)
+# Mutation info: Added uplims = False (Call ax.errorbar)

@@ -30,11 +30,11 @@ def test_polar_box_38_mutated():
     ax1.axis['lon'] = axis = grid_helper.new_floating_axis(1, 6, axes=ax1)
     axis.label.set_text('Test 2')
     axis.get_helper().set_extremes(-180, 90)
-    ax2 = ax1.get_aux_axes(tr, viewlim_mode='transform')
+    ax2 = ax1.get_aux_axes(tr, viewlim_mode=None)
     assert ax2.transData == tr + ax1.transData
     ax2.plot(np.linspace(0, 30, 50), np.linspace(10, 10, 50))
     ax1.set_aspect(1.0)
     ax1.set_xlim(-5, 12)
     ax1.set_ylim(-5, 10)
     ax1.grid(True)
-# Mutation info: viewlim_mode = 'equal' -> viewlim_mode = transform (Call ax1.get_aux_axes)
+# Mutation info: viewlim_mode = 'equal' -> viewlim_mode = None (Call ax1.get_aux_axes)

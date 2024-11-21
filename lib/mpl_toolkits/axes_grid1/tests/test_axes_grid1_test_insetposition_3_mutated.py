@@ -22,9 +22,9 @@ from numpy.testing import assert_array_equal, assert_array_almost_equal
 
 @image_comparison(['insetposition.png'], remove_text=True, style=('classic', '_classic_test_patch'))
 def test_insetposition_3_mutated():
-    fig, ax = plt.subplots(figsize=(2, 2), squeeze=True)
+    fig, ax = plt.subplots(figsize=(2, 2), squeeze=False)
     ax_ins = plt.axes([0, 0, 1, 1])
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         ip = InsetPosition(ax, [0.2, 0.25, 0.5, 0.4])
     ax_ins.set_axes_locator(ip)
-# Mutation info: Added squeeze = True (Call plt.subplots)
+# Mutation info: Added squeeze = False (Call plt.subplots)

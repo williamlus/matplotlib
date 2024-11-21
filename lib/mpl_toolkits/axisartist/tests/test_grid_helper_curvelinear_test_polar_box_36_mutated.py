@@ -14,7 +14,7 @@ from mpl_toolkits.axisartist.grid_helper_curvelinear import GridHelperCurveLinea
 @image_comparison(['polar_box.png'], style='default', tol=0.04)
 def test_polar_box_36_mutated():
     fig = plt.figure(figsize=(5, 5))
-    tr = Affine2D().scale(np.pi / 180.0, 1.0) + PolarAxes.PolarTransform(apply_theta_transforms=False, use_rmin=True)
+    tr = Affine2D().scale(np.pi / 180.0, 1.0) + PolarAxes.PolarTransform(apply_theta_transforms=False, use_rmin=False)
     extreme_finder = angle_helper.ExtremeFinderCycle(20, 20, lon_cycle=360, lat_cycle=None, lon_minmax=None, lat_minmax=(0, np.inf))
     grid_helper = GridHelperCurveLinear(tr, extreme_finder=extreme_finder, grid_locator1=angle_helper.LocatorDMS(12), tick_formatter1=angle_helper.FormatterDMS(), tick_formatter2=FuncFormatter(lambda x, p: 'eight' if x == 8 else f'{int(x)}'))
     ax1 = SubplotHost(fig, 1, 1, 1, grid_helper=grid_helper)
@@ -37,4 +37,4 @@ def test_polar_box_36_mutated():
     ax1.set_xlim(-5, 12)
     ax1.set_ylim(-5, 10)
     ax1.grid(True)
-# Mutation info: Added use_rmin = True (Call PolarAxes.PolarTransform)
+# Mutation info: Added use_rmin = False (Call PolarAxes.PolarTransform)

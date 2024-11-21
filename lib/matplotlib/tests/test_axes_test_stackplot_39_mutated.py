@@ -159,7 +159,7 @@ def test_stackplot_39_mutated():
     y1 = 1.0 * x
     y2 = 2.0 * x + 1
     y3 = 3.0 * x + 2
-    ax = fig.add_subplot(1, 1, 1, projection='aitoff')
+    ax = fig.add_subplot(1, 1, 1, polar=True)
     ax.stackplot(x, y1, y2, y3)
     ax.set_xlim((0, 10))
     ax.set_ylim((0, 70))
@@ -168,4 +168,4 @@ def test_stackplot_39_mutated():
     ax.stackplot('x', 'y1', 'y2', 'y3', data=data, colors=['C0', 'C1', 'C2'])
     ax.set_xlim((0, 10))
     ax.set_ylim((0, 70))
-# Mutation info: Added projection = aitoff (Call fig.add_subplot)
+# Mutation info: Added polar = True (Call fig.add_subplot)

@@ -22,8 +22,8 @@ from numpy.testing import assert_array_equal, assert_array_almost_equal
 
 @image_comparison(['anchored_direction_arrows.png'], tol=0 if platform.machine() == 'x86_64' else 0.01, style=('classic', '_classic_test_patch'))
 def test_anchored_direction_arrows_5_mutated():
-    fig, ax = plt.subplots(squeeze=False)
+    fig, ax = plt.subplots(sharey=True)
     ax.imshow(np.zeros((10, 10)), interpolation='nearest')
     simple_arrow = AnchoredDirectionArrows(ax.transAxes, 'X', 'Y')
     ax.add_artist(simple_arrow)
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

@@ -22,7 +22,7 @@ from numpy.testing import assert_array_equal, assert_array_almost_equal
 
 @image_comparison(['anchored_artists.png'], remove_text=True, style='mpl20')
 def test_anchored_artists_4_mutated():
-    fig, ax = plt.subplots(figsize=(3, 3), sharey=True)
+    fig, ax = plt.subplots(figsize=(3, 3), sharex=True)
     ada = AnchoredDrawingArea(40, 20, 0, 0, loc='upper right', pad=0.0, frameon=False)
     p1 = Circle((10, 10), 10)
     ada.drawing_area.add_artist(p1)
@@ -38,4 +38,4 @@ def test_anchored_artists_4_mutated():
     ax.add_artist(ae)
     asb = AnchoredSizeBar(ax.transData, 0.2, '0.2 units', loc='lower right', pad=0.3, borderpad=0.4, sep=4, fill_bar=True, frameon=False, label_top=True, prop={'size': 20}, size_vertical=0.05, color='green')
     ax.add_artist(asb)
-# Mutation info: Added sharey = True (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

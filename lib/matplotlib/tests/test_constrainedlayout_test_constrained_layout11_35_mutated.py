@@ -44,6 +44,6 @@ def test_constrained_layout11_35_mutated():
         axs += [ax]
         pcm = example_pcolor(ax, fontsize=9)
     fig.colorbar(pcm, ax=axs, shrink=0.6, aspect=70.0)
-    ax = fig.add_subplot(gsl[0], projection='hammer')
+    ax = fig.add_subplot(gsl[0], polar=True)
     example_plot(ax, fontsize=9)
-# Mutation info: Added projection = hammer (Call fig.add_subplot)
+# Mutation info: Added polar = True (Call fig.add_subplot)

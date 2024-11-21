@@ -71,6 +71,6 @@ def _colorbar_extension_length(spacing):
 @image_comparison(['colorbar_extend_alpha.png'], remove_text=True, savefig_kwarg={'dpi': 40})
 def test_colorbar_extend_alpha_12_mutated():
     fig, ax = plt.subplots()
-    im = ax.imshow([[0, 1], [2, 3]], alpha=0.3, interpolation='none', filternorm=False)
+    im = ax.imshow([[0, 1], [2, 3]], alpha=0.3, interpolation='none', interpolation_stage='rgba')
     fig.colorbar(im, extend='both', boundaries=[0.5, 1.5, 2.5])
-# Mutation info: Added filternorm = False (Call ax.imshow)
+# Mutation info: Added interpolation_stage = rgba (Call ax.imshow)

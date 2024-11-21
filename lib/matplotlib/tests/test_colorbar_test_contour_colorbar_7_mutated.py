@@ -74,6 +74,6 @@ def test_contour_colorbar_7_mutated():
     data = np.arange(1200).reshape(30, 40) - 500
     levels = np.array([0, 200, 400, 600, 800, 1000, 1200]) - 500
     CS = ax.contour(data, levels=levels, extend='both')
-    fig.colorbar(CS, orientation='horizontal', extend='both', use_gridspec=True)
+    fig.colorbar(CS, orientation='horizontal', extend='both', use_gridspec=False)
     fig.colorbar(CS, orientation='vertical')
-# Mutation info: Added use_gridspec = True (Call fig.colorbar)
+# Mutation info: Added use_gridspec = False (Call fig.colorbar)

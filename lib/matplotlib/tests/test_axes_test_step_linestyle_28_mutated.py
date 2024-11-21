@@ -159,7 +159,7 @@ def test_step_linestyle_28_mutated():
     ax_lst = ax_lst.flatten()
     ln_styles = ['-', '--', '-.', ':']
     for ax, ls in zip(ax_lst, ln_styles):
-        ax.step(x, y, lw=5, linestyle=ls, where='post')
+        ax.step(x, y, lw=5, linestyle=ls, where='mid')
         ax.step(x, y + 1, lw=5, linestyle=ls, where='mid')
         ax.step(x, y + 2, lw=5, linestyle=ls, where='post')
         ax.set_xlim([-1, 5])
@@ -174,4 +174,4 @@ def test_step_linestyle_28_mutated():
         ax.step('X', 'Y2', lw=5, linestyle=ls, where='post', data=data)
         ax.set_xlim([-1, 5])
         ax.set_ylim([-1, 7])
-# Mutation info: where = 'pre' -> where = post (Call ax.step)
+# Mutation info: where = 'pre' -> where = mid (Call ax.step)

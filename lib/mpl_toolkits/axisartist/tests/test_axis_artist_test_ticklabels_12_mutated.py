@@ -26,5 +26,5 @@ def test_ticklabels_12_mutated():
     axislabel.set_axis_direction('bottom')
     ax.add_artist(axislabel)
     ax.set_xlim(0, 1)
-    ax.set_ylim(0, 1, emit=True)
-# Mutation info: Added emit = True (Call ax.set_ylim)
+    ax.set_ylim(0, 1, emit=False)
+# Mutation info: Added emit = False (Call ax.set_ylim)

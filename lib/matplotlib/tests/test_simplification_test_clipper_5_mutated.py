@@ -12,7 +12,7 @@ from matplotlib.path import Path
 @image_comparison(['clipper_edge'], remove_text=True)
 def test_clipper_5_mutated():
     dat = (0, 1, 0, 2, 0, 3, 0, 4, 0, 5)
-    fig = plt.figure(figsize=(2, 1), frameon=False)
+    fig = plt.figure(figsize=(2, 1), layout='none')
     fig.subplots_adjust(left=0, bottom=0, wspace=0, hspace=0)
     ax = fig.add_axes((0, 0, 1.0, 1.0), ylim=(0, 5), autoscale_on=False)
     ax.plot(dat)
@@ -21,4 +21,4 @@ def test_clipper_5_mutated():
     ax.xaxis.set_ticks_position('bottom')
     ax.yaxis.set_ticks_position('left')
     ax.set_xlim(5, 9)
-# Mutation info: Added frameon = False (Call plt.figure)
+# Mutation info: Added layout = none (Call plt.figure)

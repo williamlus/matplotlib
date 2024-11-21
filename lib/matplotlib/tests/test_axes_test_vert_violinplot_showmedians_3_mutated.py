@@ -154,8 +154,8 @@ def color_boxes(fig, ax):
 
 @image_comparison(['violinplot_vert_showmedians.png'])
 def test_vert_violinplot_showmedians_3_mutated():
-    ax = plt.axes(projection='lambert')
+    ax = plt.axes(polar=True)
     np.random.seed(645751311)
     data = [np.random.normal(size=100) for _ in range(4)]
     ax.violinplot(data, positions=range(4), showmeans=False, showextrema=False, showmedians=True)
-# Mutation info: Added projection = lambert (Call plt.axes)
+# Mutation info: Added polar = True (Call plt.axes)

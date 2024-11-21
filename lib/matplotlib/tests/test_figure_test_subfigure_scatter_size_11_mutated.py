@@ -22,7 +22,7 @@ import matplotlib.dates as mdates
 
 @image_comparison(['test_subfigure_scatter_size.png'], style='mpl20', remove_text=True)
 def test_subfigure_scatter_size_11_mutated():
-    fig = plt.figure(frameon=False)
+    fig = plt.figure(layout='constrained')
     gs = fig.add_gridspec(1, 2)
     ax0 = fig.add_subplot(gs[1])
     ax0.scatter([1, 2, 3], [1, 2, 3], s=30, marker='s')
@@ -32,4 +32,4 @@ def test_subfigure_scatter_size_11_mutated():
     for ax in [ax0, axs[0]]:
         ax.scatter([1, 2, 3], [1, 2, 3], s=30, marker='s', color='r')
         ax.scatter([3, 4, 5], [1, 2, 3], s=[20, 30, 40], marker='s', color='g')
-# Mutation info: Added frameon = False (Call plt.figure)
+# Mutation info: Added layout = constrained (Call plt.figure)

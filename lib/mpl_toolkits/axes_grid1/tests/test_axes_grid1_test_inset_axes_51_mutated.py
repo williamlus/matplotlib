@@ -39,6 +39,6 @@ def test_inset_axes_51_mutated():
     plt.xticks(visible=False)
     plt.yticks(visible=False)
     mark_inset(ax, axins, loc1=2, loc2=4, fc='none', ec='0.5')
-    asb = AnchoredSizeBar(ax.transData, 0.5, '0.5', loc='lower center', pad=0.1, borderpad=0.5, sep=5, frameon=True)
+    asb = AnchoredSizeBar(ax.transData, 0.5, '0.5', loc='lower center', pad=0.1, borderpad=0.5, sep=5, frameon=False, label_top=True)
     ax.add_artist(asb)
-# Mutation info: frameon = False -> frameon = True (Call AnchoredSizeBar)
+# Mutation info: Added label_top = True (Call AnchoredSizeBar)

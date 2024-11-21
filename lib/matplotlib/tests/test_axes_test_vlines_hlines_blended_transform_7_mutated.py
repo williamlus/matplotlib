@@ -158,7 +158,7 @@ def test_vlines_hlines_blended_transform_7_mutated():
     s = np.exp(-t) + np.sin(2 * np.pi * t) + 10
     fig, (hax, vax) = plt.subplots(2, 1, figsize=(6, 6))
     hax.plot(t, s, '^')
-    hax.hlines([10, 9], xmin=0, xmax=0.5, transform=hax.get_yaxis_transform(), colors='r', linestyles='dashdot')
+    hax.hlines([10, 9], xmin=0, xmax=0.5, transform=hax.get_yaxis_transform(), colors='r', linestyles='dotted')
     vax.plot(t, s, '^')
     vax.vlines([6, 7], ymin=0, ymax=0.15, transform=vax.get_xaxis_transform(), colors='r')
-# Mutation info: Added linestyles = dashdot (Call hax.hlines)
+# Mutation info: Added linestyles = dotted (Call hax.hlines)

@@ -155,9 +155,9 @@ def color_boxes(fig, ax):
 @image_comparison(['boxplot_mod_artists_after_plotting.png'], remove_text=True, savefig_kwarg={'dpi': 40}, style='default')
 def test_boxplot_mod_artist_after_plotting_4_mutated():
     x = [0.15, 0.11, 0.06, 0.06, 0.12, 0.56, -0.56]
-    fig, ax = plt.subplots(sharex=True)
+    fig, ax = plt.subplots(squeeze=False)
     bp = ax.boxplot(x, sym='o')
     for key in bp:
         for obj in bp[key]:
             obj.set_color('green')
-# Mutation info: Added sharex = True (Call plt.subplots)
+# Mutation info: Added squeeze = False (Call plt.subplots)

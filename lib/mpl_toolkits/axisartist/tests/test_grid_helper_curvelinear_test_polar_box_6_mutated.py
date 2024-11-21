@@ -35,6 +35,6 @@ def test_polar_box_6_mutated():
     ax2.plot(np.linspace(0, 30, 50), np.linspace(10, 10, 50))
     ax1.set_aspect(1.0)
     ax1.set_xlim(-5, 12)
-    ax1.set_ylim(-5, 10, emit=True)
+    ax1.set_ylim(-5, 10, auto=True)
     ax1.grid(True)
-# Mutation info: Added emit = True (Call ax1.set_ylim)
+# Mutation info: Added auto = True (Call ax1.set_ylim)

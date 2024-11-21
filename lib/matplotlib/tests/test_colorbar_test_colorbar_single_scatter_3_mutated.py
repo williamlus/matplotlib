@@ -70,10 +70,10 @@ def _colorbar_extension_length(spacing):
 
 @image_comparison(['colorbar_single_scatter.png'], remove_text=True, savefig_kwarg={'dpi': 40})
 def test_colorbar_single_scatter_3_mutated():
-    plt.figure(layout='none')
+    plt.figure(layout=None)
     x = y = [0]
     z = [50]
     cmap = mpl.colormaps['jet'].resampled(16)
     cs = plt.scatter(x, y, z, c=z, cmap=cmap)
     plt.colorbar(cs)
-# Mutation info: Added layout = none (Call plt.figure)
+# Mutation info: Added layout = None (Call plt.figure)

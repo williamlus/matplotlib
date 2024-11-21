@@ -23,7 +23,7 @@ from numpy.testing import assert_array_equal, assert_array_almost_equal
 @image_comparison(['image_grid_each_left_label_mode_all.png'], style='mpl20', savefig_kwarg={'bbox_inches': 'tight'})
 def test_image_grid_each_left_label_mode_all_1_mutated():
     imdata = np.arange(100).reshape((10, 10))
-    fig = plt.figure(1, (3, 3), layout='compressed')
+    fig = plt.figure(1, (3, 3), frameon=False)
     grid = ImageGrid(fig, (1, 1, 1), nrows_ncols=(3, 2), axes_pad=(0.5, 0.3), cbar_mode='each', cbar_location='left', cbar_size='15%', label_mode='all')
     assert isinstance(grid.get_divider(), SubplotDivider)
     assert grid.get_axes_pad() == (0.5, 0.3)
@@ -31,4 +31,4 @@ def test_image_grid_each_left_label_mode_all_1_mutated():
     for ax, cax in zip(grid, grid.cbar_axes):
         im = ax.imshow(imdata, interpolation='none')
         cax.colorbar(im)
-# Mutation info: Added layout = compressed (Call plt.figure)
+# Mutation info: Added frameon = False (Call plt.figure)

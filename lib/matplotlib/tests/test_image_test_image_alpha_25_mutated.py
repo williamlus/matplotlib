@@ -81,6 +81,6 @@ def test_image_alpha_25_mutated():
     Z = np.random.rand(6, 6)
     fig, (ax1, ax2, ax3) = plt.subplots(1, 3)
     ax1.imshow(Z, alpha=1.0, interpolation='none')
-    ax2.imshow(Z, alpha=0.5, interpolation='none', resample=False)
+    ax2.imshow(Z, alpha=0.5, interpolation='none', resample=True)
     ax3.imshow(Z, alpha=0.5, interpolation='nearest')
-# Mutation info: Added resample = False (Call ax2.imshow)
+# Mutation info: Added resample = True (Call ax2.imshow)

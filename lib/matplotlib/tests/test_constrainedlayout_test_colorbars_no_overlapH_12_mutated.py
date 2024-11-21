@@ -31,7 +31,7 @@ def example_pcolor(ax, fontsize=12):
 
 @image_comparison(['test_colorbars_no_overlapH.png'], style='mpl20')
 def test_colorbars_no_overlapH_12_mutated():
-    fig = plt.figure(figsize=(4, 2), layout=None)
+    fig = plt.figure(figsize=(4, 2), layout='constrained', clear=False)
     fig.suptitle('foo')
     axs = fig.subplots(1, 2, sharex=True, sharey=True)
     for ax in axs:
@@ -39,4 +39,4 @@ def test_colorbars_no_overlapH_12_mutated():
         ax.tick_params(axis='both', direction='in')
         im = ax.imshow([[1, 2], [3, 4]])
         fig.colorbar(im, ax=ax, orientation='horizontal')
-# Mutation info: layout = 'constrained' -> layout = None (Call plt.figure)
+# Mutation info: Added clear = False (Call plt.figure)

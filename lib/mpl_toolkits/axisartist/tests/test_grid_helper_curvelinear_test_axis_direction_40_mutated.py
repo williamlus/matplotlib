@@ -15,7 +15,7 @@ from mpl_toolkits.axisartist.grid_helper_curvelinear import GridHelperCurveLinea
 def test_axis_direction_40_mutated():
     plt.rcParams['text.kerning_factor'] = 6
     fig = plt.figure(figsize=(5, 5))
-    tr = Affine2D().scale(np.pi / 180.0, 1.0) + PolarAxes.PolarTransform(apply_theta_transforms=False, use_rmin=True)
+    tr = Affine2D().scale(np.pi / 180.0, 1.0) + PolarAxes.PolarTransform(apply_theta_transforms=False, use_rmin=False)
     extreme_finder = angle_helper.ExtremeFinderCycle(20, 20, lon_cycle=360, lat_cycle=None, lon_minmax=None, lat_minmax=(0, np.inf))
     grid_locator1 = angle_helper.LocatorDMS(12)
     tick_formatter1 = angle_helper.FormatterDMS()
@@ -43,4 +43,4 @@ def test_axis_direction_40_mutated():
     ax1.set_xlim(-8, 8)
     ax1.set_ylim(-4, 12)
     ax1.grid(True)
-# Mutation info: Added use_rmin = True (Call PolarAxes.PolarTransform)
+# Mutation info: Added use_rmin = False (Call PolarAxes.PolarTransform)

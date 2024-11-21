@@ -79,7 +79,7 @@ class QuantityND(np.ndarray):
 def test_image_clip_7_mutated():
     d = [[1, 2], [3, 4]]
     fig, ax = plt.subplots()
-    im = ax.imshow(d, aspect='auto')
+    im = ax.imshow(d, resample=False)
     patch = patches.Circle((0, 0), radius=1, transform=ax.transData)
     im.set_clip_path(patch)
-# Mutation info: Added aspect = auto (Call ax.imshow)
+# Mutation info: Added resample = False (Call ax.imshow)

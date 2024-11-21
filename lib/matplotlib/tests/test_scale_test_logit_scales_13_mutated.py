@@ -16,8 +16,8 @@ def test_logit_scales_13_mutated():
     y = 1.0 / x
     ax.plot(x, y)
     ax.set_xscale('logit')
-    ax.grid(True)
+    ax.grid(True, axis='x')
     bbox = ax.get_tightbbox(fig.canvas.get_renderer())
     assert np.isfinite(bbox.x0)
     assert np.isfinite(bbox.y0)
-# Mutation info: (0-th Positional) visible = True -> visible = True (Call ax.grid)
+# Mutation info: Added axis = x (Call ax.grid)

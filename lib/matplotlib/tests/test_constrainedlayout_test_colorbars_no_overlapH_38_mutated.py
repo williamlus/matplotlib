@@ -37,6 +37,6 @@ def test_colorbars_no_overlapH_38_mutated():
     for ax in axs:
         ax.yaxis.set_major_formatter(ticker.NullFormatter())
         ax.tick_params(axis='both', direction='in')
-        im = ax.imshow([[1, 2], [3, 4]], filternorm=True)
+        im = ax.imshow([[1, 2], [3, 4]], origin='lower')
         fig.colorbar(im, ax=ax, orientation='horizontal')
-# Mutation info: Added filternorm = True (Call ax.imshow)
+# Mutation info: Added origin = lower (Call ax.imshow)

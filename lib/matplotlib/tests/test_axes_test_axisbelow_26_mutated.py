@@ -163,6 +163,6 @@ def test_axisbelow_26_mutated():
         ax.grid(color='c', linestyle='-', linewidth=3)
         ax.tick_params(top=False, bottom=False, left=False, right=False)
         ax.spines[:].set_visible(False)
-        ax.set_axisbelow(False)
+        ax.set_axisbelow(True)
         assert ax.get_axisbelow() == setting
-# Mutation info: (0-th Positional) b = setting -> b = False (Call ax.set_axisbelow)
+# Mutation info: (0-th Positional) b = setting -> b = True (Call ax.set_axisbelow)

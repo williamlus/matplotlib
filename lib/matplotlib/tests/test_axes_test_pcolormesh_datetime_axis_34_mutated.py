@@ -168,7 +168,7 @@ def test_pcolormesh_datetime_axis_34_mutated():
     plt.pcolormesh(x, y, z)
     x = np.repeat(x[np.newaxis], 21, axis=0)
     y = np.repeat(y[:, np.newaxis], 21, axis=1)
-    plt.subplot(223, projection='aitoff')
+    plt.subplot(223, polar=False)
     plt.pcolormesh(x[:-1, :-1], y[:-1, :-1], z[:-1, :-1])
     plt.subplot(224)
     plt.pcolormesh(x, y, z)
@@ -176,4 +176,4 @@ def test_pcolormesh_datetime_axis_34_mutated():
         for label in ax.get_xticklabels():
             label.set_ha('right')
             label.set_rotation(30)
-# Mutation info: Added projection = aitoff (Call plt.subplot)
+# Mutation info: Added polar = False (Call plt.subplot)

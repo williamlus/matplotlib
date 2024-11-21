@@ -172,7 +172,7 @@ def test_psd_csd_20_mutated():
             assert len(ret) == 2 + kwargs.get('return_line', False)
             ax.set(xlabel='', ylabel='')
         for ax, kwargs in zip(plt.figure().subplots(3), all_kwargs):
-            ret = ax.csd(*ys, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, **kwargs, detrend='none')
+            ret = ax.csd(*ys, NFFT=NFFT, Fs=Fs, noverlap=noverlap, pad_to=pad_to, **kwargs, return_line=False)
             assert len(ret) == 2 + kwargs.get('return_line', False)
             ax.set(xlabel='', ylabel='')
-# Mutation info: Added detrend = none (Call ax.csd)
+# Mutation info: Added return_line = False (Call ax.csd)

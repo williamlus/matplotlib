@@ -165,7 +165,7 @@ def test_pcolormesh_datetime_axis_64_mutated():
     plt.subplot(221)
     plt.pcolormesh(x[:-1], y[:-1], z[:-1, :-1])
     plt.subplot(222)
-    plt.pcolormesh(x, y, z, shading='auto')
+    plt.pcolormesh(x, y, z, snap=True)
     x = np.repeat(x[np.newaxis], 21, axis=0)
     y = np.repeat(y[:, np.newaxis], 21, axis=1)
     plt.subplot(223)
@@ -176,4 +176,4 @@ def test_pcolormesh_datetime_axis_64_mutated():
         for label in ax.get_xticklabels():
             label.set_ha('right')
             label.set_rotation(30)
-# Mutation info: Added shading = auto (Call plt.pcolormesh)
+# Mutation info: Added snap = True (Call plt.pcolormesh)

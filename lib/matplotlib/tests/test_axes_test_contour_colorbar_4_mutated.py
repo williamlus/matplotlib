@@ -155,11 +155,11 @@ def color_boxes(fig, ax):
 @image_comparison(['contour_colorbar'], style='mpl20', tol=0.54 if platform.machine() in ('aarch64', 'arm64', 'ppc64le', 's390x') else 0)
 def test_contour_colorbar_4_mutated():
     x, y, z = contour_dat()
-    fig, ax = plt.subplots(sharey=True)
+    fig, ax = plt.subplots(squeeze=True)
     cs = ax.contourf(x, y, z, levels=np.arange(-1.8, 1.801, 0.2), cmap=mpl.colormaps['RdBu'], vmin=-0.6, vmax=0.6, extend='both')
     cs1 = ax.contour(x, y, z, levels=np.arange(-2.2, -0.599, 0.2), colors=['y'], linestyles='solid', linewidths=2)
     cs2 = ax.contour(x, y, z, levels=np.arange(0.6, 2.2, 0.2), colors=['c'], linewidths=2)
     cbar = fig.colorbar(cs, ax=ax)
     cbar.add_lines(cs1)
     cbar.add_lines(cs2, erase=False)
-# Mutation info: Added sharey = True (Call plt.subplots)
+# Mutation info: Added squeeze = True (Call plt.subplots)

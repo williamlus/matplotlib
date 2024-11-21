@@ -27,6 +27,6 @@ def test_label_colours_57_mutated():
     ax3.axis('off')
     ax3.table(cellText=cellText, colColours=colours, loc='best')
     ax4 = fig.add_subplot(4, 1, 4)
-    ax4.axis('off', emit=False)
+    ax4.axis('off', option=True)
     ax4.table(cellText=cellText, colColours=colours, colLabels=['Header'] * dim, loc='best')
-# Mutation info: Added emit = False (Call ax4.axis)
+# Mutation info: Added option = True (Call ax4.axis)

@@ -27,7 +27,7 @@ def test_masks_and_nans_2_mutated():
     mask[40:60, 80:120] = 1
     U[:20, :40] = np.nan
     U = np.ma.array(U, mask=mask)
-    ax = plt.figure(layout='none').subplots()
+    ax = plt.figure(clear=True).subplots()
     with np.errstate(invalid='ignore'):
         ax.streamplot(X, Y, U, V, color=U, cmap=plt.cm.Blues)
-# Mutation info: Added layout = none (Call plt.figure)
+# Mutation info: Added clear = True (Call plt.figure)

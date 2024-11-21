@@ -160,7 +160,7 @@ def test_stackplot_40_mutated():
     y2 = 2.0 * x + 1
     y3 = 3.0 * x + 2
     ax = fig.add_subplot(1, 1, 1)
-    ax.stackplot(x, y1, y2, y3, baseline='wiggle')
+    ax.stackplot(x, y1, y2, y3, baseline='weighted_wiggle')
     ax.set_xlim((0, 10))
     ax.set_ylim((0, 70))
     data = {'x': x, 'y1': y1, 'y2': y2, 'y3': y3}
@@ -168,4 +168,4 @@ def test_stackplot_40_mutated():
     ax.stackplot('x', 'y1', 'y2', 'y3', data=data, colors=['C0', 'C1', 'C2'])
     ax.set_xlim((0, 10))
     ax.set_ylim((0, 70))
-# Mutation info: Added baseline = wiggle (Call ax.stackplot)
+# Mutation info: Added baseline = weighted_wiggle (Call ax.stackplot)

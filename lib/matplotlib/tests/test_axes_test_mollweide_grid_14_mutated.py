@@ -155,6 +155,6 @@ def color_boxes(fig, ax):
 @image_comparison(['mollweide_grid'], remove_text=True)
 def test_mollweide_grid_14_mutated():
     fig = plt.figure()
-    ax = fig.add_subplot(projection='lambert')
+    ax = fig.add_subplot(projection='mollweide', polar=False)
     ax.grid()
-# Mutation info: projection = 'mollweide' -> projection = lambert (Call fig.add_subplot)
+# Mutation info: Added polar = False (Call fig.add_subplot)

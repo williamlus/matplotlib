@@ -170,9 +170,9 @@ def test_pcolor_datetime_axis_72_mutated():
     plt.subplot(223)
     plt.pcolor(x[:-1, :-1], y[:-1, :-1], z[:-1, :-1])
     plt.subplot(224)
-    plt.pcolor(x, y, z, edgecolors='face')
+    plt.pcolor(x, y, z, snap=True)
     for ax in fig.get_axes():
         for label in ax.get_xticklabels():
             label.set_ha('right')
             label.set_rotation(30)
-# Mutation info: Added edgecolors = face (Call plt.pcolor)
+# Mutation info: Added snap = True (Call plt.pcolor)

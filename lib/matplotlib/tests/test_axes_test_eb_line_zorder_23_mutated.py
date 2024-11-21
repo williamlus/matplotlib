@@ -172,5 +172,5 @@ def test_eb_line_zorder_23_mutated():
     for j in range(10):
         ax.axhline(j, lw=5, color='k', zorder=j)
         ax.axhline(-j, lw=5, color='k', zorder=j)
-    ax.set_title('errorbar zorder test', loc='center')
-# Mutation info: Added loc = center (Call ax.set_title)
+    ax.set_title('errorbar zorder test', loc='right')
+# Mutation info: Added loc = right (Call ax.set_title)

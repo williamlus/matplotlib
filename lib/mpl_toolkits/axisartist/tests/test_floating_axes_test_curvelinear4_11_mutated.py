@@ -11,7 +11,7 @@ from mpl_toolkits.axisartist import angle_helper
 @image_comparison(['curvelinear4.png'], style='default', tol=0.9)
 def test_curvelinear4_11_mutated():
     plt.rcParams['text.kerning_factor'] = 6
-    fig = plt.figure(figsize=(5, 5), frameon=True)
+    fig = plt.figure(figsize=(5, 5), layout='none')
     tr = mtransforms.Affine2D().scale(np.pi / 180, 1) + mprojections.PolarAxes.PolarTransform(apply_theta_transforms=False)
     grid_helper = GridHelperCurveLinear(tr, extremes=(120, 30, 10, 0), grid_locator1=angle_helper.LocatorDMS(5), grid_locator2=FixedLocator([2, 4, 6, 8, 10]), tick_formatter1=angle_helper.FormatterDMS(), tick_formatter2=None)
     ax1 = fig.add_subplot(axes_class=FloatingAxes, grid_helper=grid_helper)
@@ -31,4 +31,4 @@ def test_curvelinear4_11_mutated():
     ax2.scatter(xx, yy)
     l, = ax2.plot(xx, yy, 'k-')
     l.set_clip_path(ax1.patch)
-# Mutation info: Added frameon = True (Call plt.figure)
+# Mutation info: Added layout = none (Call plt.figure)

@@ -7,7 +7,7 @@ from matplotlib.testing.decorators import check_figures_equal, image_comparison
 @image_comparison(['spines_capstyle'])
 def test_spines_capstyle_3_mutated():
     plt.rc('axes', linewidth=20)
-    fig, ax = plt.subplots(squeeze=True)
+    fig, ax = plt.subplots(squeeze=False)
     ax.set_xticks([])
     ax.set_yticks([])
-# Mutation info: Added squeeze = True (Call plt.subplots)
+# Mutation info: Added squeeze = False (Call plt.subplots)

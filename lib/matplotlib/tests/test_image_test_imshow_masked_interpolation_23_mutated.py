@@ -94,5 +94,5 @@ def test_imshow_masked_interpolation_23_mutated():
     for interp, ax in zip(interps, ax_grid.ravel()):
         ax.set_title(interp)
         ax.imshow(data, norm=n, cmap=cmap, interpolation=interp)
-        ax.axis('off', option=False)
-# Mutation info: Added option = False (Call ax.axis)
+        ax.axis('off', emit=True)
+# Mutation info: Added emit = True (Call ax.axis)

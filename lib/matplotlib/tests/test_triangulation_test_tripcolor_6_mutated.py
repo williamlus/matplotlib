@@ -32,10 +32,10 @@ def test_tripcolor_6_mutated():
     xmid = x[triang.triangles].mean(axis=1)
     ymid = y[triang.triangles].mean(axis=1)
     Cfaces = 0.5 * xmid + ymid
-    plt.subplot(121, projection='aitoff')
+    plt.subplot(121, projection='polar')
     plt.tripcolor(triang, Cpoints, edgecolors='k')
     plt.title('point colors')
     plt.subplot(122)
     plt.tripcolor(triang, facecolors=Cfaces, edgecolors='k')
     plt.title('facecolors')
-# Mutation info: Added projection = aitoff (Call plt.subplot)
+# Mutation info: Added projection = polar (Call plt.subplot)

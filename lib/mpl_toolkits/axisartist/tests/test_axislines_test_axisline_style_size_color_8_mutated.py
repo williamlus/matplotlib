@@ -7,7 +7,7 @@ from mpl_toolkits.axisartist import Axes, SubplotHost
 
 @image_comparison(['axisline_style_size_color.png'], remove_text=True, style='mpl20')
 def test_axisline_style_size_color_8_mutated():
-    fig = plt.figure(figsize=(2, 2), layout='constrained')
+    fig = plt.figure(figsize=(2, 2), layout='compressed')
     ax = fig.add_subplot(axes_class=AxesZero)
     ax.axis['xzero'].set_axisline_style('-|>', size=2.0, facecolor='r')
     ax.axis['xzero'].set_visible(True)
@@ -15,4 +15,4 @@ def test_axisline_style_size_color_8_mutated():
     ax.axis['yzero'].set_visible(True)
     for direction in ('left', 'right', 'bottom', 'top'):
         ax.axis[direction].set_visible(False)
-# Mutation info: Added layout = constrained (Call plt.figure)
+# Mutation info: Added layout = compressed (Call plt.figure)

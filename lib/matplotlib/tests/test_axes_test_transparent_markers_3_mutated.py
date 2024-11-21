@@ -156,6 +156,6 @@ def color_boxes(fig, ax):
 def test_transparent_markers_3_mutated():
     np.random.seed(0)
     data = np.random.random(50)
-    fig, ax = plt.subplots(sharex=True)
+    fig, ax = plt.subplots(sharex=False)
     ax.plot(data, 'D', mfc='none', markersize=100)
-# Mutation info: Added sharex = True (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

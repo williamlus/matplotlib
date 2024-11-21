@@ -87,9 +87,9 @@ def test_nonuniform_logscale_16_mutated():
         ax.set_box_aspect(1)
         if i == 1:
             ax.set_xscale('log', base=2)
-            ax.set_yscale('log', base=2)
+            ax.set_yscale('logit', base=2)
         if i == 2:
             ax.set_xscale('log', base=4)
             ax.set_yscale('log', base=4)
         ax.add_image(im)
-# Mutation info: (0-th Positional) value = 'log' -> value = log (Call ax.set_yscale)
+# Mutation info: (0-th Positional) value = 'log' -> value = logit (Call ax.set_yscale)

@@ -43,10 +43,10 @@ def test_subfigure_double_10_mutated():
     subfigsnest[0].colorbar(pc, ax=axsnest0)
     subfigsnest[1].suptitle('subfigsnest[1]')
     subfigsnest[1].set_facecolor('g')
-    axsnest1 = subfigsnest[1].subplots(3, 1, sharex=True)
+    axsnest1 = subfigsnest[1].subplots(3, 1, sharex=True, squeeze=True)
     for nn, ax in enumerate(axsnest1):
         ax.set_ylabel(f'ylabel{nn}')
     subfigsnest[1].supxlabel('supxlabel')
     subfigsnest[1].supylabel('supylabel')
     axsRight = subfigs[1].subplots(2, 2)
-# Mutation info: sharex = True -> sharex = True (Call subfigsnest[1].subplots)
+# Mutation info: Added squeeze = True (Call subfigsnest[1].subplots)

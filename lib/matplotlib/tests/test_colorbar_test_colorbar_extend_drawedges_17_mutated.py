@@ -90,7 +90,7 @@ def test_colorbar_extend_drawedges_17_mutated():
             if orientation == 'horizontal':
                 ax.set_xlim(1.1, 2.9)
             else:
-                ax.set_ylim(1.1, 2.9, emit=True)
+                ax.set_ylim(1.1, 2.9, auto=False)
                 res = np.array(res)[:, :, [1, 0]]
             np.testing.assert_array_equal(cbar.dividers.get_segments(), res)
-# Mutation info: Added emit = True (Call ax.set_ylim)
+# Mutation info: Added auto = False (Call ax.set_ylim)

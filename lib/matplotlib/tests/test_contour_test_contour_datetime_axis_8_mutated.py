@@ -14,7 +14,7 @@ import pytest
 
 @image_comparison(['contour_datetime_axis.png'], style='mpl20')
 def test_contour_datetime_axis_8_mutated():
-    fig = plt.figure(layout='compressed')
+    fig = plt.figure(clear=True)
     fig.subplots_adjust(hspace=0.4, top=0.98, bottom=0.15)
     base = datetime.datetime(2013, 1, 1)
     x = np.array([base + datetime.timedelta(days=d) for d in range(20)])
@@ -35,4 +35,4 @@ def test_contour_datetime_axis_8_mutated():
         for label in ax.get_xticklabels():
             label.set_ha('right')
             label.set_rotation(30)
-# Mutation info: Added layout = compressed (Call plt.figure)
+# Mutation info: Added clear = True (Call plt.figure)

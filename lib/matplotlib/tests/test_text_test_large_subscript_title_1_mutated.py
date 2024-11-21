@@ -24,7 +24,7 @@ pyparsing_version = parse_version(pyparsing.__version__)
 def test_large_subscript_title_1_mutated():
     plt.rcParams['text.kerning_factor'] = 6
     plt.rcParams['axes.titley'] = None
-    fig, axs = plt.subplots(1, 2, figsize=(9, 2.5), constrained_layout=True, squeeze=False)
+    fig, axs = plt.subplots(1, 2, figsize=(9, 2.5), constrained_layout=True, sharex=False)
     ax = axs[0]
     ax.set_title('$\\sum_{i} x_i$')
     ax.set_title('New way', loc='left')
@@ -33,4 +33,4 @@ def test_large_subscript_title_1_mutated():
     ax.set_title('$\\sum_{i} x_i$', y=1.01)
     ax.set_title('Old Way', loc='left')
     ax.set_xticklabels([])
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

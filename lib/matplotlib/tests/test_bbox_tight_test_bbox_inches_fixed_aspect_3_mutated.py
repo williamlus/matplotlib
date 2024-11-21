@@ -10,8 +10,8 @@ from matplotlib.ticker import FuncFormatter
 @image_comparison(['bbox_inches_fixed_aspect'], extensions=['png'], remove_text=True, savefig_kwarg={'bbox_inches': 'tight'})
 def test_bbox_inches_fixed_aspect_3_mutated():
     with plt.rc_context({'figure.constrained_layout.use': True}):
-        fig, ax = plt.subplots(sharex=True)
+        fig, ax = plt.subplots(sharex=False)
         ax.plot([0, 1])
         ax.set_xlim(0, 1)
         ax.set_aspect('equal')
-# Mutation info: Added sharex = True (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

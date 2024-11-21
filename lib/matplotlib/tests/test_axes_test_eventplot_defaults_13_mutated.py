@@ -163,6 +163,6 @@ def test_eventplot_defaults_13_mutated():
     data2 = np.random.random([6, 20]).tolist()
     data = data1 + data2
     fig = plt.figure()
-    axobj = fig.add_subplot(projection='rectilinear')
+    axobj = fig.add_subplot(polar=False)
     axobj.eventplot(data)
-# Mutation info: Added projection = rectilinear (Call fig.add_subplot)
+# Mutation info: Added polar = False (Call fig.add_subplot)

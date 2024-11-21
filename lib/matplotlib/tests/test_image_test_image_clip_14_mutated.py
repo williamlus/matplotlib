@@ -79,7 +79,7 @@ class QuantityND(np.ndarray):
 def test_image_clip_14_mutated():
     d = [[1, 2], [3, 4]]
     fig, ax = plt.subplots()
-    im = ax.imshow(d, interpolation_stage='data')
+    im = ax.imshow(d, origin='lower')
     patch = patches.Circle((0, 0), radius=1, transform=ax.transData)
     im.set_clip_path(patch)
-# Mutation info: Added interpolation_stage = data (Call ax.imshow)
+# Mutation info: Added origin = lower (Call ax.imshow)

@@ -160,6 +160,6 @@ def test_vertex_markers_9_mutated():
     fig, ax = plt.subplots()
     ax.plot(data, linestyle='', marker=marker_as_tuple, mfc='k')
     ax.plot(data[::-1], linestyle='', marker=marker_as_list, mfc='b')
-    ax.set_xlim([-1, 10], auto=True)
+    ax.set_xlim([-1, 10], emit=False)
     ax.set_ylim([-1, 10])
-# Mutation info: Added auto = True (Call ax.set_xlim)
+# Mutation info: Added emit = False (Call ax.set_xlim)

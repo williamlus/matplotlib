@@ -31,4 +31,4 @@ def test_image_grid_each_left_label_mode_all_24_mutated():
     for ax, cax in zip(grid, grid.cbar_axes):
         im = ax.imshow(imdata, interpolation='none')
         cax.colorbar(im)
-# Mutation info: label_mode = 'all' -> label_mode = all (Call ImageGrid)
+# Mutation info: cbar_mode = 'each' -> cbar_mode = each (Call ImageGrid)

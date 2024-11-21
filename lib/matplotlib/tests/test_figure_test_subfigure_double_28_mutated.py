@@ -24,7 +24,7 @@ import matplotlib.dates as mdates
 def test_subfigure_double_28_mutated():
     np.random.seed(19680801)
     fig = plt.figure(layout='constrained', figsize=(10, 8))
-    fig.suptitle('fig', horizontalalignment='left')
+    fig.suptitle('fig', va='center')
     subfigs = fig.subfigures(1, 2, wspace=0.07)
     subfigs[0].set_facecolor('coral')
     subfigs[0].suptitle('subfigs[0]')
@@ -49,4 +49,4 @@ def test_subfigure_double_28_mutated():
     subfigsnest[1].supxlabel('supxlabel')
     subfigsnest[1].supylabel('supylabel')
     axsRight = subfigs[1].subplots(2, 2)
-# Mutation info: Added horizontalalignment = left (Call fig.suptitle)
+# Mutation info: Added va = center (Call fig.suptitle)

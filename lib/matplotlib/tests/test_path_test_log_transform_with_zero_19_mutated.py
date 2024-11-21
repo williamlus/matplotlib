@@ -18,7 +18,7 @@ def test_log_transform_with_zero_19_mutated():
     x = np.arange(-10, 10)
     y = (1.0 - 1.0 / (x ** 2 + 1)) ** 20
     fig, ax = plt.subplots()
-    ax.semilogy(x, y, '-o', lw=15, markeredgecolor='k', nonpositive='clip')
+    ax.semilogy(x, y, '-o', lw=15, markeredgecolor='k', nonpositive='mask')
     ax.set_ylim(1e-07, 1)
     ax.grid(True)
-# Mutation info: Added nonpositive = clip (Call ax.semilogy)
+# Mutation info: Added nonpositive = mask (Call ax.semilogy)

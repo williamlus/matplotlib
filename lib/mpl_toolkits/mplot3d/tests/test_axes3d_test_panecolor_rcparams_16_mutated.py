@@ -54,5 +54,5 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
 def test_panecolor_rcparams_16_mutated():
     with plt.rc_context({'axes3d.xaxis.panecolor': 'r', 'axes3d.yaxis.panecolor': 'g', 'axes3d.zaxis.panecolor': 'b'}):
         fig = plt.figure(figsize=(1, 1))
-        fig.add_subplot(projection='hammer')
-# Mutation info: projection = '3d' -> projection = hammer (Call fig.add_subplot)
+        fig.add_subplot(projection='3d', polar=True)
+# Mutation info: Added polar = True (Call fig.add_subplot)

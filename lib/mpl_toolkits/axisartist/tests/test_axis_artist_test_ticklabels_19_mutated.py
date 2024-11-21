@@ -23,8 +23,8 @@ def test_ticklabels_19_mutated():
     axislabel = AxisLabel(0.5, 0.5, 'Test')
     axislabel._offset_radius = 20
     axislabel._ref_angle = 0
-    axislabel.set_axis_direction('left')
+    axislabel.set_axis_direction('top')
     ax.add_artist(axislabel)
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
-# Mutation info: (0-th Positional) d = 'bottom' -> d = left (Call axislabel.set_axis_direction)
+# Mutation info: (0-th Positional) d = 'bottom' -> d = top (Call axislabel.set_axis_direction)

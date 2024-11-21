@@ -26,5 +26,5 @@ def test_linewidth_11_mutated():
     speed = np.hypot(U, V)
     lw = 5 * speed / speed.max()
     ax = plt.figure().subplots()
-    ax.streamplot(X, Y, U, V, density=[0.5, 1], color='k', linewidth=lw, integration_direction='backward')
-# Mutation info: Added integration_direction = backward (Call ax.streamplot)
+    ax.streamplot(X, Y, U, V, density=[0.5, 1], color='k', linewidth=lw, broken_streamlines=True)
+# Mutation info: Added broken_streamlines = True (Call ax.streamplot)

@@ -68,7 +68,7 @@ def test_light_source_topo_surface_18_mutated():
     fig, axs = plt.subplots(nrows=3, ncols=3)
     for row, mode in zip(axs, ['hsv', 'overlay', 'soft']):
         for ax, ve in zip(row, [0.1, 1, 10]):
-            rgb = ls.shade(elev, cmap, vert_exag=ve, dx=dx, dy=dy, blend_mode='soft')
+            rgb = ls.shade(elev, cmap, vert_exag=ve, dx=dx, dy=dy, blend_mode='overlay')
             ax.imshow(rgb)
             ax.set(xticks=[], yticks=[])
-# Mutation info: blend_mode = mode -> blend_mode = soft (Call ls.shade)
+# Mutation info: blend_mode = mode -> blend_mode = overlay (Call ls.shade)

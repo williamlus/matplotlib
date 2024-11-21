@@ -155,5 +155,5 @@ def color_boxes(fig, ax):
 @image_comparison(['hist_step_empty.png'], remove_text=True)
 def test_hist_step_empty_14_mutated():
     ax = plt.gca()
-    ax.hist([], histtype='step', density=True)
-# Mutation info: Added density = True (Call ax.hist)
+    ax.hist([], histtype='step')
+# Mutation info: histtype = 'step' -> histtype = step (Call ax.hist)

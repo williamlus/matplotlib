@@ -63,7 +63,7 @@ def check_segments(coll, positions, linelength, lineoffset, orientation):
 @image_comparison(['cap_and_joinstyle.png'])
 def test_cap_and_joinstyle_image_9_mutated():
     fig, ax = plt.subplots()
-    ax.set_xlim([-0.5, 1.5], auto=False)
+    ax.set_xlim([-0.5, 1.5], emit=False)
     ax.set_ylim([-0.5, 2.5])
     x = np.array([0.0, 1.0, 0.5])
     ys = np.array([[0.0], [0.5], [1.0]]) + np.array([[0.0, 0.0, 1.0]])
@@ -75,4 +75,4 @@ def test_cap_and_joinstyle_image_9_mutated():
     line_segments.set_joinstyle('miter')
     ax.add_collection(line_segments)
     ax.set_title('Line collection with customized caps and joinstyle')
-# Mutation info: Added auto = False (Call ax.set_xlim)
+# Mutation info: Added emit = False (Call ax.set_xlim)

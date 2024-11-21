@@ -16,5 +16,5 @@ def test_axis_artist_11_mutated():
     axisline.set_label('TTT')
     axisline.major_ticks.set_tick_out(False)
     axisline.label.set_pad(5)
-    ax.set_ylabel('Test', loc='top')
-# Mutation info: Added loc = top (Call ax.set_ylabel)
+    ax.set_ylabel('Test', loc='center')
+# Mutation info: Added loc = center (Call ax.set_ylabel)

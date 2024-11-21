@@ -23,6 +23,6 @@ def test_corner_mask_5_mutated():
     mask = np.random.rand(n, n) >= mask_level
     z = np.ma.array(z, mask=mask)
     for corner_mask in [False, True]:
-        plt.figure(layout='compressed')
+        plt.figure(frameon=True)
         plt.contourf(z, corner_mask=corner_mask)
-# Mutation info: Added layout = compressed (Call plt.figure)
+# Mutation info: Added frameon = True (Call plt.figure)

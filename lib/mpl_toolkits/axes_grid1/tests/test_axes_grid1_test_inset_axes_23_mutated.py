@@ -28,7 +28,7 @@ def test_inset_axes_23_mutated():
     Z2 = np.zeros((150, 150))
     ny, nx = Z.shape
     Z2[30:30 + ny, 30:30 + nx] = Z
-    ax.imshow(Z2, extent=extent, interpolation='nearest', origin='lower', interpolation_stage='auto')
+    ax.imshow(Z2, extent=extent, interpolation='nearest', origin='lower', aspect='auto')
     axins = inset_axes(ax, width=1.0, height=1.0, bbox_to_anchor=(1, 1), bbox_transform=ax.transAxes)
     axins.imshow(Z2, extent=extent, interpolation='nearest', origin='lower')
     axins.yaxis.get_major_locator().set_params(nbins=7)
@@ -41,4 +41,4 @@ def test_inset_axes_23_mutated():
     mark_inset(ax, axins, loc1=2, loc2=4, fc='none', ec='0.5')
     asb = AnchoredSizeBar(ax.transData, 0.5, '0.5', loc='lower center', pad=0.1, borderpad=0.5, sep=5, frameon=False)
     ax.add_artist(asb)
-# Mutation info: Added interpolation_stage = auto (Call ax.imshow)
+# Mutation info: Added aspect = auto (Call ax.imshow)

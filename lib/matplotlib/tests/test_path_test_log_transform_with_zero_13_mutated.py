@@ -20,5 +20,5 @@ def test_log_transform_with_zero_13_mutated():
     fig, ax = plt.subplots()
     ax.semilogy(x, y, '-o', lw=15, markeredgecolor='k')
     ax.set_ylim(1e-07, 1)
-    ax.grid(True, axis='both')
-# Mutation info: Added axis = both (Call ax.grid)
+    ax.grid(True, axis='y')
+# Mutation info: Added axis = y (Call ax.grid)

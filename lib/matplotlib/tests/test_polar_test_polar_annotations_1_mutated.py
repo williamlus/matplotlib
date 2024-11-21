@@ -9,7 +9,7 @@ from matplotlib.testing.decorators import image_comparison, check_figures_equal
 def test_polar_annotations_1_mutated():
     r = np.arange(0.0, 1.0, 0.001)
     theta = 2.0 * 2.0 * np.pi * r
-    fig = plt.figure(layout='compressed')
+    fig = plt.figure(frameon=False)
     ax = fig.add_subplot(polar=True)
     line, = ax.plot(theta, r, color='#ee8d18', lw=3)
     line, = ax.plot((0, 0), (0, 1), color='#0000ff', lw=1)
@@ -18,4 +18,4 @@ def test_polar_annotations_1_mutated():
     ax.plot([thistheta], [thisr], 'o')
     ax.annotate('a polar annotation', xy=(thistheta, thisr), xytext=(0.05, 0.05), textcoords='figure fraction', arrowprops=dict(facecolor='black', shrink=0.05), horizontalalignment='left', verticalalignment='baseline')
     ax.tick_params(axis='x', tick1On=True, tick2On=True, direction='out')
-# Mutation info: Added layout = compressed (Call plt.figure)
+# Mutation info: Added frameon = False (Call plt.figure)

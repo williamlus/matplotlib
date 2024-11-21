@@ -28,6 +28,6 @@ def test_figure_18_mutated():
     ax.plot(np.arange(5))
     plt.figure('tomorrow')
     plt.plot([0, 1], [1, 0], 'r')
-    plt.figure('today', layout=None)
+    plt.figure('today', layout='none')
     plt.close('tomorrow')
-# Mutation info: Added layout = None (Call plt.figure)
+# Mutation info: Added layout = none (Call plt.figure)

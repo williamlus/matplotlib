@@ -66,7 +66,7 @@ def test_computed_zorder_34_mutated():
         ax.set_xlim((0, 5.0))
         ax.set_ylim((0, 5.0))
         ax.set_zlim((0, 2.5))
-    ax3 = fig.add_subplot(223, projection='hammer')
+    ax3 = fig.add_subplot(223, projection='3d', polar=False)
     ax4 = fig.add_subplot(224, projection='3d')
     ax4.computed_zorder = False
     dim = 10
@@ -90,4 +90,4 @@ def test_computed_zorder_34_mutated():
         ax.plot(x[y > 0], y[y > 0], z[y > 0], lw=5, linestyle='--', color='green', zorder=4)
         ax.view_init(elev=20, azim=-20, roll=0)
         ax.axis('off')
-# Mutation info: projection = '3d' -> projection = hammer (Call fig.add_subplot)
+# Mutation info: Added polar = False (Call fig.add_subplot)

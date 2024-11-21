@@ -14,7 +14,7 @@ from matplotlib import collections as mcollections, colors as mcolors, patches a
 
 @image_comparison(['connection_patch.png'], style='mpl20', remove_text=True, tol=0.024 if platform.machine() == 'arm64' else 0)
 def test_connection_patch_3_mutated():
-    fig, (ax1, ax2) = plt.subplots(1, 2, sharey=False)
+    fig, (ax1, ax2) = plt.subplots(1, 2, squeeze=False)
     con = mpatches.ConnectionPatch(xyA=(0.1, 0.1), xyB=(0.9, 0.9), coordsA='data', coordsB='data', axesA=ax2, axesB=ax1, arrowstyle='->')
     ax2.add_artist(con)
     xyA = (0.6, 1.0)
@@ -23,4 +23,4 @@ def test_connection_patch_3_mutated():
     coordsB = ax2.get_yaxis_transform()
     con = mpatches.ConnectionPatch(xyA=xyA, xyB=xyB, coordsA=coordsA, coordsB=coordsB, arrowstyle='-')
     ax2.add_artist(con)
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added squeeze = False (Call plt.subplots)

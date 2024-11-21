@@ -22,7 +22,7 @@ def test_bivariate_cmap_shapes_10_mutated():
     cmap = cmap.with_extremes(shape='ignore')
     axes[2].imshow(cmap((x_0, x_1)), interpolation='nearest')
     cmap = mpl.bivar_colormaps['BiCone']
-    cmap = cmap.with_extremes(shape='circle')
+    cmap = cmap.with_extremes(shape='ignore')
     axes[3].imshow(cmap((x_0, x_1)), interpolation='nearest')
     remove_ticks_and_titles(fig)
-# Mutation info: shape = 'circleignore' -> shape = circle (Call cmap.with_extremes)
+# Mutation info: shape = 'circleignore' -> shape = ignore (Call cmap.with_extremes)

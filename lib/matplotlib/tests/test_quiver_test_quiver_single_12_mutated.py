@@ -16,5 +16,5 @@ def draw_quiver(ax, **kwargs):
 def test_quiver_single_12_mutated():
     fig, ax = plt.subplots()
     ax.margins(0.1)
-    ax.quiver([1], [1], [2], [2], pivot='tail')
-# Mutation info: Added pivot = tail (Call ax.quiver)
+    ax.quiver([1], [1], [2], [2], scale_units='dots')
+# Mutation info: Added scale_units = dots (Call ax.quiver)

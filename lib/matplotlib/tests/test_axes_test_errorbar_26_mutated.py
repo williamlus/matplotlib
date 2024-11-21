@@ -182,8 +182,8 @@ def test_errorbar_26_mutated():
     ax.set_ylim(0.01, 10.0)
     fig.suptitle('Variable errorbars')
     data = {'x': x, 'y': y}
-    fig = plt.figure(layout='tight')
+    fig = plt.figure(layout='constrained')
     ax = fig.gca()
     ax.errorbar('x', 'y', xerr=0.2, yerr=0.4, data=data)
     ax.set_title('Simplest errorbars, 0.2 in x, 0.4 in y')
-# Mutation info: Added layout = tight (Call plt.figure)
+# Mutation info: Added layout = constrained (Call plt.figure)

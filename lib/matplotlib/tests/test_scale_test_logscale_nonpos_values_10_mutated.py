@@ -21,7 +21,7 @@ def test_logscale_nonpos_values_10_mutated():
     xdata = np.arange(0, 10, 0.01)
     ydata = np.exp(-xdata)
     edata = 0.2 * (10 - xdata) * np.cos(5 * xdata) * np.exp(-xdata)
-    ax3.fill_between(xdata, ydata - edata, ydata + edata, where=True)
+    ax3.fill_between(xdata, ydata - edata, ydata + edata, step='pre')
     ax3.set_yscale('log')
     x = np.logspace(-1, 1)
     y = x ** 3
@@ -29,4 +29,4 @@ def test_logscale_nonpos_values_10_mutated():
     ax4.errorbar(x, y, yerr=yerr)
     ax4.set_yscale('log')
     ax4.set_xscale('log')
-# Mutation info: Added where = True (Call ax3.fill_between)
+# Mutation info: Added step = pre (Call ax3.fill_between)

@@ -13,6 +13,6 @@ def test_spines_black_axes_24_mutated():
     ax.set_xticklabels([])
     ax.set_yticklabels([])
     ax.set_xticks([])
-    ax.set_yticks([], minor=False)
+    ax.set_yticks([], minor=True)
     ax.set_facecolor((0, 0, 0))
-# Mutation info: Added minor = False (Call ax.set_yticks)
+# Mutation info: Added minor = True (Call ax.set_yticks)

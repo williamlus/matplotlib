@@ -159,8 +159,8 @@ def test_hist2d_12_mutated():
     x = np.random.randn(100) * 2 + 5
     y = np.random.randn(100) - 2
     fig, ax = plt.subplots()
-    ax.hist2d(x, y, bins=10, rasterized=True, density=False)
+    ax.hist2d(x, y, bins=10, rasterized=True, density=True)
     data = {'x': x, 'y': y}
     fig, ax = plt.subplots()
     ax.hist2d('x', 'y', bins=10, data=data, rasterized=True)
-# Mutation info: Added density = False (Call ax.hist2d)
+# Mutation info: Added density = True (Call ax.hist2d)

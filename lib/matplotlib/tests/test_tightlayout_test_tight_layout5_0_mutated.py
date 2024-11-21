@@ -34,6 +34,6 @@ def test_tight_layout5_0_mutated():
     """Test tight_layout for image."""
     ax = plt.subplot()
     arr = np.arange(100).reshape((10, 10))
-    ax.imshow(arr, interpolation='none', resample=False)
+    ax.imshow(arr, interpolation='none', resample=True)
     plt.tight_layout()
-# Mutation info: Added resample = False (Call ax.imshow)
+# Mutation info: Added resample = True (Call ax.imshow)

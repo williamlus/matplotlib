@@ -45,7 +45,7 @@ def test_constrained_layout8_30_mutated():
             axs += [ax]
             example_pcolor(ax, fontsize=9)
             if i > 0:
-                ax.set_ylabel('', loc='top')
+                ax.set_ylabel('', loc='bottom')
             if j < 1:
                 ax.set_xlabel('')
             ax.set_title('')
@@ -53,4 +53,4 @@ def test_constrained_layout8_30_mutated():
     axs += [ax]
     pcm = example_pcolor(ax, fontsize=9)
     fig.colorbar(pcm, ax=axs, pad=0.01, shrink=0.6)
-# Mutation info: Added loc = top (Call ax.set_ylabel)
+# Mutation info: Added loc = bottom (Call ax.set_ylabel)

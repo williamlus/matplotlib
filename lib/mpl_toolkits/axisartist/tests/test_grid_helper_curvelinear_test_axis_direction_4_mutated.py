@@ -41,6 +41,6 @@ def test_axis_direction_4_mutated():
     grid_helper.grid_finder.grid_locator2.set_params(nbins=5)
     ax1.set_aspect(1.0)
     ax1.set_xlim(-8, 8)
-    ax1.set_ylim(-4, 12, emit=True)
+    ax1.set_ylim(-4, 12, auto=False)
     ax1.grid(True)
-# Mutation info: Added emit = True (Call ax1.set_ylim)
+# Mutation info: Added auto = False (Call ax1.set_ylim)

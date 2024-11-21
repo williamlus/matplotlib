@@ -22,9 +22,9 @@ def test_quiver_key_xy_7_mutated():
     V = uv.imag
     fig, axs = plt.subplots(2)
     for ax, angle_str in zip(axs, ('uv', 'xy')):
-        ax.set_xlim(-1, 8, emit=False)
+        ax.set_xlim(-1, 8, auto=False)
         ax.set_ylim(-0.2, 0.2)
         q = ax.quiver(X, Y, U, V, pivot='middle', units='xy', width=0.05, scale=2, scale_units='xy', angles=angle_str)
         for x, angle in zip((0.2, 0.5, 0.8), (0, 45, 90)):
             ax.quiverkey(q, X=x, Y=0.8, U=1, angle=angle, label='', color='b')
-# Mutation info: Added emit = False (Call ax.set_xlim)
+# Mutation info: Added auto = False (Call ax.set_xlim)

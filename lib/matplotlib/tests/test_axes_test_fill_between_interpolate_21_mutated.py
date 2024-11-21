@@ -164,6 +164,6 @@ def test_fill_between_interpolate_21_mutated():
     y2 = np.ma.masked_greater(y2, 1.0)
     y2[0] = np.ma.masked
     ax2.plot(x, y1, x, y2, color='black')
-    ax2.fill_between(x, y1, y2, where=True, facecolor='green', interpolate=True)
-    ax2.fill_between(x, y1, y2, where=y2 <= y1, facecolor='red', interpolate=True)
-# Mutation info: where = y2 >= y1 -> where = True (Call ax2.fill_between)
+    ax2.fill_between(x, y1, y2, where=y2 >= y1, facecolor='green', interpolate=True)
+    ax2.fill_between(x, y1, y2, where=y2 <= y1, facecolor='red', interpolate=True, step='mid')
+# Mutation info: Added step = mid (Call ax2.fill_between)

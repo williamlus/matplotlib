@@ -185,5 +185,5 @@ def test_errorbar_58_mutated():
     fig = plt.figure()
     ax = fig.gca()
     ax.errorbar('x', 'y', xerr=0.2, yerr=0.4, data=data)
-    ax.set_title('Simplest errorbars, 0.2 in x, 0.4 in y', loc='left')
-# Mutation info: Added loc = left (Call ax.set_title)
+    ax.set_title('Simplest errorbars, 0.2 in x, 0.4 in y', loc='center')
+# Mutation info: Added loc = center (Call ax.set_title)

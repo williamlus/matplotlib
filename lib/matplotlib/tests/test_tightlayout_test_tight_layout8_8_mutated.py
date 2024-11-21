@@ -32,9 +32,9 @@ def add_offsetboxes(ax, size=10, margin=0.1, color='black'):
 @image_comparison(['tight_layout8'], tol=0.005)
 def test_tight_layout8_8_mutated():
     """Test automatic use of tight_layout."""
-    fig = plt.figure(layout='none')
+    fig = plt.figure(layout=None)
     fig.set_layout_engine(layout='tight', pad=0.1)
     ax = fig.add_subplot()
     example_plot(ax, fontsize=24)
     fig.draw_without_rendering()
-# Mutation info: Added layout = none (Call plt.figure)
+# Mutation info: Added layout = None (Call plt.figure)

@@ -54,8 +54,8 @@ def _test_proj_draw_axes(M, s=1, *args, **kwargs):
 def test_scatter_spiral_17_mutated():
     plt.rcParams['axes3d.automargin'] = True
     fig = plt.figure()
-    ax = fig.add_subplot(projection='3d', polar=False)
+    ax = fig.add_subplot(projection='3d', polar=True)
     th = np.linspace(0, 2 * np.pi * 6, 256)
     sc = ax.scatter(np.sin(th), np.cos(th), th, s=1 + th * 5, c=th ** 2)
     fig.canvas.draw()
-# Mutation info: Added polar = False (Call fig.add_subplot)
+# Mutation info: Added polar = True (Call fig.add_subplot)

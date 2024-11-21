@@ -169,7 +169,7 @@ def test_eventplot_25_mutated():
     linelengths2 = [5, 2, 1, 1, 3, 1.5]
     linelengths = linelengths1 + linelengths2
     fig = plt.figure()
-    axobj = fig.add_subplot(polar=False)
+    axobj = fig.add_subplot(projection='rectilinear')
     colls = axobj.eventplot(data, colors=colors, lineoffsets=lineoffsets, linelengths=linelengths)
     num_collections = len(colls)
     assert num_collections == num_datasets
@@ -179,4 +179,4 @@ def test_eventplot_25_mutated():
     colls = axobj.eventplot('pos', colors='c', lineoffsets='lo', linelengths='ll', data=data)
     num_collections = len(colls)
     assert num_collections == num_datasets
-# Mutation info: Added polar = False (Call fig.add_subplot)
+# Mutation info: Added projection = rectilinear (Call fig.add_subplot)

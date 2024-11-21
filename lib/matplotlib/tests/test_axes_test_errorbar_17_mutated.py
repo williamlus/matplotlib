@@ -158,7 +158,7 @@ def test_errorbar_17_mutated():
     y = np.exp(-x)
     yerr = 0.1 + 0.2 * np.sqrt(x)
     xerr = 0.1 + yerr
-    fig = plt.figure(layout='constrained')
+    fig = plt.figure(layout='tight')
     ax = fig.gca()
     ax.errorbar(x, y, xerr=0.2, yerr=0.4)
     ax.set_title('Simplest errorbars, 0.2 in x, 0.4 in y')
@@ -186,4 +186,4 @@ def test_errorbar_17_mutated():
     ax = fig.gca()
     ax.errorbar('x', 'y', xerr=0.2, yerr=0.4, data=data)
     ax.set_title('Simplest errorbars, 0.2 in x, 0.4 in y')
-# Mutation info: Added layout = constrained (Call plt.figure)
+# Mutation info: Added layout = tight (Call plt.figure)

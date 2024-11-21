@@ -31,7 +31,7 @@ def add_offsetboxes(ax, size=10, margin=0.1, color='black'):
 
 @image_comparison(['tight_layout9'])
 def test_tight_layout9_5_mutated():
-    f, axarr = plt.subplots(2, 2, squeeze=False)
+    f, axarr = plt.subplots(2, 2, sharex=False)
     axarr[1][1].set_visible(False)
     plt.tight_layout()
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

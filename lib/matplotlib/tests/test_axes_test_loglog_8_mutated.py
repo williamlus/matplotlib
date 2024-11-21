@@ -157,6 +157,6 @@ def test_loglog_8_mutated():
     fig, ax = plt.subplots()
     x = np.arange(1, 11)
     ax.loglog(x, x ** 3, lw=5)
-    ax.tick_params(length=25, width=2, which='minor')
+    ax.tick_params(length=25, width=2, reset=True)
     ax.tick_params(length=15, width=2, which='minor')
-# Mutation info: Added which = minor (Call ax.tick_params)
+# Mutation info: Added reset = True (Call ax.tick_params)

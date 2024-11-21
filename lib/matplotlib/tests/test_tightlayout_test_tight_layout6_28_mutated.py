@@ -43,7 +43,7 @@ def test_tight_layout6_28_mutated():
         gs1.tight_layout(fig, rect=[0, 0, 0.5, 1])
         gs2 = mpl.gridspec.GridSpec(3, 1)
         for ss in gs2:
-            ax = fig.add_subplot(ss, projection='polar')
+            ax = fig.add_subplot(ss, projection='hammer')
             example_plot(ax)
             ax.set_title('')
             ax.set_xlabel('')
@@ -53,4 +53,4 @@ def test_tight_layout6_28_mutated():
         bottom = max(gs1.bottom, gs2.bottom)
         gs1.tight_layout(fig, rect=[None, 0 + (bottom - gs1.bottom), 0.5, 1 - (gs1.top - top)])
         gs2.tight_layout(fig, rect=[0.5, 0 + (bottom - gs2.bottom), None, 1 - (gs2.top - top)], h_pad=0.45)
-# Mutation info: Added projection = polar (Call fig.add_subplot)
+# Mutation info: Added projection = hammer (Call fig.add_subplot)

@@ -20,5 +20,5 @@ def test_units_rectangle_13_mutated():
     fig, ax = plt.subplots()
     ax.add_patch(p)
     ax.set_xlim([4 * U.km, 7 * U.km])
-    ax.set_ylim([5 * U.km, 9 * U.km], auto=False)
-# Mutation info: Added auto = False (Call ax.set_ylim)
+    ax.set_ylim([5 * U.km, 9 * U.km], auto=True)
+# Mutation info: Added auto = True (Call ax.set_ylim)

@@ -155,5 +155,5 @@ def color_boxes(fig, ax):
 @image_comparison(['hist_bar_empty.png'], remove_text=True)
 def test_hist_bar_empty_2_mutated():
     ax = plt.gca()
-    ax.hist([], histtype='bar', stacked=False)
-# Mutation info: Added stacked = False (Call ax.hist)
+    ax.hist([], histtype='stepfilled')
+# Mutation info: histtype = 'bar' -> histtype = stepfilled (Call ax.hist)

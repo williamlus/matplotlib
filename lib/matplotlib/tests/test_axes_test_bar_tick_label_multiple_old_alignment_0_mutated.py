@@ -156,5 +156,5 @@ def color_boxes(fig, ax):
 def test_bar_tick_label_multiple_old_alignment_0_mutated():
     matplotlib.rcParams['ytick.alignment'] = 'center'
     ax = plt.gca()
-    ax.bar([1, 2.5], [1, 2], width=[0.2, 0.5], tick_label=['a', 'b'], align='edge')
-# Mutation info: align = 'center' -> align = edge (Call ax.bar)
+    ax.bar([1, 2.5], [1, 2], width=[0.2, 0.5], tick_label=['a', 'b'], align='center')
+# Mutation info: align = 'center' -> align = center (Call ax.bar)

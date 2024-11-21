@@ -157,5 +157,5 @@ def test_hist_stacked_stepfilled_alpha_11_mutated():
     d1 = np.linspace(1, 3, 20)
     d2 = np.linspace(0, 10, 50)
     fig, ax = plt.subplots()
-    ax.hist((d1, d2), histtype='stepfilled', stacked=True, alpha=0.5, align='mid')
-# Mutation info: Added align = mid (Call ax.hist)
+    ax.hist((d1, d2), histtype='stepfilled', stacked=False, alpha=0.5)
+# Mutation info: stacked = True -> stacked = False (Call ax.hist)

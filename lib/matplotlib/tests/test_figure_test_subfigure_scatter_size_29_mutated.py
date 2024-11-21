@@ -31,5 +31,5 @@ def test_subfigure_scatter_size_29_mutated():
     axs = sfig.subplots(1, 2)
     for ax in [ax0, axs[0]]:
         ax.scatter([1, 2, 3], [1, 2, 3], s=30, marker='s', color='r')
-        ax.scatter([3, 4, 5], [1, 2, 3], s=[20, 30, 40], marker='s', color='g', plotnonfinite=True)
-# Mutation info: Added plotnonfinite = True (Call ax.scatter)
+        ax.scatter([3, 4, 5], [1, 2, 3], s=[20, 30, 40], marker='s', color='g', edgecolors='face')
+# Mutation info: Added edgecolors = face (Call ax.scatter)

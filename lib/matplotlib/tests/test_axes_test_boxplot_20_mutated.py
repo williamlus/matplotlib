@@ -158,10 +158,10 @@ def test_boxplot_20_mutated():
     x = np.linspace(-7, 7, 140)
     x = np.hstack([-25, x, 25])
     fig, ax = plt.subplots()
-    ax.boxplot([x, x], bootstrap=10000, notch=True)
+    ax.boxplot([x, x], bootstrap=10000, notch=1, meanline=True)
     ax.set_ylim((-30, 30))
     data = {'x': [x, x]}
     fig, ax = plt.subplots()
     ax.boxplot('x', bootstrap=10000, notch=1, data=data)
     ax.set_ylim((-30, 30))
-# Mutation info: notch = 1 -> notch = True (Call ax.boxplot)
+# Mutation info: Added meanline = True (Call ax.boxplot)

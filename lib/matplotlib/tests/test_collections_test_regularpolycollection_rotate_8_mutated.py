@@ -69,5 +69,5 @@ def test_regularpolycollection_rotate_8_mutated():
     for xy, alpha in zip(xy_points, rotations):
         col = mcollections.RegularPolyCollection(4, sizes=(100,), rotation=alpha, offsets=[xy], offset_transform=ax.transData)
         ax.add_collection(col, autolim=True)
-    ax.autoscale_view(scaley=False)
-# Mutation info: Added scaley = False (Call ax.autoscale_view)
+    ax.autoscale_view(tight=False)
+# Mutation info: Added tight = False (Call ax.autoscale_view)

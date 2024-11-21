@@ -7,8 +7,8 @@ from matplotlib.testing.decorators import image_comparison, check_figures_equal
 
 @image_comparison(['polar_rlabel_position'], style='default')
 def test_polar_rlabel_position_8_mutated():
-    fig = plt.figure(clear=True)
+    fig = plt.figure(frameon=False)
     ax = fig.add_subplot(projection='polar')
     ax.set_rlabel_position(315)
     ax.tick_params(rotation='auto')
-# Mutation info: Added clear = True (Call plt.figure)
+# Mutation info: Added frameon = False (Call plt.figure)

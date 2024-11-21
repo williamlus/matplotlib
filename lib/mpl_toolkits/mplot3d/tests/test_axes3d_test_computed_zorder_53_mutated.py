@@ -83,11 +83,11 @@ def test_computed_zorder_53_mutated():
     x, y, z = (r * np.cos(th), r * np.sin(th), angle * r * np.sin(th))
     for ax in (ax3, ax4):
         ax.plot_surface(X2, Y3, Z3, color='blue', alpha=0.5, linewidth=0, zorder=-1)
-        ax.plot(x[y < 0], y[y < 0], z[y < 0], lw=5, linestyle='--', color='green', zorder=0, zdir='x')
+        ax.plot(x[y < 0], y[y < 0], z[y < 0], lw=5, linestyle='--', color='green', zorder=0, zdir='z')
         ax.plot_surface(X, Y, Z, color='red', alpha=0.5, linewidth=0, zorder=1)
         ax.plot(r * np.sin(th), r * np.cos(th), np.zeros(M), lw=5, linestyle='--', color='black', zorder=2)
         ax.plot_surface(X2, Y2, Z2, color='blue', alpha=0.5, linewidth=0, zorder=3)
         ax.plot(x[y > 0], y[y > 0], z[y > 0], lw=5, linestyle='--', color='green', zorder=4)
         ax.view_init(elev=20, azim=-20, roll=0)
         ax.axis('off')
-# Mutation info: Added zdir = x (Call ax.plot)
+# Mutation info: Added zdir = z (Call ax.plot)

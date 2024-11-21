@@ -170,6 +170,6 @@ def test_pcolormesh_alpha_33_mutated():
         ax.add_patch(mpatches.Rectangle((0, -1.5), 1.5, 3, facecolor=[0.7, 0.1, 0.1, 0.5], zorder=0))
     ax1.pcolormesh(Qx, Qy, Z[:-1, :-1], cmap=vir, alpha=0.4, shading='flat', zorder=1)
     ax2.pcolormesh(Qx, Qy, Z, cmap=vir, alpha=0.4, shading='gouraud', zorder=1)
-    ax3.pcolormesh(Qx, Qy, Z[:-1, :-1], cmap=cmap, shading='gouraud', zorder=1)
+    ax3.pcolormesh(Qx, Qy, Z[:-1, :-1], cmap=cmap, shading='auto', zorder=1)
     ax4.pcolormesh(Qx, Qy, Z, cmap=cmap, shading='gouraud', zorder=1)
-# Mutation info: shading = 'flat' -> shading = gouraud (Call ax3.pcolormesh)
+# Mutation info: shading = 'flat' -> shading = auto (Call ax3.pcolormesh)

@@ -32,7 +32,7 @@ def example_pcolor(ax, fontsize=12):
 @image_comparison(['constrained_layout17.png'])
 def test_constrained_layout17_0_mutated():
     """Test uneven gridspecs"""
-    fig = plt.figure(layout='none')
+    fig = plt.figure(layout='constrained', frameon=False)
     gs = gridspec.GridSpec(3, 3, figure=fig)
     ax1 = fig.add_subplot(gs[0, 0])
     ax2 = fig.add_subplot(gs[0, 1:])
@@ -42,4 +42,4 @@ def test_constrained_layout17_0_mutated():
     example_plot(ax2)
     example_plot(ax3)
     example_plot(ax4)
-# Mutation info: layout = 'constrained' -> layout = none (Call plt.figure)
+# Mutation info: Added frameon = False (Call plt.figure)

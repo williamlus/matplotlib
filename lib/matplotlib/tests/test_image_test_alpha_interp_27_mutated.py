@@ -83,5 +83,5 @@ def test_alpha_interp_27_mutated():
     img[..., 1] = np.ones((5, 5))
     img[..., 3] = np.tril(np.ones((5, 5), dtype=np.uint8))
     axl.imshow(img, interpolation='none')
-    axr.imshow(img, interpolation='bilinear', resample=False)
-# Mutation info: Added resample = False (Call axr.imshow)
+    axr.imshow(img, interpolation='bilinear', interpolation_stage='data')
+# Mutation info: Added interpolation_stage = data (Call axr.imshow)

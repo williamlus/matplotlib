@@ -20,5 +20,5 @@ def test_noscale_15_mutated():
     X, Y = np.meshgrid(np.arange(-5, 5, 1), np.arange(-5, 5, 1))
     Z = np.sin(Y ** 2)
     fig, ax = plt.subplots()
-    ax.imshow(Z, cmap='gray', interpolation='none', aspect='equal')
-# Mutation info: Added aspect = equal (Call ax.imshow)
+    ax.imshow(Z, cmap='gray', interpolation='none', interpolation_stage='auto')
+# Mutation info: Added interpolation_stage = auto (Call ax.imshow)

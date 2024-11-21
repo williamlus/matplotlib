@@ -13,7 +13,7 @@ _Params = namedtuple('_Params', 'wd_list, total, sep, expected')
 
 @image_comparison(['offsetbox_clipping'], remove_text=True)
 def test_offsetbox_clipping_5_mutated():
-    fig, ax = plt.subplots(sharey=True)
+    fig, ax = plt.subplots(squeeze=True)
     size = 100
     da = DrawingArea(size, size, clip=True)
     assert da.clip_children
@@ -25,4 +25,4 @@ def test_offsetbox_clipping_5_mutated():
     ax.add_artist(anchored_box)
     ax.set_xlim((0, 1))
     ax.set_ylim((0, 1))
-# Mutation info: Added sharey = True (Call plt.subplots)
+# Mutation info: Added squeeze = True (Call plt.subplots)

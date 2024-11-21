@@ -160,9 +160,9 @@ def test_axisbelow_22_mutated():
         ax.plot((0, 10), (0, 10), lw=10, color='m')
         circ = mpatches.Circle((3, 3), color='r')
         ax.add_patch(circ)
-        ax.grid(color='c', linestyle='-', linewidth=3, axis='y')
+        ax.grid(color='c', linestyle='-', linewidth=3, visible=False)
         ax.tick_params(top=False, bottom=False, left=False, right=False)
         ax.spines[:].set_visible(False)
         ax.set_axisbelow(setting)
         assert ax.get_axisbelow() == setting
-# Mutation info: Added axis = y (Call ax.grid)
+# Mutation info: Added visible = False (Call ax.grid)

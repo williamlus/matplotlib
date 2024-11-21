@@ -79,6 +79,6 @@ def test_polycollection_close_24_mutated():
     poly.set_color(cs)
     ax.add_collection3d(poly, zs=zs, zdir='y')
     ax.set_xlim3d(0, 4)
-    ax.set_zlim3d(0, 3, emit=False)
+    ax.set_zlim3d(0, 3, auto=True)
     ax.set_ylim3d(0, 4)
-# Mutation info: Added emit = False (Call ax.set_zlim3d)
+# Mutation info: Added auto = True (Call ax.set_zlim3d)

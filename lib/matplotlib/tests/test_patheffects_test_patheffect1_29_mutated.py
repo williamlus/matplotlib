@@ -15,5 +15,5 @@ def test_patheffect1_29_mutated():
     txt = ax1.annotate('test', (1.0, 1.0), (0.0, 0), arrowprops=dict(arrowstyle='->', connectionstyle='angle3', lw=2), size=20, ha='center', path_effects=[path_effects.withStroke(linewidth=3, foreground='w')])
     txt.arrow_patch.set_path_effects([path_effects.Stroke(linewidth=5, foreground='w'), path_effects.Normal()])
     pe = [path_effects.withStroke(linewidth=3, foreground='w')]
-    ax1.grid(True, linestyle='-', path_effects=pe, which='minor')
-# Mutation info: Added which = minor (Call ax1.grid)
+    ax1.grid(True, linestyle='-', path_effects=pe, axis='both')
+# Mutation info: Added axis = both (Call ax1.grid)

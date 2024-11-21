@@ -22,10 +22,10 @@ from matplotlib.font_manager import FontProperties
 
 @image_comparison(['legend_various_labels'], remove_text=True)
 def test_various_labels_6_mutated():
-    fig = plt.figure(clear=False)
+    fig = plt.figure(layout=None)
     ax = fig.add_subplot(121)
     ax.plot(np.arange(4), 'o', label=1)
     ax.plot(np.linspace(4, 4.1), 'o', label='Développés')
     ax.plot(np.arange(4, 1, -1), 'o', label='__nolegend__')
     ax.legend(numpoints=1, loc='best')
-# Mutation info: Added clear = False (Call plt.figure)
+# Mutation info: Added layout = None (Call plt.figure)

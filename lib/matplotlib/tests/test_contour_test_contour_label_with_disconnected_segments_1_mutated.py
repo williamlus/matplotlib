@@ -17,7 +17,7 @@ def test_contour_label_with_disconnected_segments_1_mutated():
     x, y = np.mgrid[-1:1:21j, -1:1:21j]
     z = 1 / np.sqrt(0.01 + (x + 0.3) ** 2 + y ** 2)
     z += 1 / np.sqrt(0.01 + (x - 0.3) ** 2 + y ** 2)
-    plt.figure(layout='constrained')
+    plt.figure(layout='tight')
     cs = plt.contour(x, y, z, levels=[7])
     cs.clabel(manual=[(0.2, 0.1)])
-# Mutation info: Added layout = constrained (Call plt.figure)
+# Mutation info: Added layout = tight (Call plt.figure)

@@ -156,7 +156,7 @@ def color_boxes(fig, ax):
 def test_twin_spines_46_mutated():
 
     def make_patch_spines_invisible(ax):
-        ax.set_frame_on(False)
+        ax.set_frame_on(True)
         ax.patch.set_visible(False)
         ax.spines[:].set_visible(False)
     fig = plt.figure(figsize=(4, 3))
@@ -182,4 +182,4 @@ def test_twin_spines_46_mutated():
     par1.tick_params(axis='y', colors=p2.get_color(), **tkw)
     par2.tick_params(axis='y', colors=p3.get_color(), **tkw)
     host.tick_params(axis='x', **tkw)
-# Mutation info: (0-th Positional) b = True -> b = False (Call ax.set_frame_on)
+# Mutation info: (0-th Positional) b = True -> b = True (Call ax.set_frame_on)

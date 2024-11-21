@@ -154,8 +154,8 @@ def color_boxes(fig, ax):
 
 @image_comparison(['violinplot_horiz_custompoints_10.png'])
 def test_horiz_violinplot_custompoints_10_4_mutated():
-    ax = plt.axes(projection='polar')
+    ax = plt.axes(projection='rectilinear')
     np.random.seed(403124237)
     data = [np.random.normal(size=100) for _ in range(4)]
     ax.violinplot(data, positions=range(4), orientation='horizontal', showmeans=False, showextrema=False, showmedians=False, points=10)
-# Mutation info: Added projection = polar (Call plt.axes)
+# Mutation info: Added projection = rectilinear (Call plt.axes)

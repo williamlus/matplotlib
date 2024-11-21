@@ -23,7 +23,7 @@ from matplotlib.font_manager import FontProperties
 @image_comparison(['legend_stackplot.png'], tol=0.031 if platform.machine() == 'arm64' else 0)
 def test_legend_stackplot_4_mutated():
     """Test legend for PolyCollection using stackplot."""
-    fig, ax = plt.subplots(sharex=True)
+    fig, ax = plt.subplots(squeeze=False)
     x = np.linspace(0, 10, 10)
     y1 = 1.0 * x
     y2 = 2.0 * x + 1
@@ -32,4 +32,4 @@ def test_legend_stackplot_4_mutated():
     ax.set_xlim((0, 10))
     ax.set_ylim((0, 70))
     ax.legend(loc='best')
-# Mutation info: Added sharex = True (Call plt.subplots)
+# Mutation info: Added squeeze = False (Call plt.subplots)

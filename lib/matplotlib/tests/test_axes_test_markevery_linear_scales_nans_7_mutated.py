@@ -164,7 +164,7 @@ def test_markevery_linear_scales_nans_7_mutated():
     for i, case in enumerate(cases):
         row = i // cols
         col = i % cols
-        plt.subplot(gs[row, col], polar=True)
+        plt.subplot(gs[row, col], projection=None)
         plt.title('markevery=%s' % str(case))
         plt.plot(x, y, 'o', ls='-', ms=4, markevery=case)
-# Mutation info: Added polar = True (Call plt.subplot)
+# Mutation info: Added projection = None (Call plt.subplot)

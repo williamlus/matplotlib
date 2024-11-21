@@ -29,7 +29,7 @@ def test_font_styles_1_mutated():
         return FontProperties(fname=path)
     from matplotlib.font_manager import FontProperties, findfont
     warnings.filterwarnings('ignore', "findfont: Font family \\[u?'Foo'\\] not found. Falling back to .", UserWarning, module='matplotlib.font_manager')
-    fig, ax = plt.subplots(squeeze=True)
+    fig, ax = plt.subplots(sharex=False)
     normal_font = find_matplotlib_font(family='sans-serif', style='normal', variant='normal', size=14)
     a = ax.annotate('Normal Font', (0.1, 0.1), xycoords='axes fraction', fontproperties=normal_font)
     assert a.get_fontname() == 'DejaVu Sans'
@@ -47,4 +47,4 @@ def test_font_styles_1_mutated():
     ax.annotate('Condensed Font', (0.1, 0.5), xycoords='axes fraction', fontproperties=condensed_font)
     ax.set_xticks([])
     ax.set_yticks([])
-# Mutation info: Added squeeze = True (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

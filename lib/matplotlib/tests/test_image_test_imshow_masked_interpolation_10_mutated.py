@@ -93,6 +93,6 @@ def test_imshow_masked_interpolation_10_mutated():
     interps.remove('antialiased')
     for interp, ax in zip(interps, ax_grid.ravel()):
         ax.set_title(interp)
-        ax.imshow(data, norm=n, cmap=cmap, interpolation=interp, aspect='auto')
+        ax.imshow(data, norm=n, cmap=cmap, interpolation=interp, resample=False)
         ax.axis('off')
-# Mutation info: Added aspect = auto (Call ax.imshow)
+# Mutation info: Added resample = False (Call ax.imshow)

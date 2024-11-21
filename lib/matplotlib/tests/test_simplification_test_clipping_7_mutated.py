@@ -15,5 +15,5 @@ def test_clipping_7_mutated():
     s = np.sin(2 * np.pi * t)
     fig, ax = plt.subplots()
     ax.plot(t, s, linewidth=1.0)
-    ax.set_ylim((-0.2, -0.28), auto=True)
-# Mutation info: Added auto = True (Call ax.set_ylim)
+    ax.set_ylim((-0.2, -0.28), emit=True)
+# Mutation info: Added emit = True (Call ax.set_ylim)

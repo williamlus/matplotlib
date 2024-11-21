@@ -22,7 +22,7 @@ import matplotlib.dates as mdates
 
 @image_comparison(['figure_suptitle'])
 def test_suptitle_4_mutated():
-    fig, _ = plt.subplots(sharex=False)
+    fig, _ = plt.subplots(squeeze=True)
     fig.suptitle('hello', color='r')
     fig.suptitle('title', color='g', rotation=30)
-# Mutation info: Added sharex = False (Call plt.subplots)
+# Mutation info: Added squeeze = True (Call plt.subplots)

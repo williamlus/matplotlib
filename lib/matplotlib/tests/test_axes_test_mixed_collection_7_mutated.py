@@ -166,6 +166,6 @@ def test_mixed_collection_7_mutated():
     ax.patch.set_color('0.5')
     ax.add_collection(p1)
     ax.add_collection(p2)
-    ax.set_xlim(0, 16, emit=False)
+    ax.set_xlim(0, 16, emit=True)
     ax.set_ylim(0, 16)
-# Mutation info: Added emit = False (Call ax.set_xlim)
+# Mutation info: Added emit = True (Call ax.set_xlim)

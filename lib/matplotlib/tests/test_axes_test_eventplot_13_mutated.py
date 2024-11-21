@@ -174,9 +174,9 @@ def test_eventplot_13_mutated():
     num_collections = len(colls)
     assert num_collections == num_datasets
     data = {'pos': data, 'c': colors, 'lo': lineoffsets, 'll': linelengths}
-    fig = plt.figure(layout=None)
+    fig = plt.figure(layout='none')
     axobj = fig.add_subplot()
     colls = axobj.eventplot('pos', colors='c', lineoffsets='lo', linelengths='ll', data=data)
     num_collections = len(colls)
     assert num_collections == num_datasets
-# Mutation info: Added layout = None (Call plt.figure)
+# Mutation info: Added layout = none (Call plt.figure)

@@ -10,5 +10,5 @@ from matplotlib.ticker import FuncFormatter
 @image_comparison(['bbox_inches_tight_suptile_non_default.png'], savefig_kwarg={'bbox_inches': 'tight'}, tol=0.1)
 def test_bbox_inches_tight_suptitle_non_default_17_mutated():
     fig, ax = plt.subplots()
-    fig.suptitle('Booo', x=0.5, y=1.1, va='bottom')
-# Mutation info: Added va = bottom (Call fig.suptitle)
+    fig.suptitle('Booo', x=0.5, y=1.1, horizontalalignment='left')
+# Mutation info: Added horizontalalignment = left (Call fig.suptitle)

@@ -20,7 +20,7 @@ def test_ParasiteAxesAuxTrans_24_mutated():
     fig = plt.figure()
     for i, name in enumerate(funcnames):
         ax1 = SubplotHost(fig, 1, 3, i + 1)
-        fig.add_subplot(ax1, polar=True)
+        fig.add_subplot(ax1, projection='lambert')
         ax2 = ax1.get_aux_axes(IdentityTransform(), viewlim_mode=None)
         if name.startswith('pcolor'):
             getattr(ax2, name)(xx, yy, data[:-1, :-1])
@@ -29,4 +29,4 @@ def test_ParasiteAxesAuxTrans_24_mutated():
         ax1.set_xlim((0, 5))
         ax1.set_ylim((0, 5))
     ax2.contour(xx, yy, data, colors='k')
-# Mutation info: Added polar = True (Call fig.add_subplot)
+# Mutation info: Added projection = lambert (Call fig.add_subplot)

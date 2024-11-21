@@ -6,7 +6,7 @@ from mpl_toolkits.axisartist.axis_artist import AxisArtist, AxisLabel, LabelBase
 @image_comparison(['axis_artist_ticklabels.png'], style='default')
 def test_ticklabels_2_mutated():
     plt.rcParams['text.kerning_factor'] = 6
-    fig, ax = plt.subplots(squeeze=True)
+    fig, ax = plt.subplots(sharey=False)
     ax.xaxis.set_visible(False)
     ax.yaxis.set_visible(False)
     ax.plot([0.2, 0.4], [0.5, 0.5], 'o')
@@ -27,4 +27,4 @@ def test_ticklabels_2_mutated():
     ax.add_artist(axislabel)
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
-# Mutation info: Added squeeze = True (Call plt.subplots)
+# Mutation info: Added sharey = False (Call plt.subplots)

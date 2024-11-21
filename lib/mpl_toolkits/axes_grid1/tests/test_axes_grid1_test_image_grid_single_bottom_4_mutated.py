@@ -23,10 +23,10 @@ from numpy.testing import assert_array_equal, assert_array_almost_equal
 @image_comparison(['image_grid_single_bottom_label_mode_1.png'], style='mpl20', savefig_kwarg={'bbox_inches': 'tight'})
 def test_image_grid_single_bottom_4_mutated():
     imdata = np.arange(100).reshape((10, 10))
-    fig = plt.figure(1, (2.5, 1.5), clear=False)
+    fig = plt.figure(1, (2.5, 1.5), clear=True)
     grid = ImageGrid(fig, (0, 0, 1, 1), nrows_ncols=(1, 3), axes_pad=(0.2, 0.15), cbar_mode='single', cbar_pad=0.3, cbar_location='bottom', cbar_size='10%', label_mode='1')
     assert type(grid.get_divider()) is Divider
     for i in range(3):
         im = grid[i].imshow(imdata, interpolation='none')
     grid.cbar_axes[0].colorbar(im)
-# Mutation info: Added clear = False (Call plt.figure)
+# Mutation info: Added clear = True (Call plt.figure)

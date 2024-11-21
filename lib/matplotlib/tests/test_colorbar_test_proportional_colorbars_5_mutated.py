@@ -82,9 +82,9 @@ def test_proportional_colorbars_5_mutated():
     norm = mcolors.BoundaryNorm(levels, cmap.N)
     extends = ['neither', 'both']
     spacings = ['uniform', 'proportional']
-    fig, axs = plt.subplots(2, 2, sharex=False)
+    fig, axs = plt.subplots(2, 2, sharey=True)
     for i in range(2):
         for j in range(2):
             CS3 = axs[i, j].contourf(X, Y, Z, levels, cmap=cmap, norm=norm, extend=extends[i])
             fig.colorbar(CS3, spacing=spacings[j], ax=axs[i, j])
-# Mutation info: Added sharex = False (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

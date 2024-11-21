@@ -173,6 +173,6 @@ def test_pcolor_datetime_axis_81_mutated():
     plt.pcolor(x, y, z)
     for ax in fig.get_axes():
         for label in ax.get_xticklabels():
-            label.set_ha('left')
+            label.set_ha('center')
             label.set_rotation(30)
-# Mutation info: (0-th Positional) align = 'right' -> align = left (Call label.set_ha)
+# Mutation info: (0-th Positional) align = 'right' -> align = center (Call label.set_ha)

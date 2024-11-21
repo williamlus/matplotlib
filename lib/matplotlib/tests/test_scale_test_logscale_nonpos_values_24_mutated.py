@@ -22,11 +22,11 @@ def test_logscale_nonpos_values_24_mutated():
     ydata = np.exp(-xdata)
     edata = 0.2 * (10 - xdata) * np.cos(5 * xdata) * np.exp(-xdata)
     ax3.fill_between(xdata, ydata - edata, ydata + edata)
-    ax3.set_yscale('linear')
+    ax3.set_yscale('log')
     x = np.logspace(-1, 1)
     y = x ** 3
     yerr = x ** 2
     ax4.errorbar(x, y, yerr=yerr)
     ax4.set_yscale('log')
     ax4.set_xscale('log')
-# Mutation info: (0-th Positional) value = 'log' -> value = linear (Call ax3.set_yscale)
+# Mutation info: (0-th Positional) value = 'log' -> value = log (Call ax4.set_yscale)

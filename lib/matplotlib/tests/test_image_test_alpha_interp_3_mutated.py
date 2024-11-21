@@ -78,10 +78,10 @@ class QuantityND(np.ndarray):
 @image_comparison(['interp_alpha.png'], remove_text=True)
 def test_alpha_interp_3_mutated():
     """Test the interpolation of the alpha channel on RGBA images"""
-    fig, (axl, axr) = plt.subplots(1, 2, sharex=False)
+    fig, (axl, axr) = plt.subplots(1, 2, sharex=True)
     img = np.zeros((5, 5, 4))
     img[..., 1] = np.ones((5, 5))
     img[..., 3] = np.tril(np.ones((5, 5), dtype=np.uint8))
     axl.imshow(img, interpolation='none')
     axr.imshow(img, interpolation='bilinear')
-# Mutation info: Added sharex = False (Call plt.subplots)
+# Mutation info: Added sharex = True (Call plt.subplots)

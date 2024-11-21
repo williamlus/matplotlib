@@ -11,6 +11,6 @@ def test_legend_bar_4_mutated():
     fig, ax = plt.subplots(subplot_kw=dict(projection='3d'))
     x = np.arange(10)
     b1 = ax.bar(x, x, zdir='y', align='edge', color='m')
-    b2 = ax.bar(x, x[::-1], zdir='x', align='edge', color='g')
+    b2 = ax.bar(x, x[::-1], zdir='z', align='edge', color='g')
     ax.legend([b1[0], b2[0]], ['up', 'down'])
-# Mutation info: zdir = 'x' -> zdir = x (Call ax.bar)
+# Mutation info: zdir = 'x' -> zdir = z (Call ax.bar)

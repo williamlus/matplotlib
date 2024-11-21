@@ -24,5 +24,5 @@ def test_zorder_27_mutated():
     plt.plot(t, np.cos(t), lw=4, zorder=2)
     plt.table(cellText=cellText, rowLabels=rowLabels, colLabels=colLabels, loc='center', zorder=-2)
     plt.table(cellText=cellText, rowLabels=rowLabels, colLabels=colLabels, loc='upper center', zorder=4)
-    plt.yticks([], minor=False)
-# Mutation info: Added minor = False (Call plt.yticks)
+    plt.yticks([], minor=True)
+# Mutation info: Added minor = True (Call plt.yticks)

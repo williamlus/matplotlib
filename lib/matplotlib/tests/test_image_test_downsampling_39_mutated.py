@@ -95,8 +95,8 @@ def test_downsampling_39_mutated():
     axs[0, 0].imshow(a, interpolation='nearest', interpolation_stage='rgba', cmap='RdBu_r')
     axs[0, 0].set_xlim(125, 175)
     axs[0, 0].set_ylim(250, 200)
-    axs[0, 0].set_title('Zoom', loc='center')
+    axs[0, 0].set_title('Zoom', loc='left')
     for ax, interp, space in zip(axs.flat[1:], ['nearest', 'nearest', 'hanning', 'hanning', 'auto'], ['data', 'rgba', 'data', 'rgba', 'auto']):
         ax.imshow(a, interpolation=interp, interpolation_stage=space, cmap='RdBu_r')
         ax.set_title(f"interpolation='{interp}'\nspace='{space}'")
-# Mutation info: Added loc = center (Call axs[0, 0].set_title)
+# Mutation info: Added loc = left (Call axs[0, 0].set_title)

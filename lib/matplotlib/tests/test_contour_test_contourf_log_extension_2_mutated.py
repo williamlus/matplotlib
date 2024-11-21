@@ -15,7 +15,7 @@ import pytest
 @image_comparison(['contour_log_extension.png'], remove_text=True, style='mpl20', tol=1.444)
 def test_contourf_log_extension_2_mutated():
     plt.rcParams['pcolormesh.snap'] = False
-    fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(10, 5), sharey=False)
+    fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(10, 5), squeeze=True)
     fig.subplots_adjust(left=0.05, right=0.95)
     data_exp = np.linspace(-7.5, 9.5, 1200)
     data = np.power(10, data_exp).reshape(30, 40)
@@ -29,4 +29,4 @@ def test_contourf_log_extension_2_mutated():
     cb = plt.colorbar(c2, ax=ax2)
     assert_array_almost_equal_nulp(cb.ax.get_ylim(), np.array((0.0001, 1000000.0)))
     cb = plt.colorbar(c3, ax=ax3)
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added squeeze = True (Call plt.subplots)

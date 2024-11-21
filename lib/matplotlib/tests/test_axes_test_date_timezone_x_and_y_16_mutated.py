@@ -157,10 +157,10 @@ def test_date_timezone_x_and_y_16_mutated():
     UTC = datetime.timezone.utc
     time_index = [datetime.datetime(2016, 2, 22, hour=x, tzinfo=UTC) for x in range(3)]
     plt.figure(figsize=(20, 12))
-    plt.subplot(2, 1, 1, polar=False)
+    plt.subplot(2, 1, 1, projection=None)
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         plt.plot_date(time_index, time_index, tz='UTC', ydate=True)
     plt.subplot(2, 1, 2)
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         plt.plot_date(time_index, time_index, tz='US/Eastern', ydate=True)
-# Mutation info: Added polar = False (Call plt.subplot)
+# Mutation info: Added projection = None (Call plt.subplot)

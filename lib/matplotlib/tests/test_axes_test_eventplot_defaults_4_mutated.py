@@ -162,7 +162,7 @@ def test_eventplot_defaults_4_mutated():
     data1 = np.random.random([32, 20]).tolist()
     data2 = np.random.random([6, 20]).tolist()
     data = data1 + data2
-    fig = plt.figure(layout='tight')
+    fig = plt.figure(layout='constrained')
     axobj = fig.add_subplot()
     axobj.eventplot(data)
-# Mutation info: Added layout = tight (Call plt.figure)
+# Mutation info: Added layout = constrained (Call plt.figure)

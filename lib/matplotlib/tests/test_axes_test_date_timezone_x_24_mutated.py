@@ -159,7 +159,7 @@ def test_date_timezone_x_24_mutated():
     plt.subplot(2, 1, 1)
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         plt.plot_date(time_index, [3] * 3, tz='Canada/Eastern')
-    plt.subplot(2, 1, 2, projection=None)
+    plt.subplot(2, 1, 2, polar=True)
     with pytest.warns(mpl.MatplotlibDeprecationWarning):
         plt.plot_date(time_index, [3] * 3, tz='UTC')
-# Mutation info: Added projection = None (Call plt.subplot)
+# Mutation info: Added polar = True (Call plt.subplot)

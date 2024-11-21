@@ -36,7 +36,7 @@ def assert_bbox_eq(bbox1, bbox2):
 
 @image_comparison(['pre_transform_data'], remove_text=True, style='mpl20', tol=0.05)
 def test_pre_transform_plotting_8_mutated():
-    ax = plt.axes(projection=None)
+    ax = plt.axes(projection='aitoff')
     times10 = mtransforms.Affine2D().scale(10)
     ax.contourf(np.arange(48).reshape(6, 8), transform=times10 + ax.transData)
     ax.pcolormesh(np.linspace(0, 4, 7), np.linspace(5.5, 8, 9), np.arange(48).reshape(8, 6), transform=times10 + ax.transData)
@@ -50,4 +50,4 @@ def test_pre_transform_plotting_8_mutated():
     u, v = (u[::3, ::3], v[::3, ::3])
     ax.quiver(x, y + 5, u, v, transform=times10 + ax.transData)
     ax.barbs(x - 3, y + 5, u ** 2, v ** 2, transform=times10 + ax.transData)
-# Mutation info: Added projection = None (Call plt.axes)
+# Mutation info: Added projection = aitoff (Call plt.axes)

@@ -47,9 +47,9 @@ def _test_rrulewrapper(attach_tz, get_tz):
 def test_date_inverted_limit_5_mutated():
     t0 = datetime.datetime(2009, 1, 20)
     tf = datetime.datetime(2009, 1, 31)
-    fig, ax = plt.subplots(sharex=False)
+    fig, ax = plt.subplots(sharey=True)
     ax.axhline(t0, color='blue', lw=3)
     ax.set_ylim(t0 - datetime.timedelta(days=5), tf + datetime.timedelta(days=5))
     ax.invert_yaxis()
     fig.subplots_adjust(left=0.25)
-# Mutation info: Added sharex = False (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

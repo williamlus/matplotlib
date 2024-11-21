@@ -155,10 +155,10 @@ def color_boxes(fig, ax):
 @image_comparison(['inset_polar.png'], remove_text=True, style='mpl20')
 def test_inset_polar_13_mutated():
     _, ax = plt.subplots()
-    axins = ax.inset_axes([0.5, 0.1, 0.45, 0.45], polar=False)
+    axins = ax.inset_axes([0.5, 0.1, 0.45, 0.45], polar=True, projection='lambert')
     assert isinstance(axins, PolarAxes)
     r = np.arange(0, 2, 0.01)
     theta = 2 * np.pi * r
     ax.plot(theta, r)
     axins.plot(theta, r)
-# Mutation info: polar = True -> polar = False (Call ax.inset_axes)
+# Mutation info: Added projection = lambert (Call ax.inset_axes)

@@ -78,7 +78,7 @@ def test_colorbar_extend_drawedges_14_mutated():
         if orientation == 'horizontal':
             axs = subfig.subplots(4, 1)
         else:
-            axs = subfig.subplots(1, 4, sharey=False)
+            axs = subfig.subplots(1, 4, sharex=False)
         fig.subplots_adjust(left=0.05, bottom=0.05, right=0.95, top=0.95)
         for ax, (extend, coloroffset, res) in zip(axs, params):
             cmap = mpl.colormaps['viridis']
@@ -93,4 +93,4 @@ def test_colorbar_extend_drawedges_14_mutated():
                 ax.set_ylim(1.1, 2.9)
                 res = np.array(res)[:, :, [1, 0]]
             np.testing.assert_array_equal(cbar.dividers.get_segments(), res)
-# Mutation info: Added sharey = False (Call subfig.subplots)
+# Mutation info: Added sharex = False (Call subfig.subplots)

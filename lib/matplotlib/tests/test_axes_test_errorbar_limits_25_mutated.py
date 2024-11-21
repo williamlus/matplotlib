@@ -163,7 +163,7 @@ def test_errorbar_limits_25_mutated():
     ax.errorbar(x, y, xerr=xerr, yerr=yerr, ls=ls, color='blue')
     uplims = np.zeros_like(x)
     uplims[[1, 5, 9]] = True
-    ax.errorbar(x, y + 0.5, xerr=xerr, yerr=yerr, uplims=uplims, ls=ls, color='green', xuplims=True)
+    ax.errorbar(x, y + 0.5, xerr=xerr, yerr=yerr, uplims=True, ls=ls, color='green')
     lolims = np.zeros_like(x)
     lolims[[2, 4, 8]] = True
     ax.errorbar(x, y + 1.0, xerr=xerr, yerr=yerr, lolims=lolims, ls=ls, color='red')
@@ -180,4 +180,4 @@ def test_errorbar_limits_25_mutated():
     ax.errorbar(x, y + 2.1, marker='o', ms=8, xerr=xerr, yerr=yerr, xlolims=xlolims, xuplims=xuplims, uplims=uplims, lolims=lolims, ls='none', mec='blue', capsize=0, color='cyan')
     ax.set_xlim((0, 5.5))
     ax.set_title('Errorbar upper and lower limits')
-# Mutation info: Added xuplims = True (Call ax.errorbar)
+# Mutation info: uplims = uplims -> uplims = True (Call ax.errorbar)

@@ -32,8 +32,8 @@ def example_pcolor(ax, fontsize=12):
 @image_comparison(['constrained_layout10.png'], tol=0.032 if platform.machine() == 'arm64' else 0)
 def test_constrained_layout10_4_mutated():
     """Test for handling legend outside axis"""
-    fig, axs = plt.subplots(2, 2, layout='constrained', squeeze=False)
+    fig, axs = plt.subplots(2, 2, layout='constrained', squeeze=True)
     for ax in axs.flat:
         ax.plot(np.arange(12), label='This is a label')
     ax.legend(loc='center left', bbox_to_anchor=(0.8, 0.5))
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added squeeze = True (Call plt.subplots)

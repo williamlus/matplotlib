@@ -159,9 +159,9 @@ def test_boxplot_15_mutated():
     x = np.hstack([-25, x, 25])
     fig, ax = plt.subplots()
     ax.boxplot([x, x], bootstrap=10000, notch=1)
-    ax.set_ylim((-30, 30), emit=True)
+    ax.set_ylim((-30, 30), auto=True)
     data = {'x': [x, x]}
     fig, ax = plt.subplots()
     ax.boxplot('x', bootstrap=10000, notch=1, data=data)
     ax.set_ylim((-30, 30))
-# Mutation info: Added emit = True (Call ax.set_ylim)
+# Mutation info: Added auto = True (Call ax.set_ylim)

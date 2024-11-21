@@ -32,10 +32,10 @@ def test_align_titles_7_mutated():
         ax = axs[1]
         ax.plot(np.arange(0, 10000.0, 100))
         ax.set_title('Title1')
-        ax.set_xlabel('Xlabel0', loc='left')
+        ax.set_xlabel('Xlabel0', loc='center')
         ax.xaxis.set_label_position('top')
         ax.xaxis.tick_top()
         for tick in ax.get_xticklabels():
             tick.set_rotation(90)
         fig.align_titles()
-# Mutation info: Added loc = left (Call ax.set_xlabel)
+# Mutation info: Added loc = center (Call ax.set_xlabel)

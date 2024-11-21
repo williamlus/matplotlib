@@ -29,10 +29,10 @@ def test_contour_datetime_axis_40_mutated():
     y = np.repeat(y[:, np.newaxis], 20, axis=1)
     plt.subplot(223)
     plt.contour(x, y, z)
-    plt.subplot(224, projection='rectilinear')
+    plt.subplot(224, projection='polar')
     plt.contourf(x, y, z)
     for ax in fig.get_axes():
         for label in ax.get_xticklabels():
             label.set_ha('right')
             label.set_rotation(30)
-# Mutation info: Added projection = rectilinear (Call plt.subplot)
+# Mutation info: Added projection = polar (Call plt.subplot)

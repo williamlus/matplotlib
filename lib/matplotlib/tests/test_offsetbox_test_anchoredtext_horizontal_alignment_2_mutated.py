@@ -13,11 +13,11 @@ _Params = namedtuple('_Params', 'wd_list, total, sep, expected')
 
 @image_comparison(['anchoredtext_align.png'], remove_text=True, style='mpl20')
 def test_anchoredtext_horizontal_alignment_2_mutated():
-    fig, ax = plt.subplots(sharex=True)
+    fig, ax = plt.subplots(sharey=True)
     text0 = AnchoredText('test\ntest long text', loc='center left', pad=0.2, prop={'ha': 'left'})
     ax.add_artist(text0)
     text1 = AnchoredText('test\ntest long text', loc='center', pad=0.2, prop={'ha': 'center'})
     ax.add_artist(text1)
     text2 = AnchoredText('test\ntest long text', loc='center right', pad=0.2, prop={'ha': 'right'})
     ax.add_artist(text2)
-# Mutation info: Added sharex = True (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

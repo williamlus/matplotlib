@@ -159,5 +159,5 @@ def test_hist_stacked_weighted_14_mutated():
     w1 = np.linspace(0.01, 3.5, 50)
     w2 = np.linspace(0.05, 2.0, 20)
     fig, ax = plt.subplots()
-    ax.hist((d1, d2), weights=(w1, w2), histtype='stepfilled', stacked=True, cumulative=False)
-# Mutation info: Added cumulative = False (Call ax.hist)
+    ax.hist((d1, d2), weights=(w1, w2), histtype='stepfilled', stacked=True, orientation='vertical')
+# Mutation info: Added orientation = vertical (Call ax.hist)

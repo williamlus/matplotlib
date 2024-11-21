@@ -158,5 +158,5 @@ def test_hist_step_6_mutated():
     fig, ax = plt.subplots()
     ax.hist(d1, histtype='step')
     ax.set_ylim(0, 10)
-    ax.set_xlim(-1, 5, emit=True)
-# Mutation info: Added emit = True (Call ax.set_xlim)
+    ax.set_xlim(-1, 5, auto=False)
+# Mutation info: Added auto = False (Call ax.set_xlim)

@@ -48,6 +48,6 @@ def test_pre_transform_plotting_24_mutated():
     ax.streamplot(x, y, u, v, transform=times10 + ax.transData, linewidth=np.hypot(u, v))
     x, y = (x[::3], y[::3])
     u, v = (u[::3, ::3], v[::3, ::3])
-    ax.quiver(x, y + 5, u, v, transform=times10 + ax.transData, scale_units='y')
+    ax.quiver(x, y + 5, u, v, transform=times10 + ax.transData, scale_units='inches')
     ax.barbs(x - 3, y + 5, u ** 2, v ** 2, transform=times10 + ax.transData)
-# Mutation info: Added scale_units = y (Call ax.quiver)
+# Mutation info: Added scale_units = inches (Call ax.quiver)

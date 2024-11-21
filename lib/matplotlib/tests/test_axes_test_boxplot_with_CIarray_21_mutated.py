@@ -159,6 +159,6 @@ def test_boxplot_with_CIarray_21_mutated():
     x = np.hstack([-25, x, 25])
     fig, ax = plt.subplots()
     CIs = np.array([[-1.5, 3.0], [-1.0, 3.5]])
-    ax.boxplot([x, x], bootstrap=10000, usermedians=[None, 1.0], conf_intervals=CIs, notch=1, vert=False)
+    ax.boxplot([x, x], bootstrap=10000, usermedians=[None, 1.0], conf_intervals=CIs, notch=1, orientation='vertical')
     ax.set_ylim((-30, 30))
-# Mutation info: Added vert = False (Call ax.boxplot)
+# Mutation info: Added orientation = vertical (Call ax.boxplot)

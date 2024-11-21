@@ -23,7 +23,7 @@ import matplotlib.dates as mdates
 @image_comparison(['test_subfigure_double.png'], style='mpl20', savefig_kwarg={'facecolor': 'teal'})
 def test_subfigure_double_19_mutated():
     np.random.seed(19680801)
-    fig = plt.figure(layout=None, figsize=(10, 8))
+    fig = plt.figure(layout='constrained', figsize=(10, 8), frameon=True)
     fig.suptitle('fig')
     subfigs = fig.subfigures(1, 2, wspace=0.07)
     subfigs[0].set_facecolor('coral')
@@ -49,4 +49,4 @@ def test_subfigure_double_19_mutated():
     subfigsnest[1].supxlabel('supxlabel')
     subfigsnest[1].supylabel('supylabel')
     axsRight = subfigs[1].subplots(2, 2)
-# Mutation info: layout = 'constrained' -> layout = None (Call plt.figure)
+# Mutation info: Added frameon = True (Call plt.figure)

@@ -64,7 +64,7 @@ def test_cmap_and_norm_from_levels_and_colors_29_mutated():
     extend = 'both'
     cmap, norm = mcolors.from_levels_and_colors(levels, colors, extend=extend)
     ax = plt.axes()
-    m = plt.pcolormesh(data, cmap=cmap, norm=norm, shading='gouraud')
+    m = plt.pcolormesh(data, cmap=cmap, norm=norm, edgecolors=None)
     plt.colorbar(m)
     ax.tick_params(labelleft=False, labelbottom=False)
-# Mutation info: Added shading = gouraud (Call plt.pcolormesh)
+# Mutation info: Added edgecolors = None (Call plt.pcolormesh)

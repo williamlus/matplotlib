@@ -163,9 +163,9 @@ def test_markevery_linear_scales_zoomed_8_mutated():
     for i, case in enumerate(cases):
         row = i // cols
         col = i % cols
-        plt.subplot(gs[row, col], projection='mollweide')
+        plt.subplot(gs[row, col], projection='aitoff')
         plt.title('markevery=%s' % str(case))
         plt.plot(x, y, 'o', ls='-', ms=4, markevery=case)
         plt.xlim((6, 6.7))
         plt.ylim((1.1, 1.7))
-# Mutation info: Added projection = mollweide (Call plt.subplot)
+# Mutation info: Added projection = aitoff (Call plt.subplot)

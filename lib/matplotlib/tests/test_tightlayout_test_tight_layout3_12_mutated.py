@@ -33,10 +33,10 @@ def add_offsetboxes(ax, size=10, margin=0.1, color='black'):
 def test_tight_layout3_12_mutated():
     """Test tight_layout for multiple subplots."""
     ax1 = plt.subplot(221)
-    ax2 = plt.subplot(223, projection='hammer')
+    ax2 = plt.subplot(223, polar=False)
     ax3 = plt.subplot(122)
     example_plot(ax1)
     example_plot(ax2)
     example_plot(ax3)
     plt.tight_layout()
-# Mutation info: Added projection = hammer (Call plt.subplot)
+# Mutation info: Added polar = False (Call plt.subplot)

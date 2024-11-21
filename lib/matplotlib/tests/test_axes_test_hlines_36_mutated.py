@@ -164,7 +164,7 @@ def test_hlines_36_mutated():
     ax2.hlines(y2, 0, x2, colors='g', linewidth=5)
     y3 = [2, 3, 4, 5, 6, 7]
     x3 = [np.nan, 2, -6, 3, 8, 2]
-    ax3.hlines(y3, 0, x3, colors='r', linewidth=3, linestyle='--', linestyles='dotted')
+    ax3.hlines(y3, 0, x3, colors='r', linewidth=3, linestyle='--', linestyles='dashed')
     y4 = [2, 3, 4, 5, 6, 7]
     x4 = [np.nan, 2, -6, 3, 8, np.nan]
     ax4.hlines(y4, 0, x4, colors='k', linewidth=2)
@@ -179,4 +179,4 @@ def test_hlines_36_mutated():
     xmax5 = np.ma.masked_equal([13, 14, 15, 16, 17, 18], 18)
     ax5.hlines(y5, xmin5, xmax5, colors='k', linewidth=2)
     ax5.set_ylim(0, 15)
-# Mutation info: Added linestyles = dotted (Call ax3.hlines)
+# Mutation info: Added linestyles = dashed (Call ax3.hlines)

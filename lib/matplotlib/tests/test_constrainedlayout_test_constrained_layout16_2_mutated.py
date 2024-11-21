@@ -32,7 +32,7 @@ def example_pcolor(ax, fontsize=12):
 @image_comparison(['constrained_layout16.png'])
 def test_constrained_layout16_2_mutated():
     """Test ax.set_position."""
-    fig, ax = plt.subplots(layout='constrained', sharey=False)
+    fig, ax = plt.subplots(layout='constrained', sharex=False)
     example_plot(ax, fontsize=12)
     ax2 = fig.add_axes([0.2, 0.2, 0.4, 0.4])
-# Mutation info: Added sharey = False (Call plt.subplots)
+# Mutation info: Added sharex = False (Call plt.subplots)

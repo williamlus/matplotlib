@@ -158,10 +158,10 @@ def test_boxplot_22_mutated():
     x = np.linspace(-7, 7, 140)
     x = np.hstack([-25, x, 25])
     fig, ax = plt.subplots()
-    ax.boxplot([x, x], bootstrap=10000, notch=1, patch_artist=False)
+    ax.boxplot([x, x], bootstrap=10000, notch=1, autorange=False)
     ax.set_ylim((-30, 30))
     data = {'x': [x, x]}
     fig, ax = plt.subplots()
     ax.boxplot('x', bootstrap=10000, notch=1, data=data)
     ax.set_ylim((-30, 30))
-# Mutation info: Added patch_artist = False (Call ax.boxplot)
+# Mutation info: Added autorange = False (Call ax.boxplot)

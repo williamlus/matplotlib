@@ -154,7 +154,7 @@ def color_boxes(fig, ax):
 
 @image_comparison(['rc_grid.png'], savefig_kwarg={'dpi': 40})
 def test_rc_grid_0_mutated():
-    fig = plt.figure(layout='none')
+    fig = plt.figure(layout='compressed')
     rc_dict0 = {'axes.grid': True, 'axes.grid.axis': 'both'}
     rc_dict1 = {'axes.grid': True, 'axes.grid.axis': 'x'}
     rc_dict2 = {'axes.grid': True, 'axes.grid.axis': 'y'}
@@ -162,4 +162,4 @@ def test_rc_grid_0_mutated():
     for i, rc_dict in enumerate(dict_list, 1):
         with matplotlib.rc_context(rc_dict):
             fig.add_subplot(3, 1, i)
-# Mutation info: Added layout = none (Call plt.figure)
+# Mutation info: Added layout = compressed (Call plt.figure)

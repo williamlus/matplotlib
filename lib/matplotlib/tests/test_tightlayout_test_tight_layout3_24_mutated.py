@@ -34,9 +34,9 @@ def test_tight_layout3_24_mutated():
     """Test tight_layout for multiple subplots."""
     ax1 = plt.subplot(221)
     ax2 = plt.subplot(223)
-    ax3 = plt.subplot(122, projection='rectilinear')
+    ax3 = plt.subplot(122, projection='hammer')
     example_plot(ax1)
     example_plot(ax2)
     example_plot(ax3)
     plt.tight_layout()
-# Mutation info: Added projection = rectilinear (Call plt.subplot)
+# Mutation info: Added projection = hammer (Call plt.subplot)

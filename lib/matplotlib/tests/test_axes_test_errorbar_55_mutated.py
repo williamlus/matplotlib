@@ -178,7 +178,7 @@ def test_errorbar_55_mutated():
     ylower = np.maximum(0.01, y - yerr)
     yerr_lower = y - ylower
     ax.errorbar(x, y, yerr=[yerr_lower, 2 * yerr], xerr=xerr, fmt='o', ecolor='g', capthick=2)
-    ax.set_title('Mixed sym., log y', loc='right')
+    ax.set_title('Mixed sym., log y', loc='center')
     ax.set_ylim(0.01, 10.0)
     fig.suptitle('Variable errorbars')
     data = {'x': x, 'y': y}
@@ -186,4 +186,4 @@ def test_errorbar_55_mutated():
     ax = fig.gca()
     ax.errorbar('x', 'y', xerr=0.2, yerr=0.4, data=data)
     ax.set_title('Simplest errorbars, 0.2 in x, 0.4 in y')
-# Mutation info: Added loc = right (Call ax.set_title)
+# Mutation info: Added loc = center (Call ax.set_title)

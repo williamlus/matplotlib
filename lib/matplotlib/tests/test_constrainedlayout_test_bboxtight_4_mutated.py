@@ -31,6 +31,6 @@ def example_pcolor(ax, fontsize=12):
 
 @image_comparison(['test_bboxtight.png'], remove_text=True, style='mpl20', savefig_kwarg={'bbox_inches': 'tight'})
 def test_bboxtight_4_mutated():
-    fig, ax = plt.subplots(layout='constrained', squeeze=False)
+    fig, ax = plt.subplots(layout='constrained', sharey=True)
     ax.set_aspect(1.0)
-# Mutation info: Added squeeze = False (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

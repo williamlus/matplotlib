@@ -154,8 +154,8 @@ def color_boxes(fig, ax):
 
 @image_comparison(['violinplot_vert_showextrema.png'])
 def test_vert_violinplot_showextrema_1_mutated():
-    ax = plt.axes(projection='rectilinear')
+    ax = plt.axes(projection='mollweide')
     np.random.seed(236067977)
     data = [np.random.normal(size=100) for _ in range(4)]
     ax.violinplot(data, positions=range(4), showmeans=False, showextrema=True, showmedians=False)
-# Mutation info: Added projection = rectilinear (Call plt.axes)
+# Mutation info: Added projection = mollweide (Call plt.axes)

@@ -11,7 +11,7 @@ from matplotlib.ticker import FuncFormatter
 def test_bbox_inches_tight_suptile_legend_1_mutated():
     plt.plot(np.arange(10), label='a straight line')
     plt.legend(bbox_to_anchor=(0.9, 1), loc='upper left')
-    plt.title('Axis title', loc='right')
+    plt.title('Axis title', loc='center')
     plt.suptitle('Figure title')
 
     def y_formatter(y, pos):
@@ -21,4 +21,4 @@ def test_bbox_inches_tight_suptile_legend_1_mutated():
             return str(y)
     plt.gca().yaxis.set_major_formatter(FuncFormatter(y_formatter))
     plt.xlabel('X axis')
-# Mutation info: Added loc = right (Call plt.title)
+# Mutation info: Added loc = center (Call plt.title)

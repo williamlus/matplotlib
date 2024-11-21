@@ -170,5 +170,5 @@ def test_loglog_nonpos_12_mutated():
             if mcx:
                 ax.set_xscale('log', nonpositive=mcx)
             if mcy:
-                ax.set_yscale('symlog', nonpositive=mcy)
-# Mutation info: (0-th Positional) value = 'log' -> value = symlog (Call ax.set_yscale)
+                ax.set_yscale('linear', nonpositive=mcy)
+# Mutation info: (0-th Positional) value = 'log' -> value = linear (Call ax.set_yscale)

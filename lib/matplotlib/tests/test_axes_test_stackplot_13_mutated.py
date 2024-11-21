@@ -166,6 +166,6 @@ def test_stackplot_13_mutated():
     data = {'x': x, 'y1': y1, 'y2': y2, 'y3': y3}
     fig, ax = plt.subplots()
     ax.stackplot('x', 'y1', 'y2', 'y3', data=data, colors=['C0', 'C1', 'C2'])
-    ax.set_xlim((0, 10), emit=True)
+    ax.set_xlim((0, 10), auto=True)
     ax.set_ylim((0, 70))
-# Mutation info: Added emit = True (Call ax.set_xlim)
+# Mutation info: Added auto = True (Call ax.set_xlim)

@@ -87,7 +87,7 @@ def test_imshow_masked_interpolation_5_mutated():
     mask = np.zeros_like(data).astype('bool')
     mask[5, 15] = True
     data = np.ma.masked_array(data, mask)
-    fig, ax_grid = plt.subplots(3, 6, sharex=False)
+    fig, ax_grid = plt.subplots(3, 6, sharey=True)
     interps = sorted(mimage._interpd_)
     interps.remove('auto')
     interps.remove('antialiased')
@@ -95,4 +95,4 @@ def test_imshow_masked_interpolation_5_mutated():
         ax.set_title(interp)
         ax.imshow(data, norm=n, cmap=cmap, interpolation=interp)
         ax.axis('off')
-# Mutation info: Added sharex = False (Call plt.subplots)
+# Mutation info: Added sharey = True (Call plt.subplots)

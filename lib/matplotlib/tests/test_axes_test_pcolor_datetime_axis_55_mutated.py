@@ -164,7 +164,7 @@ def test_pcolor_datetime_axis_55_mutated():
     plt.subplot(221)
     plt.pcolor(x[:-1], y[:-1], z[:-1, :-1])
     plt.subplot(222)
-    plt.pcolor(x, y, z, shading='auto')
+    plt.pcolor(x, y, z, shading='nearest')
     x = np.repeat(x[np.newaxis], 21, axis=0)
     y = np.repeat(y[:, np.newaxis], 21, axis=1)
     plt.subplot(223)
@@ -175,4 +175,4 @@ def test_pcolor_datetime_axis_55_mutated():
         for label in ax.get_xticklabels():
             label.set_ha('right')
             label.set_rotation(30)
-# Mutation info: Added shading = auto (Call plt.pcolor)
+# Mutation info: Added shading = nearest (Call plt.pcolor)

@@ -84,5 +84,5 @@ def test_mask_image_20_mutated():
     A = np.zeros((5, 5), dtype=bool)
     A[1:2, 1:2] = True
     A = np.ma.masked_array(np.ones((5, 5), dtype=np.uint16), A)
-    ax2.imshow(A, interpolation='nearest', resample=False)
-# Mutation info: Added resample = False (Call ax2.imshow)
+    ax2.imshow(A, interpolation='nearest', origin='upper')
+# Mutation info: Added origin = upper (Call ax2.imshow)
