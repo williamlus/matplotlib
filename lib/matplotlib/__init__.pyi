@@ -26,6 +26,8 @@ __all__ = [
     "interactive",
     "is_interactive",
     "colormaps",
+    "multivar_colormaps",
+    "bivar_colormaps",
     "color_sequences",
 ]
 
@@ -37,7 +39,9 @@ import contextlib
 from packaging.version import Version
 
 from matplotlib._api import MatplotlibDeprecationWarning
-from typing import Any, NamedTuple
+from typing import Any, Literal, NamedTuple, overload
+from matplotlib.typing import LogLevel
+
 
 class _VersionInfo(NamedTuple):
     major: int
@@ -50,7 +54,7 @@ __bibtex__: str
 __version__: str
 __version_info__: _VersionInfo
 
-def set_loglevel(level: str) -> None: ...
+def set_loglevel(level: LogLevel) -> None: ...
 
 class _ExecInfo(NamedTuple):
     executable: str
@@ -104,7 +108,10 @@ def rc_context(
     rc: dict[str, Any] | None = ..., fname: str | Path | os.PathLike | None = ...
 ) -> Generator[None, None, None]: ...
 def use(backend: str, *, force: bool = ...) -> None: ...
-def get_backend() -> str: ...
+@overload
+def get_backend(*, auto_select: Literal[True] = True) -> str: ...
+@overload
+def get_backend(*, auto_select: Literal[False]) -> str | None: ...
 def interactive(b: bool) -> None: ...
 def is_interactive() -> bool: ...
 

@@ -159,10 +159,10 @@ Passing ``None`` as ``rotation_mode`` to `.Text` (the default value) or passing 
 `.Text.set_rotation_mode` will make `.Text.get_rotation_mode` return ``"default"``
 instead of ``None``. The behaviour otherwise is the same.
 
-PostScript paper type adds option to use figure size
+PostScript paper size adds option to use figure size
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The :rc:`ps.papertype` rcParam can now be set to ``'figure'``, which will use
+The :rc:`ps.papersize` rcParam can now be set to ``'figure'``, which will use
 a paper size that corresponds exactly with the size of the figure that is being
 saved.
 
@@ -171,3 +171,22 @@ saved.
 
 Previously, *mincnt* was inclusive with no *C* provided but exclusive when *C* is provided.
 It is now inclusive of *mincnt* in both cases.
+
+
+``matplotlib.mpl_toolkits`` is now an implicit namespace package
+----------------------------------------------------------------
+
+Following the deprecation of ``pkg_resources.declare_namespace`` in ``setuptools`` 67.3.0,
+``matplotlib.mpl_toolkits`` is now implemented as an implicit namespace, following
+`PEP 420 <https://peps.python.org/pep-0420/>`_.
+
+As a consequence using ``pip`` to install a version of Matplotlib >= 3.8 on top
+of a version of Matplotlib < 3.8 (e.g. via ``pip install --local`` or
+``python -m venv --system-site-packages ...``) will fail because the old
+``matplotlib.mpl_toolkits`` files will be found whereas the newer files will be
+found for all other modules.  This will result in errors due to the version
+mismatch.
+
+To avoid this issue you need to avoid having multiple versions of Matplotlib
+in different entries of ``sys.path``.   Either uninstall Matplotlib
+at the system level or use a more isolated virtual environment.

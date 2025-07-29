@@ -132,20 +132,50 @@ def _ortho_transformation(zfront, zback):
 
 
 def _proj_transform_vec(vec, M):
-    vecw = np.dot(M, vec)
-    w = vecw[3]
-    txs, tys, tzs = vecw[0]/w, vecw[1]/w, vecw[2]/w
-    return txs, tys, tzs
+    vecw = np.dot(M, vec.data)
+    ts = vecw[0:3]/vecw[3]
+    if np.ma.isMA(vec):
+        ts = np.ma.array(ts, mask=vec.mask)
+    return ts[0], ts[1], ts[2]
+
+
+def _proj_transform_vectors(vecs, M):
+    """
+    Vectorized version of ``_proj_transform_vec``.
+
+    Parameters
+    ----------
+    vecs : ... x 3 np.ndarray
+        Input vectors
+    M : 4 x 4 np.ndarray
+        Projection matrix
+    """
+    vecs_shape = vecs.shape
+    vecs = vecs.reshape(-1, 3).T
+
+    vecs_pad = np.empty((vecs.shape[0] + 1,) + vecs.shape[1:])
+    vecs_pad[:-1] = vecs
+    vecs_pad[-1] = 1
+    product = np.dot(M, vecs_pad)
+    tvecs = product[:3] / product[3]
+
+    return tvecs.T.reshape(vecs_shape)
 
 
 def _proj_transform_vec_clip(vec, M, focal_length):
-    vecw = np.dot(M, vec)
-    w = vecw[3]
-    txs, tys, tzs = vecw[0] / w, vecw[1] / w, vecw[2] / w
+    vecw = np.dot(M, vec.data)
+    txs, tys, tzs = vecw[0:3] / vecw[3]
     if np.isinf(focal_length):  # don't clip orthographic projection
         tis = np.ones(txs.shape, dtype=bool)
     else:
         tis = (-1 <= txs) & (txs <= 1) & (-1 <= tys) & (tys <= 1) & (tzs <= 0)
+    if np.ma.isMA(vec[0]):
+        tis = tis & ~vec[0].mask
+    if np.ma.isMA(vec[1]):
+        tis = tis & ~vec[1].mask
+    if np.ma.isMA(vec[2]):
+        tis = tis & ~vec[2].mask
+
     txs = np.ma.masked_array(txs, ~tis)
     tys = np.ma.masked_array(tys, ~tis)
     tzs = np.ma.masked_array(tzs, ~tis)
@@ -167,7 +197,10 @@ def inv_transform(xs, ys, zs, invM):
 
 
 def _vec_pad_ones(xs, ys, zs):
-    return np.array([xs, ys, zs, np.ones_like(xs)])
+    if np.ma.isMA(xs) or np.ma.isMA(ys) or np.ma.isMA(zs):
+        return np.ma.array([xs, ys, zs, np.ones_like(xs)])
+    else:
+        return np.array([xs, ys, zs, np.ones_like(xs)])
 
 
 def proj_transform(xs, ys, zs, M):
@@ -198,5 +231,6 @@ def _proj_points(points, M):
 
 
 def _proj_trans_points(points, M):
-    xs, ys, zs = zip(*points)
+    points = np.asanyarray(points)
+    xs, ys, zs = points[:, 0], points[:, 1], points[:, 2]
     return proj_transform(xs, ys, zs, M)

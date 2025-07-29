@@ -1,4 +1,5 @@
 import collections
+import io
 import itertools
 import platform
 import time
@@ -19,7 +20,7 @@ import matplotlib.collections as mcollections
 import matplotlib.lines as mlines
 from matplotlib.legend_handler import HandlerTuple
 import matplotlib.legend as mlegend
-from matplotlib import _api, rc_context
+from matplotlib import rc_context
 from matplotlib.font_manager import FontProperties
 
 
@@ -41,7 +42,19 @@ def test_legend_ordereddict():
               loc='center left', bbox_to_anchor=(1, .5))
 
 
-@image_comparison(['legend_auto1'], remove_text=True)
+def test_legend_generator():
+    # smoketest that generator inputs work
+    fig, ax = plt.subplots()
+    ax.plot([0, 1])
+    ax.plot([0, 2])
+
+    handles = (line for line in ax.get_lines())
+    labels = (label for label in ['spam', 'eggs'])
+
+    ax.legend(handles, labels, loc='upper left')
+
+
+@image_comparison(['legend_auto1.png'], remove_text=True)
 def test_legend_auto1():
     """Test automatic legend placement"""
     fig, ax = plt.subplots()
@@ -51,7 +64,7 @@ def test_legend_auto1():
     ax.legend(loc='best')
 
 
-@image_comparison(['legend_auto2'], remove_text=True)
+@image_comparison(['legend_auto2.png'], remove_text=True)
 def test_legend_auto2():
     """Test automatic legend placement"""
     fig, ax = plt.subplots()
@@ -61,7 +74,7 @@ def test_legend_auto2():
     ax.legend([b1[0], b2[0]], ['up', 'down'], loc='best')
 
 
-@image_comparison(['legend_auto3'])
+@image_comparison(['legend_auto3.png'])
 def test_legend_auto3():
     """Test automatic legend placement"""
     fig, ax = plt.subplots()
@@ -127,7 +140,7 @@ def test_legend_auto5():
     assert_allclose(leg_bboxes[1].bounds, leg_bboxes[0].bounds)
 
 
-@image_comparison(['legend_various_labels'], remove_text=True)
+@image_comparison(['legend_various_labels.png'], remove_text=True)
 def test_various_labels():
     # tests all sorts of label types
     fig = plt.figure()
@@ -138,21 +151,8 @@ def test_various_labels():
     ax.legend(numpoints=1, loc='best')
 
 
-def test_legend_label_with_leading_underscore():
-    """
-    Test that artists with labels starting with an underscore are not added to
-    the legend, and that a warning is issued if one tries to add them
-    explicitly.
-    """
-    fig, ax = plt.subplots()
-    line, = ax.plot([0, 1], label='_foo')
-    with pytest.warns(_api.MatplotlibDeprecationWarning, match="with an underscore"):
-        legend = ax.legend(handles=[line])
-    assert len(legend.legend_handles) == 0
-
-
 @image_comparison(['legend_labels_first.png'], remove_text=True,
-                  tol=0.013 if platform.machine() == 'arm64' else 0)
+                  tol=0 if platform.machine() == 'x86_64' else 0.013)
 def test_labels_first():
     # test labels to left of markers
     fig, ax = plt.subplots()
@@ -163,7 +163,7 @@ def test_labels_first():
 
 
 @image_comparison(['legend_multiple_keys.png'], remove_text=True,
-                  tol=0.013 if platform.machine() == 'arm64' else 0)
+                  tol=0 if platform.machine() == 'x86_64' else 0.013)
 def test_multiple_keys():
     # test legend entries with multiple keys
     fig, ax = plt.subplots()
@@ -199,7 +199,7 @@ def test_alpha_rcparam():
         leg.legendPatch.set_facecolor([1, 0, 0, 0.5])
 
 
-@image_comparison(['fancy'], remove_text=True, tol=0.05)
+@image_comparison(['fancy.png'], remove_text=True, tol=0.05)
 def test_fancy():
     # Tolerance caused by changing default shadow "shade" from 0.3 to 1 - 0.7 =
     # 0.30000000000000004
@@ -222,7 +222,7 @@ def test_framealpha():
     plt.legend(framealpha=0.5)
 
 
-@image_comparison(['scatter_rc3', 'scatter_rc1'], remove_text=True)
+@image_comparison(['scatter_rc3.png', 'scatter_rc1.png'], remove_text=True)
 def test_rc():
     # using subplot triggers some offsetbox functionality untested elsewhere
     plt.figure()
@@ -239,7 +239,7 @@ def test_rc():
               title="My legend")
 
 
-@image_comparison(['legend_expand'], remove_text=True)
+@image_comparison(['legend_expand.png'], remove_text=True)
 def test_legend_expand():
     """Test expand mode"""
     legend_modes = [None, "expand"]
@@ -318,7 +318,7 @@ def test_reverse_legend_handles_and_labels():
     assert actual_markers == list(reversed(markers))
 
 
-@check_figures_equal(extensions=["png"])
+@check_figures_equal()
 def test_reverse_legend_display(fig_test, fig_ref):
     """Check that the rendered legend entries are reversed"""
     ax = fig_test.subplots()
@@ -402,20 +402,17 @@ class TestLegendFunction:
             ax.legend(labels=('a', 'b'), handles=(lnc, lns))
         Legend.assert_called_with(ax, (lnc, lns), ('a', 'b'))
 
-    def test_warn_mixed_args_and_kwargs(self):
+    def test_error_mixed_args_and_kwargs(self):
         fig, ax = plt.subplots()
         th = np.linspace(0, 2*np.pi, 1024)
         lns, = ax.plot(th, np.sin(th), label='sin')
         lnc, = ax.plot(th, np.cos(th), label='cos')
-        with pytest.warns(DeprecationWarning) as record:
+        msg = 'must both be passed positionally or both as keywords'
+        with pytest.raises(TypeError, match=msg):
             ax.legend((lnc, lns), labels=('a', 'b'))
-        assert len(record) == 1
-        assert str(record[0].message).startswith(
-            "You have mixed positional and keyword arguments, some input may "
-            "be discarded.")
 
     def test_parasite(self):
-        from mpl_toolkits.axes_grid1 import host_subplot  # type: ignore
+        from mpl_toolkits.axes_grid1 import host_subplot  # type: ignore[import]
 
         host = host_subplot(111)
         par = host.twinx()
@@ -472,16 +469,13 @@ class TestLegendFigureFunction:
             fig, (lines, lines2), ('a', 'b'), loc='right',
             bbox_transform=fig.transFigure)
 
-    def test_warn_args_kwargs(self):
+    def test_error_args_kwargs(self):
         fig, axs = plt.subplots(1, 2)
         lines = axs[0].plot(range(10))
         lines2 = axs[1].plot(np.arange(10) * 2.)
-        with pytest.warns(DeprecationWarning) as record:
+        msg = 'must both be passed positionally or both as keywords'
+        with pytest.raises(TypeError, match=msg):
             fig.legend((lines, lines2), labels=('a', 'b'))
-        assert len(record) == 1
-        assert str(record[0].message).startswith(
-            "You have mixed positional and keyword arguments, some input may "
-            "be discarded.")
 
 
 def test_figure_legend_outside():
@@ -526,7 +520,7 @@ def test_figure_legend_outside():
 
 
 @image_comparison(['legend_stackplot.png'],
-                  tol=0.031 if platform.machine() == 'arm64' else 0)
+                  tol=0 if platform.machine() == 'x86_64' else 0.031)
 def test_legend_stackplot():
     """Test legend for PolyCollection using stackplot."""
     # related to #1341, #1943, and PR #3303
@@ -536,8 +530,8 @@ def test_legend_stackplot():
     y2 = 2.0 * x + 1
     y3 = 3.0 * x + 2
     ax.stackplot(x, y1, y2, y3, labels=['y1', 'y2', 'y3'])
-    ax.set_xlim((0, 10))
-    ax.set_ylim((0, 70))
+    ax.set_xlim(0, 10)
+    ax.set_ylim(0, 70)
     ax.legend(loc='best')
 
 
@@ -662,7 +656,7 @@ def test_empty_bar_chart_with_legend():
 
 
 @image_comparison(['shadow_argument_types.png'], remove_text=True, style='mpl20',
-                  tol=0.028 if platform.machine() == 'arm64' else 0)
+                  tol=0 if platform.machine() == 'x86_64' else 0.028)
 def test_shadow_argument_types():
     # Test that different arguments for shadow work as expected
     fig, ax = plt.subplots()
@@ -927,7 +921,7 @@ def test_legend_pathcollection_labelcolor_markeredgecolor_cmap():
     # test the labelcolor for labelcolor='markeredgecolor' on PathCollection
     # with a colormap
     fig, ax = plt.subplots()
-    edgecolors = mpl.cm.viridis(np.random.rand(10))
+    edgecolors = mpl.colormaps["viridis"](np.random.rand(10))
     ax.scatter(
         np.arange(10),
         np.arange(10),
@@ -982,13 +976,12 @@ def test_legend_pathcollection_labelcolor_markfacecolor_cmap():
     # test the labelcolor for labelcolor='markerfacecolor' on PathCollection
     # with colormaps
     fig, ax = plt.subplots()
-    facecolors = mpl.cm.viridis(np.random.rand(10))
+    colors = mpl.colormaps["viridis"](np.random.rand(10))
     ax.scatter(
         np.arange(10),
         np.arange(10),
         label='#1',
-        c=np.arange(10),
-        facecolor=facecolors
+        c=colors
     )
 
     leg = ax.legend(labelcolor='markerfacecolor')
@@ -1191,21 +1184,15 @@ def test_plot_multiple_input_single_label(label):
     assert legend_texts == [str(label)] * 2
 
 
-@pytest.mark.parametrize('label_array', [['low', 'high'],
-                                         ('low', 'high'),
-                                         np.array(['low', 'high'])])
-def test_plot_single_input_multiple_label(label_array):
+def test_plot_single_input_multiple_label():
     # test ax.plot() with 1D array like input
     # and iterable label
     x = [1, 2, 3]
     y = [2, 5, 6]
     fig, ax = plt.subplots()
-    with pytest.warns(mpl.MatplotlibDeprecationWarning,
-                      match='Passing label as a length 2 sequence'):
-        ax.plot(x, y, label=label_array)
-    leg = ax.legend()
-    assert len(leg.get_texts()) == 1
-    assert leg.get_texts()[0].get_text() == str(label_array)
+    with pytest.raises(ValueError,
+                       match='label must be scalar or have the same length'):
+        ax.plot(x, y, label=['low', 'high'])
 
 
 def test_plot_single_input_list_label():
@@ -1438,6 +1425,21 @@ def test_legend_text():
         leg_bboxes.append(
             leg.get_window_extent().transformed(ax.transAxes.inverted()))
     assert_allclose(leg_bboxes[1].bounds, leg_bboxes[0].bounds)
+
+
+def test_legend_annotate():
+    fig, ax = plt.subplots()
+
+    ax.plot([1, 2, 3], label="Line")
+    ax.annotate("a", xy=(1, 1))
+    ax.legend(loc=0)
+
+    with mock.patch.object(
+            fig, '_get_renderer', wraps=fig._get_renderer) as mocked_get_renderer:
+        fig.savefig(io.BytesIO())
+
+    # Finding the legend position should not require _get_renderer to be called
+    mocked_get_renderer.assert_not_called()
 
 
 def test_boxplot_legend_labels():

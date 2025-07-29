@@ -1400,7 +1400,7 @@ class Axes3D(Axes):
     def format_zdata(self, z):
         """
         Return *z* string formatted.  This function will use the
-        :attr:`fmt_zdata` attribute if it is callable, else will fall
+        :attr:`!fmt_zdata` attribute if it is callable, else will fall
         back on the zaxis major formatter
         """
         try:
@@ -1510,20 +1510,35 @@ class Axes3D(Axes):
 
     def _arcball(self, x: float, y: float) -> np.ndarray:
         """
-        Convert a point (x, y) to a point on a virtual trackball
-        This is Ken Shoemake's arcball
+        Convert a point (x, y) to a point on a virtual trackball.
+
+        This is Ken Shoemake's arcball (a sphere), modified
+        to soften the abrupt edge (optionally).
         See: Ken Shoemake, "ARCBALL: A user interface for specifying
         three-dimensional rotation using a mouse." in
         Proceedings of Graphics Interface '92, 1992, pp. 151-156,
         https://doi.org/10.20380/GI1992.18
+        The smoothing of the edge is inspired by Gavin Bell's arcball
+        (a sphere combined with a hyperbola), but here, the sphere
+        is combined with a section of a cylinder, so it has finite support.
         """
-        x *= 2
-        y *= 2
+        s = mpl.rcParams['axes3d.trackballsize'] / 2
+        b = mpl.rcParams['axes3d.trackballborder'] / s
+        x /= s
+        y /= s
         r2 = x*x + y*y
-        if r2 > 1:
-            p = np.array([0, x/math.sqrt(r2), y/math.sqrt(r2)])
+        r = np.sqrt(r2)
+        ra = 1 + b
+        a = b * (1 + b/2)
+        ri = 2/(ra + 1/ra)
+        if r < ri:
+            p = np.array([np.sqrt(1 - r2), x, y])
+        elif r < ra:
+            dr = ra - r
+            p = np.array([a - np.sqrt((a + dr) * (a - dr)), x, y])
+            p /= np.linalg.norm(p)
         else:
-            p = np.array([math.sqrt(1-r2), x, y])
+            p = np.array([0, x/r, y/r])
         return p
 
     def _on_move(self, event):
@@ -1561,23 +1576,35 @@ class Axes3D(Axes):
             if dx == 0 and dy == 0:
                 return
 
-            # Convert to quaternion
-            elev = np.deg2rad(self.elev)
-            azim = np.deg2rad(self.azim)
-            roll = np.deg2rad(self.roll)
-            q = _Quaternion.from_cardan_angles(elev, azim, roll)
+            style = mpl.rcParams['axes3d.mouserotationstyle']
+            if style == 'azel':
+                roll = np.deg2rad(self.roll)
+                delev = -(dy/h)*180*np.cos(roll) + (dx/w)*180*np.sin(roll)
+                dazim = -(dy/h)*180*np.sin(roll) - (dx/w)*180*np.cos(roll)
+                elev = self.elev + delev
+                azim = self.azim + dazim
+                roll = self.roll
+            else:
+                q = _Quaternion.from_cardan_angles(
+                        *np.deg2rad((self.elev, self.azim, self.roll)))
 
-            # Update quaternion - a variation on Ken Shoemake's ARCBALL
-            current_vec = self._arcball(self._sx/w, self._sy/h)
-            new_vec = self._arcball(x/w, y/h)
-            dq = _Quaternion.rotate_from_to(current_vec, new_vec)
-            q = dq * q
+                if style == 'trackball':
+                    k = np.array([0, -dy/h, dx/w])
+                    nk = np.linalg.norm(k)
+                    th = nk / mpl.rcParams['axes3d.trackballsize']
+                    dq = _Quaternion(np.cos(th), k*np.sin(th)/nk)
+                else:  # 'sphere', 'arcball'
+                    current_vec = self._arcball(self._sx/w, self._sy/h)
+                    new_vec = self._arcball(x/w, y/h)
+                    if style == 'sphere':
+                        dq = _Quaternion.rotate_from_to(current_vec, new_vec)
+                    else:  # 'arcball'
+                        dq = _Quaternion(0, new_vec) * _Quaternion(0, -current_vec)
 
-            # Convert to elev, azim, roll
-            elev, azim, roll = q.as_cardan_angles()
-            azim = np.rad2deg(azim)
-            elev = np.rad2deg(elev)
-            roll = np.rad2deg(roll)
+                q = dq * q
+                elev, azim, roll = np.rad2deg(q.as_cardan_angles())
+
+            # update view
             vertical_axis = self._axis_names[self._vertical_axis]
             self.view_init(
                 elev=elev,
@@ -1859,18 +1886,34 @@ class Axes3D(Axes):
 
     def invert_zaxis(self):
         """
-        Invert the z-axis.
+        [*Discouraged*] Invert the z-axis.
+
+        .. admonition:: Discouraged
+
+            The use of this method is discouraged.
+            Use `.Axes3D.set_zinverted` instead.
 
         See Also
         --------
-        zaxis_inverted
+        get_zinverted
         get_zlim, set_zlim
         get_zbound, set_zbound
         """
         bottom, top = self.get_zlim()
         self.set_zlim(top, bottom, auto=None)
 
+    set_zinverted = _axis_method_wrapper("zaxis", "set_inverted")
+    get_zinverted = _axis_method_wrapper("zaxis", "get_inverted")
     zaxis_inverted = _axis_method_wrapper("zaxis", "get_inverted")
+    if zaxis_inverted.__doc__:
+        zaxis_inverted.__doc__ = ("[*Discouraged*] " + zaxis_inverted.__doc__ +
+                                  textwrap.dedent("""
+
+        .. admonition:: Discouraged
+
+            The use of this method is discouraged.
+            Use `.Axes3D.get_zinverted` instead.
+        """))
 
     def get_zbound(self):
         """
@@ -1888,7 +1931,7 @@ class Axes3D(Axes):
         else:
             return upper, lower
 
-    def text(self, x, y, z, s, zdir=None, **kwargs):
+    def text(self, x, y, z, s, zdir=None, *, axlim_clip=False, **kwargs):
         """
         Add the text *s* to the 3D Axes at location *x*, *y*, *z* in data coordinates.
 
@@ -1901,6 +1944,10 @@ class Axes3D(Axes):
         zdir : {'x', 'y', 'z', 3-tuple}, optional
             The direction to be used as the z-direction. Default: 'z'.
             See `.get_dir_vector` for a description of the values.
+        axlim_clip : bool, default: False
+            Whether to hide text that is outside the axes view limits.
+
+            .. versionadded:: 3.10
         **kwargs
             Other arguments are forwarded to `matplotlib.axes.Axes.text`.
 
@@ -1910,13 +1957,13 @@ class Axes3D(Axes):
             The created `.Text3D` instance.
         """
         text = super().text(x, y, s, **kwargs)
-        art3d.text_2d_to_3d(text, z, zdir)
+        art3d.text_2d_to_3d(text, z, zdir, axlim_clip)
         return text
 
     text3D = text
     text2D = Axes.text
 
-    def plot(self, xs, ys, *args, zdir='z', **kwargs):
+    def plot(self, xs, ys, *args, zdir='z', axlim_clip=False, **kwargs):
         """
         Plot 2D or 3D data.
 
@@ -1931,6 +1978,10 @@ class Axes3D(Axes):
             each point.
         zdir : {'x', 'y', 'z'}, default: 'z'
             When plotting 2D data, the direction to use as z.
+        axlim_clip : bool, default: False
+            Whether to hide data that is outside the axes view limits.
+
+            .. versionadded:: 3.10
         **kwargs
             Other arguments are forwarded to `matplotlib.axes.Axes.plot`.
         """
@@ -1950,7 +2001,7 @@ class Axes3D(Axes):
 
         lines = super().plot(xs, ys, *args, **kwargs)
         for line in lines:
-            art3d.line_2d_to_3d(line, zs=zs, zdir=zdir)
+            art3d.line_2d_to_3d(line, zs=zs, zdir=zdir, axlim_clip=axlim_clip)
 
         xs, ys, zs = art3d.juggle_axes(xs, ys, zs, zdir)
         self.auto_scale_xyz(xs, ys, zs, had_data)
@@ -1960,7 +2011,7 @@ class Axes3D(Axes):
 
     def fill_between(self, x1, y1, z1, x2, y2, z2, *,
                      where=None, mode='auto', facecolors=None, shade=None,
-                     **kwargs):
+                     axlim_clip=False, **kwargs):
         """
         Fill the area between two 3D curves.
 
@@ -2005,6 +2056,11 @@ class Axes3D(Axes):
         shade : bool, default: None
             Whether to shade the facecolors. If *None*, then defaults to *True*
             for 'quad' mode and *False* for 'polygon' mode.
+
+        axlim_clip : bool, default: False
+            Whether to hide data that is outside the axes view limits.
+
+            .. versionadded:: 3.10
 
         **kwargs
             All other keyword arguments are passed on to `.Poly3DCollection`.
@@ -2076,14 +2132,14 @@ class Axes3D(Axes):
                 polys.append(poly)
 
         polyc = art3d.Poly3DCollection(polys, facecolors=facecolors, shade=shade,
-                                       **kwargs)
+                                       axlim_clip=axlim_clip, **kwargs)
         self.add_collection(polyc)
 
         self.auto_scale_xyz([x1, x2], [y1, y2], [z1, z2], had_data)
         return polyc
 
     def plot_surface(self, X, Y, Z, *, norm=None, vmin=None,
-                     vmax=None, lightsource=None, **kwargs):
+                     vmax=None, lightsource=None, axlim_clip=False, **kwargs):
         """
         Create a surface plot.
 
@@ -2147,6 +2203,11 @@ class Axes3D(Axes):
 
         lightsource : `~matplotlib.colors.LightSource`, optional
             The lightsource to use when *shade* is True.
+
+        axlim_clip : bool, default: False
+            Whether to hide patches with a vertex outside the axes view limits.
+
+            .. versionadded:: 3.10
 
         **kwargs
             Other keyword arguments are forwarded to `.Poly3DCollection`.
@@ -2248,9 +2309,9 @@ class Axes3D(Axes):
         if fcolors is not None:
             polyc = art3d.Poly3DCollection(
                 polys, edgecolors=colset, facecolors=colset, shade=shade,
-                lightsource=lightsource, **kwargs)
+                lightsource=lightsource, axlim_clip=axlim_clip, **kwargs)
         elif cmap:
-            polyc = art3d.Poly3DCollection(polys, **kwargs)
+            polyc = art3d.Poly3DCollection(polys, axlim_clip=axlim_clip, **kwargs)
             # can't always vectorize, because polys might be jagged
             if isinstance(polys, np.ndarray):
                 avg_z = polys[..., 2].mean(axis=-1)
@@ -2268,15 +2329,15 @@ class Axes3D(Axes):
             color = np.array(mcolors.to_rgba(color))
 
             polyc = art3d.Poly3DCollection(
-                polys, facecolors=color, shade=shade,
-                lightsource=lightsource, **kwargs)
+                polys, facecolors=color, shade=shade, lightsource=lightsource,
+                axlim_clip=axlim_clip, **kwargs)
 
         self.add_collection(polyc)
         self.auto_scale_xyz(X, Y, Z, had_data)
 
         return polyc
 
-    def plot_wireframe(self, X, Y, Z, **kwargs):
+    def plot_wireframe(self, X, Y, Z, *, axlim_clip=False, **kwargs):
         """
         Plot a 3D wireframe.
 
@@ -2291,6 +2352,12 @@ class Axes3D(Axes):
         ----------
         X, Y, Z : 2D arrays
             Data values.
+
+        axlim_clip : bool, default: False
+            Whether to hide lines and patches with vertices outside the axes
+            view limits.
+
+            .. versionadded:: 3.10
 
         rcount, ccount : int
             Maximum number of samples used in each direction.  If the input
@@ -2346,56 +2413,57 @@ class Axes3D(Axes):
                 rstride = int(max(np.ceil(rows / rcount), 1)) if rcount else 0
                 cstride = int(max(np.ceil(cols / ccount), 1)) if ccount else 0
 
+        if rstride == 0 and cstride == 0:
+            raise ValueError("Either rstride or cstride must be non zero")
+
         # We want two sets of lines, one running along the "rows" of
         # Z and another set of lines running along the "columns" of Z.
         # This transpose will make it easy to obtain the columns.
         tX, tY, tZ = np.transpose(X), np.transpose(Y), np.transpose(Z)
 
-        if rstride:
-            rii = list(range(0, rows, rstride))
-            # Add the last index only if needed
-            if rows > 0 and rii[-1] != (rows - 1):
-                rii += [rows-1]
+        # Compute the indices of the row and column lines to be drawn
+        # For Z.size == 0, we don't want to draw any lines since the data is empty
+        if rstride == 0 or Z.size == 0:
+            rii = np.array([], dtype=int)
+        elif (rows - 1) % rstride == 0:
+            # last index is hit: rii[-1] == rows - 1
+            rii = np.arange(0, rows, rstride)
         else:
-            rii = []
-        if cstride:
-            cii = list(range(0, cols, cstride))
-            # Add the last index only if needed
-            if cols > 0 and cii[-1] != (cols - 1):
-                cii += [cols-1]
+            # add the last index
+            rii = np.arange(0, rows + rstride, rstride)
+            rii[-1] = rows - 1
+
+        if cstride == 0 or Z.size == 0:
+            cii = np.array([], dtype=int)
+        elif (cols - 1) % cstride == 0:
+            # last index is hit: cii[-1] == cols - 1
+            cii = np.arange(0, cols, cstride)
         else:
-            cii = []
+            # add the last index
+            cii = np.arange(0, cols + cstride, cstride)
+            cii[-1] = cols - 1
 
-        if rstride == 0 and cstride == 0:
-            raise ValueError("Either rstride or cstride must be non zero")
+        row_lines = np.stack([X[rii], Y[rii], Z[rii]], axis=-1)
+        col_lines = np.stack([tX[cii], tY[cii], tZ[cii]], axis=-1)
 
-        # If the inputs were empty, then just
-        # reset everything.
-        if Z.size == 0:
-            rii = []
-            cii = []
+        # We autoscale twice because autoscaling is much faster with vectorized numpy
+        # arrays, but row_lines and col_lines might not be the same shape, so we can't
+        # stack them to check them in a single pass.
+        # Note that while the column and row grid points are the same, the lines
+        # between them may expand the view limits, so we have to check both.
+        self.auto_scale_xyz(row_lines[..., 0], row_lines[..., 1], row_lines[..., 2],
+                            had_data)
+        self.auto_scale_xyz(col_lines[..., 0], col_lines[..., 1], col_lines[..., 2],
+                            had_data=True)
 
-        xlines = [X[i] for i in rii]
-        ylines = [Y[i] for i in rii]
-        zlines = [Z[i] for i in rii]
-
-        txlines = [tX[i] for i in cii]
-        tylines = [tY[i] for i in cii]
-        tzlines = [tZ[i] for i in cii]
-
-        lines = ([list(zip(xl, yl, zl))
-                 for xl, yl, zl in zip(xlines, ylines, zlines)]
-                 + [list(zip(xl, yl, zl))
-                 for xl, yl, zl in zip(txlines, tylines, tzlines)])
-
-        linec = art3d.Line3DCollection(lines, **kwargs)
+        lines = list(row_lines) + list(col_lines)
+        linec = art3d.Line3DCollection(lines, axlim_clip=axlim_clip, **kwargs)
         self.add_collection(linec)
-        self.auto_scale_xyz(X, Y, Z, had_data)
 
         return linec
 
     def plot_trisurf(self, *args, color=None, norm=None, vmin=None, vmax=None,
-                     lightsource=None, **kwargs):
+                     lightsource=None, axlim_clip=False, **kwargs):
         """
         Plot a triangulated surface.
 
@@ -2437,6 +2505,10 @@ class Axes3D(Axes):
             *cmap* is specified.
         lightsource : `~matplotlib.colors.LightSource`, optional
             The lightsource to use when *shade* is True.
+        axlim_clip : bool, default: False
+            Whether to hide patches with a vertex outside the axes view limits.
+
+            .. versionadded:: 3.10
         **kwargs
             All other keyword arguments are passed on to
             :class:`~mpl_toolkits.mplot3d.art3d.Poly3DCollection`
@@ -2473,7 +2545,8 @@ class Axes3D(Axes):
         verts = np.stack((xt, yt, zt), axis=-1)
 
         if cmap:
-            polyc = art3d.Poly3DCollection(verts, *args, **kwargs)
+            polyc = art3d.Poly3DCollection(verts, *args,
+                                           axlim_clip=axlim_clip, **kwargs)
             # average over the three points of each triangle
             avg_z = verts[:, :, 2].mean(axis=1)
             polyc.set_array(avg_z)
@@ -2484,7 +2557,7 @@ class Axes3D(Axes):
         else:
             polyc = art3d.Poly3DCollection(
                 verts, *args, shade=shade, lightsource=lightsource,
-                facecolors=color, **kwargs)
+                facecolors=color, axlim_clip=axlim_clip, **kwargs)
 
         self.add_collection(polyc)
         self.auto_scale_xyz(tri.x, tri.y, z, had_data)
@@ -2520,18 +2593,21 @@ class Axes3D(Axes):
         cset.remove()
 
     def add_contour_set(
-            self, cset, extend3d=False, stride=5, zdir='z', offset=None):
+            self, cset, extend3d=False, stride=5, zdir='z', offset=None,
+            axlim_clip=False):
         zdir = '-' + zdir
         if extend3d:
             self._3d_extend_contour(cset, stride)
         else:
             art3d.collection_2d_to_3d(
-                cset, zs=offset if offset is not None else cset.levels, zdir=zdir)
+                cset, zs=offset if offset is not None else cset.levels, zdir=zdir,
+                axlim_clip=axlim_clip)
 
-    def add_contourf_set(self, cset, zdir='z', offset=None):
-        self._add_contourf_set(cset, zdir=zdir, offset=offset)
+    def add_contourf_set(self, cset, zdir='z', offset=None, *, axlim_clip=False):
+        self._add_contourf_set(cset, zdir=zdir, offset=offset,
+                               axlim_clip=axlim_clip)
 
-    def _add_contourf_set(self, cset, zdir='z', offset=None):
+    def _add_contourf_set(self, cset, zdir='z', offset=None, axlim_clip=False):
         """
         Returns
         -------
@@ -2550,12 +2626,14 @@ class Axes3D(Axes):
             midpoints = np.append(midpoints, max_level)
 
         art3d.collection_2d_to_3d(
-            cset, zs=offset if offset is not None else midpoints, zdir=zdir)
+            cset, zs=offset if offset is not None else midpoints, zdir=zdir,
+            axlim_clip=axlim_clip)
         return midpoints
 
     @_preprocess_data()
     def contour(self, X, Y, Z, *args,
-                extend3d=False, stride=5, zdir='z', offset=None, **kwargs):
+                extend3d=False, stride=5, zdir='z', offset=None, axlim_clip=False,
+                **kwargs):
         """
         Create a 3D contour plot.
 
@@ -2572,6 +2650,10 @@ class Axes3D(Axes):
         offset : float, optional
             If specified, plot a projection of the contour lines at this
             position in a plane normal to *zdir*.
+        axlim_clip : bool, default: False
+            Whether to hide lines with a vertex outside the axes view limits.
+
+            .. versionadded:: 3.10
         data : indexable object, optional
             DATA_PARAMETER_PLACEHOLDER
 
@@ -2586,7 +2668,7 @@ class Axes3D(Axes):
 
         jX, jY, jZ = art3d.rotate_axes(X, Y, Z, zdir)
         cset = super().contour(jX, jY, jZ, *args, **kwargs)
-        self.add_contour_set(cset, extend3d, stride, zdir, offset)
+        self.add_contour_set(cset, extend3d, stride, zdir, offset, axlim_clip)
 
         self.auto_scale_xyz(X, Y, Z, had_data)
         return cset
@@ -2595,7 +2677,8 @@ class Axes3D(Axes):
 
     @_preprocess_data()
     def tricontour(self, *args,
-                   extend3d=False, stride=5, zdir='z', offset=None, **kwargs):
+                   extend3d=False, stride=5, zdir='z', offset=None, axlim_clip=False,
+                   **kwargs):
         """
         Create a 3D contour plot.
 
@@ -2616,6 +2699,10 @@ class Axes3D(Axes):
         offset : float, optional
             If specified, plot a projection of the contour lines at this
             position in a plane normal to *zdir*.
+        axlim_clip : bool, default: False
+            Whether to hide lines with a vertex outside the axes view limits.
+
+            .. versionadded:: 3.10
         data : indexable object, optional
             DATA_PARAMETER_PLACEHOLDER
         *args, **kwargs
@@ -2641,7 +2728,7 @@ class Axes3D(Axes):
         tri = Triangulation(jX, jY, tri.triangles, tri.mask)
 
         cset = super().tricontour(tri, jZ, *args, **kwargs)
-        self.add_contour_set(cset, extend3d, stride, zdir, offset)
+        self.add_contour_set(cset, extend3d, stride, zdir, offset, axlim_clip)
 
         self.auto_scale_xyz(X, Y, Z, had_data)
         return cset
@@ -2657,7 +2744,8 @@ class Axes3D(Axes):
         self.auto_scale_xyz(*limits, had_data)
 
     @_preprocess_data()
-    def contourf(self, X, Y, Z, *args, zdir='z', offset=None, **kwargs):
+    def contourf(self, X, Y, Z, *args,
+                 zdir='z', offset=None, axlim_clip=False, **kwargs):
         """
         Create a 3D filled contour plot.
 
@@ -2670,6 +2758,10 @@ class Axes3D(Axes):
         offset : float, optional
             If specified, plot a projection of the contour lines at this
             position in a plane normal to *zdir*.
+        axlim_clip : bool, default: False
+            Whether to hide lines with a vertex outside the axes view limits.
+
+            .. versionadded:: 3.10
         data : indexable object, optional
             DATA_PARAMETER_PLACEHOLDER
         *args, **kwargs
@@ -2683,7 +2775,7 @@ class Axes3D(Axes):
 
         jX, jY, jZ = art3d.rotate_axes(X, Y, Z, zdir)
         cset = super().contourf(jX, jY, jZ, *args, **kwargs)
-        levels = self._add_contourf_set(cset, zdir, offset)
+        levels = self._add_contourf_set(cset, zdir, offset, axlim_clip)
 
         self._auto_scale_contourf(X, Y, Z, zdir, levels, had_data)
         return cset
@@ -2691,7 +2783,7 @@ class Axes3D(Axes):
     contourf3D = contourf
 
     @_preprocess_data()
-    def tricontourf(self, *args, zdir='z', offset=None, **kwargs):
+    def tricontourf(self, *args, zdir='z', offset=None, axlim_clip=False, **kwargs):
         """
         Create a 3D filled contour plot.
 
@@ -2708,6 +2800,10 @@ class Axes3D(Axes):
         offset : float, optional
             If specified, plot a projection of the contour lines at this
             position in a plane normal to zdir.
+        axlim_clip : bool, default: False
+            Whether to hide lines with a vertex outside the axes view limits.
+
+            .. versionadded:: 3.10
         data : indexable object, optional
             DATA_PARAMETER_PLACEHOLDER
         *args, **kwargs
@@ -2734,12 +2830,13 @@ class Axes3D(Axes):
         tri = Triangulation(jX, jY, tri.triangles, tri.mask)
 
         cset = super().tricontourf(tri, jZ, *args, **kwargs)
-        levels = self._add_contourf_set(cset, zdir, offset)
+        levels = self._add_contourf_set(cset, zdir, offset, axlim_clip)
 
         self._auto_scale_contourf(X, Y, Z, zdir, levels, had_data)
         return cset
 
-    def add_collection3d(self, col, zs=0, zdir='z', autolim=True):
+    def add_collection3d(self, col, zs=0, zdir='z', autolim=True, *,
+                         axlim_clip=False):
         """
         Add a 3D collection object to the plot.
 
@@ -2763,6 +2860,10 @@ class Axes3D(Axes):
             The direction to use for the z-positions.
         autolim : bool, default: True
             Whether to update the data limits.
+        axlim_clip : bool, default: False
+            Whether to hide the scatter points outside the axes view limits.
+
+            .. versionadded:: 3.10
         """
         had_data = self.has_data()
 
@@ -2774,13 +2875,16 @@ class Axes3D(Axes):
         #       object would also pass.)  Maybe have a collection3d
         #       abstract class to test for and exclude?
         if type(col) is mcoll.PolyCollection:
-            art3d.poly_collection_2d_to_3d(col, zs=zs, zdir=zdir)
+            art3d.poly_collection_2d_to_3d(col, zs=zs, zdir=zdir,
+                                           axlim_clip=axlim_clip)
             col.set_sort_zpos(zsortval)
         elif type(col) is mcoll.LineCollection:
-            art3d.line_collection_2d_to_3d(col, zs=zs, zdir=zdir)
+            art3d.line_collection_2d_to_3d(col, zs=zs, zdir=zdir,
+                                           axlim_clip=axlim_clip)
             col.set_sort_zpos(zsortval)
         elif type(col) is mcoll.PatchCollection:
-            art3d.patch_collection_2d_to_3d(col, zs=zs, zdir=zdir)
+            art3d.patch_collection_2d_to_3d(col, zs=zs, zdir=zdir,
+                                            axlim_clip=axlim_clip)
             col.set_sort_zpos(zsortval)
 
         if autolim:
@@ -2788,7 +2892,9 @@ class Axes3D(Axes):
                 self.auto_scale_xyz(*np.array(col._segments3d).transpose(),
                                     had_data=had_data)
             elif isinstance(col, art3d.Poly3DCollection):
-                self.auto_scale_xyz(*col._vec[:-1], had_data=had_data)
+                self.auto_scale_xyz(col._faces[..., 0],
+                                    col._faces[..., 1],
+                                    col._faces[..., 2], had_data=had_data)
             elif isinstance(col, art3d.Patch3DCollection):
                 pass
                 # FIXME: Implement auto-scaling function for Patch3DCollection
@@ -2801,8 +2907,11 @@ class Axes3D(Axes):
     @_preprocess_data(replace_names=["xs", "ys", "zs", "s",
                                      "edgecolors", "c", "facecolor",
                                      "facecolors", "color"])
-    def scatter(self, xs, ys, zs=0, zdir='z', s=20, c=None, depthshade=True,
-                *args, **kwargs):
+    def scatter(self, xs, ys, zs=0, zdir='z', s=20, c=None, depthshade=None,
+                *args,
+                depthshade_minalpha=None,
+                axlim_clip=False,
+                **kwargs):
         """
         Create a scatter plot.
 
@@ -2834,12 +2943,26 @@ class Axes3D(Axes):
             - A 2D array in which the rows are RGB or RGBA.
 
             For more details see the *c* argument of `~.axes.Axes.scatter`.
-        depthshade : bool, default: True
+        depthshade : bool, default: None
             Whether to shade the scatter markers to give the appearance of
             depth. Each call to ``scatter()`` will perform its depthshading
             independently.
+            If None, use the value from rcParams['axes3d.depthshade'].
+
+        depthshade_minalpha : float, default: None
+            The lowest alpha value applied by depth-shading.
+            If None, use the value from rcParams['axes3d.depthshade_minalpha'].
+
+            .. versionadded:: 3.11
+
+        axlim_clip : bool, default: False
+            Whether to hide the scatter points outside the axes view limits.
+
+            .. versionadded:: 3.10
+
         data : indexable object, optional
             DATA_PARAMETER_PLACEHOLDER
+
         **kwargs
             All other keyword arguments are passed on to `~.axes.Axes.scatter`.
 
@@ -2859,15 +2982,24 @@ class Axes3D(Axes):
             )
         if kwargs.get("color") is not None:
             kwargs['color'] = color
+        if depthshade is None:
+            depthshade = mpl.rcParams['axes3d.depthshade']
+        if depthshade_minalpha is None:
+            depthshade_minalpha = mpl.rcParams['axes3d.depthshade_minalpha']
 
         # For xs and ys, 2D scatter() will do the copying.
         if np.may_share_memory(zs_orig, zs):  # Avoid unnecessary copies.
             zs = zs.copy()
 
         patches = super().scatter(xs, ys, s=s, c=c, *args, **kwargs)
-        art3d.patch_collection_2d_to_3d(patches, zs=zs, zdir=zdir,
-                                        depthshade=depthshade)
-
+        art3d.patch_collection_2d_to_3d(
+            patches,
+            zs=zs,
+            zdir=zdir,
+            depthshade=depthshade,
+            depthshade_minalpha=depthshade_minalpha,
+            axlim_clip=axlim_clip,
+        )
         if self._zmargin < 0.05 and xs.size > 0:
             self.set_zmargin(0.05)
 
@@ -2878,7 +3010,8 @@ class Axes3D(Axes):
     scatter3D = scatter
 
     @_preprocess_data()
-    def bar(self, left, height, zs=0, zdir='z', *args, **kwargs):
+    def bar(self, left, height, zs=0, zdir='z', *args,
+            axlim_clip=False, **kwargs):
         """
         Add 2D bar(s).
 
@@ -2893,6 +3026,10 @@ class Axes3D(Axes):
             used for all bars.
         zdir : {'x', 'y', 'z'}, default: 'z'
             When plotting 2D data, the direction to use as z ('x', 'y' or 'z').
+        axlim_clip : bool, default: False
+            Whether to hide bars with points outside the axes view limits.
+
+            .. versionadded:: 3.10
         data : indexable object, optional
             DATA_PARAMETER_PLACEHOLDER
         **kwargs
@@ -2915,7 +3052,7 @@ class Axes3D(Axes):
             vs = art3d._get_patch_verts(p)
             verts += vs.tolist()
             verts_zs += [z] * len(vs)
-            art3d.patch_2d_to_3d(p, z, zdir)
+            art3d.patch_2d_to_3d(p, z, zdir, axlim_clip)
             if 'alpha' in kwargs:
                 p.set_alpha(kwargs['alpha'])
 
@@ -2934,7 +3071,8 @@ class Axes3D(Axes):
 
     @_preprocess_data()
     def bar3d(self, x, y, z, dx, dy, dz, color=None,
-              zsort='average', shade=True, lightsource=None, *args, **kwargs):
+              zsort='average', shade=True, lightsource=None, *args,
+              axlim_clip=False, **kwargs):
         """
         Generate a 3D barplot.
 
@@ -2980,6 +3118,11 @@ class Axes3D(Axes):
 
         lightsource : `~matplotlib.colors.LightSource`, optional
             The lightsource to use when *shade* is True.
+
+        axlim_clip : bool, default: False
+            Whether to hide the bars with points outside the axes view limits.
+
+            .. versionadded:: 3.10
 
         data : indexable object, optional
             DATA_PARAMETER_PLACEHOLDER
@@ -3086,6 +3229,7 @@ class Axes3D(Axes):
                                      facecolors=facecolors,
                                      shade=shade,
                                      lightsource=lightsource,
+                                     axlim_clip=axlim_clip,
                                      *args, **kwargs)
         self.add_collection(col)
 
@@ -3103,7 +3247,7 @@ class Axes3D(Axes):
     @_preprocess_data()
     def quiver(self, X, Y, Z, U, V, W, *,
                length=1, arrow_length_ratio=.3, pivot='tail', normalize=False,
-               **kwargs):
+               axlim_clip=False, **kwargs):
         """
         Plot a 3D field of arrows.
 
@@ -3134,6 +3278,11 @@ class Axes3D(Axes):
         normalize : bool, default: False
             Whether all arrows are normalized to have the same length, or keep
             the lengths defined by *u*, *v*, and *w*.
+
+        axlim_clip : bool, default: False
+            Whether to hide arrows with points outside the axes view limits.
+
+            .. versionadded:: 3.10
 
         data : indexable object, optional
             DATA_PARAMETER_PLACEHOLDER
@@ -3216,7 +3365,7 @@ class Axes3D(Axes):
         else:
             lines = []
 
-        linec = art3d.Line3DCollection(lines, **kwargs)
+        linec = art3d.Line3DCollection(lines, axlim_clip=axlim_clip, **kwargs)
         self.add_collection(linec)
 
         self.auto_scale_xyz(XYZ[:, 0], XYZ[:, 1], XYZ[:, 2], had_data)
@@ -3226,7 +3375,7 @@ class Axes3D(Axes):
     quiver3D = quiver
 
     def voxels(self, *args, facecolors=None, edgecolors=None, shade=True,
-               lightsource=None, **kwargs):
+               lightsource=None, axlim_clip=False, **kwargs):
         """
         ax.voxels([x, y, z,] /, filled, facecolors=None, edgecolors=None, \
 **kwargs)
@@ -3272,6 +3421,11 @@ class Axes3D(Axes):
 
         lightsource : `~matplotlib.colors.LightSource`, optional
             The lightsource to use when *shade* is True.
+
+        axlim_clip : bool, default: False
+            Whether to hide voxels with points outside the axes view limits.
+
+            .. versionadded:: 3.10
 
         **kwargs
             Additional keyword arguments to pass onto
@@ -3428,7 +3582,8 @@ class Axes3D(Axes):
 
             poly = art3d.Poly3DCollection(
                 faces, facecolors=facecolor, edgecolors=edgecolor,
-                shade=shade, lightsource=lightsource, **kwargs)
+                shade=shade, lightsource=lightsource, axlim_clip=axlim_clip,
+                **kwargs)
             self.add_collection3d(poly)
             polygons[coord] = poly
 
@@ -3439,6 +3594,7 @@ class Axes3D(Axes):
                  barsabove=False, errorevery=1, ecolor=None, elinewidth=None,
                  capsize=None, capthick=None, xlolims=False, xuplims=False,
                  ylolims=False, yuplims=False, zlolims=False, zuplims=False,
+                 axlim_clip=False,
                  **kwargs):
         """
         Plot lines and/or markers with errorbars around them.
@@ -3516,6 +3672,11 @@ class Axes3D(Axes):
             Used to avoid overlapping error bars when two series share x-axis
             values.
 
+        axlim_clip : bool, default: False
+            Whether to hide error bars that are outside the axes limits.
+
+            .. versionadded:: 3.10
+
         Returns
         -------
         errlines : list
@@ -3571,7 +3732,7 @@ class Axes3D(Axes):
         # data processing.
         (data_line, base_style), = self._get_lines._plot_args(
             self, (x, y) if fmt == '' else (x, y, fmt), kwargs, return_kwargs=True)
-        art3d.line_2d_to_3d(data_line, zs=z)
+        art3d.line_2d_to_3d(data_line, zs=z, axlim_clip=axlim_clip)
 
         # Do this after creating `data_line` to avoid modifying `base_style`.
         if barsabove:
@@ -3715,9 +3876,11 @@ class Axes3D(Axes):
                 # these markers will rotate as the viewing angle changes
                 cap_lo = art3d.Line3D(*lo_caps_xyz, ls='',
                                       marker=capmarker[i_zdir],
+                                      axlim_clip=axlim_clip,
                                       **eb_cap_style)
                 cap_hi = art3d.Line3D(*hi_caps_xyz, ls='',
                                       marker=capmarker[i_zdir],
+                                      axlim_clip=axlim_clip,
                                       **eb_cap_style)
                 self.add_line(cap_lo)
                 self.add_line(cap_hi)
@@ -3732,6 +3895,7 @@ class Axes3D(Axes):
                 self.quiver(xl0, yl0, zl0, *-dir_vector, **eb_quiver_style)
 
             errline = art3d.Line3DCollection(np.array(coorderr).T,
+                                             axlim_clip=axlim_clip,
                                              **eb_lines_style)
             self.add_collection(errline)
             errlines.append(errline)
@@ -3776,7 +3940,7 @@ class Axes3D(Axes):
 
     @_preprocess_data()
     def stem(self, x, y, z, *, linefmt='C0-', markerfmt='C0o', basefmt='C3-',
-             bottom=0, label=None, orientation='z'):
+             bottom=0, label=None, orientation='z', axlim_clip=False):
         """
         Create a 3D stem plot.
 
@@ -3826,6 +3990,11 @@ class Axes3D(Axes):
         orientation : {'x', 'y', 'z'}, default: 'z'
             The direction along which stems are drawn.
 
+        axlim_clip : bool, default: False
+            Whether to hide stems that are outside the axes limits.
+
+            .. versionadded:: 3.10
+
         data : indexable object, optional
             DATA_PARAMETER_PLACEHOLDER
 
@@ -3870,14 +4039,14 @@ class Axes3D(Axes):
 
         # Determine style for stem lines.
         linestyle, linemarker, linecolor = _process_plot_format(linefmt)
-        if linestyle is None:
-            linestyle = mpl.rcParams['lines.linestyle']
+        linestyle = mpl._val_or_rc(linestyle, 'lines.linestyle')
 
         # Plot everything in required order.
         baseline, = self.plot(basex, basey, basefmt, zs=bottom,
                               zdir=orientation, label='_nolegend_')
         stemlines = art3d.Line3DCollection(
-            lines, linestyles=linestyle, colors=linecolor, label='_nolegend_')
+            lines, linestyles=linestyle, colors=linecolor, label='_nolegend_',
+            axlim_clip=axlim_clip)
         self.add_collection(stemlines)
         markerline, = self.plot(x, y, z, markerfmt, label='_nolegend_')
 
@@ -3984,7 +4153,7 @@ class _Quaternion:
         k = np.cross(r1, r2)
         nk = np.linalg.norm(k)
         th = np.arctan2(nk, np.dot(r1, r2))
-        th = th/2
+        th /= 2
         if nk == 0:  # r1 and r2 are parallel or anti-parallel
             if np.dot(r1, r2) < 0:
                 warnings.warn("Rotation defined by anti-parallel vectors is ambiguous")
@@ -3996,7 +4165,7 @@ class _Quaternion:
             else:
                 q = cls(1, [0, 0, 0])  # = 1, no rotation
         else:
-            q = cls(math.cos(th), k*math.sin(th)/nk)
+            q = cls(np.cos(th), k*np.sin(th)/nk)
         return q
 
     @classmethod
@@ -4021,10 +4190,11 @@ class _Quaternion:
         """
         The inverse of `from_cardan_angles()`.
         Note that the angles returned are in radians, not degrees.
+        The angles are not sensitive to the quaternion's norm().
         """
         qw = self.scalar
         qx, qy, qz = self.vector[..., :]
         azim = np.arctan2(2*(-qw*qz+qx*qy), qw*qw+qx*qx-qy*qy-qz*qz)
-        elev = np.arcsin( 2*( qw*qy+qz*qx)/(qw*qw+qx*qx+qy*qy+qz*qz))  # noqa E201
-        roll = np.arctan2(2*( qw*qx-qy*qz), qw*qw-qx*qx-qy*qy+qz*qz)   # noqa E201
+        elev = np.arcsin(np.clip(2*(qw*qy+qz*qx)/(qw*qw+qx*qx+qy*qy+qz*qz), -1, 1))
+        roll = np.arctan2(2*(qw*qx-qy*qz), qw*qw-qx*qx-qy*qy+qz*qz)
         return elev, azim, roll

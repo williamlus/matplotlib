@@ -15,6 +15,7 @@ from matplotlib.backend_bases import (
 )
 from matplotlib.colors import Colormap, Normalize
 from matplotlib.colorbar import Colorbar
+from matplotlib.colorizer import ColorizingArtist, Colorizer
 from matplotlib.cm import ScalarMappable
 from matplotlib.gridspec import GridSpec, SubplotSpec, SubplotParams as SubplotParams
 from matplotlib.image import _ImageBase, FigureImage
@@ -24,6 +25,8 @@ from matplotlib.lines import Line2D
 from matplotlib.patches import Rectangle, Patch
 from matplotlib.text import Text
 from matplotlib.transforms import Affine2D, Bbox, BboxBase, Transform
+from mpl_toolkits.mplot3d import Axes3D
+
 from .typing import ColorType, HashableList
 
 _T = TypeVar("_T")
@@ -86,17 +89,20 @@ class FigureBase(Artist):
 
     # TODO: docstring indicates SubplotSpec a valid arg, but none of the listed signatures appear to be that
     @overload
+    def add_subplot(self, *args: Any, projection: Literal["3d"], **kwargs: Any) -> Axes3D: ...
+    @overload
     def add_subplot(
-        self, nrows: int, ncols: int, index: int | tuple[int, int], **kwargs
+        self, nrows: int, ncols: int, index: int | tuple[int, int], **kwargs: Any
     ) -> Axes: ...
     @overload
-    def add_subplot(self, pos: int, **kwargs) -> Axes: ...
+    def add_subplot(self, pos: int, **kwargs: Any) -> Axes: ...
     @overload
-    def add_subplot(self, ax: Axes, **kwargs) -> Axes: ...
+    def add_subplot(self, ax: Axes, **kwargs: Any) -> Axes: ...
     @overload
-    def add_subplot(self, ax: SubplotSpec, **kwargs) -> Axes: ...
+    def add_subplot(self, ax: SubplotSpec, **kwargs: Any) -> Axes: ...
     @overload
-    def add_subplot(self, **kwargs) -> Axes: ...
+    def add_subplot(self, **kwargs: Any) -> Axes: ...
+
     @overload
     def subplots(
         self,
@@ -164,7 +170,7 @@ class FigureBase(Artist):
     ) -> Text: ...
     def colorbar(
         self,
-        mappable: ScalarMappable,
+        mappable: ScalarMappable | ColorizingArtist,
         cax: Axes | None = ...,
         ax: Axes | Iterable[Axes] | None = ...,
         use_gridspec: bool = ...,
@@ -187,9 +193,22 @@ class FigureBase(Artist):
     @overload
     def subfigures(
         self,
+        nrows: int,
+        ncols: int,
+        squeeze: Literal[False],
+        wspace: float | None = ...,
+        hspace: float | None = ...,
+        width_ratios: ArrayLike | None = ...,
+        height_ratios: ArrayLike | None = ...,
+        **kwargs
+    ) -> np.ndarray: ...
+    @overload
+    def subfigures(
+        self,
         nrows: int = ...,
         ncols: int = ...,
-        squeeze: Literal[False] = ...,
+        *,
+        squeeze: Literal[False],
         wspace: float | None = ...,
         hspace: float | None = ...,
         width_ratios: ArrayLike | None = ...,
@@ -211,7 +230,7 @@ class FigureBase(Artist):
     def add_subfigure(self, subplotspec: SubplotSpec, **kwargs) -> SubFigure: ...
     def sca(self, a: Axes) -> Axes: ...
     def gca(self) -> Axes: ...
-    def _gci(self) -> ScalarMappable | None: ...
+    def _gci(self) -> ColorizingArtist | None: ...
     def _process_projection_requirements(
         self, *, axes_class=None, polar=False, projection=None, **kwargs
     ) -> tuple[type[Axes], dict[str, Any]]: ...
@@ -317,7 +336,9 @@ class Figure(FigureBase):
     subplotpars: SubplotParams
     def __init__(
         self,
-        figsize: tuple[float, float] | None = ...,
+        figsize: tuple[float, float]
+        | tuple[float, float, Literal["in", "cm", "px"]]
+        | None = ...,
         dpi: float | None = ...,
         *,
         facecolor: ColorType | None = ...,
@@ -343,6 +364,10 @@ class Figure(FigureBase):
     def get_layout_engine(self) -> LayoutEngine | None: ...
     def _repr_html_(self) -> str | None: ...
     def show(self, warn: bool = ...) -> None: ...
+    @property
+    def number(self) -> int | str: ...
+    @number.setter
+    def number(self, num: int | str) -> None: ...
     @property  # type: ignore[misc]
     def axes(self) -> list[Axes]: ...  # type: ignore[override]
     def get_axes(self) -> list[Axes]: ...
@@ -369,6 +394,8 @@ class Figure(FigureBase):
         vmax: float | None = ...,
         origin: Literal["upper", "lower"] | None = ...,
         resize: bool = ...,
+        *,
+        colorizer: Colorizer | None = ...,
         **kwargs
     ) -> FigureImage: ...
     def set_size_inches(
@@ -411,4 +438,11 @@ class Figure(FigureBase):
         rect: tuple[float, float, float, float] | None = ...
     ) -> None: ...
 
-def figaspect(arg: float | ArrayLike) -> tuple[float, float]: ...
+def figaspect(
+    arg: float | ArrayLike,
+) -> np.ndarray[tuple[Literal[2]], np.dtype[np.float64]]: ...
+
+def _parse_figsize(
+    figsize: tuple[float, float] | tuple[float, float, Literal["in", "cm", "px"]],
+    dpi: float
+) -> tuple[float, float]: ...

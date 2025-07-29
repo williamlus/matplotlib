@@ -15,6 +15,7 @@ programmatic plot generation::
     x = np.arange(0, 5, 0.1)
     y = np.sin(x)
     plt.plot(x, y)
+    plt.show()
 
 The explicit object-oriented API is recommended for complex plots, though
 pyplot is still usually used to create the figure and often the Axes in the
@@ -29,6 +30,7 @@ figure. See `.pyplot.figure`, `.pyplot.subplots`, and
     y = np.sin(x)
     fig, ax = plt.subplots()
     ax.plot(x, y)
+    plt.show()
 
 
 See :ref:`api_interfaces` for an explanation of the tradeoffs between the
@@ -48,7 +50,7 @@ import logging
 import sys
 import threading
 import time
-from typing import TYPE_CHECKING, cast, overload
+from typing import IO, TYPE_CHECKING, cast, overload
 
 from cycler import cycler  # noqa: F401
 import matplotlib
@@ -56,7 +58,8 @@ import matplotlib.colorbar
 import matplotlib.image
 from matplotlib import _api
 # Re-exported (import x as x) for typing.
-from matplotlib import cm as cm, get_backend as get_backend, rcParams as rcParams
+from matplotlib import get_backend as get_backend, rcParams as rcParams
+from matplotlib import cm as cm  # noqa: F401
 from matplotlib import style as style  # noqa: F401
 from matplotlib import _pylab_helpers
 from matplotlib import interactive  # noqa: F401
@@ -72,6 +75,7 @@ from matplotlib.axes import Axes
 from matplotlib.axes import Subplot  # noqa: F401
 from matplotlib.backends import BackendFilter, backend_registry
 from matplotlib.projections import PolarAxes
+from matplotlib.colorizer import _ColorizerInterface, ColorizingArtist, Colorizer
 from matplotlib import mlab  # for detrend_none, window_hanning
 from matplotlib.scale import get_scale_names  # noqa: F401
 
@@ -82,7 +86,6 @@ import numpy as np
 
 if TYPE_CHECKING:
     from collections.abc import Callable, Hashable, Iterable, Sequence
-    import datetime
     import pathlib
     import os
     from typing import Any, BinaryIO, Literal, TypeVar
@@ -90,17 +93,26 @@ if TYPE_CHECKING:
 
     import PIL.Image
     from numpy.typing import ArrayLike
+    import pandas as pd
 
     import matplotlib.axes
     import matplotlib.artist
     import matplotlib.backend_bases
     from matplotlib.axis import Tick
     from matplotlib.axes._base import _AxesBase
-    from matplotlib.backend_bases import Event
+    from matplotlib.backend_bases import (
+        CloseEvent,
+        DrawEvent,
+        KeyEvent,
+        MouseEvent,
+        PickEvent,
+        ResizeEvent,
+    )
     from matplotlib.cm import ScalarMappable
     from matplotlib.contour import ContourSet, QuadContourSet
     from matplotlib.collections import (
         Collection,
+        FillBetweenPolyCollection,
         LineCollection,
         PolyCollection,
         PathCollection,
@@ -121,11 +133,18 @@ if TYPE_CHECKING:
     from matplotlib.quiver import Barbs, Quiver, QuiverKey
     from matplotlib.scale import ScaleBase
     from matplotlib.typing import (
+        CloseEventType,
         ColorType,
         CoordsType,
+        DrawEventType,
         HashableList,
+        KeyEventType,
         LineStyleType,
         MarkerType,
+        MouseEventType,
+        PickEventType,
+        ResizeEventType,
+        LogLevel
     )
     from matplotlib.widgets import SubplotTool
 
@@ -333,8 +352,8 @@ draw_all = _pylab_helpers.Gcf.draw_all
 
 # Ensure this appears in the pyplot docs.
 @_copy_docstring_and_deprecators(matplotlib.set_loglevel)
-def set_loglevel(*args, **kwargs) -> None:
-    return matplotlib.set_loglevel(*args, **kwargs)
+def set_loglevel(level: LogLevel) -> None:
+    return matplotlib.set_loglevel(level)
 
 
 @_copy_docstring_and_deprecators(Artist.findobj)
@@ -514,16 +533,12 @@ def switch_backend(newbackend: str) -> None:
     # See https://github.com/matplotlib/matplotlib/issues/6092
     matplotlib.backends.backend = newbackend  # type: ignore[attr-defined]
 
-    if not cbook._str_equal(old_backend, newbackend):
-        if get_fignums():
-            _api.warn_deprecated("3.8", message=(
-                "Auto-close()ing of figures upon backend switching is deprecated since "
-                "%(since)s and will be removed %(removal)s.  To suppress this warning, "
-                "explicitly call plt.close('all') first."))
-        close("all")
-
     # Make sure the repl display hook is installed in case we become interactive.
-    install_repl_displayhook()
+    try:
+        install_repl_displayhook()
+    except NotImplementedError as err:
+        _log.warning("Fallback to a different backend")
+        raise ImportError from err
 
 
 def _warn_if_gui_out_of_main_thread() -> None:
@@ -566,6 +581,14 @@ def draw_if_interactive(*args, **kwargs):
         the interactive mode takes care of this.
     """
     return _get_backend_mod().draw_if_interactive(*args, **kwargs)
+
+
+@overload
+def show(*, block: bool, **kwargs) -> None: ...
+
+
+@overload
+def show(*args: Any, **kwargs: Any) -> None: ...
 
 
 # This function's signature is rewritten upon backend-load by switch_backend.
@@ -823,8 +846,7 @@ def xkcd(
 
     Notes
     -----
-    This function works by a number of rcParams, so it will probably
-    override others you have set before.
+    This function works by a number of rcParams, overriding those set before.
 
     If you want the effects of this function to be temporary, it can
     be used as a context manager, for example::
@@ -876,7 +898,9 @@ def figure(
     # autoincrement if None, else integer from 1-N
     num: int | str | Figure | SubFigure | None = None,
     # defaults to rc figure.figsize
-    figsize: tuple[float, float] | None = None,
+    figsize: ArrayLike  # a 2-element ndarray is accepted as well
+             | tuple[float, float, Literal["in", "cm", "px"]]
+             | None = None,
     # defaults to rc figure.dpi
     dpi: float | None = None,
     *,
@@ -909,8 +933,12 @@ def figure(
         window title is set to this value.  If num is a ``SubFigure``, its
         parent ``Figure`` is activated.
 
-    figsize : (float, float), default: :rc:`figure.figsize`
-        Width, height in inches.
+    figsize : (float, float) or (float, float, str), default: :rc:`figure.figsize`
+        The figure dimensions. This can be
+
+        - a tuple ``(width, height, unit)``, where *unit* is one of "inch", "cm",
+          "px".
+        - a tuple ``(x, y)``, which is interpreted as ``(x, y, "inch")``.
 
     dpi : float, default: :rc:`figure.dpi`
         The resolution of the figure in dots-per-inch.
@@ -997,8 +1025,8 @@ default: None
         root_fig = num.get_figure(root=True)
         if root_fig.canvas.manager is None:
             raise ValueError("The passed figure is not managed by pyplot")
-        elif any([figsize, dpi, facecolor, edgecolor, not frameon,
-                  kwargs]) and root_fig.canvas.manager.num in allnums:
+        elif (any(param is not None for param in [figsize, dpi, facecolor, edgecolor])
+              or not frameon or kwargs) and root_fig.canvas.manager.num in allnums:
             _api.warn_external(
                 "Ignoring specified arguments in this call because figure "
                 f"with num: {root_fig.canvas.manager.num} already exists")
@@ -1010,8 +1038,8 @@ default: None
     if num is None:
         num = next_num
     else:
-        if any([figsize, dpi, facecolor, edgecolor, not frameon,
-                kwargs]) and num in allnums:
+        if (any(param is not None for param in [figsize, dpi, facecolor, edgecolor])
+              or not frameon or kwargs) and num in allnums:
             _api.warn_external(
                 "Ignoring specified arguments in this call "
                 f"because figure with num: {num} already exists")
@@ -1161,8 +1189,32 @@ def get_current_fig_manager() -> FigureManagerBase | None:
     return gcf().canvas.manager
 
 
+@overload
+def connect(s: MouseEventType, func: Callable[[MouseEvent], Any]) -> int: ...
+
+
+@overload
+def connect(s: KeyEventType, func: Callable[[KeyEvent], Any]) -> int: ...
+
+
+@overload
+def connect(s: PickEventType, func: Callable[[PickEvent], Any]) -> int: ...
+
+
+@overload
+def connect(s: ResizeEventType, func: Callable[[ResizeEvent], Any]) -> int: ...
+
+
+@overload
+def connect(s: CloseEventType, func: Callable[[CloseEvent], Any]) -> int: ...
+
+
+@overload
+def connect(s: DrawEventType, func: Callable[[DrawEvent], Any]) -> int: ...
+
+
 @_copy_docstring_and_deprecators(FigureCanvasBase.mpl_connect)
-def connect(s: str, func: Callable[[Event], Any]) -> int:
+def connect(s, func) -> int:
     return gcf().canvas.mpl_connect(s, func)
 
 
@@ -1173,7 +1225,7 @@ def disconnect(cid: int) -> None:
 
 def close(fig: None | int | str | Figure | Literal["all"] = None) -> None:
     """
-    Close a figure window.
+    Close a figure window, and unregister it from pyplot.
 
     Parameters
     ----------
@@ -1186,6 +1238,14 @@ def close(fig: None | int | str | Figure | Literal["all"] = None) -> None:
         - ``str``: a figure name
         - 'all': all figures
 
+    Notes
+    -----
+    pyplot maintains a reference to figures created with `figure()`. When
+    work on the figure is completed, it should be closed, i.e. deregistered
+    from pyplot, to free its memory (see also :rc:figure.max_open_warning).
+    Closing a figure window created by `show()` automatically deregisters the
+    figure. For all other use cases, most prominently `savefig()` without
+    `show()`, the figure must be deregistered explicitly using `close()`.
     """
     if fig is None:
         manager = _pylab_helpers.Gcf.get_active()
@@ -1197,9 +1257,7 @@ def close(fig: None | int | str | Figure | Literal["all"] = None) -> None:
         _pylab_helpers.Gcf.destroy_all()
     elif isinstance(fig, int):
         _pylab_helpers.Gcf.destroy(fig)
-    elif hasattr(fig, 'int'):
-        # if we are dealing with a type UUID, we
-        # can use its integer representation
+    elif hasattr(fig, 'int'):  # UUIDs get converted to ints by figure().
         _pylab_helpers.Gcf.destroy(fig.int)
     elif isinstance(fig, str):
         all_labels = get_figlabels()
@@ -1209,8 +1267,8 @@ def close(fig: None | int | str | Figure | Literal["all"] = None) -> None:
     elif isinstance(fig, Figure):
         _pylab_helpers.Gcf.destroy_fig(fig)
     else:
-        raise TypeError("close() argument must be a Figure, an int, a string, "
-                        "or None, not %s" % type(fig))
+        _api.check_isinstance(  # type: ignore[unreachable]
+            (Figure, int, str, None), fig=fig)
 
 
 def clf() -> None:
@@ -1239,11 +1297,11 @@ def draw() -> None:
 
 
 @_copy_docstring_and_deprecators(Figure.savefig)
-def savefig(*args, **kwargs) -> None:
+def savefig(fname: str | os.PathLike | IO, **kwargs) -> None:
     fig = gcf()
     # savefig default implementation has no return, so mypy is unhappy
     # presumably this is here because subclasses can return?
-    res = fig.savefig(*args, **kwargs)  # type: ignore[func-returns-value]
+    res = fig.savefig(fname, **kwargs)  # type: ignore[func-returns-value]
     fig.canvas.draw_idle()  # Need this if 'transparent=True', to reset colors.
     return res
 
@@ -1381,6 +1439,18 @@ def cla() -> None:
 
 ## More ways of creating Axes ##
 
+@overload
+def subplot(nrows: int, ncols: int, index: int, /, **kwargs): ...
+
+
+@overload
+def subplot(pos: int | SubplotSpec, /, **kwargs): ...
+
+
+@overload
+def subplot(**kwargs): ...
+
+
 @_docstring.interpd
 def subplot(*args, **kwargs) -> Axes:
     """
@@ -1394,7 +1464,6 @@ def subplot(*args, **kwargs) -> Axes:
        subplot(nrows, ncols, index, **kwargs)
        subplot(pos, **kwargs)
        subplot(**kwargs)
-       subplot(ax)
 
     Parameters
     ----------
@@ -1452,16 +1521,10 @@ def subplot(*args, **kwargs) -> Axes:
 
     Notes
     -----
-    Creating a new Axes will delete any preexisting Axes that
-    overlaps with it beyond sharing a boundary::
-
-        import matplotlib.pyplot as plt
-        # plot a line, implicitly creating a subplot(111)
-        plt.plot([1, 2, 3])
-        # now create a subplot which represents the top plot of a grid
-        # with 2 rows and 1 column. Since this subplot will overlap the
-        # first, the plot (and its Axes) previously created, will be removed
-        plt.subplot(211)
+    .. versionchanged:: 3.8
+        In versions prior to 3.8, any preexisting Axes that overlap with the new Axes
+        beyond sharing a boundary was deleted. Deletion does not happen in more
+        recent versions anymore. Use `.Axes.remove` explicitly if needed.
 
     If you do not want this behavior, use the `.Figure.add_subplot` method
     or the `.pyplot.axes` function instead.
@@ -1712,7 +1775,7 @@ def subplots(
 
         Typical idioms for handling the return value are::
 
-            # using the variable ax for single a Axes
+            # using the variable ax for a single Axes
             fig, ax = plt.subplots()
 
             # using the variable axs for multiple Axes
@@ -2090,6 +2153,24 @@ def box(on: bool | None = None) -> None:
 ## Axis ##
 
 
+@overload
+def xlim() -> tuple[float, float]:
+    ...
+
+
+@overload
+def xlim(
+        left: float | tuple[float, float] | None = None,
+        right: float | None = None,
+        *,
+        emit: bool = True,
+        auto: bool | None = False,
+        xmin: float | None = None,
+        xmax: float | None = None,
+) -> tuple[float, float]:
+    ...
+
+
 def xlim(*args, **kwargs) -> tuple[float, float]:
     """
     Get or set the x limits of the current Axes.
@@ -2125,6 +2206,24 @@ def xlim(*args, **kwargs) -> tuple[float, float]:
         return ax.get_xlim()
     ret = ax.set_xlim(*args, **kwargs)
     return ret
+
+
+@overload
+def ylim() -> tuple[float, float]:
+    ...
+
+
+@overload
+def ylim(
+        bottom: float | tuple[float, float] | None = None,
+        top: float | None = None,
+        *,
+        emit: bool = True,
+        auto: bool | None = False,
+        ymin: float | None = None,
+        ymax: float | None = None,
+) -> tuple[float, float]:
+    ...
 
 
 def ylim(*args, **kwargs) -> tuple[float, float]:
@@ -2520,7 +2619,7 @@ def _get_pyplot_commands() -> list[str]:
 
 @_copy_docstring_and_deprecators(Figure.colorbar)
 def colorbar(
-    mappable: ScalarMappable | None = None,
+    mappable: ScalarMappable | ColorizingArtist | None = None,
     cax: matplotlib.axes.Axes | None = None,
     ax: matplotlib.axes.Axes | Iterable[matplotlib.axes.Axes] | None = None,
     **kwargs
@@ -2671,9 +2770,13 @@ def matshow(A: ArrayLike, fignum: None | int = None, **kwargs) -> AxesImage:
     if fignum == 0:
         ax = gca()
     else:
-        # Extract actual aspect ratio of array and make appropriately sized
-        # figure.
-        fig = figure(fignum, figsize=figaspect(A))
+        if fignum is not None and fignum_exists(fignum):
+            # Do not try to set a figure size.
+            figsize = None
+        else:
+            # Extract actual aspect ratio of array and make appropriately sized figure.
+            figsize = figaspect(A)
+        fig = figure(fignum, figsize=figsize)
         ax = fig.add_axes((0.15, 0.09, 0.775, 0.775))
     im = ax.matshow(A, **kwargs)
     sci(im)
@@ -2686,17 +2789,32 @@ def polar(*args, **kwargs) -> list[Line2D]:
 
     call signature::
 
-      polar(theta, r, **kwargs)
+      polar(theta, r, [fmt], **kwargs)
 
-    Multiple *theta*, *r* arguments are supported, with format strings, as in
-    `plot`.
+    This is a convenience wrapper around `.pyplot.plot`. It ensures that the
+    current Axes is polar (or creates one if needed) and then passes all parameters
+    to ``.pyplot.plot``.
+
+    .. note::
+        When making polar plots using the :ref:`pyplot API <pyplot_interface>`,
+        ``polar()`` should typically be the first command because that makes sure
+        a polar Axes is created. Using other commands such as ``plt.title()``
+        before this can lead to the implicit creation of a rectangular Axes, in which
+        case a subsequent ``polar()`` call will fail.
     """
     # If an axis already exists, check if it has a polar projection
     if gcf().get_axes():
         ax = gca()
         if not isinstance(ax, PolarAxes):
-            _api.warn_external('Trying to create polar plot on an Axes '
-                               'that does not have a polar projection.')
+            _api.warn_deprecated(
+                "3.10",
+                message="There exists a non-polar current Axes. Therefore, the "
+                        "resulting plot from 'polar()' is non-polar. You likely "
+                        "should call 'polar()' before any other pyplot plotting "
+                        "commands. "
+                        "Support for this scenario is deprecated in %(since)s and "
+                        "will raise an error in %(removal)s"
+            )
     else:
         ax = axes(projection="polar")
     return ax.plot(*args, **kwargs)
@@ -2705,12 +2823,15 @@ def polar(*args, **kwargs) -> list[Line2D]:
 # If rcParams['backend_fallback'] is true, and an interactive backend is
 # requested, ignore rcParams['backend'] and force selection of a backend that
 # is compatible with the current running interactive framework.
-if (rcParams["backend_fallback"]
-        and rcParams._get_backend_or_none() in (  # type: ignore[attr-defined]
-            set(backend_registry.list_builtin(BackendFilter.INTERACTIVE)) -
-            {'webagg', 'nbagg'})
-        and cbook._get_running_interactive_framework()):
-    rcParams._set("backend", rcsetup._auto_backend_sentinel)
+if rcParams["backend_fallback"]:
+    requested_backend = rcParams._get_backend_or_none()  # type: ignore[attr-defined]
+    requested_backend = None if requested_backend is None else requested_backend.lower()
+    available_backends = backend_registry.list_builtin(BackendFilter.INTERACTIVE)
+    if (
+        requested_backend in (set(available_backends) - {'webagg', 'nbagg'})
+        and cbook._get_running_interactive_framework()
+    ):
+        rcParams._set("backend", rcsetup._auto_backend_sentinel)
 
 # fmt: on
 
@@ -2730,6 +2851,8 @@ def figimage(
     vmax: float | None = None,
     origin: Literal["upper", "lower"] | None = None,
     resize: bool = False,
+    *,
+    colorizer: Colorizer | None = None,
     **kwargs,
 ) -> FigureImage:
     return gcf().figimage(
@@ -2743,6 +2866,7 @@ def figimage(
         vmax=vmax,
         origin=origin,
         resize=resize,
+        colorizer=colorizer,
         **kwargs,
     )
 
@@ -2763,7 +2887,7 @@ def gca() -> Axes:
 
 # Autogenerated by boilerplate.py.  Do not edit as changes will be lost.
 @_copy_docstring_and_deprecators(Figure._gci)
-def gci() -> ScalarMappable | None:
+def gci() -> ColorizingArtist | None:
     return gcf()._gci()
 
 
@@ -3011,7 +3135,7 @@ def bar_label(
     *,
     fmt: str | Callable[[float], str] = "%g",
     label_type: Literal["center", "edge"] = "edge",
-    padding: float = 0,
+    padding: float | ArrayLike = 0,
     **kwargs,
 ) -> list[Annotation]:
     return gca().bar_label(
@@ -3217,7 +3341,7 @@ def ecdf(
     weights: ArrayLike | None = None,
     *,
     complementary: bool = False,
-    orientation: Literal["vertical", "horizonatal"] = "vertical",
+    orientation: Literal["vertical", "horizontal"] = "vertical",
     compress: bool = False,
     data=None,
     **kwargs,
@@ -3251,6 +3375,7 @@ def errorbar(
     xuplims: bool | ArrayLike = False,
     errorevery: int | tuple[int, int] = 1,
     capthick: float | None = None,
+    elinestyle: LineStyleType | None = None,
     *,
     data=None,
     **kwargs,
@@ -3271,6 +3396,7 @@ def errorbar(
         xuplims=xuplims,
         errorevery=errorevery,
         capthick=capthick,
+        elinestyle=elinestyle,
         **({"data": data} if data is not None else {}),
         **kwargs,
     )
@@ -3323,7 +3449,7 @@ def fill_between(
     *,
     data=None,
     **kwargs,
-) -> PolyCollection:
+) -> FillBetweenPolyCollection:
     return gca().fill_between(
         x,
         y1,
@@ -3348,7 +3474,7 @@ def fill_betweenx(
     *,
     data=None,
     **kwargs,
-) -> PolyCollection:
+) -> FillBetweenPolyCollection:
     return gca().fill_betweenx(
         y,
         x1,
@@ -3373,6 +3499,33 @@ def grid(
 
 
 # Autogenerated by boilerplate.py.  Do not edit as changes will be lost.
+@_copy_docstring_and_deprecators(Axes.grouped_bar)
+def grouped_bar(
+    heights: Sequence[ArrayLike] | dict[str, ArrayLike] | np.ndarray | pd.DataFrame,
+    *,
+    positions: ArrayLike | None = None,
+    group_spacing: float | None = 1.5,
+    bar_spacing: float | None = 0,
+    tick_labels: Sequence[str] | None = None,
+    labels: Sequence[str] | None = None,
+    orientation: Literal["vertical", "horizontal"] = "vertical",
+    colors: Iterable[ColorType] | None = None,
+    **kwargs,
+) -> list[BarContainer]:
+    return gca().grouped_bar(
+        heights,
+        positions=positions,
+        group_spacing=group_spacing,
+        bar_spacing=bar_spacing,
+        tick_labels=tick_labels,
+        labels=labels,
+        orientation=orientation,
+        colors=colors,
+        **kwargs,
+    )
+
+
+# Autogenerated by boilerplate.py.  Do not edit as changes will be lost.
 @_copy_docstring_and_deprecators(Axes.hexbin)
 def hexbin(
     x: ArrayLike,
@@ -3393,6 +3546,7 @@ def hexbin(
     reduce_C_function: Callable[[np.ndarray | list[float]], float] = np.mean,
     mincnt: int | None = None,
     marginals: bool = False,
+    colorizer: Colorizer | None = None,
     *,
     data=None,
     **kwargs,
@@ -3416,6 +3570,7 @@ def hexbin(
         reduce_C_function=reduce_C_function,
         mincnt=mincnt,
         marginals=marginals,
+        colorizer=colorizer,
         **({"data": data} if data is not None else {}),
         **kwargs,
     )
@@ -3561,6 +3716,7 @@ def imshow(
     alpha: float | ArrayLike | None = None,
     vmin: float | None = None,
     vmax: float | None = None,
+    colorizer: Colorizer | None = None,
     origin: Literal["upper", "lower"] | None = None,
     extent: tuple[float, float, float, float] | None = None,
     interpolation_stage: Literal["data", "rgba", "auto"] | None = None,
@@ -3580,6 +3736,7 @@ def imshow(
         alpha=alpha,
         vmin=vmin,
         vmax=vmax,
+        colorizer=colorizer,
         origin=origin,
         extent=extent,
         interpolation_stage=interpolation_stage,
@@ -3674,6 +3831,7 @@ def pcolor(
     cmap: str | Colormap | None = None,
     vmin: float | None = None,
     vmax: float | None = None,
+    colorizer: Colorizer | None = None,
     data=None,
     **kwargs,
 ) -> Collection:
@@ -3685,6 +3843,7 @@ def pcolor(
         cmap=cmap,
         vmin=vmin,
         vmax=vmax,
+        colorizer=colorizer,
         **({"data": data} if data is not None else {}),
         **kwargs,
     )
@@ -3701,6 +3860,7 @@ def pcolormesh(
     cmap: str | Colormap | None = None,
     vmin: float | None = None,
     vmax: float | None = None,
+    colorizer: Colorizer | None = None,
     shading: Literal["flat", "nearest", "gouraud", "auto"] | None = None,
     antialiased: bool = False,
     data=None,
@@ -3713,6 +3873,7 @@ def pcolormesh(
         cmap=cmap,
         vmin=vmin,
         vmax=vmax,
+        colorizer=colorizer,
         shading=shading,
         antialiased=antialiased,
         **({"data": data} if data is not None else {}),
@@ -3813,31 +3974,6 @@ def plot(
 
 
 # Autogenerated by boilerplate.py.  Do not edit as changes will be lost.
-@_copy_docstring_and_deprecators(Axes.plot_date)
-def plot_date(
-    x: ArrayLike,
-    y: ArrayLike,
-    fmt: str = "o",
-    tz: str | datetime.tzinfo | None = None,
-    xdate: bool = True,
-    ydate: bool = False,
-    *,
-    data=None,
-    **kwargs,
-) -> list[Line2D]:
-    return gca().plot_date(
-        x,
-        y,
-        fmt=fmt,
-        tz=tz,
-        xdate=xdate,
-        ydate=ydate,
-        **({"data": data} if data is not None else {}),
-        **kwargs,
-    )
-
-
-# Autogenerated by boilerplate.py.  Do not edit as changes will be lost.
 @_copy_docstring_and_deprecators(Axes.psd)
 def psd(
     x: ArrayLike,
@@ -3908,6 +4044,7 @@ def scatter(
     linewidths: float | Sequence[float] | None = None,
     *,
     edgecolors: Literal["face", "none"] | ColorType | Sequence[ColorType] | None = None,
+    colorizer: Colorizer | None = None,
     plotnonfinite: bool = False,
     data=None,
     **kwargs,
@@ -3925,6 +4062,7 @@ def scatter(
         alpha=alpha,
         linewidths=linewidths,
         edgecolors=edgecolors,
+        colorizer=colorizer,
         plotnonfinite=plotnonfinite,
         **({"data": data} if data is not None else {}),
         **kwargs,
@@ -4014,7 +4152,7 @@ def spy(
         origin=origin,
         **kwargs,
     )
-    if isinstance(__ret, cm.ScalarMappable):
+    if isinstance(__ret, _ColorizerInterface):
         sci(__ret)
     return __ret
 
@@ -4102,6 +4240,9 @@ def streamplot(
     integration_direction="both",
     broken_streamlines=True,
     *,
+    integration_max_step_scale=1.0,
+    integration_max_error_scale=1.0,
+    num_arrows=1,
     data=None,
 ):
     __ret = gca().streamplot(
@@ -4123,6 +4264,9 @@ def streamplot(
         maxlength=maxlength,
         integration_direction=integration_direction,
         broken_streamlines=broken_streamlines,
+        integration_max_step_scale=integration_max_step_scale,
+        integration_max_error_scale=integration_max_error_scale,
+        num_arrows=num_arrows,
         **({"data": data} if data is not None else {}),
     )
     sci(__ret.lines)
@@ -4270,6 +4414,8 @@ def violinplot(
     | Callable[[GaussianKDE], float]
     | None = None,
     side: Literal["both", "low", "high"] = "both",
+    facecolor: Sequence[ColorType] | ColorType | None = None,
+    linecolor: Sequence[ColorType] | ColorType | None = None,
     *,
     data=None,
 ) -> dict[str, Collection]:
@@ -4286,6 +4432,8 @@ def violinplot(
         points=points,
         bw_method=bw_method,
         side=side,
+        facecolor=facecolor,
+        linecolor=linecolor,
         **({"data": data} if data is not None else {}),
     )
 
@@ -4342,7 +4490,7 @@ def xcorr(
 
 # Autogenerated by boilerplate.py.  Do not edit as changes will be lost.
 @_copy_docstring_and_deprecators(Axes._sci)
-def sci(im: ScalarMappable) -> None:
+def sci(im: ColorizingArtist) -> None:
     gca()._sci(im)
 
 

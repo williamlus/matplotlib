@@ -140,7 +140,7 @@ def test_valid_linestyles():
 
 
 @image_comparison(['drawstyle_variants.png'], remove_text=True,
-                  tol=0.03 if platform.machine() == 'arm64' else 0)
+                  tol=0 if platform.machine() == 'x86_64' else 0.03)
 def test_drawstyle_variants():
     fig, axs = plt.subplots(6)
     dss = ["default", "steps-mid", "steps-pre", "steps-post", "steps", None]
@@ -153,7 +153,7 @@ def test_drawstyle_variants():
         ax.set(xlim=(0, 2), ylim=(0, 2))
 
 
-@check_figures_equal(extensions=('png',))
+@check_figures_equal()
 def test_no_subslice_with_transform(fig_ref, fig_test):
     ax = fig_ref.add_subplot()
     x = np.arange(2000)
@@ -183,9 +183,8 @@ def test_set_drawstyle():
     assert len(line.get_path().vertices) == len(x)
 
 
-@image_comparison(
-    ['line_collection_dashes'], remove_text=True, style='mpl20',
-    tol=0 if platform.machine() == 'x86_64' else 0.65)
+@image_comparison(['line_collection_dashes'], remove_text=True, style='mpl20',
+                  tol=0 if platform.machine() == 'x86_64' else 0.65)
 def test_set_line_coll_dash_image():
     fig, ax = plt.subplots()
     np.random.seed(0)
@@ -220,8 +219,8 @@ def test_marker_fill_styles():
                     markeredgecolor=color,
                     markeredgewidth=2)
 
-    ax.set_ylim([0, 7.5])
-    ax.set_xlim([-5, 155])
+    ax.set_ylim(0, 7.5)
+    ax.set_xlim(-5, 155)
 
 
 def test_markerfacecolor_fillstyle():
@@ -260,7 +259,7 @@ def test_step_markers(fig_test, fig_ref):
 
 
 @pytest.mark.parametrize("parent", ["figure", "axes"])
-@check_figures_equal(extensions=('png',))
+@check_figures_equal()
 def test_markevery(fig_test, fig_ref, parent):
     np.random.seed(42)
     x = np.linspace(0, 1, 14)
@@ -333,13 +332,13 @@ def test_marker_as_markerstyle():
 
 
 @image_comparison(['striped_line.png'], remove_text=True, style='mpl20')
-def test_striped_lines():
+def test_striped_lines(text_placeholders):
     rng = np.random.default_rng(19680801)
     _, ax = plt.subplots()
     ax.plot(rng.uniform(size=12), color='orange', gapcolor='blue',
-            linestyle='--', lw=5, label=' ')
+            linestyle='--', lw=5, label='blue in orange')
     ax.plot(rng.uniform(size=12), color='red', gapcolor='black',
-            linestyle=(0, (2, 5, 4, 2)), lw=5, label=' ', alpha=0.5)
+            linestyle=(0, (2, 5, 4, 2)), lw=5, label='black in red', alpha=0.5)
     ax.legend(handlelength=5)
 
 
@@ -386,7 +385,7 @@ def test_input_copy(fig_test, fig_ref):
     fig_ref.add_subplot().plot([0, 2, 4], [0, 2, 4], ".-", drawstyle="steps")
 
 
-@check_figures_equal(extensions=["png"])
+@check_figures_equal()
 def test_markevery_prop_cycle(fig_test, fig_ref):
     """Test that we can set markevery prop_cycle."""
     cases = [None, 8, (30, 8), [16, 24, 30], [0, -1],
@@ -417,16 +416,20 @@ def test_axline_setters():
     line2 = ax.axline((.1, .1), (.8, .4))
     # Testing xy1, xy2 and slope setters.
     # This should not produce an error.
-    line1.set_xy1(.2, .3)
+    line1.set_xy1((.2, .3))
     line1.set_slope(2.4)
-    line2.set_xy1(.3, .2)
-    line2.set_xy2(.6, .8)
+    line2.set_xy1((.3, .2))
+    line2.set_xy2((.6, .8))
     # Testing xy1, xy2 and slope getters.
     # Should return the modified values.
     assert line1.get_xy1() == (.2, .3)
     assert line1.get_slope() == 2.4
     assert line2.get_xy1() == (.3, .2)
     assert line2.get_xy2() == (.6, .8)
+    with pytest.warns(mpl.MatplotlibDeprecationWarning):
+        line1.set_xy1(.2, .3)
+    with pytest.warns(mpl.MatplotlibDeprecationWarning):
+        line2.set_xy2(.6, .8)
     # Testing setting xy2 and slope together.
     # These test should raise a ValueError
     with pytest.raises(ValueError,

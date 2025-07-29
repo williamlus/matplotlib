@@ -28,7 +28,8 @@ precompiled wheel for your OS and Python.
    The following backends work out of the box: Agg, ps, pdf, svg
 
    Python is typically shipped with tk bindings which are used by
-   TkAgg.
+   TkAgg. Notably, python-build-standalone – used by ``uv`` – does
+   not include tk bindings that are usable by Matplotlib.
 
    For support of other GUI frameworks, LaTeX rendering, saving
    animations and a larger selection of file formats, you can
@@ -134,7 +135,7 @@ options will be particularly useful to those packaging Matplotlib.
 
 .. _meson.options: https://github.com/matplotlib/matplotlib/blob/main/meson.options
 
-Aspects of some behaviorial defaults of the library can be configured via:
+Aspects of some behavioral defaults of the library can be configured via:
 
 .. toctree::
   :maxdepth: 2
@@ -178,7 +179,7 @@ development environment such as :program:`IDLE` which add additional
 complexities. Open up a UNIX shell or a DOS command prompt and run, for
 example::
 
-   python -c "from pylab import *; set_loglevel('debug'); plot(); show()"
+   python -c "from pylab import *; set_loglevel('DEBUG'); plot(); show()"
 
 This will give you additional information about which backends Matplotlib is
 loading, version information, and more. At this point you might want to make
